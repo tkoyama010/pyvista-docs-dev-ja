@@ -929,15 +929,14 @@ In VTK, this superclass is represented by the <code class="docutils literal notr
 <li><p><strong>use_ipyvtk</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 非推奨．代わりに， <code class="docutils literal notranslate"><span class="pre">pyvista.set_jupyter_backend('ipyvtklink')</span></code> または <code class="docutils literal notranslate"><span class="pre">backend='ipyvtklink'</span></code> を使用してグローバルにバックエンドを設定します．</p></li>
 <li><p><strong>jupyter_backend</strong> (<em>str</em><em>, </em><em>optional</em>) -- Jupyterノートブックが使用するバックエンドをプロットしています．次のいずれか: * <code class="docutils literal notranslate"><span class="pre">'none'</span></code> : ノートブックに表示されません． * <code class="docutils literal notranslate"><span class="pre">'static'</span></code> : 静止画を表示します． * <code class="docutils literal notranslate"><span class="pre">'panel'</span></code> :  <code class="docutils literal notranslate"><span class="pre">ipygany</span></code> ウィジェットを表示します * <code class="docutils literal notranslate"><span class="pre">'panel'</span></code> :  <code class="docutils literal notranslate"><span class="pre">panel</span></code> ウィジェットを表示します．これは <code class="docutils literal notranslate"><span class="pre">pyvista.set_jupyter_backend</span></code> でグローバルに設定することもできます．</p></li>
 <li><p><strong>jupyter_kwargs</strong> (<em>dict</em><em>, </em><em>optional</em>) -- Jupyterノートブックプロットバックエンドのキーワード引数．</p></li>
-<li><p><strong>theme</strong> (<a class="reference internal" href="../user-guide/themes.html#pyvista.themes.DefaultTheme" title="pyvista.themes.DefaultTheme"><em>pyvista.themes.DefaultTheme</em></a><em>, </em><em>optional</em>) -- Plot-specific theme.</p></li>
+<li><p><strong>theme</strong> (<a class="reference internal" href="../user-guide/themes.html#pyvista.themes.DefaultTheme" title="pyvista.themes.DefaultTheme"><em>pyvista.themes.DefaultTheme</em></a><em>, </em><em>optional</em>) -- Plot固有のテーマ。</p></li>
 <li><p><strong>**kwargs</strong> (<em>optional keyword arguments</em>) -- その他のオプションについては， <code class="docutils literal notranslate"><span class="pre">ヘルプ</span> <span class="pre">(pyvista.Plotter.add_mesh)</span></code>  を参照してください．</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><p><ul>
 <li><p><strong>cpos</strong> (<em>list</em>) -- カメラ位置，焦点，およびビューアップのリスト．</p></li>
-<li><p><strong>img</strong> (<em>numpy.ndarray</em>) -- Array containing pixel RGB and optionally alpha values.
-Sized:</p>
+<li><p><strong>img</strong> (<em>numpy.ndarray</em>) -- ピクセルRGBと、オプションでアルファ値を含む配列。サイズ:</p>
 <ul class="simple">
 <li><p>[Window height x Window width x 3] if the theme sets
 <code class="docutils literal notranslate"><span class="pre">transparent_background=False</span></code>.</p></li>

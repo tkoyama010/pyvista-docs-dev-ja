@@ -273,12 +273,12 @@
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#creating-a-custom-theme">
-   Creating A Custom Theme
+   カスタム・テーマの作成
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#module-pyvista.themes">
-   Theme API
+   テーマAPI
   </a>
  </li>
 </ul>
@@ -309,7 +309,7 @@
 <div class="cell_output docutils container">
 </div>
 </div>
-<p>The default theme parameters in PyVista can be accessed and displayed with:</p>
+<p>PyVistaのデフォルトのテーマパラメータにアクセスして表示するには、以下のようにします:</p>
 <div class="jupyter_cell jupyter_container docutils container">
 <div class="cell_input code_cell docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span>
@@ -401,8 +401,7 @@ Slider Styles            :
 </div>
 </div>
 </div>
-<p>Default plotting parameters can be accessed individually by their
-attribute names:</p>
+<p>デフォルトのプロットパラメータには、属性名を使用して個別にアクセスできます。</p>
 <div class="jupyter_cell jupyter_container docutils container">
 <div class="cell_input code_cell docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">color</span>
@@ -429,7 +428,7 @@ parameters:</p>
 <img alt="../_images/themes_3_0.png" src="../_images/themes_3_0.png" />
 </div>
 </div>
-<p>These parameters can then be modified globally with:</p>
+<p>これらのパラメータは、次の方法でグローバルに変更できます。</p>
 <div class="jupyter_cell jupyter_container docutils container">
 <div class="cell_input code_cell docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span>
@@ -441,7 +440,7 @@ parameters:</p>
 <div class="cell_output docutils container">
 </div>
 </div>
-<p>Now, the mesh will be plotted with the new global parameters:</p>
+<p>次に、新しいグローバルパラメータを使用してメッシュをプロットします。</p>
 <div class="jupyter_cell jupyter_container docutils container">
 <div class="cell_input code_cell docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dragon</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">)</span>
@@ -452,14 +451,13 @@ parameters:</p>
 <img alt="../_images/themes_5_0.png" src="../_images/themes_5_0.png" />
 </div>
 </div>
-<p>This is identical to plotting the mesh with the following parameters:</p>
+<p>これは、次のパラメータを使用してメッシュをプロットすることと同じです。</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dragon</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">show_axes</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="creating-a-custom-theme">
-<h2>Creating A Custom Theme<a class="headerlink" href="#creating-a-custom-theme" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>You can customize a theme based on one of the built-in themes and then
-apply it globally with:</p>
+<h2>カスタム・テーマの作成<a class="headerlink" href="#creating-a-custom-theme" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>組み込みテーマの1つに基づいてテーマをカスタマイズし、次の方法でグローバルに適用できます。</p>
 <div class="jupyter_cell jupyter_container docutils container">
 <div class="cell_input code_cell docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># create a theme based off the DocumentTheme</span>
@@ -475,20 +473,20 @@ apply it globally with:</p>
 <div class="cell_output docutils container">
 </div>
 </div>
-<p>Alternatively, you can save the theme to disk to be used later with:</p>
+<p>または、テーマをディスクに保存して、後で使用することもできます。</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_theme</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;my_theme.json&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>And then subsequently loaded in a new session of pyvista with:</p>
+<p>その後、次のコマンドを使用して新しいpyvistaセッションにロードします。</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">load_theme</span><span class="p">(</span><span class="s1">&#39;my_theme.json&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="module-pyvista.themes">
-<span id="theme-api"></span><h2>Theme API<a class="headerlink" href="#module-pyvista.themes" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>API description for managing plotting theme parameters in pyvista.</p>
+<span id="theme-api"></span><h2>テーマAPI<a class="headerlink" href="#module-pyvista.themes" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>pyvistaでプロットテーマパラメータを管理するためのAPI説明。</p>
 <p class="rubric">サンプル</p>
-<p>Apply a built-in theme</p>
+<p>組み込みテーマを適用する</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">set_plot_theme</span><span class="p">(</span><span class="s1">&#39;default&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">set_plot_theme</span><span class="p">(</span><span class="s1">&#39;document&#39;</span><span class="p">)</span>
@@ -496,7 +494,7 @@ apply it globally with:</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">set_plot_theme</span><span class="p">(</span><span class="s1">&#39;paraview&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Load a theme into pyvista</p>
+<p>pyvistaにテーマをロードします</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">theme</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">themes</span><span class="o">.</span><span class="n">DefaultTheme</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">theme</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;my_theme.json&#39;</span><span class="p">)</span>  
 <span class="gp">&gt;&gt;&gt; </span><span class="n">loaded_theme</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">load_theme</span><span class="p">(</span><span class="s1">&#39;my_theme.json&#39;</span><span class="p">)</span>  
@@ -652,7 +650,7 @@ or hex color string.  For example:</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">color='#FFFFFF'</span></code></p></li>
 </ul>
 <p class="rubric">サンプル</p>
-<p>Set the default mesh color to 'red'.</p>
+<p>デフォルトのメッシュの色を赤に設定します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span>
 </pre></div>
