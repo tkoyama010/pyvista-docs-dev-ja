@@ -574,11 +574,11 @@ Slider Styles            :
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">x_color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span>
 </pre></div>
 </div>
-<p>Show axes by default.</p>
+<p>デフォルトで軸を表示します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">show</span> <span class="o">=</span> <span class="kc">True</span>
 </pre></div>
 </div>
-<p>Use the <code class="docutils literal notranslate"><span class="pre">vtk.vtkCubeAxesActor</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">vtk.vtkCubeAxesActor</span></code> を使用します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">box</span> <span class="o">=</span> <span class="kc">True</span>
 </pre></div>
 </div>
@@ -587,9 +587,9 @@ Slider Styles            :
 <dl class="py method">
 <dt id="pyvista.themes.DefaultTheme.background">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">background</span></code><a class="headerlink" href="#pyvista.themes.DefaultTheme.background" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return or set the default background color of pyvista plots.</p>
+<dd><p>pyvistaプロットのデフォルトの背景色を戻すか、設定します。</p>
 <p class="rubric">サンプル</p>
-<p>Set the default global background of all plots to white.</p>
+<p>すべてのプロットのデフォルトのグローバル背景を白に設定します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">background</span> <span class="o">=</span> <span class="s1">&#39;white&#39;</span>
 </pre></div>
@@ -599,19 +599,19 @@ Slider Styles            :
 <dl class="py method">
 <dt id="pyvista.themes.DefaultTheme.camera">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">camera</span></code><a class="headerlink" href="#pyvista.themes.DefaultTheme.camera" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return or set the default camera position.</p>
+<dd><p>デフォルトの camera の設定を返すか、設定します。</p>
 <p class="rubric">サンプル</p>
-<p>Set both the position and view of the camera.</p>
+<p>カメラの位置とビューの両方を設定します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">camera</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;position&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
 <span class="gp">... </span>                               <span class="s1">&#39;viewup&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]}</span>
 </pre></div>
 </div>
-<p>Set the default position of the camera.</p>
+<p>カメラのデフォルト位置を設定します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">camera</span><span class="p">[</span><span class="s1">&#39;position&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>Set the default view of the camera.</p>
+<p>カメラのデフォルトビューを設定します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">camera</span><span class="p">[</span><span class="s1">&#39;viewup&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -620,14 +620,11 @@ Slider Styles            :
 <dl class="py method">
 <dt id="pyvista.themes.DefaultTheme.cmap">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">cmap</span></code><a class="headerlink" href="#pyvista.themes.DefaultTheme.cmap" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return or set the default colormap of pyvista.</p>
-<p>See available Matplotlib colormaps.  Only applicable for when
-displaying <code class="docutils literal notranslate"><span class="pre">scalars</span></code>. Requires Matplotlib to be installed.
-If <code class="docutils literal notranslate"><span class="pre">colorcet</span></code> or <code class="docutils literal notranslate"><span class="pre">cmocean</span></code> are installed, their colormaps
-can be specified by name.</p>
+<dd><p>pyvistaのデフォルトのカラーマップを戻すか、設定します。</p>
+<p>利用可能なMatplotlibカラーマップを参照してください． <code class="docutils literal notranslate"><span class="pre">scalars</span></code> を表示する場合にのみ適用されます．Matplotlibがインストールされている必要があります． <code class="docutils literal notranslate"><span class="pre">colorcet</span></code> または <code class="docutils literal notranslate"><span class="pre">cmocean</span></code> がインストールされている場合は，それらのカラーマップを名前で指定できます．</p>
 <p>また，色のリストを指定して，既存のカラーマップをカスタムカラーマップで上書きすることもできます．例えば，3色のカラーマップを作成するには， <code class="docutils literal notranslate"><span class="pre">['green',</span> <span class="pre">'red',</span> <span class="pre">'blue']</span></code></p>
 <p class="rubric">サンプル</p>
-<p>Set the default global colormap to 'jet'.</p>
+<p>デフォルトのグローバルカラーマップを 'jet' に設定します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;jet&#39;</span>
 </pre></div>
@@ -637,7 +634,7 @@ can be specified by name.</p>
 <dl class="py method">
 <dt id="pyvista.themes.DefaultTheme.color">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">color</span></code><a class="headerlink" href="#pyvista.themes.DefaultTheme.color" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return or set the default color of meshes in pyvista.</p>
+<dd><p>pyvistaのメッシュのデフォルトのカラーを戻すか、設定します。</p>
 <p>Used for meshes without <code class="docutils literal notranslate"><span class="pre">scalars</span></code>.</p>
 <p>When setting, the value must be either a string, rgb list,
 or hex color string.  For example:</p>
