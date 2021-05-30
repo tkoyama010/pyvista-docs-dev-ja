@@ -960,7 +960,7 @@ to download the full example code</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_carotid</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>半径2.0の球内のランダムなシード点を使用して、流線フィルタリングアルゴリズムを実行します。</p>
+<p>半径2.0の球内のランダムなシード点を使用して，流線フィルタリングアルゴリズムを実行します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">streamlines</span><span class="p">,</span> <span class="n">src</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">streamlines</span><span class="p">(</span>
     <span class="n">return_source</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">max_time</span><span class="o">=</span><span class="mf">100.0</span><span class="p">,</span>
@@ -1017,7 +1017,7 @@ to download the full example code</p>
  (-0.502518907629606, -0.7035264706814484, 0.502518907629606)]
 </pre></div>
 </div>
-<p>流入口が利用可能な場合などは、 <cite>streamlines_from_source</cite> フィルタを使用してソースメッシュを提供することもできます。この例では、流入口を領域のすぐ内側に抽出し、流線の始点として使用します。</p>
+<p>流入口が利用可能な場合などは， <cite>streamlines_from_source</cite> フィルタを使用してソースメッシュを提供することもできます．この例では，流入口を領域のすぐ内側に抽出し，流線の始点として使用します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source_mesh</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">slice</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">,</span> <span class="n">origin</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">182</span><span class="p">))</span>  <span class="c1"># inlet surface</span>
 <span class="c1"># thin out ~40% points to get a nice density of streamlines</span>
 <span class="n">seed_mesh</span> <span class="o">=</span> <span class="n">source_mesh</span><span class="o">.</span><span class="n">decimate_boundary</span><span class="p">(</span><span class="mf">0.4</span><span class="p">)</span>

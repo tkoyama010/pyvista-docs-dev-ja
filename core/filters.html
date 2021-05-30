@@ -539,8 +539,8 @@
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">streamlines</span></code>([vectors, source_center, ...])</p></td>
 <td><p>ベクトルフィールドを統合して，流線を生成します．</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">streamlines_from_source</span></code>(source[, vectors, ...])</p></td>
-<td><p>Generate streamlines of vectors from the points of a source mesh.</p></td>
+<tr class="row-even"><td><p>:obj:<a href="#id1"><span class="problematic" id="id2">`</span></a>streamlines_from_source <a href="#id3"><span class="problematic" id="id4">`</span></a>(source[, vectors, ...])</p></td>
+<td><p>ソースメッシュのポイントからベクトルの流線を生成します。</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">surface_indices</span></code>()</p></td>
 <td><p>グリッドのサーフェスインデックスを返します．</p></td>
@@ -613,13 +613,12 @@
 <li><p><strong>origin</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em><em>, </em><em>optional</em>) -- クリップが発生する平面の中心 <code class="docutils literal notranslate"><span class="pre">(x,y,z)</span></code> 座標．デフォルトはデータセットの中心です．</p></li>
 <li><p><strong>invert</strong> (<em>bool</em><em>, </em><em>optional</em>) -- クリップをフリップ/反転するかどうかを示すフラグ．</p></li>
 <li><p><strong>value</strong> (<em>float</em><em>, </em><em>optional</em>) -- 法線方向に沿ってクリップ値を設定します．デフォルト値は0.0です．</p></li>
-<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Updates mesh in-place.</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- インプレイスメッシュを更新します．</p></li>
 <li><p><strong>return_clipped</strong> (<em>bool</em><em>, </em><em>optional</em>) -- データセットのクリップされていない部分とクリップされた部分の両方を返します．</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
-<dd class="field-even"><p><strong>mesh</strong> -- Clipped mesh when <code class="docutils literal notranslate"><span class="pre">return_clipped=False</span></code>,
-otherwise a tuple containing the unclipped and clipped datasets.</p>
+<dd class="field-even"><p><strong>mesh</strong> -- <code class="docutils literal notranslate"><span class="pre">return_clipped=False</span></code> の場合はクリッピングされたメッシュ。それ以外の場合は、クリッピングされていないデータセットとクリッピングされたデータセットを含むタプルです。</p>
 </dd>
 <dt class="field-odd">戻り値の型</dt>
 <dd class="field-odd"><p><a class="reference internal" href="points.html#pyvista.PolyData" title="pyvista.PolyData">pyvista.PolyData</a> or tuple(<a class="reference internal" href="points.html#pyvista.PolyData" title="pyvista.PolyData">pyvista.PolyData</a>)</p>
@@ -673,7 +672,7 @@ otherwise a tuple containing the unclipped and clipped datasets.</p>
 <li><p><strong>scalars</strong> (<em>str</em><em>, </em><em>optional</em>) -- クリップするスカラーの名前．デフォルトは現在アクティブなスカラーです．</p></li>
 <li><p><strong>invert</strong> (<em>bool</em><em>, </em><em>optional</em>) -- クリップをフリップ/反転するかどうかを示すフラグ． <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合， <code class="docutils literal notranslate"><span class="pre">value</span></code> の下のメッシュのみが保持されます． <code class="docutils literal notranslate"><span class="pre">False</span></code> の場合， <code class="docutils literal notranslate"><span class="pre">value</span></code> を超える値のみが保持されます．</p></li>
 <li><p><strong>value</strong> (<em>float</em><em>, </em><em>optional</em>) -- クリップ値を設定します．デフォルト値は0.0です．</p></li>
-<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Update mesh in-place.</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- インプレイスメッシュを更新します．</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
@@ -973,12 +972,12 @@ otherwise a tuple containing the unclipped and clipped datasets.</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>feature_angle</strong> (<em>float</em><em>, </em><em>optional</em>) -- 既定値は30度です．</p></li>
+<li><p><strong>feature_angle</strong> (<em>float</em><em>, </em><em>optional</em>) -- デフォルトは30度です．</p></li>
 <li><p><strong>boundary_edges</strong> (<em>bool</em><em>, </em><em>optional</em>) -- デフォルトはTrueです．</p></li>
 <li><p><strong>non_manifold_edges</strong> (<em>bool</em><em>, </em><em>optional</em>) -- デフォルトはTrueです．</p></li>
 <li><p><strong>feature_edges</strong> (<em>bool</em><em>, </em><em>optional</em>) -- デフォルトはTrueです．</p></li>
 <li><p><strong>manifold_edges</strong> (<em>bool</em><em>, </em><em>optional</em>) -- デフォルトはTrueです．</p></li>
-<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Updates existing dataset with the extracted features.</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 既存のデータセットを抽出されたフィーチャで更新します。</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
@@ -1004,7 +1003,7 @@ otherwise a tuple containing the unclipped and clipped datasets.</p>
 <p>等値面を生成する際に得られる残留物を低減するために使用できます．残基がイメージの主要コンポーネントに接続(少なくとも1点を共有)されていない場合にのみ機能します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
-<dd class="field-odd"><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Updates mesh in-place.</p>
+<dd class="field-odd"><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- インプレイスメッシュを更新します．</p>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><p><strong>mesh</strong> -- メッシュ内で最大の接続セット</p>
@@ -1023,8 +1022,8 @@ otherwise a tuple containing the unclipped and clipped datasets.</p>
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ind</strong> (<em>np.ndarray</em><em>, </em><em>list</em><em>, or </em><em>sequence</em>) -- 抽出されるポイントインデックスの配列．</p></li>
-<li><p><strong>adjacent_cells</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Trueの場合，抽出された点の少なくとも1つを含むセルを抽出します．Falseの場合は，抽出された点のリストから点のみを含むセルを抽出します．既定値はTrueです．</p></li>
-<li><p><strong>include_cells</strong> (<em>bool</em><em>, </em><em>optional</em>) -- セルを返すかどうかを指定します．既定値はTrueです．</p></li>
+<li><p><strong>adjacent_cells</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Trueの場合，抽出された点の少なくとも1つを含むセルを抽出します．Falseの場合は，抽出された点のリストから点のみを含むセルを抽出します．デフォルトはTrueです．</p></li>
+<li><p><strong>include_cells</strong> (<em>bool</em><em>, </em><em>optional</em>) -- セルを返すかどうかを指定します．デフォルトはTrueです．</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
@@ -1100,7 +1099,7 @@ otherwise a tuple containing the unclipped and clipped datasets.</p>
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>target</strong> (<a class="reference internal" href="dataset.html#pyvista.DataSet" title="pyvista.DataSet"><em>pyvista.DataSet</em></a>) -- サンプリング元のvtkデータオブジェクト - このオブジェクトのポイント配列とセル配列がこのメッシュに補間されます．</p></li>
-<li><p><strong>sharpness</strong> (<em>float</em>) -- Gauss分布のシャープネス(つまり，減衰)を設定/取得します．既定値では， Sharpness=2です．シャープさが増すと，遠方のポイントの効果は減少します．</p></li>
+<li><p><strong>sharpness</strong> (<em>float</em>) -- Gauss分布のシャープネス(つまり，減衰)を設定/取得します．デフォルトでは， Sharpness=2です．シャープさが増すと，遠方のポイントの効果は減少します．</p></li>
 <li><p><strong>radius</strong> (<em>float</em>) -- 基準点を配置する半径を指定します．</p></li>
 <li><p><strong>n_points</strong> (<em>int</em><em>, </em><em>optional</em>) -- 指定した場合，補間ベースを形成するために使用される最も近いポイントの数を指定します．これにより，N個の最近接ポイントを使用する代わりに，radiusおよびsharpnessの引数が無効になります．通常，この方法では結果が悪くなります．</p></li>
 <li><p><strong>strategy</strong> (<em>str</em><em>, </em><em>optional</em>) -- 補間処理中に &quot;null&quot; ポイントに遭遇した場合に使用するストラテジーを指定します．ヌルポイントは，ローカル近隣(近くの点が内挿する)が空の場合に発生します．ストラテジが <code class="docutils literal notranslate"><span class="pre">'mask_points'</span></code> に設定されている場合，ポイントを有効 (=1) またはnull (無効=0)としてマークする出力配列が作成される(NullValueも設定されます．)．ストラテジが <code class="docutils literal notranslate"><span class="pre">'null_value'</span></code> に設定されている場合(これがデフォルトです．)，出力データ値()は <code class="docutils literal notranslate"><span class="pre">null_value</span></code> に設定される(出力点データに指定されている)．最後に，戦略 <code class="docutils literal notranslate"><span class="pre">'closest_point'</span></code> は，単に補間を実行するために最も近い点を使用することである．</p></li>
@@ -1129,7 +1128,7 @@ otherwise a tuple containing the unclipped and clipped datasets.</p>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
-<dd class="field-even"><p><strong>merged_grid</strong> -- Merged grid.</p>
+<dd class="field-even"><p><strong>merged_grid</strong> -- マージされたグリッド．</p>
 </dd>
 <dt class="field-odd">戻り値の型</dt>
 <dd class="field-odd"><p>vtk.UnstructuredGrid</p>
@@ -1172,7 +1171,7 @@ otherwise a tuple containing the unclipped and clipped datasets.</p>
 <li><p><strong>pointa</strong> (<em>np.ndarray</em><em> or </em><em>list</em>) -- <code class="docutils literal notranslate"><span class="pre">[x,</span> <span class="pre">y,</span> <span class="pre">z]</span></code> 内の位置．</p></li>
 <li><p><strong>pointb</strong> (<em>np.ndarray</em><em> or </em><em>list</em>) -- <code class="docutils literal notranslate"><span class="pre">[x,</span> <span class="pre">y,</span> <span class="pre">z]</span></code> 内の位置．</p></li>
 <li><p><strong>center</strong> (<em>np.ndarray</em><em> or </em><em>list</em>) -- <code class="docutils literal notranslate"><span class="pre">[x,</span> <span class="pre">y,</span> <span class="pre">z]</span></code> 内の位置．</p></li>
-<li><p><strong>resolution</strong> (<em>int</em><em>, </em><em>optional</em>) -- 円弧を分割する断片の数．既定値は入力メッシュ内のセル数です．正の整数でなければなりません．</p></li>
+<li><p><strong>resolution</strong> (<em>int</em><em>, </em><em>optional</em>) -- 円弧を分割する断片の数．デフォルトは入力メッシュ内のセル数です．正の整数でなければなりません．</p></li>
 <li><p><strong>scalars</strong> (<em>str</em><em>, </em><em>optional</em>) -- 調査する入力データセット内の変数の文字列名．既定では，アクティブスカラーが使用されます．</p></li>
 <li><p><strong>title</strong> (<em>str</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> 図の文字列タイトル．</p></li>
 <li><p><strong>ylabel</strong> (<em>str</em><em>, </em><em>optional</em>) -- Y軸の文字列ラベル．デフォルトは変数名</p></li>
@@ -1205,7 +1204,7 @@ otherwise a tuple containing the unclipped and clipped datasets.</p>
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>center</strong> (<em>np.ndarray</em><em> or </em><em>list</em>) -- <code class="docutils literal notranslate"><span class="pre">[x,</span> <span class="pre">y,</span> <span class="pre">z]</span></code> 内の位置．</p></li>
-<li><p><strong>resolution</strong> (<em>int</em><em>, </em><em>optional</em>) -- 円弧を分割する断片の数．既定値は入力メッシュ内のセル数です．正の整数でなければなりません．</p></li>
+<li><p><strong>resolution</strong> (<em>int</em><em>, </em><em>optional</em>) -- 円弧を分割する断片の数．デフォルトは入力メッシュ内のセル数です．正の整数でなければなりません．</p></li>
 <li><p><strong>normal</strong> (<em>np.ndarray</em><em> or </em><em>list</em><em>, </em><em>optional</em>) -- 円弧の平面に対する法線ベクトルです．既定では，正のZ方向を指します．</p></li>
 <li><p><strong>polar</strong> (<em>np.ndarray</em><em> or </em><em>list</em><em>, </em><em>optional</em>) -- (円弧の始点) ．既定では，正のx方向の単位ベクトルです．</p></li>
 <li><p><strong>angle</strong> (<em>float</em><em>, </em><em>optional</em>) -- 極ベクトルを始点とする円弧の長さ(度単位)．方向は反時計回りです．デフォルトは360です．</p></li>
@@ -1243,7 +1242,7 @@ otherwise a tuple containing the unclipped and clipped datasets.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>pointa</strong> (<em>np.ndarray</em><em> or </em><em>list</em>) -- [x, y, z] 内の位置．</p></li>
 <li><p><strong>pointb</strong> (<em>np.ndarray</em><em> or </em><em>list</em>) -- [x, y, z] 内の位置．</p></li>
-<li><p><strong>resolution</strong> (<em>int</em>) -- 線を分割する断片の数．既定値は入力メッシュ内のセル数です．正の整数でなければなりません．</p></li>
+<li><p><strong>resolution</strong> (<em>int</em>) -- 線を分割する断片の数．デフォルトは入力メッシュ内のセル数です．正の整数でなければなりません．</p></li>
 <li><p><strong>scalars</strong> (<em>str</em>) -- 調査する入力データセット内の変数の文字列名．既定では，アクティブスカラーが使用されます．</p></li>
 <li><p><strong>title</strong> (<em>str</em>) -- <cite>matplotlib</cite> 図の文字列タイトル</p></li>
 <li><p><strong>ylabel</strong> (<em>str</em>) -- Y軸の文字列ラベル．デフォルトは変数名</p></li>
@@ -1317,7 +1316,7 @@ otherwise a tuple containing the unclipped and clipped datasets.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>normal</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em>) -- 反射の法線方向．</p></li>
 <li><p><strong>point</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em><em>, </em><em>optional</em>) -- <cite>normal</cite> と共に反射面を定義する点．指定しない場合は，これが原点になります．</p></li>
-<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- When <code class="docutils literal notranslate"><span class="pre">True</span></code>, modifies the dataset inplace.</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，データセットを直接変更します．</p></li>
 <li><p><strong>transform_all_input_vectors</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の時，全ての入力ベクトルは変換される．それ以外の場合は，ポイント，法線，およびアクティブなベクトルだけが変換されます．</p></li>
 </ul>
 </dd>
@@ -1360,7 +1359,7 @@ otherwise a tuple containing the unclipped and clipped datasets.</p>
 <li><p><strong>pointa</strong> (<em>np.ndarray</em><em> or </em><em>list</em>) -- <code class="docutils literal notranslate"><span class="pre">[x,</span> <span class="pre">y,</span> <span class="pre">z]</span></code> 内の位置．</p></li>
 <li><p><strong>pointb</strong> (<em>np.ndarray</em><em> or </em><em>list</em>) -- <code class="docutils literal notranslate"><span class="pre">[x,</span> <span class="pre">y,</span> <span class="pre">z]</span></code> 内の位置．</p></li>
 <li><p><strong>center</strong> (<em>np.ndarray</em><em> or </em><em>list</em>) -- <code class="docutils literal notranslate"><span class="pre">[x,</span> <span class="pre">y,</span> <span class="pre">z]</span></code> 内の位置．</p></li>
-<li><p><strong>resolution</strong> (<em>int</em><em>, </em><em>optional</em>) -- 円弧を分割する断片の数．既定値は入力メッシュ内のセル数です．正の整数でなければなりません．</p></li>
+<li><p><strong>resolution</strong> (<em>int</em><em>, </em><em>optional</em>) -- 円弧を分割する断片の数．デフォルトは入力メッシュ内のセル数です．正の整数でなければなりません．</p></li>
 <li><p><strong>tolerance</strong> (<em>float</em><em>, </em><em>optional</em>) -- ソース内のポイントが入力のセル内にあるかどうかを計算するために使用される許容値です．指定しない場合，公差は自動的に生成されます．</p></li>
 </ul>
 </dd>
@@ -1387,7 +1386,7 @@ otherwise a tuple containing the unclipped and clipped datasets.</p>
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>center</strong> (<em>np.ndarray</em><em> or </em><em>list</em>) -- <code class="docutils literal notranslate"><span class="pre">[x,</span> <span class="pre">y,</span> <span class="pre">z]</span></code> 内の位置．</p></li>
-<li><p><strong>resolution</strong> (<em>int</em><em>, </em><em>optional</em>) -- 円弧を分割する断片の数．既定値は入力メッシュ内のセル数です．正の整数でなければなりません．</p></li>
+<li><p><strong>resolution</strong> (<em>int</em><em>, </em><em>optional</em>) -- 円弧を分割する断片の数．デフォルトは入力メッシュ内のセル数です．正の整数でなければなりません．</p></li>
 <li><p><strong>normal</strong> (<em>np.ndarray</em><em> or </em><em>list</em><em>, </em><em>optional</em>) -- 円弧の平面に対する法線ベクトルです．既定では，正のZ方向を指します．</p></li>
 <li><p><strong>polar</strong> (<em>np.ndarray</em><em> or </em><em>list</em><em>, </em><em>optional</em>) -- 極座標での円弧の始点．既定では，正のx方向の単位ベクトルです．</p></li>
 <li><p><strong>angle</strong> (<em>float</em><em>, </em><em>optional</em>) -- 極ベクトルを始点とする円弧の長さ(度単位)．方向は反時計回りです．デフォルトは360です．</p></li>
@@ -1417,7 +1416,7 @@ otherwise a tuple containing the unclipped and clipped datasets.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>pointa</strong> (<em>np.ndarray</em><em> or </em><em>list</em>) -- [x, y, z] 内の位置．</p></li>
 <li><p><strong>pointb</strong> (<em>np.ndarray</em><em> or </em><em>list</em>) -- [x, y, z] 内の位置．</p></li>
-<li><p><strong>resolution</strong> (<em>int</em>) -- 線を分割する断片の数．既定値は入力メッシュ内のセル数です．正の整数でなければなりません．</p></li>
+<li><p><strong>resolution</strong> (<em>int</em>) -- 線を分割する断片の数．デフォルトは入力メッシュ内のセル数です．正の整数でなければなりません．</p></li>
 <li><p><strong>tolerance</strong> (<em>float</em><em>, </em><em>optional</em>) -- ソース内のポイントが入力のセル内にあるかどうかを計算するために使用される許容値です．指定しない場合，公差は自動的に生成されます．</p></li>
 </ul>
 </dd>
@@ -1558,39 +1557,26 @@ otherwise a tuple containing the unclipped and clipped datasets.</p>
 <dt id="pyvista.DataSetFilters.streamlines">
 <code class="sig-name descname"><span class="pre">streamlines</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vectors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_center</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_position</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pointa</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pointb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.streamlines" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ベクトルフィールドを統合して，流線を生成します．</p>
-<p>The default behavior uses a Sphere as the source - set it's location and
-radius via the <code class="docutils literal notranslate"><span class="pre">source_center</span></code> and <code class="docutils literal notranslate"><span class="pre">source_radius</span></code> keyword arguments.
-<code class="docutils literal notranslate"><span class="pre">n_points</span></code> defines the number of starting points on the sphere surface.
-Alternatively, a Line source can be used by specifying <code class="docutils literal notranslate"><span class="pre">pointa</span></code> and <code class="docutils literal notranslate"><span class="pre">pointb</span></code>.
-<code class="docutils literal notranslate"><span class="pre">n_points</span></code> again defines the number of points on the line.</p>
-<p>You can retrieve the source by specifying <code class="docutils literal notranslate"><span class="pre">return_source=True</span></code>.</p>
-<p>Optional keyword parameters from <a class="reference internal" href="#pyvista.DataSetFilters.streamlines_from_source" title="pyvista.DataSetFilters.streamlines_from_source"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.streamlines_from_source()</span></code></a>
-can be used here to control the generation of streamlines.</p>
+<p>デフォルトの動作では、<code class="docutils literal notranslate"><span class="pre">source_center</span></code> および <code class="docutils literal notranslate"><span class="pre">source_radius</span></code> キーワード引数を使用して、球体の位置と半径をソースセットとして使用します。 <code class="docutils literal notranslate"><span class="pre">n_points</span></code> は球面上の開始点の数を定義します。 あるいは、 <code class="docutils literal notranslate"><span class="pre">pointa</span></code> と <code class="docutils literal notranslate"><span class="pre">pointb</span></code> を指定してLineソースを使用することもできます。 <code class="docutils literal notranslate"><span class="pre">n_points</span></code> もライン上のポイント数を定義します。</p>
+<p><code class="docutils literal notranslate"><span class="pre">return_source=True</span></code> を指定してソースを取得できます。</p>
+<p><a class="reference internal" href="#pyvista.DataSetFilters.streamlines_from_source" title="pyvista.DataSetFilters.streamlines_from_source"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.streamlines_from_source()</span></code></a> のオプションのキーワードパラメータを使用して、流線の生成を制御できます。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>vectors</strong> (<em>str</em><em>, </em><em>optional</em>) -- The string name of the active vector field to integrate across.</p></li>
-<li><p><strong>source_center</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em><em>, </em><em>optional</em>) -- Length 3 tuple of floats defining the center of the source
-particles. Defaults to the center of the dataset.</p></li>
-<li><p><strong>source_radius</strong> (<em>float</em><em>, </em><em>optional</em>) -- Float radius of the source particle cloud. Defaults to one-tenth of
-the diagonal of the dataset's spatial extent.</p></li>
-<li><p><strong>n_points</strong> (<em>int</em><em>, </em><em>optional</em>) -- Number of particles present in source sphere or line.</p></li>
-<li><p><strong>start_position</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em><em>, </em><em>optional</em>) -- A single point.  This will override the sphere point source.</p></li>
+<li><p><strong>vectors</strong> (<em>str</em><em>, </em><em>optional</em>) -- 積分するアクティブベクトルフィールドの文字列名．</p></li>
+<li><p><strong>source_center</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em><em>, </em><em>optional</em>) -- ソース粒子の中心を定義する浮動小数点の長さ3のタプル．デフォルトはデータセットの中央．</p></li>
+<li><p><strong>source_radius</strong> (<em>float</em><em>, </em><em>optional</em>) -- ソースパーティクルクラウドの浮動小数点半径です．デフォルトはデータセットの空間的範囲の対角の1/10．</p></li>
+<li><p><strong>n_points</strong> (<em>int</em><em>, </em><em>optional</em>) -- ソース球か線に存在する粒子の数</p></li>
+<li><p><strong>start_position</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em><em>, </em><em>optional</em>) -- 単一の点．これにより，球の点源がオーバーライドされます．</p></li>
 <li><p><strong>return_source</strong> (<em>bool</em><em>, </em><em>optional</em>) -- ソース粒子を流線と同様に <a class="reference internal" href="points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> として返します．これは， <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合に返される2番目の値です．</p></li>
-<li><p><strong>pointa</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em><em>, </em><em>optional</em>) -- The coordinates of a start and end point for a line source. This
-will override the sphere and start_position point source.</p></li>
-<li><p><strong>pointb</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em><em>, </em><em>optional</em>) -- The coordinates of a start and end point for a line source. This
-will override the sphere and start_position point source.</p></li>
+<li><p><strong>pointa</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em><em>, </em><em>optional</em>) -- 線源の始点と終点の座標．これにより，球と start_position の点源がオーバーライドされます．</p></li>
+<li><p><strong>pointb</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em><em>, </em><em>optional</em>) -- 線源の始点と終点の座標．これにより，球と start_position の点源がオーバーライドされます．</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><p><ul class="simple">
-<li><p><strong>streamlines</strong> (<em>pyvista.PolyData</em>) -- This produces polylines as the output, with each cell
-(i.e., polyline) representing a streamline. The attribute values
-associated with each streamline are stored in the cell data, whereas
-those associated with streamline-points are stored in the point data.</p></li>
-<li><p><strong>source</strong> (<em>pyvista.PolyData</em>) -- The points of the source are the seed points for the streamlines.
-Only returned if <code class="docutils literal notranslate"><span class="pre">return_source=True</span></code>.</p></li>
+<li><p><strong>streamlines</strong> (<em>pyvista.PolyData</em>) -- これにより，各セル(つまり，ポリライン)が流線を表すポリラインが出力として生成されます．各流線に関連付けられた属性値はセルデータに格納され，流線ポイントに関連付けられた属性値はポイントデータに格納されます．</p></li>
+<li><p><strong>source</strong> (<em>pyvista.PolyData</em>) -- ソースのポイントは流線のシードポイントです。 <code class="docutils literal notranslate"><span class="pre">return_source=True</span></code> の場合にのみ返されます。</p></li>
 </ul>
 </p>
 </dd>
@@ -1600,36 +1586,26 @@ Only returned if <code class="docutils literal notranslate"><span class="pre">re
 <dl class="py method">
 <dt id="pyvista.DataSetFilters.streamlines_from_source">
 <code class="sig-name descname"><span class="pre">streamlines_from_source</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vectors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">integrator_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">45</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">integration_direction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'both'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">surface_streamlines</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_step_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cl'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_step_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_step_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">terminal_speed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-12</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_error</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compute_vorticity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotation_scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolator_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'point'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.streamlines_from_source" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Generate streamlines of vectors from the points of a source mesh.</p>
-<p>The integration is performed using a specified integrator, by default
-Runge-Kutta2. This supports integration through any type of dataset.
-If the dataset contains 2D cells like polygons or triangles and the
-<code class="docutils literal notranslate"><span class="pre">surface_streamlines</span></code> parameter is used, the integration is constrained
-to lie on the surface defined by 2D cells.</p>
+<dd><p>ソースメッシュのポイントからベクトルの流線を生成します。</p>
+<p>デフォルトRunge-Kutta 2では，指定したインテグレータを使用して積分が実行されます．これにより，あらゆるタイプのデータセットを使用した積分がサポートされます．データセットにポリゴンや三角形などの2 Dセルが含まれていて <code class="docutils literal notranslate"><span class="pre">surface_streamlines</span></code>  パラメータが使用されている場合，積分は2 Dセルによって定義されるサーフェス上に配置されるように制限されます．</p>
 <dl class="simple">
-<dt>source<span class="classifier">pyvista.DataSet</span></dt><dd><p>The points of the source provide the starting points of the
-streamlines.  This will override both sphere and line sources.</p>
+<dt>source<span class="classifier">pyvista.DataSet</span></dt><dd><p>ソースの点は流線の開始点を提供します。球とラインソースの両方がオーバーライドされます。</p>
 </dd>
-<dt>vectors<span class="classifier">str, optional</span></dt><dd><p>The string name of the active vector field to integrate across.</p>
+<dt>vectors<span class="classifier">str, optional</span></dt><dd><p>積分するアクティブベクトルフィールドの文字列名．</p>
 </dd>
 <dt>integrator_type<span class="classifier">int, optional</span></dt><dd><p>流線生成に使用する積分器のタイプです．デフォルトはRunge-Kutta 45です．認識されるソルバーは:  RUNGE_KUTTA2 (<code class="docutils literal notranslate"><span class="pre">2</span></code>) ， RUNGE_KUTTA4 (<code class="docutils literal notranslate"><span class="pre">4</span></code>) および RUNGE_KUTTA45 (<code class="docutils literal notranslate"><span class="pre">45</span></code>) です．オプションは <code class="docutils literal notranslate"><span class="pre">2</span></code> ， <code class="docutils literal notranslate"><span class="pre">4</span></code> または <code class="docutils literal notranslate"><span class="pre">45</span></code> です．デフォルトは <code class="docutils literal notranslate"><span class="pre">45</span></code> です．</p>
 </dd>
 <dt>integration_direction<span class="classifier">str, optional</span></dt><dd><p>流線を上流方向と下流方向のどちらに統合するかを指定します(または両方)．選択肢は <code class="docutils literal notranslate"><span class="pre">'both'</span></code>  ， <code class="docutils literal notranslate"><span class="pre">'backward'</span></code> または <code class="docutils literal notranslate"><span class="pre">'forward'</span></code> です．</p>
 </dd>
-<dt>surface_streamlines<span class="classifier">bool, optional</span></dt><dd><p>Compute streamlines on a surface. Default <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<dt>surface_streamlines<span class="classifier">bool, optional</span></dt><dd><p>サーフェス上の流線を計算します．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> ．</p>
 </dd>
-<dt>initial_step_length<span class="classifier">float, optional</span></dt><dd><p>Initial step size used for line integration, expressed ib length
-unitsL or cell length units (see <code class="docutils literal notranslate"><span class="pre">step_unit</span></code> parameter).
-either the starting size for an adaptive integrator, e.g., RK45, or
-the constant / fixed size for non-adaptive ones, i.e., RK2 and RK4).</p>
+<dt>initial_step_length<span class="classifier">float, optional</span></dt><dd><p>線積分に使用される最初のステップサイズで，ib長さ単位Lまたはセル長単位( <code class="docutils literal notranslate"><span class="pre">step_unit</span></code> パラメータを参照)を表します．RK45のような適応積分器の開始サイズか，RK 2とRK 4のような非適応積分器の一定/固定サイズのどちらか)．</p>
 </dd>
 <dt>step_unit<span class="classifier">str, optional</span></dt><dd><p>均一積分ステップ単位．有効な単位は LENGTH_UNIT (<code class="docutils literal notranslate"><span class="pre">'l'</span></code>) と CELL_LENGTH_UNIT (<code class="docutils literal notranslate"><span class="pre">'cl'</span></code>) だけに制限されます．デフォルトは CELL_LENGTH_UNIT : <code class="docutils literal notranslate"><span class="pre">'cl'</span></code> です．</p>
 </dd>
-<dt>min_step_length<span class="classifier">float, optional</span></dt><dd><p>Minimum step size used for line integration, expressed in length or
-cell length units. Only valid for an adaptive integrator, e.g., RK45.</p>
+<dt>min_step_length<span class="classifier">float, optional</span></dt><dd><p>線積分に使用される最小ステップサイズで，長さまたはセル長の単位で表されます．RK45のような適応積分器にのみ有効．</p>
 </dd>
-<dt>max_step_length<span class="classifier">float, optional</span></dt><dd><p>Maximum step size used for line integration, expressed in length or
-cell length units. Only valid for an adaptive integrator, e.g., RK45.</p>
+<dt>max_step_length<span class="classifier">float, optional</span></dt><dd><p>線積分に使用される最大ステップサイズで，長さまたはセル長の単位で表されます．RK45のような適応積分器にのみ有効．</p>
 </dd>
 <dt>max_steps<span class="classifier">int, optional</span></dt><dd><p>流線を積分するための最大ステップ数．デフォルトは <code class="docutils literal notranslate"><span class="pre">2000</span></code></p>
 </dd>
@@ -1648,10 +1624,7 @@ cell length units. Only valid for an adaptive integrator, e.g., RK45.</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値</dt>
-<dd class="field-odd"><p><strong>streamlines</strong> -- This produces polylines as the output, with each cell
-(i.e., polyline) representing a streamline. The attribute values
-associated with each streamline are stored in the cell data, whereas
-those associated with streamline-points are stored in the point data.</p>
+<dd class="field-odd"><p><strong>streamlines</strong> -- これにより，各セル(つまり，ポリライン)が流線を表すポリラインが出力として生成されます．各流線に関連付けられた属性値はセルデータに格納され，流線ポイントに関連付けられた属性値はポイントデータに格納されます．</p>
 </dd>
 <dt class="field-even">戻り値の型</dt>
 <dd class="field-even"><p><a class="reference internal" href="points.html#pyvista.PolyData" title="pyvista.PolyData">pyvista.PolyData</a></p>
@@ -1684,9 +1657,7 @@ those associated with streamline-points are stored in the point data.</p>
 <li><p><strong>origin</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em>) -- 平面のBOTTOM LEFT CORNERのXYZ座標を定義する浮動小数点の反復可能な長さ3</p></li>
 <li><p><strong>point_u</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em>) -- 平面のBOTTOM RIGHT CORNERのXYZ座標を定義する浮動小数点の反復可能な長さ3</p></li>
 <li><p><strong>point_v</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em>) -- 平面のTOP LEFT CORNERのXYZ座標を定義する浮動小数点の反復可能な長さ3</p></li>
-<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- If True, the new texture coordinates will be added to this
-dataset. If False (default), a new dataset is returned
-with the textures coordinates</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Trueの場合，新しいテクスチャ座標がデータセットに追加されます．False (デフォルト) の場合，新しいデータセットがテクスチャ座標とともに返されます．</p></li>
 <li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) -- フィルタをインプレースに適用する場合に，新しいテクスチャ座標を指定する文字列名．</p></li>
 <li><p><strong>use_bounds</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 境界を使用してマッピングプレーンをデフォルトで設定します(バウンディングボックスの底面)．</p></li>
 </ul>
@@ -1704,7 +1675,7 @@ with the textures coordinates</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>center</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em>) -- 長さ3は，球の中心のXYZ座標を定義する浮動小数点の反復可能な値です． <code class="docutils literal notranslate"><span class="pre">None</span></code> の場合は自動的に計算されます．</p></li>
 <li><p><strong>prevent_seam</strong> (<em>bool</em>) -- デフォルトはtrueです．テクスチャ座標の生成方法を制御します．設定されている場合，s座標の範囲は， 0-&gt;180 と 180-&gt;0 度の間のシータ角度の変動に対応する 0-&gt;1 と 1-&gt;0 です．それ以外の場合，s座標の範囲は 0-&gt;1 から 0-&gt;360 度までです．</p></li>
-<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Trueの場合，新しいテクスチャ座標がデータセットのインプレイスに追加されます．False (既定値) の場合，新しいデータセットがテクスチャ座標とともに返されます．</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Trueの場合，新しいテクスチャ座標がデータセットのインプレイスに追加されます．False (デフォルト) の場合，新しいデータセットがテクスチャ座標とともに返されます．</p></li>
 <li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) -- フィルタをインプレースに適用する場合に，新しいテクスチャ座標を指定する文字列名．</p></li>
 </ul>
 </dd>
@@ -1730,7 +1701,7 @@ with the textures coordinates</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>value</strong> (<em>float</em><em> or </em><em>sequence</em><em>, </em><em>optional</em>) -- データしきい値に使用する単一の値または(最小，最大)．シーケンスの場合，長さは2にする必要があります．値を指定しない場合，NaN以外のデータ範囲を使用してNaN値が削除されます．</p></li>
 <li><p><strong>scalars</strong> (<em>str</em><em>, </em><em>optional</em>) -- しきい値に対するスカラーの名前．デフォルトは現在アクティブなスカラーです．</p></li>
-<li><p><strong>invert</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 値が単一の値の場合，invertがTrueのとき，セルの値がパラメータ &quot;value&quot; を下回っているときにセルが保持されます．invertがFalseのとき，セルの値がしきい値 &quot;value&quot; を上回っているときにセルが保持されます．既定値はFalseです:しきい値 &quot;value&quot; を上回ってセルが生成されます．</p></li>
+<li><p><strong>invert</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 値が単一の値の場合，invertがTrueのとき，セルの値がパラメータ &quot;value&quot; を下回っているときにセルが保持されます．invertがFalseのとき，セルの値がしきい値 &quot;value&quot; を上回っているときにセルが保持されます．デフォルトはFalseです:しきい値 &quot;value&quot; を上回ってセルが生成されます．</p></li>
 <li><p><strong>continuous</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Trueの場合，頂点からの離散スカラー値のセットではなく，連続間隔[最小セルスカラー，最大セルスカラー]がしきい値境界との交差に使用されます．</p></li>
 <li><p><strong>preference</strong> (<em>str</em><em>, </em><em>optional</em>) -- スカラーが指定されている場合，これはデータセット内で検索するために推奨される配列型です． <code class="docutils literal notranslate"><span class="pre">'point'</span></code> または <code class="docutils literal notranslate"><span class="pre">'cell'</span></code> のいずれかでなければなりません</p></li>
 <li><p><strong>all_scalars</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 点データからスカラーを使用する場合，この値が <code class="docutils literal notranslate"><span class="pre">True</span></code> のときは，セル内のすべての点のすべてのスカラーが閾値を満たす必要があります． <code class="docutils literal notranslate"><span class="pre">False</span></code> のときは，閾値の基準を満たすスカラー値を持つセルの任意の点がセルを抽出します．</p></li>
@@ -1774,19 +1745,17 @@ with the textures coordinates</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>trans</strong> (<em>vtk.vtkMatrix4x4</em><em>, </em><em>vtk.vtkTransform</em><em>, or </em><em>np.ndarray</em>) -- vtk変換オブジェクトまたは4 x 4変換行列を受け入れます．</p></li>
 <li><p><strong>transform_all_input_vectors</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の時，全ての入力ベクトルは変換される．それ以外の場合は，ポイント，法線，およびアクティブなベクトルだけが変換されます．</p></li>
-<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- When <code class="docutils literal notranslate"><span class="pre">True</span></code>, modifies the dataset inplace.</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，データセットを直接変更します．</p></li>
 </ul>
 </dd>
 </dl>
 <p class="rubric">サンプル</p>
-<p>Translate a mesh by <code class="docutils literal notranslate"><span class="pre">(50,</span> <span class="pre">100,</span> <span class="pre">200)</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">(50,</span> <span class="pre">100,</span> <span class="pre">200)</span></code> によるメッシュの変換</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_airplane</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Here a 4x4 <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array is used, but
-<code class="docutils literal notranslate"><span class="pre">vtk.vtkMatrix4x4</span></code> and <code class="docutils literal notranslate"><span class="pre">vtk.vtkTransform</span></code> are also
-accepted.</p>
+<p>4x4  <code class="docutils literal notranslate"><span class="pre">numpy</span></code> 配列を使用していますが， <code class="docutils literal notranslate"><span class="pre">vtk.vtkMatrix4x4</span></code> および <code class="docutils literal notranslate"><span class="pre">vtk.vtkTransform</span></code> も使用できます．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">transform_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">],</span>
 <span class="gp">... </span>                             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span>
 <span class="gp">... </span>                             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">200</span><span class="p">],</span>
@@ -1804,10 +1773,10 @@ accepted.</p>
 <p>より複雑なポリゴンは三角形に分解されます．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
-<dd class="field-odd"><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Updates mesh in-place.</p>
+<dd class="field-odd"><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- インプレイスメッシュを更新します．</p>
 </dd>
 <dt class="field-even">戻り値</dt>
-<dd class="field-even"><p><strong>mesh</strong> -- Mesh containing only triangles.</p>
+<dd class="field-even"><p><strong>mesh</strong> -- 三角形のみを含むメッシュ．</p>
 </dd>
 <dt class="field-odd">戻り値の型</dt>
 <dd class="field-odd"><p><a class="reference internal" href="point-grids.html#pyvista.UnstructuredGrid" title="pyvista.UnstructuredGrid">pyvista.UnstructuredGrid</a></p>
@@ -1826,7 +1795,7 @@ accepted.</p>
 <li><p><strong>scalars</strong> (<em>str</em><em>, </em><em>optional</em>) -- ワープに使用するスカラーの名前．デフォルトは現在アクティブなスカラーです．</p></li>
 <li><p><strong>factor</strong> (<em>float</em><em>, </em><em>optional</em>) -- スケーリングエフェクトを大きくするためのスケーリング係数．エイリアス <code class="docutils literal notranslate"><span class="pre">scale_factor</span></code> も受け付けます-存在する場合， <code class="docutils literal notranslate"><span class="pre">factor</span></code> を上書きします．</p></li>
 <li><p><strong>normal</strong> (<em>np.array</em><em>, </em><em>list</em><em>, </em><em>tuple of length 3</em>) -- ユーザが法線を指定します．指定した場合，データ法線は無視され，指定した法線を使用してワープが投影されます．</p></li>
-<li><p><strong>inplace</strong> (<em>bool</em>) -- If True, the points of the given dataset will be updated.</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em>) -- Trueの場合，与えられたデータセットのポイントが更新されます．</p></li>
 </ul>
 </dd>
 </dl>
@@ -1841,9 +1810,9 @@ accepted.</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>vectors</strong> (<em>str</em><em>, </em><em>optional</em>) -- ワープに使用するベクトルの名前．既定値は現在アクティブなベクトルです．</p></li>
+<li><p><strong>vectors</strong> (<em>str</em><em>, </em><em>optional</em>) -- ワープに使用するベクトルの名前．デフォルトは現在アクティブなベクトルです．</p></li>
 <li><p><strong>factor</strong> (<em>float</em><em>, </em><em>optional</em>) -- ワープするベクトルに乗算するスケール係数．ワープ効果を高めることができます．</p></li>
-<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- If True, the function will update the mesh in-place.</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Trueの場合，関数はメッシュをインプレイス更新します．</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
@@ -1983,11 +1952,11 @@ accepted.</p>
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>mesh</strong> (<a class="reference internal" href="points.html#pyvista.PolyData" title="pyvista.PolyData"><em>pyvista.PolyData</em></a>) -- 追加するメッシュ．</p></li>
-<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Updates mesh in-place.</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- インプレイスメッシュを更新します．</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
-<dd class="field-even"><p><strong>joinedmesh</strong> -- The joined mesh.</p>
+<dd class="field-even"><p><strong>joinedmesh</strong> -- 結合されたメッシュ．</p>
 </dd>
 <dt class="field-odd">戻り値の型</dt>
 <dd class="field-odd"><p><a class="reference internal" href="points.html#pyvista.PolyData" title="pyvista.PolyData">pyvista.PolyData</a></p>
@@ -2003,11 +1972,11 @@ accepted.</p>
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>cut</strong> (<a class="reference internal" href="points.html#pyvista.PolyData" title="pyvista.PolyData"><em>pyvista.PolyData</em></a>) -- 切断するメッシュ</p></li>
-<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Updates mesh in-place.</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- インプレイスメッシュを更新します．</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
-<dd class="field-even"><p><strong>mesh</strong> -- The cut mesh.</p>
+<dd class="field-even"><p><strong>mesh</strong> -- 切断メッシュ．</p>
 </dd>
 <dt class="field-odd">戻り値の型</dt>
 <dd class="field-odd"><p><a class="reference internal" href="points.html#pyvista.PolyData" title="pyvista.PolyData">pyvista.PolyData</a></p>
@@ -2023,11 +1992,11 @@ accepted.</p>
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>mesh</strong> (<a class="reference internal" href="points.html#pyvista.PolyData" title="pyvista.PolyData"><em>pyvista.PolyData</em></a>) -- 結合を実行するメッシュ先．</p></li>
-<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Updates mesh in-place.</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- インプレイスメッシュを更新します．</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
-<dd class="field-even"><p><strong>union</strong> -- The union mesh.</p>
+<dd class="field-even"><p><strong>union</strong> -- ユニオンメッシュ．</p>
 </dd>
 <dt class="field-odd">戻り値の型</dt>
 <dd class="field-odd"><p><a class="reference internal" href="points.html#pyvista.PolyData" title="pyvista.PolyData">pyvista.PolyData</a></p>
@@ -2043,11 +2012,11 @@ accepted.</p>
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>mesh</strong> (<a class="reference internal" href="points.html#pyvista.PolyData" title="pyvista.PolyData"><em>pyvista.PolyData</em></a>) -- 結合を実行するメッシュ先．</p></li>
-<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Updates mesh in-place.</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- インプレイスメッシュを更新します．</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
-<dd class="field-even"><p><strong>union</strong> -- The union mesh.</p>
+<dd class="field-even"><p><strong>union</strong> -- ユニオンメッシュ．</p>
 </dd>
 <dt class="field-odd">戻り値の型</dt>
 <dd class="field-odd"><p><a class="reference internal" href="points.html#pyvista.PolyData" title="pyvista.PolyData">pyvista.PolyData</a></p>
@@ -2064,22 +2033,17 @@ accepted.</p>
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>point_merging</strong> (<em>bool</em><em>, </em><em>optional</em>) -- ポイントのマージを有効にします．既定ではオンです．</p></li>
-<li><p><strong>tolerance</strong> (<em>float</em><em>, </em><em>optional</em>) -- Set merging tolerance.  When enabled merging is set to
-absolute distance. If <code class="docutils literal notranslate"><span class="pre">absolute</span></code> is <code class="docutils literal notranslate"><span class="pre">False</span></code>, then the
-merging tolerance is a fraction of the bounding box
-length. The alias <code class="docutils literal notranslate"><span class="pre">merge_tol</span></code> is also excepted.</p></li>
-<li><p><strong>lines_to_points</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Turn on/off conversion of degenerate lines to points.
-Enabled by default.</p></li>
-<li><p><strong>polys_to_lines</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Turn on/off conversion of degenerate polys to lines.
-Enabled by default.</p></li>
+<li><p><strong>tolerance</strong> (<em>float</em><em>, </em><em>optional</em>) -- マージ許容値を設定します．有効な場合，マージは絶対距離に設定されます．<code class="docutils literal notranslate"><span class="pre">absolute</span></code> が <code class="docutils literal notranslate"><span class="pre">False</span></code> の場合，結合許容差は境界ボックスの長さの分数になります．別名 <code class="docutils literal notranslate"><span class="pre">merge_tol</span></code> も例外です．</p></li>
+<li><p><strong>lines_to_points</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 縮退ラインからポイントへの変換のオンとオフを切り替えます．既定では有効になっています．</p></li>
+<li><p><strong>polys_to_lines</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 縮退polyから線への変換のオンとオフを切り替えます．既定では有効になっています．</p></li>
 <li><p><strong>strips_to_polys</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 縮退ストリップからpolyへの変換のオン/オフを切り替えます．</p></li>
-<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Updates mesh in-place. Default <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- インプレイスメッシュを更新します．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です．</p></li>
 <li><p><strong>absolute</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">tolerance</span></code> が絶対距離か分数かをコントロールします．</p></li>
 <li><p><strong>progress_bar</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 進行状況を示す進行状況バーを表示します．</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
-<dd class="field-even"><p><strong>mesh</strong> -- Cleaned mesh.</p>
+<dd class="field-even"><p><strong>mesh</strong> -- メッシュを消去しました．</p>
 </dd>
 <dt class="field-odd">戻り値の型</dt>
 <dd class="field-odd"><p><a class="reference internal" href="points.html#pyvista.PolyData" title="pyvista.PolyData">pyvista.PolyData</a></p>
@@ -2104,24 +2068,18 @@ Enabled by default.</p></li>
 <dd><p>閉じたポリデータサーフェスを平面でクリップします．</p>
 <p>これは現在1つのプレーンしかサポートしていませんが，プレーンコレクションを処理するために実装することができます．</p>
 <p>入力データがクリップされた新しいポリゴンフェースを作成して，新しい閉じたサーフェスを生成します．</p>
-<p>Non-manifold surfaces should not be used as input for this
-filter.  The input surface should have no open edges, and must
-not have any edges that are shared by more than two faces. In
-addition, the input surface should not self-intersect, meaning
-that the faces of the surface should only touch at their
-edges.</p>
+<p>非多様体サーフェスは，このフィルタの入力として使用しないでください．入力サーフェスには開いたエッジがなく，3つ以上のフェースによって共有されるエッジがあってはなりません．また，入力サーフェスは自己交差してはなりません．つまり，サーフェスのフェースはエッジでのみ接触する必要があります．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>normal</strong> (<em>str</em><em>, </em><em>list</em><em>, </em><em>optional</em>) -- クリップに垂直な平面．飛行機は <code class="docutils literal notranslate"><span class="pre">origin</span></code> を中心としています．normalは，3つのメンバー・リスト(例: <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">0,</span> <span class="pre">1]</span></code> )，または <code class="docutils literal notranslate"><span class="pre">'x'</span></code> ， <code class="docutils literal notranslate"><span class="pre">'y'</span></code> ， <code class="docutils literal notranslate"><span class="pre">'z'</span></code> ， <code class="docutils literal notranslate"><span class="pre">'-x'</span></code> ， <code class="docutils literal notranslate"><span class="pre">'-y'</span></code> ， <code class="docutils literal notranslate"><span class="pre">'-z'</span></code> のいずれかの文字列です．</p></li>
-<li><p><strong>origin</strong> (<em>list</em><em>, </em><em>optional</em>) -- Coordinate of the origin (e.g. <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">0,</span> <span class="pre">0]</span></code>).  Defaults
-to the center of the mesh.</p></li>
+<li><p><strong>origin</strong> (<em>list</em><em>, </em><em>optional</em>) -- 原点の座標(例: <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">0,</span> <span class="pre">0]</span></code> )。デフォルトはメッシュの中心です。</p></li>
 <li><p><strong>tolerance</strong> (<em>float</em><em>, </em><em>optional</em>) -- クリップ中に新しい点を作成するための許容差です．許容値が小さすぎると，縮退した三角形が生成される場合があります．</p></li>
-<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Updates mesh in-place. Defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- インプレイスメッシュを更新します．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です．</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
-<dd class="field-even"><p><strong>clipped_mesh</strong> -- The clipped mesh.</p>
+<dd class="field-even"><p><strong>clipped_mesh</strong> -- クリップされたメッシュ．</p>
 </dd>
 <dt class="field-odd">戻り値の型</dt>
 <dd class="field-odd"><p><a class="reference internal" href="points.html#pyvista.PolyData" title="pyvista.PolyData">pyvista.PolyData</a></p>
@@ -2144,12 +2102,10 @@ to the center of the mesh.</p></li>
 <dt id="pyvista.PolyDataFilters.compute_arc_length">
 <code class="sig-name descname"><span class="pre">compute_arc_length</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyDataFilters.compute_arc_length" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>精査する線の長さに対する円弧の長さを計算します．</p>
-<p>It adds a new point-data array named <code class="docutils literal notranslate"><span class="pre">&quot;arc_length&quot;</span></code> with the
-computed arc length for each of the polylines in the
-input. For all other cell types, the arc length is set to 0.</p>
+<p>入力の各ポリラインに対して計算された円弧の長さを持つ <code class="docutils literal notranslate"><span class="pre">&quot;arc_length&quot;</span></code> という名前の新しい点データ配列が追加されます．その他すべてのセルタイプでは，円弧の長さは0に設定されます．</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値</dt>
-<dd class="field-odd"><p><strong>arc_length</strong> -- Arc length of the length of the probed line.</p>
+<dd class="field-odd"><p><strong>arc_length</strong> -- 精査した線の長さの弧長．</p>
 </dd>
 <dt class="field-even">戻り値の型</dt>
 <dd class="field-even"><p>float</p>
@@ -2164,7 +2120,7 @@ input. For all other cell types, the arc length is set to 0.</p>
 <span class="go">Length is 0.812</span>
 </pre></div>
 </div>
-<p>This is identical to the geodesic_distance.</p>
+<p>これはgeodesic_distanceと同じです．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">length</span> <span class="o">=</span> <span class="n">sphere</span><span class="o">.</span><span class="n">geodesic_distance</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Length is </span><span class="si">{</span><span class="n">length</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="go">Length is 0.812</span>
@@ -2186,41 +2142,26 @@ input. For all other cell types, the arc length is set to 0.</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>cell_normals</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Calculation of cell normals. Defaults to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
-<li><p><strong>point_normals</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Calculation of point normals. Defaults to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
-<li><p><strong>split_vertices</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Splitting of sharp edges. Defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
-<li><p><strong>flip_normals</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Set global flipping of normal orientation. Flipping
-modifies both the normal direction and the order of a
-cell's points. Defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
-<li><p><strong>consistent_normals</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Enforcement of consistent polygon ordering. Defaults to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
-<li><p><strong>auto_orient_normals</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Turn on/off the automatic determination of correct normal
-orientation. NOTE: This assumes a completely closed
-surface (i.e. no boundary edges) and no non-manifold
-edges. If these constraints do not hold, all bets are
-off. This option adds some computational complexity, and
-is useful if you do not want to have to inspect the
-rendered image to determine whether to turn on the
-<code class="docutils literal notranslate"><span class="pre">flip_normals</span></code> flag.  However, this flag can work with
-the <code class="docutils literal notranslate"><span class="pre">flip_normals</span></code> flag, and if both are set, all the
-normals in the output will point &quot;inward&quot;. Defaults to
-<code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
-<li><p><strong>non_manifold_traversal</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Turn on/off traversal across non-manifold edges. Changing
-this may prevent problems where the consistency of
-polygonal ordering is corrupted due to topological
-loops. Defaults to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
+<li><p><strong>cell_normals</strong> (<em>bool</em><em>, </em><em>optional</em>) -- セル法線の計算．デフォルトは <code class="docutils literal notranslate"><span class="pre">True</span></code> です．</p></li>
+<li><p><strong>point_normals</strong> (<em>bool</em><em>, </em><em>optional</em>) -- ポイント法線の計算．デフォルトは <code class="docutils literal notranslate"><span class="pre">True</span></code> です．</p></li>
+<li><p><strong>split_vertices</strong> (<em>bool</em><em>, </em><em>optional</em>) -- シャープエッジの分割．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です．</p></li>
+<li><p><strong>flip_normals</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 法線方向のグローバル反転を設定します．フリップすると，セルのポイントの法線方向と順序の両方が変更されます．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です．</p></li>
+<li><p><strong>consistent_normals</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 一貫したポリゴン順序の強制．デフォルトは <code class="docutils literal notranslate"><span class="pre">True</span></code> です．</p></li>
+<li><p><strong>auto_orient_normals</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 正しい法線方向の自動決定のオンとオフを切り替えます．注:これは，完全に閉じたサーフェス(つまり，境界エッジがありません．)で，非マニホールドエッジがないことを前提としています．これらの制約が満たされない場合，すべての賭けはオフになります．このオプションは計算が複雑になるため，レンダーしたイメージを検査して <code class="docutils literal notranslate"><span class="pre">flip_normals</span></code> フラグをオンにするかどうかを決定する必要がない場合に便利です．ただし，このフラグは <code class="docutils literal notranslate"><span class="pre">flip_normals</span></code> フラグと一緒に使用でき，両方が設定されている場合，出力のすべての法線は &quot;inward&quot; をポイントします．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です．</p></li>
+<li><p><strong>non_manifold_traversal</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 非多様体エッジの横断のオンとオフを切り替えます．これを変更すると，トポロジループが原因でポリゴン順序の一貫性が損なわれる問題を防ぐことができます．デフォルトは <code class="docutils literal notranslate"><span class="pre">True</span></code> です．</p></li>
 <li><p><strong>feature_angle</strong> (<em>float</em><em>, </em><em>optional</em>) -- 鋭いエッジを定義する角度．隣接するポリゴン間の角度の差がこの値より大きい場合，共有エッジは &quot;鋭い&quot; とみなされます．デフォルトは30.0です．</p></li>
-<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Updates mesh in-place. Defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- インプレイスメッシュを更新します．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です．</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
-<dd class="field-even"><p><strong>mesh</strong> -- Updated mesh with cell and point normals.</p>
+<dd class="field-even"><p><strong>mesh</strong> -- セル法線とポイント法線を使用してメッシュを更新</p>
 </dd>
 <dt class="field-odd">戻り値の型</dt>
 <dd class="field-odd"><p><a class="reference internal" href="points.html#pyvista.PolyData" title="pyvista.PolyData">pyvista.PolyData</a></p>
 </dd>
 </dl>
 <p class="rubric">サンプル</p>
-<p>Compute the point normals of the surface of a sphere.</p>
+<p>球のサーフェスの点法線を計算します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span> <span class="o">=</span> <span class="n">sphere</span><span class="o">.</span><span class="n">compute_normals</span><span class="p">(</span><span class="n">cell_normals</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -2243,7 +2184,7 @@ loops. Defaults to <code class="docutils literal notranslate"><span class="pre">
 <p>&quot;Normals&quot; という名前の以前の配列は上書きされます．</p>
 <p>法線はポリゴンと三角形ストリップに対してのみ計算されます．線分または頂点の法線は計算されません．</p>
 <p>三角形ストリップは三角形ポリゴンに分割されます．三角形を再分割することもできます．</p>
-<p>May be easier to run <code class="docutils literal notranslate"><span class="pre">mesh.point_normals</span></code> or <code class="docutils literal notranslate"><span class="pre">mesh.cell_normals</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">mesh.point_normals</span></code> または <code class="docutils literal notranslate"><span class="pre">mesh.cell_normals</span></code> を実行する方が簡単な場合があります</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2276,24 +2217,24 @@ loops. Defaults to <code class="docutils literal notranslate"><span class="pre">
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>mesh</strong> (<em>vtk.PolyData</em>) -- メッシュを間引</p></li>
 <li><p><strong>target_reduction</strong> (<em>float</em>) -- 削除する元のメッシュの割合．TargetReductionが 0.9 に設定されています．このフィルタはデータセットを元のサイズの10%に縮小しようとし，入力三角形の90%を削除します．</p></li>
-<li><p><strong>volume_preservation</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 三角形の法線方向のエラーを大幅に減らすボリューム保存を有効にするかどうかを決定します．オフの場合，ボリュームの保存は無効になり，AttributeErrorMetricがアクティブな場合，これらのエラーは大きくなる可能性があります．既定値はFalseです．</p></li>
-<li><p><strong>attribute_error</strong> (<em>bool</em><em>, </em><em>optional</em>) -- エラー指標にデータ属性を含めるかどうかを決定します．オフの場合，ジオメトリエラーのみを使用して間引きを制御します．既定値はFalseです．</p></li>
-<li><p><strong>scalars</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 属性エラーをメトリックに含める場合(つまり，AttributeErrorMetricがオンになっています)，次のフラグはエラー計算に含める属性を制御します．既定値はTrueです．</p></li>
-<li><p><strong>vectors</strong> (<em>bool</em><em>, </em><em>optional</em>) -- スカラーパラメータを参照してください．既定値はTrueです．</p></li>
-<li><p><strong>normals</strong> (<em>bool</em><em>, </em><em>optional</em>) -- スカラーパラメータを参照してください．既定値はFalseです．</p></li>
-<li><p><strong>tcoords</strong> (<em>bool</em><em>, </em><em>optional</em>) -- スカラーパラメータを参照してください．既定値はTrueです．</p></li>
-<li><p><strong>tensors</strong> (<em>bool</em><em>, </em><em>optional</em>) -- スカラーパラメータを参照してください．既定値はTrueです．</p></li>
+<li><p><strong>volume_preservation</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 三角形の法線方向のエラーを大幅に減らすボリューム保存を有効にするかどうかを決定します．オフの場合，ボリュームの保存は無効になり，AttributeErrorMetricがアクティブな場合，これらのエラーは大きくなる可能性があります．デフォルトはFalseです．</p></li>
+<li><p><strong>attribute_error</strong> (<em>bool</em><em>, </em><em>optional</em>) -- エラー指標にデータ属性を含めるかどうかを決定します．オフの場合，ジオメトリエラーのみを使用して間引きを制御します．デフォルトはFalseです．</p></li>
+<li><p><strong>scalars</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 属性エラーをメトリックに含める場合(つまり，AttributeErrorMetricがオンになっています)，次のフラグはエラー計算に含める属性を制御します．デフォルトはTrueです．</p></li>
+<li><p><strong>vectors</strong> (<em>bool</em><em>, </em><em>optional</em>) -- スカラーパラメータを参照してください．デフォルトはTrueです．</p></li>
+<li><p><strong>normals</strong> (<em>bool</em><em>, </em><em>optional</em>) -- スカラーパラメータを参照してください．デフォルトはFalseです．</p></li>
+<li><p><strong>tcoords</strong> (<em>bool</em><em>, </em><em>optional</em>) -- スカラーパラメータを参照してください．デフォルトはTrueです．</p></li>
+<li><p><strong>tensors</strong> (<em>bool</em><em>, </em><em>optional</em>) -- スカラーパラメータを参照してください．デフォルトはTrueです．</p></li>
 <li><p><strong>scalars_weight</strong> (<em>float</em><em>, </em><em>optional</em>) -- スカラーアトリビュートのスケーリングウェイトの影響．これらの値は，エラーメトリックに対する属性の影響を重み付けするために使用されます．デフォルトは0.1です．</p></li>
 <li><p><strong>vectors_weight</strong> (<em>float</em><em>, </em><em>optional</em>) -- スカラーのウェイトパラメータを参照してください．デフォルトは0.1です．</p></li>
 <li><p><strong>normals_weight</strong> (<em>float</em><em>, </em><em>optional</em>) -- スカラーのウェイトパラメータを参照してください．デフォルトは0.1です．</p></li>
 <li><p><strong>tcoords_weight</strong> (<em>float</em><em>, </em><em>optional</em>) -- スカラーのウェイトパラメータを参照してください．デフォルトは0.1です．</p></li>
 <li><p><strong>tensors_weight</strong> (<em>float</em><em>, </em><em>optional</em>) -- スカラーのウェイトパラメータを参照してください．デフォルトは0.1です．</p></li>
-<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Updates mesh in-place.</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- インプレイスメッシュを更新します．</p></li>
 <li><p><strong>progress_bar</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 進行状況を示す進行状況バーを表示します．</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
-<dd class="field-even"><p><strong>outmesh</strong> -- Decimated mesh.</p>
+<dd class="field-even"><p><strong>outmesh</strong> -- 間引済みメッシュ．</p>
 </dd>
 <dt class="field-odd">戻り値の型</dt>
 <dd class="field-odd"><p><a class="reference internal" href="points.html#pyvista.PolyData" title="pyvista.PolyData">pyvista.PolyData</a></p>
@@ -2328,11 +2269,11 @@ loops. Defaults to <code class="docutils literal notranslate"><span class="pre">
 <li><p><strong>splitting</strong> (<em>bool</em><em>, </em><em>optional</em>) -- コーナーでのメッシュの分割，エッジに沿ったメッシュの分割，非多様点でのメッシュの分割，または分割が必要な場所でのメッシュの分割をコントロールします．分割をオフにすると，メッシュの元のトポロジが保持されますが，要求された正確な間引きが得られない場合があります．</p></li>
 <li><p><strong>pre_split_mesh</strong> (<em>bool</em><em>, </em><em>optional</em>) -- メッシュを，互いに切り離された半平面パッチに分離します．これにより，場合によっては優れた結果が得られます．pre_split_meshがTrueに設定されている場合，メッシュは指定されたsplit_angleで分割されます．それ以外の場合，メッシュ分割は可能な限り延期されます．</p></li>
 <li><p><strong>preserve_topology</strong> (<em>bool</em><em>, </em><em>optional</em>) -- トポロジの保存をコントロールします．オンの場合，メッシュの分割と穴の除去は行われません．これは，達成され得る最大減少を制限し得ます．</p></li>
-<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Updates mesh in-place.</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- インプレイスメッシュを更新します．</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
-<dd class="field-even"><p><strong>mesh</strong> -- Decimated mesh.</p>
+<dd class="field-even"><p><strong>mesh</strong> -- 間引済みメッシュ．</p>
 </dd>
 <dt class="field-odd">戻り値の型</dt>
 <dd class="field-odd"><p><a class="reference internal" href="points.html#pyvista.PolyData" title="pyvista.PolyData">pyvista.PolyData</a></p>
@@ -2347,32 +2288,13 @@ loops. Defaults to <code class="docutils literal notranslate"><span class="pre">
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>tol</strong> (<em>float</em><em>, </em><em>optional</em>) -- Specify a tolerance to control discarding of closely
-spaced points. This tolerance is specified as a fraction
-of the diagonal length of the bounding box of the points.
-Defaults to <code class="docutils literal notranslate"><span class="pre">1e-05</span></code>.</p></li>
-<li><p><strong>alpha</strong> (<em>float</em><em>, </em><em>optional</em>) -- Specify alpha (or distance) value to control output of
-this filter. For a non-zero alpha value, only edges or
-triangles contained within a sphere centered at mesh
-vertices will be output. Otherwise, only triangles will be
-output. Defaults to <code class="docutils literal notranslate"><span class="pre">0.0</span></code>.</p></li>
-<li><p><strong>offset</strong> (<em>float</em><em>, </em><em>optional</em>) -- Specify a multiplier to control the size of the initial,
-bounding Delaunay triangulation. Defaults to <code class="docutils literal notranslate"><span class="pre">1.0</span></code>.</p></li>
-<li><p><strong>bound</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Boolean controls whether bounding triangulation points
-and associated triangles are included in the
-output. These are introduced as an initial triangulation
-to begin the triangulation process. This feature is nice
-for debugging output. Default <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
-<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- If <code class="docutils literal notranslate"><span class="pre">True</span></code>, overwrite this mesh with the triangulated
-mesh. Default <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
-<li><p><strong>edge_source</strong> (<a class="reference internal" href="points.html#pyvista.PolyData" title="pyvista.PolyData"><em>pyvista.PolyData</em></a><em>, </em><em>optional</em>) -- Specify the source object used to specify constrained
-edges and loops. If set, and lines/polygons are defined, a
-constrained triangulation is created. The lines/polygons
-are assumed to reference points in the input point set
-(i.e. point ids are identical in the input and
-source).</p></li>
-<li><p><strong>progress_bar</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Display a progress bar to indicate progress. Default
-<code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+<li><p><strong>tol</strong> (<em>float</em><em>, </em><em>optional</em>) -- 間隔の狭い点の削除を制御する許容差を指定します．この許容値は，ポイントのバウンディングボックスの対角線の長さの一部として指定されます．デフォルトは <code class="docutils literal notranslate"><span class="pre">1e-05</span></code> ．</p></li>
+<li><p><strong>alpha</strong> (<em>float</em><em>, </em><em>optional</em>) -- このフィルタの出力を制御するアルファ(または距離)値を指定します．アルファ値が0以外の場合は，メッシュ頂点を中心とする球に含まれるエッジまたは三角形のみが出力されます．それ以外の場合は，三角形のみが出力されます．デフォルトは <code class="docutils literal notranslate"><span class="pre">0.0</span></code> ．</p></li>
+<li><p><strong>offset</strong> (<em>float</em><em>, </em><em>optional</em>) -- 初期の境界Delaunay三角形分割のサイズを制御する乗数を指定します．デフォルトは <code class="docutils literal notranslate"><span class="pre">1.0</span></code> ．</p></li>
+<li><p><strong>bound</strong> (<em>bool</em><em>, </em><em>optional</em>) -- ブール演算は，境界の三角形分割ポイントと関連する三角形を出力に含めるかどうかをコントロールします．これらは三角測量プロセスを開始するための初期三角測量として導入されます．この機能は，出力のデバッグに便利です．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です．</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Trueの場合，このメッシュを三角メッシュで上書きします．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です．</p></li>
+<li><p><strong>edge_source</strong> (<a class="reference internal" href="points.html#pyvista.PolyData" title="pyvista.PolyData"><em>pyvista.PolyData</em></a><em>, </em><em>optional</em>) -- 拘束されたエッジとループの指定に使用するソースオブジェクトを指定します．このオプションを設定し，線分またはポリゴンを定義すると，拘束された三角形分割が作成されます．線分/ポリゴンは，入力点セット(つまり，点IDは入力とソースで同一です)内の点を参照すると仮定されます．</p></li>
+<li><p><strong>progress_bar</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 進行状況を示す進行状況バーを表示します．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> ．</p></li>
 </ul>
 </dd>
 </dl>
@@ -2412,7 +2334,7 @@ source).</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>mesh</strong> (<a class="reference internal" href="points.html#pyvista.PolyData" title="pyvista.PolyData"><em>pyvista.PolyData</em></a>) -- 押し出すメッシュ．</p></li>
 <li><p><strong>vector</strong> (<em>np.ndarray</em><em> or </em><em>list</em>) -- メッシュを押し出す方向と長さ．</p></li>
-<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Overwrites the original mesh in-place.</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 元のメッシュの決まった場所に上書きします．</p></li>
 <li><p><strong>progress_bar</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 進行状況を示す進行状況バーを表示します．</p></li>
 </ul>
 </dd>
@@ -2471,7 +2393,7 @@ source).</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
-<dd class="field-even"><p><strong>mesh</strong> -- Mesh with holes filled.</p>
+<dd class="field-even"><p><strong>mesh</strong> -- 穴が充填されたメッシュ．</p>
 </dd>
 <dt class="field-odd">戻り値の型</dt>
 <dd class="field-odd"><p><a class="reference internal" href="points.html#pyvista.PolyData" title="pyvista.PolyData">pyvista.PolyData</a></p>
@@ -2524,7 +2446,7 @@ source).</p></li>
 </dd>
 </dl>
 <p class="rubric">サンプル</p>
-<p>Plot the path between two points on a sphere.</p>
+<p>球上の2点間のパスをプロットします．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">path</span> <span class="o">=</span> <span class="n">sphere</span><span class="o">.</span><span class="n">geodesic</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
@@ -2683,13 +2605,10 @@ source).</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>show_mesh</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Plot the mesh itself.  Defaults to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
-<li><p><strong>mag</strong> (<em>float</em><em>, </em><em>optional</em>) -- Size magnitude of the normal arrows.  Defaults to 1.0.</p></li>
-<li><p><strong>flip</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Flip the normal direction when <code class="docutils literal notranslate"><span class="pre">True</span></code>.  Default
-<code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
-<li><p><strong>use_every</strong> (<em>int</em><em>, </em><em>optional</em>) -- Display every nth normal.  By default every normal is
-displayed.  Display every 10th normal by setting this
-parameter to 10.</p></li>
+<li><p><strong>show_mesh</strong> (<em>bool</em><em>, </em><em>optional</em>) -- メッシュ自体をプロットします。デフォルトは <code class="docutils literal notranslate"><span class="pre">True</span></code> です。</p></li>
+<li><p><strong>mag</strong> (<em>float</em><em>, </em><em>optional</em>) -- 法線矢印のサイズの大きさ。デフォルトは1.0です。</p></li>
+<li><p><strong>flip</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合、法線方向を反転します。デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です。</p></li>
+<li><p><strong>use_every</strong> (<em>int</em><em>, </em><em>optional</em>) -- n番目ごとの法線を表示します。デフォルトでは、すべての法線が表示されます。このパラメータを10に設定すると、10番目ごとの法線が表示されます。</p></li>
 </ul>
 </dd>
 </dl>
@@ -2768,21 +2687,16 @@ parameter to 10.</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>remove</strong> (<em>np.ndarray</em>) -- removeがブール配列の場合， <code class="docutils literal notranslate"><span class="pre">True</span></code> であるポイントは削除されます．それ以外の場合は，インデックスのリストとして扱われます．</p></li>
 <li><p><strong>mode</strong> (<em>str</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">'all'</span></code> の場合，削除のフラグが付いたすべての点を含む面のみが削除されます．デフォルト <code class="docutils literal notranslate"><span class="pre">'any'</span></code></p></li>
-<li><p><strong>keep_scalars</strong> (<em>bool</em><em>, </em><em>optional</em>) -- When <code class="docutils literal notranslate"><span class="pre">True</span></code>, point and cell scalars will be passed on to
-the new mesh.</p></li>
-<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Updates mesh in-place.  Defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+<li><p><strong>keep_scalars</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，ポイントスカラーとセルスカラーが新しいメッシュに渡されます．</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- インプレイスメッシュを更新します．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です．</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><strong>mesh</strong> (<em>pyvista.PolyData</em>) -- Mesh without the points flagged for removal.</p></li>
-<li><p><strong>ridx</strong> (<em>np.ndarray</em>) -- Indices of new points relative to the original mesh.</p></li>
-</ul>
-</p>
+<dd class="field-even"><p><strong>mesh</strong> (<em>pyvista.PolyData</em>) -- 削除のためのフラグが付いたポイントのないメッシュ．<strong>ridx</strong> (<em>np.ndarray</em>) -- 元のメッシュを基準にした新しいポイントのインデックス．</p>
 </dd>
 </dl>
 <p class="rubric">サンプル</p>
-<p>球から最初の100点を削除します。</p>
+<p>球から最初の100点を削除します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">reduced_sphere</span><span class="p">,</span> <span class="n">ridx</span> <span class="o">=</span> <span class="n">sphere</span><span class="o">.</span><span class="n">remove_points</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
@@ -2799,12 +2713,10 @@ the new mesh.</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>width</strong> (<em>float</em><em>, </em><em>optional</em>) -- リボンの &quot;半分の&quot; 幅を設定します．幅を変更できる場合は，これが最小幅になります．デフォルトは長さの10%です．</p></li>
 <li><p><strong>scalars</strong> (<em>str</em><em>, </em><em>optional</em>) -- リボンの幅を変更するために使用するスカラー配列の文字列名．これはスカラー配列が指定されている場合にのみ使用されます．</p></li>
-<li><p><strong>angle</strong> (<em>float</em><em>, </em><em>optional</em>) -- 線の法線からのリボンのオフセット角度の角度。デフォルトは0.0です。</p></li>
+<li><p><strong>angle</strong> (<em>float</em><em>, </em><em>optional</em>) -- 線の法線からのリボンのオフセット角度の角度．デフォルトは0.0です．</p></li>
 <li><p><strong>factor</strong> (<em>float</em><em>, </em><em>optional</em>) -- リボンの最大幅を最小幅の倍数で設定します．デフォルトは2.0です．</p></li>
-<li><p><strong>normal</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em><em>, </em><em>optional</em>) -- デフォルトとして使用する標準。</p></li>
-<li><p><strong>tcoords</strong> (<em>bool</em><em>, </em><em>str</em><em>, </em><em>optional</em>) -- If <code class="docutils literal notranslate"><span class="pre">True</span></code>, generate texture coordinates along the
-ribbon. This can also be specified to generate the texture
-coordinates with either <code class="docutils literal notranslate"><span class="pre">'length'</span></code> or <code class="docutils literal notranslate"><span class="pre">'normalized'</span></code>.</p></li>
+<li><p><strong>normal</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em><em>, </em><em>optional</em>) -- デフォルトとして使用する標準．</p></li>
+<li><p><strong>tcoords</strong> (<em>bool</em><em>, </em><em>str</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，リボンに沿ってテクスチャ座標を生成します．これは， <code class="docutils literal notranslate"><span class="pre">'length'</span></code> または <code class="docutils literal notranslate"><span class="pre">'normalized'</span></code> でテクスチャ座標を生成するように指定することもできます。</p></li>
 </ul>
 </dd>
 </dl>
@@ -2836,7 +2748,7 @@ coordinates with either <code class="docutils literal notranslate"><span class="
 <li><p><strong>feature_angle</strong> (<em>float</em><em>, </em><em>optional</em>) -- シャープエッジを識別するためのフィーチャ角度です．</p></li>
 <li><p><strong>boundary_smoothing</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 境界エッジのスムージングを制御するブールフラグ．</p></li>
 <li><p><strong>feature_smoothing</strong> (<em>bool</em><em>, </em><em>optional</em>) -- フィーチャエッジのスムージングをコントロールするbooleanフラグ．</p></li>
-<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Updates mesh in-place.</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- インプレイスメッシュを更新します．</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
@@ -2867,11 +2779,7 @@ coordinates with either <code class="docutils literal notranslate"><span class="
 <dd><p>ポリゴンデータセルをストリップします．</p>
 <p>入力ポリゴン，三角形ストリップ，およびラインから三角形ストリップまたはポリラインを生成します．</p>
 <p>ポリゴンは，三角形である場合にのみ三角形ストリップにアセンブルされます．他のタイプのポリゴンは出力に渡され，ストリップされません．(すべてのデータを除去する必要がある場合は，このフィルタを実行する前に， <code class="docutils literal notranslate"><span class="pre">triangulate</span></code> フィルタを使用して三角形以外のポリゴンを三角形化します．)フィルタは，入力ポリデータに(出力に)頂点が存在する場合は通過します．</p>
-<p>Also note that if triangle strips or polylines are defined in
-the input they are passed through and not joined nor
-extended. (If you wish to strip these use <code class="docutils literal notranslate"><span class="pre">triangulate</span></code>
-filter to fragment the input into triangles and lines prior to
-running this filter.)</p>
+<p>また、入力で三角形のストリップまたはポリラインが定義されている場合、それらはパススルーされ、結合も延長もされません。(これらを除去したい場合は、このフィルタを実行する前に、 <code class="docutils literal notranslate"><span class="pre">triangulate</span></code> フィルタを使って入力を三角形と線に分割してください。)</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2907,7 +2815,7 @@ running this filter.)</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>nsub</strong> (<em>int</em>) -- サブディビジョンの数．サブディビジョンごとに4つの新しい三角形が作成されるため，作成される三角形の数は <code class="docutils literal notranslate"><span class="pre">nface*4**nsub</span></code> となります．ここで， <code class="docutils literal notranslate"><span class="pre">nface</span></code> は現在のフェースの数です．</p></li>
 <li><p><strong>subfilter</strong> (<em>string</em><em>, </em><em>optional</em>) -- 次のいずれかです: 'butterfly', 'loop', 'linear' ．</p></li>
-<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Updates mesh in-place. Default <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- インプレイスメッシュを更新します．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です．</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
@@ -2937,10 +2845,10 @@ running this filter.)</p>
 <p>より複雑なポリゴンは4面体に分割されます．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
-<dd class="field-odd"><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Updates mesh in-place.</p>
+<dd class="field-odd"><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- インプレイスメッシュを更新します．</p>
 </dd>
 <dt class="field-even">戻り値</dt>
-<dd class="field-even"><p><strong>mesh</strong> -- Mesh containing only triangles.</p>
+<dd class="field-even"><p><strong>mesh</strong> -- 三角形のみを含むメッシュ．</p>
 </dd>
 <dt class="field-odd">戻り値の型</dt>
 <dd class="field-odd"><p><a class="reference internal" href="points.html#pyvista.PolyData" title="pyvista.PolyData">pyvista.PolyData</a></p>
@@ -2958,11 +2866,11 @@ running this filter.)</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>radius</strong> (<em>float</em>) -- 最小チューブ半径(チューブ半径が変化する可能性があるため，最小)．</p></li>
 <li><p><strong>scalars</strong> (<em>str</em><em>, </em><em>optional</em>) -- 半径を変化させるスカラー配列</p></li>
-<li><p><strong>capping</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 終端をポリゴンでキャップするかどうかをオンまたはオフにします．既定値は <code class="docutils literal notranslate"><span class="pre">True</span></code> です．</p></li>
+<li><p><strong>capping</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 終端をポリゴンでキャップするかどうかをオンまたはオフにします．デフォルトは <code class="docutils literal notranslate"><span class="pre">True</span></code> です．</p></li>
 <li><p><strong>n_sides</strong> (<em>int</em><em>, </em><em>optional</em>) -- チューブの側面の数を設定します．3以上．</p></li>
 <li><p><strong>radius_factor</strong> (<em>float</em><em>, </em><em>optional</em>) -- 最小半径の倍数で表される最大チューブ半径．</p></li>
 <li><p><strong>preference</strong> (<em>str</em><em>, </em><em>optional</em>) -- スカラー配列を名前で検索する際のフィールドの設定．</p></li>
-<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Updates mesh in-place.</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- インプレイスメッシュを更新します．</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
@@ -3189,13 +3097,12 @@ running this filter.)</p>
 <li><p><strong>origin</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em><em>, </em><em>optional</em>) -- クリップが発生する平面の中心 <code class="docutils literal notranslate"><span class="pre">(x,y,z)</span></code> 座標．デフォルトはデータセットの中心です．</p></li>
 <li><p><strong>invert</strong> (<em>bool</em><em>, </em><em>optional</em>) -- クリップをフリップ/反転するかどうかを示すフラグ．</p></li>
 <li><p><strong>value</strong> (<em>float</em><em>, </em><em>optional</em>) -- 法線方向に沿ってクリップ値を設定します．デフォルト値は0.0です．</p></li>
-<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Updates mesh in-place.</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- インプレイスメッシュを更新します．</p></li>
 <li><p><strong>return_clipped</strong> (<em>bool</em><em>, </em><em>optional</em>) -- データセットのクリップされていない部分とクリップされた部分の両方を返します．</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
-<dd class="field-even"><p><strong>mesh</strong> -- Clipped mesh when <code class="docutils literal notranslate"><span class="pre">return_clipped=False</span></code>,
-otherwise a tuple containing the unclipped and clipped datasets.</p>
+<dd class="field-even"><p><strong>mesh</strong> -- <code class="docutils literal notranslate"><span class="pre">return_clipped=False</span></code> の場合はクリッピングされたメッシュ。それ以外の場合は、クリッピングされていないデータセットとクリッピングされたデータセットを含むタプルです。</p>
 </dd>
 <dt class="field-odd">戻り値の型</dt>
 <dd class="field-odd"><p><a class="reference internal" href="points.html#pyvista.PolyData" title="pyvista.PolyData">pyvista.PolyData</a> or tuple(<a class="reference internal" href="points.html#pyvista.PolyData" title="pyvista.PolyData">pyvista.PolyData</a>)</p>
@@ -3424,10 +3331,10 @@ otherwise a tuple containing the unclipped and clipped datasets.</p>
 <p>より複雑なポリゴンは三角形に分解されます．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
-<dd class="field-odd"><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Updates mesh in-place.</p>
+<dd class="field-odd"><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- インプレイスメッシュを更新します．</p>
 </dd>
 <dt class="field-even">戻り値</dt>
-<dd class="field-even"><p><strong>mesh</strong> -- Mesh containing only triangles.</p>
+<dd class="field-even"><p><strong>mesh</strong> -- 三角形のみを含むメッシュ．</p>
 </dd>
 <dt class="field-odd">戻り値の型</dt>
 <dd class="field-odd"><p><a class="reference internal" href="point-grids.html#pyvista.UnstructuredGrid" title="pyvista.UnstructuredGrid">pyvista.UnstructuredGrid</a></p>

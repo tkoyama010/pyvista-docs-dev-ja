@@ -344,9 +344,7 @@
                 
   <div class="section" id="datasets">
 <span id="ref-dataset"></span><h1>データセット<a class="headerlink" href="#datasets" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Datasets are any spatially referenced information and usually consist of
-geometrical representations of a surface or volume in 3D space.
-In VTK, this superclass is represented by the <code class="docutils literal notranslate"><span class="pre">vtk.vtkDataSet</span></code> abstract class.</p>
+<p>データセットは任意の空間的参照情報であり，通常は3 D空間内の表面またはボリュームのジオメトリ表現で構成されます．VTKにおいて，このスーパークラスは <code class="docutils literal notranslate"><span class="pre">vtk.vtkDataSet</span></code> 抽象クラスによって表現されます．</p>
 <p>VTKでは，データセットは，PyVistaが直接アクセスを提供するジオメトリ，トポロジ，およびアトリビュートで構成されます:</p>
 <ul class="simple">
 <li><p>ジオメトリは，2 Dまたは3 D空間の点とセルの集合です．</p></li>
@@ -921,36 +919,34 @@ In VTK, this superclass is represented by the <code class="docutils literal notr
 <li><p><strong>full_screen</strong> (<em>bool</em><em>, </em><em>optional</em>) -- ウィンドウを全画面で開きます．有効な場合， <code class="docutils literal notranslate"><span class="pre">window_size</span></code> を無視します．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です．</p></li>
 <li><p><strong>screenshot</strong> (<em>str</em><em> or </em><em>bool</em><em>, </em><em>optional</em>) -- 有効にすると，スクリーンショットをファイルに保存します．関連項目: <code class="docutils literal notranslate"><span class="pre">help(pyvista.Plotter.screenshot)</span></code> ．デフォルトの <code class="docutils literal notranslate"><span class="pre">False</span></code> ． <code class="docutils literal notranslate"><span class="pre">True</span></code> はスクリーンショットを取得し，イメージの <code class="docutils literal notranslate"><span class="pre">numpy</span></code> 配列を戻します．</p></li>
 <li><p><strong>window_size</strong> (<em>list</em><em>, </em><em>optional</em>) -- Window size in pixels.  Defaults to <code class="docutils literal notranslate"><span class="pre">[1024,</span> <span class="pre">768]</span></code></p></li>
-<li><p><strong>show_bounds</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，メッシュ境界を表示します．既定値は <code class="docutils literal notranslate"><span class="pre">False</span></code> です．エイリアス <code class="docutils literal notranslate"><span class="pre">show_grid</span></code> も使用できます．</p></li>
+<li><p><strong>show_bounds</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，メッシュ境界を表示します．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です．エイリアス <code class="docutils literal notranslate"><span class="pre">show_grid</span></code> も使用できます．</p></li>
 <li><p><strong>notebook</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，作成されたプロットはjupyterノートブック内に配置されます．jupyterコンソールがアクティブであると仮定します．</p></li>
-<li><p><strong>show_axes</strong> (<em>bool</em><em>, </em><em>optional</em>) -- vtk軸ウィジェットを表示します。 <code class="docutils literal notranslate"><span class="pre">None</span></code> の場合、 <code class="docutils literal notranslate"><span class="pre">pyvista.global_theme.axes.show</span></code> に従って有効になります。</p></li>
+<li><p><strong>show_axes</strong> (<em>bool</em><em>, </em><em>optional</em>) -- vtk軸ウィジェットを表示します． <code class="docutils literal notranslate"><span class="pre">None</span></code> の場合， <code class="docutils literal notranslate"><span class="pre">pyvista.global_theme.axes.show</span></code> に従って有効になります．</p></li>
 <li><p><strong>text</strong> (<em>str</em><em>, </em><em>optional</em>) -- プロットの下部にテキストを追加します．</p></li>
 <li><p><strong>volume</strong> (<em>bool</em><em>, </em><em>optional</em>) -- ボリュームレンダリングには <code class="docutils literal notranslate"><span class="pre">add_volume</span></code> 方式を使用してください．</p></li>
 <li><p><strong>use_ipyvtk</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 非推奨．代わりに， <code class="docutils literal notranslate"><span class="pre">pyvista.set_jupyter_backend('ipyvtklink')</span></code> または <code class="docutils literal notranslate"><span class="pre">backend='ipyvtklink'</span></code> を使用してグローバルにバックエンドを設定します．</p></li>
 <li><p><strong>jupyter_backend</strong> (<em>str</em><em>, </em><em>optional</em>) -- Jupyterノートブックが使用するバックエンドをプロットしています．次のいずれか: * <code class="docutils literal notranslate"><span class="pre">'none'</span></code> : ノートブックに表示されません． * <code class="docutils literal notranslate"><span class="pre">'static'</span></code> : 静止画を表示します． * <code class="docutils literal notranslate"><span class="pre">'panel'</span></code> :  <code class="docutils literal notranslate"><span class="pre">ipygany</span></code> ウィジェットを表示します * <code class="docutils literal notranslate"><span class="pre">'panel'</span></code> :  <code class="docutils literal notranslate"><span class="pre">panel</span></code> ウィジェットを表示します．これは <code class="docutils literal notranslate"><span class="pre">pyvista.set_jupyter_backend</span></code> でグローバルに設定することもできます．</p></li>
 <li><p><strong>jupyter_kwargs</strong> (<em>dict</em><em>, </em><em>optional</em>) -- Jupyterノートブックプロットバックエンドのキーワード引数．</p></li>
-<li><p><strong>theme</strong> (<a class="reference internal" href="../user-guide/themes.html#pyvista.themes.DefaultTheme" title="pyvista.themes.DefaultTheme"><em>pyvista.themes.DefaultTheme</em></a><em>, </em><em>optional</em>) -- Plot固有のテーマ。</p></li>
+<li><p><strong>theme</strong> (<a class="reference internal" href="../user-guide/themes.html#pyvista.themes.DefaultTheme" title="pyvista.themes.DefaultTheme"><em>pyvista.themes.DefaultTheme</em></a><em>, </em><em>optional</em>) -- Plot固有のテーマ．</p></li>
 <li><p><strong>**kwargs</strong> (<em>optional keyword arguments</em>) -- その他のオプションについては， <code class="docutils literal notranslate"><span class="pre">ヘルプ</span> <span class="pre">(pyvista.Plotter.add_mesh)</span></code>  を参照してください．</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><p><ul>
 <li><p><strong>cpos</strong> (<em>list</em>) -- カメラ位置，焦点，およびビューアップのリスト．</p></li>
-<li><p><strong>img</strong> (<em>numpy.ndarray</em>) -- ピクセルRGBと、オプションでアルファ値を含む配列。サイズ:</p>
+<li><p><strong>img</strong> (<em>numpy.ndarray</em>) -- ピクセルRGBと，オプションでアルファ値を含む配列．サイズ:</p>
 <ul class="simple">
-<li><p>[Window height x Window width x 3] if the theme sets
-<code class="docutils literal notranslate"><span class="pre">transparent_background=False</span></code>.</p></li>
-<li><p>[Window height x Window width x 4] if the theme sets
-<code class="docutils literal notranslate"><span class="pre">transparent_background=True</span></code>.</p></li>
+<li><p>[ウィンドウの高さxウィンドウの幅x3]テーマが <code class="docutils literal notranslate"><span class="pre">transparent_background=False</span></code> に設定されている場合。</p></li>
+<li><p>[ウィンドウの高さxウィンドウの幅x4]テーマが <code class="docutils literal notranslate"><span class="pre">transparent_background=True</span></code> に設定されている場合。</p></li>
 </ul>
-<p>Returned only when <code class="docutils literal notranslate"><span class="pre">screenshot=True</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">screenshot=True</span></code> の場合にのみ返されます。</p>
 </li>
 </ul>
 </p>
 </dd>
 </dl>
 <p class="rubric">サンプル</p>
-<p>Plot a simple sphere while showing its edges.</p>
+<p>単純な球のエッジを表示しながらプロットします。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  

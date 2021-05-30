@@ -304,12 +304,12 @@
                 
   <div class="section" id="plotting-themes">
 <span id="userguide-themes"></span><h1>プロットテーマ<a class="headerlink" href="#plotting-themes" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>PyVistaのプロットパラメータはプロット単位またはグローバルテーマで制御でき、1つのグローバル設定でメッシュの色とスタイルを制御できます。</p>
+<p>PyVistaのプロットパラメータはプロット単位またはグローバルテーマで制御でき，1つのグローバル設定でメッシュの色とスタイルを制御できます．</p>
 <div class="jupyter_cell docutils container">
 <div class="cell_output docutils container">
 </div>
 </div>
-<p>PyVistaのデフォルトのテーマパラメータにアクセスして表示するには、以下のようにします:</p>
+<p>PyVistaのデフォルトのテーマパラメータにアクセスして表示するには，以下のようにします:</p>
 <div class="jupyter_cell jupyter_container docutils container">
 <div class="cell_input code_cell docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span>
@@ -401,7 +401,7 @@ Slider Styles            :
 </div>
 </div>
 </div>
-<p>デフォルトのプロットパラメータには、属性名を使用して個別にアクセスできます。</p>
+<p>デフォルトのプロットパラメータには，属性名を使用して個別にアクセスできます．</p>
 <div class="jupyter_cell jupyter_container docutils container">
 <div class="cell_input code_cell docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">color</span>
@@ -414,7 +414,7 @@ Slider Styles            :
 </div>
 </div>
 </div>
-<p>以下は、デフォルトのプロットパラメータを使用したスタンフォードドラゴンのプロット例です。</p>
+<p>以下は，デフォルトのプロットパラメータを使用したスタンフォードドラゴンのプロット例です．</p>
 <div class="jupyter_cell jupyter_container docutils container">
 <div class="cell_input code_cell docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
@@ -427,7 +427,7 @@ Slider Styles            :
 <img alt="../_images/themes_3_0.png" src="../_images/themes_3_0.png" />
 </div>
 </div>
-<p>これらのパラメータは、次の方法でグローバルに変更できます。</p>
+<p>これらのパラメータは，次の方法でグローバルに変更できます．</p>
 <div class="jupyter_cell jupyter_container docutils container">
 <div class="cell_input code_cell docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span>
@@ -439,7 +439,7 @@ Slider Styles            :
 <div class="cell_output docutils container">
 </div>
 </div>
-<p>次に、新しいグローバルパラメータを使用してメッシュをプロットします。</p>
+<p>次に，新しいグローバルパラメータを使用してメッシュをプロットします．</p>
 <div class="jupyter_cell jupyter_container docutils container">
 <div class="cell_input code_cell docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dragon</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">)</span>
@@ -450,13 +450,13 @@ Slider Styles            :
 <img alt="../_images/themes_5_0.png" src="../_images/themes_5_0.png" />
 </div>
 </div>
-<p>これは、次のパラメータを使用してメッシュをプロットすることと同じです。</p>
+<p>これは，次のパラメータを使用してメッシュをプロットすることと同じです．</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dragon</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">show_axes</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="creating-a-custom-theme">
 <h2>カスタム・テーマの作成<a class="headerlink" href="#creating-a-custom-theme" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>組み込みテーマの1つに基づいてテーマをカスタマイズし、次の方法でグローバルに適用できます。</p>
+<p>組み込みテーマの1つに基づいてテーマをカスタマイズし，次の方法でグローバルに適用できます．</p>
 <div class="jupyter_cell jupyter_container docutils container">
 <div class="cell_input code_cell docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># create a theme based off the DocumentTheme</span>
@@ -472,18 +472,18 @@ Slider Styles            :
 <div class="cell_output docutils container">
 </div>
 </div>
-<p>または、テーマをディスクに保存して、後で使用することもできます。</p>
+<p>または，テーマをディスクに保存して，後で使用することもできます．</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_theme</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;my_theme.json&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>その後、次のコマンドを使用して新しいpyvistaセッションにロードします。</p>
+<p>その後，次のコマンドを使用して新しいpyvistaセッションにロードします．</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">load_theme</span><span class="p">(</span><span class="s1">&#39;my_theme.json&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="module-pyvista.themes">
 <span id="theme-api"></span><h2>テーマAPI<a class="headerlink" href="#module-pyvista.themes" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>pyvistaでプロットテーマパラメータを管理するためのAPI説明。</p>
+<p>pyvistaでプロットテーマパラメータを管理するためのAPI説明．</p>
 <p class="rubric">サンプル</p>
 <p>組み込みテーマを適用する</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
@@ -499,7 +499,7 @@ Slider Styles            :
 <span class="gp">&gt;&gt;&gt; </span><span class="n">loaded_theme</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">load_theme</span><span class="p">(</span><span class="s1">&#39;my_theme.json&#39;</span><span class="p">)</span>  
 </pre></div>
 </div>
-<p>既定のテーマからカスタムテーマを作成し、それをpyvistaにロードします。</p>
+<p>既定のテーマからカスタムテーマを作成し，それをpyvistaにロードします．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_theme</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">themes</span><span class="o">.</span><span class="n">DefaultTheme</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">my_theme</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="mi">20</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">my_theme</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">title_size</span> <span class="o">=</span> <span class="mi">40</span>
@@ -513,16 +513,16 @@ Slider Styles            :
 <dl class="py class">
 <dt id="pyvista.themes.DarkTheme">
 <em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyvista.themes.</span></code><code class="sig-name descname"><span class="pre">DarkTheme</span></code><a class="headerlink" href="#pyvista.themes.DarkTheme" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>ダークモードのテーマ。</p>
-<p>黒の背景、 &quot;viridis&quot; カラーマップ、黄褐色のメッシュ、白の (隠れた) エッジ。</p>
+<dd><p>ダークモードのテーマ．</p>
+<p>黒の背景， &quot;viridis&quot; カラーマップ，黄褐色のメッシュ，白の (隠れた) エッジ．</p>
 <p class="rubric">サンプル</p>
-<p>ダークテーマをグローバルデフォルトにします。</p>
+<p>ダークテーマをグローバルデフォルトにします．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">themes</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">set_plot_theme</span><span class="p">(</span><span class="n">themes</span><span class="o">.</span><span class="n">DarkTheme</span><span class="p">())</span>
 </pre></div>
 </div>
-<p>または、文字列で設定します。</p>
+<p>または，文字列で設定します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">set_plot_theme</span><span class="p">(</span><span class="s1">&#39;dark&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -531,18 +531,18 @@ Slider Styles            :
 <dl class="py class">
 <dt id="pyvista.themes.DefaultTheme">
 <em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyvista.themes.</span></code><code class="sig-name descname"><span class="pre">DefaultTheme</span></code><a class="headerlink" href="#pyvista.themes.DefaultTheme" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>PyVistaのデフォルトテーマ。</p>
+<dd><p>PyVistaのデフォルトテーマ．</p>
 <p class="rubric">サンプル</p>
-<p>グローバルな既定の背景色を白に変更します。</p>
+<p>グローバルな既定の背景色を白に変更します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;white&#39;</span>
 </pre></div>
 </div>
-<p>デフォルトでエッジを表示します。</p>
+<p>デフォルトでエッジを表示します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">show_edges</span> <span class="o">=</span> <span class="kc">True</span>
 </pre></div>
 </div>
-<p>デフォルトのテーマから新しいテーマを作成し、グローバルに適用します。</p>
+<p>デフォルトのテーマから新しいテーマを作成し，グローバルに適用します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_theme</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">themes</span><span class="o">.</span><span class="n">DefaultTheme</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">my_theme</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">my_theme</span><span class="o">.</span><span class="n">background</span> <span class="o">=</span> <span class="s1">&#39;white&#39;</span>
@@ -552,10 +552,10 @@ Slider Styles            :
 <dl class="py method">
 <dt id="pyvista.themes.DefaultTheme.auto_close">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">auto_close</span></code><a class="headerlink" href="#pyvista.themes.DefaultTheme.auto_close" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>プロットが終了したら、自動的に図を閉じます。</p>
+<dd><p>プロットが終了したら，自動的に図を閉じます．</p>
 <div class="admonition danger">
 <p class="admonition-title">危険</p>
-<p>十分に注意して <code class="docutils literal notranslate"><span class="pre">False</span></code> に設定してください。</p>
+<p>十分に注意して <code class="docutils literal notranslate"><span class="pre">False</span></code> に設定してください．</p>
 </div>
 <p class="rubric">サンプル</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
@@ -567,18 +567,18 @@ Slider Styles            :
 <dl class="py method">
 <dt id="pyvista.themes.DefaultTheme.axes">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">axes</span></code><a class="headerlink" href="#pyvista.themes.DefaultTheme.axes" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>デフォルトの <code class="docutils literal notranslate"><span class="pre">axes</span></code> の設定を返すか、設定します。</p>
+<dd><p>デフォルトの <code class="docutils literal notranslate"><span class="pre">axes</span></code> の設定を返すか，設定します．</p>
 <p class="rubric">サンプル</p>
-<p>X軸のカラーを黒に設定します。</p>
+<p>X軸のカラーを黒に設定します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">x_color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span>
 </pre></div>
 </div>
-<p>デフォルトで軸を表示します。</p>
+<p>デフォルトで軸を表示します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">show</span> <span class="o">=</span> <span class="kc">True</span>
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">vtk.vtkCubeAxesActor</span></code> を使用します。</p>
+<p><code class="docutils literal notranslate"><span class="pre">vtk.vtkCubeAxesActor</span></code> を使用します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">box</span> <span class="o">=</span> <span class="kc">True</span>
 </pre></div>
 </div>
@@ -587,9 +587,9 @@ Slider Styles            :
 <dl class="py method">
 <dt id="pyvista.themes.DefaultTheme.background">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">background</span></code><a class="headerlink" href="#pyvista.themes.DefaultTheme.background" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>pyvistaプロットのデフォルトの背景色を戻すか、設定します。</p>
+<dd><p>pyvistaプロットのデフォルトの背景色を戻すか，設定します．</p>
 <p class="rubric">サンプル</p>
-<p>すべてのプロットのデフォルトのグローバル背景を白に設定します。</p>
+<p>すべてのプロットのデフォルトのグローバル背景を白に設定します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">background</span> <span class="o">=</span> <span class="s1">&#39;white&#39;</span>
 </pre></div>
@@ -599,19 +599,19 @@ Slider Styles            :
 <dl class="py method">
 <dt id="pyvista.themes.DefaultTheme.camera">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">camera</span></code><a class="headerlink" href="#pyvista.themes.DefaultTheme.camera" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>デフォルトの camera の設定を返すか、設定します。</p>
+<dd><p>デフォルトの camera の設定を返すか，設定します．</p>
 <p class="rubric">サンプル</p>
-<p>カメラの位置とビューの両方を設定します。</p>
+<p>カメラの位置とビューの両方を設定します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">camera</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;position&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
 <span class="gp">... </span>                               <span class="s1">&#39;viewup&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]}</span>
 </pre></div>
 </div>
-<p>カメラのデフォルト位置を設定します。</p>
+<p>カメラのデフォルト位置を設定します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">camera</span><span class="p">[</span><span class="s1">&#39;position&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>カメラのデフォルトビューを設定します。</p>
+<p>カメラのデフォルトビューを設定します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">camera</span><span class="p">[</span><span class="s1">&#39;viewup&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -620,11 +620,11 @@ Slider Styles            :
 <dl class="py method">
 <dt id="pyvista.themes.DefaultTheme.cmap">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">cmap</span></code><a class="headerlink" href="#pyvista.themes.DefaultTheme.cmap" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>pyvistaのデフォルトのカラーマップを戻すか、設定します。</p>
+<dd><p>pyvistaのデフォルトのカラーマップを戻すか，設定します．</p>
 <p>利用可能なMatplotlibカラーマップを参照してください． <code class="docutils literal notranslate"><span class="pre">scalars</span></code> を表示する場合にのみ適用されます．Matplotlibがインストールされている必要があります． <code class="docutils literal notranslate"><span class="pre">colorcet</span></code> または <code class="docutils literal notranslate"><span class="pre">cmocean</span></code> がインストールされている場合は，それらのカラーマップを名前で指定できます．</p>
 <p>また，色のリストを指定して，既存のカラーマップをカスタムカラーマップで上書きすることもできます．例えば，3色のカラーマップを作成するには， <code class="docutils literal notranslate"><span class="pre">['green',</span> <span class="pre">'red',</span> <span class="pre">'blue']</span></code></p>
 <p class="rubric">サンプル</p>
-<p>デフォルトのグローバルカラーマップを 'jet' に設定します。</p>
+<p>デフォルトのグローバルカラーマップを 'jet' に設定します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;jet&#39;</span>
 </pre></div>
@@ -634,10 +634,9 @@ Slider Styles            :
 <dl class="py method">
 <dt id="pyvista.themes.DefaultTheme.color">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">color</span></code><a class="headerlink" href="#pyvista.themes.DefaultTheme.color" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>pyvistaのメッシュのデフォルトのカラーを戻すか、設定します。</p>
-<p>Used for meshes without <code class="docutils literal notranslate"><span class="pre">scalars</span></code>.</p>
-<p>When setting, the value must be either a string, rgb list,
-or hex color string.  For example:</p>
+<dd><p>pyvistaのメッシュのデフォルトのカラーを戻すか，設定します．</p>
+<p><code class="docutils literal notranslate"><span class="pre">scalars</span></code> のないメッシュに使用します。</p>
+<p>設定する場合、値は文字列，RGBリスト，または16進カラー文字列のいずれかでなければなりません．例:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">color='white'</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">color='w'</span></code></p></li>
@@ -655,14 +654,14 @@ or hex color string.  For example:</p>
 <dl class="py method">
 <dt id="pyvista.themes.DefaultTheme.colorbar_horizontal">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">colorbar_horizontal</span></code><a class="headerlink" href="#pyvista.themes.DefaultTheme.colorbar_horizontal" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return or set the default parameters of a horizontal colorbar.</p>
+<dd><p>水平カラーバーの既定のパラメータを取得または設定します。</p>
 <p class="rubric">サンプル</p>
-<p>Set the default horizontal colorbar width to 0.6.</p>
+<p>デフォルトの水平カラーバー幅を0.6に設定します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">colorbar_horizontal</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="mf">0.6</span>
 </pre></div>
 </div>
-<p>Set the default horizontal colorbar height to 0.2.</p>
+<p>デフォルトの水平カラーバー高さを0.2に設定します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">colorbar_horizontal</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="mf">0.2</span>
 </pre></div>
 </div>
@@ -671,8 +670,8 @@ or hex color string.  For example:</p>
 <dl class="py method">
 <dt id="pyvista.themes.DefaultTheme.colorbar_orientation">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">colorbar_orientation</span></code><a class="headerlink" href="#pyvista.themes.DefaultTheme.colorbar_orientation" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return or set the default colorbar orientation.</p>
-<p>Must be either <code class="docutils literal notranslate"><span class="pre">'vertical'</span></code> or <code class="docutils literal notranslate"><span class="pre">'horizontal'</span></code>.</p>
+<dd><p>デフォルトのカラーバーの方向を返すか，設定します．</p>
+<p><code class="docutils literal notranslate"><span class="pre">'vertical'</span></code> か <code class="docutils literal notranslate"><span class="pre">'horizontal'</span></code> のどちらかでなければなりません。</p>
 <p class="rubric">サンプル</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">colorbar_orientation</span> <span class="o">=</span> <span class="s1">&#39;horizontal&#39;</span>
@@ -683,14 +682,14 @@ or hex color string.  For example:</p>
 <dl class="py method">
 <dt id="pyvista.themes.DefaultTheme.colorbar_vertical">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">colorbar_vertical</span></code><a class="headerlink" href="#pyvista.themes.DefaultTheme.colorbar_vertical" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return or set the default parameters of a vertical colorbar.</p>
+<dd><p>垂直カラーバーの既定のパラメータを取得または設定します。</p>
 <p class="rubric">サンプル</p>
-<p>Set the default colorbar width to 0.45.</p>
+<p>デフォルトのカラーバー幅を0.45に設定します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">colorbar_vertical</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="mf">0.45</span>
 </pre></div>
 </div>
-<p>Set the default colorbar height to 0.8.</p>
+<p>デフォルトのカラーバー高さを0.8に設定します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">colorbar_vertical</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="mf">0.8</span>
 </pre></div>
@@ -700,10 +699,9 @@ or hex color string.  For example:</p>
 <dl class="py method">
 <dt id="pyvista.themes.DefaultTheme.depth_peeling">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">depth_peeling</span></code><a class="headerlink" href="#pyvista.themes.DefaultTheme.depth_peeling" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return or set the default depth peeling parameters.</p>
+<dd><p>デフォルトの深度ピーリングパラメータを戻すか設定します。</p>
 <p class="rubric">サンプル</p>
-<p>Set the global depth_peeling parameter default to be enabled
-with 8 peels.</p>
+<p>8つのピールでグローバル depth_peeling パラメータのデフォルトを有効に設定します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">depth_peeling</span><span class="o">.</span><span class="n">number_of_peels</span> <span class="o">=</span> <span class="mi">8</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">depth_peeling</span><span class="o">.</span><span class="n">occlusion_ratio</span> <span class="o">=</span> <span class="mf">0.0</span>
@@ -715,9 +713,9 @@ with 8 peels.</p>
 <dl class="py method">
 <dt id="pyvista.themes.DefaultTheme.edge_color">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">edge_color</span></code><a class="headerlink" href="#pyvista.themes.DefaultTheme.edge_color" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return or set the default edge color.</p>
+<dd><p>デフォルトのエッジカラーを返すか，設定します．</p>
 <p class="rubric">サンプル</p>
-<p>Set the global edge color to 'blue'.</p>
+<p>グローバルエッジカラーを 'blue' に設定します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">edge_color</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span>
 </pre></div>
@@ -727,7 +725,7 @@ with 8 peels.</p>
 <dl class="py method">
 <dt id="pyvista.themes.DefaultTheme.floor_color">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">floor_color</span></code><a class="headerlink" href="#pyvista.themes.DefaultTheme.floor_color" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return or set the default floor color.</p>
+<dd><p>デフォルトのフロアカラーを返すか，設定します．</p>
 <p class="rubric">サンプル</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">floor_color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span>
@@ -738,31 +736,30 @@ with 8 peels.</p>
 <dl class="py method">
 <dt id="pyvista.themes.DefaultTheme.font">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">font</span></code><a class="headerlink" href="#pyvista.themes.DefaultTheme.font" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return or set the default font size, family, and/or color.</p>
+<dd><p>既定のフォントサイズ、ファミリ、色を取得または設定します。</p>
 <p class="rubric">サンプル</p>
-<p>Set the default font family to 'arial'.  Must be either
-'arial', 'courier', or 'times'.</p>
+<p>既定のフォントファミリを 'arial' に設定します。 'arial' 、 'courier' 、または 'times' のいずれかである必要があります。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">family</span> <span class="o">=</span> <span class="s1">&#39;arial&#39;</span>
 </pre></div>
 </div>
-<p>Set the default font size to 20.</p>
+<p>デフォルトのフォントサイズを20に設定します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="mi">20</span>
 </pre></div>
 </div>
-<p>Set the default title size to 40.</p>
+<p>デフォルトのタイトルサイズを40に設定します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">title_size</span> <span class="o">=</span> <span class="mi">40</span>
 </pre></div>
 </div>
-<p>Set the default label size to 10.</p>
+<p>デフォルトのラベルサイズを10に設定します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">label_size</span> <span class="o">=</span> <span class="mi">10</span>
 </pre></div>
 </div>
-<p>Set the default text color to 'grey'.</p>
+<p>デフォルトのテキストの色を '灰色' に設定します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;grey&#39;</span>
 </pre></div>
 </div>
-<p>String formatter used to format numerical data to '%.6e'.</p>
+<p>数値データを '%.6e' フォーマットに使用する文字列フォーマッタ．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">fmt</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%.6e</span><span class="s1">&#39;</span>
 </pre></div>
 </div>
@@ -771,9 +768,9 @@ with 8 peels.</p>
 <dl class="py method">
 <dt id="pyvista.themes.DefaultTheme.full_screen">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">full_screen</span></code><a class="headerlink" href="#pyvista.themes.DefaultTheme.full_screen" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return if figures are shown in full screen.</p>
+<dd><p>図形が全画面表示されている場合に返されます。</p>
 <p class="rubric">サンプル</p>
-<p>Set windows to be full screen by default.</p>
+<p>デフォルトでウィンドウをフルスクリーンに設定します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">full_screen</span> <span class="o">=</span> <span class="kc">True</span>
 </pre></div>
@@ -783,9 +780,9 @@ with 8 peels.</p>
 <dl class="py method">
 <dt id="pyvista.themes.DefaultTheme.interactive">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">interactive</span></code><a class="headerlink" href="#pyvista.themes.DefaultTheme.interactive" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return or set the default <code class="docutils literal notranslate"><span class="pre">interactive</span></code> parameter.</p>
+<dd><p>デフォルトの <code class="docutils literal notranslate"><span class="pre">interactive</span></code> のパラメーターを返すか，設定します．</p>
 <p class="rubric">サンプル</p>
-<p>Make all plots non-interactive globally.</p>
+<p>すべてのプロットをグローバルに非インタラクティブにします。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">interactive</span> <span class="o">=</span> <span class="kc">False</span>
 </pre></div>
@@ -801,10 +798,7 @@ with 8 peels.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">'ipyvtklink'</span></code> : リモートでレンダリングし，結果のVTKイメージをクライアントにストリーミングします．すべてのVTKメソッドをサポートしますが，リモートレンダリングのために遅延が発生します．ヘッドレスサーバーで表示する場合は，仮想フレームバッファをセットアップする必要があります． <code class="docutils literal notranslate"><span class="pre">ipyvtklink</span></code> がインストールされている必要があります．</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'panel'</span></code> : VTKレンダーウィンドウをvtkjsオブジェクトに変換し，それをjupyterlabで視覚化します．ほとんどのVTKオブジェクトをサポートします．ヘッドレスサーバーで表示する場合は，仮想フレームバッファをセットアップする必要があります． <code class="docutils literal notranslate"><span class="pre">panel</span></code> がインストールされている必要があります．</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'ipygany'</span></code> : すべてのメッシュを <code class="docutils literal notranslate"><span class="pre">ipygany</span></code> メッシュに変換し，クライアント側でレンダリングするメッシュをストリーミングします．VTKメッシュをサポートしていますが，他にはほとんどありません． <code class="docutils literal notranslate"><span class="pre">none</span></code> を除き，これは仮想フレームバッファを必要としない唯一の方法です． <code class="docutils literal notranslate"><span class="pre">ipygany</span></code> がインストールされている必要があります．</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'static'</span></code> : Display a single static image within the
-JupyterLab environment.  Still requires that a virtual
-framebuffer be setup when displaying on a headless server,
-but does not require any additional modules to be installed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'static'</span></code> : JupyterLab環境内に単一の静的イメージを表示します．ヘッドレスサーバーで表示する場合も仮想フレームバッファをセットアップする必要がありますが，追加のモジュールをインストールする必要はありません．</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'none'</span></code> : jupyterlab内にプロットを表示せず，専用のVTKレンダリングウィンドウを使用して表示します．これは，仮想フレームバッファがあっても，ヘッドレスサーバー上では何も生成しません．</p></li>
 </ul>
 <p class="rubric">サンプル</p>
@@ -834,9 +828,9 @@ but does not require any additional modules to be installed.</p></li>
 <dl class="py method">
 <dt id="pyvista.themes.DefaultTheme.lighting">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">lighting</span></code><a class="headerlink" href="#pyvista.themes.DefaultTheme.lighting" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return or set the default <code class="docutils literal notranslate"><span class="pre">lighting</span></code>.</p>
+<dd><p>デフォルトの <code class="docutils literal notranslate"><span class="pre">lighting</span></code> を返すか，設定します．</p>
 <p class="rubric">サンプル</p>
-<p>Disable lighting globally.</p>
+<p>グローバルにライティングを無効にします．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">lighting</span> <span class="o">=</span> <span class="kc">False</span>
 </pre></div>
@@ -846,10 +840,9 @@ but does not require any additional modules to be installed.</p></li>
 <dl class="py method">
 <dt id="pyvista.themes.DefaultTheme.load_theme">
 <code class="sig-name descname"><span class="pre">load_theme</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theme</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.themes.DefaultTheme.load_theme" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Overwrite the current theme with a theme.</p>
+<dd><p>現在のテーマをテーマで上書きします。</p>
 <p class="rubric">サンプル</p>
-<p>Create a custom theme from the default theme and load it into
-the global theme of pyvista.</p>
+<p>既定のテーマからカスタムテーマを作成し，それをpyvistaのグローバルテーマにロードします．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista.themes</span> <span class="kn">import</span> <span class="n">DefaultTheme</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">my_theme</span> <span class="o">=</span> <span class="n">DefaultTheme</span><span class="p">()</span>
@@ -862,8 +855,7 @@ the global theme of pyvista.</p>
 <span class="go">20</span>
 </pre></div>
 </div>
-<p>Create a custom theme from the dark theme and load it into
-pyvista.</p>
+<p>既定のテーマからdarkテーマを作成し，それをpyvistaにロードします．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista.themes</span> <span class="kn">import</span> <span class="n">DarkTheme</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">my_theme</span> <span class="o">=</span> <span class="n">DarkTheme</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">my_theme</span><span class="o">.</span><span class="n">show_edges</span> <span class="o">=</span> <span class="kc">True</span>
@@ -877,10 +869,9 @@ pyvista.</p>
 <dl class="py method">
 <dt id="pyvista.themes.DefaultTheme.multi_rendering_splitting_position">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">multi_rendering_splitting_position</span></code><a class="headerlink" href="#pyvista.themes.DefaultTheme.multi_rendering_splitting_position" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return or set the default <code class="docutils literal notranslate"><span class="pre">multi_rendering_splitting_position</span></code> parameter.</p>
+<dd><p>デフォルトの <code class="docutils literal notranslate"><span class="pre">multi_rendering_splitting_position</span></code> のパラメーターを返すか，設定します．</p>
 <p class="rubric">サンプル</p>
-<p>Set multi_rendering_splitting_position globally to 0.5 (the
-middle of the window).</p>
+<p>multi_rendering_splitting_position をグローバルに0.5(ウィンドウの中央)に設定します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">multi_rendering_splitting_position</span> <span class="o">=</span> <span class="mf">0.5</span>
 </pre></div>
@@ -890,10 +881,10 @@ middle of the window).</p>
 <dl class="py method">
 <dt id="pyvista.themes.DefaultTheme.multi_samples">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">multi_samples</span></code><a class="headerlink" href="#pyvista.themes.DefaultTheme.multi_samples" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return or set the default <code class="docutils literal notranslate"><span class="pre">multi_samples</span></code> parameter.</p>
-<p>Set the number of multisamples to enable hardware antialiasing.</p>
+<dd><p>デフォルトの <code class="docutils literal notranslate"><span class="pre">multi_samples</span></code> のパラメーターを返すか，設定します．</p>
+<p>ハードウェアアンチエイリアスを有効にするマルチサンプル数を設定します。</p>
 <p class="rubric">サンプル</p>
-<p>Set the default number of multisamples to 2.</p>
+<p>デフォルトのマルチサンプル数を2に設定します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">multi_samples</span> <span class="o">=</span> <span class="mi">2</span>
 </pre></div>
@@ -903,14 +894,14 @@ middle of the window).</p>
 <dl class="py method">
 <dt id="pyvista.themes.DefaultTheme.name">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">name</span></code><a class="headerlink" href="#pyvista.themes.DefaultTheme.name" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return or set the name of the theme.</p>
+<dd><p>テーマの名前を取得または設定します。</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pyvista.themes.DefaultTheme.nan_color">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">nan_color</span></code><a class="headerlink" href="#pyvista.themes.DefaultTheme.nan_color" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return or set the default NaN color.</p>
-<p>This color is used to plot all NaN values.</p>
+<dd><p>デフォルトのNaNカラーを返すか，設定します．</p>
+<p>このカラーを使用して、すべてのNaN値をプロットします。</p>
 <p class="rubric">サンプル</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">nan_color</span> <span class="o">=</span> <span class="s1">&#39;darkgray&#39;</span>
@@ -921,12 +912,10 @@ middle of the window).</p>
 <dl class="py method">
 <dt id="pyvista.themes.DefaultTheme.notebook">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">notebook</span></code><a class="headerlink" href="#pyvista.themes.DefaultTheme.notebook" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return or set the state of notebook plotting.</p>
-<p>Setting this to <code class="docutils literal notranslate"><span class="pre">True</span></code> always enables notebook plotting,
-while setting it to <code class="docutils literal notranslate"><span class="pre">False</span></code> disables plotting even when
-plotting within a jupyter notebook and plots externally.</p>
+<dd><p>ノートブックのプロットの状態を返すか設定します。</p>
+<p>これを <code class="docutils literal notranslate"><span class="pre">True</span></code> に設定すると、常にノートブックプロットが有効になります。 <code class="docutils literal notranslate"><span class="pre">False</span></code> に設定すると、ノートブック内でプロットしたり、外部でプロットしたりする場合でも、プロットが無効になります。</p>
 <p class="rubric">サンプル</p>
-<p>Disable all jupyter notebook plotting.</p>
+<p>すべてのノートブックプロットを無効にします。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">notebook</span> <span class="o">=</span> <span class="kc">False</span>
 </pre></div>
@@ -936,7 +925,7 @@ plotting within a jupyter notebook and plots externally.</p>
 <dl class="py method">
 <dt id="pyvista.themes.DefaultTheme.outline_color">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">outline_color</span></code><a class="headerlink" href="#pyvista.themes.DefaultTheme.outline_color" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return or set the default outline color.</p>
+<dd><p>デフォルトのアウトラインカラーを返すか，設定します．</p>
 <p class="rubric">サンプル</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">outline_color</span> <span class="o">=</span> <span class="s1">&#39;white&#39;</span>
@@ -947,9 +936,9 @@ plotting within a jupyter notebook and plots externally.</p>
 <dl class="py method">
 <dt id="pyvista.themes.DefaultTheme.render_points_as_spheres">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">render_points_as_spheres</span></code><a class="headerlink" href="#pyvista.themes.DefaultTheme.render_points_as_spheres" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return or set the default <code class="docutils literal notranslate"><span class="pre">render_points_as_spheres</span></code> parameter.</p>
+<dd><p>デフォルトの <code class="docutils literal notranslate"><span class="pre">render_points_as_spheres</span></code> のパラメーターを返すか，設定します．</p>
 <p class="rubric">サンプル</p>
-<p>Render points as spheres by default globally.</p>
+<p>既定では、ポイントを球としてグローバルにレンダリングします。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">render_points_as_spheres</span> <span class="o">=</span> <span class="kc">True</span>
 </pre></div>
@@ -959,7 +948,7 @@ plotting within a jupyter notebook and plots externally.</p>
 <dl class="py method">
 <dt id="pyvista.themes.DefaultTheme.restore_defaults">
 <code class="sig-name descname"><span class="pre">restore_defaults</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.themes.DefaultTheme.restore_defaults" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Restore the theme defaults.</p>
+<dd><p>テーマをデフォルトに戻します。</p>
 <p class="rubric">サンプル</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">restore_defaults</span><span class="p">()</span>
@@ -970,9 +959,9 @@ plotting within a jupyter notebook and plots externally.</p>
 <dl class="py method">
 <dt id="pyvista.themes.DefaultTheme.save">
 <code class="sig-name descname"><span class="pre">save</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.themes.DefaultTheme.save" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Serialize this theme to a json file.</p>
+<dd><p>このテーマをjsonファイルにシリアライズします。</p>
 <p class="rubric">サンプル</p>
-<p>Export and then load back in a theme.</p>
+<p>テーマをエクスポートしてからロードし直します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">theme</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">themes</span><span class="o">.</span><span class="n">DefaultTheme</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">theme</span><span class="o">.</span><span class="n">background</span> <span class="o">=</span> <span class="s1">&#39;white&#39;</span>
@@ -985,9 +974,9 @@ plotting within a jupyter notebook and plots externally.</p>
 <dl class="py method">
 <dt id="pyvista.themes.DefaultTheme.show_edges">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">show_edges</span></code><a class="headerlink" href="#pyvista.themes.DefaultTheme.show_edges" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return or set the default edge visibility.</p>
+<dd><p>既定のエッジの表示を設定します。</p>
 <p class="rubric">サンプル</p>
-<p>Show edges globally by default.</p>
+<p>デフォルトでエッジをグローバルに表示します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">show_edges</span> <span class="o">=</span> <span class="kc">True</span>
 </pre></div>
@@ -997,9 +986,9 @@ plotting within a jupyter notebook and plots externally.</p>
 <dl class="py method">
 <dt id="pyvista.themes.DefaultTheme.show_scalar_bar">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">show_scalar_bar</span></code><a class="headerlink" href="#pyvista.themes.DefaultTheme.show_scalar_bar" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return or set the default color bar visibility.</p>
+<dd><p>既定のカラーバーの表示を設定します。</p>
 <p class="rubric">サンプル</p>
-<p>Show the scalar bar by default when scalars are available.</p>
+<p>スカラーが使用可能な場合、デフォルトでスカラーバーを表示します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">show_scalar_bar</span> <span class="o">=</span> <span class="kc">True</span>
 </pre></div>
@@ -1009,9 +998,9 @@ plotting within a jupyter notebook and plots externally.</p>
 <dl class="py method">
 <dt id="pyvista.themes.DefaultTheme.silhouette">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">silhouette</span></code><a class="headerlink" href="#pyvista.themes.DefaultTheme.silhouette" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return or set the default <code class="docutils literal notranslate"><span class="pre">silhouette</span></code> configuration.</p>
+<dd><p>デフォルトの <code class="docutils literal notranslate"><span class="pre">silhouette</span></code> の設定を返すか，設定します．</p>
 <p class="rubric">サンプル</p>
-<p>Set parameters of the silhouette.</p>
+<p>シルエットのパラメータを設定します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">silhouette</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;grey&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">silhouette</span><span class="o">.</span><span class="n">line_width</span> <span class="o">=</span> <span class="mf">2.0</span>
@@ -1023,15 +1012,15 @@ plotting within a jupyter notebook and plots externally.</p>
 <dl class="py method">
 <dt id="pyvista.themes.DefaultTheme.slider_styles">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">slider_styles</span></code><a class="headerlink" href="#pyvista.themes.DefaultTheme.slider_styles" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the default slider style configurations.</p>
+<dd><p>デフォルトのスライダスタイル設定を返します。</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pyvista.themes.DefaultTheme.smooth_shading">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">smooth_shading</span></code><a class="headerlink" href="#pyvista.themes.DefaultTheme.smooth_shading" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return or set the default <code class="docutils literal notranslate"><span class="pre">smooth_shading</span></code> parameter.</p>
+<dd><p>デフォルトの <code class="docutils literal notranslate"><span class="pre">smooth_shading</span></code> のパラメーターを返すか，設定します．</p>
 <p class="rubric">サンプル</p>
-<p>Set the global smooth_shading parameter default to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<p>グローバル smooth_shading パラメータのデフォルトを <code class="docutils literal notranslate"><span class="pre">True</span></code> に設定します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">smooth_shading</span> <span class="o">=</span> <span class="kc">True</span>
 </pre></div>
@@ -1041,10 +1030,10 @@ plotting within a jupyter notebook and plots externally.</p>
 <dl class="py method">
 <dt id="pyvista.themes.DefaultTheme.title">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">title</span></code><a class="headerlink" href="#pyvista.themes.DefaultTheme.title" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return or set the default <code class="docutils literal notranslate"><span class="pre">title</span></code> parameter.</p>
-<p>This is the VTK render window title.</p>
+<dd><p>デフォルトの <code class="docutils literal notranslate"><span class="pre">title</span></code> のパラメーターを返すか，設定します．</p>
+<p>これVTKレンダーウィンドウのタイトルです。</p>
 <p class="rubric">サンプル</p>
-<p>Set title globally to 'plot'.</p>
+<p>タイトルを 'プロット' にグローバルに設定します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;plot&#39;</span>
 </pre></div>
@@ -1054,9 +1043,9 @@ plotting within a jupyter notebook and plots externally.</p>
 <dl class="py method">
 <dt id="pyvista.themes.DefaultTheme.transparent_background">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">transparent_background</span></code><a class="headerlink" href="#pyvista.themes.DefaultTheme.transparent_background" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return or set the default <code class="docutils literal notranslate"><span class="pre">transparent_background</span></code> parameter.</p>
+<dd><p>デフォルトの <code class="docutils literal notranslate"><span class="pre">transparent_background</span></code> のパラメーターを返すか，設定します．</p>
 <p class="rubric">サンプル</p>
-<p>Set transparent_background globally to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<p>transparent_background をグローバルに <code class="docutils literal notranslate"><span class="pre">True</span></code> に設定します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">transparent_background</span> <span class="o">=</span> <span class="kc">True</span>
 </pre></div>
@@ -1066,16 +1055,15 @@ plotting within a jupyter notebook and plots externally.</p>
 <dl class="py method">
 <dt id="pyvista.themes.DefaultTheme.use_ipyvtk">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">use_ipyvtk</span></code><a class="headerlink" href="#pyvista.themes.DefaultTheme.use_ipyvtk" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Set or return the usage of &quot;ipyvtk&quot; as a jupyter backend.</p>
-<p>Deprecated in favor of <code class="docutils literal notranslate"><span class="pre">jupyter_backend</span></code>.</p>
+<dd><p>ネットワークバックエンドとしての &quot;ipyvtk&quot; の使用を設定または戻します。</p>
+<p><code class="docutils literal notranslate"><span class="pre">jupyter_backend</span></code> のために廃止されました。</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pyvista.themes.DefaultTheme.volume_mapper">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">volume_mapper</span></code><a class="headerlink" href="#pyvista.themes.DefaultTheme.volume_mapper" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return or set the default <code class="docutils literal notranslate"><span class="pre">volume_mapper</span></code> parameter.</p>
-<p>Must be one of the following strings, which are mapped to the
-following VTK volume mappers.</p>
+<dd><p>デフォルトの <code class="docutils literal notranslate"><span class="pre">volume_mapper</span></code> のパラメーターを返すか，設定します．</p>
+<p>次の文字列のいずれかである必要があります。これらの文字列は、次のVTKボリュームマッパにマップされます。</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">'fixed_point'</span></code> : <code class="docutils literal notranslate"><span class="pre">vtk.vtkFixedPointVolumeRayCastMapper</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'gpu'</span></code> : <code class="docutils literal notranslate"><span class="pre">vtk.vtkGPUVolumeRayCastMapper</span></code></p></li>
@@ -1083,7 +1071,7 @@ following VTK volume mappers.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">'smart'</span></code> : <code class="docutils literal notranslate"><span class="pre">vtk.vtkSmartVolumeMapper</span></code></p></li>
 </ul>
 <p class="rubric">サンプル</p>
-<p>Set default volume mapper globally to 'gpu'.</p>
+<p>デフォルトのボリュームマッパーをグローバルに 'gpu' に設定します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">volume_mapper</span> <span class="o">=</span> <span class="s1">&#39;gpu&#39;</span>
 </pre></div>
@@ -1093,9 +1081,9 @@ following VTK volume mappers.</p>
 <dl class="py method">
 <dt id="pyvista.themes.DefaultTheme.window_size">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">window_size</span></code><a class="headerlink" href="#pyvista.themes.DefaultTheme.window_size" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return or set the default render window size.</p>
+<dd><p>デフォルトのレンダーウィンドウのサイズを返すかセットします．</p>
 <p class="rubric">サンプル</p>
-<p>Set window size to <code class="docutils literal notranslate"><span class="pre">[400,</span> <span class="pre">400]</span></code>.</p>
+<p>ウィンドウサイズを <code class="docutils literal notranslate"><span class="pre">[400,</span> <span class="pre">400]</span></code> に設定します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">window_size</span> <span class="o">=</span> <span class="p">[</span><span class="mi">400</span><span class="p">,</span> <span class="mi">400</span><span class="p">]</span>
 </pre></div>
@@ -1107,18 +1095,16 @@ following VTK volume mappers.</p>
 <dl class="py class">
 <dt id="pyvista.themes.DocumentTheme">
 <em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyvista.themes.</span></code><code class="sig-name descname"><span class="pre">DocumentTheme</span></code><a class="headerlink" href="#pyvista.themes.DocumentTheme" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>A document theme well suited for papers and presentations.</p>
-<p>This theme uses a white background, black fonts, the &quot;viridis&quot;
-colormap, and it disables edges.  Best used for presentations,
-papers, etc.</p>
+<dd><p>論文やプレゼンテーションに適したドキュメントテーマです。</p>
+<p>このテーマは、白の背景、黒のフォント、 &quot;viridis&quot; カラーマップを使用し、エッジを無効にします。プレゼンテーションや論文などに最適です。</p>
 <p class="rubric">サンプル</p>
-<p>Make the document theme the global default.</p>
+<p>ドキュメントテーマをグローバルデフォルトにします．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">themes</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">set_plot_theme</span><span class="p">(</span><span class="n">themes</span><span class="o">.</span><span class="n">DocumentTheme</span><span class="p">())</span>
 </pre></div>
 </div>
-<p>または、文字列で設定します。</p>
+<p>または，文字列で設定します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">set_plot_theme</span><span class="p">(</span><span class="s1">&#39;document&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1127,15 +1113,15 @@ papers, etc.</p>
 <dl class="py class">
 <dt id="pyvista.themes.ParaViewTheme">
 <em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyvista.themes.</span></code><code class="sig-name descname"><span class="pre">ParaViewTheme</span></code><a class="headerlink" href="#pyvista.themes.ParaViewTheme" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>A paraview-like theme.</p>
+<dd><p>Paraviewらしいテーマです。</p>
 <p class="rubric">サンプル</p>
-<p>Make the paraview-like theme the global default.</p>
+<p>paraviewのようなテーマをグローバルデフォルトにします．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">themes</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">set_plot_theme</span><span class="p">(</span><span class="n">themes</span><span class="o">.</span><span class="n">ParaViewTheme</span><span class="p">())</span>
 </pre></div>
 </div>
-<p>または、文字列で設定します。</p>
+<p>または，文字列で設定します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">set_plot_theme</span><span class="p">(</span><span class="s1">&#39;paraview&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1144,7 +1130,7 @@ papers, etc.</p>
 <dl class="py function">
 <dt id="pyvista.themes.load_theme">
 <code class="sig-prename descclassname"><span class="pre">pyvista.themes.</span></code><code class="sig-name descname"><span class="pre">load_theme</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.themes.load_theme" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Load a theme from a file.</p>
+<dd><p>ファイルからテーマをロードします。</p>
 <p class="rubric">サンプル</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">theme</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">themes</span><span class="o">.</span><span class="n">DefaultTheme</span><span class="p">()</span>
@@ -1157,28 +1143,27 @@ papers, etc.</p>
 <dl class="py function">
 <dt id="pyvista.themes.set_plot_theme">
 <code class="sig-prename descclassname"><span class="pre">pyvista.themes.</span></code><code class="sig-name descname"><span class="pre">set_plot_theme</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theme</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.themes.set_plot_theme" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Set the plotting parameters to a predefined theme using a string.</p>
+<dd><p>文字列を使用してプリントパラメータを定義済みのテーマに設定します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
-<dd class="field-odd"><p><strong>theme</strong> (<em>str</em>) -- Theme name.  Either <code class="docutils literal notranslate"><span class="pre">'default'</span></code>, <code class="docutils literal notranslate"><span class="pre">'document'</span></code>, <code class="docutils literal notranslate"><span class="pre">'dark'</span></code>,
-or <code class="docutils literal notranslate"><span class="pre">'paraview'</span></code>.</p>
+<dd class="field-odd"><p><strong>theme</strong> (<em>str</em>) -- テーマ名。 <code class="docutils literal notranslate"><span class="pre">'default'</span></code> 、 <code class="docutils literal notranslate"><span class="pre">'document'</span></code> 、 <code class="docutils literal notranslate"><span class="pre">'dark'</span></code> 、または <code class="docutils literal notranslate"><span class="pre">'paraview'</span></code> のいずれかです。</p>
 </dd>
 </dl>
 <p class="rubric">サンプル</p>
-<p>Set to the default theme.</p>
+<p>デフォルトテーマを設定します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">set_plot_theme</span><span class="p">(</span><span class="s1">&#39;default&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Set to the document theme.</p>
+<p>ドキュメントテーマを設定します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">set_plot_theme</span><span class="p">(</span><span class="s1">&#39;document&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Set to the dark theme.</p>
+<p>darkテーマを設定します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">set_plot_theme</span><span class="p">(</span><span class="s1">&#39;dark&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Set to the ParaView theme.</p>
+<p>ParaViewテーマを設定します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">set_plot_theme</span><span class="p">(</span><span class="s1">&#39;paraview&#39;</span><span class="p">)</span>
 </pre></div>
 </div>

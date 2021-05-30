@@ -361,7 +361,7 @@
                 
   <div class="section" id="lights">
 <h1>ライト<a class="headerlink" href="#lights" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p><a class="reference internal" href="#pyvista.Light" title="pyvista.Light"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.Light</span></code></a> クラスは， <code class="docutils literal notranslate"><span class="pre">vtk.vtkLight</span></code> クラスに追加機能とPython APIを追加します． <a class="reference internal" href="../plotting/plotting.html#pyvista.Plotter" title="pyvista.Plotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.Plotter</span></code></a> オブジェクトには，ほとんどの場合に適切に機能する既定値のライトセットが付属していますが，多くの場合，より実践的なライトへのアクセスが必要です．</p>
+<p><a class="reference internal" href="#pyvista.Light" title="pyvista.Light"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.Light</span></code></a> クラスは， <code class="docutils literal notranslate"><span class="pre">vtk.vtkLight</span></code> クラスに追加機能とPython APIを追加します． <a class="reference internal" href="../plotting/plotting.html#pyvista.Plotter" title="pyvista.Plotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.Plotter</span></code></a> オブジェクトには，ほとんどの場合に適切に機能するデフォルトのライトセットが付属していますが，多くの場合，より実践的なライトへのアクセスが必要です．</p>
 <div class="section" id="brief-example">
 <h2>簡単な例<a class="headerlink" href="#brief-example" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="jupyter_cell docutils container">
@@ -460,7 +460,7 @@
 <li><p><strong>cone_angle</strong> (<em>float</em><em>, </em><em>optional</em>) -- 位置ライトの度単位の円錐角度．</p></li>
 <li><p><strong>show_actor</strong> (<em>bool</em><em>, </em><em>optional</em>) -- ビームのジオメトリを描くスポットライトのアクターを表示します．</p></li>
 <li><p><strong>exponent</strong> (<em>float</em><em>, </em><em>optional</em>) -- スポットライトに使用されるコサインの指数． <a class="reference internal" href="#pyvista.Light.exponent" title="pyvista.Light.exponent"><code class="xref py py-attr docutils literal notranslate"><span class="pre">exponent</span></code></a> プロパティも参照してください．</p></li>
-<li><p><strong>shadow_attenuation</strong> (<em>float</em><em>, </em><em>optional</em>) -- 影の減衰の値です．既定値では，影の中にあるライトは完全に遮られます．この値を1.0未満に設定することで，影の中にあるライトを制御できます．ライトの <a class="reference internal" href="#pyvista.Light.attenuation_values" title="pyvista.Light.attenuation_values"><code class="xref py py-attr docutils literal notranslate"><span class="pre">attenuation_values</span></code></a> を変更すると，影の減衰が1であってもオブジェクトを通過することができます．</p></li>
+<li><p><strong>shadow_attenuation</strong> (<em>float</em><em>, </em><em>optional</em>) -- 影の減衰の値です．デフォルトでは，影の中にあるライトは完全に遮られます．この値を1.0未満に設定することで，影の中にあるライトを制御できます．ライトの <a class="reference internal" href="#pyvista.Light.attenuation_values" title="pyvista.Light.attenuation_values"><code class="xref py py-attr docutils literal notranslate"><span class="pre">attenuation_values</span></code></a> を変更すると，影の減衰が1であってもオブジェクトを通過することができます．</p></li>
 <li><p><strong>attenuation_values</strong> (<em>sequence</em><em>, </em><em>optional</em>) -- 2次減衰定数．値は3つの長さのシーケンスで，この順序で定数，1次定数，2次定数を指定します．これらのパラメータは，ポジションライトにのみ影響します．</p></li>
 </ul>
 </dd>
@@ -610,7 +610,7 @@
 <dt id="pyvista.Light.exponent">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">exponent</span></code><a class="headerlink" href="#pyvista.Light.exponent" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>スポットライトに使用されるコサインの指数を返します．</p>
-<p>スポットライト(円錐角度が90度未満の位置光源)では，ライトコーン内のライトビームのシェイプはライトの軸からの角度に応じて変化します．輝度の変化は，この角度の余弦を指数で累乗した値に応じて変化します．既定値は1です．指数を大きくするとビームがシャープになり(軸の周りにより集中する)，小さくするとビームが広がります．</p>
+<p>スポットライト(円錐角度が90度未満の位置光源)では，ライトコーン内のライトビームのシェイプはライトの軸からの角度に応じて変化します．輝度の変化は，この角度の余弦を指数で累乗した値に応じて変化します．デフォルトは1です．指数を大きくするとビームがシャープになり(軸の周りにより集中する)，小さくするとビームが広がります．</p>
 <p>この特性によって定義される角度依存性と <a class="reference internal" href="#pyvista.Light.cone_angle" title="pyvista.Light.cone_angle"><code class="xref py py-attr docutils literal notranslate"><span class="pre">cone_angle</span></code></a> によって実行される打ち切りは独立しているので，(小さい <a class="reference internal" href="#pyvista.Light.cone_angle" title="pyvista.Light.cone_angle"><code class="xref py py-attr docutils literal notranslate"><span class="pre">cone_angle</span></code></a> の)狭いビームをもつスポットライトについては，強度の角度変化を見ることはより困難であり，ビームの角度分布に目に見えるように影響を与えるためにはより高い指数が必要であるかもしれないことに注意してください．</p>
 <p class="rubric">サンプル</p>
 <p>指数が1，2，5の3つのスポットライトで照らされた3つの平面をプロットします．指数が最も低いものが最も広いビームになります．</p>
@@ -876,7 +876,7 @@
 <dt id="pyvista.Light.shadow_attenuation">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">shadow_attenuation</span></code><a class="headerlink" href="#pyvista.Light.shadow_attenuation" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>影の減衰の値を返します．</p>
-<p>既定値では，影の中にあるライトは完全に遮られます．この値を1.0未満に設定することで，影の中にあるライトを制御できます．ライトの <a class="reference internal" href="#pyvista.Light.attenuation_values" title="pyvista.Light.attenuation_values"><code class="xref py py-attr docutils literal notranslate"><span class="pre">attenuation_values</span></code></a> を変更すると，影の減衰が1であってもオブジェクトを通過することができます．</p>
+<p>デフォルトでは，影の中にあるライトは完全に遮られます．この値を1.0未満に設定することで，影の中にあるライトを制御できます．ライトの <a class="reference internal" href="#pyvista.Light.attenuation_values" title="pyvista.Light.attenuation_values"><code class="xref py py-attr docutils literal notranslate"><span class="pre">attenuation_values</span></code></a> を変更すると，影の減衰が1であってもオブジェクトを通過することができます．</p>
 <p class="rubric">サンプル</p>
 <p>影の減衰を0.5に設定します</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
