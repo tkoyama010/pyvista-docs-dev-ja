@@ -468,7 +468,7 @@
 <td><p>グリッドのサーフェスメッシュを抽出します．</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">glyph</span></code>([orient, scale, factor, geom, ...])</p></td>
-<td><p>入力データセットのすべての点に(グリフと呼ばれる)ジオメトリ表示をコピーします．</p></td>
+<td><p>Copy a geometric representation (called a glyph) to the input dataset.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">interpolate</span></code>(target[, sharpness, radius, ...])</p></td>
 <td><p>特定のデータセットからこのメッシュに値を補間します．</p></td>
@@ -1069,24 +1069,49 @@
 <dl class="py method">
 <dt id="pyvista.DataSetFilters.glyph">
 <code class="sig-name descname"><span class="pre">glyph</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">orient</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geom</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indices</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">absolute</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clamping</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rng</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.glyph" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>入力データセットのすべての点に(グリフと呼ばれる)ジオメトリ表示をコピーします．</p>
-<p>グリフは，入力ベクトルに沿って配向されてもよく，スカラーデータまたはベクトルの大きさに従ってスケーリングされてもよいです．スカラーまたはベクトルの大きさに基づいて選択するグリフのテーブルを渡すこともできます．</p>
+<dd><p>Copy a geometric representation (called a glyph) to the input dataset.</p>
+<p>The glyph may be oriented along the input vectors, and it may
+be scaled according to scalar data or vector
+magnitude. Passing a table of glyphs to choose from based on
+scalars or vector magnitudes is also supported.  The arrays
+used for <code class="docutils literal notranslate"><span class="pre">orient</span></code> and <code class="docutils literal notranslate"><span class="pre">scale</span></code> must be either both point data
+or both cell data.</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>orient</strong> (<em>bool</em>) -- アクティブなベクトル配列を使用して記号の方向を設定します</p></li>
-<li><p><strong>scale</strong> (<em>bool</em>) -- アクティブなスカラーを使用してグリフをスケールする</p></li>
-<li><p><strong>factor</strong> (<em>float</em>) -- スケーリング配列に適用されるスケール係数</p></li>
+<li><p><strong>orient</strong> (<em>bool</em><em> or </em><em>str</em><em>, </em><em>optional</em>) -- If <code class="docutils literal notranslate"><span class="pre">True</span></code>, use the active vectors array to orient the glyphs.
+If string, the vector array to use to orient the glyphs.</p></li>
+<li><p><strong>scale</strong> (<em>bool</em><em> or </em><em>str</em><em>, </em><em>optional</em>) -- If <code class="docutils literal notranslate"><span class="pre">True</span></code>, use the active scalars to scale the glyphs.
+If string, the scalar array to use to scale the glyphs.</p></li>
+<li><p><strong>factor</strong> (<em>float</em><em>, </em><em>optional</em>) -- Scale factor applied to scaling array.</p></li>
 <li><p><strong>geom</strong> (<em>vtk.vtkDataSet</em><em> or </em><em>tuple</em><em>(</em><em>vtk.vtkDataSet</em><em>)</em><em>, </em><em>optional</em>) -- 記号に使用するジオメトリ．見つからない場合は，矢印記号が使用されます．シーケンスの場合，内部のデータセットは，スカラーまたはベクトルに基づいて選択するジオメトリのテーブルを定義します．この場合，同じ長さの数のシーケンスは <code class="docutils literal notranslate"><span class="pre">indices</span></code> として渡されなければなりません．範囲の値( <code class="docutils literal notranslate"><span class="pre">rng</span></code> を参照)はテーブルの検索に影響します．</p></li>
 <li><p><strong>indices</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">geom</span></code> がシーケンスの場合，ルックアップのためにテーブルの各グリフのインデックスを指定します．指定する場合は， <code class="docutils literal notranslate"><span class="pre">geom</span></code> と同じ長さにする必要があります．指定しない場合は，デフォルト値の <code class="docutils literal notranslate"><span class="pre">range(len(geom))</span></code> が使用されます．インデックスは，スカラー範囲( <code class="docutils literal notranslate"><span class="pre">rng</span></code> を参照)で解釈されます． <code class="docutils literal notranslate"><span class="pre">geom</span></code> の長さが1の場合は無視されます．</p></li>
-<li><p><strong>tolerance</strong> (<em>float</em><em>, </em><em>optional</em>) -- 公差を境界ボックスの長さの分数で指定してください．float値は0から1の間です．デフォルトはNoneです．<code class="docutils literal notranslate"><span class="pre">absolute</span></code> が <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，公差は絶対距離になります．Noneの場合，前処理ステップとしてマージするポイントは無効になります．</p></li>
+<li><p><strong>tolerance</strong> (<em>float</em><em>, </em><em>optional</em>) -- Specify tolerance in terms of fraction of bounding box length.
+Float value is between 0 and 1. Default is None. If <code class="docutils literal notranslate"><span class="pre">absolute</span></code>
+is <code class="docutils literal notranslate"><span class="pre">True</span></code> then the tolerance can be an absolute distance.
+If <code class="docutils literal notranslate"><span class="pre">None</span></code>, points merging as a preprocessing step is disabled.</p></li>
 <li><p><strong>absolute</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">tolerance</span></code> が絶対距離か分数かをコントロールします．</p></li>
-<li><p><strong>clamping</strong> (<em>bool</em>) -- 範囲指定する &quot;scalar&quot; 値のクランプのオンとオフを切り替えます．</p></li>
+<li><p><strong>clamping</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Turn on/off clamping of &quot;scalar&quot; values to range. Default <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
 <li><p><strong>rng</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em><em>, </em><em>optional</em>) -- スカラー値が指定された場合にフィルタが考慮する値の範囲を設定します．</p></li>
 <li><p><strong>progress_bar</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 進行状況を示す進行状況バーを表示します．</p></li>
 </ul>
 </dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p><strong>glyphs</strong> -- Glyphs at either the cell centers or points.</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="points.html#pyvista.PolyData" title="pyvista.PolyData">pyvista.PolyData</a></p>
+</dd>
 </dl>
+<p class="rubric">サンプル</p>
+<p>Create arrow glyphs oriented by vectors and scaled by scalars.
+Factor parameter is used to reduce the size of the arrows.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_carotid</span><span class="p">()</span><span class="o">.</span><span class="n">threshold</span><span class="p">(</span><span class="mi">145</span><span class="p">,</span> <span class="n">scalars</span><span class="o">=</span><span class="s2">&quot;scalars&quot;</span><span class="p">)</span>  
+<span class="gp">&gt;&gt;&gt; </span><span class="n">glyph</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">glyph</span><span class="p">(</span><span class="n">orient</span><span class="o">=</span><span class="s2">&quot;vectors&quot;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="s2">&quot;scalars&quot;</span><span class="p">,</span> <span class="n">factor</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span>  
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -1101,7 +1126,10 @@
 <li><p><strong>target</strong> (<a class="reference internal" href="dataset.html#pyvista.DataSet" title="pyvista.DataSet"><em>pyvista.DataSet</em></a>) -- サンプリング元のvtkデータオブジェクト - このオブジェクトのポイント配列とセル配列がこのメッシュに補間されます．</p></li>
 <li><p><strong>sharpness</strong> (<em>float</em>) -- Gauss分布のシャープネス(つまり，減衰)を設定/取得します．デフォルトでは， Sharpness=2です．シャープさが増すと，遠方のポイントの効果は減少します．</p></li>
 <li><p><strong>radius</strong> (<em>float</em>) -- 基準点を配置する半径を指定します．</p></li>
-<li><p><strong>n_points</strong> (<em>int</em><em>, </em><em>optional</em>) -- 指定した場合，補間ベースを形成するために使用される最も近いポイントの数を指定します．これにより，N個の最近接ポイントを使用する代わりに，radiusおよびsharpnessの引数が無効になります．通常，この方法では結果が悪くなります．</p></li>
+<li><p><strong>n_points</strong> (<em>int</em><em>, </em><em>optional</em>) -- If given, specifies the number of the closest points used to form
+the interpolation basis. This will invalidate the radius argument
+in favor of an N closest points approach. This typically has poorer
+results.</p></li>
 <li><p><strong>strategy</strong> (<em>str</em><em>, </em><em>optional</em>) -- 補間処理中に &quot;null&quot; ポイントに遭遇した場合に使用するストラテジーを指定します．ヌルポイントは，ローカル近隣(近くの点が内挿する)が空の場合に発生します．ストラテジが <code class="docutils literal notranslate"><span class="pre">'mask_points'</span></code> に設定されている場合，ポイントを有効 (=1) またはnull (無効=0)としてマークする出力配列が作成される(NullValueも設定されます．)．ストラテジが <code class="docutils literal notranslate"><span class="pre">'null_value'</span></code> に設定されている場合(これがデフォルトです．)，出力データ値()は <code class="docutils literal notranslate"><span class="pre">null_value</span></code> に設定される(出力点データに指定されている)．最後に，戦略 <code class="docutils literal notranslate"><span class="pre">'closest_point'</span></code> は，単に補間を実行するために最も近い点を使用することである．</p></li>
 <li><p><strong>null_value</strong> (<em>float</em><em>, </em><em>optional</em>) -- NULL点の値を指定します．NULLポイントが検出されると，各NULLタプルのすべてのコンポーネントがこの値に設定されます．デフォルトでは，NULL値は0に設定されています．</p></li>
 <li><p><strong>pass_cell_arrays</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 入力メッシュのオリジナルのセルデータ配列を保持</p></li>
@@ -1588,46 +1616,32 @@
 <code class="sig-name descname"><span class="pre">streamlines_from_source</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vectors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">integrator_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">45</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">integration_direction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'both'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">surface_streamlines</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_step_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cl'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_step_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_step_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">terminal_speed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-12</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_error</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compute_vorticity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotation_scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolator_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'point'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.streamlines_from_source" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ソースメッシュのポイントからベクトルの流線を生成します。</p>
 <p>デフォルトRunge-Kutta 2では，指定したインテグレータを使用して積分が実行されます．これにより，あらゆるタイプのデータセットを使用した積分がサポートされます．データセットにポリゴンや三角形などの2 Dセルが含まれていて <code class="docutils literal notranslate"><span class="pre">surface_streamlines</span></code>  パラメータが使用されている場合，積分は2 Dセルによって定義されるサーフェス上に配置されるように制限されます．</p>
-<dl class="simple">
-<dt>source<span class="classifier">pyvista.DataSet</span></dt><dd><p>ソースの点は流線の開始点を提供します。球とラインソースの両方がオーバーライドされます。</p>
-</dd>
-<dt>vectors<span class="classifier">str, optional</span></dt><dd><p>積分するアクティブベクトルフィールドの文字列名．</p>
-</dd>
-<dt>integrator_type<span class="classifier">int, optional</span></dt><dd><p>流線生成に使用する積分器のタイプです．デフォルトはRunge-Kutta 45です．認識されるソルバーは:  RUNGE_KUTTA2 (<code class="docutils literal notranslate"><span class="pre">2</span></code>) ， RUNGE_KUTTA4 (<code class="docutils literal notranslate"><span class="pre">4</span></code>) および RUNGE_KUTTA45 (<code class="docutils literal notranslate"><span class="pre">45</span></code>) です．オプションは <code class="docutils literal notranslate"><span class="pre">2</span></code> ， <code class="docutils literal notranslate"><span class="pre">4</span></code> または <code class="docutils literal notranslate"><span class="pre">45</span></code> です．デフォルトは <code class="docutils literal notranslate"><span class="pre">45</span></code> です．</p>
-</dd>
-<dt>integration_direction<span class="classifier">str, optional</span></dt><dd><p>流線を上流方向と下流方向のどちらに統合するかを指定します(または両方)．選択肢は <code class="docutils literal notranslate"><span class="pre">'both'</span></code>  ， <code class="docutils literal notranslate"><span class="pre">'backward'</span></code> または <code class="docutils literal notranslate"><span class="pre">'forward'</span></code> です．</p>
-</dd>
-<dt>surface_streamlines<span class="classifier">bool, optional</span></dt><dd><p>サーフェス上の流線を計算します．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> ．</p>
-</dd>
-<dt>initial_step_length<span class="classifier">float, optional</span></dt><dd><p>線積分に使用される最初のステップサイズで，ib長さ単位Lまたはセル長単位( <code class="docutils literal notranslate"><span class="pre">step_unit</span></code> パラメータを参照)を表します．RK45のような適応積分器の開始サイズか，RK 2とRK 4のような非適応積分器の一定/固定サイズのどちらか)．</p>
-</dd>
-<dt>step_unit<span class="classifier">str, optional</span></dt><dd><p>均一積分ステップ単位．有効な単位は LENGTH_UNIT (<code class="docutils literal notranslate"><span class="pre">'l'</span></code>) と CELL_LENGTH_UNIT (<code class="docutils literal notranslate"><span class="pre">'cl'</span></code>) だけに制限されます．デフォルトは CELL_LENGTH_UNIT : <code class="docutils literal notranslate"><span class="pre">'cl'</span></code> です．</p>
-</dd>
-<dt>min_step_length<span class="classifier">float, optional</span></dt><dd><p>線積分に使用される最小ステップサイズで，長さまたはセル長の単位で表されます．RK45のような適応積分器にのみ有効．</p>
-</dd>
-<dt>max_step_length<span class="classifier">float, optional</span></dt><dd><p>線積分に使用される最大ステップサイズで，長さまたはセル長の単位で表されます．RK45のような適応積分器にのみ有効．</p>
-</dd>
-<dt>max_steps<span class="classifier">int, optional</span></dt><dd><p>流線を積分するための最大ステップ数．デフォルトは <code class="docutils literal notranslate"><span class="pre">2000</span></code></p>
-</dd>
-<dt>terminal_speed<span class="classifier">float, optional</span></dt><dd><p>積分を終了する端子速度の値です．</p>
-</dd>
-<dt>max_error<span class="classifier">float, optional</span></dt><dd><p>流線積分全体で許容される最大エラー数．</p>
-</dd>
-<dt>max_time<span class="classifier">float, optional</span></dt><dd><p>LENGTH_UNITで表される流線の最大長を指定します．</p>
-</dd>
-<dt>compute_vorticity<span class="classifier">bool, optional</span></dt><dd><p>流線点での渦度計算 ( <code class="docutils literal notranslate"><span class="pre">vtkRibbonFilter</span></code> を使用して適切な流線リボンを生成するために必要．</p>
-</dd>
-<dt>interpolator_type<span class="classifier">str, optional</span></dt><dd><p>ポイントまたはセルによる流線積分中にセルの位置を特定するために，速度フィールド補間のタイプを設定します．セルロケータはポイントロケータよりも堅牢です．オプションは <code class="docutils literal notranslate"><span class="pre">'point'</span></code> または <code class="docutils literal notranslate"><span class="pre">'cell'</span></code>  ( <code class="docutils literal notranslate"><span class="pre">'p'</span></code> および <code class="docutils literal notranslate"><span class="pre">'c'</span></code> の省略形もサポートされています．)です．</p>
-</dd>
-<dt>rotation_scale<span class="classifier">float, optional</span></dt><dd><p>これを使用して，リボンがツイストするレートをスケールできます．デフォルトは1です．</p>
-</dd>
-</dl>
 <dl class="field-list simple">
-<dt class="field-odd">戻り値</dt>
-<dd class="field-odd"><p><strong>streamlines</strong> -- これにより，各セル(つまり，ポリライン)が流線を表すポリラインが出力として生成されます．各流線に関連付けられた属性値はセルデータに格納され，流線ポイントに関連付けられた属性値はポイントデータに格納されます．</p>
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source</strong> (<a class="reference internal" href="dataset.html#pyvista.DataSet" title="pyvista.DataSet"><em>pyvista.DataSet</em></a>) -- ソースの点は流線の開始点を提供します。球とラインソースの両方がオーバーライドされます。</p></li>
+<li><p><strong>vectors</strong> (<em>str</em><em>, </em><em>optional</em>) -- 積分するアクティブベクトルフィールドの文字列名．</p></li>
+<li><p><strong>integrator_type</strong> (<em>int</em><em>, </em><em>optional</em>) -- 流線生成に使用する積分器のタイプです．デフォルトはRunge-Kutta 45です．認識されるソルバーは:  RUNGE_KUTTA2 (<code class="docutils literal notranslate"><span class="pre">2</span></code>) ， RUNGE_KUTTA4 (<code class="docutils literal notranslate"><span class="pre">4</span></code>) および RUNGE_KUTTA45 (<code class="docutils literal notranslate"><span class="pre">45</span></code>) です．オプションは <code class="docutils literal notranslate"><span class="pre">2</span></code> ， <code class="docutils literal notranslate"><span class="pre">4</span></code> または <code class="docutils literal notranslate"><span class="pre">45</span></code> です．デフォルトは <code class="docutils literal notranslate"><span class="pre">45</span></code> です．</p></li>
+<li><p><strong>integration_direction</strong> (<em>str</em><em>, </em><em>optional</em>) -- 流線を上流方向と下流方向のどちらに統合するかを指定します(または両方)．選択肢は <code class="docutils literal notranslate"><span class="pre">'both'</span></code>  ， <code class="docutils literal notranslate"><span class="pre">'backward'</span></code> または <code class="docutils literal notranslate"><span class="pre">'forward'</span></code> です．</p></li>
+<li><p><strong>surface_streamlines</strong> (<em>bool</em><em>, </em><em>optional</em>) -- サーフェス上の流線を計算します．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> ．</p></li>
+<li><p><strong>initial_step_length</strong> (<em>float</em><em>, </em><em>optional</em>) -- 線積分に使用される最初のステップサイズで，ib長さ単位Lまたはセル長単位( <code class="docutils literal notranslate"><span class="pre">step_unit</span></code> パラメータを参照)を表します．RK45のような適応積分器の開始サイズか，RK 2とRK 4のような非適応積分器の一定/固定サイズのどちらか)．</p></li>
+<li><p><strong>step_unit</strong> (<em>str</em><em>, </em><em>optional</em>) -- 均一積分ステップ単位．有効な単位は LENGTH_UNIT (<code class="docutils literal notranslate"><span class="pre">'l'</span></code>) と CELL_LENGTH_UNIT (<code class="docutils literal notranslate"><span class="pre">'cl'</span></code>) だけに制限されます．デフォルトは CELL_LENGTH_UNIT : <code class="docutils literal notranslate"><span class="pre">'cl'</span></code> です．</p></li>
+<li><p><strong>min_step_length</strong> (<em>float</em><em>, </em><em>optional</em>) -- 線積分に使用される最小ステップサイズで，長さまたはセル長の単位で表されます．RK45のような適応積分器にのみ有効．</p></li>
+<li><p><strong>max_step_length</strong> (<em>float</em><em>, </em><em>optional</em>) -- 線積分に使用される最大ステップサイズで，長さまたはセル長の単位で表されます．RK45のような適応積分器にのみ有効．</p></li>
+<li><p><strong>max_steps</strong> (<em>int</em><em>, </em><em>optional</em>) -- 流線を積分するための最大ステップ数．デフォルトは <code class="docutils literal notranslate"><span class="pre">2000</span></code></p></li>
+<li><p><strong>terminal_speed</strong> (<em>float</em><em>, </em><em>optional</em>) -- 積分を終了する端子速度の値です．</p></li>
+<li><p><strong>max_error</strong> (<em>float</em><em>, </em><em>optional</em>) -- 流線積分全体で許容される最大エラー数．</p></li>
+<li><p><strong>max_time</strong> (<em>float</em><em>, </em><em>optional</em>) -- LENGTH_UNITで表される流線の最大長を指定します．</p></li>
+<li><p><strong>compute_vorticity</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 流線点での渦度計算 ( <code class="docutils literal notranslate"><span class="pre">vtkRibbonFilter</span></code> を使用して適切な流線リボンを生成するために必要．</p></li>
+<li><p><strong>interpolator_type</strong> (<em>str</em><em>, </em><em>optional</em>) -- ポイントまたはセルによる流線積分中にセルの位置を特定するために，速度フィールド補間のタイプを設定します．セルロケータはポイントロケータよりも堅牢です．オプションは <code class="docutils literal notranslate"><span class="pre">'point'</span></code> または <code class="docutils literal notranslate"><span class="pre">'cell'</span></code>  ( <code class="docutils literal notranslate"><span class="pre">'p'</span></code> および <code class="docutils literal notranslate"><span class="pre">'c'</span></code> の省略形もサポートされています．)です．</p></li>
+<li><p><strong>rotation_scale</strong> (<em>float</em><em>, </em><em>optional</em>) -- これを使用して，リボンがツイストするレートをスケールできます．デフォルトは1です．</p></li>
+</ul>
 </dd>
-<dt class="field-even">戻り値の型</dt>
-<dd class="field-even"><p><a class="reference internal" href="points.html#pyvista.PolyData" title="pyvista.PolyData">pyvista.PolyData</a></p>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p><strong>streamlines</strong> -- これにより，各セル(つまり，ポリライン)が流線を表すポリラインが出力として生成されます．各流線に関連付けられた属性値はセルデータに格納され，流線ポイントに関連付けられた属性値はポイントデータに格納されます．</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="points.html#pyvista.PolyData" title="pyvista.PolyData">pyvista.PolyData</a></p>
 </dd>
 </dl>
 </dd></dl>
