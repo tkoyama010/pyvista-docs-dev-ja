@@ -468,7 +468,7 @@
 <td><p>グリッドのサーフェスメッシュを抽出します．</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">glyph</span></code>([orient, scale, factor, geom, ...])</p></td>
-<td><p>Copy a geometric representation (called a glyph) to the input dataset.</p></td>
+<td><p>入力データセットに(グリフと呼ばれる)ジオメトリ表示をコピーします．</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">interpolate</span></code>(target[, sharpness, radius, ...])</p></td>
 <td><p>特定のデータセットからこのメッシュに値を補間します．</p></td>
@@ -1069,43 +1069,32 @@
 <dl class="py method">
 <dt id="pyvista.DataSetFilters.glyph">
 <code class="sig-name descname"><span class="pre">glyph</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">orient</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geom</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indices</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">absolute</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clamping</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rng</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.glyph" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Copy a geometric representation (called a glyph) to the input dataset.</p>
-<p>The glyph may be oriented along the input vectors, and it may
-be scaled according to scalar data or vector
-magnitude. Passing a table of glyphs to choose from based on
-scalars or vector magnitudes is also supported.  The arrays
-used for <code class="docutils literal notranslate"><span class="pre">orient</span></code> and <code class="docutils literal notranslate"><span class="pre">scale</span></code> must be either both point data
-or both cell data.</p>
+<dd><p>入力データセットに(グリフと呼ばれる)ジオメトリ表示をコピーします．</p>
+<p>グリフは，入力ベクトルに沿って配向されてもよく，スカラーデータまたはベクトルの大きさに従ってスケーリングされてもよいです．スカラーまたはベクトルの大きさに基づいて選択するグリフのテーブルを渡すこともできます． <code class="docutils literal notranslate"><span class="pre">orient</span></code> および <code class="docutils literal notranslate"><span class="pre">scale</span></code> に使用される配列は、両方の点データまたは両方のセルデータでなければなりません。</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>orient</strong> (<em>bool</em><em> or </em><em>str</em><em>, </em><em>optional</em>) -- If <code class="docutils literal notranslate"><span class="pre">True</span></code>, use the active vectors array to orient the glyphs.
-If string, the vector array to use to orient the glyphs.</p></li>
-<li><p><strong>scale</strong> (<em>bool</em><em> or </em><em>str</em><em>, </em><em>optional</em>) -- If <code class="docutils literal notranslate"><span class="pre">True</span></code>, use the active scalars to scale the glyphs.
-If string, the scalar array to use to scale the glyphs.</p></li>
-<li><p><strong>factor</strong> (<em>float</em><em>, </em><em>optional</em>) -- Scale factor applied to scaling array.</p></li>
+<li><p><strong>orient</strong> (<em>bool</em><em> or </em><em>str</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合、グリフを方向付けるためにアクティブなベクトル配列を使用する。stringの場合は、グリフの向きを設定するために使用するベクトル配列です。</p></li>
+<li><p><strong>scale</strong> (<em>bool</em><em> or </em><em>str</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合は、アクティブなスカラを使用してグリフをスケーリングします。stringの場合は、グリフのスケーリングに使用するスカラ配列です。</p></li>
+<li><p><strong>factor</strong> (<em>float</em><em>, </em><em>optional</em>) -- スケーリング配列に適用されるスケール係数です。</p></li>
 <li><p><strong>geom</strong> (<em>vtk.vtkDataSet</em><em> or </em><em>tuple</em><em>(</em><em>vtk.vtkDataSet</em><em>)</em><em>, </em><em>optional</em>) -- 記号に使用するジオメトリ．見つからない場合は，矢印記号が使用されます．シーケンスの場合，内部のデータセットは，スカラーまたはベクトルに基づいて選択するジオメトリのテーブルを定義します．この場合，同じ長さの数のシーケンスは <code class="docutils literal notranslate"><span class="pre">indices</span></code> として渡されなければなりません．範囲の値( <code class="docutils literal notranslate"><span class="pre">rng</span></code> を参照)はテーブルの検索に影響します．</p></li>
 <li><p><strong>indices</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">geom</span></code> がシーケンスの場合，ルックアップのためにテーブルの各グリフのインデックスを指定します．指定する場合は， <code class="docutils literal notranslate"><span class="pre">geom</span></code> と同じ長さにする必要があります．指定しない場合は，デフォルト値の <code class="docutils literal notranslate"><span class="pre">range(len(geom))</span></code> が使用されます．インデックスは，スカラー範囲( <code class="docutils literal notranslate"><span class="pre">rng</span></code> を参照)で解釈されます． <code class="docutils literal notranslate"><span class="pre">geom</span></code> の長さが1の場合は無視されます．</p></li>
-<li><p><strong>tolerance</strong> (<em>float</em><em>, </em><em>optional</em>) -- Specify tolerance in terms of fraction of bounding box length.
-Float value is between 0 and 1. Default is None. If <code class="docutils literal notranslate"><span class="pre">absolute</span></code>
-is <code class="docutils literal notranslate"><span class="pre">True</span></code> then the tolerance can be an absolute distance.
-If <code class="docutils literal notranslate"><span class="pre">None</span></code>, points merging as a preprocessing step is disabled.</p></li>
+<li><p><strong>tolerance</strong> (<em>float</em><em>, </em><em>optional</em>) -- 公差を境界ボックスの長さの分数で指定してください．float値は0から1の間です．デフォルトはNoneです．<code class="docutils literal notranslate"><span class="pre">absolute</span></code> が <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，公差は絶対距離になります． <code class="docutils literal notranslate"><span class="pre">None</span></code> の場合，前処理ステップとしてマージするポイントは無効になります．</p></li>
 <li><p><strong>absolute</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">tolerance</span></code> が絶対距離か分数かをコントロールします．</p></li>
-<li><p><strong>clamping</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Turn on/off clamping of &quot;scalar&quot; values to range. Default <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+<li><p><strong>clamping</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 範囲指定する &quot;scalar&quot; 値のクランプのオンとオフを切り替えます．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です。</p></li>
 <li><p><strong>rng</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em><em>, </em><em>optional</em>) -- スカラー値が指定された場合にフィルタが考慮する値の範囲を設定します．</p></li>
 <li><p><strong>progress_bar</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 進行状況を示す進行状況バーを表示します．</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
-<dd class="field-even"><p><strong>glyphs</strong> -- Glyphs at either the cell centers or points.</p>
+<dd class="field-even"><p><strong>glyphs</strong> -- セルの中心または点にあるグリフ。</p>
 </dd>
 <dt class="field-odd">戻り値の型</dt>
 <dd class="field-odd"><p><a class="reference internal" href="points.html#pyvista.PolyData" title="pyvista.PolyData">pyvista.PolyData</a></p>
 </dd>
 </dl>
 <p class="rubric">サンプル</p>
-<p>Create arrow glyphs oriented by vectors and scaled by scalars.
-Factor parameter is used to reduce the size of the arrows.</p>
+<p>ベクトルによって方向付けられ、スカラーによってスケールされた矢印を作成します。係数パラメータを使用して、矢印のサイズを小さくします。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_carotid</span><span class="p">()</span><span class="o">.</span><span class="n">threshold</span><span class="p">(</span><span class="mi">145</span><span class="p">,</span> <span class="n">scalars</span><span class="o">=</span><span class="s2">&quot;scalars&quot;</span><span class="p">)</span>  
@@ -1126,10 +1115,7 @@ Factor parameter is used to reduce the size of the arrows.</p>
 <li><p><strong>target</strong> (<a class="reference internal" href="dataset.html#pyvista.DataSet" title="pyvista.DataSet"><em>pyvista.DataSet</em></a>) -- サンプリング元のvtkデータオブジェクト - このオブジェクトのポイント配列とセル配列がこのメッシュに補間されます．</p></li>
 <li><p><strong>sharpness</strong> (<em>float</em>) -- Gauss分布のシャープネス(つまり，減衰)を設定/取得します．デフォルトでは， Sharpness=2です．シャープさが増すと，遠方のポイントの効果は減少します．</p></li>
 <li><p><strong>radius</strong> (<em>float</em>) -- 基準点を配置する半径を指定します．</p></li>
-<li><p><strong>n_points</strong> (<em>int</em><em>, </em><em>optional</em>) -- If given, specifies the number of the closest points used to form
-the interpolation basis. This will invalidate the radius argument
-in favor of an N closest points approach. This typically has poorer
-results.</p></li>
+<li><p><strong>n_points</strong> (<em>int</em><em>, </em><em>optional</em>) -- 指定した場合，補間ベースを形成するために使用される最も近いポイントの数を指定します．これにより，N個の最近接ポイントを使用する代わりに，radius引数が無効になります．通常，この方法では結果が悪くなります．</p></li>
 <li><p><strong>strategy</strong> (<em>str</em><em>, </em><em>optional</em>) -- 補間処理中に &quot;null&quot; ポイントに遭遇した場合に使用するストラテジーを指定します．ヌルポイントは，ローカル近隣(近くの点が内挿する)が空の場合に発生します．ストラテジが <code class="docutils literal notranslate"><span class="pre">'mask_points'</span></code> に設定されている場合，ポイントを有効 (=1) またはnull (無効=0)としてマークする出力配列が作成される(NullValueも設定されます．)．ストラテジが <code class="docutils literal notranslate"><span class="pre">'null_value'</span></code> に設定されている場合(これがデフォルトです．)，出力データ値()は <code class="docutils literal notranslate"><span class="pre">null_value</span></code> に設定される(出力点データに指定されている)．最後に，戦略 <code class="docutils literal notranslate"><span class="pre">'closest_point'</span></code> は，単に補間を実行するために最も近い点を使用することである．</p></li>
 <li><p><strong>null_value</strong> (<em>float</em><em>, </em><em>optional</em>) -- NULL点の値を指定します．NULLポイントが検出されると，各NULLタプルのすべてのコンポーネントがこの値に設定されます．デフォルトでは，NULL値は0に設定されています．</p></li>
 <li><p><strong>pass_cell_arrays</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 入力メッシュのオリジナルのセルデータ配列を保持</p></li>
