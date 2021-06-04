@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
@@ -38,7 +38,7 @@
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -372,13 +372,13 @@
 </tbody>
 </table>
 <dl class="py class">
-<dt id="pyvista.Grid">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyvista.</span></code><code class="sig-name descname"><span class="pre">Grid</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Grid" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.core.dataset.DataSet</span></code></p>
+<dt class="sig sig-object py" id="pyvista.Grid">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyvista.</span></span><span class="sig-name descname"><span class="pre">Grid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Grid" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="dataset.html#pyvista.DataSet" title="pyvista.core.dataset.DataSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.core.dataset.DataSet</span></code></a></p>
 <p>非ポイントセットグリッド用の共通メソッドでいっぱいのクラス．</p>
-<dl class="py method">
-<dt id="pyvista.Grid.dimensions">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">dimensions</span></code><a class="headerlink" href="#pyvista.Grid.dimensions" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.Grid.dimensions">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">dimensions</span></span><a class="headerlink" href="#pyvista.Grid.dimensions" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>グリッドの次元の長さ3タプルを戻します．</p>
 <p>これらは，事実上，3つのデータセット軸のそれぞれに沿ったノードの数です．</p>
 </dd></dl>
@@ -427,9 +427,9 @@
 </tbody>
 </table>
 <dl class="py class">
-<dt id="pyvista.RectilinearGrid">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyvista.</span></code><code class="sig-name descname"><span class="pre">RectilinearGrid</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.RectilinearGrid" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">vtkmodules.vtkCommonDataModel.vtkRectilinearGrid</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.core.grid.Grid</span></code></p>
+<dt class="sig sig-object py" id="pyvista.RectilinearGrid">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyvista.</span></span><span class="sig-name descname"><span class="pre">RectilinearGrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.RectilinearGrid" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">vtkmodules.vtkCommonDataModel.vtkRectilinearGrid</span></code>, <a class="reference internal" href="#pyvista.Grid" title="pyvista.core.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.core.grid.Grid</span></code></a></p>
 <p>vtk.vtkRectilinearGridオブジェクトの機能を拡張します．</p>
 <p>いくつかの方法で初期化できます:</p>
 <ul class="simple">
@@ -461,46 +461,46 @@
 </pre></div>
 </div>
 <dl class="py method">
-<dt id="pyvista.RectilinearGrid.cast_to_structured_grid">
-<code class="sig-name descname"><span class="pre">cast_to_structured_grid</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.RectilinearGrid.cast_to_structured_grid" title="この定義へのパーマリンク">¶</a></dt>
+<dt class="sig sig-object py" id="pyvista.RectilinearGrid.cast_to_structured_grid">
+<span class="sig-name descname"><span class="pre">cast_to_structured_grid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.RectilinearGrid.cast_to_structured_grid" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>この直線グリッドを <a class="reference internal" href="point-grids.html#pyvista.StructuredGrid" title="pyvista.StructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.StructuredGrid</span></code></a> にキャストします．</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.RectilinearGrid.dimensions">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">dimensions</span></code><a class="headerlink" href="#pyvista.RectilinearGrid.dimensions" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.RectilinearGrid.dimensions">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">dimensions</span></span><a class="headerlink" href="#pyvista.RectilinearGrid.dimensions" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>グリッドの次元の長さ3タプルを戻します．</p>
 <p>これらは，事実上，3つのデータセット軸のそれぞれに沿ったノードの数です．</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.RectilinearGrid.meshgrid">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">meshgrid</span></code><a class="headerlink" href="#pyvista.RectilinearGrid.meshgrid" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.RectilinearGrid.meshgrid">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">meshgrid</span></span><a class="headerlink" href="#pyvista.RectilinearGrid.meshgrid" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>このメッシュの配列のメッシュグリッドを返します．</p>
 <p>これは単に <code class="docutils literal notranslate"><span class="pre">ij</span></code> インデックスでこのメッシュの座標の <code class="docutils literal notranslate"><span class="pre">numpy.meshgrid</span></code> を返します．これらは，このメッシュのポイントのコピーです．</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.RectilinearGrid.points">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">points</span></code><a class="headerlink" href="#pyvista.RectilinearGrid.points" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.RectilinearGrid.points">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">points</span></span><a class="headerlink" href="#pyvista.RectilinearGrid.points" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>点のコピーをn x 3 numpy配列として返します．</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.RectilinearGrid.x">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">x</span></code><a class="headerlink" href="#pyvista.RectilinearGrid.x" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.RectilinearGrid.x">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">x</span></span><a class="headerlink" href="#pyvista.RectilinearGrid.x" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>X方向に沿った座標を取得します．</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.RectilinearGrid.y">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">y</span></code><a class="headerlink" href="#pyvista.RectilinearGrid.y" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.RectilinearGrid.y">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">y</span></span><a class="headerlink" href="#pyvista.RectilinearGrid.y" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>Y方向の座標を取得します．</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.RectilinearGrid.z">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">z</span></code><a class="headerlink" href="#pyvista.RectilinearGrid.z" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.RectilinearGrid.z">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">z</span></span><a class="headerlink" href="#pyvista.RectilinearGrid.z" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>Z方向の座標を取得します．</p>
 </dd></dl>
 
@@ -553,9 +553,9 @@
 </tbody>
 </table>
 <dl class="py class">
-<dt id="pyvista.UniformGrid">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyvista.</span></code><code class="sig-name descname"><span class="pre">UniformGrid</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UniformGrid" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">vtkmodules.vtkCommonDataModel.vtkImageData</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.core.grid.Grid</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.core.filters.UniformGridFilters</span></code></p>
+<dt class="sig sig-object py" id="pyvista.UniformGrid">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyvista.</span></span><span class="sig-name descname"><span class="pre">UniformGrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UniformGrid" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">vtkmodules.vtkCommonDataModel.vtkImageData</span></code>, <a class="reference internal" href="#pyvista.Grid" title="pyvista.core.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.core.grid.Grid</span></code></a>, <a class="reference internal" href="filters.html#pyvista.UniformGridFilters" title="pyvista.core.filters.UniformGridFilters"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.core.filters.UniformGridFilters</span></code></a></p>
 <p>vtk.vtkImageDataオブジェクトの機能を拡張します．</p>
 <p>いくつかの方法で初期化できます:</p>
 <ul class="simple">
@@ -595,50 +595,50 @@
 </pre></div>
 </div>
 <dl class="py method">
-<dt id="pyvista.UniformGrid.cast_to_rectilinear_grid">
-<code class="sig-name descname"><span class="pre">cast_to_rectilinear_grid</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UniformGrid.cast_to_rectilinear_grid" title="この定義へのパーマリンク">¶</a></dt>
+<dt class="sig sig-object py" id="pyvista.UniformGrid.cast_to_rectilinear_grid">
+<span class="sig-name descname"><span class="pre">cast_to_rectilinear_grid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UniformGrid.cast_to_rectilinear_grid" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>この均一なグリッドを <a class="reference internal" href="#pyvista.RectilinearGrid" title="pyvista.RectilinearGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.RectilinearGrid</span></code></a> にキャストします．</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pyvista.UniformGrid.cast_to_structured_grid">
-<code class="sig-name descname"><span class="pre">cast_to_structured_grid</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UniformGrid.cast_to_structured_grid" title="この定義へのパーマリンク">¶</a></dt>
+<dt class="sig sig-object py" id="pyvista.UniformGrid.cast_to_structured_grid">
+<span class="sig-name descname"><span class="pre">cast_to_structured_grid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UniformGrid.cast_to_structured_grid" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>この均一なグリッドを <a class="reference internal" href="point-grids.html#pyvista.StructuredGrid" title="pyvista.StructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.StructuredGrid</span></code></a> にキャストします．</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.UniformGrid.origin">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">origin</span></code><a class="headerlink" href="#pyvista.UniformGrid.origin" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.UniformGrid.origin">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">origin</span></span><a class="headerlink" href="#pyvista.UniformGrid.origin" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>グリッドの原点(南西下角)を返します．</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.UniformGrid.points">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">points</span></code><a class="headerlink" href="#pyvista.UniformGrid.points" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.UniformGrid.points">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">points</span></span><a class="headerlink" href="#pyvista.UniformGrid.points" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>暗黙的に定義されたポイントのコピーを，数値配列として作成します．</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.UniformGrid.spacing">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">spacing</span></code><a class="headerlink" href="#pyvista.UniformGrid.spacing" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.UniformGrid.spacing">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">spacing</span></span><a class="headerlink" href="#pyvista.UniformGrid.spacing" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>各軸方向の間隔を取得します．</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.UniformGrid.x">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">x</span></code><a class="headerlink" href="#pyvista.UniformGrid.x" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.UniformGrid.x">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">x</span></span><a class="headerlink" href="#pyvista.UniformGrid.x" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>すべてのXポイントを返します．</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.UniformGrid.y">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">y</span></code><a class="headerlink" href="#pyvista.UniformGrid.y" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.UniformGrid.y">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">y</span></span><a class="headerlink" href="#pyvista.UniformGrid.y" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>すべてのYポイントを返します．</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.UniformGrid.z">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">z</span></code><a class="headerlink" href="#pyvista.UniformGrid.z" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.UniformGrid.z">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">z</span></span><a class="headerlink" href="#pyvista.UniformGrid.z" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>すべてのZポイントを返します．</p>
 </dd></dl>
 
@@ -680,7 +680,7 @@
     
     <div class="footer-item">
       <p class="sphinx-version">
-このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4 で生成しました。<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.2.<br/>
 </p>
     </div>
     

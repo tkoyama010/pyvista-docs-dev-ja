@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sample Function: Perlin Noise in 3D &#8212; PyVista 0.30.dev0 ドキュメント</title>
+    <title>サンプル関数:3DでのPerlinノイズ &#8212; PyVista 0.30.dev0 ドキュメント</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
@@ -38,7 +38,7 @@
     
   <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
@@ -51,7 +51,7 @@
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
     <link rel="next" title="スライシング" href="slicing.html" />
-    <link rel="prev" title="Sample Function: Perlin Noise in 2D" href="sampling_functions_2d.html" />
+    <link rel="prev" title="サンプル関数:2DでのPerlinノイズ" href="sampling_functions_2d.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -471,14 +471,14 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="sampling_functions_2d.html">
-   Sample Function: Perlin Noise in 2D
+   サンプル関数:2DでのPerlinノイズ
   </a>
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Sample Function: Perlin Noise in 3D
+   サンプル関数:3DでのPerlinノイズ
   </a>
  </li>
 </ul>
@@ -914,12 +914,12 @@
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Sample Function: Perlin Noise in 3D
+   サンプル関数:3DでのPerlinノイズ
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#generate-perlin-noise-over-a-3d-structuredgrid">
-   Generate Perlin Noise over a 3D StructuredGrid
+   3D StructuredGrid上にPerlinノイズを生成する
   </a>
  </li>
 </ul>
@@ -945,27 +945,20 @@
                 
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">注釈</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-examples-01-filter-sampling-functions-3d-py"><span class="std std-ref">here</span></a>
-to download the full example code</p>
+<p>Click :ref:<a href="#id1"><span class="problematic" id="id2">`</span></a>here ` to download the full example code</p>
 </div>
 <div class="sphx-glr-example-title section" id="sample-function-perlin-noise-in-3d">
-<span id="sphx-glr-examples-01-filter-sampling-functions-3d-py"></span><h1>Sample Function: Perlin Noise in 3D<a class="headerlink" href="#sample-function-perlin-noise-in-3d" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Here we use <code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.core.imaging.sample_function()</span></code> to sample
-perlin noise over a region to generate random terrain.</p>
-<p>Video games like Minecraft use Perlin noise to create terrain.  Here,
-we create a voxelized mesh similar to a Minecraft &quot;cave&quot;.</p>
+<span id="sphx-glr-examples-01-filter-sampling-functions-3d-py"></span><h1>サンプル関数:3DでのPerlinノイズ<a class="headerlink" href="#sample-function-perlin-noise-in-3d" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>ここでは、 <code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.core.imaging.sample_function()</span></code> を使用して領域上のパーリンノイズをサンプリングし、ランダムな地表を生成します。</p>
+<p>Minecraftなどのビデオゲームでは、Perlinノイズを使用して地表を作成します。ここでは、Minecraftの &quot;洞窟&quot; に似たボクセル化メッシュを作成します。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="generate-perlin-noise-over-a-3d-structuredgrid">
-<h1>Generate Perlin Noise over a 3D StructuredGrid<a class="headerlink" href="#generate-perlin-noise-over-a-3d-structuredgrid" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Feel free to change the values of <code class="docutils literal notranslate"><span class="pre">freq</span></code> to change the shape of
-the &quot;caves&quot;.  For example, lowering the frequency will make the
-caves larger and more expansive, while a higher frequency in any
-direction will make the caves appear more &quot;vein-like&quot; and less open.</p>
-<p>Change the threshold to reduce or increase the percent of the
-terrain that is open or closed</p>
+<h1>3D StructuredGrid上にPerlinノイズを生成する<a class="headerlink" href="#generate-perlin-noise-over-a-3d-structuredgrid" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>&quot;freq&quot; の値を自由に変更して、 &quot;洞窟&quot; の形を変えることができます。たとえば、周波数を低くすると、洞穴が大きく拡張します。一方、任意の方向の周波数を高くすると、洞穴はより &quot;静脈のように&quot; 見え、開きにくくなります。</p>
+<p>しきい値を変更して、開いている地形または閉じている地形の割合を増減します</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">freq</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">noise</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">perlin_noise</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">freq</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
 <span class="n">grid</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">sample_function</span><span class="p">(</span><span class="n">noise</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="o">-</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">40</span><span class="p">))</span>
@@ -994,7 +987,7 @@ terrain that is open or closed</p>
 </td></tr> </table>
 </div>
 <br />
-<br /><p>color limits without blue</p>
+<br /><p>青以外の色の制限</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mn</span><span class="p">,</span> <span class="n">mx</span> <span class="o">=</span> <span class="p">[</span><span class="n">out</span><span class="p">[</span><span class="s1">&#39;scalars&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">out</span><span class="p">[</span><span class="s1">&#39;scalars&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()]</span>
 <span class="n">clim</span> <span class="o">=</span> <span class="p">(</span><span class="n">mn</span><span class="p">,</span> <span class="n">mx</span><span class="o">*</span><span class="mf">1.8</span><span class="p">)</span>
 
@@ -1013,10 +1006,10 @@ terrain that is open or closed</p>
 <p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.503 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-filter-sampling-functions-3d-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/4663fd2929701517e1d884de1a45ec05/sampling_functions_3d.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">sampling_functions_3d.py</span></code></a></p>
+<p>:download:<a href="#id1"><span class="problematic" id="id2">`</span></a>Download Python source code: sampling_functions_3d.py `</p>
 </div>
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/08628734fda9d366300325746a349651/sampling_functions_3d.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">sampling_functions_3d.ipynb</span></code></a></p>
+<p>:download:<a href="#id1"><span class="problematic" id="id2">`</span></a>Download Jupyter notebook: sampling_functions_3d.ipynb `</p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Sphinx-Galleryによるギャラリー</a></p>
@@ -1055,7 +1048,7 @@ terrain that is open or closed</p>
     
     <div class="footer-item">
       <p class="sphinx-version">
-このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4 で生成しました。<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.2.<br/>
 </p>
     </div>
     

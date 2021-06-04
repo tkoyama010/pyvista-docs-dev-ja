@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
@@ -38,7 +38,7 @@
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -950,9 +950,9 @@ if (window.Jupyter !== undefined) {
 </tbody>
 </table>
 <dl class="py class">
-<dt id="pyvista.PolyData">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyvista.</span></code><code class="sig-name descname"><span class="pre">PolyData</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var_inp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">faces</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_faces</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lines</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_lines</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_ext</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">vtkmodules.vtkCommonDataModel.vtkPolyData</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.core.pointset.PointSet</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.core.filters.PolyDataFilters</span></code></p>
+<dt class="sig sig-object py" id="pyvista.PolyData">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyvista.</span></span><span class="sig-name descname"><span class="pre">PolyData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var_inp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">faces</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_faces</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lines</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_lines</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_ext</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">vtkmodules.vtkCommonDataModel.vtkPolyData</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.core.pointset.PointSet</span></code>, <a class="reference internal" href="filters.html#pyvista.PolyDataFilters" title="pyvista.core.filters.PolyDataFilters"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.core.filters.PolyDataFilters</span></code></a></p>
 <p>vtk.vtkPolyDataオブジェクトの機能を拡張します．</p>
 <p>いくつかの方法で初期化できます:</p>
 <ul class="simple">
@@ -1009,9 +1009,9 @@ if (window.Jupyter !== undefined) {
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">examples</span><span class="o">.</span><span class="n">antfile</span><span class="p">)</span>
 </pre></div>
 </div>
-<dl class="py method">
-<dt id="pyvista.PolyData.area">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">area</span></code><a class="headerlink" href="#pyvista.PolyData.area" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.PolyData.area">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">area</span></span><a class="headerlink" href="#pyvista.PolyData.area" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>メッシュ表面領域を返します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値</dt>
@@ -1023,71 +1023,71 @@ if (window.Jupyter !== undefined) {
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.PolyData.cell_normals">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">cell_normals</span></code><a class="headerlink" href="#pyvista.PolyData.cell_normals" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.PolyData.cell_normals">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">cell_normals</span></span><a class="headerlink" href="#pyvista.PolyData.cell_normals" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>セルの法線を返します．</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.PolyData.face_normals">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">face_normals</span></code><a class="headerlink" href="#pyvista.PolyData.face_normals" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.PolyData.face_normals">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">face_normals</span></span><a class="headerlink" href="#pyvista.PolyData.face_normals" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>セルの法線を返します．</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.PolyData.faces">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">faces</span></code><a class="headerlink" href="#pyvista.PolyData.faces" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.PolyData.faces">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">faces</span></span><a class="headerlink" href="#pyvista.PolyData.faces" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>面へのポインタをnumpyなオブジェクトとして返します．</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pyvista.PolyData.is_all_triangles">
-<code class="sig-name descname"><span class="pre">is_all_triangles</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.is_all_triangles" title="この定義へのパーマリンク">¶</a></dt>
+<dt class="sig sig-object py" id="pyvista.PolyData.is_all_triangles">
+<span class="sig-name descname"><span class="pre">is_all_triangles</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.is_all_triangles" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">PolyData</span></code> のすべての面が三角形の場合， <code class="docutils literal notranslate"><span class="pre">True</span></code> を返します．</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.PolyData.lines">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">lines</span></code><a class="headerlink" href="#pyvista.PolyData.lines" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.PolyData.lines">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">lines</span></span><a class="headerlink" href="#pyvista.PolyData.lines" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ラインへのポインタをnumpyオブジェクトとして返します．</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.PolyData.n_faces">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">n_faces</span></code><a class="headerlink" href="#pyvista.PolyData.n_faces" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.PolyData.n_faces">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">n_faces</span></span><a class="headerlink" href="#pyvista.PolyData.n_faces" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>セルの数を返します．</p>
 <p><code class="docutils literal notranslate"><span class="pre">n_cells</span></code> のエイリアス．</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.PolyData.n_open_edges">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">n_open_edges</span></code><a class="headerlink" href="#pyvista.PolyData.n_open_edges" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.PolyData.n_open_edges">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">n_open_edges</span></span><a class="headerlink" href="#pyvista.PolyData.n_open_edges" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>このメッシュ上の開いたエッジの数を返します．</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.PolyData.number_of_faces">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">number_of_faces</span></code><a class="headerlink" href="#pyvista.PolyData.number_of_faces" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.PolyData.number_of_faces">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">number_of_faces</span></span><a class="headerlink" href="#pyvista.PolyData.number_of_faces" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>セルの数を返します．</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.PolyData.obbTree">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">obbTree</span></code><a class="headerlink" href="#pyvista.PolyData.obbTree" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.PolyData.obbTree">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">obbTree</span></span><a class="headerlink" href="#pyvista.PolyData.obbTree" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>polydataのobbTreeを返します．</p>
 <p>obbTreeは，方向付きバウンディングボックス (OBB) ツリーを生成するオブジェクトです．方向を指定した境界ボックスは，必ずしも座標軸に沿って整列しない境界ボックスです．OBBツリーはこのようなボックスの階層ツリー構造であり，そこではOBBのより深いレベルが空間のより小さな領域を限定します．</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.PolyData.point_normals">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">point_normals</span></code><a class="headerlink" href="#pyvista.PolyData.point_normals" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.PolyData.point_normals">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">point_normals</span></span><a class="headerlink" href="#pyvista.PolyData.point_normals" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ポイント法線を返します．</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pyvista.PolyData.save">
-<code class="sig-name descname"><span class="pre">save</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">binary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.save" title="この定義へのパーマリンク">¶</a></dt>
+<dt class="sig sig-object py" id="pyvista.PolyData.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">binary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.save" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>サーフェスメッシュをディスクに書き込みます．</p>
 <p>書き込まれるファイルは，ASCIIまたはバイナリply，stl，またはvtkメッシュファイルです．plyまたはstlフォーマットを選択すると，メッシュが適切に保存されるように面法線が所定の位置で計算されます．</p>
 <dl class="field-list simple">
@@ -1102,15 +1102,15 @@ if (window.Jupyter !== undefined) {
 <p>バイナリファイルはASCIIよりもはるかに高速に書き込み，ファイルサイズも小さくなります</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.PolyData.verts">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">verts</span></code><a class="headerlink" href="#pyvista.PolyData.verts" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.PolyData.verts">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">verts</span></span><a class="headerlink" href="#pyvista.PolyData.verts" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>頂点セルを取得します．</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.PolyData.volume">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">volume</span></code><a class="headerlink" href="#pyvista.PolyData.volume" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.PolyData.volume">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">volume</span></span><a class="headerlink" href="#pyvista.PolyData.volume" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>メッシュボリュームを返します．</p>
 <p>閉じたサーフェスでない場合は，VTKエラー/警告が投げられます．</p>
 <dl class="field-list simple">
@@ -1161,7 +1161,7 @@ if (window.Jupyter !== undefined) {
     
     <div class="footer-item">
       <p class="sphinx-version">
-このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4 で生成しました。<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.2.<br/>
 </p>
     </div>
     

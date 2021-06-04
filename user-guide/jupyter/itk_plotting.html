@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
@@ -38,7 +38,7 @@
     
   <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
@@ -380,8 +380,8 @@
 </tbody>
 </table>
 <dl class="py class">
-<dt id="pyvista.PlotterITK">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyvista.</span></code><code class="sig-name descname"><span class="pre">PlotterITK</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PlotterITK" title="この定義へのパーマリンク">¶</a></dt>
+<dt class="sig sig-object py" id="pyvista.PlotterITK">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyvista.</span></span><span class="sig-name descname"><span class="pre">PlotterITK</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PlotterITK" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>ITKウィジェットプロッタ．</p>
 <p>jupyterノートブック内でインタラクティブにプロットするために使用します． <code class="docutils literal notranslate"><span class="pre">itkwidgets&gt;=0.25.2</span></code> が必要です．インストールについては以下を参照してください．</p>
@@ -396,8 +396,8 @@
 </pre></div>
 </div>
 <dl class="py method">
-<dt id="pyvista.PlotterITK.add_mesh">
-<code class="sig-name descname"><span class="pre">add_mesh</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scalars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opacity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smooth_shading</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PlotterITK.add_mesh" title="この定義へのパーマリンク">¶</a></dt>
+<dt class="sig sig-object py" id="pyvista.PlotterITK.add_mesh">
+<span class="sig-name descname"><span class="pre">add_mesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scalars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opacity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smooth_shading</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PlotterITK.add_mesh" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>PyVista/VTKメッシュまたはデータセットを追加します．</p>
 <p>itkwidgetsがシーンにラップできるPyVista/VTKメッシュを追加します．</p>
 <dl class="field-list simple">
@@ -414,8 +414,8 @@
 </dd></dl>
 
 <dl class="py method">
-<dt id="pyvista.PlotterITK.add_points">
-<code class="sig-name descname"><span class="pre">add_points</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PlotterITK.add_points" title="この定義へのパーマリンク">¶</a></dt>
+<dt class="sig sig-object py" id="pyvista.PlotterITK.add_points">
+<span class="sig-name descname"><span class="pre">add_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PlotterITK.add_points" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>プロッタに点を追加します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
@@ -433,21 +433,21 @@
 </div>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.PlotterITK.background_color">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">background_color</span></code><a class="headerlink" href="#pyvista.PlotterITK.background_color" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.PlotterITK.background_color">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">background_color</span></span><a class="headerlink" href="#pyvista.PlotterITK.background_color" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>プロッタの背景色を返します．</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.PlotterITK.camera_position">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">camera_position</span></code><a class="headerlink" href="#pyvista.PlotterITK.camera_position" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.PlotterITK.camera_position">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">camera_position</span></span><a class="headerlink" href="#pyvista.PlotterITK.camera_position" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>プロッタのカメラ位置をリストとして返します．</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pyvista.PlotterITK.show">
-<code class="sig-name descname"><span class="pre">show</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ui_collapsed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_bounds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PlotterITK.show" title="この定義へのパーマリンク">¶</a></dt>
+<dt class="sig sig-object py" id="pyvista.PlotterITK.show">
+<span class="sig-name descname"><span class="pre">show</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ui_collapsed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_bounds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PlotterITK.show" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>セル出力にitkwidgetsプロッタを表示します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
@@ -505,7 +505,7 @@
     
     <div class="footer-item">
       <p class="sphinx-version">
-このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4 で生成しました。<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.2.<br/>
 </p>
     </div>
     

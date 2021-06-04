@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
@@ -38,7 +38,7 @@
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -445,8 +445,8 @@
 <div class="section" id="api-reference">
 <h3>APIリファレンス<a class="headerlink" href="#api-reference" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <dl class="py class">
-<dt id="pyvista.Light">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyvista.</span></code><code class="sig-name descname"><span class="pre">Light</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">focal_point</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">light_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'scene</span> <span class="pre">light'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intensity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">positional</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cone_angle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_actor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exponent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shadow_attenuation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attenuation_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Light" title="この定義へのパーマリンク">¶</a></dt>
+<dt class="sig sig-object py" id="pyvista.Light">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyvista.</span></span><span class="sig-name descname"><span class="pre">Light</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">focal_point</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">light_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'scene</span> <span class="pre">light'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intensity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">positional</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cone_angle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_actor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exponent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shadow_attenuation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attenuation_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Light" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>Light クラス．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
@@ -478,14 +478,14 @@
 </pre></div>
 </div>
 <dl class="py method">
-<dt id="pyvista.Light.add_renderer">
-<code class="sig-name descname"><span class="pre">add_renderer</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">renderer</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Light.add_renderer" title="この定義へのパーマリンク">¶</a></dt>
+<dt class="sig sig-object py" id="pyvista.Light.add_renderer">
+<span class="sig-name descname"><span class="pre">add_renderer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">renderer</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Light.add_renderer" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>このライトにレンダラーをアタッチします．</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.Light.ambient_color">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">ambient_color</span></code><a class="headerlink" href="#pyvista.Light.ambient_color" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.Light.ambient_color">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">ambient_color</span></span><a class="headerlink" href="#pyvista.Light.ambient_color" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ライトのアンビエントカラーを返します．</p>
 <p>設定する場合，色は3文字のシーケンスまたは文字列である必要があります．たとえば，次のようになります．</p>
 <blockquote>
@@ -505,9 +505,9 @@
 </div>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.Light.attenuation_values">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">attenuation_values</span></code><a class="headerlink" href="#pyvista.Light.attenuation_values" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.Light.attenuation_values">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">attenuation_values</span></span><a class="headerlink" href="#pyvista.Light.attenuation_values" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>2次減衰定数を返します．</p>
 <p>値は3つの長さのシーケンスで，この順序で定数，1次定数，2次定数を指定します．これらのパラメータは，ポジションライトにのみ影響します．</p>
 <p>減衰とは，ポイントソースから遠ざかるにつれてライトのビームが減衰することです．3つの定数は，距離による減衰のための3つの異なるプロファイルを記述します．減衰定数が大きいほど，距離とともに減衰が速くなります．</p>
@@ -535,9 +535,9 @@
 </div>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.Light.cone_angle">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">cone_angle</span></code><a class="headerlink" href="#pyvista.Light.cone_angle" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.Light.cone_angle">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">cone_angle</span></span><a class="headerlink" href="#pyvista.Light.cone_angle" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ポジショナルライトのコーンアングルを返します．</p>
 <p>角度は度単位で，円錐の軸と円錐の極値光線の間で測定されます．値が90より小さい場合はスポットライト効果があり，90以上の値は単なる位置ライト，つまり球状のポイントソースになります．</p>
 <p>光の角度分布に関しては，円錐角は単にビームを打ち切るだけであり，その形状は <a class="reference internal" href="#pyvista.Light.exponent" title="pyvista.Light.exponent"><code class="xref py py-attr docutils literal notranslate"><span class="pre">exponent</span></code></a> によって定義される．円錐角が少なくとも90度であれば，角度依存性はない．</p>
@@ -561,8 +561,8 @@
 </dd></dl>
 
 <dl class="py method">
-<dt id="pyvista.Light.copy">
-<code class="sig-name descname"><span class="pre">copy</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Light.copy" title="この定義へのパーマリンク">¶</a></dt>
+<dt class="sig sig-object py" id="pyvista.Light.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Light.copy" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ライトの浅いコピーまたは深いコピーを返します．</p>
 <p><code class="docutils literal notranslate"><span class="pre">Light</span></code> オブジェクトの唯一の可変属性は(存在する場合)変換行列です．したがって，浅いコピーを要求することは，返されたライトとオリジナルが変換行列インスタンスを共有していることを意味します．</p>
 <dl class="field-list simple">
@@ -584,9 +584,9 @@
 </div>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.Light.diffuse_color">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">diffuse_color</span></code><a class="headerlink" href="#pyvista.Light.diffuse_color" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.Light.diffuse_color">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">diffuse_color</span></span><a class="headerlink" href="#pyvista.Light.diffuse_color" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ライトの拡散カラーを返します．</p>
 <p>設定する場合，色は3文字のシーケンスまたは文字列である必要があります．たとえば，次のようになります．</p>
 <blockquote>
@@ -606,9 +606,9 @@
 </div>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.Light.exponent">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">exponent</span></code><a class="headerlink" href="#pyvista.Light.exponent" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.Light.exponent">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">exponent</span></span><a class="headerlink" href="#pyvista.Light.exponent" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>スポットライトに使用されるコサインの指数を返します．</p>
 <p>スポットライト(円錐角度が90度未満の位置光源)では，ライトコーン内のライトビームのシェイプはライトの軸からの角度に応じて変化します．輝度の変化は，この角度の余弦を指数で累乗した値に応じて変化します．デフォルトは1です．指数を大きくするとビームがシャープになり(軸の周りにより集中する)，小さくするとビームが広がります．</p>
 <p>この特性によって定義される角度依存性と <a class="reference internal" href="#pyvista.Light.cone_angle" title="pyvista.Light.cone_angle"><code class="xref py py-attr docutils literal notranslate"><span class="pre">cone_angle</span></code></a> によって実行される打ち切りは独立しているので，(小さい <a class="reference internal" href="#pyvista.Light.cone_angle" title="pyvista.Light.cone_angle"><code class="xref py py-attr docutils literal notranslate"><span class="pre">cone_angle</span></code></a> の)狭いビームをもつスポットライトについては，強度の角度変化を見ることはより困難であり，ビームの角度分布に目に見えるように影響を与えるためにはより高い指数が必要であるかもしれないことに注意してください．</p>
@@ -630,9 +630,9 @@
 </div>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.Light.focal_point">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">focal_point</span></code><a class="headerlink" href="#pyvista.Light.focal_point" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.Light.focal_point">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">focal_point</span></span><a class="headerlink" href="#pyvista.Light.focal_point" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ライトの焦点を返します．</p>
 <p>注: 焦点は，ライトの(存在する場合)変換行列で示される座標空間で定義されます．ライトのワールドスペースの焦点を取得するには， (読み込み専用)  <a class="reference internal" href="#pyvista.Light.world_focal_point" title="pyvista.Light.world_focal_point"><code class="xref py py-attr docutils literal notranslate"><span class="pre">world_focal_point</span></code></a> プロパティを使用します．</p>
 <p class="rubric">サンプル</p>
@@ -645,8 +645,8 @@
 </dd></dl>
 
 <dl class="py method">
-<dt id="pyvista.Light.from_vtk">
-<em class="property"><span class="pre">classmethod</span> </em><code class="sig-name descname"><span class="pre">from_vtk</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vtk_light</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Light.from_vtk" title="この定義へのパーマリンク">¶</a></dt>
+<dt class="sig sig-object py" id="pyvista.Light.from_vtk">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_vtk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vtk_light</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Light.from_vtk" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">vtk.vtkLight</span></code> からライトを作成し，コピーを作成します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
@@ -656,15 +656,15 @@
 </dd></dl>
 
 <dl class="py method">
-<dt id="pyvista.Light.hide_actor">
-<code class="sig-name descname"><span class="pre">hide_actor</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Light.hide_actor" title="この定義へのパーマリンク">¶</a></dt>
+<dt class="sig sig-object py" id="pyvista.Light.hide_actor">
+<span class="sig-name descname"><span class="pre">hide_actor</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Light.hide_actor" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ビームのジオメトリを表すポジションライトのアクターを非表示にします．</p>
 <p>ディレクショナルライトの場合，関数は何もしません．</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.Light.intensity">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">intensity</span></code><a class="headerlink" href="#pyvista.Light.intensity" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.Light.intensity">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">intensity</span></span><a class="headerlink" href="#pyvista.Light.intensity" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ライトの輝度(0と1の間)を返します．</p>
 <p class="rubric">サンプル</p>
 <p>異なる明るさのライトを使用して，立方体の2つの面にライトを当てます．</p>
@@ -683,9 +683,9 @@
 </div>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.Light.is_camera_light">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">is_camera_light</span></code><a class="headerlink" href="#pyvista.Light.is_camera_light" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.Light.is_camera_light">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">is_camera_light</span></span><a class="headerlink" href="#pyvista.Light.is_camera_light" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ライトがカメラライトかどうかを返します．</p>
 <p class="rubric">サンプル</p>
 <p>デフォルトライトキットの5つのライトのうち4つがカメラライトであることを確認します．</p>
@@ -698,9 +698,9 @@
 </div>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.Light.is_headlight">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">is_headlight</span></code><a class="headerlink" href="#pyvista.Light.is_headlight" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.Light.is_headlight">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">is_headlight</span></span><a class="headerlink" href="#pyvista.Light.is_headlight" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ライトがヘッドライトかどうかを返します．</p>
 <p class="rubric">サンプル</p>
 <p>デフォルトライトキットの最初のライトがヘッドライトであることを確認します．</p>
@@ -713,9 +713,9 @@
 </div>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.Light.is_scene_light">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">is_scene_light</span></code><a class="headerlink" href="#pyvista.Light.is_scene_light" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.Light.is_scene_light">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">is_scene_light</span></span><a class="headerlink" href="#pyvista.Light.is_scene_light" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ライトがシーンライトかどうかを返します．</p>
 <p class="rubric">サンプル</p>
 <p>デフォルトライトキットのライトがシーンライトでないことを確認します．</p>
@@ -728,9 +728,9 @@
 </div>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.Light.light_type">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">light_type</span></code><a class="headerlink" href="#pyvista.Light.light_type" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.Light.light_type">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">light_type</span></span><a class="headerlink" href="#pyvista.Light.light_type" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ライトタイプを返します．</p>
 <p>既定のライトタイプは，ワールド座標空間に存在するシーンライトです．</p>
 <p>ヘッドライトはカメラにアタッチされ，常にカメラの焦点を指します．</p>
@@ -763,9 +763,9 @@
 </div>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.Light.on">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">on</span></code><a class="headerlink" href="#pyvista.Light.on" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.Light.on">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">on</span></span><a class="headerlink" href="#pyvista.Light.on" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ライトが点灯しているかどうかを返します．</p>
 <p>これは <code class="docutils literal notranslate"><span class="pre">vtk.vtkLight</span></code> クラスのSwitch状態に対応します．</p>
 <p class="rubric">サンプル</p>
@@ -779,9 +779,9 @@
 </div>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.Light.position">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">position</span></code><a class="headerlink" href="#pyvista.Light.position" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.Light.position">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">position</span></span><a class="headerlink" href="#pyvista.Light.position" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ライトの位置を返します．</p>
 <p>注: 位置は，ライトの(存在する場合)変換行列で示される座標空間で定義されます．ライトのワールドスペースの位置を取得するには， (読み込み専用)  <a class="reference internal" href="#pyvista.Light.world_position" title="pyvista.Light.world_position"><code class="xref py py-attr docutils literal notranslate"><span class="pre">world_position</span></code></a> プロパティを使用します．</p>
 <p class="rubric">サンプル</p>
@@ -798,9 +798,9 @@
 </div>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.Light.positional">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">positional</span></code><a class="headerlink" href="#pyvista.Light.positional" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.Light.positional">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">positional</span></span><a class="headerlink" href="#pyvista.Light.positional" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ライトが定位置かどうかを返します．</p>
 <p>デフォルトはディレクショナルライト，例えば無限に離れたポイントソースです．コーンアングルが90度以上の位置ライトは，球体のポイントソースのように機能します．コーンアングルが90度未満の位置ライトはスポットライトと呼ばれます．</p>
 <p>減衰とコーンアングルは，ポジションライトでのみ使用されます． <a class="reference internal" href="#pyvista.Light.exponent" title="pyvista.Light.exponent"><code class="xref py py-attr docutils literal notranslate"><span class="pre">exponent</span></code></a> プロパティはスポットライトでのみ使用されます．コーンアングルが90度以上の位置ライトでは，ビームの角度依存性は表示されませんが，減衰は表示されます．</p>
@@ -815,22 +815,22 @@
 </div>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.Light.renderers">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">renderers</span></code><a class="headerlink" href="#pyvista.Light.renderers" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.Light.renderers">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">renderers</span></span><a class="headerlink" href="#pyvista.Light.renderers" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>このライトに関連付けられたレンダラを返します．</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pyvista.Light.set_camera_light">
-<code class="sig-name descname"><span class="pre">set_camera_light</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Light.set_camera_light" title="この定義へのパーマリンク">¶</a></dt>
+<dt class="sig sig-object py" id="pyvista.Light.set_camera_light">
+<span class="sig-name descname"><span class="pre">set_camera_light</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Light.set_camera_light" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>原点を照らすヘッドライトを作成します．</p>
 <p>カメラライトはカメラとともに移動しますが，カメラに対して任意の相対位置を持つことができます．カメラライトは (0, 0, 1) にカメラが位置する座標空間で定義され，距離1で (0, 0, 0) を見て (0, 1, 0) が上になります．カメラライトは変換行列を使用してこの空間を確立します．カメラライトは変換行列を使用してこの空間を確立します．このメソッドを呼び出すと，ライトの変換行列がリセットされます．</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pyvista.Light.set_direction_angle">
-<code class="sig-name descname"><span class="pre">set_direction_angle</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">elev</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">azim</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Light.set_direction_angle" title="この定義へのパーマリンク">¶</a></dt>
+<dt class="sig sig-object py" id="pyvista.Light.set_direction_angle">
+<span class="sig-name descname"><span class="pre">set_direction_angle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">elev</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">azim</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Light.set_direction_angle" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ディレクショナルライトの位置と焦点を設定します．</p>
 <p>ライトが(非位置)指向性に切り替わります．焦点は原点に設定されます．位置は，高度と方位角の両方で定義されます．</p>
 <p>同等の <code class="docutils literal notranslate"><span class="pre">vtk.vtkLight.SetDirectionAngle()</span></code> メソッドは，メソッドの (x', y', z') 軸がレンダラーの (z, x, y) 軸に対応する驚くべき座標系を使用することに注意してください．この方法は， <code class="docutils literal notranslate"><span class="pre">elev</span></code> が従来の高度で <code class="docutils literal notranslate"><span class="pre">azim</span></code> が従来の方位角であるように機能を再実装します．具体的には，次のとおりです．</p>
@@ -859,22 +859,22 @@
 </dd></dl>
 
 <dl class="py method">
-<dt id="pyvista.Light.set_headlight">
-<code class="sig-name descname"><span class="pre">set_headlight</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Light.set_headlight" title="この定義へのパーマリンク">¶</a></dt>
+<dt class="sig sig-object py" id="pyvista.Light.set_headlight">
+<span class="sig-name descname"><span class="pre">set_headlight</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Light.set_headlight" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ライトをヘッドライトに設定します．</p>
 <p>ヘッドライトはカメラに固定され，常にカメラの焦点を指します．このメソッドを呼び出すと，ライトの変換行列がリセットされます．</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pyvista.Light.set_scene_light">
-<code class="sig-name descname"><span class="pre">set_scene_light</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Light.set_scene_light" title="この定義へのパーマリンク">¶</a></dt>
+<dt class="sig sig-object py" id="pyvista.Light.set_scene_light">
+<span class="sig-name descname"><span class="pre">set_scene_light</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Light.set_scene_light" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ライトをシーンライトに設定します．</p>
 <p>シーンライトはシーンに対して静止しています．このメソッドを呼び出すと，ライトの変換行列がリセットされます．</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.Light.shadow_attenuation">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">shadow_attenuation</span></code><a class="headerlink" href="#pyvista.Light.shadow_attenuation" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.Light.shadow_attenuation">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">shadow_attenuation</span></span><a class="headerlink" href="#pyvista.Light.shadow_attenuation" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>影の減衰の値を返します．</p>
 <p>デフォルトでは，影の中にあるライトは完全に遮られます．この値を1.0未満に設定することで，影の中にあるライトを制御できます．ライトの <a class="reference internal" href="#pyvista.Light.attenuation_values" title="pyvista.Light.attenuation_values"><code class="xref py py-attr docutils literal notranslate"><span class="pre">attenuation_values</span></code></a> を変更すると，影の減衰が1であってもオブジェクトを通過することができます．</p>
 <p class="rubric">サンプル</p>
@@ -889,8 +889,8 @@
 </dd></dl>
 
 <dl class="py method">
-<dt id="pyvista.Light.show_actor">
-<code class="sig-name descname"><span class="pre">show_actor</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Light.show_actor" title="この定義へのパーマリンク">¶</a></dt>
+<dt class="sig sig-object py" id="pyvista.Light.show_actor">
+<span class="sig-name descname"><span class="pre">show_actor</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Light.show_actor" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ビームのジオメトリを描くスポットライトのアクターを表示します．</p>
 <p><a class="reference internal" href="#pyvista.Light.cone_angle" title="pyvista.Light.cone_angle"><code class="xref py py-attr docutils literal notranslate"><span class="pre">cone_angle</span></code></a> が90度以上のディレクショナルライトまたはポジションライトでは，メソッドは何も実行しません．ライトが変更されてスポットライトになる場合は，このメソッドを再度呼び出して，アクターを表示する必要があります．アクターを非表示にするには， <a class="reference internal" href="#pyvista.Light.hide_actor" title="pyvista.Light.hide_actor"><code class="xref py py-func docutils literal notranslate"><span class="pre">hide_actor()</span></code></a> を参照してください．</p>
 <p class="rubric">サンプル</p>
@@ -913,9 +913,9 @@
 </div>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.Light.specular_color">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">specular_color</span></code><a class="headerlink" href="#pyvista.Light.specular_color" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.Light.specular_color">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">specular_color</span></span><a class="headerlink" href="#pyvista.Light.specular_color" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ライトの鏡面反射光の色を返します．</p>
 <p>設定する場合，色は3文字のシーケンスまたは文字列である必要があります．たとえば，次のようになります．</p>
 <blockquote>
@@ -936,8 +936,8 @@
 </dd></dl>
 
 <dl class="py method">
-<dt id="pyvista.Light.switch_off">
-<code class="sig-name descname"><span class="pre">switch_off</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Light.switch_off" title="この定義へのパーマリンク">¶</a></dt>
+<dt class="sig sig-object py" id="pyvista.Light.switch_off">
+<span class="sig-name descname"><span class="pre">switch_off</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Light.switch_off" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ライトを消します．</p>
 <p class="rubric">サンプル</p>
 <p>ライトを作成してオフにします．</p>
@@ -949,8 +949,8 @@
 </dd></dl>
 
 <dl class="py method">
-<dt id="pyvista.Light.switch_on">
-<code class="sig-name descname"><span class="pre">switch_on</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Light.switch_on" title="この定義へのパーマリンク">¶</a></dt>
+<dt class="sig sig-object py" id="pyvista.Light.switch_on">
+<span class="sig-name descname"><span class="pre">switch_on</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Light.switch_on" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ライトをつけます．</p>
 <p class="rubric">サンプル</p>
 <p>ライトを作成してオフにし，再びオンにします．</p>
@@ -962,9 +962,9 @@
 </div>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.Light.transform_matrix">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">transform_matrix</span></code><a class="headerlink" href="#pyvista.Light.transform_matrix" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.Light.transform_matrix">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">transform_matrix</span></span><a class="headerlink" href="#pyvista.Light.transform_matrix" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>(もしあれば)ライトの変換行列を返します．</p>
 <p>変換行列はデフォルトで <code class="docutils literal notranslate"><span class="pre">None</span></code> であり，設定されると <code class="docutils literal notranslate"><span class="pre">vtk.vtkMatrix4x4</span></code> オブジェクトとして格納されます．設定すると，ライトのパラメータ(位置と焦点)がレンダリング前に行列によって変換されます． <a class="reference internal" href="#pyvista.Light.position" title="pyvista.Light.position"><code class="xref py py-attr docutils literal notranslate"><span class="pre">position</span></code></a> および <a class="reference internal" href="#pyvista.Light.focal_point" title="pyvista.Light.focal_point"><code class="xref py py-attr docutils literal notranslate"><span class="pre">focal_point</span></code></a> とは異なる読み取り専用プロパティ <a class="reference internal" href="#pyvista.Light.world_position" title="pyvista.Light.world_position"><code class="xref py py-attr docutils literal notranslate"><span class="pre">world_position</span></code></a> および <a class="reference internal" href="#pyvista.Light.world_focal_point" title="pyvista.Light.world_focal_point"><code class="xref py py-attr docutils literal notranslate"><span class="pre">world_focal_point</span></code></a> も参照してください．</p>
 <p>The 4-by-4 transformation matrix is a tool to encode a general
@@ -992,9 +992,9 @@ redundant.</p>
 </div>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.Light.world_focal_point">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">world_focal_point</span></code><a class="headerlink" href="#pyvista.Light.world_focal_point" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.Light.world_focal_point">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">world_focal_point</span></span><a class="headerlink" href="#pyvista.Light.world_focal_point" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ライトのワールド空間焦点を返します．</p>
 <p>ワールド空間の焦点は，存在する場合，ライトの変換行列によって変換される <a class="reference internal" href="#pyvista.Light.focal_point" title="pyvista.Light.focal_point"><code class="xref py py-attr docutils literal notranslate"><span class="pre">focal_point</span></code></a> プロパティです．この読み取り専用プロパティの値は， <code class="docutils literal notranslate"><span class="pre">vtk.vtkLight.GetTransformedFocalPoint()</span></code> メソッドに対応します．</p>
 <p class="rubric">サンプル</p>
@@ -1014,9 +1014,9 @@ redundant.</p>
 </div>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.Light.world_position">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">world_position</span></code><a class="headerlink" href="#pyvista.Light.world_position" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.Light.world_position">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">world_position</span></span><a class="headerlink" href="#pyvista.Light.world_position" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ライトのワールド空間の位置を返します．</p>
 <p>ワールド空間の位置は，存在する場合，ライトの変換行列によって変換される <a class="reference internal" href="#pyvista.Light.position" title="pyvista.Light.position"><code class="xref py py-attr docutils literal notranslate"><span class="pre">position</span></code></a> プロパティです．この読み取り専用プロパティの値は， <code class="docutils literal notranslate"><span class="pre">vtk.vtkLight.GetTransformedPosition()</span></code> メソッドに対応します．</p>
 <p class="rubric">サンプル</p>
@@ -1075,7 +1075,7 @@ redundant.</p>
     
     <div class="footer-item">
       <p class="sphinx-version">
-このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4 で生成しました。<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.2.<br/>
 </p>
     </div>
     

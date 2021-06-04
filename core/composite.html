@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
@@ -38,7 +38,7 @@
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -424,9 +424,9 @@
 </tbody>
 </table>
 <dl class="py class">
-<dt id="pyvista.MultiBlock">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyvista.</span></code><code class="sig-name descname"><span class="pre">MultiBlock</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.MultiBlock" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">vtkmodules.vtkCommonDataModel.vtkMultiBlockDataSet</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.core.filters.CompositeFilters</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.core.dataobject.DataObject</span></code></p>
+<dt class="sig sig-object py" id="pyvista.MultiBlock">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyvista.</span></span><span class="sig-name descname"><span class="pre">MultiBlock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.MultiBlock" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">vtkmodules.vtkCommonDataModel.vtkMultiBlockDataSet</span></code>, <a class="reference internal" href="filters.html#pyvista.CompositeFilters" title="pyvista.core.filters.CompositeFilters"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.core.filters.CompositeFilters</span></code></a>, <a class="reference internal" href="objects.html#pyvista.DataObject" title="pyvista.core.dataobject.DataObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.core.dataobject.DataObject</span></code></a></p>
 <p>反復可能な多数のデータセットを保持する複合クラス．</p>
 <p>これはVTKで <code class="docutils literal notranslate"><span class="pre">vtkMultiBlockDataSet</span></code> クラスをラップ/拡張し，これらのデータセットを簡単にプロットし，Python的な方法でコンポジットを使用できるようにします．</p>
 <p><code class="docutils literal notranslate"><span class="pre">MultiBlock</span></code> はリストや辞書のようなもので，インデックスによってこのデータ構造を繰り返し処理することができ，文字列名によってブロックにアクセスすることもできます．</p>
@@ -463,14 +463,14 @@
 </pre></div>
 </div>
 <dl class="py method">
-<dt id="pyvista.MultiBlock.append">
-<code class="sig-name descname"><span class="pre">append</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pyvista.core.dataset.DataSet</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.MultiBlock.append" title="この定義へのパーマリンク">¶</a></dt>
+<dt class="sig sig-object py" id="pyvista.MultiBlock.append">
+<span class="sig-name descname"><span class="pre">append</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="dataset.html#pyvista.DataSet" title="pyvista.core.dataset.DataSet"><span class="pre">pyvista.core.dataset.DataSet</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.MultiBlock.append" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>データセットを次のブロックインデックスに追加します．</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.MultiBlock.bounds">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">bounds</span></code><a class="headerlink" href="#pyvista.MultiBlock.bounds" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.MultiBlock.bounds">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">bounds</span></span><em class="property"><span class="pre">:</span> <span class="pre">List[float]</span></em><a class="headerlink" href="#pyvista.MultiBlock.bounds" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ブロック間の境界の最小/最大を検索します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値</dt>
@@ -482,15 +482,15 @@
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.MultiBlock.center">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">center</span></code><a class="headerlink" href="#pyvista.MultiBlock.center" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.MultiBlock.center">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">center</span></span><em class="property"><span class="pre">:</span> <span class="pre">Any</span></em><a class="headerlink" href="#pyvista.MultiBlock.center" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>境界ボックスの中心を返します．</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pyvista.MultiBlock.clean">
-<code class="sig-name descname"><span class="pre">clean</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">empty</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.MultiBlock.clean" title="この定義へのパーマリンク">¶</a></dt>
+<dt class="sig sig-object py" id="pyvista.MultiBlock.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">empty</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.MultiBlock.clean" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>Nullブロックをすべて削除します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
@@ -500,8 +500,8 @@
 </dd></dl>
 
 <dl class="py method">
-<dt id="pyvista.MultiBlock.copy">
-<code class="sig-name descname"><span class="pre">copy</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.MultiBlock.copy" title="この定義へのパーマリンク">¶</a></dt>
+<dt class="sig sig-object py" id="pyvista.MultiBlock.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.MultiBlock.copy" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>オブジェクトのコピーを返します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
@@ -517,63 +517,63 @@
 </dd></dl>
 
 <dl class="py method">
-<dt id="pyvista.MultiBlock.copy_meta_from">
-<code class="sig-name descname"><span class="pre">copy_meta_from</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ido</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.MultiBlock.copy_meta_from" title="この定義へのパーマリンク">¶</a></dt>
+<dt class="sig sig-object py" id="pyvista.MultiBlock.copy_meta_from">
+<span class="sig-name descname"><span class="pre">copy_meta_from</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ido</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.MultiBlock.copy_meta_from" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>別のオブジェクトからこのオブジェクトにpyvistaメタデータをコピーします．</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pyvista.MultiBlock.get">
-<code class="sig-name descname"><span class="pre">get</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">pyvista.core.composite.MultiBlock</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#pyvista.MultiBlock.get" title="この定義へのパーマリンク">¶</a></dt>
+<dt class="sig sig-object py" id="pyvista.MultiBlock.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pyvista.MultiBlock" title="pyvista.core.composite.MultiBlock"><span class="pre">pyvista.core.composite.MultiBlock</span></a><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#pyvista.MultiBlock.get" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>インデックスまたは名前でブロックを取得します．</p>
 <p>名前が一意でない場合は，最初のoccurrenceが返されます．</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pyvista.MultiBlock.get_block_name">
-<code class="sig-name descname"><span class="pre">get_block_name</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#pyvista.MultiBlock.get_block_name" title="この定義へのパーマリンク">¶</a></dt>
+<dt class="sig sig-object py" id="pyvista.MultiBlock.get_block_name">
+<span class="sig-name descname"><span class="pre">get_block_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#pyvista.MultiBlock.get_block_name" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>指定したインデックスのブロック名を文字列で返します．</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pyvista.MultiBlock.get_data_range">
-<code class="sig-name descname"><span class="pre">get_data_range</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#pyvista.MultiBlock.get_data_range" title="この定義へのパーマリンク">¶</a></dt>
+<dt class="sig sig-object py" id="pyvista.MultiBlock.get_data_range">
+<span class="sig-name descname"><span class="pre">get_data_range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#pyvista.MultiBlock.get_data_range" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>すべてのブロックにわたる配列名の最小値/最大値を取得します．</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pyvista.MultiBlock.get_index_by_name">
-<code class="sig-name descname"><span class="pre">get_index_by_name</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span><a class="headerlink" href="#pyvista.MultiBlock.get_index_by_name" title="この定義へのパーマリンク">¶</a></dt>
+<dt class="sig sig-object py" id="pyvista.MultiBlock.get_index_by_name">
+<span class="sig-name descname"><span class="pre">get_index_by_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span><a class="headerlink" href="#pyvista.MultiBlock.get_index_by_name" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ブロック名でインデックス番号を検索します．</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pyvista.MultiBlock.keys">
-<code class="sig-name descname"><span class="pre">keys</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#pyvista.MultiBlock.keys" title="この定義へのパーマリンク">¶</a></dt>
+<dt class="sig sig-object py" id="pyvista.MultiBlock.keys">
+<span class="sig-name descname"><span class="pre">keys</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#pyvista.MultiBlock.keys" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>データセット内のすべてのブロック名を取得します．</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.MultiBlock.length">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">length</span></code><a class="headerlink" href="#pyvista.MultiBlock.length" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.MultiBlock.length">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">length</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><a class="headerlink" href="#pyvista.MultiBlock.length" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>境界ボックスの対角線の長さを返します．</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.MultiBlock.n_blocks">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">n_blocks</span></code><a class="headerlink" href="#pyvista.MultiBlock.n_blocks" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.MultiBlock.n_blocks">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">n_blocks</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#pyvista.MultiBlock.n_blocks" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ブロックセットの総数を返します．</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pyvista.MultiBlock.next">
-<code class="sig-name descname"><span class="pre">next</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">pyvista.core.composite.MultiBlock</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#pyvista.MultiBlock.next" title="この定義へのパーマリンク">¶</a></dt>
+<dt class="sig sig-object py" id="pyvista.MultiBlock.next">
+<span class="sig-name descname"><span class="pre">next</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pyvista.MultiBlock" title="pyvista.core.composite.MultiBlock"><span class="pre">pyvista.core.composite.MultiBlock</span></a><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#pyvista.MultiBlock.next" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>イテレータから次のブロックを取得します．</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pyvista.MultiBlock.plot">
-<code class="sig-name descname"><span class="pre">plot</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">off_screen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">full_screen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">screenshot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interactive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cpos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_bounds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">notebook</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">background</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_img</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eye_dome_lighting</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">volume</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parallel_projection</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_ipyvtk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jupyter_backend</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_viewer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jupyter_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theme</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.MultiBlock.plot" title="この定義へのパーマリンク">¶</a></dt>
+<dt class="sig sig-object py" id="pyvista.MultiBlock.plot">
+<span class="sig-name descname"><span class="pre">plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">off_screen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">full_screen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">screenshot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interactive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cpos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_bounds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">notebook</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">background</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_img</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eye_dome_lighting</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">volume</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parallel_projection</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_ipyvtk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jupyter_backend</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_viewer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jupyter_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theme</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.MultiBlock.plot" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>vtkまたはnumpyオブジェクトをプロットします．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
@@ -619,20 +619,20 @@
 </dd></dl>
 
 <dl class="py method">
-<dt id="pyvista.MultiBlock.pop">
-<code class="sig-name descname"><span class="pre">pop</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">pyvista.core.composite.MultiBlock</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#pyvista.MultiBlock.pop" title="この定義へのパーマリンク">¶</a></dt>
+<dt class="sig sig-object py" id="pyvista.MultiBlock.pop">
+<span class="sig-name descname"><span class="pre">pop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pyvista.MultiBlock" title="pyvista.core.composite.MultiBlock"><span class="pre">pyvista.core.composite.MultiBlock</span></a><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#pyvista.MultiBlock.pop" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>指定したインデックスのブロックをポップします．</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pyvista.MultiBlock.set_block_name">
-<code class="sig-name descname"><span class="pre">set_block_name</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.MultiBlock.set_block_name" title="この定義へのパーマリンク">¶</a></dt>
+<dt class="sig sig-object py" id="pyvista.MultiBlock.set_block_name">
+<span class="sig-name descname"><span class="pre">set_block_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.MultiBlock.set_block_name" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>指定したインデックスにブロックの文字列名を設定します．</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="pyvista.MultiBlock.volume">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">volume</span></code><a class="headerlink" href="#pyvista.MultiBlock.volume" title="この定義へのパーマリンク">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.MultiBlock.volume">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">volume</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><a class="headerlink" href="#pyvista.MultiBlock.volume" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>このデータセット内のすべてのメッシュの合計ボリュームを返します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値</dt>
@@ -645,8 +645,8 @@
 </dd></dl>
 
 <dl class="py method">
-<dt id="pyvista.MultiBlock.wrap_nested">
-<code class="sig-name descname"><span class="pre">wrap_nested</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.MultiBlock.wrap_nested" title="この定義へのパーマリンク">¶</a></dt>
+<dt class="sig sig-object py" id="pyvista.MultiBlock.wrap_nested">
+<span class="sig-name descname"><span class="pre">wrap_nested</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.MultiBlock.wrap_nested" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ネストされたすべてのデータ構造がPyVistaデータセットとしてラップされていることを確認します．</p>
 <p>これはその場で実行されます．</p>
 </dd></dl>
@@ -689,7 +689,7 @@
     
     <div class="footer-item">
       <p class="sphinx-version">
-このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4 で生成しました。<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.2.<br/>
 </p>
     </div>
     

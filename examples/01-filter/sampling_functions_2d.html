@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sample Function: Perlin Noise in 2D &#8212; PyVista 0.30.dev0 ドキュメント</title>
+    <title>サンプル関数:2DでのPerlinノイズ &#8212; PyVista 0.30.dev0 ドキュメント</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
@@ -38,7 +38,7 @@
     
   <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
@@ -50,7 +50,7 @@
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
-    <link rel="next" title="Sample Function: Perlin Noise in 3D" href="sampling_functions_3d.html" />
+    <link rel="next" title="サンプル関数:3DでのPerlinノイズ" href="sampling_functions_3d.html" />
     <link rel="prev" title="再サンプリング" href="resample.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -471,14 +471,14 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Sample Function: Perlin Noise in 2D
+   サンプル関数:2DでのPerlinノイズ
   </a>
  </li>
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="sampling_functions_3d.html">
-   Sample Function: Perlin Noise in 3D
+   サンプル関数:3DでのPerlinノイズ
   </a>
  </li>
 </ul>
@@ -914,17 +914,17 @@
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Sample Function: Perlin Noise in 2D
+   サンプル関数:2DでのPerlinノイズ
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#generate-perlin-noise-over-a-structuredgrid">
-   Generate Perlin Noise over a StructuredGrid
+   StructuredGrid上にPerlinノイズを生成する
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#warp-by-scalar">
-   Warp by scalar
+   スカラーによるワープ
   </a>
  </li>
 </ul>
@@ -954,25 +954,17 @@
 to download the full example code</p>
 </div>
 <div class="sphx-glr-example-title section" id="sample-function-perlin-noise-in-2d">
-<span id="sphx-glr-examples-01-filter-sampling-functions-2d-py"></span><h1>Sample Function: Perlin Noise in 2D<a class="headerlink" href="#sample-function-perlin-noise-in-2d" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Here we use <code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.core.imaging.sample_function()</span></code> to sample
-perlin noise over a region to generate random terrain.</p>
-<p>Perlin noise is atype of gradient noise often used by visual effects
-artists to increase the appearance of realism in computer graphics.
-Source:
-<a class="reference external" href="https://en.wikipedia.org/wiki/Perlin_noise">https://en.wikipedia.org/wiki/Perlin_noise</a></p>
-<p>The development of Perlin Noise has allowed computer graphics artists
-to better represent the complexity of natural phenomena in visual
-effects for the motion picture industry.</p>
+<span id="sphx-glr-examples-01-filter-sampling-functions-2d-py"></span><h1>サンプル関数:2DでのPerlinノイズ<a class="headerlink" href="#sample-function-perlin-noise-in-2d" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>ここでは、 <code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.core.imaging.sample_function()</span></code> を使用して領域上のパーリンノイズをサンプリングし、ランダムな地表を生成します。</p>
+<p>Perlinノイズはグラデーションノイズの一種で、コンピュータグラフィックスのリアルな外観を向上させるために、ビジュアルエフェクトアーティストによってよく使用されます。ソース: <a class="reference external" href="https://en.wikipedia.org/wiki/Perlin_noise">https://en.wikipedia.org/wiki/Perlin_noise</a></p>
+<p>Perlin Noiseの開発により、コンピュータグラフィックスアーティストは、映画業界の視覚効果における自然現象の複雑さをよりよく表現できるようになりました。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="generate-perlin-noise-over-a-structuredgrid">
-<h1>Generate Perlin Noise over a StructuredGrid<a class="headerlink" href="#generate-perlin-noise-over-a-structuredgrid" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Feel free to change the values of <code class="docutils literal notranslate"><span class="pre">freq</span></code> to change the shape of
-the &quot;mountains&quot;.  For example, lowering the frequency will make the
-terrain seem more like hills rather than mountains.</p>
+<h1>StructuredGrid上にPerlinノイズを生成する<a class="headerlink" href="#generate-perlin-noise-over-a-structuredgrid" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">freq</span></code> の値を自由に変更して &quot;山&quot; の形を変えることができます。たとえば、周波数を下げると、地形が山ではなく丘のように見えます。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">freq</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.689</span><span class="p">,</span> <span class="mf">0.562</span><span class="p">,</span> <span class="mf">0.683</span><span class="p">]</span>
 <span class="n">noise</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">perlin_noise</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">freq</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
 <span class="n">sampled</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">sample_function</span><span class="p">(</span><span class="n">noise</span><span class="p">,</span>
@@ -982,9 +974,8 @@ terrain seem more like hills rather than mountains.</p>
 </div>
 </div>
 <div class="section" id="warp-by-scalar">
-<h1>Warp by scalar<a class="headerlink" href="#warp-by-scalar" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Here we warp by scalar to give the terrain some height based on the
-value of the perlin noise.  This is necessary to the terrain its shape.</p>
+<h1>スカラーによるワープ<a class="headerlink" href="#warp-by-scalar" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>ここでは、スカラーによってワープして、Perlinノイズの値に基づいて地表に高さを与えます。これは地表のシェイプに必要です。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">sampled</span><span class="o">.</span><span class="n">warp_by_scalar</span><span class="p">(</span><span class="s1">&#39;scalars&#39;</span><span class="p">)</span>
 <span class="n">mesh</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">extract_surface</span><span class="p">()</span>
 
@@ -1001,7 +992,7 @@ value of the perlin noise.  This is necessary to the terrain its shape.</p>
 <span class="n">mesh</span><span class="o">.</span><span class="n">points</span><span class="p">[</span><span class="n">z</span> <span class="o">&lt;</span> <span class="n">water_level</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">water_level</span>
 </pre></div>
 </div>
-<p>Show the terrain as a contour plot</p>
+<p>等高線プロットとして地形を表示します</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># make the water blue</span>
 <span class="n">rng</span> <span class="o">=</span> <span class="n">z</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">z</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
 <span class="n">clim</span> <span class="o">=</span> <span class="p">(</span><span class="n">z</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">rng</span><span class="o">*</span><span class="mf">1.65</span><span class="p">,</span> <span class="n">z</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
@@ -1020,7 +1011,7 @@ value of the perlin noise.  This is necessary to the terrain its shape.</p>
  (0.0, 0.0, 1.0)]
 </pre></div>
 </div>
-<p>Show the terrain with custom lighting and shadows</p>
+<p>カスタムのライトとシャドウを使用して地表を表示する</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pl</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">lighting</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 <span class="n">pl</span><span class="o">.</span><span class="n">add_light</span><span class="p">(</span><span class="n">pv</span><span class="o">.</span><span class="n">Light</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">),</span> <span class="n">show_actor</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">positional</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
                       <span class="n">cone_angle</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">intensity</span><span class="o">=</span><span class="mf">1.2</span><span class="p">))</span>
@@ -1040,10 +1031,10 @@ value of the perlin noise.  This is necessary to the terrain its shape.</p>
 <p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  5.077 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-filter-sampling-functions-2d-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/479b422d2025596043301b54c17bbee7/sampling_functions_2d.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">sampling_functions_2d.py</span></code></a></p>
+<p>:download:<a href="#id1"><span class="problematic" id="id2">`</span></a>Download Python source code: sampling_functions_2d.py `</p>
 </div>
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/ad83ac22486da589fe562c87e4733b55/sampling_functions_2d.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">sampling_functions_2d.ipynb</span></code></a></p>
+<p>:download:<a href="#id1"><span class="problematic" id="id2">`</span></a>Download Jupyter notebook: sampling_functions_2d.ipynb `</p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Sphinx-Galleryによるギャラリー</a></p>
@@ -1082,7 +1073,7 @@ value of the perlin noise.  This is necessary to the terrain its shape.</p>
     
     <div class="footer-item">
       <p class="sphinx-version">
-このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4 で生成しました。<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.2.<br/>
 </p>
     </div>
     

@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
@@ -38,7 +38,7 @@
     
   <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
@@ -471,14 +471,14 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="sampling_functions_2d.html">
-   Sample Function: Perlin Noise in 2D
+   サンプル関数:2DでのPerlinノイズ
   </a>
  </li>
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="sampling_functions_3d.html">
-   Sample Function: Perlin Noise in 3D
+   サンプル関数:3DでのPerlinノイズ
   </a>
  </li>
 </ul>
@@ -1016,8 +1016,9 @@ to download the full example code</p>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">boundary</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">decimate_boundary</span><span class="p">()</span><span class="o">.</span><span class="n">extract_all_edges</span><span class="p">()</span>
 
+<span class="n">sargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">vertical</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">title_font_size</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
 <span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
-<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">streamlines</span><span class="o">.</span><span class="n">tube</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mf">0.2</span><span class="p">),</span> <span class="n">lighting</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">streamlines</span><span class="o">.</span><span class="n">tube</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mf">0.2</span><span class="p">),</span> <span class="n">lighting</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">scalar_bar_args</span><span class="o">=</span><span class="n">sargs</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">src</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">boundary</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;grey&quot;</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">camera_position</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">10</span><span class="p">,</span> <span class="mf">9.5</span><span class="p">,</span> <span class="o">-</span><span class="mi">43</span><span class="p">),</span> <span class="p">(</span><span class="mf">87.0</span><span class="p">,</span> <span class="mf">73.5</span><span class="p">,</span> <span class="mf">123.0</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)]</span>
@@ -1031,15 +1032,31 @@ to download the full example code</p>
  (-0.502518907629606, -0.7035264706814484, 0.502518907629606)]
 </pre></div>
 </div>
-<p>流入口が利用可能な場合などは， <cite>streamlines_from_source</cite> フィルタを使用してソースメッシュを提供することもできます．この例では，流入口を領域のすぐ内側に抽出し，流線の始点として使用します．</p>
+<p>A source mesh can also be provided using the
+<a class="reference internal" href="../../core/filters.html#pyvista.DataSetFilters.streamlines_from_source" title="pyvista.DataSetFilters.streamlines_from_source"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.streamlines_from_source()</span></code></a>
+filter, for example if an inlet surface is available.  In this example, the
+inlet surface is extracted just inside the domain for use as the seed for
+the streamlines.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source_mesh</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">slice</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">,</span> <span class="n">origin</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">182</span><span class="p">))</span>  <span class="c1"># inlet surface</span>
 <span class="c1"># thin out ~40% points to get a nice density of streamlines</span>
 <span class="n">seed_mesh</span> <span class="o">=</span> <span class="n">source_mesh</span><span class="o">.</span><span class="n">decimate_boundary</span><span class="p">(</span><span class="mf">0.4</span><span class="p">)</span>
 <span class="n">streamlines</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">streamlines_from_source</span><span class="p">(</span><span class="n">seed_mesh</span><span class="p">,</span> <span class="n">integration_direction</span><span class="o">=</span><span class="s2">&quot;forward&quot;</span><span class="p">)</span>
+<span class="c1"># print *only* added arrays from streamlines filter</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Added arrays from streamlines filter:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">([</span><span class="n">array_name</span> <span class="k">for</span> <span class="n">array_name</span> <span class="ow">in</span> <span class="n">streamlines</span><span class="o">.</span><span class="n">array_names</span> <span class="k">if</span> <span class="n">array_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">mesh</span><span class="o">.</span><span class="n">array_names</span><span class="p">])</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
-<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">streamlines</span><span class="o">.</span><span class="n">tube</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mf">0.2</span><span class="p">),</span> <span class="n">lighting</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<p class="sphx-glr-script-out">出力:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Added arrays from streamlines filter:
+[&#39;IntegrationTime&#39;, &#39;Vorticity&#39;, &#39;Rotation&#39;, &#39;AngularVelocity&#39;, &#39;Normals&#39;, &#39;ReasonForTermination&#39;, &#39;SeedIds&#39;]
+</pre></div>
+</div>
+<p>Plot streamlines colored by the time along the streamlines.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">vertical</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">title_font_size</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">streamlines</span><span class="o">.</span><span class="n">tube</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mf">0.2</span><span class="p">),</span>
+           <span class="n">scalars</span><span class="o">=</span><span class="s2">&quot;IntegrationTime&quot;</span><span class="p">,</span> <span class="n">clim</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">],</span> <span class="n">lighting</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+           <span class="n">scalar_bar_args</span><span class="o">=</span><span class="n">sargs</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">boundary</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;grey&quot;</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">source_mesh</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">camera_position</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">10</span><span class="p">,</span> <span class="mf">9.5</span><span class="p">,</span> <span class="o">-</span><span class="mi">43</span><span class="p">),</span> <span class="p">(</span><span class="mf">87.0</span><span class="p">,</span> <span class="mf">73.5</span><span class="p">,</span> <span class="mf">123.0</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)]</span>
@@ -1117,7 +1134,7 @@ to download the full example code</p>
  (0.0, 0.0, 1.0)]
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  20.212 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  25.464 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-filter-streamlines-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/4ddd747a1fe9f7aca855733156a03336/streamlines.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">streamlines.py</span></code></a></p>
@@ -1163,7 +1180,7 @@ to download the full example code</p>
     
     <div class="footer-item">
       <p class="sphinx-version">
-このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4 で生成しました。<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.2.<br/>
 </p>
     </div>
     
