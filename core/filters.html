@@ -540,7 +540,7 @@
 <td><p>ベクトルフィールドを統合して，流線を生成します．</p></td>
 </tr>
 <tr class="row-even"><td><p>:obj:<a href="#id1"><span class="problematic" id="id2">`</span></a>streamlines_from_source <a href="#id3"><span class="problematic" id="id4">`</span></a>(source[, vectors, ...])</p></td>
-<td><p>ソースメッシュのポイントからベクトルの流線を生成します。</p></td>
+<td><p>ソースメッシュのポイントからベクトルの流線を生成します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">surface_indices</span></code>()</p></td>
 <td><p>グリッドのサーフェスインデックスを返します．</p></td>
@@ -618,7 +618,7 @@
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
-<dd class="field-even"><p><strong>mesh</strong> -- <code class="docutils literal notranslate"><span class="pre">return_clipped=False</span></code> の場合はクリッピングされたメッシュ。それ以外の場合は、クリッピングされていないデータセットとクリッピングされたデータセットを含むタプルです。</p>
+<dd class="field-even"><p><strong>mesh</strong> -- <code class="docutils literal notranslate"><span class="pre">return_clipped=False</span></code> の場合はクリッピングされたメッシュ．それ以外の場合は，クリッピングされていないデータセットとクリッピングされたデータセットを含むタプルです．</p>
 </dd>
 <dt class="field-odd">戻り値の型</dt>
 <dd class="field-odd"><p><a class="reference internal" href="points.html#pyvista.PolyData" title="pyvista.PolyData">pyvista.PolyData</a> or tuple(<a class="reference internal" href="points.html#pyvista.PolyData" title="pyvista.PolyData">pyvista.PolyData</a>)</p>
@@ -977,7 +977,7 @@
 <li><p><strong>non_manifold_edges</strong> (<em>bool</em><em>, </em><em>optional</em>) -- デフォルトはTrueです．</p></li>
 <li><p><strong>feature_edges</strong> (<em>bool</em><em>, </em><em>optional</em>) -- デフォルトはTrueです．</p></li>
 <li><p><strong>manifold_edges</strong> (<em>bool</em><em>, </em><em>optional</em>) -- デフォルトはTrueです．</p></li>
-<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 既存のデータセットを抽出されたフィーチャで更新します。</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 既存のデータセットを抽出されたフィーチャで更新します．</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
@@ -1070,31 +1070,31 @@
 <dt class="sig sig-object py" id="pyvista.DataSetFilters.glyph">
 <span class="sig-name descname"><span class="pre">glyph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">orient</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geom</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indices</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">absolute</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clamping</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rng</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.glyph" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>入力データセットに(グリフと呼ばれる)ジオメトリ表示をコピーします．</p>
-<p>グリフは，入力ベクトルに沿って配向されてもよく，スカラーデータまたはベクトルの大きさに従ってスケーリングされてもよいです．スカラーまたはベクトルの大きさに基づいて選択するグリフのテーブルを渡すこともできます． <code class="docutils literal notranslate"><span class="pre">orient</span></code> および <code class="docutils literal notranslate"><span class="pre">scale</span></code> に使用される配列は、両方の点データまたは両方のセルデータでなければなりません。</p>
+<p>グリフは，入力ベクトルに沿って配向されてもよく，スカラーデータまたはベクトルの大きさに従ってスケーリングされてもよいです．スカラーまたはベクトルの大きさに基づいて選択するグリフのテーブルを渡すこともできます． <code class="docutils literal notranslate"><span class="pre">orient</span></code> および <code class="docutils literal notranslate"><span class="pre">scale</span></code> に使用される配列は，両方の点データまたは両方のセルデータでなければなりません．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>orient</strong> (<em>bool</em><em> or </em><em>str</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合、グリフを方向付けるためにアクティブなベクトル配列を使用する。stringの場合は、グリフの向きを設定するために使用するベクトル配列です。</p></li>
-<li><p><strong>scale</strong> (<em>bool</em><em> or </em><em>str</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合は、アクティブなスカラを使用してグリフをスケーリングします。stringの場合は、グリフのスケーリングに使用するスカラ配列です。</p></li>
-<li><p><strong>factor</strong> (<em>float</em><em>, </em><em>optional</em>) -- スケーリング配列に適用されるスケール係数です。</p></li>
+<li><p><strong>orient</strong> (<em>bool</em><em> or </em><em>str</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，グリフを方向付けるためにアクティブなベクトル配列を使用する．stringの場合は，グリフの向きを設定するために使用するベクトル配列です．</p></li>
+<li><p><strong>scale</strong> (<em>bool</em><em> or </em><em>str</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合は，アクティブなスカラを使用してグリフをスケーリングします．stringの場合は，グリフのスケーリングに使用するスカラ配列です．</p></li>
+<li><p><strong>factor</strong> (<em>float</em><em>, </em><em>optional</em>) -- スケーリング配列に適用されるスケール係数です．</p></li>
 <li><p><strong>geom</strong> (<em>vtk.vtkDataSet</em><em> or </em><em>tuple</em><em>(</em><em>vtk.vtkDataSet</em><em>)</em><em>, </em><em>optional</em>) -- 記号に使用するジオメトリ．見つからない場合は，矢印記号が使用されます．シーケンスの場合，内部のデータセットは，スカラーまたはベクトルに基づいて選択するジオメトリのテーブルを定義します．この場合，同じ長さの数のシーケンスは <code class="docutils literal notranslate"><span class="pre">indices</span></code> として渡されなければなりません．範囲の値( <code class="docutils literal notranslate"><span class="pre">rng</span></code> を参照)はテーブルの検索に影響します．</p></li>
 <li><p><strong>indices</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">geom</span></code> がシーケンスの場合，ルックアップのためにテーブルの各グリフのインデックスを指定します．指定する場合は， <code class="docutils literal notranslate"><span class="pre">geom</span></code> と同じ長さにする必要があります．指定しない場合は，デフォルト値の <code class="docutils literal notranslate"><span class="pre">range(len(geom))</span></code> が使用されます．インデックスは，スカラー範囲( <code class="docutils literal notranslate"><span class="pre">rng</span></code> を参照)で解釈されます． <code class="docutils literal notranslate"><span class="pre">geom</span></code> の長さが1の場合は無視されます．</p></li>
 <li><p><strong>tolerance</strong> (<em>float</em><em>, </em><em>optional</em>) -- 公差を境界ボックスの長さの分数で指定してください．float値は0から1の間です．デフォルトはNoneです．<code class="docutils literal notranslate"><span class="pre">absolute</span></code> が <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，公差は絶対距離になります． <code class="docutils literal notranslate"><span class="pre">None</span></code> の場合，前処理ステップとしてマージするポイントは無効になります．</p></li>
 <li><p><strong>absolute</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">tolerance</span></code> が絶対距離か分数かをコントロールします．</p></li>
-<li><p><strong>clamping</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 範囲指定する &quot;scalar&quot; 値のクランプのオンとオフを切り替えます．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です。</p></li>
+<li><p><strong>clamping</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 範囲指定する &quot;scalar&quot; 値のクランプのオンとオフを切り替えます．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です．</p></li>
 <li><p><strong>rng</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em><em>, </em><em>optional</em>) -- スカラー値が指定された場合にフィルタが考慮する値の範囲を設定します．</p></li>
 <li><p><strong>progress_bar</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 進行状況を示す進行状況バーを表示します．</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
-<dd class="field-even"><p><strong>glyphs</strong> -- セルの中心または点にあるグリフ。</p>
+<dd class="field-even"><p><strong>glyphs</strong> -- セルの中心または点にあるグリフ．</p>
 </dd>
 <dt class="field-odd">戻り値の型</dt>
 <dd class="field-odd"><p><a class="reference internal" href="points.html#pyvista.PolyData" title="pyvista.PolyData">pyvista.PolyData</a></p>
 </dd>
 </dl>
 <p class="rubric">サンプル</p>
-<p>ベクトルによって方向付けられ、スカラーによってスケールされた矢印を作成します。係数パラメータを使用して、矢印のサイズを小さくします。</p>
+<p>ベクトルによって方向付けられ，スカラーによってスケールされた矢印を作成します．係数パラメータを使用して，矢印のサイズを小さくします．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_carotid</span><span class="p">()</span><span class="o">.</span><span class="n">threshold</span><span class="p">(</span><span class="mi">145</span><span class="p">,</span> <span class="n">scalars</span><span class="o">=</span><span class="s2">&quot;scalars&quot;</span><span class="p">)</span>  
@@ -1571,9 +1571,9 @@
 <dt class="sig sig-object py" id="pyvista.DataSetFilters.streamlines">
 <span class="sig-name descname"><span class="pre">streamlines</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vectors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_center</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_position</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pointa</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pointb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.streamlines" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ベクトルフィールドを統合して，流線を生成します．</p>
-<p>デフォルトの動作では、<code class="docutils literal notranslate"><span class="pre">source_center</span></code> および <code class="docutils literal notranslate"><span class="pre">source_radius</span></code> キーワード引数を使用して、球体の位置と半径をソースセットとして使用します。 <code class="docutils literal notranslate"><span class="pre">n_points</span></code> は球面上の開始点の数を定義します。 あるいは、 <code class="docutils literal notranslate"><span class="pre">pointa</span></code> と <code class="docutils literal notranslate"><span class="pre">pointb</span></code> を指定してLineソースを使用することもできます。 <code class="docutils literal notranslate"><span class="pre">n_points</span></code> もライン上のポイント数を定義します。</p>
-<p><code class="docutils literal notranslate"><span class="pre">return_source=True</span></code> を指定してソースを取得できます。</p>
-<p><a class="reference internal" href="#pyvista.DataSetFilters.streamlines_from_source" title="pyvista.DataSetFilters.streamlines_from_source"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.streamlines_from_source()</span></code></a> のオプションのキーワードパラメータを使用して、流線の生成を制御できます。</p>
+<p>デフォルトの動作では，<code class="docutils literal notranslate"><span class="pre">source_center</span></code> および <code class="docutils literal notranslate"><span class="pre">source_radius</span></code> キーワード引数を使用して，球体の位置と半径をソースセットとして使用します． <code class="docutils literal notranslate"><span class="pre">n_points</span></code> は球面上の開始点の数を定義します． あるいは， <code class="docutils literal notranslate"><span class="pre">pointa</span></code> と <code class="docutils literal notranslate"><span class="pre">pointb</span></code> を指定してLineソースを使用することもできます． <code class="docutils literal notranslate"><span class="pre">n_points</span></code> もライン上のポイント数を定義します．</p>
+<p><code class="docutils literal notranslate"><span class="pre">return_source=True</span></code> を指定してソースを取得できます．</p>
+<p><a class="reference internal" href="#pyvista.DataSetFilters.streamlines_from_source" title="pyvista.DataSetFilters.streamlines_from_source"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.streamlines_from_source()</span></code></a> のオプションのキーワードパラメータを使用して，流線の生成を制御できます．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1590,7 +1590,7 @@
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><p><ul class="simple">
 <li><p><strong>streamlines</strong> (<em>pyvista.PolyData</em>) -- これにより，各セル(つまり，ポリライン)が流線を表すポリラインが出力として生成されます．各流線に関連付けられた属性値はセルデータに格納され，流線ポイントに関連付けられた属性値はポイントデータに格納されます．</p></li>
-<li><p><strong>source</strong> (<em>pyvista.PolyData</em>) -- ソースのポイントは流線のシードポイントです。 <code class="docutils literal notranslate"><span class="pre">return_source=True</span></code> の場合にのみ返されます。</p></li>
+<li><p><strong>source</strong> (<em>pyvista.PolyData</em>) -- ソースのポイントは流線のシードポイントです． <code class="docutils literal notranslate"><span class="pre">return_source=True</span></code> の場合にのみ返されます．</p></li>
 </ul>
 </p>
 </dd>
@@ -1600,12 +1600,12 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataSetFilters.streamlines_from_source">
 <span class="sig-name descname"><span class="pre">streamlines_from_source</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vectors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">integrator_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">45</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">integration_direction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'both'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">surface_streamlines</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_step_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cl'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_step_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_step_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">terminal_speed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-12</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_error</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compute_vorticity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotation_scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolator_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'point'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.streamlines_from_source" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>ソースメッシュのポイントからベクトルの流線を生成します。</p>
+<dd><p>ソースメッシュのポイントからベクトルの流線を生成します．</p>
 <p>デフォルトRunge-Kutta 2では，指定したインテグレータを使用して積分が実行されます．これにより，あらゆるタイプのデータセットを使用した積分がサポートされます．データセットにポリゴンや三角形などの2 Dセルが含まれていて <code class="docutils literal notranslate"><span class="pre">surface_streamlines</span></code>  パラメータが使用されている場合，積分は2 Dセルによって定義されるサーフェス上に配置されるように制限されます．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>source</strong> (<a class="reference internal" href="dataset.html#pyvista.DataSet" title="pyvista.DataSet"><em>pyvista.DataSet</em></a>) -- ソースの点は流線の開始点を提供します。球とラインソースの両方がオーバーライドされます。</p></li>
+<li><p><strong>source</strong> (<a class="reference internal" href="dataset.html#pyvista.DataSet" title="pyvista.DataSet"><em>pyvista.DataSet</em></a>) -- ソースの点は流線の開始点を提供します．球とラインソースの両方がオーバーライドされます．</p></li>
 <li><p><strong>vectors</strong> (<em>str</em><em>, </em><em>optional</em>) -- 積分するアクティブベクトルフィールドの文字列名．</p></li>
 <li><p><strong>integrator_type</strong> (<em>int</em><em>, </em><em>optional</em>) -- 流線生成に使用する積分器のタイプです．デフォルトはRunge-Kutta 45です．認識されるソルバーは:  RUNGE_KUTTA2 (<code class="docutils literal notranslate"><span class="pre">2</span></code>) ， RUNGE_KUTTA4 (<code class="docutils literal notranslate"><span class="pre">4</span></code>) および RUNGE_KUTTA45 (<code class="docutils literal notranslate"><span class="pre">45</span></code>) です．オプションは <code class="docutils literal notranslate"><span class="pre">2</span></code> ， <code class="docutils literal notranslate"><span class="pre">4</span></code> または <code class="docutils literal notranslate"><span class="pre">45</span></code> です．デフォルトは <code class="docutils literal notranslate"><span class="pre">45</span></code> です．</p></li>
 <li><p><strong>integration_direction</strong> (<em>str</em><em>, </em><em>optional</em>) -- 流線を上流方向と下流方向のどちらに統合するかを指定します(または両方)．選択肢は <code class="docutils literal notranslate"><span class="pre">'both'</span></code>  ， <code class="docutils literal notranslate"><span class="pre">'backward'</span></code> または <code class="docutils literal notranslate"><span class="pre">'forward'</span></code> です．</p></li>
@@ -2074,7 +2074,7 @@
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>normal</strong> (<em>str</em><em>, </em><em>list</em><em>, </em><em>optional</em>) -- クリップに垂直な平面．飛行機は <code class="docutils literal notranslate"><span class="pre">origin</span></code> を中心としています．normalは，3つのメンバー・リスト(例: <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">0,</span> <span class="pre">1]</span></code> )，または <code class="docutils literal notranslate"><span class="pre">'x'</span></code> ， <code class="docutils literal notranslate"><span class="pre">'y'</span></code> ， <code class="docutils literal notranslate"><span class="pre">'z'</span></code> ， <code class="docutils literal notranslate"><span class="pre">'-x'</span></code> ， <code class="docutils literal notranslate"><span class="pre">'-y'</span></code> ， <code class="docutils literal notranslate"><span class="pre">'-z'</span></code> のいずれかの文字列です．</p></li>
-<li><p><strong>origin</strong> (<em>list</em><em>, </em><em>optional</em>) -- 原点の座標(例: <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">0,</span> <span class="pre">0]</span></code> )。デフォルトはメッシュの中心です。</p></li>
+<li><p><strong>origin</strong> (<em>list</em><em>, </em><em>optional</em>) -- 原点の座標(例: <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">0,</span> <span class="pre">0]</span></code> )．デフォルトはメッシュの中心です．</p></li>
 <li><p><strong>tolerance</strong> (<em>float</em><em>, </em><em>optional</em>) -- クリップ中に新しい点を作成するための許容差です．許容値が小さすぎると，縮退した三角形が生成される場合があります．</p></li>
 <li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- インプレイスメッシュを更新します．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です．</p></li>
 </ul>
@@ -2606,10 +2606,10 @@
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>show_mesh</strong> (<em>bool</em><em>, </em><em>optional</em>) -- メッシュ自体をプロットします。デフォルトは <code class="docutils literal notranslate"><span class="pre">True</span></code> です。</p></li>
-<li><p><strong>mag</strong> (<em>float</em><em>, </em><em>optional</em>) -- 法線矢印のサイズの大きさ。デフォルトは1.0です。</p></li>
-<li><p><strong>flip</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合、法線方向を反転します。デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です。</p></li>
-<li><p><strong>use_every</strong> (<em>int</em><em>, </em><em>optional</em>) -- n番目ごとの法線を表示します。デフォルトでは、すべての法線が表示されます。このパラメータを10に設定すると、10番目ごとの法線が表示されます。</p></li>
+<li><p><strong>show_mesh</strong> (<em>bool</em><em>, </em><em>optional</em>) -- メッシュ自体をプロットします．デフォルトは <code class="docutils literal notranslate"><span class="pre">True</span></code> です．</p></li>
+<li><p><strong>mag</strong> (<em>float</em><em>, </em><em>optional</em>) -- 法線矢印のサイズの大きさ．デフォルトは1.0です．</p></li>
+<li><p><strong>flip</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，法線方向を反転します．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です．</p></li>
+<li><p><strong>use_every</strong> (<em>int</em><em>, </em><em>optional</em>) -- n番目ごとの法線を表示します．デフォルトでは，すべての法線が表示されます．このパラメータを10に設定すると，10番目ごとの法線が表示されます．</p></li>
 </ul>
 </dd>
 </dl>
@@ -2717,7 +2717,7 @@
 <li><p><strong>angle</strong> (<em>float</em><em>, </em><em>optional</em>) -- 線の法線からのリボンのオフセット角度の角度．デフォルトは0.0です．</p></li>
 <li><p><strong>factor</strong> (<em>float</em><em>, </em><em>optional</em>) -- リボンの最大幅を最小幅の倍数で設定します．デフォルトは2.0です．</p></li>
 <li><p><strong>normal</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em><em>, </em><em>optional</em>) -- デフォルトとして使用する標準．</p></li>
-<li><p><strong>tcoords</strong> (<em>bool</em><em>, </em><em>str</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，リボンに沿ってテクスチャ座標を生成します．これは， <code class="docutils literal notranslate"><span class="pre">'length'</span></code> または <code class="docutils literal notranslate"><span class="pre">'normalized'</span></code> でテクスチャ座標を生成するように指定することもできます。</p></li>
+<li><p><strong>tcoords</strong> (<em>bool</em><em>, </em><em>str</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，リボンに沿ってテクスチャ座標を生成します．これは， <code class="docutils literal notranslate"><span class="pre">'length'</span></code> または <code class="docutils literal notranslate"><span class="pre">'normalized'</span></code> でテクスチャ座標を生成するように指定することもできます．</p></li>
 </ul>
 </dd>
 </dl>
@@ -2780,7 +2780,7 @@
 <dd><p>ポリゴンデータセルをストリップします．</p>
 <p>入力ポリゴン，三角形ストリップ，およびラインから三角形ストリップまたはポリラインを生成します．</p>
 <p>ポリゴンは，三角形である場合にのみ三角形ストリップにアセンブルされます．他のタイプのポリゴンは出力に渡され，ストリップされません．(すべてのデータを除去する必要がある場合は，このフィルタを実行する前に， <code class="docutils literal notranslate"><span class="pre">triangulate</span></code> フィルタを使用して三角形以外のポリゴンを三角形化します．)フィルタは，入力ポリデータに(出力に)頂点が存在する場合は通過します．</p>
-<p>また、入力で三角形のストリップまたはポリラインが定義されている場合、それらはパススルーされ、結合も延長もされません。(これらを除去したい場合は、このフィルタを実行する前に、 <code class="docutils literal notranslate"><span class="pre">triangulate</span></code> フィルタを使って入力を三角形と線に分割してください。)</p>
+<p>また，入力で三角形のストリップまたはポリラインが定義されている場合，それらはパススルーされ，結合も延長もされません．(これらを除去したい場合は，このフィルタを実行する前に， <code class="docutils literal notranslate"><span class="pre">triangulate</span></code> フィルタを使って入力を三角形と線に分割してください．)</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3103,7 +3103,7 @@
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
-<dd class="field-even"><p><strong>mesh</strong> -- <code class="docutils literal notranslate"><span class="pre">return_clipped=False</span></code> の場合はクリッピングされたメッシュ。それ以外の場合は、クリッピングされていないデータセットとクリッピングされたデータセットを含むタプルです。</p>
+<dd class="field-even"><p><strong>mesh</strong> -- <code class="docutils literal notranslate"><span class="pre">return_clipped=False</span></code> の場合はクリッピングされたメッシュ．それ以外の場合は，クリッピングされていないデータセットとクリッピングされたデータセットを含むタプルです．</p>
 </dd>
 <dt class="field-odd">戻り値の型</dt>
 <dd class="field-odd"><p><a class="reference internal" href="points.html#pyvista.PolyData" title="pyvista.PolyData">pyvista.PolyData</a> or tuple(<a class="reference internal" href="points.html#pyvista.PolyData" title="pyvista.PolyData">pyvista.PolyData</a>)</p>

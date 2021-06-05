@@ -996,7 +996,7 @@ to download the full example code</p>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="streamlines" class="sphx-glr-single-img" src="../../_images/sphx_glr_streamlines_001.png" />
+<img alt="流線" class="sphx-glr-single-img" src="../../_images/sphx_glr_streamlines_001.png" />
 <p class="sphx-glr-script-out">出力:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(182.0, 177.0, 50.0),
  (139.0, 105.0, 19.0),
@@ -1025,18 +1025,14 @@ to download the full example code</p>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="streamlines" class="sphx-glr-single-img" src="../../_images/sphx_glr_streamlines_002.png" />
+<img alt="流線" class="sphx-glr-single-img" src="../../_images/sphx_glr_streamlines_002.png" />
 <p class="sphx-glr-script-out">出力:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(10.0, 9.5, -43.0),
  (87.0, 73.5, 123.0),
  (-0.502518907629606, -0.7035264706814484, 0.502518907629606)]
 </pre></div>
 </div>
-<p>A source mesh can also be provided using the
-<a class="reference internal" href="../../core/filters.html#pyvista.DataSetFilters.streamlines_from_source" title="pyvista.DataSetFilters.streamlines_from_source"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.streamlines_from_source()</span></code></a>
-filter, for example if an inlet surface is available.  In this example, the
-inlet surface is extracted just inside the domain for use as the seed for
-the streamlines.</p>
+<p>流入口が利用可能な場合などは， <a class="reference internal" href="../../core/filters.html#pyvista.DataSetFilters.streamlines_from_source" title="pyvista.DataSetFilters.streamlines_from_source"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.streamlines_from_source()</span></code></a> フィルタを使用してソースメッシュを提供することもできます．この例では，流入口を領域のすぐ内側に抽出し，流線の始点として使用します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source_mesh</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">slice</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">,</span> <span class="n">origin</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">182</span><span class="p">))</span>  <span class="c1"># inlet surface</span>
 <span class="c1"># thin out ~40% points to get a nice density of streamlines</span>
 <span class="n">seed_mesh</span> <span class="o">=</span> <span class="n">source_mesh</span><span class="o">.</span><span class="n">decimate_boundary</span><span class="p">(</span><span class="mf">0.4</span><span class="p">)</span>
@@ -1051,7 +1047,7 @@ the streamlines.</p>
 [&#39;IntegrationTime&#39;, &#39;Vorticity&#39;, &#39;Rotation&#39;, &#39;AngularVelocity&#39;, &#39;Normals&#39;, &#39;ReasonForTermination&#39;, &#39;SeedIds&#39;]
 </pre></div>
 </div>
-<p>Plot streamlines colored by the time along the streamlines.</p>
+<p>時間で着色した流線に沿った流線を流線に沿ってプロットします．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">vertical</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">title_font_size</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
 <span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">streamlines</span><span class="o">.</span><span class="n">tube</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mf">0.2</span><span class="p">),</span>
@@ -1063,7 +1059,7 @@ the streamlines.</p>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="streamlines" class="sphx-glr-single-img" src="../../_images/sphx_glr_streamlines_003.png" />
+<img alt="流線" class="sphx-glr-single-img" src="../../_images/sphx_glr_streamlines_003.png" />
 <p class="sphx-glr-script-out">出力:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(10.0, 9.5, -43.0),
  (87.0, 73.5, 123.0),
@@ -1090,7 +1086,7 @@ the streamlines.</p>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="streamlines" class="sphx-glr-single-img" src="../../_images/sphx_glr_streamlines_004.png" />
+<img alt="流線" class="sphx-glr-single-img" src="../../_images/sphx_glr_streamlines_004.png" />
 <p class="sphx-glr-script-out">出力:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(-6.68, 11.9, 11.6),
  (3.5, 2.5, 1.26),
@@ -1127,7 +1123,7 @@ the streamlines.</p>
 <span class="n">stream</span><span class="o">.</span><span class="n">tube</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mf">0.0015</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="n">cpos</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="streamlines" class="sphx-glr-single-img" src="../../_images/sphx_glr_streamlines_005.png" />
+<img alt="流線" class="sphx-glr-single-img" src="../../_images/sphx_glr_streamlines_005.png" />
 <p class="sphx-glr-script-out">出力:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(1.2, 1.2, 1.2),
  (0.0, 0.0, 0.0),

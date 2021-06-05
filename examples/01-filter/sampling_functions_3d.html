@@ -949,16 +949,16 @@
 </div>
 <div class="sphx-glr-example-title section" id="sample-function-perlin-noise-in-3d">
 <span id="sphx-glr-examples-01-filter-sampling-functions-3d-py"></span><h1>サンプル関数:3DでのPerlinノイズ<a class="headerlink" href="#sample-function-perlin-noise-in-3d" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>ここでは、 <code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.core.imaging.sample_function()</span></code> を使用して領域上のパーリンノイズをサンプリングし、ランダムな地表を生成します。</p>
-<p>Minecraftなどのビデオゲームでは、Perlinノイズを使用して地表を作成します。ここでは、Minecraftの &quot;洞窟&quot; に似たボクセル化メッシュを作成します。</p>
+<p>ここでは， <code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.core.imaging.sample_function()</span></code> を使用して領域上のパーリンノイズをサンプリングし，ランダムな地表を生成します．</p>
+<p>Minecraftなどのビデオゲームでは，Perlinノイズを使用して地表を作成します．ここでは，Minecraftの &quot;洞窟&quot; に似たボクセル化メッシュを作成します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="generate-perlin-noise-over-a-3d-structuredgrid">
 <h1>3D StructuredGrid上にPerlinノイズを生成する<a class="headerlink" href="#generate-perlin-noise-over-a-3d-structuredgrid" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>&quot;freq&quot; の値を自由に変更して、 &quot;洞窟&quot; の形を変えることができます。たとえば、周波数を低くすると、洞穴が大きく拡張します。一方、任意の方向の周波数を高くすると、洞穴はより &quot;静脈のように&quot; 見え、開きにくくなります。</p>
-<p>しきい値を変更して、開いている地形または閉じている地形の割合を増減します</p>
+<p>&quot;freq&quot; の値を自由に変更して， &quot;洞窟&quot; の形を変えることができます．たとえば，周波数を低くすると，洞穴が大きく拡張します．一方，任意の方向の周波数を高くすると，洞穴はより &quot;静脈のように&quot; 見え，開きにくくなります．</p>
+<p>しきい値を変更して，開いている地形または閉じている地形の割合を増減します</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">freq</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">noise</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">perlin_noise</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">freq</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
 <span class="n">grid</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">sample_function</span><span class="p">(</span><span class="n">noise</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="o">-</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">40</span><span class="p">))</span>
@@ -996,7 +996,7 @@
          <span class="n">show_edges</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="sampling functions 3d" class="sphx-glr-single-img" src="../../_images/sphx_glr_sampling_functions_3d_001.png" />
+<img alt="サンプリング関数3d" class="sphx-glr-single-img" src="../../_images/sphx_glr_sampling_functions_3d_001.png" />
 <p class="sphx-glr-script-out">出力:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(5.199214280684376, 4.199214280684376, 4.199214280684376),
  (1.5, 0.5, 0.5),

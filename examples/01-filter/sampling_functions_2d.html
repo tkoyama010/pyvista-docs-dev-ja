@@ -955,16 +955,16 @@ to download the full example code</p>
 </div>
 <div class="sphx-glr-example-title section" id="sample-function-perlin-noise-in-2d">
 <span id="sphx-glr-examples-01-filter-sampling-functions-2d-py"></span><h1>サンプル関数:2DでのPerlinノイズ<a class="headerlink" href="#sample-function-perlin-noise-in-2d" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>ここでは、 <code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.core.imaging.sample_function()</span></code> を使用して領域上のパーリンノイズをサンプリングし、ランダムな地表を生成します。</p>
-<p>Perlinノイズはグラデーションノイズの一種で、コンピュータグラフィックスのリアルな外観を向上させるために、ビジュアルエフェクトアーティストによってよく使用されます。ソース: <a class="reference external" href="https://en.wikipedia.org/wiki/Perlin_noise">https://en.wikipedia.org/wiki/Perlin_noise</a></p>
-<p>Perlin Noiseの開発により、コンピュータグラフィックスアーティストは、映画業界の視覚効果における自然現象の複雑さをよりよく表現できるようになりました。</p>
+<p>ここでは， <code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.core.imaging.sample_function()</span></code> を使用して領域上のパーリンノイズをサンプリングし，ランダムな地表を生成します．</p>
+<p>Perlinノイズはグラデーションノイズの一種で，コンピュータグラフィックスのリアルな外観を向上させるために，ビジュアルエフェクトアーティストによってよく使用されます．ソース: <a class="reference external" href="https://en.wikipedia.org/wiki/Perlin_noise">https://en.wikipedia.org/wiki/Perlin_noise</a></p>
+<p>Perlin Noiseの開発により，コンピュータグラフィックスアーティストは，映画業界の視覚効果における自然現象の複雑さをよりよく表現できるようになりました．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="generate-perlin-noise-over-a-structuredgrid">
 <h1>StructuredGrid上にPerlinノイズを生成する<a class="headerlink" href="#generate-perlin-noise-over-a-structuredgrid" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p><code class="docutils literal notranslate"><span class="pre">freq</span></code> の値を自由に変更して &quot;山&quot; の形を変えることができます。たとえば、周波数を下げると、地形が山ではなく丘のように見えます。</p>
+<p><code class="docutils literal notranslate"><span class="pre">freq</span></code> の値を自由に変更して &quot;山&quot; の形を変えることができます．たとえば，周波数を下げると，地形が山ではなく丘のように見えます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">freq</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.689</span><span class="p">,</span> <span class="mf">0.562</span><span class="p">,</span> <span class="mf">0.683</span><span class="p">]</span>
 <span class="n">noise</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">perlin_noise</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">freq</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
 <span class="n">sampled</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">sample_function</span><span class="p">(</span><span class="n">noise</span><span class="p">,</span>
@@ -975,7 +975,7 @@ to download the full example code</p>
 </div>
 <div class="section" id="warp-by-scalar">
 <h1>スカラーによるワープ<a class="headerlink" href="#warp-by-scalar" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>ここでは、スカラーによってワープして、Perlinノイズの値に基づいて地表に高さを与えます。これは地表のシェイプに必要です。</p>
+<p>ここでは，スカラーによってワープして，Perlinノイズの値に基づいて地表に高さを与えます．これは地表のシェイプに必要です．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">sampled</span><span class="o">.</span><span class="n">warp_by_scalar</span><span class="p">(</span><span class="s1">&#39;scalars&#39;</span><span class="p">)</span>
 <span class="n">mesh</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">extract_surface</span><span class="p">()</span>
 
@@ -1004,7 +1004,7 @@ to download the full example code</p>
 <span class="n">pl</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="sampling functions 2d" class="sphx-glr-single-img" src="../../_images/sphx_glr_sampling_functions_2d_001.png" />
+<img alt="サンプリング関数2d" class="sphx-glr-single-img" src="../../_images/sphx_glr_sampling_functions_2d_001.png" />
 <p class="sphx-glr-script-out">出力:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(31.57944796053717, 31.57944796053717, 21.746478295009826),
  (0.0, 0.0, -9.832969665527344),
@@ -1021,7 +1021,7 @@ to download the full example code</p>
 <span class="n">pl</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="sampling functions 2d" class="sphx-glr-single-img" src="../../_images/sphx_glr_sampling_functions_2d_002.png" />
+<img alt="サンプリング関数2d" class="sphx-glr-single-img" src="../../_images/sphx_glr_sampling_functions_2d_002.png" />
 <p class="sphx-glr-script-out">出力:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(31.57944796053717, 31.57944796053717, 21.746478295009826),
  (0.0, 0.0, -9.832969665527344),
