@@ -982,7 +982,7 @@ to download the full example code</p>
 <span class="n">plot_example</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="themes" class="sphx-glr-single-img" src="../../_images/sphx_glr_themes_001.png" />
+<img alt="テーマ" class="sphx-glr-single-img" src="../../_images/sphx_glr_themes_001.png" />
 <p>PyVistaにはいくつかのプロットテーマも付属しています．</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">'ParaView'</span></code>: これは，ParaViewの既定のプロットテーマを模倣するように設計されています．</p></li>
@@ -995,21 +995,21 @@ to download the full example code</p>
 <span class="n">plot_example</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="themes" class="sphx-glr-single-img" src="../../_images/sphx_glr_themes_002.png" />
+<img alt="テーマ" class="sphx-glr-single-img" src="../../_images/sphx_glr_themes_002.png" />
 <p><code class="docutils literal notranslate"><span class="pre">'dark'</span></code> テーマのデモ．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pv</span><span class="o">.</span><span class="n">set_plot_theme</span><span class="p">(</span><span class="s2">&quot;dark&quot;</span><span class="p">)</span>
 
 <span class="n">plot_example</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="themes" class="sphx-glr-single-img" src="../../_images/sphx_glr_themes_003.png" />
+<img alt="テーマ" class="sphx-glr-single-img" src="../../_images/sphx_glr_themes_003.png" />
 <p><code class="docutils literal notranslate"><span class="pre">'document'</span></code> テーマのデモを行います．このテーマは，オンラインの例で使用されています．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pv</span><span class="o">.</span><span class="n">set_plot_theme</span><span class="p">(</span><span class="s2">&quot;document&quot;</span><span class="p">)</span>
 
 <span class="n">plot_example</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="themes" class="sphx-glr-single-img" src="../../_images/sphx_glr_themes_004.png" />
+<img alt="テーマ" class="sphx-glr-single-img" src="../../_images/sphx_glr_themes_004.png" />
 <p>プロットウィンドウの背景には，カラーグラデーションを使用することもできます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">)</span>
@@ -1019,7 +1019,7 @@ to download the full example code</p>
 <span class="n">cpos</span> <span class="o">=</span> <span class="n">plotter</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="themes" class="sphx-glr-single-img" src="../../_images/sphx_glr_themes_005.png" />
+<img alt="テーマ" class="sphx-glr-single-img" src="../../_images/sphx_glr_themes_005.png" />
 </div>
 <div class="section" id="modifying-the-global-theme">
 <h1>グローバル・テーマの変更<a class="headerlink" href="#modifying-the-global-theme" title="このヘッドラインへのパーマリンク">¶</a></h1>
@@ -1115,13 +1115,13 @@ Slider Styles            :
 <span class="n">cpos</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="themes" class="sphx-glr-single-img" src="../../_images/sphx_glr_themes_006.png" />
+<img alt="テーマ" class="sphx-glr-single-img" src="../../_images/sphx_glr_themes_006.png" />
 <p>pyvistaをデフォルトの動作にリセットするには， <code class="docutils literal notranslate"><span class="pre">restore_defaults</span></code> を使用します．図形の色は，ドキュメントテーマのデフォルトの色 &quot;黄褐色&quot; ではなく，デフォルトの色 &quot;白&quot; にリセットされたことに注意してください．内部的には，適用された各テーマは， <code class="docutils literal notranslate"><span class="pre">pyvista.global_theme</span></code> 内に格納されたグローバルデフォルトプロットを変更します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pv</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">restore_defaults</span><span class="p">()</span>
 <span class="n">cpos</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="themes" class="sphx-glr-single-img" src="../../_images/sphx_glr_themes_007.png" />
+<img alt="テーマ" class="sphx-glr-single-img" src="../../_images/sphx_glr_themes_007.png" />
 </div>
 <div class="section" id="creating-a-custom-theme-and-applying-it-globally">
 <h1>カスタム・テーマの作成とグローバルな適用<a class="headerlink" href="#creating-a-custom-theme-and-applying-it-globally" title="このヘッドラインへのパーマリンク">¶</a></h1>
@@ -1139,7 +1139,7 @@ Slider Styles            :
 <span class="n">cpos</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="themes" class="sphx-glr-single-img" src="../../_images/sphx_glr_themes_008.png" />
+<img alt="テーマ" class="sphx-glr-single-img" src="../../_images/sphx_glr_themes_008.png" />
 </div>
 <div class="section" id="creating-a-custom-theme-and-applying-it-to-a-single-plotter">
 <h1>カスタムテーマを作成して単一のプロッタに適用する<a class="headerlink" href="#creating-a-custom-theme-and-applying-it-to-a-single-plotter" title="このヘッドラインへのパーマリンク">¶</a></h1>
@@ -1157,7 +1157,7 @@ Slider Styles            :
 <span class="n">cpos</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">theme</span><span class="o">=</span><span class="n">my_theme</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="themes" class="sphx-glr-single-img" src="../../_images/sphx_glr_themes_009.png" />
+<img alt="テーマ" class="sphx-glr-single-img" src="../../_images/sphx_glr_themes_009.png" />
 <p>または， <code class="docutils literal notranslate"><span class="pre">Plotter</span></code> のインスタンスのテーマを設定します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pl</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">theme</span><span class="o">=</span><span class="n">my_theme</span><span class="p">)</span>
 <span class="c1"># pl.theme = my_theme  # alternatively use the setter</span>
@@ -1165,7 +1165,7 @@ Slider Styles            :
 <span class="n">cpos</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="themes" class="sphx-glr-single-img" src="../../_images/sphx_glr_themes_010.png" />
+<img alt="テーマ" class="sphx-glr-single-img" src="../../_images/sphx_glr_themes_010.png" />
 <p>ドキュメントのテーマを使用するにはリセット</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pv</span><span class="o">.</span><span class="n">set_plot_theme</span><span class="p">(</span><span class="s2">&quot;document&quot;</span><span class="p">)</span>
 </pre></div>
