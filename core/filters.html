@@ -1931,10 +1931,13 @@
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">subdivide</span></code>(nsub[, subfilter, inplace])</p></td>
 <td><p>単一の接続された三角形メッシュ内の三角形の数を増やします．</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">triangulate</span></code>([inplace])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">subdivide_adaptive</span></code>([max_edge_len, ...])</p></td>
+<td><p>Increase the number of triangles in a triangular mesh based on edge and/or area metrics.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">triangulate</span></code>([inplace])</p></td>
 <td><p>すべて三角形のメッシュを返します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tube</span></code>([radius, scalars, capping, n_sides, ...])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tube</span></code>([radius, scalars, capping, n_sides, ...])</p></td>
 <td><p>各入力ラインの周囲にチューブを生成します．</p></td>
 </tr>
 </tbody>
@@ -2835,6 +2838,67 @@
 </div>
 <p>代わりに，インプレイスでメッシュを更新します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">submesh</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">subdivide</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;loop&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyvista.PolyDataFilters.subdivide_adaptive">
+<span class="sig-name descname"><span class="pre">subdivide_adaptive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_edge_len</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_tri_area</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_n_tris</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_n_passes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inplace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyDataFilters.subdivide_adaptive" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Increase the number of triangles in a triangular mesh based on edge and/or area metrics.</p>
+<p>This filter uses a simple case-based, multi-pass approach to
+repeatedly subdivide the input triangle mesh to meet the area
+and/or edge length criteria. New points may be inserted only
+on edges; depending on the number of edges to be subdivided a
+different number of triangles are inserted ranging from two
+(i.e., two triangles replace the original one) to four.</p>
+<p>Point and cell data is treated as follows: The cell data from
+a parent triangle is assigned to its subdivided
+children. Point data is interpolated along edges as the edges
+are subdivided.</p>
+<p>This filter retains mesh watertightness if the mesh was
+originally watertight; and the area and max triangles criteria
+are not used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>max_edge_len</strong> (<em>float</em><em>, </em><em>optional</em>) -- The maximum edge length that a triangle may have. Edges
+longer than this value are split in half and the
+associated triangles are modified accordingly.</p></li>
+<li><p><strong>max_tri_area</strong> (<em>float</em><em>, </em><em>optional</em>) -- The maximum area that a triangle may have. Triangles
+larger than this value are subdivided to meet this
+threshold. Note that if this criterion is used it may
+produce non-watertight meshes as a result.</p></li>
+<li><p><strong>max_n_tris</strong> (<em>int</em><em>, </em><em>optional</em>) -- The maximum number of triangles that can be created. If
+the limit is hit, it may result in premature termination
+of the algorithm and the results may be less than
+satisfactory (for example non-watertight meshes may be
+created). By default, the limit is set to a very large
+number (i.e., no effective limit).</p></li>
+<li><p><strong>max_n_passes</strong> (<em>int</em><em>, </em><em>optional</em>) -- The maximum number of passes (i.e., levels of
+subdivision). If the limit is hit, then the subdivision
+process stops and additional passes (needed to meet other
+criteria) are aborted. The default limit is set to a very
+large number (i.e., no effective limit).</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- インプレイスメッシュを更新します．</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>Subdivided mesh</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></p>
+</dd>
+</dl>
+<p class="rubric">サンプル</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">examples</span><span class="o">.</span><span class="n">planefile</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">submesh</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">subdivide_adaptive</span><span class="p">(</span><span class="n">max_n_passes</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>代わりに，インプレイスでメッシュを更新します．</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">submesh</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">subdivide_adaptive</span><span class="p">(</span><span class="n">max_n_passes</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </dd></dl>
