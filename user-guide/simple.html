@@ -319,10 +319,10 @@
                 
   <div class="section" id="basic-api-usage">
 <h1>APIの基本的な使用方法<a class="headerlink" href="#basic-api-usage" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>PyVistaには，ほぼすべてのVTKデータセットを使い始め，そのオブジェクトを簡単にアクセスできるデータオブジェクトにラップするためのツールが用意されています．VTKライブラリーを初めて使用する場合でもパワーユーザーの場合でも，まずはPyVistaの <a class="reference internal" href="../utilities/utilities.html#pyvista.wrap" title="pyvista.wrap"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.wrap()</span></code></a> および <a class="reference internal" href="../utilities/utilities.html#pyvista.read" title="pyvista.read"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.read()</span></code></a> 関数を使って，VTKデータオブジェクトをメモリーにラップするか，VTKまたはVTKに適したファイルフォーマットを読み取ることから始めるのがベストです．</p>
+<p>PyVistaには，ほぼすべてのVTKデータセットを使い始め，そのオブジェクトを簡単にアクセスできるデータオブジェクトにラップするためのツールが用意されています．VTKライブラリーを初めて使用する場合でもパワーユーザーの場合でも，まずはPyVistaの <a class="reference internal" href="../utilities/api-autogen/pyvista.wrap.html#pyvista.wrap" title="pyvista.wrap"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.wrap()</span></code></a> および <a class="reference internal" href="../utilities/api-autogen/pyvista.read.html#pyvista.read" title="pyvista.read"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.read()</span></code></a> 関数を使って，VTKデータオブジェクトをメモリーにラップするか，VTKまたはVTKに適したファイルフォーマットを読み取ることから始めるのがベストです．</p>
 <div class="section" id="wrapping-a-vtk-data-object">
 <h2>VTKデータオブジェクトのラップ<a class="headerlink" href="#wrapping-a-vtk-data-object" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>ラッピング関数はPyVistaのトップレベルから使用できる <a class="reference internal" href="../utilities/utilities.html#module-pyvista.utilities" title="pyvista.utilities"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pyvista.utilities</span></code></a> モジュールの下にあります．これにより，ユーザは持っている任意のVTKデータセットをPyVistaオブジェクトとして素早くラップすることができます．</p>
+<p>ラッピング関数はPyVistaのトップレベルから使用できる <code class="xref py py-mod docutils literal notranslate"><span class="pre">pyvista.utilities</span></code> モジュールの下にあります．これにより，ユーザは持っている任意のVTKデータセットをPyVistaオブジェクトとして素早くラップすることができます．</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vtk</span>
 <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 
@@ -333,7 +333,7 @@
 </div>
 <div class="section" id="reading-a-vtk-file">
 <h2>VTKファイルの読み取り<a class="headerlink" href="#reading-a-vtk-file" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>PyVistaには，VTKファイル形式をそれぞれのPyVistaデータオブジェクトに読み込むための便利な関数が用意されています．ファイル名を渡して <a class="reference internal" href="../utilities/utilities.html#pyvista.read" title="pyvista.read"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.read()</span></code></a> 関数を呼び出します．</p>
+<p>PyVistaには，VTKファイル形式をそれぞれのPyVistaデータオブジェクトに読み込むための便利な関数が用意されています．ファイル名を渡して <a class="reference internal" href="../utilities/api-autogen/pyvista.read.html#pyvista.read" title="pyvista.read"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.read()</span></code></a> 関数を呼び出します．</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="n">mesh</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;my_strange_vtk_file.vtk&#39;</span><span class="p">)</span>
 </pre></div>
@@ -445,7 +445,7 @@
 </div>
 <p>または，メッシュが <a class="reference internal" href="../core/points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> であるため， <code class="docutils literal notranslate"><span class="pre">.vtp</span></code> ， <code class="docutils literal notranslate"><span class="pre">.stl</span></code> ，または <code class="docutils literal notranslate"><span class="pre">.ply</span></code> 形式も使用できます． <code class="docutils literal notranslate"><span class="pre">.save()</span></code> メソッドでサポートされている形式の詳細については，各メッシュタイプのメソッドに関するドキュメントを参照してください．</p>
 <p>また，任意のPyVistaメッシュを <a class="reference external" href="https://github.com/nschloe/meshio">meshio</a> でサポートされている任意のファイル形式に書き出すことができます．Meshioは，Abaqus，ANSYS msh，AVS-UCD，CGNS，DOLFIN XML，Exodus，FLAC 3 D，H 5 M，Kratos/MDPA，Medit，MED/Salome，Gmsh (バージョン2および4)，OBJ，OFF，PERMAS，PLY，STL，TetGen .node/.ele，SVG (2Dのみ，出力のみ)，UGRID, WKT (TIN)，XDMFなど，多くの形式をサポートしています!</p>
-<p><code class="docutils literal notranslate"><span class="pre">meshio</span></code> を使用してPyVistaメッシュを保存するには， <a class="reference internal" href="../utilities/utilities.html#pyvista.save_meshio" title="pyvista.save_meshio"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.save_meshio()</span></code></a> を使用します:</p>
+<p><code class="docutils literal notranslate"><span class="pre">meshio</span></code> を使用してPyVistaメッシュを保存するには， <a class="reference internal" href="../utilities/api-autogen/pyvista.save_meshio.html#pyvista.save_meshio" title="pyvista.save_meshio"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.save_meshio()</span></code></a> を使用します:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pv</span><span class="o">.</span><span class="n">save_meshio</span><span class="p">(</span><span class="s2">&quot;mesh.obj&quot;</span><span class="p">,</span> <span class="n">mesh</span><span class="p">)</span>
 </pre></div>
 </div>

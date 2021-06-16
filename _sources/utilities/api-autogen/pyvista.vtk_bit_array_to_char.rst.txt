@@ -1,0 +1,6 @@
+﻿pyvista.vtk\_bit\_array\_to\_char
+=================================
+
+.. currentmodule:: pyvista
+
+.. autofunction:: vtk_bit_array_to_char

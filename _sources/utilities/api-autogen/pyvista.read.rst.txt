@@ -1,0 +1,6 @@
+﻿pyvista.read
+============
+
+.. currentmodule:: pyvista
+
+.. autofunction:: read

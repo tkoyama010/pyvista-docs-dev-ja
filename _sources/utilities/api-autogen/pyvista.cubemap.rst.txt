@@ -1,0 +1,6 @@
+﻿pyvista.cubemap
+===============
+
+.. currentmodule:: pyvista
+
+.. autofunction:: cubemap

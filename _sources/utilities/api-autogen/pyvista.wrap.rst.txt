@@ -1,0 +1,6 @@
+﻿pyvista.wrap
+============
+
+.. currentmodule:: pyvista
+
+.. autofunction:: wrap
