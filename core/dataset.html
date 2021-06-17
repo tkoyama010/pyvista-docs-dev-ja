@@ -653,25 +653,28 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.DataSet.rename_array" title="pyvista.DataSet.rename_array"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rename_array</span></code></a>(old_name, new_name[, preference])</p></td>
 <td><p>配列名を変更するには，配列を検索して名前を変更します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataSet.rotate_x" title="pyvista.DataSet.rotate_x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rotate_x</span></code></a>(angle[, transform_all_input_vectors])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataSet.rotate_vector" title="pyvista.DataSet.rotate_vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rotate_vector</span></code></a>(vector, angle[, point, ...])</p></td>
+<td><p>Rotate mesh about the vector.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.DataSet.rotate_x" title="pyvista.DataSet.rotate_x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rotate_x</span></code></a>(angle[, point, ...])</p></td>
 <td><p>メッシュをX軸を中心に回転します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.DataSet.rotate_y" title="pyvista.DataSet.rotate_y"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rotate_y</span></code></a>(angle[, transform_all_input_vectors])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataSet.rotate_y" title="pyvista.DataSet.rotate_y"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rotate_y</span></code></a>(angle[, point, ...])</p></td>
 <td><p>メッシュをY軸を中心に回転します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataSet.rotate_z" title="pyvista.DataSet.rotate_z"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rotate_z</span></code></a>(angle[, transform_all_input_vectors])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.DataSet.rotate_z" title="pyvista.DataSet.rotate_z"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rotate_z</span></code></a>(angle[, point, ...])</p></td>
 <td><p>メッシュをZ軸を中心に回転します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.DataSet.set_active_scalars" title="pyvista.DataSet.set_active_scalars"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_active_scalars</span></code></a>(name[, preference])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataSet.set_active_scalars" title="pyvista.DataSet.set_active_scalars"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_active_scalars</span></code></a>(name[, preference])</p></td>
 <td><p>スカラーを名前で検索し，適切にアクティブに設定します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataSet.set_active_tensors" title="pyvista.DataSet.set_active_tensors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_active_tensors</span></code></a>(name[, preference])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.DataSet.set_active_tensors" title="pyvista.DataSet.set_active_tensors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_active_tensors</span></code></a>(name[, preference])</p></td>
 <td><p>​テンソルを名前で検索し，適切にアクティブに設定します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.DataSet.set_active_vectors" title="pyvista.DataSet.set_active_vectors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_active_vectors</span></code></a>(name[, preference])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataSet.set_active_vectors" title="pyvista.DataSet.set_active_vectors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_active_vectors</span></code></a>(name[, preference])</p></td>
 <td><p>ベクトルを名前で検索し，適切にアクティブに設定します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataSet.translate" title="pyvista.DataSet.translate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">translate</span></code></a>(xyz)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.DataSet.translate" title="pyvista.DataSet.translate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">translate</span></code></a>(xyz)</p></td>
 <td><p>メッシュを移動します．</p></td>
 </tr>
 </tbody>
@@ -1126,34 +1129,62 @@
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pyvista.DataSet.rotate_vector">
+<span class="sig-name descname"><span class="pre">rotate_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transform_all_input_vectors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSet.rotate_vector" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Rotate mesh about the vector.</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vector</strong> (<em>tuple</em>) -- Axes to rotate about.</p></li>
+<li><p><strong>angle</strong> (<em>float</em>) -- Angle in degrees to rotate about the vector.</p></li>
+<li><p><strong>point</strong> (<em>list</em><em>, </em><em>optional</em>) -- Point to rotate about.  Defaults to origin <code class="docutils literal notranslate"><span class="pre">(0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0)</span></code>.</p></li>
+<li><p><strong>transform_all_input_vectors</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の時，全ての入力ベクトルは変換される．それ以外の場合は，ポイント，法線，およびアクティブなベクトルだけが変換されます．</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataSet.rotate_x">
-<span class="sig-name descname"><span class="pre">rotate_x</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transform_all_input_vectors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSet.rotate_x" title="この定義へのパーマリンク">¶</a></dt>
+<span class="sig-name descname"><span class="pre">rotate_x</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transform_all_input_vectors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSet.rotate_x" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>メッシュをX軸を中心に回転します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
-<dd class="field-odd"><p><strong>angle</strong> (<em>float</em>) -- X軸を中心に回転する度単位の角度．</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>angle</strong> (<em>float</em>) -- X軸を中心に回転する度単位の角度．</p></li>
+<li><p><strong>point</strong> (<em>list</em><em>, </em><em>optional</em>) -- Point to rotate about.  Defaults to origin <code class="docutils literal notranslate"><span class="pre">(0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0)</span></code>.</p></li>
+<li><p><strong>transform_all_input_vectors</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の時，全ての入力ベクトルは変換される．それ以外の場合は，ポイント，法線，およびアクティブなベクトルだけが変換されます．</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataSet.rotate_y">
-<span class="sig-name descname"><span class="pre">rotate_y</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transform_all_input_vectors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSet.rotate_y" title="この定義へのパーマリンク">¶</a></dt>
+<span class="sig-name descname"><span class="pre">rotate_y</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transform_all_input_vectors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSet.rotate_y" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>メッシュをY軸を中心に回転します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
-<dd class="field-odd"><p><strong>angle</strong> (<em>float</em>) -- Y軸を中心に回転する度単位の角度．</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>angle</strong> (<em>float</em>) -- Y軸を中心に回転する度単位の角度．</p></li>
+<li><p><strong>point</strong> (<em>float</em><em>, </em><em>optional</em>) -- Point to ratate about.</p></li>
+<li><p><strong>transform_all_input_vectors</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の時，全ての入力ベクトルは変換される．それ以外の場合は，ポイント，法線，およびアクティブなベクトルだけが変換されます．</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataSet.rotate_z">
-<span class="sig-name descname"><span class="pre">rotate_z</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transform_all_input_vectors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSet.rotate_z" title="この定義へのパーマリンク">¶</a></dt>
+<span class="sig-name descname"><span class="pre">rotate_z</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transform_all_input_vectors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSet.rotate_z" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>メッシュをZ軸を中心に回転します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
-<dd class="field-odd"><p><strong>angle</strong> (<em>float</em>) -- Z軸を中心に回転する度単位の角度．</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>angle</strong> (<em>float</em>) -- Z軸を中心に回転する度単位の角度．</p></li>
+<li><p><strong>point</strong> (<em>list</em><em>, </em><em>optional</em>) -- Point to rotate about.  Defaults to origin <code class="docutils literal notranslate"><span class="pre">(0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0)</span></code>.</p></li>
+<li><p><strong>transform_all_input_vectors</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の時，全ての入力ベクトルは変換される．それ以外の場合は，ポイント，法線，およびアクティブなベクトルだけが変換されます．</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>

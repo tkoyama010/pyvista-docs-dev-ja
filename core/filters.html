@@ -2079,7 +2079,7 @@
 <td><p>単一の接続された三角形メッシュ内の三角形の数を増やします．</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">subdivide_adaptive</span></code>([max_edge_len, ...])</p></td>
-<td><p>Increase the number of triangles in a triangular mesh based on edge and/or area metrics.</p></td>
+<td><p>三角形メッシュ内の三角形の数を増やします．</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">triangulate</span></code>([inplace])</p></td>
 <td><p>すべて三角形のメッシュを返します．</p></td>
@@ -2992,7 +2992,7 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.PolyDataFilters.subdivide_adaptive">
 <span class="sig-name descname"><span class="pre">subdivide_adaptive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_edge_len</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_tri_area</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_n_tris</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_n_passes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inplace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyDataFilters.subdivide_adaptive" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Increase the number of triangles in a triangular mesh based on edge and/or area metrics.</p>
+<dd><p>三角形メッシュ内の三角形の数を増やします．</p>
 <p>This filter uses a simple case-based, multi-pass approach to
 repeatedly subdivide the input triangle mesh to meet the area
 and/or edge length criteria. New points may be inserted only
