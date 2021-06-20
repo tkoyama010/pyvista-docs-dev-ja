@@ -1,0 +1,6 @@
+pyvista.PolyDataFilters.connectivity
+====================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: PolyDataFilters.connectivity

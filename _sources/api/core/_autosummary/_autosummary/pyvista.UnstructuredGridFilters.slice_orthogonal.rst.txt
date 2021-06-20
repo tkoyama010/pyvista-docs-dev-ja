@@ -1,0 +1,6 @@
+pyvista.UnstructuredGridFilters.slice\_orthogonal
+=================================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: UnstructuredGridFilters.slice_orthogonal

@@ -1,0 +1,6 @@
+pyvista.BasePlotter.update\_scalar\_bar\_range
+==============================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.update_scalar_bar_range

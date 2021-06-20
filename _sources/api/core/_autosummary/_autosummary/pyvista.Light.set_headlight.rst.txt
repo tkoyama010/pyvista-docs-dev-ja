@@ -1,0 +1,6 @@
+pyvista.Light.set\_headlight
+============================
+
+.. currentmodule:: pyvista
+
+.. automethod:: Light.set_headlight

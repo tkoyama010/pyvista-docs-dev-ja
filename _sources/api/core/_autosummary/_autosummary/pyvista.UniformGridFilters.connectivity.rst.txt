@@ -1,0 +1,6 @@
+pyvista.UniformGridFilters.connectivity
+=======================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: UniformGridFilters.connectivity

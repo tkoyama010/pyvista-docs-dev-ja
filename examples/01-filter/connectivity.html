@@ -104,7 +104,7 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../api.html">
+ <a class="reference internal nav-link" href="../../api/index.html">
   APIリファレンス
  </a>
 </li>
@@ -970,7 +970,7 @@ to download the full example code</p>
  (0.0, 0.0, 1.0)]
 </pre></div>
 </div>
-<p>上にプロットしたメッシュは非常にノイズが多い． <a class="reference internal" href="../../core/filters.html#pyvista.DataSetFilters.connectivity" title="pyvista.DataSetFilters.connectivity"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.connectivity()</span></code></a> フィルタを使用し， <code class="docutils literal notranslate"><span class="pre">connectivity</span></code> フィルタに <code class="docutils literal notranslate"><span class="pre">largest=True</span></code> を渡すか，または <a class="reference internal" href="../../core/filters.html#pyvista.DataSetFilters.extract_largest" title="pyvista.DataSetFilters.extract_largest"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.extract_largest()</span></code></a> フィルタ(どちらも同じ)を使用することで，そのメッシュ内の最大接続等値面を抽出できます．</p>
+<p>上にプロットしたメッシュは非常にノイズが多い． <a class="reference internal" href="../../api/core/_autosummary/_autosummary/pyvista.DataSetFilters.connectivity.html#pyvista.DataSetFilters.connectivity" title="pyvista.DataSetFilters.connectivity"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.connectivity()</span></code></a> フィルタを使用し， <code class="docutils literal notranslate"><span class="pre">connectivity</span></code> フィルタに <code class="docutils literal notranslate"><span class="pre">largest=True</span></code> を渡すか，または <a class="reference internal" href="../../api/core/_autosummary/_autosummary/pyvista.DataSetFilters.extract_largest.html#pyvista.DataSetFilters.extract_largest" title="pyvista.DataSetFilters.extract_largest"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.extract_largest()</span></code></a> フィルタ(どちらも同じ)を使用することで，そのメッシュ内の最大接続等値面を抽出できます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Grab the largest connected volume present</span>
 <span class="n">largest</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">connectivity</span><span class="p">(</span><span class="n">largest</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="c1"># or: largest = mesh.extract_largest()</span>

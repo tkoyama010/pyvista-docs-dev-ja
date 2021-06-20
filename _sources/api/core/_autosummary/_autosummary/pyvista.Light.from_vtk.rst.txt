@@ -1,0 +1,6 @@
+pyvista.Light.from\_vtk
+=======================
+
+.. currentmodule:: pyvista
+
+.. automethod:: Light.from_vtk

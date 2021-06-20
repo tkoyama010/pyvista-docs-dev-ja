@@ -1,0 +1,6 @@
+﻿pyvista.ParametricKuen
+======================
+
+.. currentmodule:: pyvista
+
+.. autofunction:: ParametricKuen

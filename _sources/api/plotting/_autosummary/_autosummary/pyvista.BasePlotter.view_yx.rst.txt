@@ -1,0 +1,6 @@
+pyvista.BasePlotter.view\_yx
+============================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.view_yx

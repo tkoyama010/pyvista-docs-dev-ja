@@ -104,7 +104,7 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../api.html">
+ <a class="reference internal nav-link" href="../../api/index.html">
   APIリファレンス
  </a>
 </li>
@@ -959,7 +959,7 @@ to download the full example code</p>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
-<p>グリフィイングは <a class="reference internal" href="../../core/filters.html#pyvista.DataSetFilters.glyph" title="pyvista.DataSetFilters.glyph"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.glyph()</span></code></a> フィルターを介して行うことができる</p>
+<p>グリフィイングは <a class="reference internal" href="../../api/core/_autosummary/_autosummary/pyvista.DataSetFilters.glyph.html#pyvista.DataSetFilters.glyph" title="pyvista.DataSetFilters.glyph"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.glyph()</span></code></a> フィルターを介して行うことができる</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_carotid</span><span class="p">()</span><span class="o">.</span><span class="n">threshold</span><span class="p">(</span><span class="mi">145</span><span class="p">,</span> <span class="n">scalars</span><span class="o">=</span><span class="s2">&quot;scalars&quot;</span><span class="p">)</span>
 
 <span class="c1"># Make a geometric object to use as the glyph</span>
@@ -987,7 +987,7 @@ to download the full example code</p>
  (0.13483731007732908, 0.033663777790747404, 0.9902957385932576)]
 </pre></div>
 </div>
-<p>もう1つの方法は，ベクトルを直接メッシュオブジェクトにロードし， <a class="reference internal" href="../../core/dataset.html#pyvista.DataSet.arrows" title="pyvista.DataSet.arrows"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pyvista.DataSet.arrows</span></code></a> プロパティにアクセスすることです．</p>
+<p>もう1つの方法は，ベクトルを直接メッシュオブジェクトにロードし， <a class="reference internal" href="../../api/core/dataset.html#pyvista.DataSet.arrows" title="pyvista.DataSet.arrows"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pyvista.DataSet.arrows</span></code></a> プロパティにアクセスすることです．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sphere</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mf">3.14</span><span class="p">)</span>
 
 <span class="c1"># make cool swirly pattern</span>

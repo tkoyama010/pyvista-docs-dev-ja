@@ -1,0 +1,6 @@
+﻿pyvista.parametric\_keywords
+============================
+
+.. currentmodule:: pyvista
+
+.. autofunction:: parametric_keywords

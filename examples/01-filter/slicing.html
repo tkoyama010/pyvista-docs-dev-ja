@@ -104,7 +104,7 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../api.html">
+ <a class="reference internal nav-link" href="../../api/index.html">
   APIリファレンス
  </a>
 </li>
@@ -971,7 +971,7 @@ to download the full example code</p>
 </pre></div>
 </div>
 <p>PyVistaメッシュには，すべてのデータセットに直接バインドされた複数のスライシングフィルタがあります．これらのフィルタを使用すると，ボリュームデータセットをスライスして，データのボリュームからセクションを抽出して表示できます．</p>
-<p>PyVistaで使用される最も一般的なスライシングフィルタの1つは， 3つの直交面に平行なデータセットを通して3つの直交スライスを生成する <a class="reference internal" href="../../core/filters.html#pyvista.DataSetFilters.slice_orthogonal" title="pyvista.DataSetFilters.slice_orthogonal"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.slice_orthogonal()</span></code></a> フィルタです．たとえば，サンプルの地理統計トレーニングイメージボリュームをスライスしてみましょう．まず，ボリュームをロードしてプレビューします．</p>
+<p>PyVistaで使用される最も一般的なスライシングフィルタの1つは， 3つの直交面に平行なデータセットを通して3つの直交スライスを生成する <a class="reference internal" href="../../api/core/_autosummary/_autosummary/pyvista.DataSetFilters.slice_orthogonal.html#pyvista.DataSetFilters.slice_orthogonal" title="pyvista.DataSetFilters.slice_orthogonal"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.slice_orthogonal()</span></code></a> フィルタです．たとえば，サンプルの地理統計トレーニングイメージボリュームをスライスしてみましょう．まず，ボリュームをロードしてプレビューします．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_channels</span><span class="p">()</span>
 <span class="c1"># define a categorical colormap</span>
 <span class="n">cmap</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="s2">&quot;viridis&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
@@ -1012,7 +1012,7 @@ to download the full example code</p>
  (0.0, 0.0, 1.0)]
 </pre></div>
 </div>
-<p><a class="reference internal" href="../../core/filters.html#pyvista.DataSetFilters.slice" title="pyvista.DataSetFilters.slice"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.slice()</span></code></a>  フィルタでスライス平面の原点と法線を指定することで，ボリュームの単一スライスを追加することもできます．</p>
+<p><a class="reference internal" href="../../api/core/_autosummary/_autosummary/pyvista.DataSetFilters.slice.html#pyvista.DataSetFilters.slice" title="pyvista.DataSetFilters.slice"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.slice()</span></code></a>  フィルタでスライス平面の原点と法線を指定することで，ボリュームの単一スライスを追加することもできます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Single slice - origin defaults to the center of the mesh</span>
 <span class="n">single_slice</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">slice</span><span class="p">(</span><span class="n">normal</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
 
@@ -1029,7 +1029,7 @@ to download the full example code</p>
  (0.0, 0.0, 1.0)]
 </pre></div>
 </div>
-<p>軸方向に均一にスライス平面を追加することも， <a class="reference internal" href="../../core/filters.html#pyvista.DataSetFilters.slice_along_axis" title="pyvista.DataSetFilters.slice_along_axis"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.slice_along_axis()</span></code></a> フィルタを使用して自動化できます．</p>
+<p>軸方向に均一にスライス平面を追加することも， <a class="reference internal" href="../../api/core/_autosummary/_autosummary/pyvista.DataSetFilters.slice_along_axis.html#pyvista.DataSetFilters.slice_along_axis" title="pyvista.DataSetFilters.slice_along_axis"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.slice_along_axis()</span></code></a> フィルタを使用して自動化できます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">slices</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">slice_along_axis</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s2">&quot;y&quot;</span><span class="p">)</span>
 
 <span class="n">slices</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">)</span>
@@ -1044,7 +1044,7 @@ to download the full example code</p>
 </div>
 <div class="section" id="slice-along-line">
 <h2>線分に沿ってスライス<a class="headerlink" href="#slice-along-line" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p><code class="xref py py-func docutils literal notranslate"><span class="pre">DataSetFilters.slice_along_line()</span></code> フィルタを用いて <a class="reference internal" href="../../utilities/geometric.html#pyvista.Spline" title="pyvista.Spline"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Spline()</span></code></a> または <a class="reference internal" href="../../utilities/geometric.html#pyvista.Line" title="pyvista.Line"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Line()</span></code></a> に沿ってデータセットをスライスすることもできる．</p>
+<p><code class="xref py py-func docutils literal notranslate"><span class="pre">DataSetFilters.slice_along_line()</span></code> フィルタを用いて <a class="reference internal" href="../../api/utilities/_autosummary/pyvista.Spline.html#pyvista.Spline" title="pyvista.Spline"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Spline()</span></code></a> または <a class="reference internal" href="../../api/utilities/_autosummary/pyvista.Line.html#pyvista.Line" title="pyvista.Line"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Line()</span></code></a> に沿ってデータセットをスライスすることもできる．</p>
 <p>最初に，対象のデータセットを使用して線のソースを定義します．このタイプのスライスは計算コストが高く，線に多くの点がある場合は時間がかかることに注意してください．線の解像度を低くしてください．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_channels</span><span class="p">()</span>
 

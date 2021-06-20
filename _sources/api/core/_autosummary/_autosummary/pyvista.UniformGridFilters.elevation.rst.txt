@@ -1,0 +1,6 @@
+pyvista.UniformGridFilters.elevation
+====================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: UniformGridFilters.elevation

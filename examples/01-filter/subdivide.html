@@ -104,7 +104,7 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../api.html">
+ <a class="reference internal nav-link" href="../../api/index.html">
   APIリファレンス
  </a>
 </li>
@@ -943,12 +943,12 @@ to download the full example code</p>
 <div class="sphx-glr-example-title section" id="subdivide-cells">
 <span id="sphx-glr-examples-01-filter-subdivide-py"></span><h1>セルのサブディバイド<a class="headerlink" href="#subdivide-cells" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>単一の接続された三角形メッシュ内の三角形の数を増やします．</p>
-<p><a class="reference internal" href="../../core/filters.html#pyvista.PolyDataFilters.subdivide" title="pyvista.PolyDataFilters.subdivide"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.subdivide()</span></code></a> フィルタは， <cite>butterfly</cite> ， <cite>loop</cite> ， <cite>linear</cite> の3つの異なるサブディビジョンアルゴリズムを使用してメッシュのセルをサブディバイドします．</p>
+<p><a class="reference internal" href="../../api/core/_autosummary/_autosummary/pyvista.PolyDataFilters.subdivide.html#pyvista.PolyDataFilters.subdivide" title="pyvista.PolyDataFilters.subdivide"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.subdivide()</span></code></a> フィルタは， <cite>butterfly</cite> ， <cite>loop</cite> ， <cite>linear</cite> の3つの異なるサブディビジョンアルゴリズムを使用してメッシュのセルをサブディバイドします．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 </pre></div>
 </div>
-<p>まず， <strong>triangulated</strong> メッシュをロードして再分割しましょう． <a class="reference internal" href="../../core/filters.html#pyvista.DataSetFilters.triangulate" title="pyvista.DataSetFilters.triangulate"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.triangulate()</span></code></a> フィルタを使用して，使用しているメッシュが純粋な三角形であることを確認できます．</p>
+<p>まず， <strong>triangulated</strong> メッシュをロードして再分割しましょう． <a class="reference internal" href="../../api/core/_autosummary/_autosummary/pyvista.DataSetFilters.triangulate.html#pyvista.DataSetFilters.triangulate" title="pyvista.DataSetFilters.triangulate"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.triangulate()</span></code></a> フィルタを使用して，使用しているメッシュが純粋な三角形であることを確認できます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_bunny_coarse</span><span class="p">()</span><span class="o">.</span><span class="n">triangulate</span><span class="p">()</span>
 
 <span class="n">cpos</span> <span class="o">=</span> <span class="p">[(</span><span class="o">-</span><span class="mf">0.02788175062966399</span><span class="p">,</span> <span class="mf">0.19293295656233056</span><span class="p">,</span> <span class="mf">0.4334449972621349</span><span class="p">),</span>

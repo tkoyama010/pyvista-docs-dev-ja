@@ -1,0 +1,6 @@
+pyvista.DataSetFilters.surface\_indices
+=======================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: DataSetFilters.surface_indices

@@ -1,0 +1,6 @@
+pyvista.BasePlotter.set\_environment\_texture
+=============================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.set_environment_texture

@@ -1,0 +1,6 @@
+pyvista.UnstructuredGridFilters.threshold\_percent
+==================================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: UnstructuredGridFilters.threshold_percent

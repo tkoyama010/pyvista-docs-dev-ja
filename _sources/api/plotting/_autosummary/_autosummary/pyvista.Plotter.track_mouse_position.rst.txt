@@ -1,0 +1,6 @@
+pyvista.Plotter.track\_mouse\_position
+======================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: Plotter.track_mouse_position

@@ -104,7 +104,7 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../api.html">
+ <a class="reference internal nav-link" href="../../api/index.html">
   APIリファレンス
  </a>
 </li>
@@ -978,7 +978,7 @@ to download the full example code</p>
  (0.0, 0.0, 1.0)]
 </pre></div>
 </div>
-<p>この解析は <a class="reference internal" href="../../core/points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> オブジェクトに対して行うことができます．牛のメッシュの例を見てみましょう．</p>
+<p>この解析は <a class="reference internal" href="../../api/core/points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> オブジェクトに対して行うことができます．牛のメッシュの例を見てみましょう．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_cow</span><span class="p">()</span>
 
 <span class="n">edges</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">extract_feature_edges</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
@@ -997,7 +997,7 @@ to download the full example code</p>
  (0.0, 1.0, 0.0)]
 </pre></div>
 </div>
-<p><a class="reference internal" href="../../core/points.html#pyvista.PolyData.n_open_edges" title="pyvista.PolyData.n_open_edges"><code class="xref any py py-attr docutils literal notranslate"><span class="pre">pyvista.PolyData.n_open_edges</span></code></a> プロパティと <code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.extract_feature_edges()</span></code> フィルタを利用して， <a class="reference internal" href="../../core/points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> メッシュの開いたエッジをカウントおよび抽出できます．</p>
+<p><a class="reference internal" href="../../api/core/points.html#pyvista.PolyData.n_open_edges" title="pyvista.PolyData.n_open_edges"><code class="xref any py py-attr docutils literal notranslate"><span class="pre">pyvista.PolyData.n_open_edges</span></code></a> プロパティと <a class="reference internal" href="../../api/core/_autosummary/_autosummary/pyvista.PolyDataFilters.extract_feature_edges.html#pyvista.PolyDataFilters.extract_feature_edges" title="pyvista.PolyDataFilters.extract_feature_edges"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.extract_feature_edges()</span></code></a> フィルタを利用して， <a class="reference internal" href="../../api/core/points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> メッシュの開いたエッジをカウントおよび抽出できます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Download a sample surface mesh with visible open edges</span>
 <span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_bunny</span><span class="p">()</span>
 </pre></div>
@@ -1010,7 +1010,7 @@ to download the full example code</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>223
 </pre></div>
 </div>
-<p><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.extract_feature_edges()</span></code> の <code class="docutils literal notranslate"><span class="pre">boundary_edges</span></code> オプションを使用すると，これらのエッジを抽出できます．</p>
+<p><a class="reference internal" href="../../api/core/_autosummary/_autosummary/pyvista.PolyDataFilters.extract_feature_edges.html#pyvista.PolyDataFilters.extract_feature_edges" title="pyvista.PolyDataFilters.extract_feature_edges"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.extract_feature_edges()</span></code></a> の <code class="docutils literal notranslate"><span class="pre">boundary_edges</span></code> オプションを使用すると，これらのエッジを抽出できます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">edges</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">extract_feature_edges</span><span class="p">(</span><span class="n">boundary_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
                            <span class="n">feature_edges</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
                            <span class="n">manifold_edges</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>

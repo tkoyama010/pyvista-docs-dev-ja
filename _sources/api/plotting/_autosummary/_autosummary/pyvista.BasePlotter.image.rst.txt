@@ -1,0 +1,6 @@
+pyvista.BasePlotter.image
+=========================
+
+.. currentmodule:: pyvista
+
+.. autoproperty:: BasePlotter.image

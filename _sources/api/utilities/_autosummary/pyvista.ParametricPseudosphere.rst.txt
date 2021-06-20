@@ -1,0 +1,6 @@
+﻿pyvista.ParametricPseudosphere
+==============================
+
+.. currentmodule:: pyvista
+
+.. autofunction:: ParametricPseudosphere

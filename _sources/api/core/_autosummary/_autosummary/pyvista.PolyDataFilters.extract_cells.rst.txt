@@ -1,0 +1,6 @@
+pyvista.PolyDataFilters.extract\_cells
+======================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: PolyDataFilters.extract_cells

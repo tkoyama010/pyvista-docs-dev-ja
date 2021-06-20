@@ -1,0 +1,6 @@
+﻿pyvista.Text3D
+==============
+
+.. currentmodule:: pyvista
+
+.. autofunction:: Text3D

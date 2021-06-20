@@ -1,0 +1,6 @@
+pyvista.BasePlotter.write\_frame
+================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.write_frame

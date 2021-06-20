@@ -1,0 +1,6 @@
+pyvista.CompositeFilters.triangulate
+====================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: CompositeFilters.triangulate

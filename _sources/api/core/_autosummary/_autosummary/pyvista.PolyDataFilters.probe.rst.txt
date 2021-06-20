@@ -1,0 +1,6 @@
+pyvista.PolyDataFilters.probe
+=============================
+
+.. currentmodule:: pyvista
+
+.. automethod:: PolyDataFilters.probe

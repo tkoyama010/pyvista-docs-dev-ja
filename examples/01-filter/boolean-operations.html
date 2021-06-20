@@ -104,7 +104,7 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../api.html">
+ <a class="reference internal nav-link" href="../../api/index.html">
   APIリファレンス
  </a>
 </li>
@@ -968,14 +968,14 @@ to download the full example code</p>
 <div class="sphx-glr-example-title section" id="boolean-operations">
 <span id="sphx-glr-examples-01-filter-boolean-operations-py"></span><h1>ブール演算<a class="headerlink" href="#boolean-operations" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>閉じたサーフェスで(交差，切断などの)ブーリアン演算を実行します．</p>
-<p>ブール/位相演算(交差，切断)法は，  <a class="reference internal" href="../../core/points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> メッシュタイプに対してのみ実装され，任意の <a class="reference internal" href="../../core/points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> メッシュから直接アクセス可能である． <a class="reference internal" href="../../core/filters.html#pyvista.PolyDataFilters" title="pyvista.PolyDataFilters"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters</span></code></a> をチェックして，次のフィルタを確認してください．</p>
+<p>ブール/位相演算(交差，切断)法は，  <a class="reference internal" href="../../api/core/points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> メッシュタイプに対してのみ実装され，任意の <a class="reference internal" href="../../api/core/points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> メッシュから直接アクセス可能である． <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyDataFilters.html#pyvista.PolyDataFilters" title="pyvista.PolyDataFilters"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters</span></code></a> をチェックして，次のフィルタを確認してください．</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="../../core/filters.html#pyvista.PolyDataFilters.boolean_add" title="pyvista.PolyDataFilters.boolean_add"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.boolean_add()</span></code></a></p></li>
-<li><p><a class="reference internal" href="../../core/filters.html#pyvista.PolyDataFilters.boolean_cut" title="pyvista.PolyDataFilters.boolean_cut"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.boolean_cut()</span></code></a></p></li>
-<li><p><a class="reference internal" href="../../core/filters.html#pyvista.PolyDataFilters.boolean_difference" title="pyvista.PolyDataFilters.boolean_difference"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.boolean_difference()</span></code></a></p></li>
-<li><p><a class="reference internal" href="../../core/filters.html#pyvista.PolyDataFilters.boolean_union" title="pyvista.PolyDataFilters.boolean_union"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.boolean_union()</span></code></a></p></li>
+<li><p><a class="reference internal" href="../../api/core/_autosummary/_autosummary/pyvista.PolyDataFilters.boolean_add.html#pyvista.PolyDataFilters.boolean_add" title="pyvista.PolyDataFilters.boolean_add"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.boolean_add()</span></code></a></p></li>
+<li><p><a class="reference internal" href="../../api/core/_autosummary/_autosummary/pyvista.PolyDataFilters.boolean_cut.html#pyvista.PolyDataFilters.boolean_cut" title="pyvista.PolyDataFilters.boolean_cut"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.boolean_cut()</span></code></a></p></li>
+<li><p><a class="reference internal" href="../../api/core/_autosummary/_autosummary/pyvista.PolyDataFilters.boolean_difference.html#pyvista.PolyDataFilters.boolean_difference" title="pyvista.PolyDataFilters.boolean_difference"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.boolean_difference()</span></code></a></p></li>
+<li><p><a class="reference internal" href="../../api/core/_autosummary/_autosummary/pyvista.PolyDataFilters.boolean_union.html#pyvista.PolyDataFilters.boolean_union" title="pyvista.PolyDataFilters.boolean_union"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.boolean_union()</span></code></a></p></li>
 </ul>
-<p>マージでは， <code class="docutils literal notranslate"><span class="pre">+</span></code> 演算子をPyVistaの任意の2つのメッシュ間で使用できます．この演算子は，任意の2つのメッシュを結合するために <code class="docutils literal notranslate"><span class="pre">.merge()</span></code> フィルタを呼び出すだけです．同様に， <code class="docutils literal notranslate"><span class="pre">-</span></code> オペレータをPyVistaの任意の2つの <a class="reference internal" href="../../core/points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> メッシュ間で使用して，最初のメッシュを2番目のメッシュで切断することができます．</p>
+<p>マージでは， <code class="docutils literal notranslate"><span class="pre">+</span></code> 演算子をPyVistaの任意の2つのメッシュ間で使用できます．この演算子は，任意の2つのメッシュを結合するために <code class="docutils literal notranslate"><span class="pre">.merge()</span></code> フィルタを呼び出すだけです．同様に， <code class="docutils literal notranslate"><span class="pre">-</span></code> オペレータをPyVistaの任意の2つの <a class="reference internal" href="../../api/core/points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> メッシュ間で使用して，最初のメッシュを2番目のメッシュで切断することができます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 6</span>
 <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -1004,7 +1004,7 @@ to download the full example code</p>
 </div>
 <div class="section" id="boolean-add">
 <h2>ブール加算<a class="headerlink" href="#boolean-add" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p><a class="reference internal" href="../../core/filters.html#pyvista.PolyDataFilters.boolean_add" title="pyvista.PolyDataFilters.boolean_add"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.boolean_add()</span></code></a> フィルタまたは <code class="docutils literal notranslate"><span class="pre">+</span></code> 操作を使用して，2つのメッシュをすべて追加します．</p>
+<p><a class="reference internal" href="../../api/core/_autosummary/_autosummary/pyvista.PolyDataFilters.boolean_add.html#pyvista.PolyDataFilters.boolean_add" title="pyvista.PolyDataFilters.boolean_add"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.boolean_add()</span></code></a> フィルタまたは <code class="docutils literal notranslate"><span class="pre">+</span></code> 操作を使用して，2つのメッシュをすべて追加します．</p>
 <p>Order of operations does not matter for boolean add as the entirety of both
 meshes are appended together.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">add</span> <span class="o">=</span> <span class="n">sphere</span> <span class="o">+</span> <span class="n">cube</span>
@@ -1021,7 +1021,7 @@ meshes are appended together.</p>
 </div>
 <div class="section" id="boolean-cut">
 <h2>ブール切断<a class="headerlink" href="#boolean-cut" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>両方のメッシュが <a class="reference internal" href="../../core/points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> であるため， <a class="reference internal" href="../../core/filters.html#pyvista.PolyDataFilters.boolean_cut" title="pyvista.PolyDataFilters.boolean_cut"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.boolean_cut()</span></code></a> フィルタまたは <code class="docutils literal notranslate"><span class="pre">-</span></code> 演算子付きの <code class="docutils literal notranslate"><span class="pre">b</span></code> を使用して <code class="docutils literal notranslate"><span class="pre">a</span></code> のブーリアンカットを実行します．</p>
+<p>両方のメッシュが <a class="reference internal" href="../../api/core/points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> であるため， <a class="reference internal" href="../../api/core/_autosummary/_autosummary/pyvista.PolyDataFilters.boolean_cut.html#pyvista.PolyDataFilters.boolean_cut" title="pyvista.PolyDataFilters.boolean_cut"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.boolean_cut()</span></code></a> フィルタまたは <code class="docutils literal notranslate"><span class="pre">-</span></code> 演算子付きの <code class="docutils literal notranslate"><span class="pre">b</span></code> を使用して <code class="docutils literal notranslate"><span class="pre">a</span></code> のブーリアンカットを実行します．</p>
 <p>ブーリアンカットでは，操作の順序は関係ありません．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cut</span> <span class="o">=</span> <span class="n">cube</span> <span class="o">-</span> <span class="n">sphere</span>
 
@@ -1040,7 +1040,7 @@ meshes are appended together.</p>
 </div>
 <div class="section" id="boolean-difference">
 <h2>論理差<a class="headerlink" href="#boolean-difference" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p><a class="reference internal" href="../../core/filters.html#pyvista.PolyDataFilters.boolean_difference" title="pyvista.PolyDataFilters.boolean_difference"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.boolean_difference()</span></code></a> 法を使用して，2つのメッシュを結合し，メッシュ間で共通の体積のみを保持します．</p>
+<p><a class="reference internal" href="../../api/core/_autosummary/_autosummary/pyvista.PolyDataFilters.boolean_difference.html#pyvista.PolyDataFilters.boolean_difference" title="pyvista.PolyDataFilters.boolean_difference"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.boolean_difference()</span></code></a> 法を使用して，2つのメッシュを結合し，メッシュ間で共通の体積のみを保持します．</p>
 <p>ブール差の演算順序が結果に影響することに注意してください．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">diff</span> <span class="o">=</span> <span class="n">sphere</span><span class="o">.</span><span class="n">boolean_difference</span><span class="p">(</span><span class="n">cube</span><span class="p">)</span>
 
@@ -1073,7 +1073,7 @@ meshes are appended together.</p>
 </div>
 <div class="section" id="boolean-union">
 <h2>ブール演算和<a class="headerlink" href="#boolean-union" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>2つのメッシュを結合し， <a class="reference internal" href="../../core/filters.html#pyvista.PolyDataFilters.boolean_union" title="pyvista.PolyDataFilters.boolean_union"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.boolean_union()</span></code></a> 方法を使用して多様体メッシュの作成を試みます．</p>
+<p>2つのメッシュを結合し， <a class="reference internal" href="../../api/core/_autosummary/_autosummary/pyvista.PolyDataFilters.boolean_union.html#pyvista.PolyDataFilters.boolean_union" title="pyvista.PolyDataFilters.boolean_union"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.boolean_union()</span></code></a> 方法を使用して多様体メッシュの作成を試みます．</p>
 <p>Order of operations does not matter for boolean union.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">union</span> <span class="o">=</span> <span class="n">sphere</span><span class="o">.</span><span class="n">boolean_union</span><span class="p">(</span><span class="n">cube</span><span class="p">)</span>
 

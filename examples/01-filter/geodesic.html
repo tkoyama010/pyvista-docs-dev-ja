@@ -104,7 +104,7 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../api.html">
+ <a class="reference internal nav-link" href="../../api/index.html">
   APIリファレンス
  </a>
 </li>
@@ -951,7 +951,7 @@ to download the full example code</p>
 <span class="n">land</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_topo_land</span><span class="p">()</span><span class="o">.</span><span class="n">triangulate</span><span class="p">()</span><span class="o">.</span><span class="n">decimate</span><span class="p">(</span><span class="mf">0.98</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>測地線パスを新しい <a class="reference internal" href="../../core/points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> オブジェクトとして取得します．</p>
+<p>測地線パスを新しい <a class="reference internal" href="../../api/core/points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> オブジェクトとして取得します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cape_town</span> <span class="o">=</span> <span class="n">land</span><span class="o">.</span><span class="n">find_closest_point</span><span class="p">((</span><span class="mf">0.790801</span><span class="p">,</span> <span class="mf">0.264598</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.551942</span><span class="p">))</span>
 <span class="n">dubai</span> <span class="o">=</span> <span class="n">land</span><span class="o">.</span><span class="n">find_closest_point</span><span class="p">((</span><span class="mf">0.512642</span><span class="p">,</span> <span class="mf">0.745898</span><span class="p">,</span> <span class="mf">0.425255</span><span class="p">))</span>
 <span class="n">bangkok</span> <span class="o">=</span> <span class="n">land</span><span class="o">.</span><span class="n">find_closest_point</span><span class="p">((</span><span class="o">-</span><span class="mf">0.177077</span><span class="p">,</span> <span class="mf">0.955419</span><span class="p">,</span> <span class="mf">0.236273</span><span class="p">))</span>

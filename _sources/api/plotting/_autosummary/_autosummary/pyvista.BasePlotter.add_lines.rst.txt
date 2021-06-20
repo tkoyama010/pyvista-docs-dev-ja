@@ -1,0 +1,6 @@
+pyvista.BasePlotter.add\_lines
+==============================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.add_lines

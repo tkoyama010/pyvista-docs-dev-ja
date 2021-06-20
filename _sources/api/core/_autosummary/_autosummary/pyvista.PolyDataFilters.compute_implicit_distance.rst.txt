@@ -1,0 +1,6 @@
+pyvista.PolyDataFilters.compute\_implicit\_distance
+===================================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: PolyDataFilters.compute_implicit_distance

@@ -104,7 +104,7 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../api.html">
+ <a class="reference internal nav-link" href="../../api/index.html">
   APIリファレンス
  </a>
 </li>
@@ -1039,7 +1039,7 @@ to download the full example code</p>
  (-0.502518907629606, -0.7035264706814484, 0.502518907629606)]
 </pre></div>
 </div>
-<p>流入口が利用可能な場合などは， <a class="reference internal" href="../../core/filters.html#pyvista.DataSetFilters.streamlines_from_source" title="pyvista.DataSetFilters.streamlines_from_source"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.streamlines_from_source()</span></code></a> フィルタを使用してソースメッシュを提供することもできます．この例では，流入口を領域のすぐ内側に抽出し，流線の始点として使用します．</p>
+<p>流入口が利用可能な場合などは， <a class="reference internal" href="../../api/core/_autosummary/_autosummary/pyvista.DataSetFilters.streamlines_from_source.html#pyvista.DataSetFilters.streamlines_from_source" title="pyvista.DataSetFilters.streamlines_from_source"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.streamlines_from_source()</span></code></a> フィルタを使用してソースメッシュを提供することもできます．この例では，流入口を領域のすぐ内側に抽出し，流線の始点として使用します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source_mesh</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">slice</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">,</span> <span class="n">origin</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">182</span><span class="p">))</span>  <span class="c1"># inlet surface</span>
 <span class="c1"># thin out ~40% points to get a nice density of streamlines</span>
 <span class="n">seed_mesh</span> <span class="o">=</span> <span class="n">source_mesh</span><span class="o">.</span><span class="n">decimate_boundary</span><span class="p">(</span><span class="mf">0.4</span><span class="p">)</span>

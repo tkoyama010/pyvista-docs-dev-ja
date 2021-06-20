@@ -1,0 +1,6 @@
+pyvista.Light.ambient\_color
+============================
+
+.. currentmodule:: pyvista
+
+.. autoproperty:: Light.ambient_color

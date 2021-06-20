@@ -1,0 +1,6 @@
+pyvista.BasePlotter.add\_mesh\_slice
+====================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.add_mesh_slice

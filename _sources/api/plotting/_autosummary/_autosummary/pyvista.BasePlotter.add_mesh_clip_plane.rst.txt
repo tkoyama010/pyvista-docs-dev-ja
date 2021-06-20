@@ -1,0 +1,6 @@
+pyvista.BasePlotter.add\_mesh\_clip\_plane
+==========================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.add_mesh_clip_plane

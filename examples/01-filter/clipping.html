@@ -104,7 +104,7 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../api.html">
+ <a class="reference internal nav-link" href="../../api/index.html">
   APIリファレンス
  </a>
 </li>
@@ -970,7 +970,7 @@ to download the full example code</p>
 </div>
 <div class="section" id="clip-with-plane">
 <h2>平面付きクリップ<a class="headerlink" href="#clip-with-plane" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p><a class="reference internal" href="../../core/filters.html#pyvista.DataSetFilters.clip" title="pyvista.DataSetFilters.clip"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.clip()</span></code></a> フィルタを使用したユーザ定義平面によるデータセットのクリップ</p>
+<p><a class="reference internal" href="../../api/core/_autosummary/_autosummary/pyvista.DataSetFilters.clip.html#pyvista.DataSetFilters.clip" title="pyvista.DataSetFilters.clip"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.clip()</span></code></a> フィルタを使用したユーザ定義平面によるデータセットのクリップ</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_bunny_coarse</span><span class="p">()</span>
 <span class="n">clipped</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">invert</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
@@ -994,7 +994,7 @@ to download the full example code</p>
 </div>
 <div class="section" id="clip-with-bounds">
 <h2>境界付きクリップ<a class="headerlink" href="#clip-with-bounds" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p><a class="reference internal" href="../../core/filters.html#pyvista.DataSetFilters.clip_box" title="pyvista.DataSetFilters.clip_box"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.clip_box()</span></code></a> フィルタを使用して，XYZ境界のセットによってデータセットをクリップします．</p>
+<p><a class="reference internal" href="../../api/core/_autosummary/_autosummary/pyvista.DataSetFilters.clip_box.html#pyvista.DataSetFilters.clip_box" title="pyvista.DataSetFilters.clip_box"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.clip_box()</span></code></a> フィルタを使用して，XYZ境界のセットによってデータセットをクリップします．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_office</span><span class="p">()</span>
 
 <span class="n">bounds</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mf">4.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span><span class="mf">4.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
@@ -1017,7 +1017,7 @@ to download the full example code</p>
 </div>
 <div class="section" id="clip-with-rotated-box">
 <h2>回転ボックス付きクリップ<a class="headerlink" href="#clip-with-rotated-box" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p><a class="reference internal" href="../../core/filters.html#pyvista.DataSetFilters.clip_box" title="pyvista.DataSetFilters.clip_box"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.clip_box()</span></code></a> フィルタを使用して任意に回転したソリッドボックスでデータセットをクリップします．</p>
+<p><a class="reference internal" href="../../api/core/_autosummary/_autosummary/pyvista.DataSetFilters.clip_box.html#pyvista.DataSetFilters.clip_box" title="pyvista.DataSetFilters.clip_box"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.clip_box()</span></code></a> フィルタを使用して任意に回転したソリッドボックスでデータセットをクリップします．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_airplane</span><span class="p">()</span>
 
 <span class="c1"># Use `pv.Box()` or `pv.Cube()` to create a region of interest</span>

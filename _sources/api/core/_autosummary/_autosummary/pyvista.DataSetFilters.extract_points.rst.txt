@@ -1,0 +1,6 @@
+pyvista.DataSetFilters.extract\_points
+======================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: DataSetFilters.extract_points

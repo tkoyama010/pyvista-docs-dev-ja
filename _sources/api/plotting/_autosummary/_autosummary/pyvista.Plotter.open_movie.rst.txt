@@ -1,0 +1,6 @@
+pyvista.Plotter.open\_movie
+===========================
+
+.. currentmodule:: pyvista
+
+.. automethod:: Plotter.open_movie

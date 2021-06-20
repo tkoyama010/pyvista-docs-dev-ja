@@ -104,7 +104,7 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../api.html">
+ <a class="reference internal nav-link" href="../../api/index.html">
   APIリファレンス
  </a>
 </li>
@@ -944,7 +944,7 @@ to download the full example code</p>
 <span id="sphx-glr-examples-01-filter-gradients-py"></span><h1>フィールドの勾配を計算する<a class="headerlink" href="#compute-gradients-of-a-field" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>Estimate the gradient of a scalar or vector field in a data set.</p>
 <p>入力配列 {u, v, w} の場合，出力グラディエントタプルの順序は {du/dx, du/dy, du/dz, dv/dx, dv/dy, dv/dz, dw/dx, dw/dy, dw/dz} になります．</p>
-<p><a class="reference internal" href="../../core/filters.html#pyvista.DataSetFilters.compute_derivative" title="pyvista.DataSetFilters.compute_derivative"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.compute_derivative()</span></code></a> フィルタを表示します．</p>
+<p><a class="reference internal" href="../../api/core/_autosummary/_autosummary/pyvista.DataSetFilters.compute_derivative.html#pyvista.DataSetFilters.compute_derivative" title="pyvista.DataSetFilters.compute_derivative"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.compute_derivative()</span></code></a> フィルタを表示します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 1</span>
 <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
@@ -980,7 +980,7 @@ to download the full example code</p>
 </td></tr> </table>
 </div>
 <br />
-<br /><p>ここで，そのメッシュの点データにおける <code class="docutils literal notranslate"><span class="pre">vectors</span></code> ベクトルフィールドの勾配を計算する．これは <a class="reference internal" href="../../core/filters.html#pyvista.DataSetFilters.compute_derivative" title="pyvista.DataSetFilters.compute_derivative"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.compute_derivative()</span></code></a> を呼び出すのと同じくらい簡単です．</p>
+<br /><p>ここで，そのメッシュの点データにおける <code class="docutils literal notranslate"><span class="pre">vectors</span></code> ベクトルフィールドの勾配を計算する．これは <a class="reference internal" href="../../api/core/_autosummary/_autosummary/pyvista.DataSetFilters.compute_derivative.html#pyvista.DataSetFilters.compute_derivative" title="pyvista.DataSetFilters.compute_derivative"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.compute_derivative()</span></code></a> を呼び出すのと同じくらい簡単です．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh_g</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">compute_derivative</span><span class="p">(</span><span class="n">scalars</span><span class="o">=</span><span class="s2">&quot;vectors&quot;</span><span class="p">)</span>
 <span class="n">mesh_g</span><span class="p">[</span><span class="s2">&quot;gradient&quot;</span><span class="p">]</span>
 </pre></div>
@@ -1003,7 +1003,7 @@ to download the full example code</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p>また， <a class="reference internal" href="../../core/filters.html#pyvista.DataSetFilters.compute_derivative" title="pyvista.DataSetFilters.compute_derivative"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.compute_derivative()</span></code></a> を使用して，発散，渦度，Q基準など，他の導関数ベースの量を計算することもできます．オプションについては，関数のマニュアルを参照してください．</p>
+<p>また， <a class="reference internal" href="../../api/core/_autosummary/_autosummary/pyvista.DataSetFilters.compute_derivative.html#pyvista.DataSetFilters.compute_derivative" title="pyvista.DataSetFilters.compute_derivative"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.compute_derivative()</span></code></a> を使用して，発散，渦度，Q基準など，他の導関数ベースの量を計算することもできます．オプションについては，関数のマニュアルを参照してください．</p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">mesh_g[&quot;gradient&quot;]</span></code> は勾配の 9 NumPy 配列による <code class="docutils literal notranslate"><span class="pre">N</span></code> なので，勾配のNumPy配列の辞書を作ることができます:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">gradients_to_dict</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>

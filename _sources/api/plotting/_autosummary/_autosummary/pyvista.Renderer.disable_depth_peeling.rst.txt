@@ -1,0 +1,6 @@
+pyvista.Renderer.disable\_depth\_peeling
+========================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: Renderer.disable_depth_peeling

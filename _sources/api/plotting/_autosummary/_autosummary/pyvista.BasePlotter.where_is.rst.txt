@@ -1,0 +1,6 @@
+pyvista.BasePlotter.where\_is
+=============================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.where_is

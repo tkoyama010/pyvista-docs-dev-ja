@@ -104,7 +104,7 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../api.html">
+ <a class="reference internal nav-link" href="../api/index.html">
   APIリファレンス
  </a>
 </li>
@@ -319,7 +319,7 @@
                 
   <div class="section" id="basic-api-usage">
 <h1>APIの基本的な使用方法<a class="headerlink" href="#basic-api-usage" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>PyVistaには，ほぼすべてのVTKデータセットを使い始め，そのオブジェクトを簡単にアクセスできるデータオブジェクトにラップするためのツールが用意されています．VTKライブラリーを初めて使用する場合でもパワーユーザーの場合でも，まずはPyVistaの <a class="reference internal" href="../utilities/api-autogen/pyvista.wrap.html#pyvista.wrap" title="pyvista.wrap"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.wrap()</span></code></a> および <a class="reference internal" href="../utilities/api-autogen/pyvista.read.html#pyvista.read" title="pyvista.read"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.read()</span></code></a> 関数を使って，VTKデータオブジェクトをメモリーにラップするか，VTKまたはVTKに適したファイルフォーマットを読み取ることから始めるのがベストです．</p>
+<p>PyVistaには，ほぼすべてのVTKデータセットを使い始め，そのオブジェクトを簡単にアクセスできるデータオブジェクトにラップするためのツールが用意されています．VTKライブラリーを初めて使用する場合でもパワーユーザーの場合でも，まずはPyVistaの <a class="reference internal" href="../api/utilities/_autosummary/pyvista.wrap.html#pyvista.wrap" title="pyvista.wrap"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.wrap()</span></code></a> および <a class="reference internal" href="../api/utilities/_autosummary/pyvista.read.html#pyvista.read" title="pyvista.read"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.read()</span></code></a> 関数を使って，VTKデータオブジェクトをメモリーにラップするか，VTKまたはVTKに適したファイルフォーマットを読み取ることから始めるのがベストです．</p>
 <div class="section" id="wrapping-a-vtk-data-object">
 <h2>VTKデータオブジェクトのラップ<a class="headerlink" href="#wrapping-a-vtk-data-object" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>ラッピング関数はPyVistaのトップレベルから使用できる <code class="xref py py-mod docutils literal notranslate"><span class="pre">pyvista.utilities</span></code> モジュールの下にあります．これにより，ユーザは持っている任意のVTKデータセットをPyVistaオブジェクトとして素早くラップすることができます．</p>
@@ -333,7 +333,7 @@
 </div>
 <div class="section" id="reading-a-vtk-file">
 <h2>VTKファイルの読み取り<a class="headerlink" href="#reading-a-vtk-file" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>PyVistaには，VTKファイル形式をそれぞれのPyVistaデータオブジェクトに読み込むための便利な関数が用意されています．ファイル名を渡して <a class="reference internal" href="../utilities/api-autogen/pyvista.read.html#pyvista.read" title="pyvista.read"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.read()</span></code></a> 関数を呼び出します．</p>
+<p>PyVistaには，VTKファイル形式をそれぞれのPyVistaデータオブジェクトに読み込むための便利な関数が用意されています．ファイル名を渡して <a class="reference internal" href="../api/utilities/_autosummary/pyvista.read.html#pyvista.read" title="pyvista.read"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.read()</span></code></a> 関数を呼び出します．</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="n">mesh</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;my_strange_vtk_file.vtk&#39;</span><span class="p">)</span>
 </pre></div>
@@ -395,7 +395,7 @@
 </div>
 <div class="section" id="plotting">
 <h2>プロット<a class="headerlink" href="#plotting" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>PyVistaには， <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> に似た構文とキーワード引数を使って直感的に操作でき，高度に制御できることを意図した多数の描画ルーチンが含まれています．始めに，各PyVistaデータオブジェクトにバインドされた便利なメソッド <a class="reference internal" href="../plotting/plotting.html#pyvista.plot" title="pyvista.plot"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.plot()</span></code></a> を試してみてください．</p>
+<p>PyVistaには， <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> に似た構文とキーワード引数を使って直感的に操作でき，高度に制御できることを意図した多数の描画ルーチンが含まれています．始めに，各PyVistaデータオブジェクトにバインドされた便利なメソッド <a class="reference internal" href="../api/plotting/_autosummary/pyvista.plot.html#pyvista.plot" title="pyvista.plot"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.plot()</span></code></a> を試してみてください．</p>
 <div class="jupyter_cell docutils container">
 <div class="cell_output docutils container">
 </div>
@@ -414,8 +414,8 @@
 <img alt="../_images/simple_1_0.png" src="../_images/simple_1_0.png" />
 </div>
 </div>
-<p>プロッタを作成して，シーンを高度にコントロールすることもできます．まず， <a class="reference internal" href="../plotting/plotting.html#pyvista.Plotter" title="pyvista.Plotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.Plotter</span></code></a> や <code class="xref py py-class docutils literal notranslate"><span class="pre">pyvistaqt.BackgroundPlotter</span></code> などのプロッタをインスタンス化します．</p>
-<p><a class="reference internal" href="../plotting/plotting.html#pyvista.Plotter" title="pyvista.Plotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.Plotter</span></code></a> は <code class="docutils literal notranslate"><span class="pre">show</span></code> を呼んだ後にコードの実行を一時停止するレンダリングウィンドウを作成します．</p>
+<p>プロッタを作成して，シーンを高度にコントロールすることもできます．まず， <a class="reference internal" href="../api/plotting/_autosummary/pyvista.Plotter.html#pyvista.Plotter" title="pyvista.Plotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.Plotter</span></code></a> や <code class="xref py py-class docutils literal notranslate"><span class="pre">pyvistaqt.BackgroundPlotter</span></code> などのプロッタをインスタンス化します．</p>
+<p><a class="reference internal" href="../api/plotting/_autosummary/pyvista.Plotter.html#pyvista.Plotter" title="pyvista.Plotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.Plotter</span></code></a> は <code class="docutils literal notranslate"><span class="pre">show</span></code> を呼んだ後にコードの実行を一時停止するレンダリングウィンドウを作成します．</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_airplane</span><span class="p">()</span>
 
 <span class="n">plotter</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>    <span class="c1"># instantiate the plotter</span>
@@ -433,7 +433,7 @@
 </div>
 <p>使用する用途に応じて，使用可能なすべてのプロッタを確認してください．</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="../plotting/plotting.html#pyvista.Plotter" title="pyvista.Plotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.Plotter</span></code></a>: 閉じるまでコードを一時停止する標準プロッタ</p></li>
+<li><p><a class="reference internal" href="../api/plotting/_autosummary/pyvista.Plotter.html#pyvista.Plotter" title="pyvista.Plotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.Plotter</span></code></a>: 閉じるまでコードを一時停止する標準プロッタ</p></li>
 <li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvistaqt.BackgroundPlotter</span></code>:  インタラクティブで，コードの実行を一時停止しないレンダリングウィンドウを作成します(詳細は <a class="reference external" href="http://qtdocs.pyvista.org/">pyvistaqt</a> パッケージを参照してください)．</p></li>
 </ul>
 </div>
@@ -443,9 +443,9 @@
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;mesh.vtk&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>または，メッシュが <a class="reference internal" href="../core/points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> であるため， <code class="docutils literal notranslate"><span class="pre">.vtp</span></code> ， <code class="docutils literal notranslate"><span class="pre">.stl</span></code> ，または <code class="docutils literal notranslate"><span class="pre">.ply</span></code> 形式も使用できます． <code class="docutils literal notranslate"><span class="pre">.save()</span></code> メソッドでサポートされている形式の詳細については，各メッシュタイプのメソッドに関するドキュメントを参照してください．</p>
+<p>または，メッシュが <a class="reference internal" href="../api/core/points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> であるため， <code class="docutils literal notranslate"><span class="pre">.vtp</span></code> ， <code class="docutils literal notranslate"><span class="pre">.stl</span></code> ，または <code class="docutils literal notranslate"><span class="pre">.ply</span></code> 形式も使用できます． <code class="docutils literal notranslate"><span class="pre">.save()</span></code> メソッドでサポートされている形式の詳細については，各メッシュタイプのメソッドに関するドキュメントを参照してください．</p>
 <p>また，任意のPyVistaメッシュを <a class="reference external" href="https://github.com/nschloe/meshio">meshio</a> でサポートされている任意のファイル形式に書き出すことができます．Meshioは，Abaqus，ANSYS msh，AVS-UCD，CGNS，DOLFIN XML，Exodus，FLAC 3 D，H 5 M，Kratos/MDPA，Medit，MED/Salome，Gmsh (バージョン2および4)，OBJ，OFF，PERMAS，PLY，STL，TetGen .node/.ele，SVG (2Dのみ，出力のみ)，UGRID, WKT (TIN)，XDMFなど，多くの形式をサポートしています!</p>
-<p><code class="docutils literal notranslate"><span class="pre">meshio</span></code> を使用してPyVistaメッシュを保存するには， <a class="reference internal" href="../utilities/api-autogen/pyvista.save_meshio.html#pyvista.save_meshio" title="pyvista.save_meshio"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.save_meshio()</span></code></a> を使用します:</p>
+<p><code class="docutils literal notranslate"><span class="pre">meshio</span></code> を使用してPyVistaメッシュを保存するには， <a class="reference internal" href="../api/utilities/_autosummary/pyvista.save_meshio.html#pyvista.save_meshio" title="pyvista.save_meshio"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.save_meshio()</span></code></a> を使用します:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pv</span><span class="o">.</span><span class="n">save_meshio</span><span class="p">(</span><span class="s2">&quot;mesh.obj&quot;</span><span class="p">,</span> <span class="n">mesh</span><span class="p">)</span>
 </pre></div>
 </div>

@@ -1,0 +1,6 @@
+﻿pyvista.Box
+===========
+
+.. currentmodule:: pyvista
+
+.. autofunction:: Box

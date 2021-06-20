@@ -1,0 +1,6 @@
+pyvista.BasePlotter.enable\_geodesic\_picking
+=============================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.enable_geodesic_picking

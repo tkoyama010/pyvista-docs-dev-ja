@@ -1,0 +1,6 @@
+pyvista.Light.transform\_matrix
+===============================
+
+.. currentmodule:: pyvista
+
+.. autoproperty:: Light.transform_matrix

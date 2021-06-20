@@ -1,0 +1,6 @@
+pyvista.Plotter.scalar\_bars
+============================
+
+.. currentmodule:: pyvista
+
+.. autoproperty:: Plotter.scalar_bars

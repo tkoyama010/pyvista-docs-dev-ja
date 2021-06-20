@@ -1,0 +1,6 @@
+pyvista.Plotter.render
+======================
+
+.. currentmodule:: pyvista
+
+.. automethod:: Plotter.render

@@ -1,0 +1,6 @@
+﻿pyvista.Disc
+============
+
+.. currentmodule:: pyvista
+
+.. autofunction:: Disc

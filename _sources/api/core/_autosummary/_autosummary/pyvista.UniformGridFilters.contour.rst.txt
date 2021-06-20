@@ -1,0 +1,6 @@
+pyvista.UniformGridFilters.contour
+==================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: UniformGridFilters.contour

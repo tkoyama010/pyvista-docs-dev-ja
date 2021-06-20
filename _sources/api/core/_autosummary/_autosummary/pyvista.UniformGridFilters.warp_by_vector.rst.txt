@@ -1,0 +1,6 @@
+pyvista.UniformGridFilters.warp\_by\_vector
+===========================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: UniformGridFilters.warp_by_vector

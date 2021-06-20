@@ -1,0 +1,6 @@
+pyvista.Plotter.save\_graphic
+=============================
+
+.. currentmodule:: pyvista
+
+.. automethod:: Plotter.save_graphic

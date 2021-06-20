@@ -1,0 +1,6 @@
+﻿pyvista.Line
+============
+
+.. currentmodule:: pyvista
+
+.. autofunction:: Line

@@ -1,0 +1,6 @@
+pyvista.WidgetHelper.add\_plane\_widget
+=======================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: WidgetHelper.add_plane_widget

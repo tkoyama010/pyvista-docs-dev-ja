@@ -1,0 +1,6 @@
+pyvista.BasePlotter.enable\_anti\_aliasing
+==========================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.enable_anti_aliasing

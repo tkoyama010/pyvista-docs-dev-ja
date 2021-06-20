@@ -1,0 +1,6 @@
+﻿pyvista.Wavelet
+===============
+
+.. currentmodule:: pyvista
+
+.. autofunction:: Wavelet

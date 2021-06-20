@@ -1,0 +1,6 @@
+pyvista.BasePlotter.render
+==========================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.render

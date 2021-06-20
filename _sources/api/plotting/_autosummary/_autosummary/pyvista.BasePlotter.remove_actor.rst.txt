@@ -1,0 +1,6 @@
+pyvista.BasePlotter.remove\_actor
+=================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.remove_actor

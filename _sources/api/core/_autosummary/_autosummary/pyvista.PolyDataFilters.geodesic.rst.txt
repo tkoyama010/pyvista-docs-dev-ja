@@ -1,0 +1,6 @@
+pyvista.PolyDataFilters.geodesic
+================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: PolyDataFilters.geodesic

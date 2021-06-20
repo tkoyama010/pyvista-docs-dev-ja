@@ -1,0 +1,6 @@
+pyvista.BasePlotter.store\_image
+================================
+
+.. currentmodule:: pyvista
+
+.. autoproperty:: BasePlotter.store_image

@@ -1,0 +1,6 @@
+pyvista.UniformGridFilters.split\_bodies
+========================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: UniformGridFilters.split_bodies

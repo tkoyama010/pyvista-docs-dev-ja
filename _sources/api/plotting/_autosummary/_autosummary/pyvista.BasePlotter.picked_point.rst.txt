@@ -1,0 +1,6 @@
+pyvista.BasePlotter.picked\_point
+=================================
+
+.. currentmodule:: pyvista
+
+.. autoattribute:: BasePlotter.picked_point

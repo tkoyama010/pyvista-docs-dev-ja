@@ -1,0 +1,6 @@
+pyvista.UnstructuredGridFilters.outline\_corners
+================================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: UnstructuredGridFilters.outline_corners

@@ -1,0 +1,6 @@
+pyvista.BasePlotter.export\_vtkjs
+=================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.export_vtkjs

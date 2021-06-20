@@ -1,0 +1,6 @@
+pyvista.Renderer.disable\_parallel\_projection
+==============================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: Renderer.disable_parallel_projection

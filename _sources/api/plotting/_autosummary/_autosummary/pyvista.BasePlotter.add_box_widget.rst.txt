@@ -1,0 +1,6 @@
+pyvista.BasePlotter.add\_box\_widget
+====================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.add_box_widget

@@ -1,0 +1,6 @@
+pyvista.DataSetFilters.extract\_cells
+=====================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: DataSetFilters.extract_cells

@@ -1,0 +1,6 @@
+pyvista.BasePlotter.disable\_3\_lights
+======================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.disable_3_lights

@@ -1,0 +1,6 @@
+pyvista.BasePlotter.show\_bounds
+================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.show_bounds

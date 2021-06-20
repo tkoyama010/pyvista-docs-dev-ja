@@ -1,0 +1,6 @@
+pyvista.Renderer.center
+=======================
+
+.. currentmodule:: pyvista
+
+.. autoproperty:: Renderer.center

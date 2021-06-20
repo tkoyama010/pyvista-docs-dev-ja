@@ -1,0 +1,6 @@
+pyvista.UnstructuredGridFilters.plot\_over\_circular\_arc
+=========================================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: UnstructuredGridFilters.plot_over_circular_arc

@@ -1,0 +1,6 @@
+pyvista.DataSetFilters.extract\_geometry
+========================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: DataSetFilters.extract_geometry

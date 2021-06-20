@@ -1,0 +1,6 @@
+pyvista.BasePlotter.set\_scale
+==============================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.set_scale

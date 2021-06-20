@@ -1,0 +1,6 @@
+pyvista.BasePlotter.hide\_axes
+==============================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.hide_axes

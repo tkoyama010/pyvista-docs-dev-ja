@@ -1,0 +1,6 @@
+pyvista.DataSetFilters.sample
+=============================
+
+.. currentmodule:: pyvista
+
+.. automethod:: DataSetFilters.sample

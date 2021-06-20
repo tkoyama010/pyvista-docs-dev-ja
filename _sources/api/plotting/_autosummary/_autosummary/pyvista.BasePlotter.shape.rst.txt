@@ -1,0 +1,6 @@
+pyvista.BasePlotter.shape
+=========================
+
+.. currentmodule:: pyvista
+
+.. autoproperty:: BasePlotter.shape

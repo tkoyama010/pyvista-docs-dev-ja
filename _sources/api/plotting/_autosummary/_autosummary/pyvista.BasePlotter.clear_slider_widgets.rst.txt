@@ -1,0 +1,6 @@
+pyvista.BasePlotter.clear\_slider\_widgets
+==========================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.clear_slider_widgets

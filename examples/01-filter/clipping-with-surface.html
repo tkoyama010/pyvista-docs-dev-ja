@@ -104,7 +104,7 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../api.html">
+ <a class="reference internal nav-link" href="../../api/index.html">
   APIリファレンス
  </a>
 </li>
@@ -942,7 +942,7 @@ to download the full example code</p>
 </div>
 <div class="sphx-glr-example-title section" id="clipping-with-a-surface">
 <span id="sphx-glr-examples-01-filter-clipping-with-surface-py"></span><h1>サーフェスを使用したクリップ<a class="headerlink" href="#clipping-with-a-surface" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p><a class="reference internal" href="../../core/filters.html#pyvista.DataSetFilters.clip_surface" title="pyvista.DataSetFilters.clip_surface"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.clip_surface()</span></code></a> フィルタを使用して <a class="reference internal" href="../../core/points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> サーフェスメッシュによってPyVistaデータセットをクリップします．</p>
+<p><a class="reference internal" href="../../api/core/_autosummary/_autosummary/pyvista.DataSetFilters.clip_surface.html#pyvista.DataSetFilters.clip_surface" title="pyvista.DataSetFilters.clip_surface"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.clip_surface()</span></code></a> フィルタを使用して <a class="reference internal" href="../../api/core/points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> サーフェスメッシュによってPyVistaデータセットをクリップします．</p>
 <p>最初に，暗黙的な距離を計算してメッシュを閾値設定することにより，クリッピングを実行する方法を説明します．このしきい値設定は，サーフェスでクリップし，指定されたメッシュの元のジオメトリを保持する1つの方法ですが，多くのユーザは <code class="docutils literal notranslate"><span class="pre">clip_surface</span></code> フィルタを利用して，クリップに沿ってメッシュジオメトリを三角形化/面分割します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 4</span>
 <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
@@ -974,7 +974,7 @@ to download the full example code</p>
  (0.0, 0.0, 1.0)]
 </pre></div>
 </div>
-<p><a class="reference internal" href="../../core/filters.html#pyvista.DataSetFilters.compute_implicit_distance" title="pyvista.DataSetFilters.compute_implicit_distance"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.compute_implicit_distance()</span></code></a> フィルタを使用してサーフェスクリッピングを実行する際に使用される暗黙的な関数を確認してください． <code class="docutils literal notranslate"><span class="pre">implicit_distance</span></code> フィールドが0であるクリッピング操作フィールドが実行され， <code class="docutils literal notranslate"><span class="pre">invert</span></code> フラグが0のどちら側を保持するかを制御します．</p>
+<p><a class="reference internal" href="../../api/core/_autosummary/_autosummary/pyvista.DataSetFilters.compute_implicit_distance.html#pyvista.DataSetFilters.compute_implicit_distance" title="pyvista.DataSetFilters.compute_implicit_distance"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.compute_implicit_distance()</span></code></a> フィルタを使用してサーフェスクリッピングを実行する際に使用される暗黙的な関数を確認してください． <code class="docutils literal notranslate"><span class="pre">implicit_distance</span></code> フィールドが0であるクリッピング操作フィールドが実行され， <code class="docutils literal notranslate"><span class="pre">invert</span></code> フラグが0のどちら側を保持するかを制御します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span><span class="o">.</span><span class="n">compute_implicit_distance</span><span class="p">(</span><span class="n">surface</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="n">inner</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">threshold</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">scalars</span><span class="o">=</span><span class="s2">&quot;implicit_distance&quot;</span><span class="p">,</span> <span class="n">invert</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -1012,7 +1012,7 @@ to download the full example code</p>
  (0.0, 0.0, 1.0)]
 </pre></div>
 </div>
-<p><a class="reference internal" href="../../core/filters.html#pyvista.DataSetFilters.clip_surface" title="pyvista.DataSetFilters.clip_surface"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.clip_surface()</span></code></a> フィルタを介して <a class="reference internal" href="../../core/points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> サーフェスメッシュを使用して，直線グリッドデータセットをクリップします．これにより，クリップに沿ってメッシュジオメトリが三角形化/面分割されます．</p>
+<p><a class="reference internal" href="../../api/core/_autosummary/_autosummary/pyvista.DataSetFilters.clip_surface.html#pyvista.DataSetFilters.clip_surface" title="pyvista.DataSetFilters.clip_surface"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.clip_surface()</span></code></a> フィルタを介して <a class="reference internal" href="../../api/core/points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> サーフェスメッシュを使用して，直線グリッドデータセットをクリップします．これにより，クリップに沿ってメッシュジオメトリが三角形化/面分割されます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">clipped</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">clip_surface</span><span class="p">(</span><span class="n">surface</span><span class="p">,</span> <span class="n">invert</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 <span class="c1"># Visualize the results</span>
@@ -1031,7 +1031,7 @@ to download the full example code</p>
  (0.0, 0.0, 1.0)]
 </pre></div>
 </div>
-<p>次に，サーフェスでメッシュをクリップする別の例を示します．今回は，地形サーフェスの周囲に <a class="reference internal" href="../../core/grids.html#pyvista.UniformGrid" title="pyvista.UniformGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UniformGrid</span></code></a> を生成し，サーフェスを使用してグリッドをクリップして，サーフェスの閉じた3 Dモデルを作成します．</p>
+<p>次に，サーフェスでメッシュをクリップする別の例を示します．今回は，地形サーフェスの周囲に <a class="reference internal" href="../../api/core/grids.html#pyvista.UniformGrid" title="pyvista.UniformGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UniformGrid</span></code></a> を生成し，サーフェスを使用してグリッドをクリップして，サーフェスの閉じた3 Dモデルを作成します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">surface</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_random_hills</span><span class="p">()</span>
 
 <span class="c1"># Create a grid around that surface</span>

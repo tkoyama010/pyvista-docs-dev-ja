@@ -1,0 +1,6 @@
+pyvista.BasePlotter.clear\_button\_widgets
+==========================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.clear_button_widgets

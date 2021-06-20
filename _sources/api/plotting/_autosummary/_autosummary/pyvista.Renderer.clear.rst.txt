@@ -1,0 +1,6 @@
+pyvista.Renderer.clear
+======================
+
+.. currentmodule:: pyvista
+
+.. automethod:: Renderer.clear

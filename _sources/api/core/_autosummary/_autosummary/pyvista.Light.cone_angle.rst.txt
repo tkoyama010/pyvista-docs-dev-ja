@@ -1,0 +1,6 @@
+pyvista.Light.cone\_angle
+=========================
+
+.. currentmodule:: pyvista
+
+.. autoproperty:: Light.cone_angle

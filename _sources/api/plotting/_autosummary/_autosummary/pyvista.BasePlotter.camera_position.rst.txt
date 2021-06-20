@@ -1,0 +1,6 @@
+pyvista.BasePlotter.camera\_position
+====================================
+
+.. currentmodule:: pyvista
+
+.. autoproperty:: BasePlotter.camera_position

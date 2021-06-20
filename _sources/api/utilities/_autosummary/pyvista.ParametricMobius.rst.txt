@@ -1,0 +1,6 @@
+﻿pyvista.ParametricMobius
+========================
+
+.. currentmodule:: pyvista
+
+.. autofunction:: ParametricMobius

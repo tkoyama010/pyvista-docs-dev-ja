@@ -1,0 +1,6 @@
+pyvista.BasePlotter.store\_click\_position
+==========================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.store_click_position

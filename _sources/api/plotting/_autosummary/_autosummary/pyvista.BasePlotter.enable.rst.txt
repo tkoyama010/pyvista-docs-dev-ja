@@ -1,0 +1,6 @@
+pyvista.BasePlotter.enable
+==========================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.enable

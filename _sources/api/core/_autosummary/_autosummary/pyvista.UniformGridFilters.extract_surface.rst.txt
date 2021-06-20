@@ -1,0 +1,6 @@
+pyvista.UniformGridFilters.extract\_surface
+===========================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: UniformGridFilters.extract_surface

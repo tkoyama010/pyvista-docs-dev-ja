@@ -1,0 +1,6 @@
+pyvista.PolyDataFilters.contour
+===============================
+
+.. currentmodule:: pyvista
+
+.. automethod:: PolyDataFilters.contour

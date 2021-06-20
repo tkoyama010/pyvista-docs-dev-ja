@@ -1,0 +1,6 @@
+pyvista.DataSetFilters.outline
+==============================
+
+.. currentmodule:: pyvista
+
+.. automethod:: DataSetFilters.outline

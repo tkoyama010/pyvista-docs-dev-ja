@@ -1,0 +1,6 @@
+pyvista.DataSetFilters.compute\_derivative
+==========================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: DataSetFilters.compute_derivative

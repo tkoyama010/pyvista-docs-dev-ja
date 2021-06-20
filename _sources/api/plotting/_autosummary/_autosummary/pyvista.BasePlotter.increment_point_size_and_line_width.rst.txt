@@ -1,0 +1,6 @@
+pyvista.BasePlotter.increment\_point\_size\_and\_line\_width
+============================================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.increment_point_size_and_line_width

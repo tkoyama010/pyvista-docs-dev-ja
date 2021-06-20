@@ -1,0 +1,6 @@
+pyvista.UniformGridFilters.clip\_surface
+========================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: UniformGridFilters.clip_surface

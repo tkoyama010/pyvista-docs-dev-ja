@@ -1,0 +1,6 @@
+pyvista.Plotter.add\_checkbox\_button\_widget
+=============================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: Plotter.add_checkbox_button_widget

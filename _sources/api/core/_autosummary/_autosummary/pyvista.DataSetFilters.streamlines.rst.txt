@@ -1,0 +1,6 @@
+pyvista.DataSetFilters.streamlines
+==================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: DataSetFilters.streamlines

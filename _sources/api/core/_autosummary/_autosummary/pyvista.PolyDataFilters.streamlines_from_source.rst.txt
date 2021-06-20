@@ -1,0 +1,6 @@
+pyvista.PolyDataFilters.streamlines\_from\_source
+=================================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: PolyDataFilters.streamlines_from_source

@@ -1,0 +1,6 @@
+pyvista.PolyDataFilters.plot\_boundaries
+========================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: PolyDataFilters.plot_boundaries

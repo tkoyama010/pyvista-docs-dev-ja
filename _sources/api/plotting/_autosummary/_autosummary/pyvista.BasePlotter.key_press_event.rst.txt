@@ -1,0 +1,6 @@
+pyvista.BasePlotter.key\_press\_event
+=====================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.key_press_event

@@ -1,0 +1,6 @@
+pyvista.WidgetHelper.close
+==========================
+
+.. currentmodule:: pyvista
+
+.. automethod:: WidgetHelper.close

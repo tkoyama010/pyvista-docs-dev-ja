@@ -1,0 +1,6 @@
+pyvista.BasePlotter.reset\_key\_events
+======================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.reset_key_events

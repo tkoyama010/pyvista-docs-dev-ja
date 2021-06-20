@@ -104,7 +104,7 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../api.html">
+ <a class="reference internal nav-link" href="../../api/index.html">
   APIリファレンス
  </a>
 </li>
@@ -949,7 +949,7 @@ to download the full example code</p>
 <span class="kn">import</span> <span class="nn">os</span>
 </pre></div>
 </div>
-<p>いくつかのファイルに分割された <a class="reference internal" href="../../core/point-grids.html#pyvista.UnstructuredGrid" title="pyvista.UnstructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UnstructuredGrid</span></code></a> を含むサンプルデータセットをダウンロードしてみましょう．</p>
+<p>いくつかのファイルに分割された <a class="reference internal" href="../../api/core/point-grids.html#pyvista.UnstructuredGrid" title="pyvista.UnstructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UnstructuredGrid</span></code></a> を含むサンプルデータセットをダウンロードしてみましょう．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Do not capture output because we&#39;ll demo how to read the file</span>
 <span class="n">examples</span><span class="o">.</span><span class="n">download_blood_vessels</span><span class="p">()</span>
 </pre></div>
@@ -979,7 +979,7 @@ to download the full example code</p>
 </td></tr> </table>
 </div>
 <br />
-<br /><p>上記のコードは，血管メッシュの並列ファイルのセットを含むデータセットをダウンロードし， <a class="reference internal" href="../../core/point-grids.html#pyvista.UnstructuredGrid" title="pyvista.UnstructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UnstructuredGrid</span></code></a> を返しました - 私たちは，これらのタイプのファイルの使用方法をデモできるように，そのUnstructuredGridを取得しませんでした．</p>
+<br /><p>上記のコードは，血管メッシュの並列ファイルのセットを含むデータセットをダウンロードし， <a class="reference internal" href="../../api/core/point-grids.html#pyvista.UnstructuredGrid" title="pyvista.UnstructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UnstructuredGrid</span></code></a> を返しました - 私たちは，これらのタイプのファイルの使用方法をデモできるように，そのUnstructuredGridを取得しませんでした．</p>
 <p>これがデータセットをダウンロードした場所を調べてみましょう:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">pv</span><span class="o">.</span><span class="n">EXAMPLES_PATH</span><span class="p">,</span> <span class="s2">&quot;blood_vessels&quot;</span><span class="p">)</span>
 <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>

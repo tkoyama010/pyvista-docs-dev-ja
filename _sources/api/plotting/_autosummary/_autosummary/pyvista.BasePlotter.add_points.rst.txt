@@ -1,0 +1,6 @@
+pyvista.BasePlotter.add\_points
+===============================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.add_points

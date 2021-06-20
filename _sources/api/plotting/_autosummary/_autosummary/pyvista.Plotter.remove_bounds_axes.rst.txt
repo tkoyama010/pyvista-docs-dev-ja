@@ -1,0 +1,6 @@
+pyvista.Plotter.remove\_bounds\_axes
+====================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: Plotter.remove_bounds_axes

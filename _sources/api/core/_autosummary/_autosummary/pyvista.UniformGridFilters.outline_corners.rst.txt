@@ -1,0 +1,6 @@
+pyvista.UniformGridFilters.outline\_corners
+===========================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: UniformGridFilters.outline_corners

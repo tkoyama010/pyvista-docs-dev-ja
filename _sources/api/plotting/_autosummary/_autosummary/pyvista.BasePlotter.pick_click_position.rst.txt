@@ -1,0 +1,6 @@
+pyvista.BasePlotter.pick\_click\_position
+=========================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.pick_click_position

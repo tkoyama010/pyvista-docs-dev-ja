@@ -1,0 +1,6 @@
+﻿pyvista.ParametricKlein
+=======================
+
+.. currentmodule:: pyvista
+
+.. autofunction:: ParametricKlein

@@ -104,7 +104,7 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../api.html">
+ <a class="reference internal nav-link" href="../../api/index.html">
   APIリファレンス
  </a>
 </li>
@@ -943,7 +943,7 @@ to download the full example code</p>
 <div class="sphx-glr-example-title section" id="physically-based-rendering">
 <span id="sphx-glr-examples-02-plot-pbr-py"></span><h1>物理ベースのレンダリング<a class="headerlink" href="#physically-based-rendering" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>VTK9は物理ベースレンダリング(PBR)を導入しており，その機能をPyVistaで公開しています．詳細については <a class="reference external" href="https://blog.kitware.com/vtk-pbr/">blog about PBR</a> をお読みください．</p>
-<p>PBRは <a class="reference internal" href="../../core/points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> に対してのみサポートされており， <code class="docutils literal notranslate"><span class="pre">add_mesh</span></code> の <code class="docutils literal notranslate"><span class="pre">pbr</span></code> キーワード引数を介して起動できます．また， <code class="docutils literal notranslate"><span class="pre">metallic</span></code> および <code class="docutils literal notranslate"><span class="pre">roughness</span></code> 引数を使用してさらに制御できます．</p>
+<p>PBRは <a class="reference internal" href="../../api/core/points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> に対してのみサポートされており， <code class="docutils literal notranslate"><span class="pre">add_mesh</span></code> の <code class="docutils literal notranslate"><span class="pre">pbr</span></code> キーワード引数を介して起動できます．また， <code class="docutils literal notranslate"><span class="pre">metallic</span></code> および <code class="docutils literal notranslate"><span class="pre">roughness</span></code> 引数を使用してさらに制御できます．</p>
 <p>この機能を，彫像の高品質メッシュを金属のようにレンダリングすることで示しましょう．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>

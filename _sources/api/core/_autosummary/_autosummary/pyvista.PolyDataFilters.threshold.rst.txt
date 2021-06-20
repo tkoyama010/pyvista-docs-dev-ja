@@ -1,0 +1,6 @@
+pyvista.PolyDataFilters.threshold
+=================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: PolyDataFilters.threshold

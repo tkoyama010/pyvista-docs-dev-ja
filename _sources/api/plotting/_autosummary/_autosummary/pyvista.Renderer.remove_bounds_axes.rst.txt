@@ -1,0 +1,6 @@
+pyvista.Renderer.remove\_bounds\_axes
+=====================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: Renderer.remove_bounds_axes

@@ -1,0 +1,6 @@
+pyvista.BasePlotter.disable\_depth\_peeling
+===========================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.disable_depth_peeling

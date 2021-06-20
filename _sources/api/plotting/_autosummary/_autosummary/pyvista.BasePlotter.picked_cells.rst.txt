@@ -1,0 +1,6 @@
+pyvista.BasePlotter.picked\_cells
+=================================
+
+.. currentmodule:: pyvista
+
+.. autoattribute:: BasePlotter.picked_cells

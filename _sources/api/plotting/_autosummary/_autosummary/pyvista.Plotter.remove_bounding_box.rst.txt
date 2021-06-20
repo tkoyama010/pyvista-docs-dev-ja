@@ -1,0 +1,6 @@
+pyvista.Plotter.remove\_bounding\_box
+=====================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: Plotter.remove_bounding_box

@@ -1,0 +1,6 @@
+pyvista.BasePlotter.remove\_bounds\_axes
+========================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.remove_bounds_axes

@@ -104,7 +104,7 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../api.html">
+ <a class="reference internal nav-link" href="../../api/index.html">
   APIリファレンス
  </a>
 </li>
@@ -980,7 +980,7 @@ to download the full example code</p>
        [ 3.72150434e+00,  2.30906573e+00, -1.83838384e+00]])
 </pre></div>
 </div>
-<p>ここで， <a class="reference internal" href="../../core/points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> メッシュ上にラインセルを作成できる関数を作成しましょう．</p>
+<p>ここで， <a class="reference internal" href="../../api/core/points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> メッシュ上にラインセルを作成できる関数を作成しましょう．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">lines_from_points</span><span class="p">(</span><span class="n">points</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Given an array of points, make a line set&quot;&quot;&quot;</span>
     <span class="n">poly</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">PolyData</span><span class="p">()</span>
@@ -1081,7 +1081,7 @@ to download the full example code</p>
 </div>
 <div class="section" id="ribbons">
 <h2>リボン<a class="headerlink" href="#ribbons" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>上記の例の線のAyyを使用してリボンを作成できます． <a class="reference internal" href="../../core/filters.html#pyvista.PolyDataFilters.ribbon" title="pyvista.PolyDataFilters.ribbon"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.ribbon()</span></code></a> フィルタを見てください．</p>
+<p>上記の例の線のAyyを使用してリボンを作成できます． <a class="reference internal" href="../../api/core/_autosummary/_autosummary/pyvista.PolyDataFilters.ribbon.html#pyvista.PolyDataFilters.ribbon" title="pyvista.PolyDataFilters.ribbon"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.ribbon()</span></code></a> フィルタを見てください．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ribbon</span> <span class="o">=</span> <span class="n">spline</span><span class="o">.</span><span class="n">compute_arc_length</span><span class="p">()</span><span class="o">.</span><span class="n">ribbon</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span> <span class="n">scalars</span><span class="o">=</span><span class="s1">&#39;arc_length&#39;</span><span class="p">)</span>
 <span class="n">ribbon</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>

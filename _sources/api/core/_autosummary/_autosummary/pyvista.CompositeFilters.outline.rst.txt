@@ -1,0 +1,6 @@
+pyvista.CompositeFilters.outline
+================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: CompositeFilters.outline

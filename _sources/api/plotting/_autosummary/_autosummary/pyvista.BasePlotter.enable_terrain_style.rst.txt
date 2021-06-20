@@ -1,0 +1,6 @@
+pyvista.BasePlotter.enable\_terrain\_style
+==========================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.enable_terrain_style

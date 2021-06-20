@@ -1,0 +1,6 @@
+﻿pyvista.CircularArc
+===================
+
+.. currentmodule:: pyvista
+
+.. autofunction:: CircularArc

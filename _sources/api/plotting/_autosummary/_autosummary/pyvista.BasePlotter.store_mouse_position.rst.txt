@@ -1,0 +1,6 @@
+pyvista.BasePlotter.store\_mouse\_position
+==========================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.store_mouse_position

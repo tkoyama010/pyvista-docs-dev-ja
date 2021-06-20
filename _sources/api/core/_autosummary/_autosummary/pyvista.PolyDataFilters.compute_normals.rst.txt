@@ -1,0 +1,6 @@
+pyvista.PolyDataFilters.compute\_normals
+========================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: PolyDataFilters.compute_normals

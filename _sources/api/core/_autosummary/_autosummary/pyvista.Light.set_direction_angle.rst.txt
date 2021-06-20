@@ -1,0 +1,6 @@
+pyvista.Light.set\_direction\_angle
+===================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: Light.set_direction_angle

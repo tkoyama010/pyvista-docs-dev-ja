@@ -1,0 +1,6 @@
+pyvista.BasePlotter.enable\_rubber\_band\_2d\_style
+===================================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.enable_rubber_band_2d_style

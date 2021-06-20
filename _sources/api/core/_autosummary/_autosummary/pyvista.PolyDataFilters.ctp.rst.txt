@@ -1,0 +1,6 @@
+pyvista.PolyDataFilters.ctp
+===========================
+
+.. currentmodule:: pyvista
+
+.. automethod:: PolyDataFilters.ctp

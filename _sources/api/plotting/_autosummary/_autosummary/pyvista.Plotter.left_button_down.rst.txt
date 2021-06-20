@@ -1,0 +1,6 @@
+pyvista.Plotter.left\_button\_down
+==================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: Plotter.left_button_down

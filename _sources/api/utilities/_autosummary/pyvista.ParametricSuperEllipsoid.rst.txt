@@ -1,0 +1,6 @@
+﻿pyvista.ParametricSuperEllipsoid
+================================
+
+.. currentmodule:: pyvista
+
+.. autofunction:: ParametricSuperEllipsoid

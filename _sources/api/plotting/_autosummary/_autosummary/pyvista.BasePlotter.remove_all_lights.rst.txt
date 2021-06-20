@@ -1,0 +1,6 @@
+pyvista.BasePlotter.remove\_all\_lights
+=======================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.remove_all_lights

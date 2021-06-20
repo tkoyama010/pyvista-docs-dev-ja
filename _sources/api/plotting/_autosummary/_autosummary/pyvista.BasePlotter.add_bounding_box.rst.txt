@@ -1,0 +1,6 @@
+pyvista.BasePlotter.add\_bounding\_box
+======================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.add_bounding_box

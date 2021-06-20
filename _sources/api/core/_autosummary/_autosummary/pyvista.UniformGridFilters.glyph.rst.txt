@@ -1,0 +1,6 @@
+pyvista.UniformGridFilters.glyph
+================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: UniformGridFilters.glyph

@@ -1,0 +1,6 @@
+pyvista.UnstructuredGridFilters.decimate\_boundary
+==================================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: UnstructuredGridFilters.decimate_boundary

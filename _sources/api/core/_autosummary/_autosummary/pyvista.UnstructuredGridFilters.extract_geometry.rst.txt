@@ -1,0 +1,6 @@
+pyvista.UnstructuredGridFilters.extract\_geometry
+=================================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: UnstructuredGridFilters.extract_geometry

@@ -1,0 +1,6 @@
+pyvista.Renderer.set\_scale
+===========================
+
+.. currentmodule:: pyvista
+
+.. automethod:: Renderer.set_scale

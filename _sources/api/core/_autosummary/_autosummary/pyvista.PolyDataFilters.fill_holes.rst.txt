@@ -1,0 +1,6 @@
+pyvista.PolyDataFilters.fill\_holes
+===================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: PolyDataFilters.fill_holes

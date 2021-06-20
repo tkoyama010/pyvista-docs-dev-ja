@@ -1,0 +1,6 @@
+pyvista.CompositeFilters.slice\_orthogonal
+==========================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: CompositeFilters.slice_orthogonal

@@ -1,0 +1,6 @@
+pyvista.PolyDataFilters.plot\_over\_line
+========================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: PolyDataFilters.plot_over_line

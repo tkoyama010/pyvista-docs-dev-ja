@@ -1,0 +1,6 @@
+pyvista.DataSetFilters.clip\_scalar
+===================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: DataSetFilters.clip_scalar

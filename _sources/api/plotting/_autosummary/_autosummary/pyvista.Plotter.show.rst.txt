@@ -1,0 +1,6 @@
+pyvista.Plotter.show
+====================
+
+.. currentmodule:: pyvista
+
+.. automethod:: Plotter.show

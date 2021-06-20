@@ -1,0 +1,6 @@
+pyvista.PolyDataFilters.sample\_over\_line
+==========================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: PolyDataFilters.sample_over_line

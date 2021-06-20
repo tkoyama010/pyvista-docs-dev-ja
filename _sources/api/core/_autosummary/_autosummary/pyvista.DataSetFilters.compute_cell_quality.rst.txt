@@ -1,0 +1,6 @@
+pyvista.DataSetFilters.compute\_cell\_quality
+=============================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: DataSetFilters.compute_cell_quality

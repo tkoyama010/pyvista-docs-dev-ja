@@ -1,0 +1,6 @@
+pyvista.BasePlotter.clear\_line\_widgets
+========================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.clear_line_widgets

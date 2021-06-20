@@ -1,0 +1,6 @@
+pyvista.DataSetFilters.texture\_map\_to\_plane
+==============================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: DataSetFilters.texture_map_to_plane

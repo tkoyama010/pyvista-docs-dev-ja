@@ -1,0 +1,6 @@
+pyvista.Plotter.set\_position
+=============================
+
+.. currentmodule:: pyvista
+
+.. automethod:: Plotter.set_position

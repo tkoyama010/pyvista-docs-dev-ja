@@ -1,0 +1,6 @@
+pyvista.BasePlotter.show\_grid
+==============================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.show_grid

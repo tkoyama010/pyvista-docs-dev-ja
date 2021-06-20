@@ -1,0 +1,6 @@
+pyvista.BasePlotter.isometric\_view
+===================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.isometric_view

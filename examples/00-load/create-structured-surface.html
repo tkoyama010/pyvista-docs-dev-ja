@@ -104,7 +104,7 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../api.html">
+ <a class="reference internal nav-link" href="../../api/index.html">
   APIリファレンス
  </a>
 </li>
@@ -1052,7 +1052,7 @@ to download the full example code</p>
 </pre></div>
 </div>
 <p>ここで，上記の(n x 3インチ) NumPy配列がXYZ点の3列のファイルから取得した座標であると仮定します．</p>
-<p>単にこれらの点が作るグリッドの寸法を回復する必要があり，それから <a class="reference internal" href="../../core/point-grids.html#pyvista.StructuredGrid" title="pyvista.StructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.StructuredGrid</span></code></a> メッシュを生成することができます．</p>
+<p>単にこれらの点が作るグリッドの寸法を回復する必要があり，それから <a class="reference internal" href="../../api/core/point-grids.html#pyvista.StructuredGrid" title="pyvista.StructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.StructuredGrid</span></code></a> メッシュを生成することができます．</p>
 <p>ポイントをプレビューして，処理対象を確認します:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
@@ -1093,8 +1093,8 @@ to download the full example code</p>
 </div>
 <div class="section" id="extending-a-2d-structuredgrid-to-3d">
 <h2>2 D構造グリッドを3 Dに拡張します<a class="headerlink" href="#extending-a-2d-structuredgrid-to-3d" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>A 2 D <a class="reference internal" href="../../core/point-grids.html#pyvista.StructuredGrid" title="pyvista.StructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.StructuredGrid</span></code></a> のメッシュは，3 Dメッシュに拡張できます．これは，地球科学の研究アプリケーションでメッシュに沿った地形を作成する場合に非常に適しています．</p>
-<p>たとえば，地形サーフェスの <a class="reference internal" href="../../core/point-grids.html#pyvista.StructuredGrid" title="pyvista.StructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.StructuredGrid</span></code></a> を作成し，そのサーフェスをいくつかの異なるレベルまで延長し，各 &quot;レベル&quot; を接続して，メッシュに沿って3 D地形を作成できます．</p>
+<p>A 2 D <a class="reference internal" href="../../api/core/point-grids.html#pyvista.StructuredGrid" title="pyvista.StructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.StructuredGrid</span></code></a> のメッシュは，3 Dメッシュに拡張できます．これは，地球科学の研究アプリケーションでメッシュに沿った地形を作成する場合に非常に適しています．</p>
+<p>たとえば，地形サーフェスの <a class="reference internal" href="../../api/core/point-grids.html#pyvista.StructuredGrid" title="pyvista.StructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.StructuredGrid</span></code></a> を作成し，そのサーフェスをいくつかの異なるレベルまで延長し，各 &quot;レベル&quot; を接続して，メッシュに沿って3 D地形を作成できます．</p>
 <p>まず簡単な例として，ウェーブメッシュを3 Dに拡張します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">struct</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_structured</span><span class="p">()</span>
 <span class="n">struct</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>

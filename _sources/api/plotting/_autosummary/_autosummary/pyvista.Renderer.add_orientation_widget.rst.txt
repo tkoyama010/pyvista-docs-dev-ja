@@ -1,0 +1,6 @@
+pyvista.Renderer.add\_orientation\_widget
+=========================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: Renderer.add_orientation_widget

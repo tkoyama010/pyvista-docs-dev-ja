@@ -1,0 +1,6 @@
+pyvista.DataSetFilters.ptc
+==========================
+
+.. currentmodule:: pyvista
+
+.. automethod:: DataSetFilters.ptc

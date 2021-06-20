@@ -1,0 +1,6 @@
+pyvista.Plotter.center
+======================
+
+.. currentmodule:: pyvista
+
+.. autoproperty:: Plotter.center

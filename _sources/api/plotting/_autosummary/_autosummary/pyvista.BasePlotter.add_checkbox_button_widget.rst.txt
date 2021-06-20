@@ -1,0 +1,6 @@
+pyvista.BasePlotter.add\_checkbox\_button\_widget
+=================================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.add_checkbox_button_widget

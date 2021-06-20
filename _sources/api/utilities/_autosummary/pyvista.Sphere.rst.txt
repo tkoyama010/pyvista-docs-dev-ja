@@ -1,0 +1,6 @@
+﻿pyvista.Sphere
+==============
+
+.. currentmodule:: pyvista
+
+.. autofunction:: Sphere

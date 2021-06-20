@@ -1,0 +1,6 @@
+pyvista.Plotter.set\_viewup
+===========================
+
+.. currentmodule:: pyvista
+
+.. automethod:: Plotter.set_viewup

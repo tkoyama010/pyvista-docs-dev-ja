@@ -1,0 +1,6 @@
+pyvista.BasePlotter.add\_floor
+==============================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.add_floor

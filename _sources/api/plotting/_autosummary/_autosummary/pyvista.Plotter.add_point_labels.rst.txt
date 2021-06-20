@@ -1,0 +1,6 @@
+pyvista.Plotter.add\_point\_labels
+==================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: Plotter.add_point_labels

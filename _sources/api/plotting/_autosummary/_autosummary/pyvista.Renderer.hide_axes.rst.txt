@@ -1,0 +1,6 @@
+pyvista.Renderer.hide\_axes
+===========================
+
+.. currentmodule:: pyvista
+
+.. automethod:: Renderer.hide_axes

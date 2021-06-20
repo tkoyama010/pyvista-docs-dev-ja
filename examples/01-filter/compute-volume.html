@@ -104,7 +104,7 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../api.html">
+ <a class="reference internal nav-link" href="../../api/index.html">
   APIリファレンス
  </a>
 </li>
@@ -963,7 +963,7 @@ to download the full example code</p>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 </pre></div>
 </div>
-<p>PyVistaでデータセットの体積や面積などの質量特性を計算するには，すべてのPyVistaメッシュで <a class="reference internal" href="../../core/filters.html#pyvista.DataSetFilters.compute_cell_sizes" title="pyvista.DataSetFilters.compute_cell_sizes"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.compute_cell_sizes()</span></code></a> フィルタと <a class="reference internal" href="../../core/dataset.html#pyvista.DataSet.volume" title="pyvista.DataSet.volume"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pyvista.DataSet.volume</span></code></a> プロパティを使用すると非常に簡単です．</p>
+<p>PyVistaでデータセットの体積や面積などの質量特性を計算するには，すべてのPyVistaメッシュで <a class="reference internal" href="../../api/core/_autosummary/_autosummary/pyvista.DataSetFilters.compute_cell_sizes.html#pyvista.DataSetFilters.compute_cell_sizes" title="pyvista.DataSetFilters.compute_cell_sizes"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.compute_cell_sizes()</span></code></a> フィルタと <a class="reference internal" href="../../api/core/dataset.html#pyvista.DataSet.volume" title="pyvista.DataSet.volume"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pyvista.DataSet.volume</span></code></a> プロパティを使用すると非常に簡単です．</p>
 <p>簡単なグリッドメッシュから始めましょう．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load a simple example mesh</span>
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_uniform</span><span class="p">()</span>
@@ -1044,7 +1044,7 @@ Original volume: 729.0
 <hr class="docutils" />
 <div class="section" id="splitting-volumes">
 <span id="split-vol-ref"></span><h2>ボリュームの分割<a class="headerlink" href="#splitting-volumes" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>その代わりに，上記のようなデータセットで，接続されているすべてのボディ/ボリュームを分割したいとしたらどうでしょうか． <a class="reference internal" href="../../core/filters.html#pyvista.DataSetFilters.split_bodies" title="pyvista.DataSetFilters.split_bodies"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.split_bodies()</span></code></a> フィルタを使用して，データセット内のすべての異なる接続ボリュームを <a class="reference internal" href="../../core/composite.html#pyvista.MultiBlock" title="pyvista.MultiBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.MultiBlock</span></code></a> データセット内のブロックに抽出することができます．たとえば，上記の例で，しきい値設定されたボリュームを分割します．</p>
+<p>その代わりに，上記のようなデータセットで，接続されているすべてのボディ/ボリュームを分割したいとしたらどうでしょうか． <a class="reference internal" href="../../api/core/_autosummary/_autosummary/pyvista.DataSetFilters.split_bodies.html#pyvista.DataSetFilters.split_bodies" title="pyvista.DataSetFilters.split_bodies"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.split_bodies()</span></code></a> フィルタを使用して，データセット内のすべての異なる接続ボリュームを <a class="reference internal" href="../../api/core/composite.html#pyvista.MultiBlock" title="pyvista.MultiBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.MultiBlock</span></code></a> データセット内のブロックに抽出することができます．たとえば，上記の例で，しきい値設定されたボリュームを分割します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load a simple example mesh</span>
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_uniform</span><span class="p">()</span>
 <span class="n">dataset</span><span class="o">.</span><span class="n">set_active_scalars</span><span class="p">(</span><span class="s2">&quot;Spatial Cell Data&quot;</span><span class="p">)</span>

@@ -104,7 +104,7 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../api.html">
+ <a class="reference internal nav-link" href="../../api/index.html">
   APIリファレンス
  </a>
 </li>
@@ -996,7 +996,7 @@ to download the full example code</p>
  (0.0, 0.0, 1.0)]
 </pre></div>
 </div>
-<p>しかし，データセットにテクスチャ座標がない場合はどうでしょうか．その後， <a class="reference internal" href="../../core/filters.html#pyvista.DataSetFilters.texture_map_to_plane" title="pyvista.DataSetFilters.texture_map_to_plane"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.texture_map_to_plane()</span></code></a> フィルタを利用して，イメージをデータセットのサーフェスに適切にマッピングできます．たとえば，同じレンガのイメージをカーブサーフェスにマップします．</p>
+<p>しかし，データセットにテクスチャ座標がない場合はどうでしょうか．その後， <a class="reference internal" href="../../api/core/_autosummary/_autosummary/pyvista.DataSetFilters.texture_map_to_plane.html#pyvista.DataSetFilters.texture_map_to_plane" title="pyvista.DataSetFilters.texture_map_to_plane"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.texture_map_to_plane()</span></code></a> フィルタを利用して，イメージをデータセットのサーフェスに適切にマッピングできます．たとえば，同じレンガのイメージをカーブサーフェスにマップします．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># create a structured surface</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">)</span>
@@ -1051,7 +1051,7 @@ to download the full example code</p>
 </div>
 <div class="section" id="textures-from-files">
 <h2>ファイルからのテクスチャ<a class="headerlink" href="#textures-from-files" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>イメージから独自のテクスチャをロードするのはどうでしょうか．これは多くの場合， <a class="reference internal" href="../../utilities/api-autogen/pyvista.read_texture.html#pyvista.read_texture" title="pyvista.read_texture"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.read_texture()</span></code></a> 関数を使用して最も簡単に行うことができます-単に画像ファイルのパスを渡すだけで，この関数はあなたが使用するために <code class="docutils literal notranslate"><span class="pre">vtkTexture</span></code> を作るハンドルを持っています．</p>
+<p>イメージから独自のテクスチャをロードするのはどうでしょうか．これは多くの場合， <a class="reference internal" href="../../api/utilities/_autosummary/pyvista.read_texture.html#pyvista.read_texture" title="pyvista.read_texture"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.read_texture()</span></code></a> 関数を使用して最も簡単に行うことができます-単に画像ファイルのパスを渡すだけで，この関数はあなたが使用するために <code class="docutils literal notranslate"><span class="pre">vtkTexture</span></code> を作るハンドルを持っています．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">image_file</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">mapfile</span>
 <span class="n">tex</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">read_texture</span><span class="p">(</span><span class="n">image_file</span><span class="p">)</span>
 <span class="n">curvsurf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">texture</span><span class="o">=</span><span class="n">tex</span><span class="p">)</span>
@@ -1067,7 +1067,7 @@ to download the full example code</p>
 </div>
 <div class="section" id="numpy-arrays-as-textures">
 <h2>テクスチャとしてのNumPy配列<a class="headerlink" href="#numpy-arrays-as-textures" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>プログラムで作成されたイメージを使用したい場合? <a class="reference internal" href="../../core/grids.html#pyvista.UniformGrid" title="pyvista.UniformGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UniformGrid</span></code></a> オブジェクトは <a class="reference internal" href="../../utilities/api-autogen/pyvista.image_to_texture.html#pyvista.image_to_texture" title="pyvista.image_to_texture"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.image_to_texture()</span></code></a> を使用してテクスチャに変換でき，3 D NumPy (X x Y，RGB)配列は <a class="reference internal" href="../../utilities/api-autogen/pyvista.numpy_to_texture.html#pyvista.numpy_to_texture" title="pyvista.numpy_to_texture"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.numpy_to_texture()</span></code></a>  を使用してテクスチャに変換できます．</p>
+<p>プログラムで作成されたイメージを使用したい場合? <a class="reference internal" href="../../api/core/grids.html#pyvista.UniformGrid" title="pyvista.UniformGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UniformGrid</span></code></a> オブジェクトは <a class="reference internal" href="../../api/utilities/_autosummary/pyvista.image_to_texture.html#pyvista.image_to_texture" title="pyvista.image_to_texture"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.image_to_texture()</span></code></a> を使用してテクスチャに変換でき，3 D NumPy (X x Y，RGB)配列は <a class="reference internal" href="../../api/utilities/_autosummary/pyvista.numpy_to_texture.html#pyvista.numpy_to_texture" title="pyvista.numpy_to_texture"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.numpy_to_texture()</span></code></a>  を使用してテクスチャに変換できます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># create an image using numpy,</span>
 <span class="n">xx</span><span class="p">,</span> <span class="n">yy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
 <span class="n">A</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">100</span>
@@ -1097,7 +1097,7 @@ to download the full example code</p>
 </div>
 <div class="section" id="textures-with-transparency">
 <h2>透明度のあるテクスチャ<a class="headerlink" href="#textures-with-transparency" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>テクスチャでは，ピクセル単位の不透明度値も指定できます．画像は0 [透明]から255 [不透明]までの不透明度値を指定する第4チャンネルを含まなければなりません．この機能を有効にするためには，画像の第4チャンネルとして不透明度配列を形[行,例, 4]   <a class="reference internal" href="../../utilities/api-autogen/pyvista.numpy_to_texture.html#pyvista.numpy_to_texture" title="pyvista.numpy_to_texture"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.numpy_to_texture()</span></code></a> の3次元マトリックスとして渡すだけです．</p>
+<p>テクスチャでは，ピクセル単位の不透明度値も指定できます．画像は0 [透明]から255 [不透明]までの不透明度値を指定する第4チャンネルを含まなければなりません．この機能を有効にするためには，画像の第4チャンネルとして不透明度配列を形[行,例, 4]   <a class="reference internal" href="../../api/utilities/_autosummary/pyvista.numpy_to_texture.html#pyvista.numpy_to_texture" title="pyvista.numpy_to_texture"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.numpy_to_texture()</span></code></a> の3次元マトリックスとして渡すだけです．</p>
 <p>ここでは，アルファチャンネルを含むイメージをダウンロードできます:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rgba</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_rgba_texture</span><span class="p">()</span>
 <span class="n">rgba</span><span class="o">.</span><span class="n">n_components</span>
@@ -1132,7 +1132,7 @@ to download the full example code</p>
 </pre></div>
 </div>
 <p>各軸で <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">4)</span></code> の範囲のテクスチャ座標を定義することにより，このメッシュ上に同じテクスチャの4つの反復を生成します．</p>
-<p>次に， <a class="reference internal" href="../../core/dataset.html#pyvista.DataSet.t_coords" title="pyvista.DataSet.t_coords"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pyvista.DataSet.t_coords</span></code></a> プロパティを使用して，これらのテクスチャ座標をメッシュに関連付ける必要があります．</p>
+<p>次に， <a class="reference internal" href="../../api/core/dataset.html#pyvista.DataSet.t_coords" title="pyvista.DataSet.t_coords"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pyvista.DataSet.t_coords</span></code></a> プロパティを使用して，これらのテクスチャ座標をメッシュに関連付ける必要があります．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curvsurf</span><span class="o">.</span><span class="n">t_coords</span> <span class="o">=</span> <span class="n">puppy_coords</span>
 </pre></div>
 </div>

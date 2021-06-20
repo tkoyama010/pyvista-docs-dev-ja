@@ -1,0 +1,6 @@
+pyvista.BasePlotter.save\_graphic
+=================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.save_graphic

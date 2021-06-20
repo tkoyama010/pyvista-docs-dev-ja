@@ -1,0 +1,6 @@
+pyvista.BasePlotter.subplot
+===========================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.subplot

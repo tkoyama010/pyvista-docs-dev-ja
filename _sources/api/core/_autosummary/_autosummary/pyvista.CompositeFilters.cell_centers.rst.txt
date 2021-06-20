@@ -1,0 +1,6 @@
+pyvista.CompositeFilters.cell\_centers
+======================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: CompositeFilters.cell_centers

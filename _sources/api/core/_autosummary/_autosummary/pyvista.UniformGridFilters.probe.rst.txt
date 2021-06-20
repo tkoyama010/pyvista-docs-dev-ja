@@ -1,0 +1,6 @@
+pyvista.UniformGridFilters.probe
+================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: UniformGridFilters.probe

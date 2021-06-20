@@ -1,0 +1,6 @@
+pyvista.BasePlotter.orbit\_on\_path
+===================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.orbit_on_path

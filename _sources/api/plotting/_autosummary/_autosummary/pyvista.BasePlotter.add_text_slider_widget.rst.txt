@@ -1,0 +1,6 @@
+pyvista.BasePlotter.add\_text\_slider\_widget
+=============================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.add_text_slider_widget

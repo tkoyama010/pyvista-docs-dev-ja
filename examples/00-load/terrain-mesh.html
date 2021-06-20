@@ -104,7 +104,7 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../api.html">
+ <a class="reference internal nav-link" href="../../api/index.html">
   APIリファレンス
  </a>
 </li>
@@ -979,7 +979,7 @@ to download the full example code</p>
 </td></tr> </table>
 </div>
 <br />
-<br /><p>ここで，対象となる領域をサブサンプルして抽出し，この例を単純にしましょう(ロードしたばかりのDEMもかなり大きいです．)．ロードしたDEMは <a class="reference internal" href="../../core/grids.html#pyvista.UniformGrid" title="pyvista.UniformGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UniformGrid</span></code></a> メッシュなので， <a class="reference internal" href="../../core/filters.html#pyvista.UniformGridFilters.extract_subset" title="pyvista.UniformGridFilters.extract_subset"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.UniformGridFilters.extract_subset()</span></code></a> filter: フィルタを使用できます．</p>
+<br /><p>ここで，対象となる領域をサブサンプルして抽出し，この例を単純にしましょう(ロードしたばかりのDEMもかなり大きいです．)．ロードしたDEMは <a class="reference internal" href="../../api/core/grids.html#pyvista.UniformGrid" title="pyvista.UniformGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UniformGrid</span></code></a> メッシュなので， <a class="reference internal" href="../../api/core/_autosummary/_autosummary/pyvista.UniformGridFilters.extract_subset.html#pyvista.UniformGridFilters.extract_subset" title="pyvista.UniformGridFilters.extract_subset"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.UniformGridFilters.extract_subset()</span></code></a> filter: フィルタを使用できます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">subset</span> <span class="o">=</span> <span class="n">dem</span><span class="o">.</span><span class="n">extract_subset</span><span class="p">((</span><span class="mi">500</span><span class="p">,</span> <span class="mi">900</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">800</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
 <span class="n">subset</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">)</span>
 </pre></div>
@@ -1028,7 +1028,7 @@ to download the full example code</p>
  (0.0, 0.0, 1.0)]
 </pre></div>
 </div>
-<p>これで，地形の3 D構造サーフェスが作成されました．構造化されたサーフェスを3 Dメッシュに拡張して，グリッドに沿った地形を形成できるようになりました．これを行うには，まずz方向(これらは地表から始まり)のセル間隔を設定します．次に，地表メッシュのXYZ構造化座標を繰り返し，各ZレベルをZセル間隔だけ下げます．これらの構造化された座標が得られたら， <a class="reference internal" href="../../core/point-grids.html#pyvista.StructuredGrid" title="pyvista.StructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.StructuredGrid</span></code></a> を作成できます．</p>
+<p>これで，地形の3 D構造サーフェスが作成されました．構造化されたサーフェスを3 Dメッシュに拡張して，グリッドに沿った地形を形成できるようになりました．これを行うには，まずz方向(これらは地表から始まり)のセル間隔を設定します．次に，地表メッシュのXYZ構造化座標を繰り返し，各ZレベルをZセル間隔だけ下げます．これらの構造化された座標が得られたら， <a class="reference internal" href="../../api/core/point-grids.html#pyvista.StructuredGrid" title="pyvista.StructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.StructuredGrid</span></code></a> を作成できます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">z_cells</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">25</span><span class="p">]</span><span class="o">*</span><span class="mi">5</span> <span class="o">+</span> <span class="p">[</span><span class="mi">35</span><span class="p">]</span><span class="o">*</span><span class="mi">3</span> <span class="o">+</span> <span class="p">[</span><span class="mi">50</span><span class="p">]</span><span class="o">*</span><span class="mi">2</span> <span class="o">+</span> <span class="p">[</span><span class="mi">75</span><span class="p">,</span> <span class="mi">100</span><span class="p">])</span>
 
 <span class="n">xx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">terrain</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">z_cells</span><span class="p">),</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>

@@ -1,0 +1,6 @@
+pyvista.Plotter.length
+======================
+
+.. currentmodule:: pyvista
+
+.. autoproperty:: Plotter.length

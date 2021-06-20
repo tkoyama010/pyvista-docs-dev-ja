@@ -1,0 +1,6 @@
+pyvista.BasePlotter.parallel\_scale
+===================================
+
+.. currentmodule:: pyvista
+
+.. autoproperty:: BasePlotter.parallel_scale

@@ -1,0 +1,6 @@
+pyvista.BasePlotter.clear
+=========================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.clear

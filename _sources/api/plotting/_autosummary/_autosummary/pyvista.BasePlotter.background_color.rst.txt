@@ -1,0 +1,6 @@
+pyvista.BasePlotter.background\_color
+=====================================
+
+.. currentmodule:: pyvista
+
+.. autoproperty:: BasePlotter.background_color

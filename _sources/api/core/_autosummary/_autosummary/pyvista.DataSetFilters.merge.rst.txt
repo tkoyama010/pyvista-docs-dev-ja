@@ -1,0 +1,6 @@
+pyvista.DataSetFilters.merge
+============================
+
+.. currentmodule:: pyvista
+
+.. automethod:: DataSetFilters.merge

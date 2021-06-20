@@ -1,0 +1,6 @@
+pyvista.BasePlotter.reset\_camera\_clipping\_range
+==================================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.reset_camera_clipping_range

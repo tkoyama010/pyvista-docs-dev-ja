@@ -1,0 +1,6 @@
+pyvista.DataSetFilters.glyph
+============================
+
+.. currentmodule:: pyvista
+
+.. automethod:: DataSetFilters.glyph

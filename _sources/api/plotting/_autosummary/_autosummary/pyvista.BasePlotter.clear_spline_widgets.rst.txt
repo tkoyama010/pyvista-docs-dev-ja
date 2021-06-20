@@ -1,0 +1,6 @@
+pyvista.BasePlotter.clear\_spline\_widgets
+==========================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.clear_spline_widgets

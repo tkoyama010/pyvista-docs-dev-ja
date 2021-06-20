@@ -1,0 +1,6 @@
+pyvista.DataSetFilters.threshold
+================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: DataSetFilters.threshold

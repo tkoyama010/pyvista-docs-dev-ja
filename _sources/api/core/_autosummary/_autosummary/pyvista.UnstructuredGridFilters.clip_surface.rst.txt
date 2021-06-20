@@ -1,0 +1,6 @@
+pyvista.UnstructuredGridFilters.clip\_surface
+=============================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: UnstructuredGridFilters.clip_surface

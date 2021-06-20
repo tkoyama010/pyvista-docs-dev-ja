@@ -1,0 +1,6 @@
+pyvista.BasePlotter.length
+==========================
+
+.. currentmodule:: pyvista
+
+.. autoproperty:: BasePlotter.length

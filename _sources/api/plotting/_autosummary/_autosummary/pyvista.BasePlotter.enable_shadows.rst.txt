@@ -1,0 +1,6 @@
+pyvista.BasePlotter.enable\_shadows
+===================================
+
+.. currentmodule:: pyvista
+
+.. automethod:: BasePlotter.enable_shadows
