@@ -4573,9 +4573,13 @@ example:</p>
 <li><p><strong>xlabel</strong> (<em>string</em><em>, </em><em>optional</em>) -- Title of the x axis.  Default <code class="docutils literal notranslate"><span class="pre">&quot;X</span> <span class="pre">Axis&quot;</span></code>.</p></li>
 <li><p><strong>ylabel</strong> (<em>string</em><em>, </em><em>optional</em>) -- Title of the y axis.  Default <code class="docutils literal notranslate"><span class="pre">&quot;Y</span> <span class="pre">Axis&quot;</span></code>.</p></li>
 <li><p><strong>zlabel</strong> (<em>string</em><em>, </em><em>optional</em>) -- Title of the z axis.  Default <code class="docutils literal notranslate"><span class="pre">&quot;Z</span> <span class="pre">Axis&quot;</span></code>.</p></li>
-<li><p><strong>use_2d</strong> (<em>bool</em><em>, </em><em>optional</em>) -- A bug with vtk 6.3 in Windows seems to cause this function
-to crash this can be enabled for smoother plotting for
-other environments.</p></li>
+<li><p><strong>use_2d</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <p>This can be enabled for smoother plotting.</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>A bug with vtk 6.3 in Windows seems to cause this
+function to crash.</p>
+</div>
+</p></li>
 <li><p><strong>grid</strong> (<em>bool</em><em> or </em><em>str</em><em>, </em><em>optional</em>) -- Add grid lines to the backface (<code class="docutils literal notranslate"><span class="pre">True</span></code>, <code class="docutils literal notranslate"><span class="pre">'back'</span></code>, or
 <code class="docutils literal notranslate"><span class="pre">'backface'</span></code>) or to the frontface (<code class="docutils literal notranslate"><span class="pre">'front'</span></code>,
 <code class="docutils literal notranslate"><span class="pre">'frontface'</span></code>) of the axes actor.</p></li>
@@ -4584,9 +4588,9 @@ closest triad (<code class="docutils literal notranslate"><span class="pre">fron
 static closest to the origin (<code class="docutils literal notranslate"><span class="pre">'origin'</span></code>), or outer
 edges (<code class="docutils literal notranslate"><span class="pre">'outer'</span></code>) in relation to the camera
 position. Options include: <code class="docutils literal notranslate"><span class="pre">'all',</span> <span class="pre">'front',</span> <span class="pre">'back',</span>
-<span class="pre">'origin',</span> <span class="pre">'outer'</span></code></p></li>
+<span class="pre">'origin',</span> <span class="pre">'outer'</span></code>.</p></li>
 <li><p><strong>ticks</strong> (<em>str</em><em>, </em><em>optional</em>) -- Set how the ticks are drawn on the axes grid. Options include:
-<code class="docutils literal notranslate"><span class="pre">'inside',</span> <span class="pre">'outside',</span> <span class="pre">'both'</span></code></p></li>
+<code class="docutils literal notranslate"><span class="pre">'inside',</span> <span class="pre">'outside',</span> <span class="pre">'both'</span></code>.</p></li>
 <li><p><strong>all_edges</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Adds an unlabeled and unticked box at the boundaries of
 plot. Useful for when wanting to plot outer grids while
 still retaining all edges of the boundary.</p></li>
