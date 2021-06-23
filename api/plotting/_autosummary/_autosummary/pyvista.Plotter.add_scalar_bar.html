@@ -192,37 +192,37 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/objects.html">
-     Objects
+     オブジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/dataset.html">
-     Datasets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/points.html">
-     Point Data
+     ポイントデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/point-grids.html">
-     Point-Based Grids
+     ポイントベースグリッド
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/grids.html">
-     Gridded Data
+     グリッドデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/composite.html">
-     Composite Datasets
+     複合データセット
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../core/filters.html">
-     Filters
+     フィルタ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -1699,12 +1699,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/camera.html">
-     Cameras
+     カメラ
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../core/lights.html">
-     Lights
+     ライト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -1883,14 +1883,14 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/helpers.html">
-     Helpers
+     ヘルパー
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../../index.html">
-   Plotting
+   プロット
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -1900,12 +1900,12 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../../plotting.html">
-     Plotting
+     プロット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../qt_plotting.html">
-     Pyvista and PyQt
+     PyvistaとPyQt
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -4093,7 +4093,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../conv_func.html">
-     Convenience Functions
+     便利な機能
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
     <label for="toctree-checkbox-15">
@@ -4137,7 +4137,7 @@
   <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/geometric.html">
-     Geometric Objects
+     ジオメトリオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -4234,7 +4234,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/parametric.html">
-     Parametric Objects
+     パラメトリックオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
     <label for="toctree-checkbox-18">
@@ -4346,7 +4346,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/utilities.html">
-     General Utilities
+     一般ユーティリティ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
     <label for="toctree-checkbox-19">
@@ -4539,65 +4539,41 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.Plotter.add_scalar_bar">
 <span class="sig-prename descclassname"><span class="pre">Plotter.</span></span><span class="sig-name descname"><span class="pre">add_scalar_bar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mapper</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_labels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">italic</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title_font_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_font_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_family</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shadow</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">position_x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">position_y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vertical</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interactive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_opacity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nan_annotation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">below_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">above_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">background_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_colors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fill</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">render</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Plotter.add_scalar_bar" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Create scalar bar using the ranges as set by the last input mesh.</p>
+<dd><p>最後の入力メッシュによって設定された範囲を使用してスカラバーを作成します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>title</strong> (<em>string</em><em>, </em><em>optional</em>) -- Title of the scalar bar.  Default <code class="docutils literal notranslate"><span class="pre">''</span></code> which is
-rendered as an empty title.</p></li>
-<li><p><strong>mapper</strong> (<em>vtkMapper</em><em>, </em><em>optional</em>) -- Mapper used for the scalar bar.  Defaults to the last
-mapper created by the plotter.</p></li>
-<li><p><strong>n_labels</strong> (<em>int</em><em>, </em><em>optional</em>) -- Number of labels to use for the scalar bar.</p></li>
-<li><p><strong>italic</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Italicises title and bar labels.  Default False.</p></li>
-<li><p><strong>bold</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Bolds title and bar labels.  Default True</p></li>
-<li><p><strong>title_font_size</strong> (<em>float</em><em>, </em><em>optional</em>) -- Sets the size of the title font.  Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code> and is sized
-according to <code class="docutils literal notranslate"><span class="pre">pyvista.global_theme</span></code>.</p></li>
-<li><p><strong>label_font_size</strong> (<em>float</em><em>, </em><em>optional</em>) -- Sets the size of the title font.  Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code> and is sized
-according to <code class="docutils literal notranslate"><span class="pre">pyvista.global_theme</span></code>.</p></li>
-<li><p><strong>color</strong> (<em>string</em><em> or </em><em>3 item list</em><em>, </em><em>optional</em>) -- <p>Either a string, rgb list, or hex color string.  Defaults to white.
-For example:</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">color='white'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">color='w'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">color=[1,</span> <span class="pre">1,</span> <span class="pre">1]</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">color='#FFFFFF'</span></code></p></li>
-</ul>
-</p></li>
-<li><p><strong>font_family</strong> (<em>{'courier'</em><em>, </em><em>'times'</em><em>, </em><em>'arial'}</em>) -- Font family.  Default is set by <code class="docutils literal notranslate"><span class="pre">pyvista.global_theme</span></code>.</p></li>
-<li><p><strong>shadow</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Adds a black shadow to the text.  Defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
-<li><p><strong>width</strong> (<em>float</em><em>, </em><em>optional</em>) -- The percentage (0 to 1) width of the window for the colorbar.
-Default set by <code class="docutils literal notranslate"><span class="pre">pyvista.global_theme</span></code>.</p></li>
-<li><p><strong>height</strong> (<em>float</em><em>, </em><em>optional</em>) -- The percentage (0 to 1) height of the window for the colorbar.
-Default set by <code class="docutils literal notranslate"><span class="pre">pyvista.global_theme</span></code>.</p></li>
-<li><p><strong>position_x</strong> (<em>float</em><em>, </em><em>optional</em>) -- The percentage (0 to 1) along the windows's horizontal
-direction to place the bottom left corner of the colorbar.
-Default is automatic placement.</p></li>
-<li><p><strong>position_y</strong> (<em>float</em><em>, </em><em>optional</em>) -- The percentage (0 to 1) along the windows's vertical
-direction to place the bottom left corner of the colorbar.
-Default is automatic placement.</p></li>
-<li><p><strong>vertical</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Use vertical or horizontal scalar bar.
-Default set by <code class="docutils literal notranslate"><span class="pre">pyvista.global_theme</span></code>.</p></li>
-<li><p><strong>interactive</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Use a widget to control the size and location of the scalar bar.
-Default set by <code class="docutils literal notranslate"><span class="pre">pyvista.global_theme</span></code>.</p></li>
-<li><p><strong>fmt</strong> (<em>str</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">printf</span></code> format for labels.
-Default set by <code class="docutils literal notranslate"><span class="pre">pyvista.global_theme</span></code>.</p></li>
-<li><p><strong>use_opacity</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Optionally display the opacity mapping on the scalar bar.</p></li>
-<li><p><strong>outline</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Optionally outline the scalar bar to make opacity mappings more
-obvious.</p></li>
-<li><p><strong>nan_annotation</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Annotate the NaN color.</p></li>
-<li><p><strong>below_label</strong> (<em>str</em><em>, </em><em>optional</em>) -- String annotation for values below the scalars range.</p></li>
-<li><p><strong>above_label</strong> (<em>str</em><em>, </em><em>optional</em>) -- String annotation for values above the scalars range.</p></li>
-<li><p><strong>background_color</strong> (<em>array</em><em>, </em><em>optional</em>) -- The color used for the background in RGB format.</p></li>
-<li><p><strong>n_colors</strong> (<em>int</em><em>, </em><em>optional</em>) -- The maximum number of color displayed in the scalar bar.</p></li>
-<li><p><strong>fill</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Draw a filled box behind the scalar bar with the
-<code class="docutils literal notranslate"><span class="pre">background_color</span></code>.</p></li>
-<li><p><strong>render</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Force a render when True.  Default <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
+<li><p><strong>title</strong> (<em>string</em><em>, </em><em>optional</em>) -- スカラーバーのタイトル．空のタイトルとしてレンダリングされるデフォルトの <code class="docutils literal notranslate"><span class="pre">''</span></code> ．</p></li>
+<li><p><strong>mapper</strong> (<em>vtkMapper</em><em>, </em><em>optional</em>) -- スカラーバーに使用されるマッパー．既定は，プロッタで最後に作成されたマッパーです．</p></li>
+<li><p><strong>n_labels</strong> (<em>int</em><em>, </em><em>optional</em>) -- スカラーバーに使用するラベルの数．</p></li>
+<li><p><strong>italic</strong> (<em>bool</em><em>, </em><em>optional</em>) -- タイトルとバーのラベルを斜体にします．デフォルトはFalseです．</p></li>
+<li><p><strong>bold</strong> (<em>bool</em><em>, </em><em>optional</em>) -- タイトルとバーのラベルを太字にします．デフォルトはTrue</p></li>
+<li><p><strong>title_font_size</strong> (<em>float</em><em>, </em><em>optional</em>) -- タイトルフォントのサイズを設定します．デフォルトはNoneで，サイズは <code class="docutils literal notranslate"><span class="pre">pyvista.global_theme</span></code> に沿って変更されます．</p></li>
+<li><p><strong>label_font_size</strong> (<em>float</em><em>, </em><em>optional</em>) -- タイトルフォントのサイズを設定します．デフォルトはNoneで，サイズは <code class="docutils literal notranslate"><span class="pre">pyvista.global_theme</span></code> に沿って変更されます．</p></li>
+<li><p><strong>color</strong> (<em>string</em><em> or </em><em>3 item list</em><em>, </em><em>optional</em>) -- 文字列，RGBリスト，または16進カラー文字列．デフォルトはwhiteです．例: * <code class="docutils literal notranslate"><span class="pre">color='white'</span></code> * <code class="docutils literal notranslate"><span class="pre">color='w'</span></code> * <code class="docutils literal notranslate"><span class="pre">color=[1,</span> <span class="pre">1,</span> <span class="pre">1]</span></code> * <code class="docutils literal notranslate"><span class="pre">color='#FFFFFF'</span></code></p></li>
+<li><p><strong>font_family</strong> (<em>{'courier'</em><em>, </em><em>'times'</em><em>, </em><em>'arial'}</em>) -- フォントファミリ．デフォルトは <code class="docutils literal notranslate"><span class="pre">pyvista.global_theme</span></code> によって設定されます．</p></li>
+<li><p><strong>shadow</strong> (<em>bool</em><em>, </em><em>optional</em>) -- テキストに黒い影を追加します．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です．</p></li>
+<li><p><strong>width</strong> (<em>float</em><em>, </em><em>optional</em>) -- カラーバーのウィンドウ幅の割合(0から1)．デフォルトは <code class="docutils literal notranslate"><span class="pre">pyvista.global_theme</span></code> によって設定されます．</p></li>
+<li><p><strong>height</strong> (<em>float</em><em>, </em><em>optional</em>) -- カラーバーのウィンドウ高さの割合(0から1)．デフォルトは <code class="docutils literal notranslate"><span class="pre">pyvista.global_theme</span></code> によって設定されます．</p></li>
+<li><p><strong>position_x</strong> (<em>float</em><em>, </em><em>optional</em>) -- カラーバーの左下隅を配置するためのウィンドウの水平方向に沿ったパーセンテージ(0から1)．デフォルトは自動配置です．</p></li>
+<li><p><strong>position_y</strong> (<em>float</em><em>, </em><em>optional</em>) -- カラーバーの左下隅を配置するためのウィンドウの垂直方向に沿ったパーセンテージ(0から1)．デフォルトは自動配置です．</p></li>
+<li><p><strong>vertical</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 垂直または水平のスカラーバーを使用します．デフォルトは <code class="docutils literal notranslate"><span class="pre">pyvista.global_theme</span></code> によって設定されます．</p></li>
+<li><p><strong>interactive</strong> (<em>bool</em><em>, </em><em>optional</em>) -- スカラーバーのサイズと位置を制御するには，ウィジェットを使用します．デフォルトは <code class="docutils literal notranslate"><span class="pre">pyvista.global_theme</span></code> によって設定されます．</p></li>
+<li><p><strong>fmt</strong> (<em>str</em><em>, </em><em>optional</em>) -- フォントラベル．デフォルトは <code class="docutils literal notranslate"><span class="pre">pyvista.global_theme</span></code> によって設定されます．</p></li>
+<li><p><strong>use_opacity</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 必要に応じて，スカラーバーに不透明度マッピングを表示します．</p></li>
+<li><p><strong>outline</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 必要に応じて，スカラーバーのアウトラインを設定し，不透明度マッピングを見やすくします．</p></li>
+<li><p><strong>nan_annotation</strong> (<em>bool</em><em>, </em><em>optional</em>) -- NaN色に注釈を付ける．</p></li>
+<li><p><strong>below_label</strong> (<em>str</em><em>, </em><em>optional</em>) -- スカラー範囲より下の値の文字列注釈．</p></li>
+<li><p><strong>above_label</strong> (<em>str</em><em>, </em><em>optional</em>) -- スカラー範囲より上の値の文字列注釈．</p></li>
+<li><p><strong>background_color</strong> (<em>array</em><em>, </em><em>optional</em>) -- RGB形式で背景に使用される色です．</p></li>
+<li><p><strong>n_colors</strong> (<em>int</em><em>, </em><em>optional</em>) -- スカラーバーに表示されるカラーの最大数．</p></li>
+<li><p><strong>fill</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">background_color</span></code> でスカラーバーの後ろに塗りつぶされたボックスを描画します．</p></li>
+<li><p><strong>render</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Trueの場合，強制的にレンダリングします．デフォルトは <code class="docutils literal notranslate"><span class="pre">True</span></code> ．</p></li>
 </ul>
 </dd>
 </dl>
 <p class="rubric">サンプル</p>
-<p>Add a custom interactive scalar bar that is horizontal, has an
-outline, and has a custom formatting.</p>
+<p>水平でアウトラインがあり，独自の書式が設定された，独自の対話型のスカラバーを追加します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span><span class="p">[</span><span class="s1">&#39;Data&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sphere</span><span class="o">.</span><span class="n">points</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span>
@@ -4608,8 +4584,7 @@ outline, and has a custom formatting.</p>
 </pre></div>
 </div>
 <p class="rubric">メモ</p>
-<p>Setting title_font_size, or label_font_size disables automatic font
-sizing for both the title and label.</p>
+<p>title_font_sizeまたはlabel_font_sizeを設定すると，タイトルとラベルの両方のフォントサイズの自動設定が無効になります．</p>
 </dd></dl>
 
 </div>

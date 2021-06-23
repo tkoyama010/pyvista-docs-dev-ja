@@ -449,13 +449,14 @@ pip install -r requirements_style.txt
 </pre></div>
 </div>
 <p>最後に，ドキュメントの例をテストします．</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> docs
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> doc
 make clean
 make doctest
 make html -b linkcheck
 </pre></div>
 </div>
-<p>完成したドキュメントは <code class="docutils literal notranslate"><span class="pre">docs/_build/html</span></code> ディレクトリにあります．</p>
+<p>The finished documentation can be found in the <code class="docutils literal notranslate"><span class="pre">doc/_build/html</span></code>
+directory.</p>
 </div>
 <div class="section" id="notes-regarding-image-regression-testing">
 <h4>イメージ回帰テストに関する注意事項<a class="headerlink" href="#notes-regarding-image-regression-testing" title="このヘッドラインへのパーマリンク">¶</a></h4>
@@ -506,7 +507,10 @@ make html -b linkcheck
 <ol class="arabic">
 <li><p><code class="docutils literal notranslate"><span class="pre">master</span></code> ブランチから <code class="docutils literal notranslate"><span class="pre">release/MAJOR.MINOR</span></code> という名前の新しいブランチを作成します(例: <code class="docutils literal notranslate"><span class="pre">release/0.25</span></code> )．</p></li>
 <li><p><a class="reference external" href="#testing">Testing Section</a> で概説されているように，すべてのテストをローカルで実行し，すべてが合格していることを確認します．</p></li>
-<li><p>リンクチェックを使用してマニュアルをローカルでテストおよびビルドし，リンクが古くなっていないことを確認します．必ず <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">clean</span></code> を実行して，結果がキャッシュされないようにしてください． <code class="docutils literal notranslate"><span class="pre">bash</span> <span class="pre">cd</span> <span class="pre">docs</span> <span class="pre">make</span> <span class="pre">clean</span> <span class="pre">#</span> <span class="pre">deletes</span> <span class="pre">the</span> <span class="pre">sphinx-gallery</span> <span class="pre">cache</span> <span class="pre">make</span> <span class="pre">doctest</span> <span class="pre">make</span> <span class="pre">html</span> <span class="pre">-b</span> <span class="pre">linkcheck</span></code></p></li>
+<li><p>Locally test and build the documentation with link checking to make
+sure no links are outdated. Be sure to run <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">clean</span></code> to ensure
+no results are cached.
+<code class="docutils literal notranslate"><span class="pre">bash</span>&#160;&#160;&#160;&#160; <span class="pre">cd</span> <span class="pre">doc</span>&#160;&#160;&#160;&#160; <span class="pre">make</span> <span class="pre">clean</span>&#160; <span class="pre">#</span> <span class="pre">deletes</span> <span class="pre">the</span> <span class="pre">sphinx-gallery</span> <span class="pre">cache</span>&#160;&#160;&#160;&#160; <span class="pre">make</span> <span class="pre">doctest</span>&#160;&#160;&#160;&#160; <span class="pre">make</span> <span class="pre">html</span> <span class="pre">-b</span> <span class="pre">linkcheck</span></code></p></li>
 <li><p>ドキュメントをビルドしたら，ローカル・ビルドを開き，サンプル・ギャラリーで明らかな問題がないか調べてください．</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pyvista/_version.py</span></code> のバージョン番号を更新し，コミットします．ブランチをGitHubにプッシュし，マスタにマージする今回のリリースの新しいPRを作成します．リリースに注力している間は，masterへの開発はこの時点では制限されるべきです．</p></li>
 <li><p>新しいリリースを機能的にテストするのは <code class="docutils literal notranslate"><span class="pre">pyvista</span></code> コミュニティの責任です．このブランチをローカルにインストールして運用環境で使用することをお勧めします．検出されたバグについては，ホットフィックスをこのリリースブランチにプッシュする必要があります．</p></li>

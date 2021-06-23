@@ -192,37 +192,37 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../../objects.html">
-     Objects
+     オブジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../dataset.html">
-     Datasets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../points.html">
-     Point Data
+     ポイントデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../point-grids.html">
-     Point-Based Grids
+     ポイントベースグリッド
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../grids.html">
-     Gridded Data
+     グリッドデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../composite.html">
-     Composite Datasets
+     複合データセット
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../filters.html">
-     Filters
+     フィルタ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -1699,12 +1699,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../camera.html">
-     Cameras
+     カメラ
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../../lights.html">
-     Lights
+     ライト
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -1883,14 +1883,14 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../helpers.html">
-     Helpers
+     ヘルパー
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../plotting/index.html">
-   Plotting
+   プロット
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -1900,12 +1900,12 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/plotting.html">
-     Plotting
+     プロット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/qt_plotting.html">
-     Pyvista and PyQt
+     PyvistaとPyQt
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -4093,7 +4093,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../plotting/conv_func.html">
-     Convenience Functions
+     便利な機能
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
     <label for="toctree-checkbox-15">
@@ -4137,7 +4137,7 @@
   <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/geometric.html">
-     Geometric Objects
+     ジオメトリオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -4234,7 +4234,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/parametric.html">
-     Parametric Objects
+     パラメトリックオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
     <label for="toctree-checkbox-18">
@@ -4346,7 +4346,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/utilities.html">
-     General Utilities
+     一般ユーティリティ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
     <label for="toctree-checkbox-19">
@@ -4539,21 +4539,12 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.Light.cone_angle">
 <em class="property"><span class="pre">property</span> </em><span class="sig-prename descclassname"><span class="pre">Light.</span></span><span class="sig-name descname"><span class="pre">cone_angle</span></span><a class="headerlink" href="#pyvista.Light.cone_angle" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the cone angle of a positional light.</p>
-<p>The angle is in degrees and is measured between the axis of
-the cone and an extremal ray of the cone. A value smaller than
-90 has spot lighting effects, anything equal to and above 90
-is just a positional light, i.e. a spherical point source.</p>
-<p>Regarding the angular distribution of the light, the cone
-angle merely truncates the beam, the shape of which is defined
-by the <a class="reference internal" href="pyvista.Light.exponent.html#pyvista.Light.exponent" title="pyvista.Light.exponent"><code class="xref py py-attr docutils literal notranslate"><span class="pre">exponent</span></code></a>.  If the cone angle is at least 90
-degrees then there is no angular dependence.</p>
-<p>If the light's cone angle is increased to 90 degrees or above,
-its actor (if previousy shown) is automatically hidden.</p>
+<dd><p>ポジショナルライトのコーンアングルを返します．</p>
+<p>角度は度単位で，円錐の軸と円錐の極値光線の間で測定されます．値が90より小さい場合はスポットライト効果があり，90以上の値は単なる位置ライト，つまり球状のポイントソースになります．</p>
+<p>光の角度分布に関しては，円錐角は単にビームを打ち切るだけであり，その形状は <a class="reference internal" href="pyvista.Light.exponent.html#pyvista.Light.exponent" title="pyvista.Light.exponent"><code class="xref py py-attr docutils literal notranslate"><span class="pre">exponent</span></code></a> によって定義される．円錐角が少なくとも90度であれば，角度依存性はない．</p>
+<p>ライトの円錐角度を90度以上にすると，そのアクター(以前に表示された場合)が自動的に非表示になります．</p>
 <p class="rubric">サンプル</p>
-<p>Plot three planes lit by three spotlights with varying cone
-angles.  Use a large exponent to cause a visible angular
-variation of the intensity of the beams.</p>
+<p>3つのスポットライトで照らされた3つの平面を，さまざまな円錐角度でプロットします．大きな指数を使用すると，ビーム強度の角度変化が目に見えるようになります．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">lighting</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">offset</span><span class="p">,</span> <span class="n">angle</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">70</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">20</span><span class="p">]):</span>

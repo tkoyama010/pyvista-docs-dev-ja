@@ -192,37 +192,37 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../../objects.html">
-     Objects
+     オブジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../dataset.html">
-     Datasets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../points.html">
-     Point Data
+     ポイントデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../point-grids.html">
-     Point-Based Grids
+     ポイントベースグリッド
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../grids.html">
-     Gridded Data
+     グリッドデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../composite.html">
-     Composite Datasets
+     複合データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../../filters.html">
-     Filters
+     フィルタ
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -1699,12 +1699,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../camera.html">
-     Cameras
+     カメラ
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../lights.html">
-     Lights
+     ライト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -1883,14 +1883,14 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../helpers.html">
-     Helpers
+     ヘルパー
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../plotting/index.html">
-   Plotting
+   プロット
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -1900,12 +1900,12 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/plotting.html">
-     Plotting
+     プロット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/qt_plotting.html">
-     Pyvista and PyQt
+     PyvistaとPyQt
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -4093,7 +4093,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../plotting/conv_func.html">
-     Convenience Functions
+     便利な機能
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
     <label for="toctree-checkbox-15">
@@ -4137,7 +4137,7 @@
   <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/geometric.html">
-     Geometric Objects
+     ジオメトリオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -4234,7 +4234,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/parametric.html">
-     Parametric Objects
+     パラメトリックオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
     <label for="toctree-checkbox-18">
@@ -4346,7 +4346,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/utilities.html">
-     General Utilities
+     一般ユーティリティ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
     <label for="toctree-checkbox-19">
@@ -4539,38 +4539,23 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.UnstructuredGridFilters.elevation">
 <span class="sig-prename descclassname"><span class="pre">UnstructuredGridFilters.</span></span><span class="sig-name descname"><span class="pre">elevation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">low_point</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">high_point</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scalar_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preference</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'point'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">set_active</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UnstructuredGridFilters.elevation" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Generate scalar values on a dataset.</p>
-<p>The scalar values lie within a user specified range, and are
-generated by computing a projection of each dataset point onto
-a line.  The line can be oriented arbitrarily.  A typical
-example is to generate scalars based on elevation or height
-above a plane.</p>
+<dd><p>データセットにスカラー値を生成します．</p>
+<p>スカラー値は，ユーザが指定した範囲内にあり，各データセット点の線への投影を計算することによって生成されます．線の方向は任意です．典型的な例は，平面上の高度または高さに基づいてスカラーを生成することです．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>low_point</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em><em>, </em><em>optional</em>) -- The low point of the projection line in 3D space. Default is bottom
-center of the dataset. Otherwise pass a length 3 <code class="docutils literal notranslate"><span class="pre">tuple(float)</span></code>.</p></li>
-<li><p><strong>high_point</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em><em>, </em><em>optional</em>) -- The high point of the projection line in 3D space. Default is top
-center of the dataset. Otherwise pass a length 3 <code class="docutils literal notranslate"><span class="pre">tuple(float)</span></code>.</p></li>
-<li><p><strong>scalar_range</strong> (<em>str</em><em> or </em><em>tuple</em><em>(</em><em>float</em><em>)</em><em>, </em><em>optional</em>) -- The scalar range to project to the low and high points on the line
-that will be mapped to the dataset. If None given, the values will
-be computed from the elevation (Z component) range between the
-high and low points. Min and max of a range can be given as a length
-2 tuple(float). If <code class="docutils literal notranslate"><span class="pre">str</span></code> name of scalara array present in the
-dataset given, the valid range of that array will be used.</p></li>
-<li><p><strong>preference</strong> (<em>str</em><em>, </em><em>optional</em>) -- When an array name is specified for <code class="docutils literal notranslate"><span class="pre">scalar_range</span></code>, this is the
-preferred array type to search for in the dataset.
-Must be either 'point' or 'cell'.</p></li>
-<li><p><strong>set_active</strong> (<em>bool</em><em>, </em><em>optional</em>) -- A boolean flag on whether or not to set the new <cite>Elevation</cite> scalar
-as the active scalars array on the output dataset.</p></li>
-<li><p><strong>progress_bar</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Display a progress bar to indicate progress.</p></li>
+<li><p><strong>low_point</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em><em>, </em><em>optional</em>) -- 3 D空間での投影線の低点．デフォルトはデータセットの下部中央です．それ以外の場合は，長さ3のタプル <code class="docutils literal notranslate"><span class="pre">tuple(float)</span></code> を渡します．</p></li>
+<li><p><strong>high_point</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em><em>, </em><em>optional</em>) -- 3 D空間での投影線の高点．デフォルトはデータセットの上部中央です．それ以外の場合は，長さ3の <code class="docutils literal notranslate"><span class="pre">タプル</span> <span class="pre">(float)</span></code> を渡します．</p></li>
+<li><p><strong>scalar_range</strong> (<em>str</em><em> or </em><em>tuple</em><em>(</em><em>float</em><em>)</em><em>, </em><em>optional</em>) -- データ・セットにマップされる線上のロー・ポイントとハイ・ポイントに投影するスカラー範囲．なしを指定すると，高点と低点の間の標高(Z成分)の範囲から値が計算されます．範囲の最小値と最大値は，長さ2のタプル (float) として与えることができます．与えられたデータセットにscalara配列の <code class="docutils literal notranslate"><span class="pre">str</span></code> 名が存在する場合，その配列の有効範囲が使用される．</p></li>
+<li><p><strong>preference</strong> (<em>str</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">scalar_range</span></code> のために配列名が指定されるとき，これはデータセットで検索するために好ましい配列型である． 'point' または 'cell' のいずれかである必要があります．</p></li>
+<li><p><strong>set_active</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 新しい <cite>Elevation</cite> スカラを出力データセットのアクティブなスカラ配列として設定するかどうかのbooleanフラグ．</p></li>
+<li><p><strong>progress_bar</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 進行状況を示す進行状況バーを表示します．</p></li>
 </ul>
 </dd>
 </dl>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>This will create a scalars array named <cite>Elevation</cite> on the point data of
-the input dataset and overasdf write an array named <cite>Elevation</cite> if present.</p>
+<p>これにより，入力データセットのポイントデータに <cite>Elevation</cite> という名前のスカラー配列が作成され，存在する場合は <cite>Elevation</cite> という名前の配列が上書きされます．</p>
 </div>
 </dd></dl>
 

@@ -192,37 +192,37 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../../objects.html">
-     Objects
+     オブジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../dataset.html">
-     Datasets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../points.html">
-     Point Data
+     ポイントデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../point-grids.html">
-     Point-Based Grids
+     ポイントベースグリッド
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../grids.html">
-     Gridded Data
+     グリッドデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../composite.html">
-     Composite Datasets
+     複合データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../../filters.html">
-     Filters
+     フィルタ
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -1699,12 +1699,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../camera.html">
-     Cameras
+     カメラ
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../lights.html">
-     Lights
+     ライト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -1883,14 +1883,14 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../helpers.html">
-     Helpers
+     ヘルパー
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../plotting/index.html">
-   Plotting
+   プロット
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -1900,12 +1900,12 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/plotting.html">
-     Plotting
+     プロット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/qt_plotting.html">
-     Pyvista and PyQt
+     PyvistaとPyQt
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -4093,7 +4093,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../plotting/conv_func.html">
-     Convenience Functions
+     便利な機能
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
     <label for="toctree-checkbox-15">
@@ -4137,7 +4137,7 @@
   <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/geometric.html">
-     Geometric Objects
+     ジオメトリオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -4234,7 +4234,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/parametric.html">
-     Parametric Objects
+     パラメトリックオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
     <label for="toctree-checkbox-18">
@@ -4346,7 +4346,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/utilities.html">
-     General Utilities
+     一般ユーティリティ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
     <label for="toctree-checkbox-19">
@@ -4539,40 +4539,21 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.UnstructuredGridFilters.interpolate">
 <span class="sig-prename descclassname"><span class="pre">UnstructuredGridFilters.</span></span><span class="sig-name descname"><span class="pre">interpolate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sharpness</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strategy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'null_value'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">null_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pass_cell_arrays</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pass_point_arrays</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UnstructuredGridFilters.interpolate" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Interpolate values onto this mesh from a given dataset.</p>
-<p>The input dataset is typically a point cloud.</p>
-<p>This uses a gaussian interpolation kernel. Use the <code class="docutils literal notranslate"><span class="pre">sharpness</span></code> and
-<code class="docutils literal notranslate"><span class="pre">radius</span></code> parameters to adjust this kernel. You can also switch this
-kernel to use an N closest points approach.</p>
+<dd><p>特定のデータセットからこのメッシュに値を補間します．</p>
+<p>入力データセットは通常，点群です．</p>
+<p>これはGauss補間カーネルを使用します． <code class="docutils literal notranslate"><span class="pre">sharpness</span></code> と <code class="docutils literal notranslate"><span class="pre">radius</span></code> パラメータを使ってこのカーネルを調整します．このカーネルをN個の最近接ポイントを使用するように切り替えることもできます．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>target</strong> (<a class="reference internal" href="../../dataset.html#pyvista.DataSet" title="pyvista.DataSet"><em>pyvista.DataSet</em></a>) -- The vtk data object to sample from - point and cell arrays from
-this object are interpolated onto this mesh.</p></li>
-<li><p><strong>sharpness</strong> (<em>float</em>) -- Set / Get the sharpness (i.e., falloff) of the Gaussian. By
-default Sharpness=2. As the sharpness increases the effects of
-distant points are reduced.</p></li>
-<li><p><strong>radius</strong> (<em>float</em>) -- Specify the radius within which the basis points must lie.</p></li>
-<li><p><strong>n_points</strong> (<em>int</em><em>, </em><em>optional</em>) -- If given, specifies the number of the closest points used to form
-the interpolation basis. This will invalidate the radius argument
-in favor of an N closest points approach. This typically has poorer
-results.</p></li>
-<li><p><strong>strategy</strong> (<em>str</em><em>, </em><em>optional</em>) -- Specify a strategy to use when encountering a &quot;null&quot; point during
-the interpolation process. Null points occur when the local
-neighborhood (of nearby points to interpolate from) is empty. If
-the strategy is set to <code class="docutils literal notranslate"><span class="pre">'mask_points'</span></code>, then an output array is
-created that marks points as being valid (=1) or null (invalid
-=0) (and the NullValue is set as well). If the strategy is set to
-<code class="docutils literal notranslate"><span class="pre">'null_value'</span></code> (this is the default), then the output data
-value(s) are set to the <code class="docutils literal notranslate"><span class="pre">null_value</span></code> (specified in the output
-point data). Finally, the strategy <code class="docutils literal notranslate"><span class="pre">'closest_point'</span></code> is to simply
-use the closest point to perform the interpolation.</p></li>
-<li><p><strong>null_value</strong> (<em>float</em><em>, </em><em>optional</em>) -- Specify the null point value. When a null point is encountered
-then all components of each null tuple are set to this value. By
-default the null value is set to zero.</p></li>
-<li><p><strong>pass_cell_arrays</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Preserve input mesh's original cell data arrays</p></li>
-<li><p><strong>pass_point_arrays</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Preserve input mesh's original point data arrays</p></li>
-<li><p><strong>progress_bar</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Display a progress bar to indicate progress.</p></li>
+<li><p><strong>target</strong> (<a class="reference internal" href="../../dataset.html#pyvista.DataSet" title="pyvista.DataSet"><em>pyvista.DataSet</em></a>) -- サンプリング元のvtkデータオブジェクト - このオブジェクトのポイント配列とセル配列がこのメッシュに補間されます．</p></li>
+<li><p><strong>sharpness</strong> (<em>float</em>) -- Gauss分布のシャープネス(つまり，減衰)を設定/取得します．デフォルトでは， Sharpness=2です．シャープさが増すと，遠方のポイントの効果は減少します．</p></li>
+<li><p><strong>radius</strong> (<em>float</em>) -- 基準点を配置する半径を指定します．</p></li>
+<li><p><strong>n_points</strong> (<em>int</em><em>, </em><em>optional</em>) -- 指定した場合，補間ベースを形成するために使用される最も近いポイントの数を指定します．これにより，N個の最近接ポイントを使用する代わりに，radius引数が無効になります．通常，この方法では結果が悪くなります．</p></li>
+<li><p><strong>strategy</strong> (<em>str</em><em>, </em><em>optional</em>) -- 補間処理中に &quot;null&quot; ポイントに遭遇した場合に使用するストラテジーを指定します．ヌルポイントは，ローカル近隣(近くの点が内挿する)が空の場合に発生します．ストラテジが <code class="docutils literal notranslate"><span class="pre">'mask_points'</span></code> に設定されている場合，ポイントを有効 (=1) またはnull (無効=0)としてマークする出力配列が作成される(NullValueも設定されます．)．ストラテジが <code class="docutils literal notranslate"><span class="pre">'null_value'</span></code> に設定されている場合(これがデフォルトです．)，出力データ値()は <code class="docutils literal notranslate"><span class="pre">null_value</span></code> に設定される(出力点データに指定されている)．最後に，戦略 <code class="docutils literal notranslate"><span class="pre">'closest_point'</span></code> は，単に補間を実行するために最も近い点を使用することである．</p></li>
+<li><p><strong>null_value</strong> (<em>float</em><em>, </em><em>optional</em>) -- NULL点の値を指定します．NULLポイントが検出されると，各NULLタプルのすべてのコンポーネントがこの値に設定されます．デフォルトでは，NULL値は0に設定されています．</p></li>
+<li><p><strong>pass_cell_arrays</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 入力メッシュのオリジナルのセルデータ配列を保持</p></li>
+<li><p><strong>pass_point_arrays</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 入力メッシュのオリジナルのポイントデータ配列を保持</p></li>
+<li><p><strong>progress_bar</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 進行状況を示す進行状況バーを表示します．</p></li>
 </ul>
 </dd>
 </dl>

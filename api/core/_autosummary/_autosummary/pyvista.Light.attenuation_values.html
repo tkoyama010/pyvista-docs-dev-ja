@@ -192,37 +192,37 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../../objects.html">
-     Objects
+     オブジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../dataset.html">
-     Datasets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../points.html">
-     Point Data
+     ポイントデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../point-grids.html">
-     Point-Based Grids
+     ポイントベースグリッド
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../grids.html">
-     Gridded Data
+     グリッドデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../composite.html">
-     Composite Datasets
+     複合データセット
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../filters.html">
-     Filters
+     フィルタ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -1699,12 +1699,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../camera.html">
-     Cameras
+     カメラ
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../../lights.html">
-     Lights
+     ライト
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -1883,14 +1883,14 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../helpers.html">
-     Helpers
+     ヘルパー
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../plotting/index.html">
-   Plotting
+   プロット
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -1900,12 +1900,12 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/plotting.html">
-     Plotting
+     プロット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/qt_plotting.html">
-     Pyvista and PyQt
+     PyvistaとPyQt
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -4093,7 +4093,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../plotting/conv_func.html">
-     Convenience Functions
+     便利な機能
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
     <label for="toctree-checkbox-15">
@@ -4137,7 +4137,7 @@
   <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/geometric.html">
-     Geometric Objects
+     ジオメトリオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -4234,7 +4234,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/parametric.html">
-     Parametric Objects
+     パラメトリックオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
     <label for="toctree-checkbox-18">
@@ -4346,7 +4346,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/utilities.html">
-     General Utilities
+     一般ユーティリティ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
     <label for="toctree-checkbox-19">
@@ -4539,21 +4539,11 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.Light.attenuation_values">
 <em class="property"><span class="pre">property</span> </em><span class="sig-prename descclassname"><span class="pre">Light.</span></span><span class="sig-name descname"><span class="pre">attenuation_values</span></span><a class="headerlink" href="#pyvista.Light.attenuation_values" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the quadratic attenuation constants.</p>
-<p>The values are 3-length sequences which specify the constant,
-linear and quadratic constants in this order. These parameters
-only have an effect for positional lights.</p>
-<p>Attenuation refers to the dampening of a beam of light as it
-gets further away from the point source. The three constants
-describe three different profiles for dampening with
-distance. A larger attenuation constant corresponds to more
-rapid decay with distance.</p>
+<dd><p>2次減衰定数を返します．</p>
+<p>値は3つの長さのシーケンスで，この順序で定数，1次定数，2次定数を指定します．これらのパラメータは，ポジションライトにのみ影響します．</p>
+<p>減衰とは，ポイントソースから遠ざかるにつれてライトのビームが減衰することです．3つの定数は，距離による減衰のための3つの異なるプロファイルを記述します．減衰定数が大きいほど，距離とともに減衰が速くなります．</p>
 <p class="rubric">サンプル</p>
-<p>Plot three cubes lit by two lights with different attenuation
-profiles.  The blue light has slower linear attenuation, the
-green one has quadratic attenuation that makes it decay
-faster. Note that there are no shadow effects included so each
-box gets lit by both lights.</p>
+<p>異なる減衰プロファイルを持つ2つのライトで照らされた3つの立方体をプロットします．青のライトは線形減衰が遅く，緑のライトは2次減衰が速くなります．シャドウエフェクトは含まれていないため，各ボックスは両方のライトで照らされます．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">lighting</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">offset</span> <span class="ow">in</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span>

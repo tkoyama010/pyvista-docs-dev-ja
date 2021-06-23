@@ -192,37 +192,37 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../../objects.html">
-     Objects
+     オブジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../dataset.html">
-     Datasets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../points.html">
-     Point Data
+     ポイントデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../point-grids.html">
-     Point-Based Grids
+     ポイントベースグリッド
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../grids.html">
-     Gridded Data
+     グリッドデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../composite.html">
-     Composite Datasets
+     複合データセット
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../filters.html">
-     Filters
+     フィルタ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -1699,12 +1699,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../camera.html">
-     Cameras
+     カメラ
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../../lights.html">
-     Lights
+     ライト
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -1883,14 +1883,14 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../helpers.html">
-     Helpers
+     ヘルパー
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../plotting/index.html">
-   Plotting
+   プロット
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -1900,12 +1900,12 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/plotting.html">
-     Plotting
+     プロット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/qt_plotting.html">
-     Pyvista and PyQt
+     PyvistaとPyQt
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -4093,7 +4093,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../plotting/conv_func.html">
-     Convenience Functions
+     便利な機能
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
     <label for="toctree-checkbox-15">
@@ -4137,7 +4137,7 @@
   <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/geometric.html">
-     Geometric Objects
+     ジオメトリオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -4234,7 +4234,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/parametric.html">
-     Parametric Objects
+     パラメトリックオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
     <label for="toctree-checkbox-18">
@@ -4346,7 +4346,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/utilities.html">
-     General Utilities
+     一般ユーティリティ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
     <label for="toctree-checkbox-19">
@@ -4539,22 +4539,11 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.Light.light_type">
 <em class="property"><span class="pre">property</span> </em><span class="sig-prename descclassname"><span class="pre">Light.</span></span><span class="sig-name descname"><span class="pre">light_type</span></span><a class="headerlink" href="#pyvista.Light.light_type" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the light type.</p>
-<p>The default light type is a scene light which lives in world
-coordinate space.</p>
-<p>A headlight is attached to the camera and always points at the
-camera's focal point.</p>
-<p>A camera light also moves with the camera, but it can have an
-arbitrary relative position to the camera. Camera lights are
-defined in a coordinate space where the camera is located at
-(0, 0, 1), looking towards (0, 0, 0) at a distance of 1, with
-up being (0, 1, 0). Camera lights use the transform matrix to
-establish this space, i.e. they have a fixed <a class="reference internal" href="pyvista.Light.position.html#pyvista.Light.position" title="pyvista.Light.position"><code class="xref py py-attr docutils literal notranslate"><span class="pre">position</span></code></a>
-with respect to the camera, and moving the camera only
-affects the <a class="reference internal" href="pyvista.Light.world_position.html#pyvista.Light.world_position" title="pyvista.Light.world_position"><code class="xref py py-attr docutils literal notranslate"><span class="pre">world_position</span></code></a> via changes in the
-<a class="reference internal" href="pyvista.Light.transform_matrix.html#pyvista.Light.transform_matrix" title="pyvista.Light.transform_matrix"><code class="xref py py-attr docutils literal notranslate"><span class="pre">transform_matrix</span></code></a> (and the same goes for the focal
-point).</p>
-<p>The property returns class constant values from an enum:</p>
+<dd><p>ライトタイプを返します．</p>
+<p>既定のライトタイプは，ワールド座標空間に存在するシーンライトです．</p>
+<p>ヘッドライトはカメラにアタッチされ，常にカメラの焦点を指します．</p>
+<p>カメラライトもカメラとともに移動しますが，カメラに対して任意の相対位置を持つことができます．カメラライトは (0, 0, 1) にカメラが位置する座標空間で定義され，距離1で (0, 0, 0) を見て (0, 1, 0) が上になります．カメラライトは変換行列を使用してこの空間を確立します．つまり，カメラに対して固定の <a class="reference internal" href="pyvista.Light.position.html#pyvista.Light.position" title="pyvista.Light.position"><code class="xref py py-attr docutils literal notranslate"><span class="pre">position</span></code></a> を持ち，カメラを移動すると， <a class="reference internal" href="pyvista.Light.transform_matrix.html#pyvista.Light.transform_matrix" title="pyvista.Light.transform_matrix"><code class="xref py py-attr docutils literal notranslate"><span class="pre">transform_matrix</span></code></a>  (焦点についても同じことが言えます)の変更を介して <a class="reference internal" href="pyvista.Light.world_position.html#pyvista.Light.world_position" title="pyvista.Light.world_position"><code class="xref py py-attr docutils literal notranslate"><span class="pre">world_position</span></code></a> にのみ影響します．</p>
+<p>このプロパティは，列挙型からクラス定数値を返します:</p>
 <blockquote>
 <div><ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">Light.HEADLIGHT</span> <span class="pre">==</span> <span class="pre">1</span></code></p></li>
@@ -4563,8 +4552,7 @@ point).</p>
 </ul>
 </div></blockquote>
 <p class="rubric">サンプル</p>
-<p>Check the type of lights for the first two lights of the default
-light kit of plotters.</p>
+<p>プロッタの既定のライトキットの最初の2つのライトのタイプを確認します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lights</span> <span class="o">=</span> <span class="n">plotter</span><span class="o">.</span><span class="n">renderer</span><span class="o">.</span><span class="n">lights</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
@@ -4572,7 +4560,7 @@ light kit of plotters.</p>
 <span class="go">[&lt;LightType.HEADLIGHT: 1&gt;, &lt;LightType.CAMERA_LIGHT: 2&gt;]</span>
 </pre></div>
 </div>
-<p>Change the light type of the default light kit's headlight to a scene light.</p>
+<p>既定のライトキットのヘッドライトのライトタイプをシーンライトに変更します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lights</span> <span class="o">=</span> <span class="n">plotter</span><span class="o">.</span><span class="n">renderer</span><span class="o">.</span><span class="n">lights</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>

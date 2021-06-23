@@ -192,37 +192,37 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../../objects.html">
-     Objects
+     オブジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../dataset.html">
-     Datasets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../points.html">
-     Point Data
+     ポイントデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../point-grids.html">
-     Point-Based Grids
+     ポイントベースグリッド
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../grids.html">
-     Gridded Data
+     グリッドデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../composite.html">
-     Composite Datasets
+     複合データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../../filters.html">
-     Filters
+     フィルタ
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -1699,12 +1699,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../camera.html">
-     Cameras
+     カメラ
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../lights.html">
-     Lights
+     ライト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -1883,14 +1883,14 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../helpers.html">
-     Helpers
+     ヘルパー
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../plotting/index.html">
-   Plotting
+   プロット
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -1900,12 +1900,12 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/plotting.html">
-     Plotting
+     プロット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/qt_plotting.html">
-     Pyvista and PyQt
+     PyvistaとPyQt
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -4093,7 +4093,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../plotting/conv_func.html">
-     Convenience Functions
+     便利な機能
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
     <label for="toctree-checkbox-15">
@@ -4137,7 +4137,7 @@
   <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/geometric.html">
-     Geometric Objects
+     ジオメトリオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -4234,7 +4234,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/parametric.html">
-     Parametric Objects
+     パラメトリックオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
     <label for="toctree-checkbox-18">
@@ -4346,7 +4346,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/utilities.html">
-     General Utilities
+     一般ユーティリティ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
     <label for="toctree-checkbox-19">
@@ -4539,28 +4539,15 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.UniformGridFilters.extract_subset">
 <span class="sig-prename descclassname"><span class="pre">UniformGridFilters.</span></span><span class="sig-name descname"><span class="pre">extract_subset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">voi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(1,</span> <span class="pre">1,</span> <span class="pre">1)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UniformGridFilters.extract_subset" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Select piece (e.g., volume of interest).</p>
-<p>To use this filter set the VOI ivar which are i-j-k min/max indices
-that specify a rectangular region in the data. (Note that these are
-0-offset.) You can also specify a sampling rate to subsample the
-data.</p>
-<p>Typical applications of this filter are to extract a slice from a
-volume for image processing, subsampling large volumes to reduce data
-size, or extracting regions of a volume with interesting data.</p>
+<dd><p>部品を選択します．(例えば，関心のあるボリューム)</p>
+<p>このフィルタを使用するには，データ内の矩形領域を指定するi-j-k min/maxインデックスであるVOI ivarを設定します．(これらは0-オフセットであることに注意してください．)サンプリングレートを指定して，データをサブサンプリングすることもできます．</p>
+<p>このフィルタの典型的な用途は，画像処理のためにボリュームからスライスを抽出すること，データ・サイズを低減するために大容量ボリュームをサブサンプリングすること，または関心のあるデータを有するボリュームの領域を抽出することです．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>voi</strong> (<em>tuple</em><em>(</em><em>int</em><em>)</em>) -- Length 6 iterable of ints: <code class="docutils literal notranslate"><span class="pre">(xmin,</span> <span class="pre">xmax,</span> <span class="pre">ymin,</span> <span class="pre">ymax,</span> <span class="pre">zmin,</span> <span class="pre">zmax)</span></code>.
-These bounds specify the volume of interest in i-j-k min/max
-indices.</p></li>
-<li><p><strong>rate</strong> (<em>tuple</em><em>(</em><em>int</em><em>)</em>) -- Length 3 iterable of ints: <code class="docutils literal notranslate"><span class="pre">(xrate,</span> <span class="pre">yrate,</span> <span class="pre">zrate)</span></code>.
-Default: <code class="docutils literal notranslate"><span class="pre">(1,</span> <span class="pre">1,</span> <span class="pre">1)</span></code></p></li>
-<li><p><strong>boundary</strong> (<em>bool</em>) -- Control whether to enforce that the &quot;boundary&quot; of the grid is
-output in the subsampling process. (This only has effect
-when the rate in any direction is not equal to 1). When
-this is on, the subsampling will always include the boundary of
-the grid even though the sample rate is not an even multiple of
-the grid dimensions. (By default this is off.)</p></li>
+<li><p><strong>voi</strong> (<em>tuple</em><em>(</em><em>int</em><em>)</em>) -- 整数の長さ6反復可能: <code class="docutils literal notranslate"><span class="pre">(xmin,</span> <span class="pre">xmax,</span> <span class="pre">ymin,</span> <span class="pre">ymax,</span> <span class="pre">zmin,</span> <span class="pre">zmax)</span></code>．これらの境界は，i-j-kの最小/最大インデックスで対象のボリュームを指定します．</p></li>
+<li><p><strong>rate</strong> (<em>tuple</em><em>(</em><em>int</em><em>)</em>) -- 整数の反復可能な長さ3: <code class="docutils literal notranslate"><span class="pre">(xrate,</span> <span class="pre">yrate,</span> <span class="pre">zrate)</span></code> ．デフォルト: <code class="docutils literal notranslate"><span class="pre">(1,</span> <span class="pre">1,</span> <span class="pre">1)</span></code></p></li>
+<li><p><strong>boundary</strong> (<em>bool</em>) -- グリッドの &quot;boundary&quot; をサブサンプリング処理で出力するかどうかを制御します．(これは，いずれかの方向の比率が1でない場合にのみ有効です)．このチェックボックスにチェックマークが付いている場合，サンプルレートがグリッド寸法の倍数でなくても，サブサンプリングには常にグリッドの境界が含まれます．(デフォルトではオフです．)</p></li>
 </ul>
 </dd>
 </dl>

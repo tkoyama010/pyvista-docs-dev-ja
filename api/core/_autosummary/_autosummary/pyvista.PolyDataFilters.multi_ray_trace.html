@@ -192,37 +192,37 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../../objects.html">
-     Objects
+     オブジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../dataset.html">
-     Datasets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../points.html">
-     Point Data
+     ポイントデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../point-grids.html">
-     Point-Based Grids
+     ポイントベースグリッド
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../grids.html">
-     Gridded Data
+     グリッドデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../composite.html">
-     Composite Datasets
+     複合データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../../filters.html">
-     Filters
+     フィルタ
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -1699,12 +1699,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../camera.html">
-     Cameras
+     カメラ
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../lights.html">
-     Lights
+     ライト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -1883,14 +1883,14 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../helpers.html">
-     Helpers
+     ヘルパー
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../plotting/index.html">
-   Plotting
+   プロット
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -1900,12 +1900,12 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/plotting.html">
-     Plotting
+     プロット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/qt_plotting.html">
-     Pyvista and PyQt
+     PyvistaとPyQt
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -4093,7 +4093,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../plotting/conv_func.html">
-     Convenience Functions
+     便利な機能
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
     <label for="toctree-checkbox-15">
@@ -4137,7 +4137,7 @@
   <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/geometric.html">
-     Geometric Objects
+     ジオメトリオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -4234,7 +4234,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/parametric.html">
-     Parametric Objects
+     パラメトリックオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
     <label for="toctree-checkbox-18">
@@ -4346,7 +4346,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/utilities.html">
-     General Utilities
+     一般ユーティリティ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
     <label for="toctree-checkbox-19">
@@ -4539,39 +4539,29 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.PolyDataFilters.multi_ray_trace">
 <span class="sig-prename descclassname"><span class="pre">PolyDataFilters.</span></span><span class="sig-name descname"><span class="pre">multi_ray_trace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">origins</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directions</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">first_point</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retry</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyDataFilters.multi_ray_trace" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Perform multiple ray trace calculations.</p>
-<p>This requires a mesh with only triangular faces,
-an array of origin points and an equal sized array of
-direction vectors to trace along.</p>
-<p>The embree library used for vectorisation of the ray traces is known to occasionally
-return no intersections where the VTK implementation would return an intersection.
-If the result appears to be missing some intersection points, set retry=True to run a second pass over rays
-that returned no intersections, using the VTK ray_trace implementation.</p>
+<dd><p>複数のレイトレース計算を実行します．</p>
+<p>これには，三角形の面のみを持つメッシュ，原点の配列と，それに沿ってトレースする等しいサイズの方向ベクトルの配列が必要です．</p>
+<p>レイトレースのベクトル化に使用されるembreeライブラリは，VTK実装が交差点を返すであろう交差点を返さないことが時々知られている．結果の一部の交点が欠落しているように見える場合は， retry=True を設定し，VTKの ray_trace 実装を使用して，交点を返さないレイに対して2番目のパスを実行します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>origins</strong> (<em>np.ndarray</em><em> or </em><em>list</em>) -- Starting point for each trace.</p></li>
-<li><p><strong>directions</strong> (<em>np.ndarray</em><em> or </em><em>list</em>) -- Direction vector for each trace.</p></li>
-<li><p><strong>first_point</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Returns intersection of first point only.</p></li>
-<li><p><strong>retry</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Will retry rays that return no intersections using the ray_trace</p></li>
+<li><p><strong>origins</strong> (<em>np.ndarray</em><em> or </em><em>list</em>) -- 各トレースの開始点．</p></li>
+<li><p><strong>directions</strong> (<em>np.ndarray</em><em> or </em><em>list</em>) -- 各トレースの方向ベクトル．</p></li>
+<li><p><strong>first_point</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 最初のポイントの交差のみを返します．</p></li>
+<li><p><strong>retry</strong> (<em>bool</em><em>, </em><em>optional</em>) -- ray_traceを使用して交差を返さない光線を再試行します．</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><p><ul class="simple">
-<li><p><strong>intersection_points</strong> (<em>np.ndarray</em>) -- Location of the intersection points.  Empty array if no
-intersections.</p></li>
-<li><p><strong>intersection_rays</strong> (<em>np.ndarray</em>) -- Indices of the ray for each intersection point. Empty array if no
-intersections.</p></li>
-<li><p><strong>intersection_cells</strong> (<em>np.ndarray</em>) -- Indices of the intersection cells.  Empty array if no
-intersections.</p></li>
+<li><p><strong>intersection_points</strong> (<em>np.ndarray</em>) --交点の位置．交差がない場合は空の配列．</p></li>
+<li><p><strong>intersection_rays</strong> (<em>np.ndarray</em>) -- 各交差ポイントの光線のインデックス．交差がない場合は空の配列．</p></li>
+<li><p><strong>intersection_cells</strong> (<em>np.ndarray</em>) --交差セルのインデックス．交差がない場合は空の配列．</p></li>
 </ul>
 </p>
 </dd>
 </dl>
 <p class="rubric">サンプル</p>
-<p>Compute the intersection between rays from the origin in
-directions <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">0,</span> <span class="pre">0]</span></code>, <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1,</span> <span class="pre">0]</span></code> and <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">0,</span> <span class="pre">1]</span></code>, and
-a sphere with radius 0.5 centered at the origin</p>
+<p>原点からの方向 <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">0,</span> <span class="pre">0]</span></code>, <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1,</span> <span class="pre">0]</span></code> と <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">0,</span> <span class="pre">1]</span></code> の光線と，原点を中心とする半径0.5の球との交差を計算します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span> 
 <span class="gp">... </span><span class="n">sphere</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 <span class="gp">... </span><span class="n">points</span><span class="p">,</span> <span class="n">rays</span><span class="p">,</span> <span class="n">cells</span> <span class="o">=</span> <span class="n">sphere</span><span class="o">.</span><span class="n">multi_ray_trace</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span><span class="o">*</span><span class="mi">3</span><span class="p">,</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]],</span> <span class="n">first_point</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>

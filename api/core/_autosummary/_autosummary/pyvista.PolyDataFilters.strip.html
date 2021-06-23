@@ -192,37 +192,37 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../../objects.html">
-     Objects
+     オブジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../dataset.html">
-     Datasets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../points.html">
-     Point Data
+     ポイントデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../point-grids.html">
-     Point-Based Grids
+     ポイントベースグリッド
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../grids.html">
-     Gridded Data
+     グリッドデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../composite.html">
-     Composite Datasets
+     複合データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../../filters.html">
-     Filters
+     フィルタ
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -1699,12 +1699,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../camera.html">
-     Cameras
+     カメラ
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../lights.html">
-     Lights
+     ライト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -1883,14 +1883,14 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../helpers.html">
-     Helpers
+     ヘルパー
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../plotting/index.html">
-   Plotting
+   プロット
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -1900,12 +1900,12 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/plotting.html">
-     Plotting
+     プロット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/qt_plotting.html">
-     Pyvista and PyQt
+     PyvistaとPyQt
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -4093,7 +4093,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../plotting/conv_func.html">
-     Convenience Functions
+     便利な機能
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
     <label for="toctree-checkbox-15">
@@ -4137,7 +4137,7 @@
   <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/geometric.html">
-     Geometric Objects
+     ジオメトリオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -4234,7 +4234,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/parametric.html">
-     Parametric Objects
+     パラメトリックオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
     <label for="toctree-checkbox-18">
@@ -4346,7 +4346,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/utilities.html">
-     General Utilities
+     一般ユーティリティ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
     <label for="toctree-checkbox-19">
@@ -4539,40 +4539,18 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.PolyDataFilters.strip">
 <span class="sig-prename descclassname"><span class="pre">PolyDataFilters.</span></span><span class="sig-name descname"><span class="pre">strip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">join</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pass_cell_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pass_cell_ids</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pass_point_ids</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyDataFilters.strip" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Strip poly data cells.</p>
-<p>Generates triangle strips and/or poly-lines from input
-polygons, triangle strips, and lines.</p>
-<p>Polygons are assembled into triangle strips only if they are
-triangles; other types of polygons are passed through to the
-output and not stripped. (Use <code class="docutils literal notranslate"><span class="pre">triangulate</span></code> filter to
-triangulate non-triangular polygons prior to running this
-filter if you need to strip all the data.) The filter will
-pass through (to the output) vertices if they are present in
-the input polydata.</p>
-<p>Also note that if triangle strips or polylines are defined in
-the input they are passed through and not joined nor
-extended. (If you wish to strip these use <code class="docutils literal notranslate"><span class="pre">triangulate</span></code>
-filter to fragment the input into triangles and lines prior to
-running this filter.)</p>
+<dd><p>ポリゴンデータセルをストリップします．</p>
+<p>入力ポリゴン，三角形ストリップ，およびラインから三角形ストリップまたはポリラインを生成します．</p>
+<p>ポリゴンは，三角形である場合にのみ三角形ストリップにアセンブルされます．他のタイプのポリゴンは出力に渡され，ストリップされません．(すべてのデータを除去する必要がある場合は，このフィルタを実行する前に， <code class="docutils literal notranslate"><span class="pre">triangulate</span></code> フィルタを使用して三角形以外のポリゴンを三角形化します．)フィルタは，入力ポリデータに(出力に)頂点が存在する場合は通過します．</p>
+<p>また，入力で三角形のストリップまたはポリラインが定義されている場合，それらはパススルーされ，結合も延長もされません．(これらを除去したい場合は，このフィルタを実行する前に， <code class="docutils literal notranslate"><span class="pre">triangulate</span></code> フィルタを使って入力を三角形と線に分割してください．)</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>join</strong> (<em>bool</em><em>, </em><em>optional</em>) -- If <code class="docutils literal notranslate"><span class="pre">True</span></code>, the output polygonal segments will be joined
-if they are contiguous. This is useful after slicing a
-surface. The default is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
-<li><p><strong>max_length</strong> (<em>int</em><em>, </em><em>optional</em>) -- Specify the maximum number of triangles in a triangle
-strip, and/or the maximum number of lines in a poly-line.</p></li>
-<li><p><strong>pass_cell_data</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Enable/Disable passing of the CellData in the input to the
-output as FieldData. Note the field data is transformed.
-Default is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
-<li><p><strong>pass_cell_ids</strong> (<em>bool</em><em>, </em><em>optional</em>) -- If <code class="docutils literal notranslate"><span class="pre">True</span></code>, the output polygonal dataset will have a
-celldata array that holds the cell index of the original
-3D cell that produced each output cell. This is useful for
-picking. The default is <code class="docutils literal notranslate"><span class="pre">False</span></code> to conserve memory.</p></li>
-<li><p><strong>pass_point_ids</strong> (<em>bool</em><em>, </em><em>optional</em>) -- If <code class="docutils literal notranslate"><span class="pre">True</span></code>, the output polygonal dataset will have a
-pointdata array that holds the point index of the original
-vertex that produced each output vertex. This is useful
-for picking. The default is <code class="docutils literal notranslate"><span class="pre">False</span></code> to conserve memory.</p></li>
+<li><p><strong>join</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，出力ポリゴンセグメントが連続していれば結合されます．これは，サーフェスをスライスした後に便利です．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です．</p></li>
+<li><p><strong>max_length</strong> (<em>int</em><em>, </em><em>optional</em>) -- 三角形ストリップ内の三角形の最大数，およびポリライン内のラインの最大数を指定します．</p></li>
+<li><p><strong>pass_cell_data</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 入力のCellDataをFieldDataとして出力に渡すことを有効/無効にします．フィールドデータが変換されます．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です．</p></li>
+<li><p><strong>pass_cell_ids</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，出力ポリゴンデータセットには，各出力セルを生成したオリジナルの3 Dセルのセルインデックスを保持するcelldata配列が含まれます．これはピッキングに便利です．デフォルトでは，メモリを節約するために <code class="docutils literal notranslate"><span class="pre">False</span></code> になっています．</p></li>
+<li><p><strong>pass_point_ids</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，出力ポリゴンデータセットには，各出力頂点を生成したオリジナルの頂点のポイントインデックスを保持するポイントデータ配列が含まれます．これはピッキングに便利です．デフォルトでは，メモリを節約するために <code class="docutils literal notranslate"><span class="pre">False</span></code> になっています．</p></li>
 </ul>
 </dd>
 </dl>

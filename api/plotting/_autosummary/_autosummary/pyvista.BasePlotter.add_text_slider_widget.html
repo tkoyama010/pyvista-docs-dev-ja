@@ -192,37 +192,37 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/objects.html">
-     Objects
+     オブジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/dataset.html">
-     Datasets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/points.html">
-     Point Data
+     ポイントデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/point-grids.html">
-     Point-Based Grids
+     ポイントベースグリッド
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/grids.html">
-     Gridded Data
+     グリッドデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/composite.html">
-     Composite Datasets
+     複合データセット
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../core/filters.html">
-     Filters
+     フィルタ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -1699,12 +1699,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/camera.html">
-     Cameras
+     カメラ
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../core/lights.html">
-     Lights
+     ライト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -1883,14 +1883,14 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/helpers.html">
-     Helpers
+     ヘルパー
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../../index.html">
-   Plotting
+   プロット
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -1900,12 +1900,12 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../../plotting.html">
-     Plotting
+     プロット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../qt_plotting.html">
-     Pyvista and PyQt
+     PyvistaとPyQt
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
@@ -4093,7 +4093,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../conv_func.html">
-     Convenience Functions
+     便利な機能
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
     <label for="toctree-checkbox-15">
@@ -4137,7 +4137,7 @@
   <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/geometric.html">
-     Geometric Objects
+     ジオメトリオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -4234,7 +4234,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/parametric.html">
-     Parametric Objects
+     パラメトリックオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
     <label for="toctree-checkbox-18">
@@ -4346,7 +4346,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/utilities.html">
-     General Utilities
+     一般ユーティリティ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
     <label for="toctree-checkbox-19">
@@ -4539,31 +4539,24 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.BasePlotter.add_text_slider_widget">
 <span class="sig-prename descclassname"><span class="pre">BasePlotter.</span></span><span class="sig-name descname"><span class="pre">add_text_slider_widget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pointa</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0.4,</span> <span class="pre">0.9)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pointb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0.9,</span> <span class="pre">0.9)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'end'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">style</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.add_text_slider_widget" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Add a text slider bar widget.</p>
-<p>This is useless without a callback function. You can pass a callable
-function that takes a single argument, the value of this slider widget,
-and performs a task with that value.</p>
+<dd><p>テキストスライダバーウィジェットを追加します．</p>
+<p>これは，コールバック関数なしでは使用できません．このスライダーウィジェットの値の単一の引数を取り，その値でタスクを実行する呼び出し可能関数を渡すことができます．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>callback</strong> (<em>callable</em>) -- The method called every time the slider is updated. This should take
-a single parameter: the float value of the slider</p></li>
-<li><p><strong>data</strong> (<em>list</em>) -- The list of possible values displayed on the slider bar</p></li>
-<li><p><strong>value</strong> (<em>float</em><em>, </em><em>optional</em>) -- The starting value of the slider</p></li>
-<li><p><strong>pointa</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em>) -- The relative coordinates of the left point of the slider on the
-display port</p></li>
-<li><p><strong>pointb</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em>) -- The relative coordinates of the right point of the slider on the
-display port</p></li>
-<li><p><strong>color</strong> (<em>string</em><em> or </em><em>3 item list</em><em>, </em><em>optional</em><em>, </em><em>defaults to white</em>) -- Either a string, rgb list, or hex color string.</p></li>
+<li><p><strong>callback</strong> (<em>callable</em>) -- スライダーが更新されるたびに呼び出されるメソッド．これには，単一のパラメータ: スライダーのfloat値を指定します．</p></li>
+<li><p><strong>data</strong> (<em>list</em>) -- スライダバーに表示される使用可能な値のリスト</p></li>
+<li><p><strong>value</strong> (<em>float</em><em>, </em><em>optional</em>) -- スライダの開始値</p></li>
+<li><p><strong>pointa</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em>) -- 表示ポート上のスライダの左端の相対座標．</p></li>
+<li><p><strong>pointb</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em>) -- 表示ポート上のスライダの右ポイントの相対座標</p></li>
+<li><p><strong>color</strong> (<em>string</em><em> or </em><em>3 item list</em><em>, </em><em>optional</em><em>, </em><em>defaults to white</em>) -- 文字列，RGBリスト，または16進カラー文字列．</p></li>
 <li><p><strong>event_type</strong> (<em>str</em>) -- Either 'start', 'end' or 'always', this defines how often the
 slider interacts with the callback.</p></li>
-<li><p><strong>style</strong> (<em>str</em><em>, </em><em>optional</em>) -- The name of the slider style. The list of available styles
-are in <code class="docutils literal notranslate"><span class="pre">pyvista.global_theme.slider_styles</span></code>. Defaults to
-<code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p><strong>style</strong> (<em>str</em><em>, </em><em>optional</em>) -- スライダスタイルの名前を指定します．使用可能なスタイルのリストは <code class="docutils literal notranslate"><span class="pre">pyvista.global_theme.slider_styles</span></code> にあります．デフォルトは <code class="docutils literal notranslate"><span class="pre">None</span></code> です．</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
-<dd class="field-even"><p><strong>slider_widget</strong> -- The VTK slider widget configured to display text.</p>
+<dd class="field-even"><p><strong>slider_widget</strong> -- テキストを表示するように設定されたVTKスライダウィジェット．</p>
 </dd>
 <dt class="field-odd">戻り値の型</dt>
 <dd class="field-odd"><p>vtk.vtkSliderWidget</p>

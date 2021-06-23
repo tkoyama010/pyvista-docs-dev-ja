@@ -192,37 +192,37 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../../objects.html">
-     Objects
+     オブジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../dataset.html">
-     Datasets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../points.html">
-     Point Data
+     ポイントデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../point-grids.html">
-     Point-Based Grids
+     ポイントベースグリッド
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../grids.html">
-     Gridded Data
+     グリッドデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../composite.html">
-     Composite Datasets
+     複合データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../../filters.html">
-     Filters
+     フィルタ
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -1699,12 +1699,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../camera.html">
-     Cameras
+     カメラ
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../lights.html">
-     Lights
+     ライト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -1883,14 +1883,14 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../helpers.html">
-     Helpers
+     ヘルパー
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../plotting/index.html">
-   Plotting
+   プロット
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -1900,12 +1900,12 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/plotting.html">
-     Plotting
+     プロット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/qt_plotting.html">
-     Pyvista and PyQt
+     PyvistaとPyQt
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -4093,7 +4093,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../plotting/conv_func.html">
-     Convenience Functions
+     便利な機能
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
     <label for="toctree-checkbox-15">
@@ -4137,7 +4137,7 @@
   <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/geometric.html">
-     Geometric Objects
+     ジオメトリオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -4234,7 +4234,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/parametric.html">
-     Parametric Objects
+     パラメトリックオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
     <label for="toctree-checkbox-18">
@@ -4346,7 +4346,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/utilities.html">
-     General Utilities
+     一般ユーティリティ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
     <label for="toctree-checkbox-19">
@@ -4539,22 +4539,15 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataSetFilters.threshold_percent">
 <span class="sig-prename descclassname"><span class="pre">DataSetFilters.</span></span><span class="sig-name descname"><span class="pre">threshold_percent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">percent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scalars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">invert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">continuous</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preference</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cell'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.threshold_percent" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Threshold the dataset by a percentage of its range on the active scalars array or as specified.</p>
+<dd><p>データセットを，アクティブなスカラー配列上の範囲のパーセンテージで，または指定に従ってしきい値に設定します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>percent</strong> (<em>float</em><em> or </em><em>tuple</em><em>(</em><em>float</em><em>)</em><em>, </em><em>optional</em>) -- The percentage (0,1) to threshold. If value is out of 0 to 1 range,
-then it will be divided by 100 and checked to be in that range.</p></li>
-<li><p><strong>scalars</strong> (<em>str</em><em>, </em><em>optional</em>) -- Name of scalars to threshold on. Defaults to currently active scalars.</p></li>
-<li><p><strong>invert</strong> (<em>bool</em><em>, </em><em>optional</em>) -- When invert is True cells are kept when their values are below the
-percentage of the range.  When invert is False, cells are kept when
-their value is above the percentage of the range.
-Default is False: yielding above the threshold &quot;value&quot;.</p></li>
-<li><p><strong>continuous</strong> (<em>bool</em><em>, </em><em>optional</em>) -- When True, the continuous interval [minimum cell scalar,
-maximum cell scalar] will be used to intersect the threshold bound,
-rather than the set of discrete scalar values from the vertices.</p></li>
-<li><p><strong>preference</strong> (<em>str</em><em>, </em><em>optional</em>) -- When scalars is specified, this is the preferred array type to
-search for in the dataset.  Must be either <code class="docutils literal notranslate"><span class="pre">'point'</span></code> or <code class="docutils literal notranslate"><span class="pre">'cell'</span></code></p></li>
+<li><p><strong>percent</strong> (<em>float</em><em> or </em><em>tuple</em><em>(</em><em>float</em><em>)</em><em>, </em><em>optional</em>) -- 閾値に対するパーセント (0,1) ．値が0から1の範囲外の場合，100で除算され，その範囲内であることがチェックされます．</p></li>
+<li><p><strong>scalars</strong> (<em>str</em><em>, </em><em>optional</em>) -- しきい値に対するスカラーの名前．デフォルトは現在アクティブなスカラーです．</p></li>
+<li><p><strong>invert</strong> (<em>bool</em><em>, </em><em>optional</em>) -- invertがTrueの場合，セルの値が範囲のパーセンテージを下回っているときは，セルが保持されます．invertをFalseに設定すると，セルの値がセル範囲のパーセンテージを超えた場合にも保持されます．デフォルトは偽です:閾値 &quot;value&quot; 以上を生成します．</p></li>
+<li><p><strong>continuous</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Trueの場合，頂点からの離散スカラー値のセットではなく，連続間隔[最小セルスカラー，最大セルスカラー]がしきい値境界との交差に使用されます．</p></li>
+<li><p><strong>preference</strong> (<em>str</em><em>, </em><em>optional</em>) -- スカラーが指定されている場合，これはデータセット内で検索するために推奨される配列型です． <code class="docutils literal notranslate"><span class="pre">'point'</span></code> または <code class="docutils literal notranslate"><span class="pre">'cell'</span></code> のいずれかでなければなりません</p></li>
 </ul>
 </dd>
 </dl>

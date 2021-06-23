@@ -192,37 +192,37 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../core/objects.html">
-     Objects
+     オブジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../core/dataset.html">
-     Datasets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../core/points.html">
-     Point Data
+     ポイントデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../core/point-grids.html">
-     Point-Based Grids
+     ポイントベースグリッド
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../core/grids.html">
-     Gridded Data
+     グリッドデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../core/composite.html">
-     Composite Datasets
+     複合データセット
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../core/filters.html">
-     Filters
+     フィルタ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -1699,12 +1699,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../core/camera.html">
-     Cameras
+     カメラ
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../core/lights.html">
-     Lights
+     ライト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -1883,14 +1883,14 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../core/helpers.html">
-     Helpers
+     ヘルパー
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../plotting/index.html">
-   Plotting
+   プロット
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -1900,12 +1900,12 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../plotting/plotting.html">
-     Plotting
+     プロット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../plotting/qt_plotting.html">
-     Pyvista and PyQt
+     PyvistaとPyQt
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -4093,7 +4093,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../plotting/conv_func.html">
-     Convenience Functions
+     便利な機能
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
     <label for="toctree-checkbox-15">
@@ -4137,7 +4137,7 @@
   <ul class="current">
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../geometric.html">
-     Geometric Objects
+     ジオメトリオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -4234,7 +4234,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../parametric.html">
-     Parametric Objects
+     パラメトリックオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
     <label for="toctree-checkbox-18">
@@ -4346,7 +4346,7 @@
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../utilities.html">
-     General Utilities
+     一般ユーティリティ
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
     <label for="toctree-checkbox-19">
@@ -4539,38 +4539,30 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="pyvista.read">
 <span class="sig-prename descclassname"><span class="pre">pyvista.</span></span><span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_ext</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.read" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Read any VTK file.</p>
-<p>It will figure out what reader to use then wrap the VTK object for
-use in PyVista.</p>
+<dd><p>VTKファイルを読み込みます．</p>
+<p>どのリーダーを使用するかを判断し，PyVistaで使用するVTKオブジェクトをラップします．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>filename</strong> (<em>str</em>) -- The string path to the file to read. If a list of files is
-given, a <a class="reference internal" href="../../core/composite.html#pyvista.MultiBlock" title="pyvista.MultiBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.MultiBlock</span></code></a> dataset is returned with
-each file being a separate block in the dataset.</p></li>
-<li><p><strong>attrs</strong> (<em>dict</em><em>, </em><em>optional</em>) -- A dictionary of attributes to call on the reader. Keys of
-dictionary are the attribute/method names and values are the
-arguments passed to those calls. If you do not have any
-attributes to call, pass <code class="docutils literal notranslate"><span class="pre">None</span></code> as the value.</p></li>
-<li><p><strong>force_ext</strong> (<em>str</em><em>, </em><em>optional</em>) -- If specified, the reader will be chosen by an extension which
-is different to its actual extension. For example, <code class="docutils literal notranslate"><span class="pre">'.vts'</span></code>,
-<code class="docutils literal notranslate"><span class="pre">'.vtu'</span></code>.</p></li>
-<li><p><strong>file_format</strong> (<em>str</em><em>, </em><em>optional</em>) -- Format of file to read with meshio.</p></li>
+<li><p><strong>filename</strong> (<em>str</em>) -- 読み込むファイルへの文字列パス．ファイルのリストが与えられた場合， <a class="reference internal" href="../../core/composite.html#pyvista.MultiBlock" title="pyvista.MultiBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.MultiBlock</span></code></a> データセットが返され，各ファイルはデータセット内の個別のブロックです．</p></li>
+<li><p><strong>attrs</strong> (<em>dict</em><em>, </em><em>optional</em>) -- リーダーで呼び出すアトリビュートのディクショナリ．ディクショナリのキーはアトリビュート/メソッド名で，値はこれらの呼び出しに渡される引数です．呼び出すアトリビュートがない場合は， <code class="docutils literal notranslate"><span class="pre">None</span></code> を値として渡します．</p></li>
+<li><p><strong>force_ext</strong> (<em>str</em><em>, </em><em>optional</em>) -- 指定した場合，リーダーは実際の拡張とは異なる拡張によって選択されます．たとえば， <code class="docutils literal notranslate"><span class="pre">'.vts'</span></code> ， <code class="docutils literal notranslate"><span class="pre">'.vtu'</span></code> などです．</p></li>
+<li><p><strong>file_format</strong> (<em>str</em><em>, </em><em>optional</em>) -- meshioで読み込むファイルのフォーマット．</p></li>
 </ul>
 </dd>
 </dl>
 <p class="rubric">サンプル</p>
-<p>Load an example mesh</p>
+<p>サンプルメッシュをロードする</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">examples</span><span class="o">.</span><span class="n">antfile</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Load a vtk file</p>
+<p>vtkファイルをロードする</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;my_mesh.vtk&#39;</span><span class="p">)</span>  
 </pre></div>
 </div>
-<p>Load a meshio file</p>
+<p>meshioファイルをロードする</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;mesh.obj&quot;</span><span class="p">)</span>  
 </pre></div>
 </div>

@@ -192,37 +192,37 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../../objects.html">
-     Objects
+     オブジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../dataset.html">
-     Datasets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../points.html">
-     Point Data
+     ポイントデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../point-grids.html">
-     Point-Based Grids
+     ポイントベースグリッド
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../grids.html">
-     Gridded Data
+     グリッドデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../composite.html">
-     Composite Datasets
+     複合データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../../filters.html">
-     Filters
+     フィルタ
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -1699,12 +1699,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../camera.html">
-     Cameras
+     カメラ
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../lights.html">
-     Lights
+     ライト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -1883,14 +1883,14 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../helpers.html">
-     Helpers
+     ヘルパー
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../plotting/index.html">
-   Plotting
+   プロット
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -1900,12 +1900,12 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/plotting.html">
-     Plotting
+     プロット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/qt_plotting.html">
-     Pyvista and PyQt
+     PyvistaとPyQt
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -4093,7 +4093,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../plotting/conv_func.html">
-     Convenience Functions
+     便利な機能
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
     <label for="toctree-checkbox-15">
@@ -4137,7 +4137,7 @@
   <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/geometric.html">
-     Geometric Objects
+     ジオメトリオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -4234,7 +4234,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/parametric.html">
-     Parametric Objects
+     パラメトリックオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
     <label for="toctree-checkbox-18">
@@ -4346,7 +4346,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/utilities.html">
-     General Utilities
+     一般ユーティリティ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
     <label for="toctree-checkbox-19">
@@ -4539,39 +4539,24 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.PolyDataFilters.extrude">
 <span class="sig-prename descclassname"><span class="pre">PolyDataFilters.</span></span><span class="sig-name descname"><span class="pre">extrude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vector</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inplace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyDataFilters.extrude" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Sweep polygonal data creating a &quot;skirt&quot; from free edges.</p>
-<p>This will create a line from vertices.</p>
-<p>This takes polygonal data as input and generates polygonal
-data on output. The input dataset is swept according to some
-extrusion function and creates new polygonal primitives. These
-primitives form a &quot;skirt&quot; or swept surface. For example,
-sweeping a line results in a quadrilateral, and sweeping a
-triangle creates a &quot;wedge&quot;.</p>
-<p>There are a number of control parameters for this filter. You
-can control whether the sweep of a 2D object (i.e., polygon or
-triangle strip) is capped with the generating geometry via the
-&quot;Capping&quot; parameter.</p>
-<p>The skirt is generated by locating certain topological
-features. Free edges (edges of polygons or triangle strips
-only used by one polygon or triangle strips) generate
-surfaces. This is true also of lines or polylines. Vertices
-generate lines.</p>
-<p>This filter can be used to create 3D fonts, 3D irregular bar
-charts, or to model 2 1/2D objects like punched plates. It
-also can be used to create solid objects from 2D polygonal
-meshes.</p>
+<dd><p>フリーエッジから &quot;skirt&quot; を作成してポリゴンデータを掃除します．</p>
+<p>これにより，頂点からラインが作成されます．</p>
+<p>ポリゴンデータを入力として取り，出力にポリゴンデータを生成します．入力データセットは何らかの押し出し関数に従って間引きされ，新しいポリゴンプリミティブを作成します．これらのプリミティブは &quot;skirt&quot; または間引きサーフェスを形成します．たとえば，線分を間引きすると四角形が作成され，三角形を間引きすると &quot;wedge&quot; が作成されます．</p>
+<p>このフィルタには，いくつかの制御パラメータがあります．2 Dオブジェクト(多角形または三角形のストリップ)の間引きを生成ジオメトリでキャップするかどうかは， &quot;Capping&quot; パラメータで制御できます．</p>
+<p>スカートは，特定のトポロジカルフィーチャーを配置することによって生成されます．フリーエッジ(1つのポリゴンまたは三角形ストリップによってのみ使用されるポリゴンまたは三角形ストリップのエッジ)はサーフェスを生成します．これは，線分またはポリラインにも当てはまります．頂点は線を生成します．</p>
+<p>このフィルタを使用して，3 Dフォント，3 D不規則棒グラフ，またはパンチプレートなどのモデル2 1/2 Dオブジェクトを作成できます．また，2 Dポリゴンメッシュからソリッドオブジェクトを作成する場合にも使用できます．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>mesh</strong> (<a class="reference internal" href="../../points.html#pyvista.PolyData" title="pyvista.PolyData"><em>pyvista.PolyData</em></a>) -- Mesh to extrude.</p></li>
-<li><p><strong>vector</strong> (<em>np.ndarray</em><em> or </em><em>list</em>) -- Direction and length to extrude the mesh in.</p></li>
-<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Overwrites the original mesh in-place.</p></li>
-<li><p><strong>progress_bar</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Display a progress bar to indicate progress.</p></li>
+<li><p><strong>mesh</strong> (<a class="reference internal" href="../../points.html#pyvista.PolyData" title="pyvista.PolyData"><em>pyvista.PolyData</em></a>) -- 押し出すメッシュ．</p></li>
+<li><p><strong>vector</strong> (<em>np.ndarray</em><em> or </em><em>list</em>) -- メッシュを押し出す方向と長さ．</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 元のメッシュの決まった場所に上書きします．</p></li>
+<li><p><strong>progress_bar</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 進行状況を示す進行状況バーを表示します．</p></li>
 </ul>
 </dd>
 </dl>
 <p class="rubric">サンプル</p>
-<p>Extrude a half arc circle</p>
+<p>半円を押し出す</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">arc</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">CircularArc</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">arc</span><span class="o">.</span><span class="n">extrude</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>

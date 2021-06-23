@@ -192,37 +192,37 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../../objects.html">
-     Objects
+     オブジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../dataset.html">
-     Datasets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../points.html">
-     Point Data
+     ポイントデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../point-grids.html">
-     Point-Based Grids
+     ポイントベースグリッド
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../grids.html">
-     Gridded Data
+     グリッドデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../composite.html">
-     Composite Datasets
+     複合データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../../filters.html">
-     Filters
+     フィルタ
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -1699,12 +1699,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../camera.html">
-     Cameras
+     カメラ
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../lights.html">
-     Lights
+     ライト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -1883,14 +1883,14 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../helpers.html">
-     Helpers
+     ヘルパー
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../plotting/index.html">
-   Plotting
+   プロット
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -1900,12 +1900,12 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/plotting.html">
-     Plotting
+     プロット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/qt_plotting.html">
-     Pyvista and PyQt
+     PyvistaとPyQt
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -4093,7 +4093,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../plotting/conv_func.html">
-     Convenience Functions
+     便利な機能
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
     <label for="toctree-checkbox-15">
@@ -4137,7 +4137,7 @@
   <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/geometric.html">
-     Geometric Objects
+     ジオメトリオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -4234,7 +4234,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/parametric.html">
-     Parametric Objects
+     パラメトリックオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
     <label for="toctree-checkbox-18">
@@ -4346,7 +4346,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/utilities.html">
-     General Utilities
+     一般ユーティリティ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
     <label for="toctree-checkbox-19">
@@ -4539,39 +4539,33 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.PolyDataFilters.intersection">
 <span class="sig-prename descclassname"><span class="pre">PolyDataFilters.</span></span><span class="sig-name descname"><span class="pre">intersection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">split_first</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">split_second</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyDataFilters.intersection" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Compute the intersection between two meshes.</p>
+<dd><p>2つのメッシュ間の交差を計算します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>mesh</strong> (<a class="reference internal" href="../../points.html#pyvista.PolyData" title="pyvista.PolyData"><em>pyvista.PolyData</em></a>) -- The mesh to intersect with.</p></li>
-<li><p><strong>split_first</strong> (<em>bool</em><em>, </em><em>optional</em>) -- If <cite>True</cite>, return the first input mesh split by the intersection with the
-second input mesh.</p></li>
-<li><p><strong>split_second</strong> (<em>bool</em><em>, </em><em>optional</em>) -- If <cite>True</cite>, return the second input mesh split by the intersection with the
-first input mesh.</p></li>
+<li><p><strong>mesh</strong> (<a class="reference internal" href="../../points.html#pyvista.PolyData" title="pyvista.PolyData"><em>pyvista.PolyData</em></a>) -- 交差するメッシュ．</p></li>
+<li><p><strong>split_first</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <cite>True</cite> の場合，2番目の入力メッシュとの交差で分割された最初の入力メッシュを返します．</p></li>
+<li><p><strong>split_second</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <cite>True</cite> の場合，最初の入力メッシュとの交差で分割された2番目の入力メッシュを返します．</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><p><ul class="simple">
-<li><p><strong>intersection</strong> (<em>pyvista.PolyData</em>) -- The intersection line.</p></li>
-<li><p><strong>first_split</strong> (<em>pyvista.PolyData</em>) -- The first mesh split along the intersection. Returns the original first mesh
-if <cite>split_first</cite> is False.</p></li>
-<li><p><strong>second_split</strong> (<em>pyvista.PolyData</em>) -- The second mesh split along the intersection. Returns the original second mesh
-if <cite>split_second</cite> is False.</p></li>
+<li><p><strong>intersection</strong> (<em>pyvista.PolyData</em>) -- 交差線．</p></li>
+<li><p><strong>first_split</strong> (<em>pyvista.PolyData</em>) -- 1番目のメッシュは，交点に沿って分割されます． <cite>split_first</cite> がFalseの場合，元の1番目のメッシュを返します．</p></li>
+<li><p><strong>second_split</strong> (<em>pyvista.PolyData</em>) -- 2番目のメッシュは，交点に沿って分割されます． <cite>split_second</cite> がFalseの場合，元の2番目のメッシュを返します．</p></li>
 </ul>
 </p>
 </dd>
 </dl>
 <p class="rubric">サンプル</p>
-<p>Intersect two spheres, returning the intersection and both spheres
-which have new points/cells along the intersection line.</p>
+<p>2つの球体を交差させ，交差，および交差ラインに沿って新しいポイント/セルを持つ両方の球体を返します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">s1</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">s2</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="mf">0.25</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">intersection</span><span class="p">,</span> <span class="n">s1_split</span><span class="p">,</span> <span class="n">s2_split</span> <span class="o">=</span> <span class="n">s1</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">s2</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The mesh splitting takes additional time and can be turned
-off for either mesh individually.</p>
+<p>メッシュ分割には時間がかかり，どちらのメッシュでも個別にオフにすることができます．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">intersection</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">s2_split</span> <span class="o">=</span> <span class="n">s1</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">s2</span><span class="p">,</span>                                                         <span class="n">split_first</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>                                                         <span class="n">split_second</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>

@@ -192,37 +192,37 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../core/objects.html">
-     Objects
+     オブジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../core/dataset.html">
-     Datasets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../core/points.html">
-     Point Data
+     ポイントデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../core/point-grids.html">
-     Point-Based Grids
+     ポイントベースグリッド
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../core/grids.html">
-     Gridded Data
+     グリッドデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../core/composite.html">
-     Composite Datasets
+     複合データセット
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../core/filters.html">
-     Filters
+     フィルタ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -1699,12 +1699,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../core/camera.html">
-     Cameras
+     カメラ
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../core/lights.html">
-     Lights
+     ライト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -1883,14 +1883,14 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../core/helpers.html">
-     Helpers
+     ヘルパー
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../index.html">
-   Plotting
+   プロット
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -1900,12 +1900,12 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../plotting.html">
-     Plotting
+     プロット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../qt_plotting.html">
-     Pyvista and PyQt
+     PyvistaとPyQt
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -4093,7 +4093,7 @@
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../conv_func.html">
-     Convenience Functions
+     便利な機能
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
     <label for="toctree-checkbox-15">
@@ -4137,7 +4137,7 @@
   <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../utilities/geometric.html">
-     Geometric Objects
+     ジオメトリオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -4234,7 +4234,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../utilities/parametric.html">
-     Parametric Objects
+     パラメトリックオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
     <label for="toctree-checkbox-18">
@@ -4346,7 +4346,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../utilities/utilities.html">
-     General Utilities
+     一般ユーティリティ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
     <label for="toctree-checkbox-19">
@@ -4539,25 +4539,24 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="pyvista.plot_arrows">
 <span class="sig-prename descclassname"><span class="pre">pyvista.</span></span><span class="sig-name descname"><span class="pre">plot_arrows</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.plot_arrows" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Plot arrows as vectors.</p>
+<dd><p>矢印をベクトルとしてプロットします．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>cent</strong> (<em>np.ndarray</em>) -- Accepts a single 3d point or array of 3d points.</p></li>
-<li><p><strong>directions</strong> (<em>np.ndarray</em>) -- Accepts a single 3d point or array of 3d vectors.
-Must contain the same number of items as cent.</p></li>
-<li><p><strong>**kwargs</strong> (<em>additional arguments</em><em>, </em><em>optional</em>) -- See <code class="docutils literal notranslate"><span class="pre">help(pyvista.plot)</span></code>.</p></li>
+<li><p><strong>cent</strong> (<em>np.ndarray</em>) -- 単一の3 Dポイントまたは3 Dポイントの配列を受け入れます．</p></li>
+<li><p><strong>directions</strong> (<em>np.ndarray</em>) -- 単一の3 D点または3 Dベクトルの配列を受け入れます．centと同じ数のアイテムを含める必要があります．</p></li>
+<li><p><strong>**kwargs</strong> (<em>additional arguments</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">ヘルプ(pyvista.plot)</span></code> を参照</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><p></p>
 </dd>
 <dt class="field-odd">戻り値の型</dt>
-<dd class="field-odd"><p>Same as <code class="docutils literal notranslate"><span class="pre">pyvista.plot</span></code>.  See <code class="docutils literal notranslate"><span class="pre">help(pyvista.plot)</span></code>.</p>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">pyvista.plot</span></code> と同じ． <code class="docutils literal notranslate"><span class="pre">help(pyvista.plot)</span></code> を参照．</p>
 </dd>
 </dl>
 <p class="rubric">サンプル</p>
-<p>Plot a single random arrow.</p>
+<p>1つのランダムな矢印をプロットします．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cent</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -4565,7 +4564,7 @@ Must contain the same number of items as cent.</p></li>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cpos</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">plot_arrows</span><span class="p">(</span><span class="n">cent</span><span class="p">,</span> <span class="n">direction</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Plot 100 random arrows.</p>
+<p>100のランダムな矢印をプロットします．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cent</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">100</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>

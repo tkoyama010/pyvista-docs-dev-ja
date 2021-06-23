@@ -192,37 +192,37 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../../objects.html">
-     Objects
+     オブジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../dataset.html">
-     Datasets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../points.html">
-     Point Data
+     ポイントデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../point-grids.html">
-     Point-Based Grids
+     ポイントベースグリッド
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../grids.html">
-     Gridded Data
+     グリッドデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../composite.html">
-     Composite Datasets
+     複合データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../../filters.html">
-     Filters
+     フィルタ
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -1699,12 +1699,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../camera.html">
-     Cameras
+     カメラ
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../lights.html">
-     Lights
+     ライト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -1883,14 +1883,14 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../helpers.html">
-     Helpers
+     ヘルパー
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../plotting/index.html">
-   Plotting
+   プロット
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -1900,12 +1900,12 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/plotting.html">
-     Plotting
+     プロット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/qt_plotting.html">
-     Pyvista and PyQt
+     PyvistaとPyQt
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -4093,7 +4093,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../plotting/conv_func.html">
-     Convenience Functions
+     便利な機能
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
     <label for="toctree-checkbox-15">
@@ -4137,7 +4137,7 @@
   <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/geometric.html">
-     Geometric Objects
+     ジオメトリオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -4234,7 +4234,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/parametric.html">
-     Parametric Objects
+     パラメトリックオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
     <label for="toctree-checkbox-18">
@@ -4346,7 +4346,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/utilities.html">
-     General Utilities
+     一般ユーティリティ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
     <label for="toctree-checkbox-19">
@@ -4539,18 +4539,15 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataSetFilters.warp_by_scalar">
 <span class="sig-prename descclassname"><span class="pre">DataSetFilters.</span></span><span class="sig-name descname"><span class="pre">warp_by_scalar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scalars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inplace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.warp_by_scalar" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Warp the dataset's points by a point data scalars array's values.</p>
-<p>This modifies point coordinates by moving points along point normals by
-the scalar amount times the scale factor.</p>
+<dd><p>データセットのポイントをポイントデータスカラー配列の値でワープします．</p>
+<p>これにより，スカラー量にスケール係数を掛けた値だけポイント法線に沿ってポイントを移動することで，ポイント座標が修正されます．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>scalars</strong> (<em>str</em><em>, </em><em>optional</em>) -- Name of scalars to warp by. Defaults to currently active scalars.</p></li>
-<li><p><strong>factor</strong> (<em>float</em><em>, </em><em>optional</em>) -- A scaling factor to increase the scaling effect. Alias
-<code class="docutils literal notranslate"><span class="pre">scale_factor</span></code> also accepted - if present, overrides <code class="docutils literal notranslate"><span class="pre">factor</span></code>.</p></li>
-<li><p><strong>normal</strong> (<em>np.array</em><em>, </em><em>list</em><em>, </em><em>tuple of length 3</em>) -- User specified normal. If given, data normals will be ignored and
-the given normal will be used to project the warp.</p></li>
-<li><p><strong>inplace</strong> (<em>bool</em>) -- If True, the points of the given dataset will be updated.</p></li>
+<li><p><strong>scalars</strong> (<em>str</em><em>, </em><em>optional</em>) -- ワープに使用するスカラーの名前．デフォルトは現在アクティブなスカラーです．</p></li>
+<li><p><strong>factor</strong> (<em>float</em><em>, </em><em>optional</em>) -- スケーリングエフェクトを大きくするためのスケーリング係数．エイリアス <code class="docutils literal notranslate"><span class="pre">scale_factor</span></code> も受け付けます-存在する場合， <code class="docutils literal notranslate"><span class="pre">factor</span></code> を上書きします．</p></li>
+<li><p><strong>normal</strong> (<em>np.array</em><em>, </em><em>list</em><em>, </em><em>tuple of length 3</em>) -- ユーザが法線を指定します．指定した場合，データ法線は無視され，指定した法線を使用してワープが投影されます．</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em>) -- Trueの場合，与えられたデータセットのポイントが更新されます．</p></li>
 </ul>
 </dd>
 </dl>

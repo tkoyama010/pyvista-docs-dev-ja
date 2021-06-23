@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Objects &#8212; PyVista 0.31.dev0 ドキュメント</title>
+    <title>オブジェクト &#8212; PyVista 0.31.dev0 ドキュメント</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -50,7 +50,7 @@
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
-    <link rel="next" title="Datasets" href="dataset.html" />
+    <link rel="next" title="データセット" href="dataset.html" />
     <link rel="prev" title="コアAPI" href="index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -192,37 +192,37 @@
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Objects
+     オブジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="dataset.html">
-     Datasets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="points.html">
-     Point Data
+     ポイントデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="point-grids.html">
-     Point-Based Grids
+     ポイントベースグリッド
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="grids.html">
-     Gridded Data
+     グリッドデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="composite.html">
-     Composite Datasets
+     複合データセット
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="filters.html">
-     Filters
+     フィルタ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -1699,12 +1699,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="camera.html">
-     Cameras
+     カメラ
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="lights.html">
-     Lights
+     ライト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -1883,14 +1883,14 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="helpers.html">
-     Helpers
+     ヘルパー
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../plotting/index.html">
-   Plotting
+   プロット
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -1900,12 +1900,12 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../plotting/plotting.html">
-     Plotting
+     プロット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../plotting/qt_plotting.html">
-     Pyvista and PyQt
+     PyvistaとPyQt
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -4093,7 +4093,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../plotting/conv_func.html">
-     Convenience Functions
+     便利な機能
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
     <label for="toctree-checkbox-15">
@@ -4137,7 +4137,7 @@
   <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../utilities/geometric.html">
-     Geometric Objects
+     ジオメトリオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -4234,7 +4234,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../utilities/parametric.html">
-     Parametric Objects
+     パラメトリックオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
     <label for="toctree-checkbox-18">
@@ -4346,7 +4346,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../utilities/utilities.html">
-     General Utilities
+     一般ユーティリティ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
     <label for="toctree-checkbox-19">
@@ -4545,11 +4545,9 @@
               <div>
                 
   <div class="section" id="objects">
-<h1>Objects<a class="headerlink" href="#objects" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>The <a class="reference internal" href="#pyvista.DataObject" title="pyvista.DataObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.DataObject</span></code></a> class is a set of common methods and attributes
-for all PyVista types. These objects have no spatial reference, but simply
-hold data.</p>
-<p class="rubric">Attributes</p>
+<h1>オブジェクト<a class="headerlink" href="#objects" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p><a class="reference internal" href="#pyvista.DataObject" title="pyvista.DataObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.DataObject</span></code></a> クラスは，すべてのPyVista型に共通のメソッドと属性のセットです．これらのオブジェクトには空間参照はなく，単にデータが保持されます．</p>
+<p class="rubric">アトリビュート</p>
 <table class="longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
@@ -4557,17 +4555,17 @@ hold data.</p>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataObject.actual_memory_size" title="pyvista.DataObject.actual_memory_size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">actual_memory_size</span></code></a></p></td>
-<td><p>Return the actual size of the dataset object.</p></td>
+<td><p>データセットオブジェクトの実際のサイズを返します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.DataObject.field_arrays" title="pyvista.DataObject.field_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">field_arrays</span></code></a></p></td>
-<td><p>Return vtkFieldData as DataSetAttributes.</p></td>
+<td><p>DataSetAttributesとしてvtkFieldDataを返します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataObject.memory_address" title="pyvista.DataObject.memory_address"><code class="xref py py-obj docutils literal notranslate"><span class="pre">memory_address</span></code></a></p></td>
-<td><p>Get address of the underlying C++ object in format 'Addr=%p'.</p></td>
+<td><p>基本となるC++オブジェクトのアドレスを 'Addr=%p' 形式で取得します．</p></td>
 </tr>
 </tbody>
 </table>
-<p class="rubric">Methods</p>
+<p class="rubric">メソッド</p>
 <table class="longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
@@ -4575,37 +4573,37 @@ hold data.</p>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataObject.add_field_array" title="pyvista.DataObject.add_field_array"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_field_array</span></code></a>(scalars, name[, deep])</p></td>
-<td><p>Add a field array.</p></td>
+<td><p>フィールド配列を追加します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.DataObject.clear_field_arrays" title="pyvista.DataObject.clear_field_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear_field_arrays</span></code></a>()</p></td>
-<td><p>Remove all field arrays.</p></td>
+<td><p>すべてのフィールド配列を削除します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataObject.copy" title="pyvista.DataObject.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code></a>([deep])</p></td>
-<td><p>Return a copy of the object.</p></td>
+<td><p>オブジェクトのコピーを返します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.DataObject.copy_attributes" title="pyvista.DataObject.copy_attributes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy_attributes</span></code></a>(dataset)</p></td>
-<td><p>Copy the data attributes of the input dataset object.</p></td>
+<td><p>入力データセットオブジェクトのデータ属性をコピーします．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataObject.copy_meta_from" title="pyvista.DataObject.copy_meta_from"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy_meta_from</span></code></a>(ido)</p></td>
-<td><p>Copy pyvista meta data onto this object from another object.</p></td>
+<td><p>別のオブジェクトからこのオブジェクトにpyvistaメタデータをコピーします．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.DataObject.copy_structure" title="pyvista.DataObject.copy_structure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy_structure</span></code></a>(dataset)</p></td>
-<td><p>Copy the structure (geometry and topology) of the input dataset object.</p></td>
+<td><p>入力データセットオブジェクトの構造(ジオメトリとトポロジ)をコピーします．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataObject.deep_copy" title="pyvista.DataObject.deep_copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">deep_copy</span></code></a>(to_copy)</p></td>
-<td><p>Overwrite this mesh with the given mesh as a deep copy.</p></td>
+<td><p>このメッシュを指定されたメッシュで深いコピーとして上書きします．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.DataObject.get_data_range" title="pyvista.DataObject.get_data_range"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_data_range</span></code></a>()</p></td>
-<td><p>Get the non-NaN min and max of a named array.</p></td>
+<td><p>指定した配列のNaN以外の最小値と最大値を取得します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataObject.head" title="pyvista.DataObject.head"><code class="xref py py-obj docutils literal notranslate"><span class="pre">head</span></code></a>([display, html])</p></td>
-<td><p>Return the header stats of this dataset.</p></td>
+<td><p>このデータセットのヘッダ統計情報を返します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.DataObject.save" title="pyvista.DataObject.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>(filename[, binary])</p></td>
-<td><p>Save this vtk object to file.</p></td>
+<td><p>このvtkオブジェクトをファイルに保存します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataObject.shallow_copy" title="pyvista.DataObject.shallow_copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">shallow_copy</span></code></a>(to_copy)</p></td>
-<td><p>Shallow copy the given mesh to this mesh.</p></td>
+<td><p>指定されたメッシュをこのメッシュに浅くコピーします．</p></td>
 </tr>
 </tbody>
 </table>
@@ -4613,15 +4611,14 @@ hold data.</p>
 <dt class="sig sig-object py" id="pyvista.DataObject">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyvista.</span></span><span class="sig-name descname"><span class="pre">DataObject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataObject" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Methods common to all wrapped data objects.</p>
+<p>ラップされたすべてのデータオブジェクトに共通するメソッド．</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.DataObject.actual_memory_size">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">actual_memory_size</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#pyvista.DataObject.actual_memory_size" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the actual size of the dataset object.</p>
+<dd><p>データセットオブジェクトの実際のサイズを返します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値</dt>
-<dd class="field-odd"><p>The actual size of the dataset object in kibibytes (1024
-bytes).</p>
+<dd class="field-odd"><p>データセットオブジェクトの実際のサイズ(1024バイト)．</p>
 </dd>
 <dt class="field-even">戻り値の型</dt>
 <dd class="field-even"><p>int</p>
@@ -4639,25 +4636,25 @@ bytes).</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataObject.add_field_array">
 <span class="sig-name descname"><span class="pre">add_field_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scalars</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataObject.add_field_array" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Add a field array.</p>
+<dd><p>フィールド配列を追加します．</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataObject.clear_field_arrays">
 <span class="sig-name descname"><span class="pre">clear_field_arrays</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataObject.clear_field_arrays" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Remove all field arrays.</p>
+<dd><p>すべてのフィールド配列を削除します．</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataObject.copy">
 <span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataObject.copy" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return a copy of the object.</p>
+<dd><p>オブジェクトのコピーを返します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
-<dd class="field-odd"><p><strong>deep</strong> (<em>bool</em><em>, </em><em>optional</em>) -- When True makes a full copy of the object.</p>
+<dd class="field-odd"><p><strong>deep</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Trueに設定すると，オブジェクトの完全なコピーが作成されます．</p>
 </dd>
 <dt class="field-even">戻り値</dt>
-<dd class="field-even"><p><strong>newobject</strong> -- Deep or shallow copy of the input.</p>
+<dd class="field-even"><p><strong>newobject</strong> -- 入力の深いまたは浅いコピーです．</p>
 </dd>
 <dt class="field-odd">戻り値の型</dt>
 <dd class="field-odd"><p>same as input</p>
@@ -4668,7 +4665,7 @@ bytes).</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataObject.copy_attributes">
 <span class="sig-name descname"><span class="pre">copy_attributes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">vtkmodules.vtkCommonDataModel.vtkDataSet</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataObject.copy_attributes" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Copy the data attributes of the input dataset object.</p>
+<dd><p>入力データセットオブジェクトのデータ属性をコピーします．</p>
 <p class="rubric">サンプル</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">source</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">UniformGrid</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
@@ -4683,13 +4680,13 @@ bytes).</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataObject.copy_meta_from">
 <span class="sig-name descname"><span class="pre">copy_meta_from</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ido</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataObject.copy_meta_from" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Copy pyvista meta data onto this object from another object.</p>
+<dd><p>別のオブジェクトからこのオブジェクトにpyvistaメタデータをコピーします．</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataObject.copy_structure">
 <span class="sig-name descname"><span class="pre">copy_structure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">vtkmodules.vtkCommonDataModel.vtkDataSet</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataObject.copy_structure" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Copy the structure (geometry and topology) of the input dataset object.</p>
+<dd><p>入力データセットオブジェクトの構造(ジオメトリとトポロジ)をコピーします．</p>
 <p class="rubric">サンプル</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">source</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">UniformGrid</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
@@ -4703,65 +4700,62 @@ bytes).</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataObject.deep_copy">
 <span class="sig-name descname"><span class="pre">deep_copy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">to_copy</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">vtkmodules.vtkCommonDataModel.vtkDataObject</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">vtkmodules.vtkCommonDataModel.vtkDataObject</span><a class="headerlink" href="#pyvista.DataObject.deep_copy" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Overwrite this mesh with the given mesh as a deep copy.</p>
+<dd><p>このメッシュを指定されたメッシュで深いコピーとして上書きします．</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.DataObject.field_arrays">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">field_arrays</span></span><em class="property"><span class="pre">:</span> <span class="pre">pyvista.core.datasetattributes.DataSetAttributes</span></em><a class="headerlink" href="#pyvista.DataObject.field_arrays" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return vtkFieldData as DataSetAttributes.</p>
+<dd><p>DataSetAttributesとしてvtkFieldDataを返します．</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataObject.get_data_range">
 <em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">get_data_range</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataObject.get_data_range" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Get the non-NaN min and max of a named array.</p>
+<dd><p>指定した配列のNaN以外の最小値と最大値を取得します．</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataObject.head">
 <span class="sig-name descname"><span class="pre">head</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">display</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">html</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataObject.head" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the header stats of this dataset.</p>
-<p>If in IPython, this will be formatted to HTML. Otherwise returns a console friendly string.</p>
+<dd><p>このデータセットのヘッダ統計情報を返します．</p>
+<p>IPythonであれば，これはHTMLにフォーマットされます．IPythonでなければ，コンソールに適した文字列を返します．</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.DataObject.memory_address">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">memory_address</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#pyvista.DataObject.memory_address" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Get address of the underlying C++ object in format 'Addr=%p'.</p>
+<dd><p>基本となるC++オブジェクトのアドレスを 'Addr=%p' 形式で取得します．</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataObject.save">
 <span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">binary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataObject.save" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Save this vtk object to file.</p>
+<dd><p>このvtkオブジェクトをファイルに保存します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>filename</strong> (<em>str</em><em>, </em><em>pathlib.Path</em>) -- Filename of output file. Writer type is inferred from
-the extension of the filename.</p></li>
-<li><p><strong>binary</strong> (<em>bool</em><em>, </em><em>optional</em>) -- If True, write as binary, else ASCII.</p></li>
+<li><p><strong>filename</strong> (<em>str</em><em>, </em><em>pathlib.Path</em>) -- 出力ファイルのファイル名．Writerのタイプは，ファイル名の拡張子から推測されます．</p></li>
+<li><p><strong>binary</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Trueの場合はバイナリ，それ以外の場合はASCIIで記述します．</p></li>
 </ul>
 </dd>
 </dl>
 <p class="rubric">メモ</p>
-<p>Binary files write much faster than ASCII and have a smaller
-file size.</p>
+<p>バイナリファイルはASCIIよりもはるかに高速に書き込み，ファイルサイズも小さくなります</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataObject.shallow_copy">
 <span class="sig-name descname"><span class="pre">shallow_copy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">to_copy</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">vtkmodules.vtkCommonDataModel.vtkDataObject</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">vtkmodules.vtkCommonDataModel.vtkDataObject</span><a class="headerlink" href="#pyvista.DataObject.shallow_copy" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Shallow copy the given mesh to this mesh.</p>
+<dd><p>指定されたメッシュをこのメッシュに浅くコピーします．</p>
 </dd></dl>
 
 </dd></dl>
 
 <div class="section" id="table">
 <h2>Table<a class="headerlink" href="#table" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>The table class is a non-spatially referenced data object that can be used on
-VTK pipelines and holds arrays of data.</p>
-<p class="rubric">Attributes</p>
+<p>Tableクラスは非空間的に参照されるデータオブジェクトで，VTKパイプラインで使用でき，データの配列を保持します．</p>
+<p class="rubric">アトリビュート</p>
 <table class="longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
@@ -4769,20 +4763,20 @@ VTK pipelines and holds arrays of data.</p>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Table.n_arrays" title="pyvista.Table.n_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_arrays</span></code></a></p></td>
-<td><p>Return the number of columns.</p></td>
+<td><p>列数を返します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Table.n_columns" title="pyvista.Table.n_columns"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_columns</span></code></a></p></td>
-<td><p>Return the number of columns.</p></td>
+<td><p>列数を返します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Table.n_rows" title="pyvista.Table.n_rows"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_rows</span></code></a></p></td>
-<td><p>Return the number of rows.</p></td>
+<td><p>行数を返します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Table.row_arrays" title="pyvista.Table.row_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">row_arrays</span></code></a></p></td>
-<td><p>Return the all row arrays.</p></td>
+<td><p>すべての行配列を返します．</p></td>
 </tr>
 </tbody>
 </table>
-<p class="rubric">Methods</p>
+<p class="rubric">メソッド</p>
 <table class="longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
@@ -4790,31 +4784,31 @@ VTK pipelines and holds arrays of data.</p>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Table.get" title="pyvista.Table.get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get</span></code></a>(index)</p></td>
-<td><p>Get an array by its name.</p></td>
+<td><p>名前で配列を取得します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Table.get_data_range" title="pyvista.Table.get_data_range"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_data_range</span></code></a>([arr, preference])</p></td>
-<td><p>Get the non-NaN min and max of a named array.</p></td>
+<td><p>指定した配列のNaN以外の最小値と最大値を取得します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Table.items" title="pyvista.Table.items"><code class="xref py py-obj docutils literal notranslate"><span class="pre">items</span></code></a>()</p></td>
-<td><p>Return the table items.</p></td>
+<td><p>テーブル項目を返します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Table.keys" title="pyvista.Table.keys"><code class="xref py py-obj docutils literal notranslate"><span class="pre">keys</span></code></a>()</p></td>
-<td><p>Return the table keys.</p></td>
+<td><p>テーブルキーを返します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Table.pop" title="pyvista.Table.pop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pop</span></code></a>(name)</p></td>
-<td><p>Pops off an array by the specified name.</p></td>
+<td><p>指定された名前で配列から取り出します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Table.save" title="pyvista.Table.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>(*args, **kwargs)</p></td>
-<td><p>Save the table.</p></td>
+<td><p>テーブルを保存します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Table.to_pandas" title="pyvista.Table.to_pandas"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_pandas</span></code></a>()</p></td>
-<td><p>Create a Pandas DataFrame from this Table.</p></td>
+<td><p>このテーブルからPandas DataFrameを作成します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Table.update" title="pyvista.Table.update"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update</span></code></a>(data)</p></td>
-<td><p>Set the table data.</p></td>
+<td><p>テーブルデータを設定します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Table.values" title="pyvista.Table.values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">values</span></code></a>()</p></td>
-<td><p>Return the table values.</p></td>
+<td><p>テーブル値を返します．</p></td>
 </tr>
 </tbody>
 </table>
@@ -4822,9 +4816,8 @@ VTK pipelines and holds arrays of data.</p>
 <dt class="sig sig-object py" id="pyvista.Table">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyvista.</span></span><span class="sig-name descname"><span class="pre">Table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Table" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">vtkmodules.vtkCommonDataModel.vtkTable</span></code>, <a class="reference internal" href="#pyvista.DataObject" title="pyvista.core.dataobject.DataObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.core.dataobject.DataObject</span></code></a></p>
-<p>Wrapper for the <code class="docutils literal notranslate"><span class="pre">vtkTable</span></code> class.</p>
-<p>Create by passing a 2D NumPy array of shape (<code class="docutils literal notranslate"><span class="pre">n_rows</span></code> by <code class="docutils literal notranslate"><span class="pre">n_columns</span></code>)
-or from a dictionary containing NumPy arrays.</p>
+<p><code class="docutils literal notranslate"><span class="pre">vtkTable</span></code> クラスのラッパーです．</p>
+<p>形状( <code class="docutils literal notranslate"><span class="pre">n_columns</span></code> の <code class="docutils literal notranslate"><span class="pre">n_rows</span></code> )の2 D NumPy配列を渡すか，NumPy配列を含むディクショナリから作成します．</p>
 <p class="rubric">サンプル</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -4835,21 +4828,18 @@ or from a dictionary containing NumPy arrays.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.Table.get">
 <span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Table.get" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Get an array by its name.</p>
+<dd><p>名前で配列を取得します．</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.Table.get_data_range">
 <span class="sig-name descname"><span class="pre">get_data_range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preference</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'row'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Table.get_data_range" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Get the non-NaN min and max of a named array.</p>
+<dd><p>指定した配列のNaN以外の最小値と最大値を取得します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>arr</strong> (<em>str</em><em>, </em><em>np.ndarray</em><em>, </em><em>optional</em>) -- The name of the array to get the range. If None, the active scalar
-is used</p></li>
-<li><p><strong>preference</strong> (<em>str</em><em>, </em><em>optional</em>) -- When scalars is specified, this is the preferred array type
-to search for in the dataset.  Must be either <code class="docutils literal notranslate"><span class="pre">'row'</span></code> or
-<code class="docutils literal notranslate"><span class="pre">'field'</span></code>.</p></li>
+<li><p><strong>arr</strong> (<em>str</em><em>, </em><em>np.ndarray</em><em>, </em><em>optional</em>) -- 範囲を取得する配列の名前を指定します．Noneの場合，アクティブなスカラーが使用されます．</p></li>
+<li><p><strong>preference</strong> (<em>str</em><em>, </em><em>optional</em>) -- スカラーが指定されている場合，これはデータセット内で検索するために推奨される配列型です． <code class="docutils literal notranslate"><span class="pre">'row'</span></code> または <code class="docutils literal notranslate"><span class="pre">'field'</span></code> のいずれかでなければなりません</p></li>
 </ul>
 </dd>
 </dl>
@@ -4858,68 +4848,68 @@ to search for in the dataset.  Must be either <code class="docutils literal notr
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.Table.items">
 <span class="sig-name descname"><span class="pre">items</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Table.items" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the table items.</p>
+<dd><p>テーブル項目を返します．</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.Table.keys">
 <span class="sig-name descname"><span class="pre">keys</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Table.keys" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the table keys.</p>
+<dd><p>テーブルキーを返します．</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.Table.n_arrays">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">n_arrays</span></span><a class="headerlink" href="#pyvista.Table.n_arrays" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the number of columns.</p>
-<p>Alias for: <code class="docutils literal notranslate"><span class="pre">n_columns</span></code>.</p>
+<dd><p>列数を返します．</p>
+<p><code class="docutils literal notranslate"><span class="pre">n_columns</span></code> のエイリアス．</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.Table.n_columns">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">n_columns</span></span><a class="headerlink" href="#pyvista.Table.n_columns" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the number of columns.</p>
+<dd><p>列数を返します．</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.Table.n_rows">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">n_rows</span></span><a class="headerlink" href="#pyvista.Table.n_rows" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the number of rows.</p>
+<dd><p>行数を返します．</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.Table.pop">
 <span class="sig-name descname"><span class="pre">pop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Table.pop" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Pops off an array by the specified name.</p>
+<dd><p>指定された名前で配列から取り出します．</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.Table.row_arrays">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">row_arrays</span></span><a class="headerlink" href="#pyvista.Table.row_arrays" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the all row arrays.</p>
+<dd><p>すべての行配列を返します．</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.Table.save">
 <span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Table.save" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Save the table.</p>
+<dd><p>テーブルを保存します．</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.Table.to_pandas">
 <span class="sig-name descname"><span class="pre">to_pandas</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Table.to_pandas" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Create a Pandas DataFrame from this Table.</p>
+<dd><p>このテーブルからPandas DataFrameを作成します．</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.Table.update">
 <span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Table.update" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Set the table data.</p>
+<dd><p>テーブルデータを設定します．</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.Table.values">
 <span class="sig-name descname"><span class="pre">values</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Table.values" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the table values.</p>
+<dd><p>テーブル値を返します．</p>
 </dd></dl>
 
 </dd></dl>

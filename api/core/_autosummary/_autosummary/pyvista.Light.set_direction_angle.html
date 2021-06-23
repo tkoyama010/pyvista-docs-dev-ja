@@ -192,37 +192,37 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../../objects.html">
-     Objects
+     オブジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../dataset.html">
-     Datasets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../points.html">
-     Point Data
+     ポイントデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../point-grids.html">
-     Point-Based Grids
+     ポイントベースグリッド
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../grids.html">
-     Gridded Data
+     グリッドデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../composite.html">
-     Composite Datasets
+     複合データセット
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../filters.html">
-     Filters
+     フィルタ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -1699,12 +1699,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../camera.html">
-     Cameras
+     カメラ
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../../lights.html">
-     Lights
+     ライト
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -1883,14 +1883,14 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../helpers.html">
-     Helpers
+     ヘルパー
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../plotting/index.html">
-   Plotting
+   プロット
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -1900,12 +1900,12 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/plotting.html">
-     Plotting
+     プロット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/qt_plotting.html">
-     Pyvista and PyQt
+     PyvistaとPyQt
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -4093,7 +4093,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../plotting/conv_func.html">
-     Convenience Functions
+     便利な機能
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
     <label for="toctree-checkbox-15">
@@ -4137,7 +4137,7 @@
   <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/geometric.html">
-     Geometric Objects
+     ジオメトリオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -4234,7 +4234,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/parametric.html">
-     Parametric Objects
+     パラメトリックオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
     <label for="toctree-checkbox-18">
@@ -4346,7 +4346,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/utilities.html">
-     General Utilities
+     一般ユーティリティ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
     <label for="toctree-checkbox-19">
@@ -4539,34 +4539,26 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.Light.set_direction_angle">
 <span class="sig-prename descclassname"><span class="pre">Light.</span></span><span class="sig-name descname"><span class="pre">set_direction_angle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">elev</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">azim</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Light.set_direction_angle" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Set the position and focal point of a directional light.</p>
-<p>The light is switched to directional (non-positional). The
-focal point is set to the origin. The position is defined in
-terms of an elevation and an azimuthal angle, both in degrees.</p>
-<p>Note that the equivalent <code class="docutils literal notranslate"><span class="pre">vtk.vtkLight.SetDirectionAngle()</span></code> method
-uses a surprising coordinate system where the (x', y', z') axes of
-the method correspond to the (z, x, y) axes of the renderer.
-This method reimplements the functionality in a way that <code class="docutils literal notranslate"><span class="pre">elev</span></code>
-is the conventional elevation and <code class="docutils literal notranslate"><span class="pre">azim</span></code> is the conventional azimuth.
-In particular:</p>
+<dd><p>ディレクショナルライトの位置と焦点を設定します．</p>
+<p>ライトが(非位置)指向性に切り替わります．焦点は原点に設定されます．位置は，高度と方位角の両方で定義されます．</p>
+<p>同等の <code class="docutils literal notranslate"><span class="pre">vtk.vtkLight.SetDirectionAngle()</span></code> メソッドは，メソッドの (x', y', z') 軸がレンダラーの (z, x, y) 軸に対応する驚くべき座標系を使用することに注意してください．この方法は， <code class="docutils literal notranslate"><span class="pre">elev</span></code> が従来の高度で <code class="docutils literal notranslate"><span class="pre">azim</span></code> が従来の方位角であるように機能を再実装します．具体的には，次のとおりです．</p>
 <blockquote>
 <div><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">elev</span> <span class="pre">=</span> <span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">azim</span> <span class="pre">=</span> <span class="pre">0</span></code> is the +x direction</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">elev</span> <span class="pre">=</span> <span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">azim</span> <span class="pre">=</span> <span class="pre">90</span></code> is the +y direction</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">elev</span> <span class="pre">=</span> <span class="pre">90</span></code>, <code class="docutils literal notranslate"><span class="pre">azim</span> <span class="pre">=</span> <span class="pre">0</span></code> is the +z direction</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">elev</span> <span class="pre">=</span> <span class="pre">0</span></code> ， <code class="docutils literal notranslate"><span class="pre">azim</span> <span class="pre">=</span> <span class="pre">0</span></code> は+x方向です．</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">elev</span> <span class="pre">=</span> <span class="pre">0</span></code> ， <code class="docutils literal notranslate"><span class="pre">azim</span> <span class="pre">=</span> <span class="pre">90</span></code> は+y方向です．</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">elev</span> <span class="pre">=</span> <span class="pre">90</span></code> ， <code class="docutils literal notranslate"><span class="pre">azim</span> <span class="pre">=</span> <span class="pre">0</span></code> は+z方向です．</p></li>
 </ul>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>elev</strong> (<em>float</em>) -- The elevation of the directional light.</p></li>
-<li><p><strong>azim</strong> (<em>float</em>) -- The azimuthal angle of the directional light.</p></li>
+<li><p><strong>elev</strong> (<em>float</em>) -- ディレクショナルライトの高度．</p></li>
+<li><p><strong>azim</strong> (<em>float</em>) -- ディレクショナルライトの方位角．</p></li>
 </ul>
 </dd>
 </dl>
 <p class="rubric">サンプル</p>
-<p>Create a light that shines on the origin from a 30-degree
-elevation in the xz plane.</p>
+<p>xz平面の30度の高さから原点を照らすライトを作成します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">light</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Light</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">light</span><span class="o">.</span><span class="n">set_direction_angle</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>

@@ -192,37 +192,37 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../../objects.html">
-     Objects
+     オブジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../dataset.html">
-     Datasets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../points.html">
-     Point Data
+     ポイントデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../point-grids.html">
-     Point-Based Grids
+     ポイントベースグリッド
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../grids.html">
-     Gridded Data
+     グリッドデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../composite.html">
-     Composite Datasets
+     複合データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../../filters.html">
-     Filters
+     フィルタ
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -1699,12 +1699,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../camera.html">
-     Cameras
+     カメラ
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../lights.html">
-     Lights
+     ライト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -1883,14 +1883,14 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../helpers.html">
-     Helpers
+     ヘルパー
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../plotting/index.html">
-   Plotting
+   プロット
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -1900,12 +1900,12 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/plotting.html">
-     Plotting
+     プロット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/qt_plotting.html">
-     Pyvista and PyQt
+     PyvistaとPyQt
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -4093,7 +4093,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../plotting/conv_func.html">
-     Convenience Functions
+     便利な機能
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
     <label for="toctree-checkbox-15">
@@ -4137,7 +4137,7 @@
   <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/geometric.html">
-     Geometric Objects
+     ジオメトリオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -4234,7 +4234,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/parametric.html">
-     Parametric Objects
+     パラメトリックオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
     <label for="toctree-checkbox-18">
@@ -4346,7 +4346,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/utilities.html">
-     General Utilities
+     一般ユーティリティ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
     <label for="toctree-checkbox-19">
@@ -4539,22 +4539,15 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.UniformGridFilters.clip_surface">
 <span class="sig-prename descclassname"><span class="pre">UniformGridFilters.</span></span><span class="sig-name descname"><span class="pre">clip_surface</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">surface</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">invert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compute_distance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UniformGridFilters.clip_surface" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Clip any mesh type using a <a class="reference internal" href="../../points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> surface mesh.</p>
-<p>This will return a <a class="reference internal" href="../../point-grids.html#pyvista.UnstructuredGrid" title="pyvista.UnstructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UnstructuredGrid</span></code></a> of the clipped
-mesh. Geometry of the input dataset will be preserved where possible -
-geometries near the clip intersection will be triangulated/tessellated.</p>
+<dd><p><a class="reference internal" href="../../points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> サーフェスメッシュを使用して任意のメッシュタイプをクリップします．</p>
+<p>クリップされたメッシュの <a class="reference internal" href="../../point-grids.html#pyvista.UnstructuredGrid" title="pyvista.UnstructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UnstructuredGrid</span></code></a> を返します．入力データセットのジオメトリは，可能な場合は保持されます - クリップの交点付近のジオメトリは三角形化/面分割されます．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>surface</strong> (<a class="reference internal" href="../../points.html#pyvista.PolyData" title="pyvista.PolyData"><em>pyvista.PolyData</em></a>) -- The PolyData surface mesh to use as a clipping function. If this
-mesh is not PolyData, the external surface will be extracted.</p></li>
-<li><p><strong>invert</strong> (<em>bool</em>) -- Flag on whether to flip/invert the clip</p></li>
-<li><p><strong>value</strong> (<em>float:</em>) -- Set the clipping value of the implicit function (if clipping with
-implicit function) or scalar value (if clipping with scalars).
-The default value is 0.0.</p></li>
-<li><p><strong>compute_distance</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Compute the implicit distance from the mesh onto the input dataset.
-A new array called <code class="docutils literal notranslate"><span class="pre">'implicit_distance'</span></code> will be added to the
-output clipped mesh.</p></li>
+<li><p><strong>surface</strong> (<a class="reference internal" href="../../points.html#pyvista.PolyData" title="pyvista.PolyData"><em>pyvista.PolyData</em></a>) -- クリップ関数として使用するPolyDataサーフェスメッシュ．このメッシュがPolyDataでない場合，外部サーフェスが抽出されます．</p></li>
+<li><p><strong>invert</strong> (<em>bool</em>) -- クリップをフリップ/反転するかどうかを示すフラグ</p></li>
+<li><p><strong>value</strong> (<em>float:</em>) -- インプリシット関数のクリッピング値(インプリシット関数によるクリッピングの場合)またはスカラー値(スカラーによるクリッピングの場合)を設定します．デフォルト値は0.0です．</p></li>
+<li><p><strong>compute_distance</strong> (<em>bool</em><em>, </em><em>optional</em>) -- メッシュから入力データセットへの暗黙の距離を計算します． <code class="docutils literal notranslate"><span class="pre">'implicit_distance'</span></code> という新しい配列が出力クリップメッシュに追加されます．</p></li>
 </ul>
 </dd>
 </dl>

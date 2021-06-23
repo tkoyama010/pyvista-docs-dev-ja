@@ -51,7 +51,7 @@
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="検索" href="../../../search.html" />
     <link rel="next" title="pyvista.Light.add_renderer" href="_autosummary/pyvista.Light.add_renderer.html" />
-    <link rel="prev" title="Lights" href="../lights.html" />
+    <link rel="prev" title="ライト" href="../lights.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -192,37 +192,37 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../objects.html">
-     Objects
+     オブジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../dataset.html">
-     Datasets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../points.html">
-     Point Data
+     ポイントデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../point-grids.html">
-     Point-Based Grids
+     ポイントベースグリッド
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../grids.html">
-     Gridded Data
+     グリッドデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../composite.html">
-     Composite Datasets
+     複合データセット
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../filters.html">
-     Filters
+     フィルタ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -1699,12 +1699,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../camera.html">
-     Cameras
+     カメラ
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../lights.html">
-     Lights
+     ライト
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -1883,14 +1883,14 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../helpers.html">
-     Helpers
+     ヘルパー
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../plotting/index.html">
-   Plotting
+   プロット
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -1900,12 +1900,12 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../plotting/plotting.html">
-     Plotting
+     プロット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../plotting/qt_plotting.html">
-     Pyvista and PyQt
+     PyvistaとPyQt
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -4093,7 +4093,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../plotting/conv_func.html">
-     Convenience Functions
+     便利な機能
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
     <label for="toctree-checkbox-15">
@@ -4137,7 +4137,7 @@
   <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../utilities/geometric.html">
-     Geometric Objects
+     ジオメトリオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -4234,7 +4234,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../utilities/parametric.html">
-     Parametric Objects
+     パラメトリックオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
     <label for="toctree-checkbox-18">
@@ -4346,7 +4346,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../utilities/utilities.html">
-     General Utilities
+     一般ユーティリティ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
     <label for="toctree-checkbox-19">
@@ -4539,78 +4539,37 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="pyvista.Light">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyvista.</span></span><span class="sig-name descname"><span class="pre">Light</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">focal_point</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">light_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'scene</span> <span class="pre">light'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intensity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">positional</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cone_angle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_actor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exponent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shadow_attenuation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attenuation_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Light" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Light class.</p>
+<dd><p>Light クラス．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>position</strong> (<em>list</em><em> or </em><em>tuple</em><em>, </em><em>optional</em>) -- The position of the light. The interpretation of the position
-depends on the type of the light and whether the light has a
-transformation matrix.  See also the <a class="reference internal" href="_autosummary/pyvista.Light.position.html#pyvista.Light.position" title="pyvista.Light.position"><code class="xref py py-attr docutils literal notranslate"><span class="pre">position</span></code></a>
-property.</p></li>
-<li><p><strong>focal_point</strong> (<em>list</em><em> or </em><em>tuple</em><em>, </em><em>optional</em>) -- The focal point of the light. The interpretation of the focal
-point depends on the type of the light and whether the light
-has a transformation matrix.  See also the
-<a class="reference internal" href="_autosummary/pyvista.Light.focal_point.html#pyvista.Light.focal_point" title="pyvista.Light.focal_point"><code class="xref py py-attr docutils literal notranslate"><span class="pre">focal_point</span></code></a> property.</p></li>
-<li><p><strong>color</strong> (<em>string</em><em> or </em><em>3-length sequence</em><em>, </em><em>optional</em>) -- The color of the light. The ambient, diffuse and specular
-colors will all be set to this color on creation.</p></li>
-<li><p><strong>light_type</strong> (<em>string</em><em> or </em><em>int</em><em>, </em><em>optional</em>) -- <p>The type of the light. If a string, one of <code class="docutils literal notranslate"><span class="pre">'headlight'</span></code>,
-<code class="docutils literal notranslate"><span class="pre">'camera</span> <span class="pre">light'</span></code> or <code class="docutils literal notranslate"><span class="pre">'scene</span> <span class="pre">light'</span></code>. If an int, one of 1,
-2 or 3, respectively. The class constants <code class="docutils literal notranslate"><span class="pre">Light.HEADLIGHT</span></code>,
-<code class="docutils literal notranslate"><span class="pre">Light.CAMERA_LIGHT</span></code> and <code class="docutils literal notranslate"><span class="pre">Light.SCENE_LIGHT</span></code> are also
-available, respectively.</p>
-<blockquote>
-<div><ul>
-<li><p>A headlight is attached to the camera, looking at its
-focal point along the axis of the camera.</p></li>
-<li><p>A camera light also moves with the camera, but it can
-occupy a general position with respect to it.</p></li>
-<li><p>A scene light is stationary with respect to the scene,
-as it does not follow the camera. This is the default.</p></li>
-</ul>
-</div></blockquote>
-</p></li>
-<li><p><strong>intensity</strong> (<em>float</em><em>, </em><em>optional</em>) -- The brightness of the light (between 0 and 1).</p></li>
-<li><p><strong>positional</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <p>Set if the light is positional.</p>
-<p>The default is a directional light, i.e. an infinitely distant
-point source. A positional light with a cone angle of at least
-90 degrees acts like a spherical point source. A positional
-light with a cone angle that is less than 90 degrees is known
-as a spotlight.</p>
-</p></li>
-<li><p><strong>cone_angle</strong> (<em>float</em><em>, </em><em>optional</em>) -- Cone angle of a positional light in degrees.</p></li>
-<li><p><strong>show_actor</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Show an actor for a spotlight that depicts the geometry of the
-beam.</p></li>
-<li><p><strong>exponent</strong> (<em>float</em><em>, </em><em>optional</em>) -- The exponent of the cosine used for spotlights. See also the
-<a class="reference internal" href="_autosummary/pyvista.Light.exponent.html#pyvista.Light.exponent" title="pyvista.Light.exponent"><code class="xref py py-attr docutils literal notranslate"><span class="pre">exponent</span></code></a> property.</p></li>
-<li><p><strong>shadow_attenuation</strong> (<em>float</em><em>, </em><em>optional</em>) -- <p>The value of shadow attenuation.</p>
-<p>By default a light will be completely blocked when in shadow.
-By setting this value to less than 1.0 you can control how
-much light is attenuated when in shadow. Note that changing
-the <a class="reference internal" href="_autosummary/pyvista.Light.attenuation_values.html#pyvista.Light.attenuation_values" title="pyvista.Light.attenuation_values"><code class="xref py py-attr docutils literal notranslate"><span class="pre">attenuation_values</span></code></a> of the light can make it pass
-through objects even if its shadow attenuation is 1.</p>
-</p></li>
-<li><p><strong>attenuation_values</strong> (<em>sequence</em><em>, </em><em>optional</em>) -- <p>Quadratic attenuation constants.</p>
-<p>The values are a 3-length sequence which specifies the constant,
-linear and quadratic constants in this order. These parameters
-only have an effect for positional lights.</p>
-</p></li>
+<li><p><strong>position</strong> (<em>list</em><em> or </em><em>tuple</em><em>, </em><em>optional</em>) -- ライトの位置．位置の解釈は，ライトのタイプとライトに変換行列があるかどうかによって異なります． <a class="reference internal" href="_autosummary/pyvista.Light.position.html#pyvista.Light.position" title="pyvista.Light.position"><code class="xref py py-attr docutils literal notranslate"><span class="pre">position</span></code></a> プロパティも参照してください．</p></li>
+<li><p><strong>focal_point</strong> (<em>list</em><em> or </em><em>tuple</em><em>, </em><em>optional</em>) -- ライトの焦点．焦点の解釈は，ライトのタイプとライトに変換行列があるかどうかによって異なります． <a class="reference internal" href="_autosummary/pyvista.Light.focal_point.html#pyvista.Light.focal_point" title="pyvista.Light.focal_point"><code class="xref py py-attr docutils literal notranslate"><span class="pre">focal_point</span></code></a> プロパティも参照してください．</p></li>
+<li><p><strong>color</strong> (<em>string</em><em> or </em><em>3-length sequence</em><em>, </em><em>optional</em>) -- ライトのカラー．作成時には，アンビエントカラー，ディフューズカラー，スペキュラカラーはすべてこのカラーに設定されます．</p></li>
+<li><p><strong>light_type</strong> (<em>string</em><em> or </em><em>int</em><em>, </em><em>optional</em>) -- ライトのタイプ．文字列の場合は <code class="docutils literal notranslate"><span class="pre">'headlight'</span></code> ， <code class="docutils literal notranslate"><span class="pre">'camera</span> <span class="pre">light'</span></code> ， <code class="docutils literal notranslate"><span class="pre">'scene</span> <span class="pre">light'</span></code> のいずれか．intの場合はそれぞれ1，2，3のいずれか．クラス定数 <code class="docutils literal notranslate"><span class="pre">Light.HEADLIGHT</span></code> ， <code class="docutils literal notranslate"><span class="pre">Light.CAMERA_LIGHT</span></code> ， <code class="docutils literal notranslate"><span class="pre">Light.SCENE_LIGHT</span></code> もそれぞれ使用できます． - ヘッドライトがカメラにアタッチされ，カメラの軸に沿って 焦点を見ます． - カメラライトもカメラとともに移動しますが，カメラライトに対して一般的な位置を 占めることができます． - シーンライトはカメラに従わないため， シーンに対して静止しています．これがデフォルトです．</p></li>
+<li><p><strong>intensity</strong> (<em>float</em><em>, </em><em>optional</em>) -- ライトの輝度(0と1の間)．</p></li>
+<li><p><strong>positional</strong> (<em>bool</em><em>, </em><em>optional</em>) -- ライトが定位置な場合に設定します．デフォルトはディレクショナルライト，例えば無限に離れたポイントソースです．コーンアングルが90度以上の位置ライトは，球体のポイントソースのように機能します．コーンアングルが90度未満の位置ライトはスポットライトと呼ばれます．</p></li>
+<li><p><strong>cone_angle</strong> (<em>float</em><em>, </em><em>optional</em>) -- 位置ライトの度単位の円錐角度．</p></li>
+<li><p><strong>show_actor</strong> (<em>bool</em><em>, </em><em>optional</em>) -- ビームのジオメトリを描くスポットライトのアクターを表示します．</p></li>
+<li><p><strong>exponent</strong> (<em>float</em><em>, </em><em>optional</em>) -- スポットライトに使用されるコサインの指数． <a class="reference internal" href="_autosummary/pyvista.Light.exponent.html#pyvista.Light.exponent" title="pyvista.Light.exponent"><code class="xref py py-attr docutils literal notranslate"><span class="pre">exponent</span></code></a> プロパティも参照してください．</p></li>
+<li><p><strong>shadow_attenuation</strong> (<em>float</em><em>, </em><em>optional</em>) -- 影の減衰の値です．デフォルトでは，影の中にあるライトは完全に遮られます．この値を1.0未満に設定することで，影の中にあるライトを制御できます．ライトの <a class="reference internal" href="_autosummary/pyvista.Light.attenuation_values.html#pyvista.Light.attenuation_values" title="pyvista.Light.attenuation_values"><code class="xref py py-attr docutils literal notranslate"><span class="pre">attenuation_values</span></code></a> を変更すると，影の減衰が1であってもオブジェクトを通過することができます．</p></li>
+<li><p><strong>attenuation_values</strong> (<em>sequence</em><em>, </em><em>optional</em>) -- 2次減衰定数．値は3つの長さのシーケンスで，この順序で定数，1次定数，2次定数を指定します．これらのパラメータは，ポジションライトにのみ影響します．</p></li>
 </ul>
 </dd>
 </dl>
 <p class="rubric">サンプル</p>
-<p>Create a light at (10, 10, 10) and set its diffuse color to red.</p>
+<p>(10, 10, 10) でライトを作成し，拡散反射光カラーを赤に設定します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">light</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Light</span><span class="p">(</span><span class="n">position</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">light</span><span class="o">.</span><span class="n">diffuse_color</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
 </pre></div>
 </div>
-<p>Create a positional light at (0, 0, 3) with a cone angle of
-30, exponent of 20, and a visible actor.</p>
+<p>(0, 0, 3) に位置ライトを作成し，円錐角度を30，指数を20，可視アクターを指定します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">light</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Light</span><span class="p">(</span><span class="n">position</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">show_actor</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
 <span class="gp">... </span>                 <span class="n">positional</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cone_angle</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">exponent</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
 </pre></div>
 </div>
-<p class="rubric">Methods</p>
+<p class="rubric">メソッド</p>
 <table class="longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
@@ -4618,41 +4577,41 @@ only have an effect for positional lights.</p>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/pyvista.Light.add_renderer.html#pyvista.Light.add_renderer" title="pyvista.Light.add_renderer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Light.add_renderer</span></code></a>(renderer)</p></td>
-<td><p>Attach a renderer to this light.</p></td>
+<td><p>このライトにレンダラーをアタッチします．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/pyvista.Light.copy.html#pyvista.Light.copy" title="pyvista.Light.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Light.copy</span></code></a>([deep])</p></td>
-<td><p>Return a shallow or a deep copy of the light.</p></td>
+<td><p>ライトの浅いコピーまたは深いコピーを返します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/pyvista.Light.from_vtk.html#pyvista.Light.from_vtk" title="pyvista.Light.from_vtk"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Light.from_vtk</span></code></a>(vtk_light)</p></td>
-<td><p>Create a light from a <code class="docutils literal notranslate"><span class="pre">vtk.vtkLight</span></code>, resulting in a copy.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">vtk.vtkLight</span></code> からライトを作成し，コピーを作成します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/pyvista.Light.hide_actor.html#pyvista.Light.hide_actor" title="pyvista.Light.hide_actor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Light.hide_actor</span></code></a>()</p></td>
-<td><p>Hide the actor for a positional light that depicts the geometry of the beam.</p></td>
+<td><p>ビームのジオメトリを表すポジションライトのアクターを非表示にします．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/pyvista.Light.set_camera_light.html#pyvista.Light.set_camera_light" title="pyvista.Light.set_camera_light"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Light.set_camera_light</span></code></a>()</p></td>
-<td><p>Set the light to be a camera light.</p></td>
+<td><p>原点を照らすヘッドライトを作成します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/pyvista.Light.set_direction_angle.html#pyvista.Light.set_direction_angle" title="pyvista.Light.set_direction_angle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Light.set_direction_angle</span></code></a>(elev, azim)</p></td>
-<td><p>Set the position and focal point of a directional light.</p></td>
+<td><p>ディレクショナルライトの位置と焦点を設定します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/pyvista.Light.set_headlight.html#pyvista.Light.set_headlight" title="pyvista.Light.set_headlight"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Light.set_headlight</span></code></a>()</p></td>
-<td><p>Set the light to be a headlight.</p></td>
+<td><p>ライトをヘッドライトに設定します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/pyvista.Light.set_scene_light.html#pyvista.Light.set_scene_light" title="pyvista.Light.set_scene_light"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Light.set_scene_light</span></code></a>()</p></td>
-<td><p>Set the light to be a scene light.</p></td>
+<td><p>ライトをシーンライトに設定します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/pyvista.Light.show_actor.html#pyvista.Light.show_actor" title="pyvista.Light.show_actor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Light.show_actor</span></code></a>()</p></td>
-<td><p>Show an actor for a spotlight that depicts the geometry of the beam.</p></td>
+<td><p>ビームのジオメトリを描くスポットライトのアクターを表示します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/pyvista.Light.switch_off.html#pyvista.Light.switch_off" title="pyvista.Light.switch_off"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Light.switch_off</span></code></a>()</p></td>
-<td><p>Switch off the light.</p></td>
+<td><p>ライトを消します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/pyvista.Light.switch_on.html#pyvista.Light.switch_on" title="pyvista.Light.switch_on"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Light.switch_on</span></code></a>()</p></td>
-<td><p>Switch on the light.</p></td>
+<td><p>ライトをつけます．</p></td>
 </tr>
 </tbody>
 </table>
-<p class="rubric">Attributes</p>
+<p class="rubric">アトリビュート</p>
 <table class="longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
@@ -4660,64 +4619,64 @@ only have an effect for positional lights.</p>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/pyvista.Light.ambient_color.html#pyvista.Light.ambient_color" title="pyvista.Light.ambient_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Light.ambient_color</span></code></a></p></td>
-<td><p>Return the ambient color of the light.</p></td>
+<td><p>ライトのアンビエントカラーを返します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/pyvista.Light.attenuation_values.html#pyvista.Light.attenuation_values" title="pyvista.Light.attenuation_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Light.attenuation_values</span></code></a></p></td>
-<td><p>Return the quadratic attenuation constants.</p></td>
+<td><p>2次減衰定数を返します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/pyvista.Light.cone_angle.html#pyvista.Light.cone_angle" title="pyvista.Light.cone_angle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Light.cone_angle</span></code></a></p></td>
-<td><p>Return the cone angle of a positional light.</p></td>
+<td><p>ポジショナルライトのコーンアングルを返します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/pyvista.Light.diffuse_color.html#pyvista.Light.diffuse_color" title="pyvista.Light.diffuse_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Light.diffuse_color</span></code></a></p></td>
-<td><p>Return the diffuse color of the light.</p></td>
+<td><p>ライトの拡散カラーを返します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/pyvista.Light.exponent.html#pyvista.Light.exponent" title="pyvista.Light.exponent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Light.exponent</span></code></a></p></td>
-<td><p>Return the exponent of the cosine used for spotlights.</p></td>
+<td><p>スポットライトに使用されるコサインの指数を返します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/pyvista.Light.focal_point.html#pyvista.Light.focal_point" title="pyvista.Light.focal_point"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Light.focal_point</span></code></a></p></td>
-<td><p>Return the focal point of the light.</p></td>
+<td><p>ライトの焦点を返します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/pyvista.Light.intensity.html#pyvista.Light.intensity" title="pyvista.Light.intensity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Light.intensity</span></code></a></p></td>
-<td><p>Return the brightness of the light (between 0 and 1).</p></td>
+<td><p>ライトの輝度(0と1の間)を返します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/pyvista.Light.is_camera_light.html#pyvista.Light.is_camera_light" title="pyvista.Light.is_camera_light"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Light.is_camera_light</span></code></a></p></td>
-<td><p>Return whether the light is a camera light.</p></td>
+<td><p>ライトがカメラライトかどうかを返します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/pyvista.Light.is_headlight.html#pyvista.Light.is_headlight" title="pyvista.Light.is_headlight"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Light.is_headlight</span></code></a></p></td>
-<td><p>Return whether the light is a headlight.</p></td>
+<td><p>ライトがヘッドライトかどうかを返します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/pyvista.Light.is_scene_light.html#pyvista.Light.is_scene_light" title="pyvista.Light.is_scene_light"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Light.is_scene_light</span></code></a></p></td>
-<td><p>Return whether the light is a scene light.</p></td>
+<td><p>ライトがシーンライトかどうかを返します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/pyvista.Light.light_type.html#pyvista.Light.light_type" title="pyvista.Light.light_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Light.light_type</span></code></a></p></td>
-<td><p>Return the light type.</p></td>
+<td><p>ライトタイプを返します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/pyvista.Light.on.html#pyvista.Light.on" title="pyvista.Light.on"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Light.on</span></code></a></p></td>
-<td><p>Return whether the light is on.</p></td>
+<td><p>ライトが点灯しているかどうかを返します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/pyvista.Light.position.html#pyvista.Light.position" title="pyvista.Light.position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Light.position</span></code></a></p></td>
-<td><p>Return the position of the light.</p></td>
+<td><p>ライトの位置を返します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/pyvista.Light.positional.html#pyvista.Light.positional" title="pyvista.Light.positional"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Light.positional</span></code></a></p></td>
-<td><p>Return whether the light is positional.</p></td>
+<td><p>ライトが定位置かどうかを返します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/pyvista.Light.renderers.html#pyvista.Light.renderers" title="pyvista.Light.renderers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Light.renderers</span></code></a></p></td>
-<td><p>Return the renderers associated with this light.</p></td>
+<td><p>このライトに関連付けられたレンダラを返します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/pyvista.Light.shadow_attenuation.html#pyvista.Light.shadow_attenuation" title="pyvista.Light.shadow_attenuation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Light.shadow_attenuation</span></code></a></p></td>
-<td><p>Return the value of shadow attenuation.</p></td>
+<td><p>影の減衰の値を返します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/pyvista.Light.specular_color.html#pyvista.Light.specular_color" title="pyvista.Light.specular_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Light.specular_color</span></code></a></p></td>
-<td><p>Return the specular color of the light.</p></td>
+<td><p>ライトの鏡面反射光の色を返します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/pyvista.Light.transform_matrix.html#pyvista.Light.transform_matrix" title="pyvista.Light.transform_matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Light.transform_matrix</span></code></a></p></td>
-<td><p>Return the transformation matrix of the light (if any).</p></td>
+<td><p>(もしあれば)ライトの変換行列を返します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/pyvista.Light.world_focal_point.html#pyvista.Light.world_focal_point" title="pyvista.Light.world_focal_point"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Light.world_focal_point</span></code></a></p></td>
-<td><p>Return the world space focal point of the light.</p></td>
+<td><p>ライトのワールド空間焦点を返します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/pyvista.Light.world_position.html#pyvista.Light.world_position" title="pyvista.Light.world_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Light.world_position</span></code></a></p></td>
-<td><p>Return the world space position of the light.</p></td>
+<td><p>ライトのワールド空間の位置を返します．</p></td>
 </tr>
 </tbody>
 </table>

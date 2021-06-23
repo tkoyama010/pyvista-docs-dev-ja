@@ -192,37 +192,37 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../../objects.html">
-     Objects
+     オブジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../dataset.html">
-     Datasets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../points.html">
-     Point Data
+     ポイントデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../point-grids.html">
-     Point-Based Grids
+     ポイントベースグリッド
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../grids.html">
-     Gridded Data
+     グリッドデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../composite.html">
-     Composite Datasets
+     複合データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../../filters.html">
-     Filters
+     フィルタ
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -1699,12 +1699,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../camera.html">
-     Cameras
+     カメラ
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../lights.html">
-     Lights
+     ライト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -1883,14 +1883,14 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../helpers.html">
-     Helpers
+     ヘルパー
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../plotting/index.html">
-   Plotting
+   プロット
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -1900,12 +1900,12 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/plotting.html">
-     Plotting
+     プロット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/qt_plotting.html">
-     Pyvista and PyQt
+     PyvistaとPyQt
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -4093,7 +4093,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../plotting/conv_func.html">
-     Convenience Functions
+     便利な機能
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
     <label for="toctree-checkbox-15">
@@ -4137,7 +4137,7 @@
   <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/geometric.html">
-     Geometric Objects
+     ジオメトリオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -4234,7 +4234,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/parametric.html">
-     Parametric Objects
+     パラメトリックオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
     <label for="toctree-checkbox-18">
@@ -4346,7 +4346,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/utilities.html">
-     General Utilities
+     一般ユーティリティ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
     <label for="toctree-checkbox-19">
@@ -4539,31 +4539,23 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.PolyDataFilters.remove_points">
 <span class="sig-prename descclassname"><span class="pre">PolyDataFilters.</span></span><span class="sig-name descname"><span class="pre">remove_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">remove</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'any'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_scalars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inplace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyDataFilters.remove_points" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Rebuild a mesh by removing points.</p>
-<p>Only valid for all-triangle meshes.</p>
+<dd><p>点を削除してメッシュを再構築します．</p>
+<p>すべて三角形のメッシュにのみ有効です．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>remove</strong> (<em>np.ndarray</em>) -- If remove is a bool array, points that are <code class="docutils literal notranslate"><span class="pre">True</span></code> will
-be removed.  Otherwise, it is treated as a list of
-indices.</p></li>
-<li><p><strong>mode</strong> (<em>str</em><em>, </em><em>optional</em>) -- When <code class="docutils literal notranslate"><span class="pre">'all'</span></code>, only faces containing all points flagged
-for removal will be removed.  Default <code class="docutils literal notranslate"><span class="pre">'any'</span></code>.</p></li>
-<li><p><strong>keep_scalars</strong> (<em>bool</em><em>, </em><em>optional</em>) -- When <code class="docutils literal notranslate"><span class="pre">True</span></code>, point and cell scalars will be passed on to
-the new mesh.</p></li>
-<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Updates mesh in-place.  Defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+<li><p><strong>remove</strong> (<em>np.ndarray</em>) -- removeがブール配列の場合， <code class="docutils literal notranslate"><span class="pre">True</span></code> であるポイントは削除されます．それ以外の場合は，インデックスのリストとして扱われます．</p></li>
+<li><p><strong>mode</strong> (<em>str</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">'all'</span></code> の場合，削除のフラグが付いたすべての点を含む面のみが削除されます．デフォルト <code class="docutils literal notranslate"><span class="pre">'any'</span></code></p></li>
+<li><p><strong>keep_scalars</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，ポイントスカラーとセルスカラーが新しいメッシュに渡されます．</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- インプレイスメッシュを更新します．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です．</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><strong>mesh</strong> (<em>pyvista.PolyData</em>) -- Mesh without the points flagged for removal.</p></li>
-<li><p><strong>ridx</strong> (<em>np.ndarray</em>) -- Indices of new points relative to the original mesh.</p></li>
-</ul>
-</p>
+<dd class="field-even"><p><strong>mesh</strong> (<em>pyvista.PolyData</em>) -- 削除のためのフラグが付いたポイントのないメッシュ．<strong>ridx</strong> (<em>np.ndarray</em>) -- 元のメッシュを基準にした新しいポイントのインデックス．</p>
 </dd>
 </dl>
 <p class="rubric">サンプル</p>
-<p>Remove the first 100 points from a sphere.</p>
+<p>球から最初の100点を削除します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">reduced_sphere</span><span class="p">,</span> <span class="n">ridx</span> <span class="o">=</span> <span class="n">sphere</span><span class="o">.</span><span class="n">remove_points</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>

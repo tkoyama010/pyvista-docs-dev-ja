@@ -192,37 +192,37 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../../objects.html">
-     Objects
+     オブジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../dataset.html">
-     Datasets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../points.html">
-     Point Data
+     ポイントデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../point-grids.html">
-     Point-Based Grids
+     ポイントベースグリッド
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../grids.html">
-     Gridded Data
+     グリッドデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../composite.html">
-     Composite Datasets
+     複合データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../../filters.html">
-     Filters
+     フィルタ
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -1699,12 +1699,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../camera.html">
-     Cameras
+     カメラ
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../lights.html">
-     Lights
+     ライト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -1883,14 +1883,14 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../helpers.html">
-     Helpers
+     ヘルパー
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../plotting/index.html">
-   Plotting
+   プロット
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -1900,12 +1900,12 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/plotting.html">
-     Plotting
+     プロット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/qt_plotting.html">
-     Pyvista and PyQt
+     PyvistaとPyQt
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -4093,7 +4093,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../plotting/conv_func.html">
-     Convenience Functions
+     便利な機能
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
     <label for="toctree-checkbox-15">
@@ -4137,7 +4137,7 @@
   <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/geometric.html">
-     Geometric Objects
+     ジオメトリオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -4234,7 +4234,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/parametric.html">
-     Parametric Objects
+     パラメトリックオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
     <label for="toctree-checkbox-18">
@@ -4346,7 +4346,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/utilities.html">
-     General Utilities
+     一般ユーティリティ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
     <label for="toctree-checkbox-19">
@@ -4539,12 +4539,10 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.PolyDataFilters.compute_cell_quality">
 <span class="sig-prename descclassname"><span class="pre">PolyDataFilters.</span></span><span class="sig-name descname"><span class="pre">compute_cell_quality</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">quality_measure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'scaled_jacobian'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">null_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyDataFilters.compute_cell_quality" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Compute a function of (geometric) quality for each cell of a mesh.</p>
-<p>The per-cell quality is added to the mesh's cell data, in an array
-named &quot;CellQuality&quot;. Cell types not supported by this filter or
-undefined quality of supported cell types will have an entry of -1.</p>
-<p>Defaults to computing the scaled jacobian.</p>
-<p>Options for cell quality measure:</p>
+<dd><p>メッシュのセルごとに (ジオメトリ) 精度の関数を計算します．</p>
+<p>セルごとの品質は， &quot;CellQuality&quot; という名前の配列でメッシュのセルデータに追加されます．このフィルタでサポートされていないセルタイプ，またはサポートされているセルタイプの未定義の品質には，-1というエントリがあります．</p>
+<p>既定では，スケールされたjacobianが計算されます．</p>
+<p>セル品質計測のオプション:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">'area'</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'aspect_beta'</span></code></p></li>
@@ -4579,12 +4577,8 @@ undefined quality of supported cell types will have an entry of -1.</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>quality_measure</strong> (<em>str</em>) -- The cell quality measure to use</p></li>
-<li><p><strong>null_value</strong> (<em>float</em>) -- Float value for undefined quality. Undefined quality are qualities
-that could be addressed by this filter but is not well defined for
-the particular geometry of cell in question, e.g. a volume query
-for a triangle. Undefined quality will always be undefined.
-The default value is -1.</p></li>
+<li><p><strong>quality_measure</strong> (<em>str</em>) -- 使用するセル品質計測</p></li>
+<li><p><strong>null_value</strong> (<em>float</em>) -- 未定義の品質の浮動小数点値です．未定義の品質とは，このフィルタで処理できる品質ですが，問題のセルの特定のジオメトリは三角形のボリューム照会などに対しては十分に定義されていません．未定義の品質は常に定義されません．デフォルト値は-1です．</p></li>
 </ul>
 </dd>
 </dl>

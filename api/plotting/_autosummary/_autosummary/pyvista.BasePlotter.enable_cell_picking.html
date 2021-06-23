@@ -192,37 +192,37 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/objects.html">
-     Objects
+     オブジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/dataset.html">
-     Datasets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/points.html">
-     Point Data
+     ポイントデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/point-grids.html">
-     Point-Based Grids
+     ポイントベースグリッド
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/grids.html">
-     Gridded Data
+     グリッドデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/composite.html">
-     Composite Datasets
+     複合データセット
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../core/filters.html">
-     Filters
+     フィルタ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -1699,12 +1699,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/camera.html">
-     Cameras
+     カメラ
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../core/lights.html">
-     Lights
+     ライト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -1883,14 +1883,14 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/helpers.html">
-     Helpers
+     ヘルパー
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../../index.html">
-   Plotting
+   プロット
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -1900,12 +1900,12 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../../plotting.html">
-     Plotting
+     プロット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../qt_plotting.html">
-     Pyvista and PyQt
+     PyvistaとPyQt
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
@@ -4093,7 +4093,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../conv_func.html">
-     Convenience Functions
+     便利な機能
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
     <label for="toctree-checkbox-15">
@@ -4137,7 +4137,7 @@
   <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/geometric.html">
-     Geometric Objects
+     ジオメトリオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -4234,7 +4234,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/parametric.html">
-     Parametric Objects
+     パラメトリックオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
     <label for="toctree-checkbox-18">
@@ -4346,7 +4346,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/utilities.html">
-     General Utilities
+     一般ユーティリティ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
     <label for="toctree-checkbox-19">
@@ -4539,49 +4539,28 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.BasePlotter.enable_cell_picking">
 <span class="sig-prename descclassname"><span class="pre">BasePlotter.</span></span><span class="sig-name descname"><span class="pre">enable_cell_picking</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">through</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_message</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">style</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'wireframe'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line_width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'pink'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">18</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.enable_cell_picking" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Enable picking at cells.</p>
-<p>Press <code class="docutils literal notranslate"><span class="pre">&quot;r&quot;</span></code> to enable retangle based selection.  Press
-<code class="docutils literal notranslate"><span class="pre">&quot;r&quot;</span></code> again to turn it off. Selection will be saved to
-<code class="docutils literal notranslate"><span class="pre">self.picked_cells</span></code>. Also press <code class="docutils literal notranslate"><span class="pre">&quot;p&quot;</span></code> to pick a single
-cell under the mouse location.</p>
-<p>When using <code class="docutils literal notranslate"><span class="pre">through=False</span></code>, and multiple meshes are being
-picked, the picked cells in <code class="docutils literal notranslate"><span class="pre">``self.picked_cells</span></code> will be a
-<a class="reference internal" href="../../../core/composite.html#pyvista.MultiBlock" title="pyvista.MultiBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">MultiBlock</span></code></a> dataset for each mesh's selection.</p>
-<p>Uses last input mesh for input by default.</p>
+<dd><p>セルの選択を有効にします．</p>
+<p><code class="docutils literal notranslate"><span class="pre">&quot;r&quot;</span></code> キーを押して，リタングルベースの選択を有効にします．もう一度 <code class="docutils literal notranslate"><span class="pre">&quot;r&quot;</span></code> を押してオフにします．選択内容は <code class="docutils literal notranslate"><span class="pre">self.picked_cells</span></code> に保存されます．また， <code class="docutils literal notranslate"><span class="pre">&quot;p&quot;</span></code> キーを押して，マウスの下のセルを1つ選択します．</p>
+<p><code class="docutils literal notranslate"><span class="pre">through=False</span></code> を使用していて，複数のメッシュが選択されている場合， <code class="docutils literal notranslate"><span class="pre">``self.picked_cells</span></code> で選択されたセルは，各メッシュの選択の <a class="reference internal" href="../../../core/composite.html#pyvista.MultiBlock" title="pyvista.MultiBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">MultiBlock</span></code></a> データセットになります．</p>
+<p>既定では，最後の入力メッシュを入力に使用します．</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>Visible cell picking (<code class="docutils literal notranslate"><span class="pre">through=False</span></code>) will only work if the
-mesh is displayed with a <code class="docutils literal notranslate"><span class="pre">'surface'</span></code> representation style
-(the default).</p>
+<p>可視セル選択 (<code class="docutils literal notranslate"><span class="pre">through=False</span></code>) は，メッシュが <code class="docutils literal notranslate"><span class="pre">'surface'</span></code> 表現スタイル(デフォルト)で表示されている場合にのみ機能します．</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>mesh</strong> (<a class="reference internal" href="../../../core/dataset.html#pyvista.DataSet" title="pyvista.DataSet"><em>pyvista.DataSet</em></a><em>, </em><em>optional</em>) -- Mesh to select cells from. When <code class="docutils literal notranslate"><span class="pre">through</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>,
-uses last input mesh by default. When <code class="docutils literal notranslate"><span class="pre">through</span></code> is
-<code class="docutils literal notranslate"><span class="pre">False</span></code>, all meshes in the scene are available for
-picking and this argument is ignored. If you would like to
-only pick a single mesh in the scene, use the
-<code class="docutils literal notranslate"><span class="pre">pickable=False</span></code> argument when adding the other meshes
-to the scene.</p></li>
-<li><p><strong>callback</strong> (<em>function</em><em>, </em><em>optional</em>) -- When input, calls this function after a selection is made.
-The picked_cells are input as the first parameter to this
-function.</p></li>
-<li><p><strong>through</strong> (<em>bool</em><em>, </em><em>optional</em>) -- When <code class="docutils literal notranslate"><span class="pre">True</span></code> (default) the picker will select all cells
-through the mesh. When <code class="docutils literal notranslate"><span class="pre">False</span></code>, the picker will select
-only visible cells on the mesh's surface.</p></li>
-<li><p><strong>show</strong> (<em>bool</em>) -- Show the selection interactively.</p></li>
-<li><p><strong>style</strong> (<em>str</em>) -- Visualization style of the selection.  One of the
-following: <code class="docutils literal notranslate"><span class="pre">style='surface'</span></code>, <code class="docutils literal notranslate"><span class="pre">style='wireframe'</span></code>, or
-<code class="docutils literal notranslate"><span class="pre">style='points'</span></code>.  Defaults to <code class="docutils literal notranslate"><span class="pre">'wireframe'</span></code>.</p></li>
-<li><p><strong>line_width</strong> (<em>float</em><em>, </em><em>optional</em>) -- Thickness of selected mesh edges. Default 5.</p></li>
-<li><p><strong>color</strong> (<em>str</em><em>, </em><em>optional</em>) -- The color of the selected mesh is shown.</p></li>
-<li><p><strong>show_message</strong> (<em>bool</em><em> or </em><em>str</em><em>, </em><em>optional</em>) -- Show the message about how to use the cell picking tool. If this
-is a string, that will be the message shown.</p></li>
-<li><p><strong>font_size</strong> (<em>int</em><em>, </em><em>optional</em>) -- Sets the font size of the message.</p></li>
-<li><p><strong>start</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Automatically start the cell selection tool.</p></li>
-<li><p><strong>kwargs</strong> (<em>optional</em>) -- All remaining keyword arguments are used to control how
-the selection is interactively displayed.</p></li>
+<li><p><strong>mesh</strong> (<a class="reference internal" href="../../../core/dataset.html#pyvista.DataSet" title="pyvista.DataSet"><em>pyvista.DataSet</em></a><em>, </em><em>optional</em>) -- セルを選択するメッシュ． <code class="docutils literal notranslate"><span class="pre">through</span></code> が <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，はデフォルトで最後の入力メッシュを使用します． <code class="docutils literal notranslate"><span class="pre">through</span></code> が <code class="docutils literal notranslate"><span class="pre">False</span></code> の場合，シーン内のすべてのメッシュが選択可能になり，この引数は無視されます．シーン内の1つのメッシュだけを選択する場合は，シーンに他のメッシュを追加するときに <code class="docutils literal notranslate"><span class="pre">pickable=False</span></code> 引数を使用します．</p></li>
+<li><p><strong>callback</strong> (<em>function</em><em>, </em><em>optional</em>) -- 入力すると，選択後にこの関数が呼び出されます．picked_cellsは，この関数の最初のパラメータとして入力されます．</p></li>
+<li><p><strong>through</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> (デフォルト) の場合，ピッカーはメッシュ内のすべてのセルを選択します． <code class="docutils literal notranslate"><span class="pre">False</span></code> の場合，ピッカーはメッシュのサーフェス上の可視セルのみを選択します．</p></li>
+<li><p><strong>show</strong> (<em>bool</em>) -- 選択をインタラクティブに表示する．</p></li>
+<li><p><strong>style</strong> (<em>str</em>) -- 選択の表示スタイル． <code class="docutils literal notranslate"><span class="pre">style='surface'</span></code> ，<code class="docutils literal notranslate"><span class="pre">style='wireframe'</span></code> ，または <code class="docutils literal notranslate"><span class="pre">style='points'</span></code> のいずれかです．デフォルトは <code class="docutils literal notranslate"><span class="pre">'wireframe'</span></code> です．</p></li>
+<li><p><strong>line_width</strong> (<em>float</em><em>, </em><em>optional</em>) -- 選択したメッシュエッジの厚さ．デフォルトは5です．</p></li>
+<li><p><strong>color</strong> (<em>str</em><em>, </em><em>optional</em>) -- 選択したメッシュの色が表示されます．</p></li>
+<li><p><strong>show_message</strong> (<em>bool</em><em> or </em><em>str</em><em>, </em><em>optional</em>) -- セル選択ツールの使用方法に関するメッセージを表示します．これが文字列の場合は，メッセージが表示されます．</p></li>
+<li><p><strong>font_size</strong> (<em>int</em><em>, </em><em>optional</em>) -- メッセージのフォントサイズを設定します．</p></li>
+<li><p><strong>start</strong> (<em>bool</em><em>, </em><em>optional</em>) -- セル選択ツールを自動的に起動します．</p></li>
+<li><p><strong>kwargs</strong> (<em>optional</em>) -- 残りのキーワード引数はすべて，選択範囲の対話的な表示方法を制御するために使用されます．</p></li>
 </ul>
 </dd>
 </dl>

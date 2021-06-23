@@ -192,37 +192,37 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../../objects.html">
-     Objects
+     オブジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../dataset.html">
-     Datasets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../points.html">
-     Point Data
+     ポイントデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../point-grids.html">
-     Point-Based Grids
+     ポイントベースグリッド
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../grids.html">
-     Gridded Data
+     グリッドデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../composite.html">
-     Composite Datasets
+     複合データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../../filters.html">
-     Filters
+     フィルタ
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -1699,12 +1699,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../camera.html">
-     Cameras
+     カメラ
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../lights.html">
-     Lights
+     ライト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -1883,14 +1883,14 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../helpers.html">
-     Helpers
+     ヘルパー
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../plotting/index.html">
-   Plotting
+   プロット
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -1900,12 +1900,12 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/plotting.html">
-     Plotting
+     プロット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/qt_plotting.html">
-     Pyvista and PyQt
+     PyvistaとPyQt
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -4093,7 +4093,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../plotting/conv_func.html">
-     Convenience Functions
+     便利な機能
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
     <label for="toctree-checkbox-15">
@@ -4137,7 +4137,7 @@
   <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/geometric.html">
-     Geometric Objects
+     ジオメトリオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -4234,7 +4234,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/parametric.html">
-     Parametric Objects
+     パラメトリックオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
     <label for="toctree-checkbox-18">
@@ -4346,7 +4346,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/utilities.html">
-     General Utilities
+     一般ユーティリティ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
     <label for="toctree-checkbox-19">
@@ -4539,38 +4539,24 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.UniformGridFilters.extract_surface">
 <span class="sig-prename descclassname"><span class="pre">UniformGridFilters.</span></span><span class="sig-name descname"><span class="pre">extract_surface</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pass_pointid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pass_cellid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nonlinear_subdivision</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UniformGridFilters.extract_surface" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Extract surface mesh of the grid.</p>
+<dd><p>グリッドのサーフェスメッシュを抽出します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>pass_pointid</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Adds a point array &quot;vtkOriginalPointIds&quot; that idenfities which
-original points these surface points correspond to</p></li>
-<li><p><strong>pass_cellid</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Adds a cell array &quot;vtkOriginalPointIds&quot; that idenfities which
-original cells these surface cells correspond to</p></li>
-<li><p><strong>nonlinear_subdivision</strong> (<em>int</em><em>, </em><em>optional</em>) -- <p>If the input is an unstructured grid with nonlinear faces,
-this parameter determines how many times the face is
-subdivided into linear faces.</p>
-<p>If 0, the output is the equivalent of its linear
-counterpart (and the midpoints determining the nonlinear
-interpolation are discarded). If 1 (the default), the
-nonlinear face is triangulated based on the midpoints. If
-greater than 1, the triangulated pieces are recursively
-subdivided to reach the desired subdivision. Setting the
-value to greater than 1 may cause some point data to not
-be passed even if no nonlinear faces exist. This option
-has no effect if the input is not an unstructured grid.</p>
-</p></li>
+<li><p><strong>pass_pointid</strong> (<em>bool</em><em>, </em><em>optional</em>) -- これらのサーフェスポイントが対応する元のポイントを示すポイント配列 &quot;vtkOriginalPointIds&quot; を追加します</p></li>
+<li><p><strong>pass_cellid</strong> (<em>bool</em><em>, </em><em>optional</em>) -- これらのサーフェスセルが対応する元のセルを示すセル配列 &quot;vtkOriginalPointIds&quot; を追加します</p></li>
+<li><p><strong>nonlinear_subdivision</strong> (<em>int</em><em>, </em><em>optional</em>) -- 入力が非線形面を持つ非構造グリッドの場合，このパラメータは面が線形面に分割される回数を決定します．0の場合，出力は対応する線形補間と同等です (非線形補間を決定する中間点は破棄されます) ．1 (既定) の場合，非線形面は中点に基づいて三角形分割されます．1より大きい場合，三角形分割された破片は目的のサブディビジョンに達するまで再帰的に再分割されます．1より大きい値に設定すると，非線形面が存在しない場合でも，一部の点データが渡されないことがあります．入力が構造化されていないグリッドでない場合，このオプションは無効です．</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
-<dd class="field-even"><p>Surface mesh of the grid.</p>
+<dd class="field-even"><p>グリッドのサーフェスメッシュ．</p>
 </dd>
 <dt class="field-odd">戻り値の型</dt>
 <dd class="field-odd"><p><a class="reference internal" href="../../points.html#pyvista.PolyData" title="pyvista.PolyData">pyvista.PolyData</a></p>
 </dd>
 </dl>
 <p class="rubric">サンプル</p>
-<p>Extract the surface of an UnstructuredGrid.</p>
+<p>UnstructuredGridのサーフェスを抽出します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_hexbeam</span><span class="p">()</span>

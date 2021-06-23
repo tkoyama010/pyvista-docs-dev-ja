@@ -192,37 +192,37 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../core/objects.html">
-     Objects
+     オブジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../core/dataset.html">
-     Datasets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../core/points.html">
-     Point Data
+     ポイントデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../core/point-grids.html">
-     Point-Based Grids
+     ポイントベースグリッド
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../core/grids.html">
-     Gridded Data
+     グリッドデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../core/composite.html">
-     Composite Datasets
+     複合データセット
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../core/filters.html">
-     Filters
+     フィルタ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -1699,12 +1699,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../core/camera.html">
-     Cameras
+     カメラ
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../core/lights.html">
-     Lights
+     ライト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -1883,14 +1883,14 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../core/helpers.html">
-     Helpers
+     ヘルパー
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../plotting/index.html">
-   Plotting
+   プロット
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -1900,12 +1900,12 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../plotting/plotting.html">
-     Plotting
+     プロット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../plotting/qt_plotting.html">
-     Pyvista and PyQt
+     PyvistaとPyQt
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -4093,7 +4093,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../plotting/conv_func.html">
-     Convenience Functions
+     便利な機能
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
     <label for="toctree-checkbox-15">
@@ -4137,7 +4137,7 @@
   <ul class="current">
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../geometric.html">
-     Geometric Objects
+     ジオメトリオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -4234,7 +4234,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../parametric.html">
-     Parametric Objects
+     パラメトリックオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
     <label for="toctree-checkbox-18">
@@ -4346,7 +4346,7 @@
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../utilities.html">
-     General Utilities
+     一般ユーティリティ
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
     <label for="toctree-checkbox-19">
@@ -4539,24 +4539,17 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="pyvista.read_exodus">
 <span class="sig-prename descclassname"><span class="pre">pyvista.</span></span><span class="sig-name descname"><span class="pre">read_exodus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">animate_mode_shapes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">apply_displacements</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">displacement_magnitude</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">read_point_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">read_cell_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enabled_sidesets</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.read_exodus" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Read an ExodusII file (<code class="docutils literal notranslate"><span class="pre">'.e'</span></code> or <code class="docutils literal notranslate"><span class="pre">'.exo'</span></code>).</p>
+<dd><p>ExodusIIファイルを読み込みます(<code class="docutils literal notranslate"><span class="pre">'.e'</span></code> または <code class="docutils literal notranslate"><span class="pre">'.exo'</span></code> )．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>filename</strong> (<em>str</em>) -- The path to the exodus file to read.</p></li>
-<li><p><strong>animate_mode_shapes</strong> (<em>bool</em><em>, </em><em>optional</em>) -- When <code class="docutils literal notranslate"><span class="pre">True</span></code> then this reader will report a continuous time
-range [0,1] and animate the displacements in a periodic
-sinusoid.</p></li>
-<li><p><strong>apply_displacements</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Geometric locations can include displacements. When <code class="docutils literal notranslate"><span class="pre">True</span></code>,
-the nodal positions are 'displaced' by the standard exodus
-displacement vector. If displacements are turned off, the user
-can explicitly add them by applying a warp filter.</p></li>
-<li><p><strong>displacement_magnitude</strong> (<em>bool</em><em>, </em><em>optional</em>) -- This is a number between 0 and 1 that is used to scale the
-<code class="docutils literal notranslate"><span class="pre">DisplacementMagnitude</span></code> in a sinusoidal pattern.</p></li>
-<li><p><strong>read_point_data</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Read in data associated with points.  Default <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
-<li><p><strong>read_cell_data</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Read in data associated with cells.  Default <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
-<li><p><strong>enabled_sidesets</strong> (<em>str</em><em> or </em><em>int</em><em>, </em><em>optional</em>) -- The name of the array that store the mapping from side set
-cells back to the global id of the elements they bound.</p></li>
+<li><p><strong>filename</strong> (<em>str</em>) -- 読み込むexodusファイルへのパス．</p></li>
+<li><p><strong>animate_mode_shapes</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，この読者は連続時間範囲 [0,1] を報告し，周期的な正弦で変位をアニメーションします．</p></li>
+<li><p><strong>apply_displacements</strong> (<em>bool</em><em>, </em><em>optional</em>) -- ジオメトリ位置には変位を含めることができます． <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，節位は標準的な外節変位ベクトルによる 'displaced' です．変位がオフになっている場合，ユーザはワープフィルタを適用して，変位を明示的に追加できます．</p></li>
+<li><p><strong>displacement_magnitude</strong> (<em>bool</em><em>, </em><em>optional</em>) -- これは正弦パターンで <code class="docutils literal notranslate"><span class="pre">DisplacementMagnitude</span></code> をスケールするために使われる0と1の間の数です．</p></li>
+<li><p><strong>read_point_data</strong> (<em>bool</em><em>, </em><em>optional</em>) -- ポイントに関連付けられたデータを読み込みます．デフォルトは <code class="docutils literal notranslate"><span class="pre">True</span></code> ．</p></li>
+<li><p><strong>read_cell_data</strong> (<em>bool</em><em>, </em><em>optional</em>) -- セルに関連付けられたデータを読み込みます．デフォルトは <code class="docutils literal notranslate"><span class="pre">True</span></code> ．</p></li>
+<li><p><strong>enabled_sidesets</strong> (<em>str</em><em> or </em><em>int</em><em>, </em><em>optional</em>) -- サイドセットセルからバインドされた要素のグローバルIDへのマッピングを格納する配列の名前．</p></li>
 </ul>
 </dd>
 </dl>

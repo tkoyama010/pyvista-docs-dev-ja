@@ -192,37 +192,37 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../../objects.html">
-     Objects
+     オブジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../dataset.html">
-     Datasets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../points.html">
-     Point Data
+     ポイントデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../point-grids.html">
-     Point-Based Grids
+     ポイントベースグリッド
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../grids.html">
-     Gridded Data
+     グリッドデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../composite.html">
-     Composite Datasets
+     複合データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../../filters.html">
-     Filters
+     フィルタ
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -1699,12 +1699,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../camera.html">
-     Cameras
+     カメラ
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../lights.html">
-     Lights
+     ライト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -1883,14 +1883,14 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../helpers.html">
-     Helpers
+     ヘルパー
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../plotting/index.html">
-   Plotting
+   プロット
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -1900,12 +1900,12 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/plotting.html">
-     Plotting
+     プロット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/qt_plotting.html">
-     Pyvista and PyQt
+     PyvistaとPyQt
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -4093,7 +4093,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../plotting/conv_func.html">
-     Convenience Functions
+     便利な機能
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
     <label for="toctree-checkbox-15">
@@ -4137,7 +4137,7 @@
   <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/geometric.html">
-     Geometric Objects
+     ジオメトリオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -4234,7 +4234,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/parametric.html">
-     Parametric Objects
+     パラメトリックオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
     <label for="toctree-checkbox-18">
@@ -4346,7 +4346,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/utilities.html">
-     General Utilities
+     一般ユーティリティ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
     <label for="toctree-checkbox-19">
@@ -4539,32 +4539,21 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.PolyDataFilters.subdivide">
 <span class="sig-prename descclassname"><span class="pre">PolyDataFilters.</span></span><span class="sig-name descname"><span class="pre">subdivide</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nsub</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subfilter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inplace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyDataFilters.subdivide" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Increase the number of triangles in a single, connected triangular mesh.</p>
-<p>Uses one of the following vtk subdivision filters to subdivide a mesh.
-vtkButterflySubdivisionFilter
-vtkLoopSubdivisionFilter
-vtkLinearSubdivisionFilter</p>
-<p>Linear subdivision results in the fastest mesh subdivision,
-but it does not smooth mesh edges, but rather splits each
-triangle into 4 smaller triangles.</p>
-<p>Butterfly and loop subdivision perform smoothing when
-dividing, and may introduce artifacts into the mesh when
-dividing.</p>
-<p>Subdivision filter appears to fail for multiple part meshes.
-Should be one single mesh.</p>
+<dd><p>単一の接続された三角形メッシュ内の三角形の数を増やします．</p>
+<p>次のいずれかのvtkサブディビジョンフィルタを使用してメッシュをサブディバイドします． vtkButterflySubdivisionFilter vtkLoopSubdivisionFilter vtkLinearSubdivisionFilter</p>
+<p>線形サブディビジョンの結果として最も速いメッシュサブディビジョンが得られますが，メッシュエッジはスムースされず，各三角形が4つの小さな三角形に分割されます．</p>
+<p>バタフライサブディビジョンとループサブディビジョンでは，分割時にスムージングが実行され，分割時にメッシュにアーティファクトが生じる場合があります．</p>
+<p>サブディビジョンフィルタが複数のパーツメッシュで失敗するように見えます．1つの単一メッシュである必要があります．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>nsub</strong> (<em>int</em>) -- Number of subdivisions.  Each subdivision creates 4 new
-triangles, so the number of resulting triangles is
-<code class="docutils literal notranslate"><span class="pre">nface*4**nsub</span></code> where <code class="docutils literal notranslate"><span class="pre">nface</span></code> is the current number of
-faces.</p></li>
-<li><p><strong>subfilter</strong> (<em>string</em><em>, </em><em>optional</em>) -- Can be one of the following: 'butterfly', 'loop', 'linear'.</p></li>
-<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Updates mesh in-place. Default <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+<li><p><strong>nsub</strong> (<em>int</em>) -- サブディビジョンの数．サブディビジョンごとに4つの新しい三角形が作成されるため，作成される三角形の数は <code class="docutils literal notranslate"><span class="pre">nface*4**nsub</span></code> となります．ここで， <code class="docutils literal notranslate"><span class="pre">nface</span></code> は現在のフェースの数です．</p></li>
+<li><p><strong>subfilter</strong> (<em>string</em><em>, </em><em>optional</em>) -- 次のいずれかです: 'butterfly', 'loop', 'linear' ．</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- インプレイスメッシュを更新します．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です．</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
-<dd class="field-even"><p><strong>mesh</strong> -- <code class="docutils literal notranslate"><span class="pre">pyvista</span></code> polydata object.</p>
+<dd class="field-even"><p><strong>mesh</strong> -- <code class="docutils literal notranslate"><span class="pre">pyvista</span></code> polydata オブジェクト.</p>
 </dd>
 <dt class="field-odd">戻り値の型</dt>
 <dd class="field-odd"><p>Polydata object</p>
@@ -4577,7 +4566,7 @@ faces.</p></li>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">submesh</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">subdivide</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;loop&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Alternatively, update the mesh in-place.</p>
+<p>代わりに，インプレイスでメッシュを更新します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">submesh</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">subdivide</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;loop&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>

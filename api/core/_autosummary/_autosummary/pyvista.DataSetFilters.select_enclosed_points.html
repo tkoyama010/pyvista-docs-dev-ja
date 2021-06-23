@@ -192,37 +192,37 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../../objects.html">
-     Objects
+     オブジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../dataset.html">
-     Datasets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../points.html">
-     Point Data
+     ポイントデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../point-grids.html">
-     Point-Based Grids
+     ポイントベースグリッド
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../grids.html">
-     Gridded Data
+     グリッドデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../composite.html">
-     Composite Datasets
+     複合データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../../filters.html">
-     Filters
+     フィルタ
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -1699,12 +1699,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../camera.html">
-     Cameras
+     カメラ
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../lights.html">
-     Lights
+     ライト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -1883,14 +1883,14 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../helpers.html">
-     Helpers
+     ヘルパー
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../plotting/index.html">
-   Plotting
+   プロット
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -1900,12 +1900,12 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/plotting.html">
-     Plotting
+     プロット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/qt_plotting.html">
-     Pyvista and PyQt
+     PyvistaとPyQt
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -4093,7 +4093,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../plotting/conv_func.html">
-     Convenience Functions
+     便利な機能
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
     <label for="toctree-checkbox-15">
@@ -4137,7 +4137,7 @@
   <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/geometric.html">
-     Geometric Objects
+     ジオメトリオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -4234,7 +4234,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/parametric.html">
-     Parametric Objects
+     パラメトリックオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
     <label for="toctree-checkbox-18">
@@ -4346,7 +4346,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/utilities.html">
-     General Utilities
+     一般ユーティリティ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
     <label for="toctree-checkbox-19">
@@ -4539,37 +4539,20 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataSetFilters.select_enclosed_points">
 <span class="sig-prename descclassname"><span class="pre">DataSetFilters.</span></span><span class="sig-name descname"><span class="pre">select_enclosed_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">surface</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inside_out</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_surface</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.select_enclosed_points" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Mark points as to whether they are inside a closed surface.</p>
-<p>This evaluates all the input points to determine whether they are in an
-enclosed surface. The filter produces a (0,1) mask
-(in the form of a vtkDataArray) that indicates whether points are
-outside (mask value=0) or inside (mask value=1) a provided surface.
-(The name of the output vtkDataArray is &quot;SelectedPoints&quot;.)</p>
-<p>This filter produces and output data array, but does not modify the
-input dataset. If you wish to extract cells or poinrs, various
-threshold filters are available (i.e., threshold the output array).</p>
+<dd><p>ポイントが閉じた表面の内側にあるかどうかをマークします．</p>
+<p>これにより，すべての入力ポイントが評価され，囲まれたサーフェス内にあるかどうかが判断されます．フィルタは，ポイントが指定されたサーフェスの外側(マスク値=0)か内側(マスク値=1)かを示す (0, 1) マスク(vtkDataArrayの形式で)を生成します．(出力vtkDataArrayの名前は &quot;SelectedPoints&quot; です．)</p>
+<p>このフィルタはデータ配列を生成して出力しますが，入力データセットは変更しません．セルまたは点を抽出する場合は，さまざまな閾値フィルタを使用できます(すなわち，出力配列の閾値)．</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>The filter assumes that the surface is closed and manifold. A boolean
-flag can be set to force the filter to first check whether this is
-true. If false, all points will be marked outside. Note that if this
-check is not performed and the surface is not closed, the results are
-undefined.</p>
+<p>フィルタは，サーフェスが閉じていて多様体であることを前提としています．ブーリアンフラグを設定して，フィルタに最初にこれがtrueであるかどうかを強制的にチェックさせることができます．falseの場合，すべてのポイントが外側にマークされます．このチェックが実行されず，サーフェスが閉じていない場合，結果は未定義であることに注意してください．</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>surface</strong> (<a class="reference internal" href="../../points.html#pyvista.PolyData" title="pyvista.PolyData"><em>pyvista.PolyData</em></a>) -- Set the surface to be used to test for containment. This must be a
-<a class="reference internal" href="../../points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> object.</p></li>
-<li><p><strong>tolerance</strong> (<em>float</em>) -- The tolerance on the intersection. The tolerance is expressed as a
-fraction of the bounding box of the enclosing surface.</p></li>
-<li><p><strong>inside_out</strong> (<em>bool</em>) -- By default, points inside the surface are marked inside or sent
-to the output. If <code class="docutils literal notranslate"><span class="pre">inside_out</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, then the points
-outside the surface are marked inside.</p></li>
-<li><p><strong>check_surface</strong> (<em>bool</em>) -- Specify whether to check the surface for closure. If on, then the
-algorithm first checks to see if the surface is closed and
-manifold. If the surface is not closed and manifold, a runtime
-error is raised.</p></li>
+<li><p><strong>surface</strong> (<a class="reference internal" href="../../points.html#pyvista.PolyData" title="pyvista.PolyData"><em>pyvista.PolyData</em></a>) -- 包含のテストに使用するサーフェスを設定します．これは <a class="reference internal" href="../../points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> オブジェクトでなければなりません．</p></li>
+<li><p><strong>tolerance</strong> (<em>float</em>) -- 交差の許容差．許容値は，囲むサーフェスのバウンディングボックスの割合として表されます．</p></li>
+<li><p><strong>inside_out</strong> (<em>bool</em>) -- 既定では，サーフェス内のポイントは内側にマークされるか，出力に送られます． <code class="docutils literal notranslate"><span class="pre">inside_out</span></code> が <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，サーフェスの外側のポイントは内側とマークされます．</p></li>
+<li><p><strong>check_surface</strong> (<em>bool</em>) -- サーフェスの閉合をチェックするかどうかを指定します．オンの場合，アルゴリズムは最初にサーフェスが閉じて多様体であるかどうかをチェックします．サーフェスが閉じていて多様体でない場合，ランタイムエラーが発生します．</p></li>
 </ul>
 </dd>
 </dl>

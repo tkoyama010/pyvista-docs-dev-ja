@@ -192,37 +192,37 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../../objects.html">
-     Objects
+     オブジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../dataset.html">
-     Datasets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../points.html">
-     Point Data
+     ポイントデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../point-grids.html">
-     Point-Based Grids
+     ポイントベースグリッド
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../grids.html">
-     Gridded Data
+     グリッドデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../composite.html">
-     Composite Datasets
+     複合データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../../filters.html">
-     Filters
+     フィルタ
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -1699,12 +1699,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../camera.html">
-     Cameras
+     カメラ
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../lights.html">
-     Lights
+     ライト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -1883,14 +1883,14 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../helpers.html">
-     Helpers
+     ヘルパー
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../plotting/index.html">
-   Plotting
+   プロット
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -1900,12 +1900,12 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/plotting.html">
-     Plotting
+     プロット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/qt_plotting.html">
-     Pyvista and PyQt
+     PyvistaとPyQt
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -4093,7 +4093,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../plotting/conv_func.html">
-     Convenience Functions
+     便利な機能
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
     <label for="toctree-checkbox-15">
@@ -4137,7 +4137,7 @@
   <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/geometric.html">
-     Geometric Objects
+     ジオメトリオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -4234,7 +4234,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/parametric.html">
-     Parametric Objects
+     パラメトリックオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
     <label for="toctree-checkbox-18">
@@ -4346,7 +4346,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/utilities.html">
-     General Utilities
+     一般ユーティリティ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
     <label for="toctree-checkbox-19">
@@ -4539,57 +4539,32 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.PolyDataFilters.compute_normals">
 <span class="sig-prename descclassname"><span class="pre">PolyDataFilters.</span></span><span class="sig-name descname"><span class="pre">compute_normals</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cell_normals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point_normals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">split_vertices</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flip_normals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">consistent_normals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_orient_normals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">non_manifold_traversal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feature_angle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inplace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyDataFilters.compute_normals" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Compute point and/or cell normals for a mesh.</p>
-<p>The filter can reorder polygons to insure consistent
-orientation across polygon neighbors. Sharp edges can be split
-and points duplicated with separate normals to give crisp
-(rendered) surface definition. It is also possible to globally
-flip the normal orientation.</p>
-<p>The algorithm works by determining normals for each polygon
-and then averaging them at shared points. When sharp edges are
-present, the edges are split and new points generated to
-prevent blurry edges (due to Gouraud shading).</p>
+<dd><p>メッシュのポイント法線やセル法線を計算します．</p>
+<p>このフィルタでは，ポリゴンの順序を変更して，隣接するポリゴン間で方向の一貫性を保つことができます．鋭いエッジを分割し，別々の法線を使用してポイントを複製して，鮮明な (レンダリングされた) サーフェス定義を作成することができます．法線方向をグローバルに反転することもできます．</p>
+<p>このアルゴリズムは，各ポリゴンの法線を決定し，共有ポイントで平均化することで機能します．シャープなエッジがある場合，エッジは分割され，ぼやけたエッジを防ぐために新しいポイントが生成されます(グーローシェーディングによる)．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>cell_normals</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Calculation of cell normals. Defaults to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
-<li><p><strong>point_normals</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Calculation of point normals. Defaults to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
-<li><p><strong>split_vertices</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Splitting of sharp edges. Defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
-<li><p><strong>flip_normals</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Set global flipping of normal orientation. Flipping
-modifies both the normal direction and the order of a
-cell's points. Defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
-<li><p><strong>consistent_normals</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Enforcement of consistent polygon ordering. Defaults to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
-<li><p><strong>auto_orient_normals</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Turn on/off the automatic determination of correct normal
-orientation. NOTE: This assumes a completely closed
-surface (i.e. no boundary edges) and no non-manifold
-edges. If these constraints do not hold, all bets are
-off. This option adds some computational complexity, and
-is useful if you do not want to have to inspect the
-rendered image to determine whether to turn on the
-<code class="docutils literal notranslate"><span class="pre">flip_normals</span></code> flag.  However, this flag can work with
-the <code class="docutils literal notranslate"><span class="pre">flip_normals</span></code> flag, and if both are set, all the
-normals in the output will point &quot;inward&quot;. Defaults to
-<code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
-<li><p><strong>non_manifold_traversal</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Turn on/off traversal across non-manifold edges. Changing
-this may prevent problems where the consistency of
-polygonal ordering is corrupted due to topological
-loops. Defaults to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
-<li><p><strong>feature_angle</strong> (<em>float</em><em>, </em><em>optional</em>) -- The angle that defines a sharp edge. If the difference in
-angle across neighboring polygons is greater than this
-value, the shared edge is considered &quot;sharp&quot;. Defaults to
-30.0.</p></li>
-<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Updates mesh in-place. Defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+<li><p><strong>cell_normals</strong> (<em>bool</em><em>, </em><em>optional</em>) -- セル法線の計算．デフォルトは <code class="docutils literal notranslate"><span class="pre">True</span></code> です．</p></li>
+<li><p><strong>point_normals</strong> (<em>bool</em><em>, </em><em>optional</em>) -- ポイント法線の計算．デフォルトは <code class="docutils literal notranslate"><span class="pre">True</span></code> です．</p></li>
+<li><p><strong>split_vertices</strong> (<em>bool</em><em>, </em><em>optional</em>) -- シャープエッジの分割．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です．</p></li>
+<li><p><strong>flip_normals</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 法線方向のグローバル反転を設定します．フリップすると，セルのポイントの法線方向と順序の両方が変更されます．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です．</p></li>
+<li><p><strong>consistent_normals</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 一貫したポリゴン順序の強制．デフォルトは <code class="docutils literal notranslate"><span class="pre">True</span></code> です．</p></li>
+<li><p><strong>auto_orient_normals</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 正しい法線方向の自動決定のオンとオフを切り替えます．注:これは，完全に閉じたサーフェス(つまり，境界エッジがありません．)で，非マニホールドエッジがないことを前提としています．これらの制約が満たされない場合，すべての賭けはオフになります．このオプションは計算が複雑になるため，レンダーしたイメージを検査して <code class="docutils literal notranslate"><span class="pre">flip_normals</span></code> フラグをオンにするかどうかを決定する必要がない場合に便利です．ただし，このフラグは <code class="docutils literal notranslate"><span class="pre">flip_normals</span></code> フラグと一緒に使用でき，両方が設定されている場合，出力のすべての法線は &quot;inward&quot; をポイントします．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です．</p></li>
+<li><p><strong>non_manifold_traversal</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 非多様体エッジの横断のオンとオフを切り替えます．これを変更すると，トポロジループが原因でポリゴン順序の一貫性が損なわれる問題を防ぐことができます．デフォルトは <code class="docutils literal notranslate"><span class="pre">True</span></code> です．</p></li>
+<li><p><strong>feature_angle</strong> (<em>float</em><em>, </em><em>optional</em>) -- 鋭いエッジを定義する角度．隣接するポリゴン間の角度の差がこの値より大きい場合，共有エッジは &quot;鋭い&quot; とみなされます．デフォルトは30.0です．</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- インプレイスメッシュを更新します．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です．</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
-<dd class="field-even"><p><strong>mesh</strong> -- Updated mesh with cell and point normals.</p>
+<dd class="field-even"><p><strong>mesh</strong> -- セル法線とポイント法線を使用してメッシュを更新</p>
 </dd>
 <dt class="field-odd">戻り値の型</dt>
 <dd class="field-odd"><p><a class="reference internal" href="../../points.html#pyvista.PolyData" title="pyvista.PolyData">pyvista.PolyData</a></p>
 </dd>
 </dl>
 <p class="rubric">サンプル</p>
-<p>Compute the point normals of the surface of a sphere.</p>
+<p>球のサーフェスの点法線を計算します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span> <span class="o">=</span> <span class="n">sphere</span><span class="o">.</span><span class="n">compute_normals</span><span class="p">(</span><span class="n">cell_normals</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -4598,8 +4573,7 @@ value, the shared edge is considered &quot;sharp&quot;. Defaults to
 <span class="go">(842, 3)</span>
 </pre></div>
 </div>
-<p>Alternatively, create a new mesh when computing the normals
-and compute both cell and point normals.</p>
+<p>または，法線を計算するときに新しいメッシュを作成し，セル法線とポイント法線の両方を計算します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sphere_with_norm</span> <span class="o">=</span> <span class="n">sphere</span><span class="o">.</span><span class="n">compute_normals</span><span class="p">()</span>
@@ -4610,12 +4584,10 @@ and compute both cell and point normals.</p>
 </pre></div>
 </div>
 <p class="rubric">メモ</p>
-<p>Previous arrays named &quot;Normals&quot; will be overwritten.</p>
-<p>Normals are computed only for polygons and triangle
-strips. Normals are not computed for lines or vertices.</p>
-<p>Triangle strips are broken up into triangle polygons. You may
-want to restrip the triangles.</p>
-<p>May be easier to run <code class="docutils literal notranslate"><span class="pre">mesh.point_normals</span></code> or <code class="docutils literal notranslate"><span class="pre">mesh.cell_normals</span></code>.</p>
+<p>&quot;Normals&quot; という名前の以前の配列は上書きされます．</p>
+<p>法線はポリゴンと三角形ストリップに対してのみ計算されます．線分または頂点の法線は計算されません．</p>
+<p>三角形ストリップは三角形ポリゴンに分割されます．三角形を再分割することもできます．</p>
+<p><code class="docutils literal notranslate"><span class="pre">mesh.point_normals</span></code> または <code class="docutils literal notranslate"><span class="pre">mesh.cell_normals</span></code> を実行する方が簡単な場合があります</p>
 </dd></dl>
 
 </div>

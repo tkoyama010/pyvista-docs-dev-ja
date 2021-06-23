@@ -192,37 +192,37 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../../objects.html">
-     Objects
+     オブジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../dataset.html">
-     Datasets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../points.html">
-     Point Data
+     ポイントデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../point-grids.html">
-     Point-Based Grids
+     ポイントベースグリッド
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../grids.html">
-     Gridded Data
+     グリッドデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../composite.html">
-     Composite Datasets
+     複合データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../../filters.html">
-     Filters
+     フィルタ
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -1699,12 +1699,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../camera.html">
-     Cameras
+     カメラ
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../lights.html">
-     Lights
+     ライト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -1883,14 +1883,14 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../helpers.html">
-     Helpers
+     ヘルパー
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../plotting/index.html">
-   Plotting
+   プロット
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -1900,12 +1900,12 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/plotting.html">
-     Plotting
+     プロット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/qt_plotting.html">
-     Pyvista and PyQt
+     PyvistaとPyQt
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -4093,7 +4093,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../plotting/conv_func.html">
-     Convenience Functions
+     便利な機能
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
     <label for="toctree-checkbox-15">
@@ -4137,7 +4137,7 @@
   <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/geometric.html">
-     Geometric Objects
+     ジオメトリオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -4234,7 +4234,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/parametric.html">
-     Parametric Objects
+     パラメトリックオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
     <label for="toctree-checkbox-18">
@@ -4346,7 +4346,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/utilities.html">
-     General Utilities
+     一般ユーティリティ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
     <label for="toctree-checkbox-19">
@@ -4539,33 +4539,18 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.UnstructuredGridFilters.compute_derivative">
 <span class="sig-prename descclassname"><span class="pre">UnstructuredGridFilters.</span></span><span class="sig-name descname"><span class="pre">compute_derivative</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scalars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gradient</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">divergence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vorticity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qcriterion</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">faster</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preference</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'point'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UnstructuredGridFilters.compute_derivative" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Compute derivative-based quantities of point/cell scalar field.</p>
-<p>Utilize <code class="docutils literal notranslate"><span class="pre">vtkGradientFilter</span></code> to compute derivative-based quantities,
-such as gradient, divergence, vorticity, and Q-criterion, of the
-selected point or cell scalar field.</p>
+<dd><p>点/セル スカラフィールドの派生ベースの量を計算します．</p>
+<p><code class="docutils literal notranslate"><span class="pre">vtkGradientFilter</span></code> を利用して，選択された点またはセルスカラー場の勾配，発散，渦度，およびQ基準などの微分ベースの量を計算する．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>scalars</strong> (<em>str</em><em>, </em><em>optional</em>) -- String name of the scalars array to use when computing the
-derivative quantities.</p></li>
-<li><p><strong>gradient</strong> (<em>bool</em><em>, </em><em>str</em><em>, </em><em>optional</em>) -- Calculate gradient. If a string is passed, the string will be used
-for the resulting array name. Otherwise, array name will be
-'gradient'. Default: True</p></li>
-<li><p><strong>divergence</strong> (<em>bool</em><em>, </em><em>str</em><em>, </em><em>optional</em>) -- Calculate divergence. If a string is passed, the string will be
-used for the resulting array name. Otherwise, array name will be
-'divergence'. Default: None</p></li>
-<li><p><strong>vorticity</strong> (<em>bool</em><em>, </em><em>str</em><em>, </em><em>optional</em>) -- Calculate vorticity. If a string is passed, the string will be used
-for the resulting array name. Otherwise, array name will be
-'vorticity'. Default: None</p></li>
-<li><p><strong>qcriterion</strong> (<em>bool</em><em>, </em><em>str</em><em>, </em><em>optional</em>) -- Calculate qcriterion. If a string is passed, the string will be
-used for the resulting array name. Otherwise, array name will be
-'qcriterion'. Default: None</p></li>
-<li><p><strong>faster</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Use faster algorithm for computing derivative quantities. Result is
-less accurate and performs fewer derivative calculations,
-increasing computation speed. The error will feature smoothing of
-the output and possibly errors at boundaries. Option has no effect
-if DataSet is not UnstructuredGrid. Default: False</p></li>
-<li><p><strong>preference</strong> (<em>str</em><em>, </em><em>optional</em>) -- Data type preference. Either 'point' or 'cell'.</p></li>
+<li><p><strong>scalars</strong> (<em>str</em><em>, </em><em>optional</em>) -- 派生量を計算するときに使用するスカラー配列の文字列名．</p></li>
+<li><p><strong>gradient</strong> (<em>bool</em><em>, </em><em>str</em><em>, </em><em>optional</em>) -- 勾配を計算します．文字列を渡すと，その文字列が配列名として使用されます．それ以外の場合，配列名は 'gradient' になります．デフォルト:True</p></li>
+<li><p><strong>divergence</strong> (<em>bool</em><em>, </em><em>str</em><em>, </em><em>optional</em>) -- 発散を計算する．文字列を渡すと，その文字列が配列名として使用されます．それ以外の場合，配列名は 'divergence' になります．デフォルト:None</p></li>
+<li><p><strong>vorticity</strong> (<em>bool</em><em>, </em><em>str</em><em>, </em><em>optional</em>) -- 速度を計算する．文字列を渡すと，その文字列が配列名として使用されます．それ以外の場合，配列名は 'vorticity' になります．デフォルト:None</p></li>
+<li><p><strong>qcriterion</strong> (<em>bool</em><em>, </em><em>str</em><em>, </em><em>optional</em>) -- Q-criterionを計算する．文字列を渡すと，その文字列が配列名として使用されます．それ以外の場合，配列名は 'qcriterion' になります．デフォルト:None</p></li>
+<li><p><strong>faster</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 微分量の計算に高速アルゴリズムを使用します．結果の精度が低くなり，導関数の計算が少なくなるため，計算速度が向上します．エラーは出力のスムージングを特徴とし，場合によっては境界でエラーが発生します．DataSetがUnstructuredGridでない場合，オプションは無効です．デフォルト:False</p></li>
+<li><p><strong>preference</strong> (<em>str</em><em>, </em><em>optional</em>) -- データ型の環境設定． 'point' か 'cell' のどちらかです．</p></li>
 </ul>
 </dd>
 </dl>

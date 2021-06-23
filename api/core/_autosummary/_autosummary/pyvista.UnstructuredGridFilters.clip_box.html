@@ -192,37 +192,37 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../../objects.html">
-     Objects
+     オブジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../dataset.html">
-     Datasets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../points.html">
-     Point Data
+     ポイントデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../point-grids.html">
-     Point-Based Grids
+     ポイントベースグリッド
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../grids.html">
-     Gridded Data
+     グリッドデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../composite.html">
-     Composite Datasets
+     複合データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../../filters.html">
-     Filters
+     フィルタ
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -1699,12 +1699,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../camera.html">
-     Cameras
+     カメラ
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../lights.html">
-     Lights
+     ライト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -1883,14 +1883,14 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../helpers.html">
-     Helpers
+     ヘルパー
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../plotting/index.html">
-   Plotting
+   プロット
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -1900,12 +1900,12 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/plotting.html">
-     Plotting
+     プロット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/qt_plotting.html">
-     Pyvista and PyQt
+     PyvistaとPyQt
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -4093,7 +4093,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../plotting/conv_func.html">
-     Convenience Functions
+     便利な機能
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
     <label for="toctree-checkbox-15">
@@ -4137,7 +4137,7 @@
   <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/geometric.html">
-     Geometric Objects
+     ジオメトリオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -4234,7 +4234,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/parametric.html">
-     Parametric Objects
+     パラメトリックオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
     <label for="toctree-checkbox-18">
@@ -4346,7 +4346,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/utilities.html">
-     General Utilities
+     一般ユーティリティ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
     <label for="toctree-checkbox-19">
@@ -4539,29 +4539,19 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.UnstructuredGridFilters.clip_box">
 <span class="sig-prename descclassname"><span class="pre">UnstructuredGridFilters.</span></span><span class="sig-name descname"><span class="pre">clip_box</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bounds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">invert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.35</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UnstructuredGridFilters.clip_box" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Clip a dataset by a bounding box defined by the bounds.</p>
-<p>If no bounds are given, a corner of the dataset bounds will be removed.</p>
+<dd><p>境界によって定義された境界ボックスによってデータセットをクリップします．</p>
+<p>境界が指定されていない場合，データセット境界のコーナーは削除されます．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>bounds</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em>) -- Length 6 sequence of floats: (xmin, xmax, ymin, ymax, zmin, zmax).
-Length 3 sequence of floats: distances from the min coordinate of
-of the input mesh. Single float value: uniform distance from the
-min coordinate. Length 12 sequence of length 3 sequence of floats:
-a plane collection (normal, center, ...).
-<a class="reference internal" href="../../points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a>: if a poly mesh is passed that represents
-a box with 6 faces that all form a standard box, then planes will
-be extracted from the box to define the clipping region.</p></li>
-<li><p><strong>invert</strong> (<em>bool</em>) -- Flag on whether to flip/invert the clip</p></li>
-<li><p><strong>factor</strong> (<em>float</em><em>, </em><em>optional</em>) -- If bounds are not given this is the factor along each axis to
-extract the default box.</p></li>
+<li><p><strong>bounds</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em>) -- floatの長さ6のシーケンス:(xmin，xmax，ymin，ymax，zmin，zmax)．長さ3のfloatシーケンス:入力メッシュの最小座標からの距離．単一のfloat値:最小座標からの均一な距離．レングス12のシーケンス，レングス3のシーケンス，フロートのシーケンス:平面コレクション(法線，中心， ...)． <a class="reference internal" href="../../points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a>: :標準のボックスを形成する6つの面を持つボックスを表すポリゴンメッシュが渡されると，そのボックスから平面が抽出され，クリッピング領域が定義されます．</p></li>
+<li><p><strong>invert</strong> (<em>bool</em>) -- クリップをフリップ/反転するかどうかを示すフラグ</p></li>
+<li><p><strong>factor</strong> (<em>float</em><em>, </em><em>optional</em>) -- 境界が指定されていない場合，これはデフォルトボックスを抽出する各軸に沿った係数になります．</p></li>
 </ul>
 </dd>
 </dl>
 <p class="rubric">サンプル</p>
-<p>Clip a corner of a cube.  The bounds of a cube are normally
-<code class="docutils literal notranslate"><span class="pre">[-0.5,</span> <span class="pre">0.5,</span> <span class="pre">-0.5,</span> <span class="pre">0.5,</span> <span class="pre">-0.5,</span> <span class="pre">0.5]</span></code>, and this removes 1/8 of
-the cube's surface.</p>
+<p>立方体のコーナーをクリップします．立方体の境界は通常 <code class="docutils literal notranslate"><span class="pre">[-0.5,</span> <span class="pre">0.5,</span> <span class="pre">-0.5,</span> <span class="pre">0.5,</span> <span class="pre">-0.5,</span> <span class="pre">0.5]</span></code> であり，これは立方体の表面の1/8を除去します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cube</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Cube</span><span class="p">()</span><span class="o">.</span><span class="n">triangulate</span><span class="p">()</span><span class="o">.</span><span class="n">subdivide</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">clipped_cube</span> <span class="o">=</span> <span class="n">cube</span><span class="o">.</span><span class="n">clip_box</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>

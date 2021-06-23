@@ -192,37 +192,37 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../../objects.html">
-     Objects
+     オブジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../dataset.html">
-     Datasets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../points.html">
-     Point Data
+     ポイントデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../point-grids.html">
-     Point-Based Grids
+     ポイントベースグリッド
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../grids.html">
-     Gridded Data
+     グリッドデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../composite.html">
-     Composite Datasets
+     複合データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../../filters.html">
-     Filters
+     フィルタ
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -1699,12 +1699,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../camera.html">
-     Cameras
+     カメラ
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../lights.html">
-     Lights
+     ライト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -1883,14 +1883,14 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../helpers.html">
-     Helpers
+     ヘルパー
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../plotting/index.html">
-   Plotting
+   プロット
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -1900,12 +1900,12 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/plotting.html">
-     Plotting
+     プロット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/qt_plotting.html">
-     Pyvista and PyQt
+     PyvistaとPyQt
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -4093,7 +4093,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../plotting/conv_func.html">
-     Convenience Functions
+     便利な機能
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
     <label for="toctree-checkbox-15">
@@ -4137,7 +4137,7 @@
   <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/geometric.html">
-     Geometric Objects
+     ジオメトリオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -4234,7 +4234,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/parametric.html">
-     Parametric Objects
+     パラメトリックオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
     <label for="toctree-checkbox-18">
@@ -4346,7 +4346,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/utilities.html">
-     General Utilities
+     一般ユーティリティ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
     <label for="toctree-checkbox-19">
@@ -4539,58 +4539,31 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.PolyDataFilters.streamlines_from_source">
 <span class="sig-prename descclassname"><span class="pre">PolyDataFilters.</span></span><span class="sig-name descname"><span class="pre">streamlines_from_source</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vectors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">integrator_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">45</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">integration_direction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'both'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">surface_streamlines</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_step_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cl'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_step_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_step_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">terminal_speed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-12</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_error</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compute_vorticity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotation_scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolator_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'point'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyDataFilters.streamlines_from_source" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Generate streamlines of vectors from the points of a source mesh.</p>
-<p>The integration is performed using a specified integrator, by default
-Runge-Kutta2. This supports integration through any type of dataset.
-If the dataset contains 2D cells like polygons or triangles and the
-<code class="docutils literal notranslate"><span class="pre">surface_streamlines</span></code> parameter is used, the integration is constrained
-to lie on the surface defined by 2D cells.</p>
+<dd><p>ソースメッシュのポイントからベクトルの流線を生成します．</p>
+<p>デフォルトRunge-Kutta 2では，指定したインテグレータを使用して積分が実行されます．これにより，あらゆるタイプのデータセットを使用した積分がサポートされます．データセットにポリゴンや三角形などの2 Dセルが含まれていて <code class="docutils literal notranslate"><span class="pre">surface_streamlines</span></code>  パラメータが使用されている場合，積分は2 Dセルによって定義されるサーフェス上に配置されるように制限されます．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>source</strong> (<a class="reference internal" href="../../dataset.html#pyvista.DataSet" title="pyvista.DataSet"><em>pyvista.DataSet</em></a>) -- The points of the source provide the starting points of the
-streamlines.  This will override both sphere and line sources.</p></li>
-<li><p><strong>vectors</strong> (<em>str</em><em>, </em><em>optional</em>) -- The string name of the active vector field to integrate across.</p></li>
-<li><p><strong>integrator_type</strong> (<em>int</em><em>, </em><em>optional</em>) -- The integrator type to be used for streamline generation.
-The default is Runge-Kutta45. The recognized solvers are:
-RUNGE_KUTTA2 (<code class="docutils literal notranslate"><span class="pre">2</span></code>),  RUNGE_KUTTA4 (<code class="docutils literal notranslate"><span class="pre">4</span></code>), and RUNGE_KUTTA45
-(<code class="docutils literal notranslate"><span class="pre">45</span></code>). Options are <code class="docutils literal notranslate"><span class="pre">2</span></code>, <code class="docutils literal notranslate"><span class="pre">4</span></code>, or <code class="docutils literal notranslate"><span class="pre">45</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">45</span></code>.</p></li>
-<li><p><strong>integration_direction</strong> (<em>str</em><em>, </em><em>optional</em>) -- Specify whether the streamline is integrated in the upstream or
-downstream directions (or both). Options are <code class="docutils literal notranslate"><span class="pre">'both'</span></code>,
-<code class="docutils literal notranslate"><span class="pre">'backward'</span></code>, or <code class="docutils literal notranslate"><span class="pre">'forward'</span></code>.</p></li>
-<li><p><strong>surface_streamlines</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Compute streamlines on a surface. Default <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
-<li><p><strong>initial_step_length</strong> (<em>float</em><em>, </em><em>optional</em>) -- Initial step size used for line integration, expressed ib length
-unitsL or cell length units (see <code class="docutils literal notranslate"><span class="pre">step_unit</span></code> parameter).
-either the starting size for an adaptive integrator, e.g., RK45, or
-the constant / fixed size for non-adaptive ones, i.e., RK2 and RK4).</p></li>
-<li><p><strong>step_unit</strong> (<em>str</em><em>, </em><em>optional</em>) -- Uniform integration step unit. The valid unit is now limited to
-only LENGTH_UNIT (<code class="docutils literal notranslate"><span class="pre">'l'</span></code>) and CELL_LENGTH_UNIT (<code class="docutils literal notranslate"><span class="pre">'cl'</span></code>).
-Default is CELL_LENGTH_UNIT: <code class="docutils literal notranslate"><span class="pre">'cl'</span></code>.</p></li>
-<li><p><strong>min_step_length</strong> (<em>float</em><em>, </em><em>optional</em>) -- Minimum step size used for line integration, expressed in length or
-cell length units. Only valid for an adaptive integrator, e.g., RK45.</p></li>
-<li><p><strong>max_step_length</strong> (<em>float</em><em>, </em><em>optional</em>) -- Maximum step size used for line integration, expressed in length or
-cell length units. Only valid for an adaptive integrator, e.g., RK45.</p></li>
-<li><p><strong>max_steps</strong> (<em>int</em><em>, </em><em>optional</em>) -- Maximum number of steps for integrating a streamline.
-Defaults to <code class="docutils literal notranslate"><span class="pre">2000</span></code></p></li>
-<li><p><strong>terminal_speed</strong> (<em>float</em><em>, </em><em>optional</em>) -- Terminal speed value, below which integration is terminated.</p></li>
-<li><p><strong>max_error</strong> (<em>float</em><em>, </em><em>optional</em>) -- Maximum error tolerated throughout streamline integration.</p></li>
-<li><p><strong>max_time</strong> (<em>float</em><em>, </em><em>optional</em>) -- Specify the maximum length of a streamline expressed in LENGTH_UNIT.</p></li>
-<li><p><strong>compute_vorticity</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Vorticity computation at streamline points (necessary for generating
-proper stream-ribbons using the <code class="docutils literal notranslate"><span class="pre">vtkRibbonFilter</span></code>.</p></li>
-<li><p><strong>interpolator_type</strong> (<em>str</em><em>, </em><em>optional</em>) -- Set the type of the velocity field interpolator to locate cells
-during streamline integration either by points or cells.
-The cell locator is more robust then the point locator. Options
-are <code class="docutils literal notranslate"><span class="pre">'point'</span></code> or <code class="docutils literal notranslate"><span class="pre">'cell'</span></code> (abbreviations of <code class="docutils literal notranslate"><span class="pre">'p'</span></code> and <code class="docutils literal notranslate"><span class="pre">'c'</span></code>
-are also supported).</p></li>
-<li><p><strong>rotation_scale</strong> (<em>float</em><em>, </em><em>optional</em>) -- This can be used to scale the rate with which the streamribbons
-twist. The default is 1.</p></li>
+<li><p><strong>source</strong> (<a class="reference internal" href="../../dataset.html#pyvista.DataSet" title="pyvista.DataSet"><em>pyvista.DataSet</em></a>) -- ソースの点は流線の開始点を提供します．球とラインソースの両方がオーバーライドされます．</p></li>
+<li><p><strong>vectors</strong> (<em>str</em><em>, </em><em>optional</em>) -- 積分するアクティブベクトルフィールドの文字列名．</p></li>
+<li><p><strong>integrator_type</strong> (<em>int</em><em>, </em><em>optional</em>) -- 流線生成に使用する積分器のタイプです．デフォルトはRunge-Kutta 45です．認識されるソルバーは:  RUNGE_KUTTA2 (<code class="docutils literal notranslate"><span class="pre">2</span></code>) ， RUNGE_KUTTA4 (<code class="docutils literal notranslate"><span class="pre">4</span></code>) および RUNGE_KUTTA45 (<code class="docutils literal notranslate"><span class="pre">45</span></code>) です．オプションは <code class="docutils literal notranslate"><span class="pre">2</span></code> ， <code class="docutils literal notranslate"><span class="pre">4</span></code> または <code class="docutils literal notranslate"><span class="pre">45</span></code> です．デフォルトは <code class="docutils literal notranslate"><span class="pre">45</span></code> です．</p></li>
+<li><p><strong>integration_direction</strong> (<em>str</em><em>, </em><em>optional</em>) -- 流線を上流方向と下流方向のどちらに統合するかを指定します(または両方)．選択肢は <code class="docutils literal notranslate"><span class="pre">'both'</span></code>  ， <code class="docutils literal notranslate"><span class="pre">'backward'</span></code> または <code class="docutils literal notranslate"><span class="pre">'forward'</span></code> です．</p></li>
+<li><p><strong>surface_streamlines</strong> (<em>bool</em><em>, </em><em>optional</em>) -- サーフェス上の流線を計算します．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> ．</p></li>
+<li><p><strong>initial_step_length</strong> (<em>float</em><em>, </em><em>optional</em>) -- 線積分に使用される最初のステップサイズで，ib長さ単位Lまたはセル長単位( <code class="docutils literal notranslate"><span class="pre">step_unit</span></code> パラメータを参照)を表します．RK45のような適応積分器の開始サイズか，RK 2とRK 4のような非適応積分器の一定/固定サイズのどちらか)．</p></li>
+<li><p><strong>step_unit</strong> (<em>str</em><em>, </em><em>optional</em>) -- 均一積分ステップ単位．有効な単位は LENGTH_UNIT (<code class="docutils literal notranslate"><span class="pre">'l'</span></code>) と CELL_LENGTH_UNIT (<code class="docutils literal notranslate"><span class="pre">'cl'</span></code>) だけに制限されます．デフォルトは CELL_LENGTH_UNIT : <code class="docutils literal notranslate"><span class="pre">'cl'</span></code> です．</p></li>
+<li><p><strong>min_step_length</strong> (<em>float</em><em>, </em><em>optional</em>) -- 線積分に使用される最小ステップサイズで，長さまたはセル長の単位で表されます．RK45のような適応積分器にのみ有効．</p></li>
+<li><p><strong>max_step_length</strong> (<em>float</em><em>, </em><em>optional</em>) -- 線積分に使用される最大ステップサイズで，長さまたはセル長の単位で表されます．RK45のような適応積分器にのみ有効．</p></li>
+<li><p><strong>max_steps</strong> (<em>int</em><em>, </em><em>optional</em>) -- 流線を積分するための最大ステップ数．デフォルトは <code class="docutils literal notranslate"><span class="pre">2000</span></code></p></li>
+<li><p><strong>terminal_speed</strong> (<em>float</em><em>, </em><em>optional</em>) -- 積分を終了する端子速度の値です．</p></li>
+<li><p><strong>max_error</strong> (<em>float</em><em>, </em><em>optional</em>) -- 流線積分全体で許容される最大エラー数．</p></li>
+<li><p><strong>max_time</strong> (<em>float</em><em>, </em><em>optional</em>) -- LENGTH_UNITで表される流線の最大長を指定します．</p></li>
+<li><p><strong>compute_vorticity</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 流線点での渦度計算 ( <code class="docutils literal notranslate"><span class="pre">vtkRibbonFilter</span></code> を使用して適切な流線リボンを生成するために必要．</p></li>
+<li><p><strong>interpolator_type</strong> (<em>str</em><em>, </em><em>optional</em>) -- ポイントまたはセルによる流線積分中にセルの位置を特定するために，速度フィールド補間のタイプを設定します．セルロケータはポイントロケータよりも堅牢です．オプションは <code class="docutils literal notranslate"><span class="pre">'point'</span></code> または <code class="docutils literal notranslate"><span class="pre">'cell'</span></code>  ( <code class="docutils literal notranslate"><span class="pre">'p'</span></code> および <code class="docutils literal notranslate"><span class="pre">'c'</span></code> の省略形もサポートされています．)です．</p></li>
+<li><p><strong>rotation_scale</strong> (<em>float</em><em>, </em><em>optional</em>) -- これを使用して，リボンがツイストするレートをスケールできます．デフォルトは1です．</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
-<dd class="field-even"><p><strong>streamlines</strong> -- This produces polylines as the output, with each cell
-(i.e., polyline) representing a streamline. The attribute values
-associated with each streamline are stored in the cell data, whereas
-those associated with streamline-points are stored in the point data.</p>
+<dd class="field-even"><p><strong>streamlines</strong> -- これにより，各セル(つまり，ポリライン)が流線を表すポリラインが出力として生成されます．各流線に関連付けられた属性値はセルデータに格納され，流線ポイントに関連付けられた属性値はポイントデータに格納されます．</p>
 </dd>
 <dt class="field-odd">戻り値の型</dt>
 <dd class="field-odd"><p><a class="reference internal" href="../../points.html#pyvista.PolyData" title="pyvista.PolyData">pyvista.PolyData</a></p>

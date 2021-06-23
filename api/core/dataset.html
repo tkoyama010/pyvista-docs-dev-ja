@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Datasets &#8212; PyVista 0.31.dev0 ドキュメント</title>
+    <title>データセット &#8212; PyVista 0.31.dev0 ドキュメント</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -50,8 +50,8 @@
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
-    <link rel="next" title="Point Data" href="points.html" />
-    <link rel="prev" title="Objects" href="objects.html" />
+    <link rel="next" title="ポイントデータ" href="points.html" />
+    <link rel="prev" title="オブジェクト" href="objects.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -192,37 +192,37 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="objects.html">
-     Objects
+     オブジェクト
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Datasets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="points.html">
-     Point Data
+     ポイントデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="point-grids.html">
-     Point-Based Grids
+     ポイントベースグリッド
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="grids.html">
-     Gridded Data
+     グリッドデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="composite.html">
-     Composite Datasets
+     複合データセット
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="filters.html">
-     Filters
+     フィルタ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -1699,12 +1699,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="camera.html">
-     Cameras
+     カメラ
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="lights.html">
-     Lights
+     ライト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -1883,14 +1883,14 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="helpers.html">
-     Helpers
+     ヘルパー
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../plotting/index.html">
-   Plotting
+   プロット
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -1900,12 +1900,12 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../plotting/plotting.html">
-     Plotting
+     プロット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../plotting/qt_plotting.html">
-     Pyvista and PyQt
+     PyvistaとPyQt
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -4093,7 +4093,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../plotting/conv_func.html">
-     Convenience Functions
+     便利な機能
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
     <label for="toctree-checkbox-15">
@@ -4137,7 +4137,7 @@
   <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../utilities/geometric.html">
-     Geometric Objects
+     ジオメトリオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -4234,7 +4234,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../utilities/parametric.html">
-     Parametric Objects
+     パラメトリックオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
     <label for="toctree-checkbox-18">
@@ -4346,7 +4346,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../utilities/utilities.html">
-     General Utilities
+     一般ユーティリティ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
     <label for="toctree-checkbox-19">
@@ -4520,7 +4520,7 @@
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-dataset-model">
-   The DataSet Model
+   DataSet Model
   </a>
  </li>
 </ul>
@@ -4545,26 +4545,19 @@
               <div>
                 
   <div class="section" id="datasets">
-<span id="ref-dataset"></span><h1>Datasets<a class="headerlink" href="#datasets" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Datasets are any spatially referenced information and usually consist of
-geometrical representations of a surface or volume in 3D space.
-In VTK, this superclass is represented by the <code class="docutils literal notranslate"><span class="pre">vtk.vtkDataSet</span></code> abstract class.</p>
-<p>In VTK, datasets consist of geometry, topology, and attributes to which PyVista
-provides direct access:</p>
+<span id="ref-dataset"></span><h1>データセット<a class="headerlink" href="#datasets" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>データセットは任意の空間的参照情報であり，通常は3 D空間内の表面またはボリュームのジオメトリ表現で構成されます．VTKにおいて，このスーパークラスは <code class="docutils literal notranslate"><span class="pre">vtk.vtkDataSet</span></code> 抽象クラスによって表現されます．</p>
+<p>VTKでは，データセットは，PyVistaが直接アクセスを提供するジオメトリ，トポロジ，およびアトリビュートで構成されます:</p>
 <ul class="simple">
-<li><p>Geometry is the collection of points and cells in 2D or 3D space.</p></li>
-<li><p>Topology defines the structure of the dataset, or how the points are connected to each other to form a cells making a surface or volume.</p></li>
-<li><p>Attributes are any data values that are associated to either the points or cells of the dataset</p></li>
+<li><p>ジオメトリは，2 Dまたは3 D空間の点とセルの集合です．</p></li>
+<li><p>トポロジは，データセットの構造，または表面やボリュームを作成するセルを形成するためにポイントを相互に接続する方法を定義します．</p></li>
+<li><p>アトリビュートは，データセットの点またはセルのいずれかに関連付けられた任意のデータ値です．</p></li>
 </ul>
-<p>All of the following data types are listed subclasses of a dataset and share a
-set of common functionality which we wrap into the base class
-<a class="reference internal" href="#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a>.</p>
+<p>以下のデータタイプのすべては，データセットのサブクラスにリストされ，基本クラス <a class="reference internal" href="#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a> にラップする共通の機能セットを共有します．</p>
 <div class="section" id="the-dataset-model">
-<h2>The DataSet Model<a class="headerlink" href="#the-dataset-model" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>The <a class="reference internal" href="#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a> class holds attributes that are <em>common</em> to all
-spatially referenced datasets in PyVista.
-This base class is analogous to VTK's <code class="docutils literal notranslate"><span class="pre">vtk.vtkDataSet</span></code> class.</p>
-<p class="rubric">Attributes</p>
+<h2>DataSet Model<a class="headerlink" href="#the-dataset-model" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><a class="reference internal" href="#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a> クラスは，PyVistaで空間的に参照される全てのデータセットに <em>共通な</em> アトリビュートを保持します．この基本クラスはVTKの <code class="docutils literal notranslate"><span class="pre">vtk.vtkDataSet</span></code> クラスに似ています．</p>
+<p class="rubric">アトリビュート</p>
 <table class="longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
@@ -4572,89 +4565,89 @@ This base class is analogous to VTK's <code class="docutils literal notranslate"
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataSet.active_scalars" title="pyvista.DataSet.active_scalars"><code class="xref py py-obj docutils literal notranslate"><span class="pre">active_scalars</span></code></a></p></td>
-<td><p>Return the active scalars as an array.</p></td>
+<td><p>アクティブなスカラーを配列で返します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.DataSet.active_scalars_info" title="pyvista.DataSet.active_scalars_info"><code class="xref py py-obj docutils literal notranslate"><span class="pre">active_scalars_info</span></code></a></p></td>
 <td><p>[field, name].</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataSet.active_scalars_name" title="pyvista.DataSet.active_scalars_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">active_scalars_name</span></code></a></p></td>
-<td><p>Return the active scalar's name.</p></td>
+<td><p>アクティブなスカラーの名前を返します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.DataSet.active_tensors" title="pyvista.DataSet.active_tensors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">active_tensors</span></code></a></p></td>
-<td><p>Return the active tensors array.</p></td>
+<td><p>​アクティブなテンソル配列を返します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataSet.active_tensors_info" title="pyvista.DataSet.active_tensors_info"><code class="xref py py-obj docutils literal notranslate"><span class="pre">active_tensors_info</span></code></a></p></td>
 <td><p>[field, name].</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.DataSet.active_tensors_name" title="pyvista.DataSet.active_tensors_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">active_tensors_name</span></code></a></p></td>
-<td><p>Return the name of the active tensor array.</p></td>
+<td><p>アクティブなテンソル配列の名前を返します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataSet.active_vectors" title="pyvista.DataSet.active_vectors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">active_vectors</span></code></a></p></td>
-<td><p>Return the active vectors array.</p></td>
+<td><p>アクティブなベクトル配列を返します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.DataSet.active_vectors_info" title="pyvista.DataSet.active_vectors_info"><code class="xref py py-obj docutils literal notranslate"><span class="pre">active_vectors_info</span></code></a></p></td>
 <td><p>[field, name].</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataSet.active_vectors_name" title="pyvista.DataSet.active_vectors_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">active_vectors_name</span></code></a></p></td>
-<td><p>Return the name of the active vectors array.</p></td>
+<td><p>アクティブなベクトル配列の名前を返します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.DataSet.array_names" title="pyvista.DataSet.array_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">array_names</span></code></a></p></td>
-<td><p>Return a list of array names for the dataset.</p></td>
+<td><p>データセットの配列名のリストを返します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataSet.arrows" title="pyvista.DataSet.arrows"><code class="xref py py-obj docutils literal notranslate"><span class="pre">arrows</span></code></a></p></td>
-<td><p>Return a glyph representation of the active vector data as arrows.</p></td>
+<td><p>アクティブなベクトルデータのグリフ表現を矢印で返します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.DataSet.bounds" title="pyvista.DataSet.bounds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bounds</span></code></a></p></td>
-<td><p>Return the bounding box of this dataset.</p></td>
+<td><p>このデータセットの境界ボックスを返します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataSet.cell_arrays" title="pyvista.DataSet.cell_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cell_arrays</span></code></a></p></td>
-<td><p>Return vtkCellData as DataSetAttributes.</p></td>
+<td><p>DataSetAttributesとしてvtkCellDataを返します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.DataSet.center" title="pyvista.DataSet.center"><code class="xref py py-obj docutils literal notranslate"><span class="pre">center</span></code></a></p></td>
-<td><p>Return the center of the bounding box.</p></td>
+<td><p>境界ボックスの中心を返します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataSet.extent" title="pyvista.DataSet.extent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extent</span></code></a></p></td>
-<td><p>Return the range of the bounding box.</p></td>
+<td><p>バウンディングボックスの範囲を返します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.DataSet.length" title="pyvista.DataSet.length"><code class="xref py py-obj docutils literal notranslate"><span class="pre">length</span></code></a></p></td>
-<td><p>Return the length of the diagonal of the bounding box.</p></td>
+<td><p>境界ボックスの対角線の長さを返します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataSet.n_arrays" title="pyvista.DataSet.n_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_arrays</span></code></a></p></td>
-<td><p>Return the number of arrays present in the dataset.</p></td>
+<td><p>データセット内に存在する配列の数を返します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.DataSet.n_cells" title="pyvista.DataSet.n_cells"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_cells</span></code></a></p></td>
-<td><p>Return the number of cells in the entire dataset.</p></td>
+<td><p>データセット全体のセル数を返します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataSet.n_points" title="pyvista.DataSet.n_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_points</span></code></a></p></td>
-<td><p>Return the number of points in the entire dataset.</p></td>
+<td><p>データセット全体のポイント数を返します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.DataSet.number_of_cells" title="pyvista.DataSet.number_of_cells"><code class="xref py py-obj docutils literal notranslate"><span class="pre">number_of_cells</span></code></a></p></td>
-<td><p>Return the number of cells.</p></td>
+<td><p>セルの数を返します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataSet.number_of_points" title="pyvista.DataSet.number_of_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">number_of_points</span></code></a></p></td>
-<td><p>Return the number of points.</p></td>
+<td><p>ポイント数を返します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.DataSet.point_arrays" title="pyvista.DataSet.point_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">point_arrays</span></code></a></p></td>
-<td><p>Return vtkPointData as DataSetAttributes.</p></td>
+<td><p>DataSetAttributesとしてvtkPointDataを返します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataSet.points" title="pyvista.DataSet.points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">points</span></code></a></p></td>
-<td><p>Return a pointer to the points as a numpy object.</p></td>
+<td><p>ポイントへのポインタをnumpyオブジェクトとして返します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.DataSet.t_coords" title="pyvista.DataSet.t_coords"><code class="xref py py-obj docutils literal notranslate"><span class="pre">t_coords</span></code></a></p></td>
-<td><p>Return the active texture coordinates on the points.</p></td>
+<td><p>ポイント上のアクティブなテクスチャ座標を返します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataSet.textures" title="pyvista.DataSet.textures"><code class="xref py py-obj docutils literal notranslate"><span class="pre">textures</span></code></a></p></td>
-<td><p>Return a dictionary to hold compatible <code class="docutils literal notranslate"><span class="pre">vtk.vtkTexture</span></code> objects.</p></td>
+<td><p>互換性のある <code class="docutils literal notranslate"><span class="pre">vtk.vtkTexture</span></code> オブジェクトを保持する辞書を返します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.DataSet.vectors" title="pyvista.DataSet.vectors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vectors</span></code></a></p></td>
-<td><p>Return active vectors.</p></td>
+<td><p>アクティブなベクトルを返します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataSet.volume" title="pyvista.DataSet.volume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">volume</span></code></a></p></td>
-<td><p>Return the mesh volume.</p></td>
+<td><p>メッシュボリュームを返します．</p></td>
 </tr>
 </tbody>
 </table>
-<p class="rubric">Methods</p>
+<p class="rubric">メソッド</p>
 <table class="longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
@@ -4662,82 +4655,82 @@ This base class is analogous to VTK's <code class="docutils literal notranslate"
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataSet.cast_to_unstructured_grid" title="pyvista.DataSet.cast_to_unstructured_grid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cast_to_unstructured_grid</span></code></a>()</p></td>
-<td><p>Get a new representation of this object as an <a class="reference internal" href="point-grids.html#pyvista.UnstructuredGrid" title="pyvista.UnstructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UnstructuredGrid</span></code></a>.</p></td>
+<td><p>このオブジェクトの新しい表現を <a class="reference internal" href="point-grids.html#pyvista.UnstructuredGrid" title="pyvista.UnstructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UnstructuredGrid</span></code></a> として取得します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.DataSet.cell_bounds" title="pyvista.DataSet.cell_bounds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cell_bounds</span></code></a>(ind)</p></td>
-<td><p>Return the bounding box of a cell.</p></td>
+<td><p>セルの境界ボックスを返します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataSet.cell_n_points" title="pyvista.DataSet.cell_n_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cell_n_points</span></code></a>(ind)</p></td>
-<td><p>Return the number of points in a cell.</p></td>
+<td><p>セル内のポイント数を返します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.DataSet.cell_points" title="pyvista.DataSet.cell_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cell_points</span></code></a>(ind)</p></td>
-<td><p>Return the points in a cell.</p></td>
+<td><p>セル内の点を返します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataSet.cell_type" title="pyvista.DataSet.cell_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cell_type</span></code></a>(ind)</p></td>
-<td><p>Return the type of a cell.</p></td>
+<td><p>セルの型を返します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.DataSet.clear_arrays" title="pyvista.DataSet.clear_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear_arrays</span></code></a>()</p></td>
-<td><p>Remove all arrays from point/cell/field data.</p></td>
+<td><p>点/セル/フィールドデータからすべての配列を削除します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataSet.clear_cell_arrays" title="pyvista.DataSet.clear_cell_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear_cell_arrays</span></code></a>()</p></td>
-<td><p>Remove all cell arrays.</p></td>
+<td><p>すべてのセル配列を削除します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.DataSet.clear_point_arrays" title="pyvista.DataSet.clear_point_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear_point_arrays</span></code></a>()</p></td>
-<td><p>Remove all point arrays.</p></td>
+<td><p>すべての点配列を削除します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataSet.clear_textures" title="pyvista.DataSet.clear_textures"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear_textures</span></code></a>()</p></td>
-<td><p>Clear the textures from this mesh.</p></td>
+<td><p>このメッシュからテクスチャをクリアします．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.DataSet.copy_meta_from" title="pyvista.DataSet.copy_meta_from"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy_meta_from</span></code></a>(ido)</p></td>
-<td><p>Copy pyvista meta data onto this object from another object.</p></td>
+<td><p>別のオブジェクトからこのオブジェクトにpyvistaメタデータをコピーします．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataSet.find_closest_cell" title="pyvista.DataSet.find_closest_cell"><code class="xref py py-obj docutils literal notranslate"><span class="pre">find_closest_cell</span></code></a>(point)</p></td>
-<td><p>Find index of closest cell in this mesh to the given point.</p></td>
+<td><p>このメッシュ内の指定したポイントに最も近いセルのインデックスを検索します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.DataSet.find_closest_point" title="pyvista.DataSet.find_closest_point"><code class="xref py py-obj docutils literal notranslate"><span class="pre">find_closest_point</span></code></a>(point[, n])</p></td>
-<td><p>Find index of closest point in this mesh to the given point.</p></td>
+<td><p>このメッシュ内の指定したポイントに最も近いポイントのインデックスを検索します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataSet.get_array" title="pyvista.DataSet.get_array"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_array</span></code></a>(name[, preference, info])</p></td>
-<td><p>Search both point, cell and field data for an array.</p></td>
+<td><p>点，セル，フィールドのデータの両方から配列を検索します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.DataSet.get_data_range" title="pyvista.DataSet.get_data_range"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_data_range</span></code></a>([arr_var, preference])</p></td>
-<td><p>Get the non-NaN min and max of a named array.</p></td>
+<td><p>指定した配列のNaN以外の最小値と最大値を取得します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataSet.overwrite" title="pyvista.DataSet.overwrite"><code class="xref py py-obj docutils literal notranslate"><span class="pre">overwrite</span></code></a>(mesh)</p></td>
-<td><p>Overwrite this mesh inplace with the new mesh's geometries and data.</p></td>
+<td><p>このメッシュインプレイスを新しいメッシュのジオメトリとデータで上書きします．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.DataSet.plot" title="pyvista.DataSet.plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code></a>([off_screen, full_screen, screenshot, ...])</p></td>
-<td><p>Plot a vtk or numpy object.</p></td>
+<td><p>vtkまたはnumpyオブジェクトをプロットします．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataSet.points_to_double" title="pyvista.DataSet.points_to_double"><code class="xref py py-obj docutils literal notranslate"><span class="pre">points_to_double</span></code></a>()</p></td>
-<td><p>Make points double precision.</p></td>
+<td><p>ポイントを倍精度にします．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.DataSet.rename_array" title="pyvista.DataSet.rename_array"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rename_array</span></code></a>(old_name, new_name[, preference])</p></td>
-<td><p>Change array name by searching for the array then renaming it.</p></td>
+<td><p>配列名を変更するには，配列を検索して名前を変更します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataSet.rotate_vector" title="pyvista.DataSet.rotate_vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rotate_vector</span></code></a>(vector, angle[, point, ...])</p></td>
-<td><p>Rotate mesh about the vector.</p></td>
+<td><p>メッシュをベクトルを中心に回転します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.DataSet.rotate_x" title="pyvista.DataSet.rotate_x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rotate_x</span></code></a>(angle[, point, ...])</p></td>
-<td><p>Rotate mesh about the x-axis.</p></td>
+<td><p>メッシュをX軸を中心に回転します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataSet.rotate_y" title="pyvista.DataSet.rotate_y"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rotate_y</span></code></a>(angle[, point, ...])</p></td>
-<td><p>Rotate mesh about the y-axis.</p></td>
+<td><p>メッシュをY軸を中心に回転します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.DataSet.rotate_z" title="pyvista.DataSet.rotate_z"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rotate_z</span></code></a>(angle[, point, ...])</p></td>
-<td><p>Rotate mesh about the z-axis.</p></td>
+<td><p>メッシュをZ軸を中心に回転します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataSet.set_active_scalars" title="pyvista.DataSet.set_active_scalars"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_active_scalars</span></code></a>(name[, preference])</p></td>
-<td><p>Find the scalars by name and appropriately sets it as active.</p></td>
+<td><p>スカラーを名前で検索し，適切にアクティブに設定します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.DataSet.set_active_tensors" title="pyvista.DataSet.set_active_tensors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_active_tensors</span></code></a>(name[, preference])</p></td>
-<td><p>Find the tensors by name and appropriately sets it as active.</p></td>
+<td><p>​テンソルを名前で検索し，適切にアクティブに設定します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.DataSet.set_active_vectors" title="pyvista.DataSet.set_active_vectors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_active_vectors</span></code></a>(name[, preference])</p></td>
-<td><p>Find the vectors by name and appropriately sets it as active.</p></td>
+<td><p>ベクトルを名前で検索し，適切にアクティブに設定します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.DataSet.translate" title="pyvista.DataSet.translate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">translate</span></code></a>(xyz)</p></td>
-<td><p>Translate the mesh.</p></td>
+<td><p>メッシュを移動します．</p></td>
 </tr>
 </tbody>
 </table>
@@ -4745,11 +4738,11 @@ This base class is analogous to VTK's <code class="docutils literal notranslate"
 <dt class="sig sig-object py" id="pyvista.DataSet">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyvista.</span></span><span class="sig-name descname"><span class="pre">DataSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSet" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ベースクラス: <a class="reference internal" href="_autosummary/pyvista.DataSetFilters.html#pyvista.DataSetFilters" title="pyvista.core.filters.data_set.DataSetFilters"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.core.filters.data_set.DataSetFilters</span></code></a>, <a class="reference internal" href="objects.html#pyvista.DataObject" title="pyvista.core.dataobject.DataObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.core.dataobject.DataObject</span></code></a></p>
-<p>Methods in common to spatially referenced objects.</p>
+<p>空間的に参照されるオブジェクトに共通するメソッド．</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.DataSet.active_scalars">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">active_scalars</span></span><em class="property"><span class="pre">:</span> <span class="pre">Optional[pyvista.core.pyvista_ndarray.pyvista_ndarray]</span></em><a class="headerlink" href="#pyvista.DataSet.active_scalars" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the active scalars as an array.</p>
+<dd><p>アクティブなスカラーを配列で返します．</p>
 </dd></dl>
 
 <dl class="py property">
@@ -4757,8 +4750,8 @@ This base class is analogous to VTK's <code class="docutils literal notranslate"
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">active_scalars_info</span></span><em class="property"><span class="pre">:</span> <span class="pre">pyvista.core.dataset.ActiveArrayInfo</span></em><a class="headerlink" href="#pyvista.DataSet.active_scalars_info" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>[field, name].</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Return the active scalar's field and name</p>
+<dt class="field-odd">型</dt>
+<dd class="field-odd"><p>アクティブスカラーのフィールドと名前を返す</p>
 </dd>
 </dl>
 </dd></dl>
@@ -4766,13 +4759,13 @@ This base class is analogous to VTK's <code class="docutils literal notranslate"
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.DataSet.active_scalars_name">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">active_scalars_name</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#pyvista.DataSet.active_scalars_name" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the active scalar's name.</p>
+<dd><p>アクティブなスカラーの名前を返します．</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.DataSet.active_tensors">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">active_tensors</span></span><em class="property"><span class="pre">:</span> <span class="pre">Optional[numpy.ndarray]</span></em><a class="headerlink" href="#pyvista.DataSet.active_tensors" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the active tensors array.</p>
+<dd><p>​アクティブなテンソル配列を返します．</p>
 </dd></dl>
 
 <dl class="py property">
@@ -4780,8 +4773,8 @@ This base class is analogous to VTK's <code class="docutils literal notranslate"
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">active_tensors_info</span></span><em class="property"><span class="pre">:</span> <span class="pre">pyvista.core.dataset.ActiveArrayInfo</span></em><a class="headerlink" href="#pyvista.DataSet.active_tensors_info" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>[field, name].</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Return the active tensor's field and name</p>
+<dt class="field-odd">型</dt>
+<dd class="field-odd"><p>​アクティブなテンソルのフィールドと名前を返します．</p>
 </dd>
 </dl>
 </dd></dl>
@@ -4789,13 +4782,13 @@ This base class is analogous to VTK's <code class="docutils literal notranslate"
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.DataSet.active_tensors_name">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">active_tensors_name</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#pyvista.DataSet.active_tensors_name" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the name of the active tensor array.</p>
+<dd><p>アクティブなテンソル配列の名前を返します．</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.DataSet.active_vectors">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">active_vectors</span></span><em class="property"><span class="pre">:</span> <span class="pre">Optional[pyvista.core.pyvista_ndarray.pyvista_ndarray]</span></em><a class="headerlink" href="#pyvista.DataSet.active_vectors" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the active vectors array.</p>
+<dd><p>アクティブなベクトル配列を返します．</p>
 </dd></dl>
 
 <dl class="py property">
@@ -4803,8 +4796,8 @@ This base class is analogous to VTK's <code class="docutils literal notranslate"
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">active_vectors_info</span></span><em class="property"><span class="pre">:</span> <span class="pre">pyvista.core.dataset.ActiveArrayInfo</span></em><a class="headerlink" href="#pyvista.DataSet.active_vectors_info" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>[field, name].</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Return the active scalar's field and name</p>
+<dt class="field-odd">型</dt>
+<dd class="field-odd"><p>アクティブスカラーのフィールドと名前を返す</p>
 </dd>
 </dl>
 </dd></dl>
@@ -4812,26 +4805,24 @@ This base class is analogous to VTK's <code class="docutils literal notranslate"
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.DataSet.active_vectors_name">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">active_vectors_name</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#pyvista.DataSet.active_vectors_name" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the name of the active vectors array.</p>
+<dd><p>アクティブなベクトル配列の名前を返します．</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.DataSet.array_names">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">array_names</span></span><em class="property"><span class="pre">:</span> <span class="pre">List[str]</span></em><a class="headerlink" href="#pyvista.DataSet.array_names" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return a list of array names for the dataset.</p>
-<p>This makes sure to put the active scalars' name first in the list.</p>
+<dd><p>データセットの配列名のリストを返します．</p>
+<p>これにより，アクティブなスカラーの名前がリストの先頭に配置されます．</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.DataSet.arrows">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">arrows</span></span><em class="property"><span class="pre">:</span> <span class="pre">Optional[pyvista.core.pointset.PolyData]</span></em><a class="headerlink" href="#pyvista.DataSet.arrows" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return a glyph representation of the active vector data as arrows.</p>
-<p>Arrows will be located at the points of the mesh and
-their size will be dependent on the length of the vector.
-Their direction will be the &quot;direction&quot; of the vector</p>
+<dd><p>アクティブなベクトルデータのグリフ表現を矢印で返します．</p>
+<p>矢印はメッシュのポイントに配置され，そのサイズはベクトルの長さに依存します．それらの方向はベクトルの &quot;direction&quot; である</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値</dt>
-<dd class="field-odd"><p><strong>arrows</strong> -- Active scalars represented as arrows.</p>
+<dd class="field-odd"><p><strong>arrows</strong> -- アクティブなスカラーは矢印で表されます．</p>
 </dd>
 <dt class="field-even">戻り値の型</dt>
 <dd class="field-even"><p><a class="reference internal" href="points.html#pyvista.PolyData" title="pyvista.PolyData">pyvista.PolyData</a></p>
@@ -4842,32 +4833,32 @@ Their direction will be the &quot;direction&quot; of the vector</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.DataSet.bounds">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">bounds</span></span><em class="property"><span class="pre">:</span> <span class="pre">List[float]</span></em><a class="headerlink" href="#pyvista.DataSet.bounds" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the bounding box of this dataset.</p>
-<p>The form is: (xmin,xmax, ymin,ymax, zmin,zmax).</p>
+<dd><p>このデータセットの境界ボックスを返します．</p>
+<p>形式は (xmin,xmax, ymin,ymax, zmin,zmax) です．</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataSet.cast_to_unstructured_grid">
 <span class="sig-name descname"><span class="pre">cast_to_unstructured_grid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="point-grids.html#pyvista.UnstructuredGrid" title="pyvista.core.pointset.UnstructuredGrid"><span class="pre">pyvista.core.pointset.UnstructuredGrid</span></a><a class="headerlink" href="#pyvista.DataSet.cast_to_unstructured_grid" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Get a new representation of this object as an <a class="reference internal" href="point-grids.html#pyvista.UnstructuredGrid" title="pyvista.UnstructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UnstructuredGrid</span></code></a>.</p>
+<dd><p>このオブジェクトの新しい表現を <a class="reference internal" href="point-grids.html#pyvista.UnstructuredGrid" title="pyvista.UnstructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UnstructuredGrid</span></code></a> として取得します．</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.DataSet.cell_arrays">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">cell_arrays</span></span><em class="property"><span class="pre">:</span> <span class="pre">pyvista.core.datasetattributes.DataSetAttributes</span></em><a class="headerlink" href="#pyvista.DataSet.cell_arrays" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return vtkCellData as DataSetAttributes.</p>
+<dd><p>DataSetAttributesとしてvtkCellDataを返します．</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataSet.cell_bounds">
 <span class="sig-name descname"><span class="pre">cell_bounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ind</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#pyvista.DataSet.cell_bounds" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the bounding box of a cell.</p>
+<dd><p>セルの境界ボックスを返します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
-<dd class="field-odd"><p><strong>ind</strong> (<em>int</em>) -- Cell ID.</p>
+<dd class="field-odd"><p><strong>ind</strong> (<em>int</em>) -- セルID．</p>
 </dd>
 <dt class="field-even">戻り値</dt>
-<dd class="field-even"><p>The limits of the cell in the X, Y and Z directions respectivelly.</p>
+<dd class="field-even"><p>セルのX，Y，Z方向それぞれの境界．</p>
 </dd>
 <dt class="field-odd">戻り値の型</dt>
 <dd class="field-odd"><p>list(float)</p>
@@ -4885,13 +4876,13 @@ Their direction will be the &quot;direction&quot; of the vector</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataSet.cell_n_points">
 <span class="sig-name descname"><span class="pre">cell_n_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ind</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span><a class="headerlink" href="#pyvista.DataSet.cell_n_points" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the number of points in a cell.</p>
+<dd><p>セル内のポイント数を返します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
-<dd class="field-odd"><p><strong>ind</strong> (<em>int</em>) -- Cell ID.</p>
+<dd class="field-odd"><p><strong>ind</strong> (<em>int</em>) -- セルID．</p>
 </dd>
 <dt class="field-even">戻り値</dt>
-<dd class="field-even"><p>Number of points in the cell.</p>
+<dd class="field-even"><p>セル内の点の数．</p>
 </dd>
 <dt class="field-odd">戻り値の型</dt>
 <dd class="field-odd"><p>int</p>
@@ -4909,14 +4900,13 @@ Their direction will be the &quot;direction&quot; of the vector</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataSet.cell_points">
 <span class="sig-name descname"><span class="pre">cell_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ind</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">numpy.ndarray</span><a class="headerlink" href="#pyvista.DataSet.cell_points" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the points in a cell.</p>
+<dd><p>セル内の点を返します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
-<dd class="field-odd"><p><strong>ind</strong> (<em>int</em>) -- Cell ID.</p>
+<dd class="field-odd"><p><strong>ind</strong> (<em>int</em>) -- セルID．</p>
 </dd>
 <dt class="field-even">戻り値</dt>
-<dd class="field-even"><p>An array of floats with shape (number of points, 3) containing the coordinates of the
-cell corners.</p>
+<dd class="field-even"><p>セルのコーナーの座標を含む(ポイント数3)の形を持つ浮動小数点の配列．</p>
 </dd>
 <dt class="field-odd">戻り値の型</dt>
 <dd class="field-odd"><p>numpy.ndarray</p>
@@ -4936,13 +4926,13 @@ cell corners.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataSet.cell_type">
 <span class="sig-name descname"><span class="pre">cell_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ind</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span><a class="headerlink" href="#pyvista.DataSet.cell_type" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the type of a cell.</p>
+<dd><p>セルの型を返します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
-<dd class="field-odd"><p><strong>ind</strong> (<em>int</em>) -- Cell ID.</p>
+<dd class="field-odd"><p><strong>ind</strong> (<em>int</em>) -- セルID．</p>
 </dd>
 <dt class="field-even">戻り値</dt>
-<dd class="field-even"><p>VTK cell type. See &lt;<a class="reference external" href="https://vtk.org/doc/nightly/html/vtkCellType_8h_source.html">https://vtk.org/doc/nightly/html/vtkCellType_8h_source.html</a>&gt;.</p>
+<dd class="field-even"><p>VTKセル型． &lt;<a class="reference external" href="https://vtk.org/doc/nightly/html/vtkCellType_8h_source.html">https://vtk.org/doc/nightly/html/vtkCellType_8h_source.html</a>&gt; を参照．</p>
 </dd>
 <dt class="field-odd">戻り値の型</dt>
 <dd class="field-odd"><p>int</p>
@@ -4960,64 +4950,62 @@ cell corners.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.DataSet.center">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">center</span></span><em class="property"><span class="pre">:</span> <span class="pre">Union[List[float],</span> <span class="pre">Tuple[float,</span> <span class="pre">float,</span> <span class="pre">float],</span> <span class="pre">numpy.ndarray]</span></em><a class="headerlink" href="#pyvista.DataSet.center" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the center of the bounding box.</p>
+<dd><p>境界ボックスの中心を返します．</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataSet.clear_arrays">
 <span class="sig-name descname"><span class="pre">clear_arrays</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSet.clear_arrays" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Remove all arrays from point/cell/field data.</p>
+<dd><p>点/セル/フィールドデータからすべての配列を削除します．</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataSet.clear_cell_arrays">
 <span class="sig-name descname"><span class="pre">clear_cell_arrays</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSet.clear_cell_arrays" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Remove all cell arrays.</p>
+<dd><p>すべてのセル配列を削除します．</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataSet.clear_point_arrays">
 <span class="sig-name descname"><span class="pre">clear_point_arrays</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSet.clear_point_arrays" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Remove all point arrays.</p>
+<dd><p>すべての点配列を削除します．</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataSet.clear_textures">
 <span class="sig-name descname"><span class="pre">clear_textures</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSet.clear_textures" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Clear the textures from this mesh.</p>
+<dd><p>このメッシュからテクスチャをクリアします．</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataSet.copy_meta_from">
 <span class="sig-name descname"><span class="pre">copy_meta_from</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ido</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyvista.DataSet" title="pyvista.core.dataset.DataSet"><span class="pre">pyvista.core.dataset.DataSet</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSet.copy_meta_from" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Copy pyvista meta data onto this object from another object.</p>
+<dd><p>別のオブジェクトからこのオブジェクトにpyvistaメタデータをコピーします．</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.DataSet.extent">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">extent</span></span><em class="property"><span class="pre">:</span> <span class="pre">Optional[list]</span></em><a class="headerlink" href="#pyvista.DataSet.extent" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the range of the bounding box.</p>
+<dd><p>バウンディングボックスの範囲を返します．</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataSet.find_closest_cell">
 <span class="sig-name descname"><span class="pre">find_closest_cell</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#pyvista.DataSet.find_closest_cell" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Find index of closest cell in this mesh to the given point.</p>
+<dd><p>このメッシュ内の指定したポイントに最も近いセルのインデックスを検索します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
-<dd class="field-odd"><p><strong>point</strong> (<em>iterable</em><em>(</em><em>float</em><em>) or </em><em>np.ndarray</em>) -- Length 3 coordinate of the point to query or a <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array
-of coordinates.</p>
+<dd class="field-odd"><p><strong>point</strong> (<em>iterable</em><em>(</em><em>float</em><em>) or </em><em>np.ndarray</em>) -- クエリーする点の長さ3座標または座標の <code class="docutils literal notranslate"><span class="pre">numpy</span></code> 配列．</p>
 </dd>
 <dt class="field-even">戻り値</dt>
-<dd class="field-even"><p><strong>index</strong> -- Index or indices of the cell in this mesh that is closest
-to the given point.</p>
+<dd class="field-even"><p><strong>index</strong> -- 指定した点に最も近い，このメッシュ内のセルのインデックスです．</p>
 </dd>
 <dt class="field-odd">戻り値の型</dt>
 <dd class="field-odd"><p>int or np.ndarray</p>
 </dd>
 </dl>
 <p class="rubric">サンプル</p>
-<p>Find nearest cell to a point on a sphere</p>
+<p>球上の点に最も近いセルを検索</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">index</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">find_closest_cell</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">])</span>
@@ -5025,9 +5013,7 @@ to the given point.</p>
 <span class="go">59</span>
 </pre></div>
 </div>
-<p>Find the nearest cells to several random points.  Note that
-<code class="docutils literal notranslate"><span class="pre">-1</span></code> indicates that the locator was not able to find a
-reasonably close cell.</p>
+<p>いくつかのランダムな点に最も近いセルを見つけます． <code class="docutils literal notranslate"><span class="pre">-1</span></code> は，ロケータが適切に近いセルを見つけることができなかったことを示すことに注意してください．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">indices</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">find_closest_cell</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
@@ -5040,16 +5026,14 @@ reasonably close cell.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataSet.find_closest_point">
 <span class="sig-name descname"><span class="pre">find_closest_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span><a class="headerlink" href="#pyvista.DataSet.find_closest_point" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Find index of closest point in this mesh to the given point.</p>
-<p>If wanting to query many points, use a KDTree with scipy or another
-library as those implementations will be easier to work with.</p>
-<p>See: <a class="reference external" href="https://github.com/pyvista/pyvista-support/issues/107">https://github.com/pyvista/pyvista-support/issues/107</a></p>
+<dd><p>このメッシュ内の指定したポイントに最も近いポイントのインデックスを検索します．</p>
+<p>多数の点をクエリーする場合は，scipyまたは別のライブラリを含むKDTreeを使用します．これは，これらの実装での作業が簡単になるためです．</p>
+<p>参照: <a class="reference external" href="https://github.com/pyvista/pyvista-support/issues/107">https://github.com/pyvista/pyvista-support/issues/107</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>point</strong> (<em>iterable</em><em>(</em><em>float</em><em>)</em>) -- Length 3 coordinate of the point to query.</p></li>
-<li><p><strong>n</strong> (<em>int</em><em>, </em><em>optional</em>) -- If greater than <code class="docutils literal notranslate"><span class="pre">1</span></code>, returns the indices of the <code class="docutils literal notranslate"><span class="pre">n</span></code> closest
-points.</p></li>
+<li><p><strong>point</strong> (<em>iterable</em><em>(</em><em>float</em><em>)</em>) -- クエリーする点の長さ3座標．</p></li>
+<li><p><strong>n</strong> (<em>int</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">1</span></code> より大きい場合は， <code class="docutils literal notranslate"><span class="pre">n</span></code> の最も近いポイントのインデックスを返します．</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
@@ -5064,21 +5048,18 @@ points.</p></li>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataSet.get_array">
 <span class="sig-name descname"><span class="pre">get_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preference</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cell'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">info</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">,</span> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#pyvista.DataSet.get_array" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Search both point, cell and field data for an array.</p>
+<dd><p>点，セル，フィールドのデータの両方から配列を検索します．</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataSet.get_data_range">
 <span class="sig-name descname"><span class="pre">get_data_range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr_var</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preference</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cell'</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#pyvista.DataSet.get_data_range" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Get the non-NaN min and max of a named array.</p>
+<dd><p>指定した配列のNaN以外の最小値と最大値を取得します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>arr_var</strong> (<em>str</em><em>, </em><em>np.ndarray</em><em>, </em><em>optional</em>) -- The name of the array to get the range. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, the
-active scalars is used.</p></li>
-<li><p><strong>preference</strong> (<em>str</em><em>, </em><em>optional</em>) -- When scalars is specified, this is the preferred array type
-to search for in the dataset.  Must be either <code class="docutils literal notranslate"><span class="pre">'point'</span></code>,
-<code class="docutils literal notranslate"><span class="pre">'cell'</span></code>, or <code class="docutils literal notranslate"><span class="pre">'field'</span></code>.</p></li>
+<li><p><strong>arr_var</strong> (<em>str</em><em>, </em><em>np.ndarray</em><em>, </em><em>optional</em>) -- 範囲を取得する配列の名前を指定します． <code class="docutils literal notranslate"><span class="pre">None</span></code> の場合，アクティブなスカラーが使用されます．</p></li>
+<li><p><strong>preference</strong> (<em>str</em><em>, </em><em>optional</em>) -- スカラーが指定されている場合，これはデータセット内で検索するために推奨される配列型です． <code class="docutils literal notranslate"><span class="pre">'point'</span></code> ， <code class="docutils literal notranslate"><span class="pre">'cell'</span></code> ，または <code class="docutils literal notranslate"><span class="pre">'field'</span></code> のいずれかである必要があります．</p></li>
 </ul>
 </dd>
 </dl>
@@ -5087,46 +5068,46 @@ to search for in the dataset.  Must be either <code class="docutils literal notr
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.DataSet.length">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">length</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><a class="headerlink" href="#pyvista.DataSet.length" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the length of the diagonal of the bounding box.</p>
+<dd><p>境界ボックスの対角線の長さを返します．</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.DataSet.n_arrays">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">n_arrays</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#pyvista.DataSet.n_arrays" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the number of arrays present in the dataset.</p>
+<dd><p>データセット内に存在する配列の数を返します．</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.DataSet.n_cells">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">n_cells</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#pyvista.DataSet.n_cells" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the number of cells in the entire dataset.</p>
+<dd><p>データセット全体のセル数を返します．</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.DataSet.n_points">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">n_points</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#pyvista.DataSet.n_points" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the number of points in the entire dataset.</p>
+<dd><p>データセット全体のポイント数を返します．</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.DataSet.number_of_cells">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">number_of_cells</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#pyvista.DataSet.number_of_cells" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the number of cells.</p>
+<dd><p>セルの数を返します．</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.DataSet.number_of_points">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">number_of_points</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#pyvista.DataSet.number_of_points" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the number of points.</p>
+<dd><p>ポイント数を返します．</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataSet.overwrite">
 <span class="sig-name descname"><span class="pre">overwrite</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">vtkmodules.vtkCommonDataModel.vtkDataSet</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSet.overwrite" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Overwrite this mesh inplace with the new mesh's geometries and data.</p>
+<dd><p>このメッシュインプレイスを新しいメッシュのジオメトリとデータで上書きします．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
-<dd class="field-odd"><p><strong>mesh</strong> (<em>vtk.vtkDataSet</em>) -- The overwriting mesh.</p>
+<dd class="field-odd"><p><strong>mesh</strong> (<em>vtk.vtkDataSet</em>) -- 上書きするメッシュ．</p>
 </dd>
 </dl>
 </dd></dl>
@@ -5134,67 +5115,43 @@ to search for in the dataset.  Must be either <code class="docutils literal notr
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataSet.plot">
 <span class="sig-name descname"><span class="pre">plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">off_screen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">full_screen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">screenshot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interactive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cpos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_bounds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">notebook</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">background</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_img</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eye_dome_lighting</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">volume</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parallel_projection</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_ipyvtk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jupyter_backend</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_viewer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jupyter_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theme</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSet.plot" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Plot a vtk or numpy object.</p>
+<dd><p>vtkまたはnumpyオブジェクトをプロットします．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>item</strong> (<em>vtk</em><em> or </em><em>numpy object</em>) -- VTK object or <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array to be plotted.</p></li>
-<li><p><strong>off_screen</strong> (<em>bool</em>) -- Plots off screen when <code class="docutils literal notranslate"><span class="pre">True</span></code>.  Helpful for saving screenshots
-without a window popping up.</p></li>
-<li><p><strong>full_screen</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Opens window in full screen.  When enabled, ignores
-<code class="docutils literal notranslate"><span class="pre">window_size</span></code>.  Default <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
-<li><p><strong>screenshot</strong> (<em>str</em><em> or </em><em>bool</em><em>, </em><em>optional</em>) -- <p>Saves screenshot to file when enabled.  See:
-<code class="docutils literal notranslate"><span class="pre">help(pyvista.Plotter.screenshot)</span></code>.  Default <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
-<p>When <code class="docutils literal notranslate"><span class="pre">True</span></code>, takes screenshot and returns <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array of
-image.</p>
-</p></li>
+<li><p><strong>item</strong> (<em>vtk</em><em> or </em><em>numpy object</em>) -- プロットするVTKオブジェクトまたは <code class="docutils literal notranslate"><span class="pre">numpy</span></code> 配列．</p></li>
+<li><p><strong>off_screen</strong> (<em>bool</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，画面からプロットします．ウィンドウをポップアップしないでスクリーンショットを保存するのに便利です．</p></li>
+<li><p><strong>full_screen</strong> (<em>bool</em><em>, </em><em>optional</em>) -- ウィンドウを全画面で開きます．有効な場合， <code class="docutils literal notranslate"><span class="pre">window_size</span></code> を無視します．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です．</p></li>
+<li><p><strong>screenshot</strong> (<em>str</em><em> or </em><em>bool</em><em>, </em><em>optional</em>) -- 有効にすると，スクリーンショットをファイルに保存します．関連項目: <code class="docutils literal notranslate"><span class="pre">help(pyvista.Plotter.screenshot)</span></code> ．デフォルトの <code class="docutils literal notranslate"><span class="pre">False</span></code> ． <code class="docutils literal notranslate"><span class="pre">True</span></code> はスクリーンショットを取得し，イメージの <code class="docutils literal notranslate"><span class="pre">numpy</span></code> 配列を戻します．</p></li>
 <li><p><strong>window_size</strong> (<em>list</em><em>, </em><em>optional</em>) -- Window size in pixels.  Defaults to <code class="docutils literal notranslate"><span class="pre">[1024,</span> <span class="pre">768]</span></code></p></li>
-<li><p><strong>show_bounds</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Shows mesh bounds when <code class="docutils literal notranslate"><span class="pre">True</span></code>.  Default <code class="docutils literal notranslate"><span class="pre">False</span></code>. Alias
-<code class="docutils literal notranslate"><span class="pre">show_grid</span></code> also accepted.</p></li>
-<li><p><strong>notebook</strong> (<em>bool</em><em>, </em><em>optional</em>) -- When <code class="docutils literal notranslate"><span class="pre">True</span></code>, the resulting plot is placed inline a jupyter
-notebook.  Assumes a jupyter console is active.</p></li>
-<li><p><strong>show_axes</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Shows a vtk axes widget.  If <code class="docutils literal notranslate"><span class="pre">None</span></code>, enabled according to
-<code class="docutils literal notranslate"><span class="pre">pyvista.global_theme.axes.show</span></code>.</p></li>
-<li><p><strong>text</strong> (<em>str</em><em>, </em><em>optional</em>) -- Adds text at the bottom of the plot.</p></li>
-<li><p><strong>volume</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Use the <code class="docutils literal notranslate"><span class="pre">add_volume</span></code> method for volume rendering.</p></li>
-<li><p><strong>use_ipyvtk</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Deprecated.  Instead, set the backend either globally with
-<code class="docutils literal notranslate"><span class="pre">pyvista.set_jupyter_backend('ipyvtklink')</span></code> or with
-<code class="docutils literal notranslate"><span class="pre">backend='ipyvtklink'</span></code>.</p></li>
-<li><p><strong>jupyter_backend</strong> (<em>str</em><em>, </em><em>optional</em>) -- <p>Jupyter notebook plotting backend to use.  One of the
-following:</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">'none'</span></code> : Do not display in the notebook.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'static'</span></code> : Display a static figure.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'ipygany'</span></code> : Show a <code class="docutils literal notranslate"><span class="pre">ipygany</span></code> widget</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'panel'</span></code> : Show a <code class="docutils literal notranslate"><span class="pre">panel</span></code> widget.</p></li>
-</ul>
-<p>This can also be set globally with
-<code class="docutils literal notranslate"><span class="pre">pyvista.set_jupyter_backend</span></code></p>
-</p></li>
-<li><p><strong>jupyter_kwargs</strong> (<em>dict</em><em>, </em><em>optional</em>) -- Keyword arguments for the Jupyter notebook plotting backend.</p></li>
-<li><p><strong>theme</strong> (<a class="reference internal" href="../../user-guide/themes.html#pyvista.themes.DefaultTheme" title="pyvista.themes.DefaultTheme"><em>pyvista.themes.DefaultTheme</em></a><em>, </em><em>optional</em>) -- Plot-specific theme.</p></li>
-<li><p><strong>**kwargs</strong> (<em>optional keyword arguments</em>) -- See <code class="docutils literal notranslate"><span class="pre">help(pyvista.Plotter.add_mesh)</span></code> for additional options.</p></li>
+<li><p><strong>show_bounds</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，メッシュ境界を表示します．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です．エイリアス <code class="docutils literal notranslate"><span class="pre">show_grid</span></code> も使用できます．</p></li>
+<li><p><strong>notebook</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，作成されたプロットはjupyterノートブック内に配置されます．jupyterコンソールがアクティブであると仮定します．</p></li>
+<li><p><strong>show_axes</strong> (<em>bool</em><em>, </em><em>optional</em>) -- vtk軸ウィジェットを表示します． <code class="docutils literal notranslate"><span class="pre">None</span></code> の場合， <code class="docutils literal notranslate"><span class="pre">pyvista.global_theme.axes.show</span></code> に従って有効になります．</p></li>
+<li><p><strong>text</strong> (<em>str</em><em>, </em><em>optional</em>) -- プロットの下部にテキストを追加します．</p></li>
+<li><p><strong>volume</strong> (<em>bool</em><em>, </em><em>optional</em>) -- ボリュームレンダリングには <code class="docutils literal notranslate"><span class="pre">add_volume</span></code> 方式を使用してください．</p></li>
+<li><p><strong>use_ipyvtk</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 非推奨．代わりに， <code class="docutils literal notranslate"><span class="pre">pyvista.set_jupyter_backend('ipyvtklink')</span></code> または <code class="docutils literal notranslate"><span class="pre">backend='ipyvtklink'</span></code> を使用してグローバルにバックエンドを設定します．</p></li>
+<li><p><strong>jupyter_backend</strong> (<em>str</em><em>, </em><em>optional</em>) -- Jupyterノートブックが使用するバックエンドをプロットしています．次のいずれか: * <code class="docutils literal notranslate"><span class="pre">'none'</span></code> : ノートブックに表示されません． * <code class="docutils literal notranslate"><span class="pre">'static'</span></code> : 静止画を表示します． * <code class="docutils literal notranslate"><span class="pre">'panel'</span></code> :  <code class="docutils literal notranslate"><span class="pre">ipygany</span></code> ウィジェットを表示します * <code class="docutils literal notranslate"><span class="pre">'panel'</span></code> :  <code class="docutils literal notranslate"><span class="pre">panel</span></code> ウィジェットを表示します．これは <code class="docutils literal notranslate"><span class="pre">pyvista.set_jupyter_backend</span></code> でグローバルに設定することもできます．</p></li>
+<li><p><strong>jupyter_kwargs</strong> (<em>dict</em><em>, </em><em>optional</em>) -- Jupyterノートブックプロットバックエンドのキーワード引数．</p></li>
+<li><p><strong>theme</strong> (<a class="reference internal" href="../../user-guide/themes.html#pyvista.themes.DefaultTheme" title="pyvista.themes.DefaultTheme"><em>pyvista.themes.DefaultTheme</em></a><em>, </em><em>optional</em>) -- Plot固有のテーマ．</p></li>
+<li><p><strong>**kwargs</strong> (<em>optional keyword arguments</em>) -- その他のオプションについては， <code class="docutils literal notranslate"><span class="pre">ヘルプ</span> <span class="pre">(pyvista.Plotter.add_mesh)</span></code>  を参照してください．</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><p><ul>
-<li><p><strong>cpos</strong> (<em>list</em>) -- List of camera position, focal point, and view up.</p></li>
-<li><p><strong>img</strong> (<em>numpy.ndarray</em>) -- Array containing pixel RGB and optionally alpha values.
-Sized:</p>
+<li><p><strong>cpos</strong> (<em>list</em>) -- カメラ位置，焦点，およびビューアップのリスト．</p></li>
+<li><p><strong>img</strong> (<em>numpy.ndarray</em>) -- ピクセルRGBと，オプションでアルファ値を含む配列．サイズ:</p>
 <ul class="simple">
-<li><p>[Window height x Window width x 3] if the theme sets
-<code class="docutils literal notranslate"><span class="pre">transparent_background=False</span></code>.</p></li>
-<li><p>[Window height x Window width x 4] if the theme sets
-<code class="docutils literal notranslate"><span class="pre">transparent_background=True</span></code>.</p></li>
+<li><p>[ウィンドウの高さxウィンドウの幅x3]テーマが <code class="docutils literal notranslate"><span class="pre">transparent_background=False</span></code> に設定されている場合．</p></li>
+<li><p>[ウィンドウの高さxウィンドウの幅x4]テーマが <code class="docutils literal notranslate"><span class="pre">transparent_background=True</span></code> に設定されている場合．</p></li>
 </ul>
-<p>Returned only when <code class="docutils literal notranslate"><span class="pre">screenshot=True</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">screenshot=True</span></code> の場合にのみ返されます．</p>
 </li>
 </ul>
 </p>
 </dd>
 </dl>
 <p class="rubric">サンプル</p>
-<p>Plot a simple sphere while showing its edges.</p>
+<p>単純な球のエッジを表示しながらプロットします．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  
@@ -5205,40 +5162,38 @@ Sized:</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.DataSet.point_arrays">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">point_arrays</span></span><em class="property"><span class="pre">:</span> <span class="pre">pyvista.core.datasetattributes.DataSetAttributes</span></em><a class="headerlink" href="#pyvista.DataSet.point_arrays" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return vtkPointData as DataSetAttributes.</p>
+<dd><p>DataSetAttributesとしてvtkPointDataを返します．</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.DataSet.points">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">points</span></span><em class="property"><span class="pre">:</span> <span class="pre">pyvista.core.pyvista_ndarray.pyvista_ndarray</span></em><a class="headerlink" href="#pyvista.DataSet.points" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return a pointer to the points as a numpy object.</p>
+<dd><p>ポイントへのポインタをnumpyオブジェクトとして返します．</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataSet.points_to_double">
 <span class="sig-name descname"><span class="pre">points_to_double</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSet.points_to_double" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Make points double precision.</p>
+<dd><p>ポイントを倍精度にします．</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataSet.rename_array">
 <span class="sig-name descname"><span class="pre">rename_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">old_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preference</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cell'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSet.rename_array" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Change array name by searching for the array then renaming it.</p>
+<dd><p>配列名を変更するには，配列を検索して名前を変更します．</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataSet.rotate_vector">
 <span class="sig-name descname"><span class="pre">rotate_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transform_all_input_vectors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSet.rotate_vector" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Rotate mesh about the vector.</p>
+<dd><p>メッシュをベクトルを中心に回転します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>vector</strong> (<em>tuple</em>) -- Axes to rotate about.</p></li>
-<li><p><strong>angle</strong> (<em>float</em>) -- Angle in degrees to rotate about the vector.</p></li>
+<li><p><strong>vector</strong> (<em>tuple</em>) -- 回転の中心となる軸。</p></li>
+<li><p><strong>angle</strong> (<em>float</em>) -- ベクトルを中心に回転する度単位の角度．</p></li>
 <li><p><strong>point</strong> (<em>list</em><em>, </em><em>optional</em>) -- Point to rotate about.  Defaults to origin <code class="docutils literal notranslate"><span class="pre">(0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0)</span></code>.</p></li>
-<li><p><strong>transform_all_input_vectors</strong> (<em>bool</em><em>, </em><em>optional</em>) -- When <code class="docutils literal notranslate"><span class="pre">True</span></code>, all input vectors are
-transformed. Otherwise, only the points, normals and
-active vectors are transformed.</p></li>
+<li><p><strong>transform_all_input_vectors</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の時，全ての入力ベクトルは変換される．それ以外の場合は，ポイント，法線，およびアクティブなベクトルだけが変換されます．</p></li>
 </ul>
 </dd>
 </dl>
@@ -5247,15 +5202,13 @@ active vectors are transformed.</p></li>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataSet.rotate_x">
 <span class="sig-name descname"><span class="pre">rotate_x</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transform_all_input_vectors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSet.rotate_x" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Rotate mesh about the x-axis.</p>
+<dd><p>メッシュをX軸を中心に回転します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>angle</strong> (<em>float</em>) -- Angle in degrees to rotate about the x-axis.</p></li>
+<li><p><strong>angle</strong> (<em>float</em>) -- X軸を中心に回転する度単位の角度．</p></li>
 <li><p><strong>point</strong> (<em>list</em><em>, </em><em>optional</em>) -- Point to rotate about.  Defaults to origin <code class="docutils literal notranslate"><span class="pre">(0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0)</span></code>.</p></li>
-<li><p><strong>transform_all_input_vectors</strong> (<em>bool</em><em>, </em><em>optional</em>) -- When <code class="docutils literal notranslate"><span class="pre">True</span></code>, all input vectors are
-transformed. Otherwise, only the points, normals and
-active vectors are transformed.</p></li>
+<li><p><strong>transform_all_input_vectors</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の時，全ての入力ベクトルは変換される．それ以外の場合は，ポイント，法線，およびアクティブなベクトルだけが変換されます．</p></li>
 </ul>
 </dd>
 </dl>
@@ -5264,15 +5217,13 @@ active vectors are transformed.</p></li>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataSet.rotate_y">
 <span class="sig-name descname"><span class="pre">rotate_y</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transform_all_input_vectors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSet.rotate_y" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Rotate mesh about the y-axis.</p>
+<dd><p>メッシュをY軸を中心に回転します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>angle</strong> (<em>float</em>) -- Angle in degrees to rotate about the y-axis.</p></li>
+<li><p><strong>angle</strong> (<em>float</em>) -- Y軸を中心に回転する度単位の角度．</p></li>
 <li><p><strong>point</strong> (<em>float</em><em>, </em><em>optional</em>) -- Point to ratate about.</p></li>
-<li><p><strong>transform_all_input_vectors</strong> (<em>bool</em><em>, </em><em>optional</em>) -- When <code class="docutils literal notranslate"><span class="pre">True</span></code>, all input vectors are
-transformed. Otherwise, only the points, normals and
-active vectors are transformed.</p></li>
+<li><p><strong>transform_all_input_vectors</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の時，全ての入力ベクトルは変換される．それ以外の場合は，ポイント，法線，およびアクティブなベクトルだけが変換されます．</p></li>
 </ul>
 </dd>
 </dl>
@@ -5281,15 +5232,13 @@ active vectors are transformed.</p></li>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataSet.rotate_z">
 <span class="sig-name descname"><span class="pre">rotate_z</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transform_all_input_vectors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSet.rotate_z" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Rotate mesh about the z-axis.</p>
+<dd><p>メッシュをZ軸を中心に回転します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>angle</strong> (<em>float</em>) -- Angle in degrees to rotate about the z-axis.</p></li>
+<li><p><strong>angle</strong> (<em>float</em>) -- Z軸を中心に回転する度単位の角度．</p></li>
 <li><p><strong>point</strong> (<em>list</em><em>, </em><em>optional</em>) -- Point to rotate about.  Defaults to origin <code class="docutils literal notranslate"><span class="pre">(0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0)</span></code>.</p></li>
-<li><p><strong>transform_all_input_vectors</strong> (<em>bool</em><em>, </em><em>optional</em>) -- When <code class="docutils literal notranslate"><span class="pre">True</span></code>, all input vectors are
-transformed. Otherwise, only the points, normals and
-active vectors are transformed.</p></li>
+<li><p><strong>transform_all_input_vectors</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の時，全ての入力ベクトルは変換される．それ以外の場合は，ポイント，法線，およびアクティブなベクトルだけが変換されます．</p></li>
 </ul>
 </dd>
 </dl>
@@ -5298,45 +5247,44 @@ active vectors are transformed.</p></li>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataSet.set_active_scalars">
 <span class="sig-name descname"><span class="pre">set_active_scalars</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preference</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cell'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSet.set_active_scalars" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Find the scalars by name and appropriately sets it as active.</p>
-<p>To deactivate any active scalars, pass <code class="docutils literal notranslate"><span class="pre">None</span></code> as the <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
+<dd><p>スカラーを名前で検索し，適切にアクティブに設定します．</p>
+<p>アクティブなスカラーを非アクティブにするには， <code class="docutils literal notranslate"><span class="pre">None</span></code> を <code class="docutils literal notranslate"><span class="pre">name</span></code> として渡します．</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataSet.set_active_tensors">
 <span class="sig-name descname"><span class="pre">set_active_tensors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preference</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'point'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSet.set_active_tensors" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Find the tensors by name and appropriately sets it as active.</p>
-<p>To deactivate any active tensors, pass <code class="docutils literal notranslate"><span class="pre">None</span></code> as the <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
+<dd><p>​テンソルを名前で検索し，適切にアクティブに設定します．</p>
+<p>アクティブなテンソルを非アクティブにするには， <code class="docutils literal notranslate"><span class="pre">None</span></code> を <code class="docutils literal notranslate"><span class="pre">name</span></code> として渡します．</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataSet.set_active_vectors">
 <span class="sig-name descname"><span class="pre">set_active_vectors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preference</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'point'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSet.set_active_vectors" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Find the vectors by name and appropriately sets it as active.</p>
-<p>To deactivate any active vectors, pass <code class="docutils literal notranslate"><span class="pre">None</span></code> as the <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
+<dd><p>ベクトルを名前で検索し，適切にアクティブに設定します．</p>
+<p>アクティブなベクトルを非アクティブにするには， <code class="docutils literal notranslate"><span class="pre">None</span></code> を <code class="docutils literal notranslate"><span class="pre">name</span></code> として渡します．</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.DataSet.t_coords">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">t_coords</span></span><em class="property"><span class="pre">:</span> <span class="pre">Optional[pyvista.core.pyvista_ndarray.pyvista_ndarray]</span></em><a class="headerlink" href="#pyvista.DataSet.t_coords" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the active texture coordinates on the points.</p>
+<dd><p>ポイント上のアクティブなテクスチャ座標を返します．</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.DataSet.textures">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">textures</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict[str,</span> <span class="pre">vtkmodules.vtkRenderingCore.vtkTexture]</span></em><a class="headerlink" href="#pyvista.DataSet.textures" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return a dictionary to hold compatible <code class="docutils literal notranslate"><span class="pre">vtk.vtkTexture</span></code> objects.</p>
-<p>When casting back to a VTK dataset or filtering this dataset, these textures
-will not be passed.</p>
+<dd><p>互換性のある <code class="docutils literal notranslate"><span class="pre">vtk.vtkTexture</span></code> オブジェクトを保持する辞書を返します．</p>
+<p>VTKデータセットにキャストバックするとき，またはこのデータセットをフィルタリングするとき，これらのテクスチャは渡されません．</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataSet.translate">
 <span class="sig-name descname"><span class="pre">translate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xyz</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">,</span> </span><span class="pre">tuple</span><span class="p"><span class="pre">,</span> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSet.translate" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Translate the mesh.</p>
+<dd><p>メッシュを移動します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
-<dd class="field-odd"><p><strong>xyz</strong> (<em>list</em><em> or </em><em>tuple</em><em> or </em><em>np.ndarray</em>) -- Length 3 list, tuple or array.</p>
+<dd class="field-odd"><p><strong>xyz</strong> (<em>list</em><em> or </em><em>tuple</em><em> or </em><em>np.ndarray</em>) -- 長さ3のリスト，タプルまたは配列．</p>
 </dd>
 </dl>
 </dd></dl>
@@ -5344,16 +5292,16 @@ will not be passed.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.DataSet.vectors">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">vectors</span></span><em class="property"><span class="pre">:</span> <span class="pre">Optional[pyvista.core.pyvista_ndarray.pyvista_ndarray]</span></em><a class="headerlink" href="#pyvista.DataSet.vectors" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return active vectors.</p>
+<dd><p>アクティブなベクトルを返します．</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.DataSet.volume">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">volume</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><a class="headerlink" href="#pyvista.DataSet.volume" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the mesh volume.</p>
+<dd><p>メッシュボリュームを返します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値</dt>
-<dd class="field-odd"><p><strong>volume</strong> -- Total volume of the mesh.</p>
+<dd class="field-odd"><p><strong>volume</strong> -- メッシュの合計ボリュームです．</p>
 </dd>
 <dt class="field-even">戻り値の型</dt>
 <dd class="field-even"><p>float</p>

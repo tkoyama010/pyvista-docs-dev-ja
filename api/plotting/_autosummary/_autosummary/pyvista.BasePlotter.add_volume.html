@@ -192,37 +192,37 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/objects.html">
-     Objects
+     オブジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/dataset.html">
-     Datasets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/points.html">
-     Point Data
+     ポイントデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/point-grids.html">
-     Point-Based Grids
+     ポイントベースグリッド
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/grids.html">
-     Gridded Data
+     グリッドデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/composite.html">
-     Composite Datasets
+     複合データセット
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../core/filters.html">
-     Filters
+     フィルタ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -1699,12 +1699,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/camera.html">
-     Cameras
+     カメラ
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../core/lights.html">
-     Lights
+     ライト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -1883,14 +1883,14 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/helpers.html">
-     Helpers
+     ヘルパー
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../../index.html">
-   Plotting
+   プロット
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -1900,12 +1900,12 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../../plotting.html">
-     Plotting
+     プロット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../qt_plotting.html">
-     Pyvista and PyQt
+     PyvistaとPyQt
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
@@ -4093,7 +4093,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../conv_func.html">
-     Convenience Functions
+     便利な機能
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
     <label for="toctree-checkbox-15">
@@ -4137,7 +4137,7 @@
   <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/geometric.html">
-     Geometric Objects
+     ジオメトリオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -4234,7 +4234,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/parametric.html">
-     Parametric Objects
+     パラメトリックオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
     <label for="toctree-checkbox-18">
@@ -4346,7 +4346,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/utilities.html">
-     General Utilities
+     一般ユーティリティ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
     <label for="toctree-checkbox-19">
@@ -4539,86 +4539,39 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.BasePlotter.add_volume">
 <span class="sig-prename descclassname"><span class="pre">BasePlotter.</span></span><span class="sig-name descname"><span class="pre">add_volume</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">volume</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scalars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opacity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_colors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">256</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flip_scalars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reset_camera</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ambient</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">categories</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">culling</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multi_colors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blending</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'composite'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mapper</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scalar_bar_args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_scalar_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annotations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pickable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preference</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'point'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opacity_unit_distance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shade</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diffuse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.7</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">specular</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">specular_power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">render</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.add_volume" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Add a volume, rendered using a smart mapper by default.</p>
-<p>Requires a 3D <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code> or <a class="reference internal" href="../../../core/grids.html#pyvista.UniformGrid" title="pyvista.UniformGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UniformGrid</span></code></a>.</p>
+<dd><p>ボリュームを追加し，デフォルトではスマートマッパーを使用してレンダーします．</p>
+<p>3 D  <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code> または <a class="reference internal" href="../../../core/grids.html#pyvista.UniformGrid" title="pyvista.UniformGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UniformGrid</span></code></a> が必要です．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>volume</strong> (<em>3D numpy.ndarray</em><em> or </em><a class="reference internal" href="../../../core/grids.html#pyvista.UniformGrid" title="pyvista.UniformGrid"><em>pyvista.UniformGrid</em></a>) -- The input volume to visualize. 3D numpy arrays are accepted.</p></li>
-<li><p><strong>scalars</strong> (<em>str</em><em> or </em><em>numpy.ndarray</em><em>, </em><em>optional</em>) -- Scalars used to &quot;color&quot; the mesh.  Accepts a string name of an
-array that is present on the mesh or an array equal
-to the number of cells or the number of points in the
-mesh.  Array should be sized as a single vector. If <code class="docutils literal notranslate"><span class="pre">scalars</span></code> is
-<code class="docutils literal notranslate"><span class="pre">None</span></code>, then the active scalars are used.</p></li>
-<li><p><strong>clim</strong> (<em>2 item list</em><em>, </em><em>optional</em>) -- Color bar range for scalars.  Defaults to minimum and
-maximum of scalars array.  Example: <code class="docutils literal notranslate"><span class="pre">[-1,</span> <span class="pre">2]</span></code>. <code class="docutils literal notranslate"><span class="pre">rng</span></code>
-is also an accepted alias for this.</p></li>
-<li><p><strong>opacity</strong> (<em>string</em><em> or </em><em>numpy.ndarray</em><em>, </em><em>optional</em>) -- Opacity mapping for the scalars array.
-A string can also be specified to map the scalars range to a
-predefined opacity transfer function (options include: 'linear',
-'linear_r', 'geom', 'geom_r'). Or you can pass a custom made
-transfer function that is an array either <code class="docutils literal notranslate"><span class="pre">n_colors</span></code> in length or
-shorter.</p></li>
-<li><p><strong>n_colors</strong> (<em>int</em><em>, </em><em>optional</em>) -- Number of colors to use when displaying scalars. Defaults to 256.
-The scalar bar will also have this many colors.</p></li>
-<li><p><strong>cmap</strong> (<em>str</em><em>, </em><em>optional</em>) -- Name of the Matplotlib colormap to us when mapping the <code class="docutils literal notranslate"><span class="pre">scalars</span></code>.
-See available Matplotlib colormaps.  Only applicable for when
-displaying <code class="docutils literal notranslate"><span class="pre">scalars</span></code>. Requires Matplotlib to be installed.
-<code class="docutils literal notranslate"><span class="pre">colormap</span></code> is also an accepted alias for this. If <code class="docutils literal notranslate"><span class="pre">colorcet</span></code> or
-<code class="docutils literal notranslate"><span class="pre">cmocean</span></code> are installed, their colormaps can be specified by name.</p></li>
-<li><p><strong>flip_scalars</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Flip direction of cmap. Most colormaps allow <code class="docutils literal notranslate"><span class="pre">*_r</span></code> suffix to do
-this as well.</p></li>
-<li><p><strong>reset_camera</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Reset the camera after adding this mesh to the scene</p></li>
-<li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) -- The name for the added actor so that it can be easily
-updated.  If an actor of this name already exists in the
-rendering window, it will be replaced by the new actor.</p></li>
-<li><p><strong>ambient</strong> (<em>float</em><em>, </em><em>optional</em>) -- When lighting is enabled, this is the amount of light from
-0 to 1 that reaches the actor when not directed at the
-light source emitted from the viewer.  Default 0.0.</p></li>
-<li><p><strong>culling</strong> (<em>str</em><em>, </em><em>optional</em>) -- Does not render faces that are culled. Options are <code class="docutils literal notranslate"><span class="pre">'front'</span></code> or
-<code class="docutils literal notranslate"><span class="pre">'back'</span></code>. This can be helpful for dense surface meshes,
-especially when edges are visible, but can cause flat
-meshes to be partially displayed.  Defaults <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
-<li><p><strong>categories</strong> (<em>bool</em><em>, </em><em>optional</em>) -- If set to <code class="docutils literal notranslate"><span class="pre">True</span></code>, then the number of unique values in the scalar
-array will be used as the <code class="docutils literal notranslate"><span class="pre">n_colors</span></code> argument.</p></li>
-<li><p><strong>multi_colors</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Whether or not to use multiple colors when plotting MultiBlock
-object. Blocks will be colored sequentially as 'Reds', 'Greens',
-'Blues', and 'Grays'.</p></li>
-<li><p><strong>blending</strong> (<em>str</em><em>, </em><em>optional</em>) -- Blending mode for visualisation of the input object(s). Can be
-one of 'additive', 'maximum', 'minimum', 'composite', or
-'average'. Defaults to 'additive'.</p></li>
-<li><p><strong>mapper</strong> (<em>str</em><em>, </em><em>optional</em>) -- Volume mapper to use given by name. Options include:
-<code class="docutils literal notranslate"><span class="pre">'fixed_point'</span></code>, <code class="docutils literal notranslate"><span class="pre">'gpu'</span></code>, <code class="docutils literal notranslate"><span class="pre">'open_gl'</span></code>, and
-<code class="docutils literal notranslate"><span class="pre">'smart'</span></code>.  If <code class="docutils literal notranslate"><span class="pre">None</span></code> the <code class="docutils literal notranslate"><span class="pre">&quot;volume_mapper&quot;</span></code> in the
-<code class="docutils literal notranslate"><span class="pre">self._theme</span></code> is used.</p></li>
-<li><p><strong>scalar_bar_args</strong> (<em>dict</em><em>, </em><em>optional</em>) -- Dictionary of keyword arguments to pass when adding the
-scalar bar to the scene. For options, see
-<a class="reference internal" href="pyvista.BasePlotter.add_scalar_bar.html#pyvista.BasePlotter.add_scalar_bar" title="pyvista.BasePlotter.add_scalar_bar"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.BasePlotter.add_scalar_bar()</span></code></a>.</p></li>
-<li><p><strong>show_scalar_bar</strong> (<em>bool</em>) -- If <code class="docutils literal notranslate"><span class="pre">False</span></code>, a scalar bar will not be added to the
-scene. Defaults to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
-<li><p><strong>annotations</strong> (<em>dict</em><em>, </em><em>optional</em>) -- Pass a dictionary of annotations. Keys are the float
-values in the scalars range to annotate on the scalar bar
-and the values are the the string annotations.</p></li>
-<li><p><strong>opacity_unit_distance</strong> (<em>float</em>) -- Set/Get the unit distance on which the scalar opacity
-transfer function is defined. Meaning that over that
-distance, a given opacity (from the transfer function) is
-accumulated. This is adjusted for the actual sampling
-distance during rendering. By default, this is the length
-of the diagonal of the bounding box of the volume divided
-by the dimensions.</p></li>
-<li><p><strong>shade</strong> (<em>bool</em>) -- Default off. If shading is turned on, the mapper may
-perform shading calculations - in some cases shading does
-not apply (for example, in a maximum intensity projection)
-and therefore shading will not be performed even if this
-flag is on.</p></li>
-<li><p><strong>diffuse</strong> (<em>float</em><em>, </em><em>optional</em>) -- The diffuse lighting coefficient. Default 1.0</p></li>
-<li><p><strong>specular</strong> (<em>float</em><em>, </em><em>optional</em>) -- The specular lighting coefficient. Default 0.0</p></li>
-<li><p><strong>specular_power</strong> (<em>float</em><em>, </em><em>optional</em>) -- The specular power. Between 0.0 and 128.0</p></li>
-<li><p><strong>render</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Force a render when True.  Default <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
+<li><p><strong>volume</strong> (<em>3D numpy.ndarray</em><em> or </em><a class="reference internal" href="../../../core/grids.html#pyvista.UniformGrid" title="pyvista.UniformGrid"><em>pyvista.UniformGrid</em></a>) -- 表示する入力ボリューム．3 Dの数値配列を使用できます．</p></li>
+<li><p><strong>scalars</strong> (<em>str</em><em> or </em><em>numpy.ndarray</em><em>, </em><em>optional</em>) -- メッシュの &quot;色&quot; に使用されるスカラー．メッシュ上に存在する配列の文字列名，またはメッシュ内のセル数またはポイント数と等しい配列を受け入れます．配列は単一のベクトルとしてサイズを設定する必要があります． <code class="docutils literal notranslate"><span class="pre">scalars</span></code> が <code class="docutils literal notranslate"><span class="pre">None</span></code> の場合，アクティブスカラーが使用されます．</p></li>
+<li><p><strong>clim</strong> (<em>2 item list</em><em>, </em><em>optional</em>) -- スカラーのカラーバーの範囲．デフォルトはスカラー配列の最小値と最大値です．例: <code class="docutils literal notranslate"><span class="pre">[-1,</span> <span class="pre">2]</span></code> ．<code class="docutils literal notranslate"><span class="pre">rng</span></code> もこの別名として認められています．</p></li>
+<li><p><strong>opacity</strong> (<em>string</em><em> or </em><em>numpy.ndarray</em><em>, </em><em>optional</em>) -- スカラー配列の不透明度マッピング．文字列を指定して，スカラ範囲を定義済みの不透明度転送関数(オプションには， 'linear' ， 'linear_r'， 'geom' ， 'geom_r' があります．)にマッピングすることもできます．あるいは，長さが <code class="docutils literal notranslate"><span class="pre">n_colors</span></code> 以下の配列であるカスタムメイドの伝達関数を渡すこともできます．</p></li>
+<li><p><strong>n_colors</strong> (<em>int</em><em>, </em><em>optional</em>) -- スカラーを表示するときに使用するカラーの数．デフォルトは256です．スカラーバーにもこの数の色があります．</p></li>
+<li><p><strong>cmap</strong> (<em>str</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">scalars</span></code> をマップする際のMatplotlibカラーマップの名前．利用可能なMatplotlibカラーマップを参照してください． <code class="docutils literal notranslate"><span class="pre">scalars</span></code> を表示する場合にのみ適用されます．Matplotlibがインストールされている必要があります． <code class="docutils literal notranslate"><span class="pre">colormap</span></code> は，このエイリアスとしても使用できます． <code class="docutils literal notranslate"><span class="pre">colorcet</span></code> または <code class="docutils literal notranslate"><span class="pre">cmocean</span></code> がインストールされている場合は，それらのカラーマップを名前で指定できます．</p></li>
+<li><p><strong>flip_scalars</strong> (<em>bool</em><em>, </em><em>optional</em>) -- cmapの方向を反転します．ほとんどのカラーマップでは， <code class="docutils literal notranslate"><span class="pre">*_r</span></code> サフィックスも同様にこれを行うことができます．</p></li>
+<li><p><strong>reset_camera</strong> (<em>bool</em><em>, </em><em>optional</em>) -- このメッシュをシーンに追加した後，カメラをリセットします．</p></li>
+<li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) -- 簡単に更新できるように，追加したアクターの名前．この名前のアクターがレンダリングウィンドウに既に存在する場合は，新しいアクターに置き換えられます．</p></li>
+<li><p><strong>ambient</strong> (<em>float</em><em>, </em><em>optional</em>) -- 照明が有効な場合，これは，ビューアから放射された光源に向けられていないときにアクターに到達する0から1の光の量です．デフォルトは0.0です．</p></li>
+<li><p><strong>culling</strong> (<em>str</em><em>, </em><em>optional</em>) -- 選択された面はレンダリングされません．オプションは <code class="docutils literal notranslate"><span class="pre">'front'</span></code> または <code class="docutils literal notranslate"><span class="pre">'back'</span></code> です．これは，高密度のサーフェイスメッシュ，特にエッジが表示されている場合に便利ですが，フラットメッシュが部分的に表示されることがあります．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です．</p></li>
+<li><p><strong>categories</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> に設定すると，スカラー配列内の一意の値の数が <code class="docutils literal notranslate"><span class="pre">n_colors</span></code> 引数として使用されます．</p></li>
+<li><p><strong>multi_colors</strong> (<em>bool</em><em>, </em><em>optional</em>) -- マルチブロックオブジェクトを印刷するときに複数の色を使用するかどうかを指定します．ブロックは 'Reds' ， 'Greens' ， 'Blues' ， 'Grays' の順に色付けされます．</p></li>
+<li><p><strong>blending</strong> (<em>str</em><em>, </em><em>optional</em>) -- 入力オブジェクト()を表示するための描画モード． 'additive' ， 'maximum' ， 'minimum' ， 'composite' ， 'average' のいずれかです．デフォルトは 'additive' です．</p></li>
+<li><p><strong>mapper</strong> (<em>str</em><em>, </em><em>optional</em>) -- 使用するボリュームマッパーは名前で指定します．オプションには， <code class="docutils literal notranslate"><span class="pre">'fixed_point'</span></code>， <code class="docutils literal notranslate"><span class="pre">'gpu'</span></code> ， <code class="docutils literal notranslate"><span class="pre">'open_gl'</span></code> ， <code class="docutils literal notranslate"><span class="pre">'smart'</span></code> があります． <code class="docutils literal notranslate"><span class="pre">None</span></code> の場合， <code class="docutils literal notranslate"><span class="pre">self._theme</span></code> の <code class="docutils literal notranslate"><span class="pre">&quot;volume_mapper&quot;</span></code> が使用されます．</p></li>
+<li><p><strong>scalar_bar_args</strong> (<em>dict</em><em>, </em><em>optional</em>) -- スカラーバーをシーンに追加するときに渡すキーワード引数のディクショナリ．オプションについては <a class="reference internal" href="pyvista.BasePlotter.add_scalar_bar.html#pyvista.BasePlotter.add_scalar_bar" title="pyvista.BasePlotter.add_scalar_bar"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.BasePlotter.add_scalar_bar()</span></code></a> を参照してください．</p></li>
+<li><p><strong>show_scalar_bar</strong> (<em>bool</em>) -- <code class="docutils literal notranslate"><span class="pre">False</span></code> の場合，スカラーバーはシーンに追加されません．デフォルトは <code class="docutils literal notranslate"><span class="pre">True</span></code> です．</p></li>
+<li><p><strong>annotations</strong> (<em>dict</em><em>, </em><em>optional</em>) -- 注釈の辞書を渡します．キーはスカラー範囲のfloat値で，スカラーバーに注釈を付けます．値は文字列注釈です．</p></li>
+<li><p><strong>opacity_unit_distance</strong> (<em>float</em>) -- スカラー不透明度転送関数が定義される単位距離を設定/取得します．つまり，指定した距離にわたって，特定の不透明度(伝達関数から)が累積されます．これは，レンダリング中の実際のサンプリング距離に合わせて調整されます．既定では，体積の境界ボックスの対角線の長さを寸法で割った値です．</p></li>
+<li><p><strong>shade</strong> (<em>bool</em>) -- デフォルトはオフです．シェーディングがオンの場合，マッパはシェーディング計算を実行できます - 場合によっては，シェーディングが適用されない(例えば，最大強度投影)ため，このフラグをオンにしてもシェーディングは実行されません．</p></li>
+<li><p><strong>diffuse</strong> (<em>float</em><em>, </em><em>optional</em>) -- 拡散照明係数．デフォルト1.0</p></li>
+<li><p><strong>specular</strong> (<em>float</em><em>, </em><em>optional</em>) -- 鏡面反射光の係数．デフォルト0.0</p></li>
+<li><p><strong>specular_power</strong> (<em>float</em><em>, </em><em>optional</em>) -- 鏡面パワー．0.0から128.0</p></li>
+<li><p><strong>render</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Trueの場合，強制的にレンダリングします．デフォルトは <code class="docutils literal notranslate"><span class="pre">True</span></code> ．</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
-<dd class="field-even"><p><strong>actor</strong> -- VTK volume of the input data.</p>
+<dd class="field-even"><p><strong>actor</strong> -- 入力データのVTKボリューム．</p>
 </dd>
 <dt class="field-odd">戻り値の型</dt>
 <dd class="field-odd"><p>vtk.vtkVolume</p>

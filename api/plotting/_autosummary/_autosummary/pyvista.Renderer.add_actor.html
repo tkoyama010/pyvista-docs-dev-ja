@@ -192,37 +192,37 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/objects.html">
-     Objects
+     オブジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/dataset.html">
-     Datasets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/points.html">
-     Point Data
+     ポイントデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/point-grids.html">
-     Point-Based Grids
+     ポイントベースグリッド
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/grids.html">
-     Gridded Data
+     グリッドデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/composite.html">
-     Composite Datasets
+     複合データセット
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../core/filters.html">
-     Filters
+     フィルタ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -1699,12 +1699,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/camera.html">
-     Cameras
+     カメラ
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../core/lights.html">
-     Lights
+     ライト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -1883,14 +1883,14 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/helpers.html">
-     Helpers
+     ヘルパー
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../../index.html">
-   Plotting
+   プロット
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -1900,12 +1900,12 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../../plotting.html">
-     Plotting
+     プロット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../qt_plotting.html">
-     Pyvista and PyQt
+     PyvistaとPyQt
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -4093,7 +4093,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../conv_func.html">
-     Convenience Functions
+     便利な機能
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
     <label for="toctree-checkbox-15">
@@ -4137,7 +4137,7 @@
   <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/geometric.html">
-     Geometric Objects
+     ジオメトリオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -4234,7 +4234,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/parametric.html">
-     Parametric Objects
+     パラメトリックオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
     <label for="toctree-checkbox-18">
@@ -4346,7 +4346,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/utilities.html">
-     General Utilities
+     一般ユーティリティ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
     <label for="toctree-checkbox-19">
@@ -4539,23 +4539,20 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.Renderer.add_actor">
 <span class="sig-prename descclassname"><span class="pre">Renderer.</span></span><span class="sig-name descname"><span class="pre">add_actor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uinput</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reset_camera</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">culling</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pickable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">render</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Renderer.add_actor" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Add an actor to render window.</p>
-<p>Creates an actor if input is a mapper.</p>
+<dd><p>レンダリングウィンドウにアクターを追加します．</p>
+<p>入力がマッパーの場合にアクターを作成します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>uinput</strong> (<em>vtk.vtkMapper</em><em> or </em><em>vtk.vtkActor</em>) -- vtk mapper or vtk actor to be added.</p></li>
-<li><p><strong>reset_camera</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Resets the camera when true.</p></li>
-<li><p><strong>culling</strong> (<em>str</em><em>, </em><em>optional</em>) -- Does not render faces that are culled. Options are <code class="docutils literal notranslate"><span class="pre">'front'</span></code> or
-<code class="docutils literal notranslate"><span class="pre">'back'</span></code>. This can be helpful for dense surface meshes,
-especially when edges are visible, but can cause flat
-meshes to be partially displayed.  Default False.</p></li>
+<li><p><strong>uinput</strong> (<em>vtk.vtkMapper</em><em> or </em><em>vtk.vtkActor</em>) -- 追加するvtkマッパーまたはvtkアクター．</p></li>
+<li><p><strong>reset_camera</strong> (<em>bool</em><em>, </em><em>optional</em>) -- trueの場合，カメラをリセットします．</p></li>
+<li><p><strong>culling</strong> (<em>str</em><em>, </em><em>optional</em>) -- 選択された面はレンダリングされません．オプションは <code class="docutils literal notranslate"><span class="pre">'front'</span></code> または <code class="docutils literal notranslate"><span class="pre">'back'</span></code> です．これは，高密度のサーフェイスメッシュ，特にエッジが表示されている場合に便利ですが，フラットメッシュが部分的に表示されることがあります．デフォルトはFalseです．</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><p><ul class="simple">
-<li><p><strong>actor</strong> (<em>vtk.vtkActor</em>) -- The actor.</p></li>
-<li><p><strong>actor_properties</strong> (<em>vtk.Properties</em>) -- Actor properties.</p></li>
+<li><p><strong>actor</strong> (<em>vtk.vtkActor</em>) -- アクター．</p></li>
+<li><p><strong>actor_properties</strong>  (<em>vtk.Properties</em>) --アクターのプロパティ．</p></li>
 </ul>
 </p>
 </dd>

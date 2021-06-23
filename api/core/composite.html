@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Composite Datasets &#8212; PyVista 0.31.dev0 ドキュメント</title>
+    <title>複合データセット &#8212; PyVista 0.31.dev0 ドキュメント</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -50,8 +50,8 @@
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
-    <link rel="next" title="Filters" href="filters.html" />
-    <link rel="prev" title="Gridded Data" href="grids.html" />
+    <link rel="next" title="フィルタ" href="filters.html" />
+    <link rel="prev" title="グリッドデータ" href="grids.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -192,37 +192,37 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="objects.html">
-     Objects
+     オブジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="dataset.html">
-     Datasets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="points.html">
-     Point Data
+     ポイントデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="point-grids.html">
-     Point-Based Grids
+     ポイントベースグリッド
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="grids.html">
-     Gridded Data
+     グリッドデータ
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Composite Datasets
+     複合データセット
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="filters.html">
-     Filters
+     フィルタ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -1699,12 +1699,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="camera.html">
-     Cameras
+     カメラ
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="lights.html">
-     Lights
+     ライト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -1883,14 +1883,14 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="helpers.html">
-     Helpers
+     ヘルパー
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../plotting/index.html">
-   Plotting
+   プロット
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -1900,12 +1900,12 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../plotting/plotting.html">
-     Plotting
+     プロット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../plotting/qt_plotting.html">
-     Pyvista and PyQt
+     PyvistaとPyQt
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -4093,7 +4093,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../plotting/conv_func.html">
-     Convenience Functions
+     便利な機能
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
     <label for="toctree-checkbox-15">
@@ -4137,7 +4137,7 @@
   <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../utilities/geometric.html">
-     Geometric Objects
+     ジオメトリオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -4234,7 +4234,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../utilities/parametric.html">
-     Parametric Objects
+     パラメトリックオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
     <label for="toctree-checkbox-18">
@@ -4346,7 +4346,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../utilities/utilities.html">
-     General Utilities
+     一般ユーティリティ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
     <label for="toctree-checkbox-19">
@@ -4520,7 +4520,7 @@
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#multiblock-datasets">
-   MultiBlock Datasets
+   マルチブロックデータセット
   </a>
  </li>
 </ul>
@@ -4545,13 +4545,12 @@
               <div>
                 
   <div class="section" id="module-pyvista.core.composite">
-<span id="composite-datasets"></span><h1>Composite Datasets<a class="headerlink" href="#module-pyvista.core.composite" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Container to mimic <code class="docutils literal notranslate"><span class="pre">vtkMultiBlockDataSet</span></code> objects.</p>
-<p>These classes hold many VTK datasets in one object that can be passed
-to VTK algorithms and PyVista filtering/plotting routines.</p>
+<span id="composite-datasets"></span><h1>複合データセット<a class="headerlink" href="#module-pyvista.core.composite" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">vtkMultiBlockDataSet</span></code> オブジェクトを模倣するコンテナです．</p>
+<p>これらのクラスは，多くのVTKデータセットを1つのオブジェクトに保持し，VTKアルゴリズムとPyVistaフィルタリング/描画ルーチンに渡すことができます．</p>
 <div class="section" id="multiblock-datasets">
-<h2>MultiBlock Datasets<a class="headerlink" href="#multiblock-datasets" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p class="rubric">Attributes</p>
+<h2>マルチブロックデータセット<a class="headerlink" href="#multiblock-datasets" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p class="rubric">アトリビュート</p>
 <table class="longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
@@ -4559,23 +4558,23 @@ to VTK algorithms and PyVista filtering/plotting routines.</p>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">bounds</span></code></p></td>
-<td><p>Find min/max for bounds across blocks.</p></td>
+<td><p>ブロック間の境界の最小/最大を検索します．</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">center</span></code></p></td>
-<td><p>Return the center of the bounding box.</p></td>
+<td><p>境界ボックスの中心を返します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">length</span></code></p></td>
-<td><p>Return the length of the diagonal of the bounding box.</p></td>
+<td><p>境界ボックスの対角線の長さを返します．</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_blocks</span></code></p></td>
-<td><p>Return the total number of blocks set.</p></td>
+<td><p>ブロックセットの総数を返します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">volume</span></code></p></td>
-<td><p>Return the total volume of all meshes in this dataset.</p></td>
+<td><p>このデータセット内のすべてのメッシュの合計ボリュームを返します．</p></td>
 </tr>
 </tbody>
 </table>
-<p class="rubric">Methods</p>
+<p class="rubric">メソッド</p>
 <table class="longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
@@ -4583,46 +4582,46 @@ to VTK algorithms and PyVista filtering/plotting routines.</p>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">append</span></code>(data)</p></td>
-<td><p>Add a data set to the next block index.</p></td>
+<td><p>データセットを次のブロックインデックスに追加します．</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">clean</span></code>([empty])</p></td>
-<td><p>Remove any null blocks in place.</p></td>
+<td><p>Nullブロックをすべて削除します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code>([deep])</p></td>
-<td><p>Return a copy of the object.</p></td>
+<td><p>オブジェクトのコピーを返します．</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy_meta_from</span></code>(ido)</p></td>
-<td><p>Copy pyvista meta data onto this object from another object.</p></td>
+<td><p>別のオブジェクトからこのオブジェクトにpyvistaメタデータをコピーします．</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get</span></code>(index)</p></td>
-<td><p>Get a block by its index or name.</p></td>
+<td><p>インデックスまたは名前でブロックを取得します．</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_block_name</span></code>(index)</p></td>
-<td><p>Return the string name of the block at the given index.</p></td>
+<td><p>指定したインデックスのブロック名を文字列で返します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_data_range</span></code>(name)</p></td>
-<td><p>Get the min/max of an array given its name across all blocks.</p></td>
+<td><p>すべてのブロックにわたる配列名の最小値/最大値を取得します．</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_index_by_name</span></code>(name)</p></td>
-<td><p>Find the index number by block name.</p></td>
+<td><p>ブロック名でインデックス番号を検索します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">keys</span></code>()</p></td>
-<td><p>Get all the block names in the dataset.</p></td>
+<td><p>データセット内のすべてのブロック名を取得します．</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">next</span></code>()</p></td>
-<td><p>Get the next block from the iterator.</p></td>
+<td><p>イテレータから次のブロックを取得します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code>([off_screen, full_screen, screenshot, ...])</p></td>
-<td><p>Plot a vtk or numpy object.</p></td>
+<td><p>vtkまたはnumpyオブジェクトをプロットします．</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">pop</span></code>(index)</p></td>
-<td><p>Pop off a block at the specified index.</p></td>
+<td><p>指定したインデックスのブロックをポップします．</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_block_name</span></code>(index, name)</p></td>
-<td><p>Set a block's string name at the specified index.</p></td>
+<td><p>指定したインデックスにブロックの文字列名を設定します．</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">wrap_nested</span></code>()</p></td>
-<td><p>Ensure that all nested data structures are wrapped as PyVista datasets.</p></td>
+<td><p>ネストされたすべてのデータ構造がPyVistaデータセットとしてラップされていることを確認します．</p></td>
 </tr>
 </tbody>
 </table>
@@ -4630,12 +4629,9 @@ to VTK algorithms and PyVista filtering/plotting routines.</p>
 <dt class="sig sig-object py" id="pyvista.MultiBlock">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyvista.</span></span><span class="sig-name descname"><span class="pre">MultiBlock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.MultiBlock" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">vtkmodules.vtkCommonDataModel.vtkMultiBlockDataSet</span></code>, <a class="reference internal" href="_autosummary/pyvista.CompositeFilters.html#pyvista.CompositeFilters" title="pyvista.core.filters.composite.CompositeFilters"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.core.filters.composite.CompositeFilters</span></code></a>, <a class="reference internal" href="objects.html#pyvista.DataObject" title="pyvista.core.dataobject.DataObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.core.dataobject.DataObject</span></code></a></p>
-<p>A composite class to hold many data sets which can be iterated over.</p>
-<p>This wraps/extends the <code class="docutils literal notranslate"><span class="pre">vtkMultiBlockDataSet</span></code> class in VTK so that we can
-easily plot these data sets and use the composite in a Pythonic manner.</p>
-<p>You can think of <code class="docutils literal notranslate"><span class="pre">MultiBlock</span></code> like lists or dictionaries as we can
-iterate over this data structure by index and we can also access blocks
-by their string name.</p>
+<p>反復可能な多数のデータセットを保持する複合クラス．</p>
+<p>これはVTKで <code class="docutils literal notranslate"><span class="pre">vtkMultiBlockDataSet</span></code> クラスをラップ/拡張し，これらのデータセットを簡単にプロットし，Python的な方法でコンポジットを使用できるようにします．</p>
+<p><code class="docutils literal notranslate"><span class="pre">MultiBlock</span></code> はリストや辞書のようなもので，インデックスによってこのデータ構造を繰り返し処理することができ，文字列名によってブロックにアクセスすることもできます．</p>
 <p class="rubric">サンプル</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 </pre></div>
@@ -4671,16 +4667,16 @@ by their string name.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.MultiBlock.append">
 <span class="sig-name descname"><span class="pre">append</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="dataset.html#pyvista.DataSet" title="pyvista.core.dataset.DataSet"><span class="pre">pyvista.core.dataset.DataSet</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.MultiBlock.append" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Add a data set to the next block index.</p>
+<dd><p>データセットを次のブロックインデックスに追加します．</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.MultiBlock.bounds">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">bounds</span></span><em class="property"><span class="pre">:</span> <span class="pre">List[float]</span></em><a class="headerlink" href="#pyvista.MultiBlock.bounds" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Find min/max for bounds across blocks.</p>
+<dd><p>ブロック間の境界の最小/最大を検索します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値</dt>
-<dd class="field-odd"><p>length 6 tuple of floats containing min/max along each axis</p>
+<dd class="field-odd"><p>各軸に沿ってmin/maxを含むfloatの6組の長さ</p>
 </dd>
 <dt class="field-even">戻り値の型</dt>
 <dd class="field-even"><p>tuple(float)</p>
@@ -4691,16 +4687,16 @@ by their string name.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.MultiBlock.center">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">center</span></span><em class="property"><span class="pre">:</span> <span class="pre">Any</span></em><a class="headerlink" href="#pyvista.MultiBlock.center" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the center of the bounding box.</p>
+<dd><p>境界ボックスの中心を返します．</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.MultiBlock.clean">
 <span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">empty</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.MultiBlock.clean" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Remove any null blocks in place.</p>
+<dd><p>Nullブロックをすべて削除します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
-<dd class="field-odd"><p><strong>empty</strong> (<em>bool</em>) -- Remove any meshes that are empty as well (have zero points).</p>
+<dd class="field-odd"><p><strong>empty</strong> (<em>bool</em>) -- (0点である)空のメッシュもすべて削除します．</p>
 </dd>
 </dl>
 </dd></dl>
@@ -4708,13 +4704,13 @@ by their string name.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.MultiBlock.copy">
 <span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.MultiBlock.copy" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return a copy of the object.</p>
+<dd><p>オブジェクトのコピーを返します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
-<dd class="field-odd"><p><strong>deep</strong> (<em>bool</em><em>, </em><em>optional</em>) -- When True makes a full copy of the object.</p>
+<dd class="field-odd"><p><strong>deep</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Trueに設定すると，オブジェクトの完全なコピーが作成されます．</p>
 </dd>
 <dt class="field-even">戻り値</dt>
-<dd class="field-even"><p><strong>newobject</strong> -- Deep or shallow copy of the input.</p>
+<dd class="field-even"><p><strong>newobject</strong> -- 入力の深いまたは浅いコピーです．</p>
 </dd>
 <dt class="field-odd">戻り値の型</dt>
 <dd class="field-odd"><p>same as input</p>
@@ -4725,122 +4721,98 @@ by their string name.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.MultiBlock.copy_meta_from">
 <span class="sig-name descname"><span class="pre">copy_meta_from</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ido</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.MultiBlock.copy_meta_from" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Copy pyvista meta data onto this object from another object.</p>
+<dd><p>別のオブジェクトからこのオブジェクトにpyvistaメタデータをコピーします．</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.MultiBlock.get">
 <span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pyvista.MultiBlock" title="pyvista.core.composite.MultiBlock"><span class="pre">pyvista.core.composite.MultiBlock</span></a><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#pyvista.MultiBlock.get" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Get a block by its index or name.</p>
-<p>If the name is non-unique then returns the first occurrence.</p>
+<dd><p>インデックスまたは名前でブロックを取得します．</p>
+<p>名前が一意でない場合は，最初のoccurrenceが返されます．</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.MultiBlock.get_block_name">
 <span class="sig-name descname"><span class="pre">get_block_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#pyvista.MultiBlock.get_block_name" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the string name of the block at the given index.</p>
+<dd><p>指定したインデックスのブロック名を文字列で返します．</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.MultiBlock.get_data_range">
 <span class="sig-name descname"><span class="pre">get_data_range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#pyvista.MultiBlock.get_data_range" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Get the min/max of an array given its name across all blocks.</p>
+<dd><p>すべてのブロックにわたる配列名の最小値/最大値を取得します．</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.MultiBlock.get_index_by_name">
 <span class="sig-name descname"><span class="pre">get_index_by_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span><a class="headerlink" href="#pyvista.MultiBlock.get_index_by_name" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Find the index number by block name.</p>
+<dd><p>ブロック名でインデックス番号を検索します．</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.MultiBlock.keys">
 <span class="sig-name descname"><span class="pre">keys</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#pyvista.MultiBlock.keys" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Get all the block names in the dataset.</p>
+<dd><p>データセット内のすべてのブロック名を取得します．</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.MultiBlock.length">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">length</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><a class="headerlink" href="#pyvista.MultiBlock.length" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the length of the diagonal of the bounding box.</p>
+<dd><p>境界ボックスの対角線の長さを返します．</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.MultiBlock.n_blocks">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">n_blocks</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#pyvista.MultiBlock.n_blocks" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the total number of blocks set.</p>
+<dd><p>ブロックセットの総数を返します．</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.MultiBlock.next">
 <span class="sig-name descname"><span class="pre">next</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pyvista.MultiBlock" title="pyvista.core.composite.MultiBlock"><span class="pre">pyvista.core.composite.MultiBlock</span></a><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#pyvista.MultiBlock.next" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Get the next block from the iterator.</p>
+<dd><p>イテレータから次のブロックを取得します．</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.MultiBlock.plot">
 <span class="sig-name descname"><span class="pre">plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">off_screen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">full_screen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">screenshot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interactive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cpos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_bounds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">notebook</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">background</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_img</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eye_dome_lighting</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">volume</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parallel_projection</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_ipyvtk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jupyter_backend</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_viewer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jupyter_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theme</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.MultiBlock.plot" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Plot a vtk or numpy object.</p>
+<dd><p>vtkまたはnumpyオブジェクトをプロットします．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>item</strong> (<em>vtk</em><em> or </em><em>numpy object</em>) -- VTK object or <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array to be plotted.</p></li>
-<li><p><strong>off_screen</strong> (<em>bool</em>) -- Plots off screen when <code class="docutils literal notranslate"><span class="pre">True</span></code>.  Helpful for saving screenshots
-without a window popping up.</p></li>
-<li><p><strong>full_screen</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Opens window in full screen.  When enabled, ignores
-<code class="docutils literal notranslate"><span class="pre">window_size</span></code>.  Default <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
-<li><p><strong>screenshot</strong> (<em>str</em><em> or </em><em>bool</em><em>, </em><em>optional</em>) -- <p>Saves screenshot to file when enabled.  See:
-<code class="docutils literal notranslate"><span class="pre">help(pyvista.Plotter.screenshot)</span></code>.  Default <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
-<p>When <code class="docutils literal notranslate"><span class="pre">True</span></code>, takes screenshot and returns <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array of
-image.</p>
-</p></li>
+<li><p><strong>item</strong> (<em>vtk</em><em> or </em><em>numpy object</em>) -- プロットするVTKオブジェクトまたは <code class="docutils literal notranslate"><span class="pre">numpy</span></code> 配列．</p></li>
+<li><p><strong>off_screen</strong> (<em>bool</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，画面からプロットします．ウィンドウをポップアップしないでスクリーンショットを保存するのに便利です．</p></li>
+<li><p><strong>full_screen</strong> (<em>bool</em><em>, </em><em>optional</em>) -- ウィンドウを全画面で開きます．有効な場合， <code class="docutils literal notranslate"><span class="pre">window_size</span></code> を無視します．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です．</p></li>
+<li><p><strong>screenshot</strong> (<em>str</em><em> or </em><em>bool</em><em>, </em><em>optional</em>) -- 有効にすると，スクリーンショットをファイルに保存します．関連項目: <code class="docutils literal notranslate"><span class="pre">help(pyvista.Plotter.screenshot)</span></code> ．デフォルトの <code class="docutils literal notranslate"><span class="pre">False</span></code> ． <code class="docutils literal notranslate"><span class="pre">True</span></code> はスクリーンショットを取得し，イメージの <code class="docutils literal notranslate"><span class="pre">numpy</span></code> 配列を戻します．</p></li>
 <li><p><strong>window_size</strong> (<em>list</em><em>, </em><em>optional</em>) -- Window size in pixels.  Defaults to <code class="docutils literal notranslate"><span class="pre">[1024,</span> <span class="pre">768]</span></code></p></li>
-<li><p><strong>show_bounds</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Shows mesh bounds when <code class="docutils literal notranslate"><span class="pre">True</span></code>.  Default <code class="docutils literal notranslate"><span class="pre">False</span></code>. Alias
-<code class="docutils literal notranslate"><span class="pre">show_grid</span></code> also accepted.</p></li>
-<li><p><strong>notebook</strong> (<em>bool</em><em>, </em><em>optional</em>) -- When <code class="docutils literal notranslate"><span class="pre">True</span></code>, the resulting plot is placed inline a jupyter
-notebook.  Assumes a jupyter console is active.</p></li>
-<li><p><strong>show_axes</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Shows a vtk axes widget.  If <code class="docutils literal notranslate"><span class="pre">None</span></code>, enabled according to
-<code class="docutils literal notranslate"><span class="pre">pyvista.global_theme.axes.show</span></code>.</p></li>
-<li><p><strong>text</strong> (<em>str</em><em>, </em><em>optional</em>) -- Adds text at the bottom of the plot.</p></li>
-<li><p><strong>volume</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Use the <code class="docutils literal notranslate"><span class="pre">add_volume</span></code> method for volume rendering.</p></li>
-<li><p><strong>use_ipyvtk</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Deprecated.  Instead, set the backend either globally with
-<code class="docutils literal notranslate"><span class="pre">pyvista.set_jupyter_backend('ipyvtklink')</span></code> or with
-<code class="docutils literal notranslate"><span class="pre">backend='ipyvtklink'</span></code>.</p></li>
-<li><p><strong>jupyter_backend</strong> (<em>str</em><em>, </em><em>optional</em>) -- <p>Jupyter notebook plotting backend to use.  One of the
-following:</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">'none'</span></code> : Do not display in the notebook.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'static'</span></code> : Display a static figure.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'ipygany'</span></code> : Show a <code class="docutils literal notranslate"><span class="pre">ipygany</span></code> widget</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'panel'</span></code> : Show a <code class="docutils literal notranslate"><span class="pre">panel</span></code> widget.</p></li>
-</ul>
-<p>This can also be set globally with
-<code class="docutils literal notranslate"><span class="pre">pyvista.set_jupyter_backend</span></code></p>
-</p></li>
-<li><p><strong>jupyter_kwargs</strong> (<em>dict</em><em>, </em><em>optional</em>) -- Keyword arguments for the Jupyter notebook plotting backend.</p></li>
-<li><p><strong>theme</strong> (<a class="reference internal" href="../../user-guide/themes.html#pyvista.themes.DefaultTheme" title="pyvista.themes.DefaultTheme"><em>pyvista.themes.DefaultTheme</em></a><em>, </em><em>optional</em>) -- Plot-specific theme.</p></li>
-<li><p><strong>**kwargs</strong> (<em>optional keyword arguments</em>) -- See <code class="docutils literal notranslate"><span class="pre">help(pyvista.Plotter.add_mesh)</span></code> for additional options.</p></li>
+<li><p><strong>show_bounds</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，メッシュ境界を表示します．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です．エイリアス <code class="docutils literal notranslate"><span class="pre">show_grid</span></code> も使用できます．</p></li>
+<li><p><strong>notebook</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，作成されたプロットはjupyterノートブック内に配置されます．jupyterコンソールがアクティブであると仮定します．</p></li>
+<li><p><strong>show_axes</strong> (<em>bool</em><em>, </em><em>optional</em>) -- vtk軸ウィジェットを表示します． <code class="docutils literal notranslate"><span class="pre">None</span></code> の場合， <code class="docutils literal notranslate"><span class="pre">pyvista.global_theme.axes.show</span></code> に従って有効になります．</p></li>
+<li><p><strong>text</strong> (<em>str</em><em>, </em><em>optional</em>) -- プロットの下部にテキストを追加します．</p></li>
+<li><p><strong>volume</strong> (<em>bool</em><em>, </em><em>optional</em>) -- ボリュームレンダリングには <code class="docutils literal notranslate"><span class="pre">add_volume</span></code> 方式を使用してください．</p></li>
+<li><p><strong>use_ipyvtk</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 非推奨．代わりに， <code class="docutils literal notranslate"><span class="pre">pyvista.set_jupyter_backend('ipyvtklink')</span></code> または <code class="docutils literal notranslate"><span class="pre">backend='ipyvtklink'</span></code> を使用してグローバルにバックエンドを設定します．</p></li>
+<li><p><strong>jupyter_backend</strong> (<em>str</em><em>, </em><em>optional</em>) -- Jupyterノートブックが使用するバックエンドをプロットしています．次のいずれか: * <code class="docutils literal notranslate"><span class="pre">'none'</span></code> : ノートブックに表示されません． * <code class="docutils literal notranslate"><span class="pre">'static'</span></code> : 静止画を表示します． * <code class="docutils literal notranslate"><span class="pre">'panel'</span></code> :  <code class="docutils literal notranslate"><span class="pre">ipygany</span></code> ウィジェットを表示します * <code class="docutils literal notranslate"><span class="pre">'panel'</span></code> :  <code class="docutils literal notranslate"><span class="pre">panel</span></code> ウィジェットを表示します．これは <code class="docutils literal notranslate"><span class="pre">pyvista.set_jupyter_backend</span></code> でグローバルに設定することもできます．</p></li>
+<li><p><strong>jupyter_kwargs</strong> (<em>dict</em><em>, </em><em>optional</em>) -- Jupyterノートブックプロットバックエンドのキーワード引数．</p></li>
+<li><p><strong>theme</strong> (<a class="reference internal" href="../../user-guide/themes.html#pyvista.themes.DefaultTheme" title="pyvista.themes.DefaultTheme"><em>pyvista.themes.DefaultTheme</em></a><em>, </em><em>optional</em>) -- Plot固有のテーマ．</p></li>
+<li><p><strong>**kwargs</strong> (<em>optional keyword arguments</em>) -- その他のオプションについては， <code class="docutils literal notranslate"><span class="pre">ヘルプ</span> <span class="pre">(pyvista.Plotter.add_mesh)</span></code>  を参照してください．</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><p><ul>
-<li><p><strong>cpos</strong> (<em>list</em>) -- List of camera position, focal point, and view up.</p></li>
-<li><p><strong>img</strong> (<em>numpy.ndarray</em>) -- Array containing pixel RGB and optionally alpha values.
-Sized:</p>
+<li><p><strong>cpos</strong> (<em>list</em>) -- カメラ位置，焦点，およびビューアップのリスト．</p></li>
+<li><p><strong>img</strong> (<em>numpy.ndarray</em>) -- ピクセルRGBと，オプションでアルファ値を含む配列．サイズ:</p>
 <ul class="simple">
-<li><p>[Window height x Window width x 3] if the theme sets
-<code class="docutils literal notranslate"><span class="pre">transparent_background=False</span></code>.</p></li>
-<li><p>[Window height x Window width x 4] if the theme sets
-<code class="docutils literal notranslate"><span class="pre">transparent_background=True</span></code>.</p></li>
+<li><p>[ウィンドウの高さxウィンドウの幅x3]テーマが <code class="docutils literal notranslate"><span class="pre">transparent_background=False</span></code> に設定されている場合．</p></li>
+<li><p>[ウィンドウの高さxウィンドウの幅x4]テーマが <code class="docutils literal notranslate"><span class="pre">transparent_background=True</span></code> に設定されている場合．</p></li>
 </ul>
-<p>Returned only when <code class="docutils literal notranslate"><span class="pre">screenshot=True</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">screenshot=True</span></code> の場合にのみ返されます．</p>
 </li>
 </ul>
 </p>
 </dd>
 </dl>
 <p class="rubric">サンプル</p>
-<p>Plot a simple sphere while showing its edges.</p>
+<p>単純な球のエッジを表示しながらプロットします．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  
@@ -4851,22 +4823,22 @@ Sized:</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.MultiBlock.pop">
 <span class="sig-name descname"><span class="pre">pop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pyvista.MultiBlock" title="pyvista.core.composite.MultiBlock"><span class="pre">pyvista.core.composite.MultiBlock</span></a><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#pyvista.MultiBlock.pop" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Pop off a block at the specified index.</p>
+<dd><p>指定したインデックスのブロックをポップします．</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.MultiBlock.set_block_name">
 <span class="sig-name descname"><span class="pre">set_block_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.MultiBlock.set_block_name" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Set a block's string name at the specified index.</p>
+<dd><p>指定したインデックスにブロックの文字列名を設定します．</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.MultiBlock.volume">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">volume</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><a class="headerlink" href="#pyvista.MultiBlock.volume" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the total volume of all meshes in this dataset.</p>
+<dd><p>このデータセット内のすべてのメッシュの合計ボリュームを返します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値</dt>
-<dd class="field-odd"><p><strong>volume</strong> -- Total volume of the mesh.</p>
+<dd class="field-odd"><p><strong>volume</strong> -- メッシュの合計ボリュームです．</p>
 </dd>
 <dt class="field-even">戻り値の型</dt>
 <dd class="field-even"><p>float</p>
@@ -4877,8 +4849,8 @@ Sized:</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.MultiBlock.wrap_nested">
 <span class="sig-name descname"><span class="pre">wrap_nested</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.MultiBlock.wrap_nested" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Ensure that all nested data structures are wrapped as PyVista datasets.</p>
-<p>This is performed in place.</p>
+<dd><p>ネストされたすべてのデータ構造がPyVistaデータセットとしてラップされていることを確認します．</p>
+<p>これはその場で実行されます．</p>
 </dd></dl>
 
 </dd></dl>

@@ -192,37 +192,37 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../../objects.html">
-     Objects
+     オブジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../dataset.html">
-     Datasets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../points.html">
-     Point Data
+     ポイントデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../point-grids.html">
-     Point-Based Grids
+     ポイントベースグリッド
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../grids.html">
-     Gridded Data
+     グリッドデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../composite.html">
-     Composite Datasets
+     複合データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../../filters.html">
-     Filters
+     フィルタ
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -1699,12 +1699,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../camera.html">
-     Cameras
+     カメラ
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../lights.html">
-     Lights
+     ライト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -1883,14 +1883,14 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../helpers.html">
-     Helpers
+     ヘルパー
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../plotting/index.html">
-   Plotting
+   プロット
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -1900,12 +1900,12 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/plotting.html">
-     Plotting
+     プロット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/qt_plotting.html">
-     Pyvista and PyQt
+     PyvistaとPyQt
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -4093,7 +4093,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../plotting/conv_func.html">
-     Convenience Functions
+     便利な機能
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
     <label for="toctree-checkbox-15">
@@ -4137,7 +4137,7 @@
   <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/geometric.html">
-     Geometric Objects
+     ジオメトリオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -4234,7 +4234,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/parametric.html">
-     Parametric Objects
+     パラメトリックオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
     <label for="toctree-checkbox-18">
@@ -4346,7 +4346,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/utilities.html">
-     General Utilities
+     一般ユーティリティ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
     <label for="toctree-checkbox-19">
@@ -4539,50 +4539,37 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.PolyDataFilters.decimate">
 <span class="sig-prename descclassname"><span class="pre">PolyDataFilters.</span></span><span class="sig-name descname"><span class="pre">decimate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_reduction</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">volume_preservation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute_error</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scalars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vectors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tcoords</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tensors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scalars_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vectors_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normals_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tcoords_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tensors_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inplace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyDataFilters.decimate" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Reduce the number of triangles in a triangular mesh using vtkQuadricDecimation.</p>
+<dd><p>vtkQuadricDecimationを使用して，三角形メッシュ内の三角形の数を減らします．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>mesh</strong> (<em>vtk.PolyData</em>) -- Mesh to decimate</p></li>
-<li><p><strong>target_reduction</strong> (<em>float</em>) -- Fraction of the original mesh to remove.
-TargetReduction is set to 0.9, this filter will try to reduce
-the data set to 10% of its original size and will remove 90%
-of the input triangles.</p></li>
-<li><p><strong>volume_preservation</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Decide whether to activate volume preservation which greatly reduces
-errors in triangle normal direction. If off, volume preservation is
-disabled and if AttributeErrorMetric is active, these errors can be
-large. Defaults to False.</p></li>
-<li><p><strong>attribute_error</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Decide whether to include data attributes in the error metric. If
-off, then only geometric error is used to control the decimation.
-Defaults to False.</p></li>
-<li><p><strong>scalars</strong> (<em>bool</em><em>, </em><em>optional</em>) -- If attribute errors are to be included in the metric (i.e.,
-AttributeErrorMetric is on), then the following flags control which
-attributes are to be included in the error calculation. Defaults to
-True.</p></li>
-<li><p><strong>vectors</strong> (<em>bool</em><em>, </em><em>optional</em>) -- See scalars parameter. Defaults to True.</p></li>
-<li><p><strong>normals</strong> (<em>bool</em><em>, </em><em>optional</em>) -- See scalars parameter. Defaults to False.</p></li>
-<li><p><strong>tcoords</strong> (<em>bool</em><em>, </em><em>optional</em>) -- See scalars parameter. Defaults to True.</p></li>
-<li><p><strong>tensors</strong> (<em>bool</em><em>, </em><em>optional</em>) -- See scalars parameter. Defaults to True.</p></li>
-<li><p><strong>scalars_weight</strong> (<em>float</em><em>, </em><em>optional</em>) -- The scaling weight contribution of the scalar attribute. These
-values are used to weight the contribution of the attributes towards
-the error metric. Defaults to 0.1.</p></li>
-<li><p><strong>vectors_weight</strong> (<em>float</em><em>, </em><em>optional</em>) -- See scalars weight parameter. Defaults to 0.1.</p></li>
-<li><p><strong>normals_weight</strong> (<em>float</em><em>, </em><em>optional</em>) -- See scalars weight parameter. Defaults to 0.1.</p></li>
-<li><p><strong>tcoords_weight</strong> (<em>float</em><em>, </em><em>optional</em>) -- See scalars weight parameter. Defaults to 0.1.</p></li>
-<li><p><strong>tensors_weight</strong> (<em>float</em><em>, </em><em>optional</em>) -- See scalars weight parameter. Defaults to 0.1.</p></li>
-<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Updates mesh in-place.</p></li>
-<li><p><strong>progress_bar</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Display a progress bar to indicate progress.</p></li>
+<li><p><strong>mesh</strong> (<em>vtk.PolyData</em>) -- メッシュを間引</p></li>
+<li><p><strong>target_reduction</strong> (<em>float</em>) -- 削除する元のメッシュの割合．TargetReductionが 0.9 に設定されています．このフィルタはデータセットを元のサイズの10%に縮小しようとし，入力三角形の90%を削除します．</p></li>
+<li><p><strong>volume_preservation</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 三角形の法線方向のエラーを大幅に減らすボリューム保存を有効にするかどうかを決定します．オフの場合，ボリュームの保存は無効になり，AttributeErrorMetricがアクティブな場合，これらのエラーは大きくなる可能性があります．デフォルトはFalseです．</p></li>
+<li><p><strong>attribute_error</strong> (<em>bool</em><em>, </em><em>optional</em>) -- エラー指標にデータ属性を含めるかどうかを決定します．オフの場合，ジオメトリエラーのみを使用して間引きを制御します．デフォルトはFalseです．</p></li>
+<li><p><strong>scalars</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 属性エラーをメトリックに含める場合(つまり，AttributeErrorMetricがオンになっています)，次のフラグはエラー計算に含める属性を制御します．デフォルトはTrueです．</p></li>
+<li><p><strong>vectors</strong> (<em>bool</em><em>, </em><em>optional</em>) -- スカラーパラメータを参照してください．デフォルトはTrueです．</p></li>
+<li><p><strong>normals</strong> (<em>bool</em><em>, </em><em>optional</em>) -- スカラーパラメータを参照してください．デフォルトはFalseです．</p></li>
+<li><p><strong>tcoords</strong> (<em>bool</em><em>, </em><em>optional</em>) -- スカラーパラメータを参照してください．デフォルトはTrueです．</p></li>
+<li><p><strong>tensors</strong> (<em>bool</em><em>, </em><em>optional</em>) -- スカラーパラメータを参照してください．デフォルトはTrueです．</p></li>
+<li><p><strong>scalars_weight</strong> (<em>float</em><em>, </em><em>optional</em>) -- スカラーアトリビュートのスケーリングウェイトの影響．これらの値は，エラーメトリックに対する属性の影響を重み付けするために使用されます．デフォルトは0.1です．</p></li>
+<li><p><strong>vectors_weight</strong> (<em>float</em><em>, </em><em>optional</em>) -- スカラーのウェイトパラメータを参照してください．デフォルトは0.1です．</p></li>
+<li><p><strong>normals_weight</strong> (<em>float</em><em>, </em><em>optional</em>) -- スカラーのウェイトパラメータを参照してください．デフォルトは0.1です．</p></li>
+<li><p><strong>tcoords_weight</strong> (<em>float</em><em>, </em><em>optional</em>) -- スカラーのウェイトパラメータを参照してください．デフォルトは0.1です．</p></li>
+<li><p><strong>tensors_weight</strong> (<em>float</em><em>, </em><em>optional</em>) -- スカラーのウェイトパラメータを参照してください．デフォルトは0.1です．</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) -- インプレイスメッシュを更新します．</p></li>
+<li><p><strong>progress_bar</strong> (<em>bool</em><em>, </em><em>optional</em>) -- 進行状況を示す進行状況バーを表示します．</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
-<dd class="field-even"><p><strong>outmesh</strong> -- Decimated mesh.</p>
+<dd class="field-even"><p><strong>outmesh</strong> -- 間引済みメッシュ．</p>
 </dd>
 <dt class="field-odd">戻り値の型</dt>
 <dd class="field-odd"><p><a class="reference internal" href="../../points.html#pyvista.PolyData" title="pyvista.PolyData">pyvista.PolyData</a></p>
 </dd>
 </dl>
 <p class="rubric">サンプル</p>
-<p>Decimate a sphere while preserving its volume</p>
+<p>ボリュームを維持しながら球体を縮小します</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">(</span><span class="n">theta_resolution</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">phi_resolution</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">sphere</span><span class="o">.</span><span class="n">n_cells</span><span class="p">)</span>
@@ -4593,9 +4580,7 @@ the error metric. Defaults to 0.1.</p></li>
 </pre></div>
 </div>
 <p class="rubric">メモ</p>
-<p>If you encounter a segmentation fault or other error, consider
-using <code class="docutils literal notranslate"><span class="pre">clean</span></code> to remove any invalid cells before using this
-filter.</p>
+<p>セグメンテーションフォルトまたはその他のエラーが発生した場合は，このフィルタを使用する前に <code class="docutils literal notranslate"><span class="pre">clean</span></code> を使用して無効なセルを削除することを検討してください．</p>
 </dd></dl>
 
 </div>

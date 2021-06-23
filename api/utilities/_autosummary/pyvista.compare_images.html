@@ -192,37 +192,37 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../core/objects.html">
-     Objects
+     オブジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../core/dataset.html">
-     Datasets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../core/points.html">
-     Point Data
+     ポイントデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../core/point-grids.html">
-     Point-Based Grids
+     ポイントベースグリッド
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../core/grids.html">
-     Gridded Data
+     グリッドデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../core/composite.html">
-     Composite Datasets
+     複合データセット
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../core/filters.html">
-     Filters
+     フィルタ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -1699,12 +1699,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../core/camera.html">
-     Cameras
+     カメラ
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../core/lights.html">
-     Lights
+     ライト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -1883,14 +1883,14 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../core/helpers.html">
-     Helpers
+     ヘルパー
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../plotting/index.html">
-   Plotting
+   プロット
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -1900,12 +1900,12 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../plotting/plotting.html">
-     Plotting
+     プロット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../plotting/qt_plotting.html">
-     Pyvista and PyQt
+     PyvistaとPyQt
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -4093,7 +4093,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../plotting/conv_func.html">
-     Convenience Functions
+     便利な機能
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
     <label for="toctree-checkbox-15">
@@ -4137,7 +4137,7 @@
   <ul class="current">
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../geometric.html">
-     Geometric Objects
+     ジオメトリオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -4234,7 +4234,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../parametric.html">
-     Parametric Objects
+     パラメトリックオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
     <label for="toctree-checkbox-18">
@@ -4346,7 +4346,7 @@
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../utilities.html">
-     General Utilities
+     一般ユーティリティ
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
     <label for="toctree-checkbox-19">
@@ -4539,34 +4539,25 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="pyvista.compare_images">
 <span class="sig-prename descclassname"><span class="pre">pyvista.</span></span><span class="sig-name descname"><span class="pre">compare_images</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">im1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">im2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_vtk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.compare_images" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Compare two different images of the same size.</p>
+<dd><p>同じサイズの2つの異なるイメージを比較します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>im1</strong> (<em>filename</em><em>, </em><em>np.ndarray</em><em>, </em><em>vtkRenderWindow</em><em>, or </em><em>vtkImageData</em>) -- Render window, numpy array representing the output of a render
-window, or <code class="docutils literal notranslate"><span class="pre">vtkImageData</span></code></p></li>
-<li><p><strong>im2</strong> (<em>filename</em><em>, </em><em>np.ndarray</em><em>, </em><em>vtkRenderWindow</em><em>, or </em><em>vtkImageData</em>) -- Render window, numpy array representing the output of a render
-window, or <code class="docutils literal notranslate"><span class="pre">vtkImageData</span></code></p></li>
-<li><p><strong>threshold</strong> (<em>int</em>) -- Threshold tolerance for pixel differences.  This should be
-greater than 0, otherwise it will always return an error, even
-on identical images.</p></li>
-<li><p><strong>use_vtk</strong> (<em>bool</em>) -- When disabled, computes the mean pixel error over the entire
-image using numpy.  The difference between pixel is calculated
-for each RGB channel, summed, and then divided by the number
-of pixels.  This is faster than using
-<code class="docutils literal notranslate"><span class="pre">vtk.vtkImageDifference</span></code> but potentially less accurate.</p></li>
+<li><p><strong>im1</strong> (<em>filename</em><em>, </em><em>np.ndarray</em><em>, </em><em>vtkRenderWindow</em><em>, or </em><em>vtkImageData</em>) -- Renderウィンドウ，Renderウィンドウの出力を表すnumpy配列，または <code class="docutils literal notranslate"><span class="pre">vtkImageData</span></code></p></li>
+<li><p><strong>im2</strong> (<em>filename</em><em>, </em><em>np.ndarray</em><em>, </em><em>vtkRenderWindow</em><em>, or </em><em>vtkImageData</em>) -- Renderウィンドウ，Renderウィンドウの出力を表すnumpy配列，または <code class="docutils literal notranslate"><span class="pre">vtkImageData</span></code></p></li>
+<li><p><strong>threshold</strong> (<em>int</em>) -- ピクセル差のしきい値許容値．これは0より大きくなければなりません．そうでなければ，同じ画像であっても常にエラーを返します．</p></li>
+<li><p><strong>use_vtk</strong> (<em>bool</em>) -- 無効にすると，numpyを使用してイメージ全体の平均ピクセルエラーを計算します．ピクセル間の差は，RGBチャンネルごとに計算され，合計されてからピクセル数で除算されます．これは <code class="docutils literal notranslate"><span class="pre">vtk.vtkImageDifference</span></code> を使用するよりも速いですが，潜在的に精度が低くなります．</p></li>
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
-<dd class="field-even"><p><strong>error</strong> -- Total error between the images if using <code class="docutils literal notranslate"><span class="pre">use_vtk=True</span></code>, and
-the mean pixel error when <code class="docutils literal notranslate"><span class="pre">use_vtk=False</span></code>.</p>
+<dd class="field-even"><p><strong>error</strong>-- <code class="docutils literal notranslate"><span class="pre">use_vtk=True</span></code> を使用している場合のイメージ間の合計エラー，および <code class="docutils literal notranslate"><span class="pre">use_vtk=False</span></code> を使用している場合の平均ピクセルエラーです．</p>
 </dd>
 <dt class="field-odd">戻り値の型</dt>
 <dd class="field-odd"><p>float</p>
 </dd>
 </dl>
 <p class="rubric">サンプル</p>
-<p>Compare two active plotters.</p>
+<p>2つのアクティブなプロッタを比較します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pl1</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">pl1</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">(),</span> <span class="n">smooth_shading</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -4575,7 +4566,7 @@ the mean pixel error when <code class="docutils literal notranslate"><span class
 <span class="gp">&gt;&gt;&gt; </span><span class="n">error</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">compare_images</span><span class="p">(</span><span class="n">pl1</span><span class="p">,</span> <span class="n">pl2</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Compare images from file.</p>
+<p>ファイルのイメージを比較します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">img1</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;img1.png&#39;</span><span class="p">)</span>  
 <span class="gp">&gt;&gt;&gt; </span><span class="n">img2</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;img2.png&#39;</span><span class="p">)</span>  

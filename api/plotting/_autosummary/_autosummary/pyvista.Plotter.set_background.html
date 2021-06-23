@@ -192,37 +192,37 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/objects.html">
-     Objects
+     オブジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/dataset.html">
-     Datasets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/points.html">
-     Point Data
+     ポイントデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/point-grids.html">
-     Point-Based Grids
+     ポイントベースグリッド
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/grids.html">
-     Gridded Data
+     グリッドデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/composite.html">
-     Composite Datasets
+     複合データセット
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../core/filters.html">
-     Filters
+     フィルタ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -1699,12 +1699,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/camera.html">
-     Cameras
+     カメラ
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../core/lights.html">
-     Lights
+     ライト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -1883,14 +1883,14 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/helpers.html">
-     Helpers
+     ヘルパー
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../../index.html">
-   Plotting
+   プロット
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -1900,12 +1900,12 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../../plotting.html">
-     Plotting
+     プロット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../qt_plotting.html">
-     Pyvista and PyQt
+     PyvistaとPyQt
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -4093,7 +4093,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../conv_func.html">
-     Convenience Functions
+     便利な機能
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
     <label for="toctree-checkbox-15">
@@ -4137,7 +4137,7 @@
   <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/geometric.html">
-     Geometric Objects
+     ジオメトリオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -4234,7 +4234,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/parametric.html">
-     Parametric Objects
+     パラメトリックオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
     <label for="toctree-checkbox-18">
@@ -4346,7 +4346,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/utilities.html">
-     General Utilities
+     一般ユーティリティ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
     <label for="toctree-checkbox-19">
@@ -4539,28 +4539,18 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.Plotter.set_background">
 <span class="sig-prename descclassname"><span class="pre">Plotter.</span></span><span class="sig-name descname"><span class="pre">set_background</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">color</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">top</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">all_renderers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Plotter.set_background" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Set the background color.</p>
+<dd><p>背景色を設定します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>color</strong> (<em>string</em><em> or </em><em>3 item list</em><em>, </em><em>optional</em><em>, </em><em>defaults to white</em>) -- <p>Either a string, rgb list, or hex color string.  For example:</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">color='white'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">color='w'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">color=[1,</span> <span class="pre">1,</span> <span class="pre">1]</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">color='#FFFFFF'</span></code></p></li>
-</ul>
-</p></li>
-<li><p><strong>top</strong> (<em>string</em><em> or </em><em>3 item list</em><em>, </em><em>optional</em><em>, </em><em>defaults to None</em>) -- If given, this will enable a gradient background where the
-<code class="docutils literal notranslate"><span class="pre">color</span></code> argument is at the bottom and the color given in <code class="docutils literal notranslate"><span class="pre">top</span></code>
-will be the color at the top of the renderer.</p></li>
-<li><p><strong>all_renderers</strong> (<em>bool</em>) -- If True, applies to all renderers in subplots. If False, then
-only applies to the active renderer.</p></li>
+<li><p><strong>color</strong> (<em>string</em><em> or </em><em>3 item list</em><em>, </em><em>optional</em><em>, </em><em>defaults to white</em>) -- 文字列，RGBリスト，または16進カラー文字列．例: * <code class="docutils literal notranslate"><span class="pre">color='white'</span></code> * <code class="docutils literal notranslate"><span class="pre">color='w'</span></code> * <code class="docutils literal notranslate"><span class="pre">color=[1,</span> <span class="pre">1,</span> <span class="pre">1]</span></code> * <code class="docutils literal notranslate"><span class="pre">color='#FFFFFF'</span></code></p></li>
+<li><p><strong>top</strong> (<em>string</em><em> or </em><em>3 item list</em><em>, </em><em>optional</em><em>, </em><em>defaults to None</em>) -- これを指定すると， <code class="docutils literal notranslate"><span class="pre">color</span></code> 引数が一番下にあり， <code class="docutils literal notranslate"><span class="pre">top</span></code> で指定されたカラーがレンダラの一番上のカラーであるグラディエントバックグラウンドが有効になります．</p></li>
+<li><p><strong>all_renderers</strong> (<em>bool</em>) -- Trueの場合，サブプロットのすべてのレンダラーに適用されます．Falseの場合，アクティブなレンダラーにのみ適用されます．</p></li>
 </ul>
 </dd>
 </dl>
 <p class="rubric">サンプル</p>
-<p>Set the background color to black.</p>
+<p>背景色を黒に設定します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plotter</span><span class="o">.</span><span class="n">set_background</span><span class="p">(</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
@@ -4568,7 +4558,7 @@ only applies to the active renderer.</p></li>
 <span class="go">(0.0, 0.0, 0.0)</span>
 </pre></div>
 </div>
-<p>Set the background color to white.</p>
+<p>背景色を白に設定します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plotter</span><span class="o">.</span><span class="n">set_background</span><span class="p">(</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>

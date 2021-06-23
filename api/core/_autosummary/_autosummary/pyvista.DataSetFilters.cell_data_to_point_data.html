@@ -192,37 +192,37 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../../objects.html">
-     Objects
+     オブジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../dataset.html">
-     Datasets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../points.html">
-     Point Data
+     ポイントデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../point-grids.html">
-     Point-Based Grids
+     ポイントベースグリッド
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../grids.html">
-     Gridded Data
+     グリッドデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../composite.html">
-     Composite Datasets
+     複合データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../../filters.html">
-     Filters
+     フィルタ
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -1699,12 +1699,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../camera.html">
-     Cameras
+     カメラ
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../lights.html">
-     Lights
+     ライト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -1883,14 +1883,14 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../helpers.html">
-     Helpers
+     ヘルパー
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../plotting/index.html">
-   Plotting
+   プロット
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -1900,12 +1900,12 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/plotting.html">
-     Plotting
+     プロット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../plotting/qt_plotting.html">
-     Pyvista and PyQt
+     PyvistaとPyQt
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -4093,7 +4093,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../plotting/conv_func.html">
-     Convenience Functions
+     便利な機能
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
     <label for="toctree-checkbox-15">
@@ -4137,7 +4137,7 @@
   <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/geometric.html">
-     Geometric Objects
+     ジオメトリオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -4234,7 +4234,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/parametric.html">
-     Parametric Objects
+     パラメトリックオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
     <label for="toctree-checkbox-18">
@@ -4346,7 +4346,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/utilities.html">
-     General Utilities
+     一般ユーティリティ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
     <label for="toctree-checkbox-19">
@@ -4539,16 +4539,13 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataSetFilters.cell_data_to_point_data">
 <span class="sig-prename descclassname"><span class="pre">DataSetFilters.</span></span><span class="sig-name descname"><span class="pre">cell_data_to_point_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pass_cell_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.cell_data_to_point_data" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Transform cell data into point data.</p>
-<p>Point data are specified per node and cell data specified within cells.
-Optionally, the input point data can be passed through to the output.</p>
-<p>The method of transformation is based on averaging the data values of
-all cells using a particular point. Optionally, the input cell data can
-be passed through to the output as well.</p>
-<p>See also: <a class="reference internal" href="pyvista.DataSetFilters.point_data_to_cell_data.html#pyvista.DataSetFilters.point_data_to_cell_data" title="pyvista.DataSetFilters.point_data_to_cell_data"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.point_data_to_cell_data()</span></code></a></p>
+<dd><p>データから日付へのセル変換</p>
+<p>ポイントデータは，セル内で指定されたノードおよびセルデータごとに指定されます．オプションで，入力点データを出力に渡すことができます．</p>
+<p>変換の方法は，特定の点を使用してすべてのセルのデータ値を平均化することに基づいています．オプションとして，入力セルのデータを出力に渡すこともできます．</p>
+<p>関連項目: <a class="reference internal" href="pyvista.DataSetFilters.point_data_to_cell_data.html#pyvista.DataSetFilters.point_data_to_cell_data" title="pyvista.DataSetFilters.point_data_to_cell_data"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.point_data_to_cell_data()</span></code></a></p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
-<dd class="field-odd"><p><strong>pass_cell_data</strong> (<em>bool</em>) -- If enabled, pass the input cell data through to the output</p>
+<dd class="field-odd"><p><strong>pass_cell_data</strong> (<em>bool</em>) -- 使用可能にすると，入力セルのデータを出力に渡します．</p>
 </dd>
 </dl>
 </dd></dl>

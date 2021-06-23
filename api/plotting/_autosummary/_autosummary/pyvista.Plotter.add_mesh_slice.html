@@ -192,37 +192,37 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/objects.html">
-     Objects
+     オブジェクト
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/dataset.html">
-     Datasets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/points.html">
-     Point Data
+     ポイントデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/point-grids.html">
-     Point-Based Grids
+     ポイントベースグリッド
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/grids.html">
-     Gridded Data
+     グリッドデータ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/composite.html">
-     Composite Datasets
+     複合データセット
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../core/filters.html">
-     Filters
+     フィルタ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -1699,12 +1699,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/camera.html">
-     Cameras
+     カメラ
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../core/lights.html">
-     Lights
+     ライト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -1883,14 +1883,14 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../core/helpers.html">
-     Helpers
+     ヘルパー
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../../index.html">
-   Plotting
+   プロット
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -1900,12 +1900,12 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../../plotting.html">
-     Plotting
+     プロット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../qt_plotting.html">
-     Pyvista and PyQt
+     PyvistaとPyQt
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -4093,7 +4093,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../conv_func.html">
-     Convenience Functions
+     便利な機能
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
     <label for="toctree-checkbox-15">
@@ -4137,7 +4137,7 @@
   <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/geometric.html">
-     Geometric Objects
+     ジオメトリオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
     <label for="toctree-checkbox-17">
@@ -4234,7 +4234,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/parametric.html">
-     Parametric Objects
+     パラメトリックオブジェクト
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
     <label for="toctree-checkbox-18">
@@ -4346,7 +4346,7 @@
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../utilities/utilities.html">
-     General Utilities
+     一般ユーティリティ
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
     <label for="toctree-checkbox-19">
@@ -4539,40 +4539,27 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.Plotter.add_mesh_slice">
 <span class="sig-prename descclassname"><span class="pre">Plotter.</span></span><span class="sig-name descname"><span class="pre">add_mesh_slice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'x'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">generate_triangles</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">widget_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assign_to_axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tubing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">origin_translation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outline_translation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">implicit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normal_rotation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Plotter.add_mesh_slice" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Slice a mesh using a plane widget.</p>
-<p>Add a mesh to the scene with a plane widget that is used to slice
-the mesh interactively.</p>
-<p>The sliced mesh is saved to the <code class="docutils literal notranslate"><span class="pre">.plane_sliced_meshes</span></code> attribute on
-the plotter.</p>
+<dd><p>プレインウィジェットを使用してメッシュをスライスします．</p>
+<p>メッシュをインタラクティブにスライスするために使用する平面ウィジェットを使用して，メッシュをシーンに追加します．</p>
+<p>スライスされたメッシュは，プロッタの <code class="docutils literal notranslate"><span class="pre">.plane_sliced_meshes</span></code> 属性に保存されます．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>mesh</strong> (<a class="reference internal" href="../../../core/dataset.html#pyvista.DataSet" title="pyvista.DataSet"><em>pyvista.DataSet</em></a>) -- The input dataset to add to the scene and slice</p></li>
-<li><p><strong>normal</strong> (<em>str</em><em> or </em><em>tuple</em><em>(</em><em>float</em><em>)</em>) -- The starting normal vector of the plane</p></li>
-<li><p><strong>generate_triangles</strong> (<em>bool</em><em>, </em><em>optional</em>) -- If this is enabled (<code class="docutils literal notranslate"><span class="pre">False</span></code> by default), the output will be
-triangles otherwise, the output will be the intersection polygons.</p></li>
-<li><p><strong>widget_color</strong> (<em>string</em><em> or </em><em>3 item list</em><em>, </em><em>optional</em><em>, </em><em>defaults to white</em>) -- Either a string, rgb list, or hex color string.</p></li>
-<li><p><strong>assign_to_axis</strong> (<em>str</em><em> or </em><em>int</em>) -- Assign the normal of the plane to be parallel with a given axis:
-options are (0, 'x'), (1, 'y'), or (2, 'z').</p></li>
-<li><p><strong>tubing</strong> (<em>bool</em>) -- When using an implicit plane wiget, this controls whether or not
-tubing is shown around the plane's boundaries.</p></li>
-<li><p><strong>outline_translation</strong> (<em>bool</em>) -- If <code class="docutils literal notranslate"><span class="pre">False</span></code>, the plane widget cannot be translated and is strictly
-placed at the given bounds. Only valid when using an implicit
-plane.</p></li>
-<li><p><strong>origin_translation</strong> (<em>bool</em>) -- If <code class="docutils literal notranslate"><span class="pre">False</span></code>, the plane widget cannot be translated by its origin
-and is strictly placed at the given origin. Only valid when using
-an implicit plane.</p></li>
-<li><p><strong>implicit</strong> (<em>bool</em>) -- When <code class="docutils literal notranslate"><span class="pre">True</span></code>, a <code class="docutils literal notranslate"><span class="pre">vtkImplicitPlaneWidget</span></code> is used and when
-<code class="docutils literal notranslate"><span class="pre">False</span></code>, a <code class="docutils literal notranslate"><span class="pre">vtkPlaneWidget</span></code> is used.</p></li>
-<li><p><strong>normal_rotation</strong> (<em>bool</em>) -- Set the opacity of the normal vector arrow to 0 such that it is
-effectively disabled. This prevents the user from rotating the
-normal. This is forced to <code class="docutils literal notranslate"><span class="pre">False</span></code> when <code class="docutils literal notranslate"><span class="pre">assign_to_axis</span></code> is set.</p></li>
+<li><p><strong>mesh</strong> (<a class="reference internal" href="../../../core/dataset.html#pyvista.DataSet" title="pyvista.DataSet"><em>pyvista.DataSet</em></a>) -- シーンおよびスライスに追加する入力データセット</p></li>
+<li><p><strong>normal</strong> (<em>str</em><em> or </em><em>tuple</em><em>(</em><em>float</em><em>)</em>) -- 平面の開始法線ベクトル</p></li>
+<li><p><strong>generate_triangles</strong> (<em>bool</em><em>, </em><em>optional</em>) -- これが有効な場合(デフォルトで <code class="docutils literal notranslate"><span class="pre">False</span></code> )，出力は三角形になります．それ以外の場合，出力は交差ポリゴンになります．</p></li>
+<li><p><strong>widget_color</strong> (<em>string</em><em> or </em><em>3 item list</em><em>, </em><em>optional</em><em>, </em><em>defaults to white</em>) -- 文字列，RGBリスト，または16進カラー文字列．</p></li>
+<li><p><strong>assign_to_axis</strong> (<em>str</em><em> or </em><em>int</em>) -- 平面の法線を指定された軸と平行になるように割り当てます．オプションは (0, 'x') ， (1, 'y') ，または (2, 'z') です．</p></li>
+<li><p><strong>tubing</strong> (<em>bool</em>) -- インプリシット平面ウィジェットを使用する場合，平面の境界の周囲にチューブを表示するかどうかを制御します．</p></li>
+<li><p><strong>outline_translation</strong> (<em>bool</em>) -- <code class="docutils literal notranslate"><span class="pre">False</span></code> の場合，プレーンウィジェットは移動できず，指定された境界に厳密に配置される．インプリシット平面を使用する場合にのみ有効です．</p></li>
+<li><p><strong>origin_translation</strong> (<em>bool</em>) -- <code class="docutils literal notranslate"><span class="pre">False</span></code> の場合，プレーンウィジェットは原点によって移動できず，指定された原点に厳密に配置される．インプリシット平面を使用する場合にのみ有効です．</p></li>
+<li><p><strong>implicit</strong> (<em>bool</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合は <code class="docutils literal notranslate"><span class="pre">vtkImplicitPlaneWidget</span></code> が使用され， <code class="docutils literal notranslate"><span class="pre">False</span></code> の場合は <code class="docutils literal notranslate"><span class="pre">vtkPlaneWidget</span></code> が使用されます．</p></li>
+<li><p><strong>normal_rotation</strong> (<em>bool</em>) -- 法線ベクトル矢印の不透明度を0に設定して，実質的に無効にします．これにより，ユーザは法線を回転できなくなります． <code class="docutils literal notranslate"><span class="pre">assign_to_axis</span></code> が設定されている場合，これは強制的に <code class="docutils literal notranslate"><span class="pre">False</span></code> になります．</p></li>
 </ul>
 </dd>
 </dl>
 <dl class="simple">
-<dt>kwargs<span class="classifier">dict</span></dt><dd><p>All additional keyword arguments are passed to <code class="docutils literal notranslate"><span class="pre">add_mesh</span></code> to
-control how the mesh is displayed.</p>
+<dt>kwargs<span class="classifier">dict</span></dt><dd><p>追加のキーワード引数はすべて <code class="docutils literal notranslate"><span class="pre">add_mesh</span></code> に渡され，メッシュの表示方法を制御します．</p>
 </dd>
 </dl>
 </dd></dl>
