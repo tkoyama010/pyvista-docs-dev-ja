@@ -21,6 +21,34 @@ https://github.com/pyvista and we would be glad to add it!
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="An open-source application for vasculature dataset analysis and visualization">
+
+.. only:: html
+
+    .. figure:: ../images/external-examples/vessel_vio.png
+       :target: https://jacobbumgarner.github.io/VesselVio/
+
+       VesselVio
+
+
+
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   VesselVio <https://jacobbumgarner.github.io/VesselVio/>
+
+
+
+
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="Atmospheric convection plays a key role in the climate of tidally-locked terrestrial exoplanets: insights from high-resolution simulations">
 
 .. only:: html

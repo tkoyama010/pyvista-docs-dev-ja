@@ -114,6 +114,9 @@
       Renderer.reset_camera
       
       
+      Renderer.reset_camera_clipping_range
+      
+      
       Renderer.set_background
       
       

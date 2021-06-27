@@ -3818,6 +3818,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="../../../plotting/_autosummary/_autosummary/pyvista.Renderer.reset_camera_clipping_range.html">
+       pyvista.Renderer.reset_camera_clipping_range
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="../../../plotting/_autosummary/_autosummary/pyvista.Renderer.set_background.html">
        pyvista.Renderer.set_background
       </a>
@@ -4553,16 +4558,17 @@
 </ul>
 </dd>
 <dt class="field-even">戻り値</dt>
-<dd class="field-even"><p><strong>mesh</strong> -- <code class="docutils literal notranslate"><span class="pre">pyvista</span></code> polydata オブジェクト.</p>
+<dd class="field-even"><p>Subdivided mesh.</p>
 </dd>
 <dt class="field-odd">戻り値の型</dt>
-<dd class="field-odd"><p>Polydata object</p>
+<dd class="field-odd"><p><a class="reference internal" href="../../points.html#pyvista.PolyData" title="pyvista.PolyData">pyvista.PolyData</a></p>
 </dd>
 </dl>
 <p class="rubric">サンプル</p>
+<p>Subdivide the sphere mesh.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">examples</span><span class="o">.</span><span class="n">planefile</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">submesh</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">subdivide</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;loop&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
