@@ -4544,18 +4544,11 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.Plotter.enable_trackball_actor_style">
 <span class="sig-prename descclassname"><span class="pre">Plotter.</span></span><span class="sig-name descname"><span class="pre">enable_trackball_actor_style</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Plotter.enable_trackball_actor_style" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Set the interactive style to Trackball Actor.</p>
-<p>This allows to rotate actors around the scene. The controls
-are similar to the default Trackball Camera style, but
-movements transform specific objects under the mouse cursor.</p>
-<p>For a 3-button mouse, the left button is for rotation, the
-right button for zooming, the middle button for panning, and
-ctrl + left button for spinning objects around the axis
-connecting the camera with the their center.  Alternatively,
-shift + left button pans.</p>
+<dd><p>インタラクティブスタイルをトラックボールアクターに設定します．</p>
+<p>これにより、シーンの周囲でアクターを回転させることができます。これらのコントロールは既定値のトラックボールカメラスタイルに似ていますが、マウスカーソルの下の特定のオブジェクトが動きによって変換されます。</p>
+<p>3ボタンマウスの場合，左ボタンは回転用，右ボタンはズーム用，中央ボタンはパン用，Ctrl+左ボタンはカメラと中心を結ぶ軸の周りにあるスピンオブジェクト用です．または、Shift+左ボタンで画面移動します。</p>
 <p class="rubric">サンプル</p>
-<p>Create a simple scene with a plotter that has the Trackball
-Actor interactive style:</p>
+<p>トラックボールアクターインタラクティブスタイルのプロッタを使用して、簡単なシーンを作成します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">pv</span><span class="o">.</span><span class="n">Cube</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)))</span>

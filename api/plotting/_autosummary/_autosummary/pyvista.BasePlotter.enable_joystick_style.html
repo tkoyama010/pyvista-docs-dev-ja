@@ -4544,16 +4544,11 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.BasePlotter.enable_joystick_style">
 <span class="sig-prename descclassname"><span class="pre">BasePlotter.</span></span><span class="sig-name descname"><span class="pre">enable_joystick_style</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.enable_joystick_style" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Set the interactive style to Joystick Camera.</p>
-<p>It allows the user to move (rotate, pan, etc.) the camera, the
-point of view for the scene.  The position of the mouse
-relative to the center of the scene determines the speed at
-which the camera moves, so the camera continues to move even
-if the mouse if not moving.</p>
+<dd><p>インタラクティブスタイルをジョイスティックカメラに設定します．</p>
+<p>シーンの視点であるカメラを移動(回転，パンなど)することができます．シーンの中心に対するマウスの位置によってカメラの移動速度が決まり，マウスが移動していなくてもカメラは移動し続けます．</p>
 <p>3ボタンマウスの場合，左ボタンは回転用，右ボタンはズーム用，中央ボタンはパン用，Ctrl+左ボタンはスピン用です．(マウスボタンの数が少ない場合，Ctrl+Shift+左ボタンはズーム用で，Shift+左ボタンはパン用です．)</p>
 <p class="rubric">サンプル</p>
-<p>Create a simple scene with a plotter that has the Joystick
-Camera interactive style:</p>
+<p>ジョイスティクカメラインタラクティブスタイルのプロッタを使用して、簡単なシーンを作成します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">pv</span><span class="o">.</span><span class="n">Cube</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)))</span>

@@ -506,7 +506,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="subdivide.html">
-   セルのサブディバイド
+   セルの細分化
   </a>
  </li>
 </ul>
@@ -921,32 +921,32 @@
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#define-camera-and-axes">
-   Define camera and axes
+   カメラと軸を定義する
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#original-mesh">
-   Original Mesh
+   元のメッシュ
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rotation-about-the-x-axis">
-   Rotation about the x axis
+   x軸を中心の回転．
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rotation-about-the-y-axis">
-   Rotation about the y axis
+   y軸を中心の回転．
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rotation-about-the-z-axis">
-   Rotation about the z axis
+   z軸を中心の回転．
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rotation-about-a-custom-vector">
-   Rotation about a custom vector
+   ベクトル中心の回転．
   </a>
  </li>
 </ul>
@@ -977,17 +977,15 @@ to download the full example code</p>
 </div>
 <div class="sphx-glr-example-title section" id="rotations">
 <span id="sphx-glr-examples-01-filter-rotate-py"></span><h1>回転<a class="headerlink" href="#rotations" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Rotations of a mesh about its axes. In this model, the x axis is from the left
-to right; the y axis is from bottom to top; and the z axis emerges from the
-image. The camera location is the same in all four images.</p>
+<p>軸を中心としたメッシュの回転。このモデルでは、x軸は左から右になります; y軸は下から上に、z軸はイメージから出てきます。カメラの位置は4つのイメージすべてで同じです。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 6</span>
 <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 </pre></div>
 </div>
 <div class="section" id="define-camera-and-axes">
-<h2>Define camera and axes<a class="headerlink" href="#define-camera-and-axes" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Define camera and axes. Setting axes origin to <code class="docutils literal notranslate"><span class="pre">(3.0,</span> <span class="pre">3.0,</span> <span class="pre">3.0)</span></code>.</p>
+<h2>カメラと軸を定義する<a class="headerlink" href="#define-camera-and-axes" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>カメラと軸を定義します。軸原点を <code class="docutils literal notranslate"><span class="pre">(3.0,</span> <span class="pre">3.0,</span> <span class="pre">3.0)</span></code> に設定します。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_cow</span><span class="p">()</span>
 <span class="n">mesh</span><span class="o">.</span><span class="n">points</span> <span class="o">/=</span> <span class="mf">1.5</span>  <span class="c1"># scale the mesh</span>
 
@@ -1001,8 +999,8 @@ image. The camera location is the same in all four images.</p>
 </div>
 </div>
 <div class="section" id="original-mesh">
-<h2>Original Mesh<a class="headerlink" href="#original-mesh" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Plot original mesh. Add axes actor to Plotter.</p>
+<h2>元のメッシュ<a class="headerlink" href="#original-mesh" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>元のメッシュをプロットします。プロッタに軸アクターを追加します。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 
 <span class="n">p</span><span class="o">.</span><span class="n">add_text</span><span class="p">(</span><span class="s2">&quot;Mesh&quot;</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">24</span><span class="p">)</span>
@@ -1022,9 +1020,8 @@ image. The camera location is the same in all four images.</p>
 </div>
 </div>
 <div class="section" id="rotation-about-the-x-axis">
-<h2>Rotation about the x axis<a class="headerlink" href="#rotation-about-the-x-axis" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Plot the mesh rotated about the x axis every 60 degrees.
-Add the axes actor to the Plotter and set the axes origin to the point of rotation.</p>
+<h2>x軸を中心の回転．<a class="headerlink" href="#rotation-about-the-x-axis" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>x軸を中心に60度ごとに回転したメッシュをプロットします。プロッタに軸アクターを追加し、軸の原点を回転点に設定します。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 
 <span class="n">p</span><span class="o">.</span><span class="n">add_text</span><span class="p">(</span><span class="s2">&quot;X-Axis Rotation&quot;</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">24</span><span class="p">)</span>
@@ -1048,9 +1045,8 @@ Add the axes actor to the Plotter and set the axes origin to the point of rotati
 </div>
 </div>
 <div class="section" id="rotation-about-the-y-axis">
-<h2>Rotation about the y axis<a class="headerlink" href="#rotation-about-the-y-axis" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Plot the mesh rotated about the y axis every 60 degrees.
-Add the axes actor to the Plotter and set the axes origin to the point of rotation.</p>
+<h2>y軸を中心の回転．<a class="headerlink" href="#rotation-about-the-y-axis" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>y軸を中心に60度ごとに回転したメッシュをプロットします。プロッタに軸アクターを追加し、軸の原点を回転点に設定します。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 
 <span class="n">p</span><span class="o">.</span><span class="n">add_text</span><span class="p">(</span><span class="s2">&quot;Y-Axis Rotation&quot;</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">24</span><span class="p">)</span>
@@ -1074,9 +1070,8 @@ Add the axes actor to the Plotter and set the axes origin to the point of rotati
 </div>
 </div>
 <div class="section" id="rotation-about-the-z-axis">
-<h2>Rotation about the z axis<a class="headerlink" href="#rotation-about-the-z-axis" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Plot the mesh rotated about the z axis every 60 degrees.
-Add axes actor to the Plotter and set the axes origin to the point of rotation.</p>
+<h2>z軸を中心の回転．<a class="headerlink" href="#rotation-about-the-z-axis" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>z軸を中心に60度ごとに回転したメッシュをプロットします。プロッタに軸アクターを追加し、軸の原点を回転点に設定します。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 
 <span class="n">p</span><span class="o">.</span><span class="n">add_text</span><span class="p">(</span><span class="s2">&quot;Z-Axis Rotation&quot;</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">24</span><span class="p">)</span>
@@ -1100,9 +1095,8 @@ Add axes actor to the Plotter and set the axes origin to the point of rotation.<
 </div>
 </div>
 <div class="section" id="rotation-about-a-custom-vector">
-<h2>Rotation about a custom vector<a class="headerlink" href="#rotation-about-a-custom-vector" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Plot the mesh rotated about a custom vector every 60 degrees.
-Add the axes actor to the Plotter and set axes origin to the point of rotation.</p>
+<h2>ベクトル中心の回転．<a class="headerlink" href="#rotation-about-a-custom-vector" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>カスタムベクトルを中心に60度ごとに回転させたメッシュをプロットします。プロッタに軸アクターを追加し、軸の原点を回転点に設定します。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 
 <span class="n">p</span><span class="o">.</span><span class="n">add_text</span><span class="p">(</span><span class="s2">&quot;Custom Vector Rotation&quot;</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">24</span><span class="p">)</span>

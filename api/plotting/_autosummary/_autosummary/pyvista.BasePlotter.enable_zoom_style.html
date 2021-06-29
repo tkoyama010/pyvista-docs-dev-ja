@@ -4544,11 +4544,10 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.BasePlotter.enable_zoom_style">
 <span class="sig-prename descclassname"><span class="pre">BasePlotter.</span></span><span class="sig-name descname"><span class="pre">enable_zoom_style</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.enable_zoom_style" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Set the interactive style to Rubber Band Zoom.</p>
+<dd><p>インタラクティブスタイルをラバーバンドズームに設定します．</p>
 <p>このインタラクタスタイルを使用すると，左マウスボタンを使用してレンダウィンドウに長方形を描画できます．マウスボタンを放すと，現在のカメラは描画された長方形の短い方の辺から決定された量だけズームします．</p>
 <p class="rubric">サンプル</p>
-<p>Create a simple scene with a plotter that has the Rubber Band
-Zoom interactive style:</p>
+<p>ラバーバンドズームインタラクティブスタイルのプロッタを使用して、簡単なシーンを作成します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">pv</span><span class="o">.</span><span class="n">Cube</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)))</span>

@@ -4550,16 +4550,15 @@
 <li><p>左マウスボタンでウィンドウレベルのイベントをトリガ</p></li>
 <li><p>Ctrl +左マウスボタンでビュー平面の法線を中心にカメラを回転</p></li>
 <li><p>Shift + 左マウスボタンでカメラをパン</p></li>
-<li><p>CTRL SHIFT Left Mouse dollies (a positional zoom) the camera</p></li>
+<li><p>Ctrl Shift+左マウスボタンでカメラをドリー(位置ズーム)します</p></li>
 <li><p>マウスの中ボタンでカメラをパン</p></li>
-<li><p>Right mouse button dollies the camera</p></li>
+<li><p>マウスの右ボタンでカメラをドリーします．</p></li>
 <li><p>SHIFT Right Mouseトリガピックイベント</p></li>
 </ul>
 </dd>
 </dl>
 <p class="rubric">サンプル</p>
-<p>Create a simple scene with a plotter that has the Image
-interactive style:</p>
+<p>イメージインタラクティブスタイルのプロッタを使用して、簡単なシーンを作成します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">pv</span><span class="o">.</span><span class="n">Cube</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)))</span>

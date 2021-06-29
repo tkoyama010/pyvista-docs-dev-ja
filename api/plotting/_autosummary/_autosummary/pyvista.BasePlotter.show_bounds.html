@@ -4566,22 +4566,10 @@
 <li><p><strong>xlabel</strong> (<em>string</em><em>, </em><em>optional</em>) -- X軸のタイトル．既定 <code class="docutils literal notranslate"><span class="pre">&quot;X</span> <span class="pre">Axis&quot;</span></code></p></li>
 <li><p><strong>ylabel</strong> (<em>string</em><em>, </em><em>optional</em>) -- Y軸のタイトル．既定 <code class="docutils literal notranslate"><span class="pre">&quot;Y</span> <span class="pre">Axis&quot;</span></code></p></li>
 <li><p><strong>zlabel</strong> (<em>string</em><em>, </em><em>optional</em>) -- Z軸のタイトル．既定 <code class="docutils literal notranslate"><span class="pre">&quot;Z</span> <span class="pre">Axis&quot;</span></code></p></li>
-<li><p><strong>use_2d</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <p>This can be enabled for smoother plotting.</p>
-<div class="admonition warning">
-<p class="admonition-title">警告</p>
-<p>A bug with vtk 6.3 in Windows seems to cause this
-function to crash.</p>
-</div>
-</p></li>
+<li><p><strong>use_2d</strong> (<em>bool</em><em>, </em><em>optional</em>) -- これを有効にすると、プロットがスムーズになります。 .. warning:: Windowsのvtk 6.3のバグにより，この関数がクラッシュするようです．</p></li>
 <li><p><strong>grid</strong> (<em>bool</em><em> or </em><em>str</em><em>, </em><em>optional</em>) -- 軸アクターの背面 (<code class="docutils literal notranslate"><span class="pre">True</span></code>, <code class="docutils literal notranslate"><span class="pre">'back'</span></code>, または <code class="docutils literal notranslate"><span class="pre">'backface'</span></code>) または正面 (<code class="docutils literal notranslate"><span class="pre">'front'</span></code>, <code class="docutils literal notranslate"><span class="pre">'frontface'</span></code>) にグリッドラインを追加します．</p></li>
-<li><p><strong>location</strong> (<em>str</em><em>, </em><em>optional</em>) -- Set how the axes are drawn: either static (<code class="docutils literal notranslate"><span class="pre">'all'</span></code>),
-closest triad (<code class="docutils literal notranslate"><span class="pre">front</span></code>), furthest triad (<code class="docutils literal notranslate"><span class="pre">'back'</span></code>),
-static closest to the origin (<code class="docutils literal notranslate"><span class="pre">'origin'</span></code>), or outer
-edges (<code class="docutils literal notranslate"><span class="pre">'outer'</span></code>) in relation to the camera
-position. Options include: <code class="docutils literal notranslate"><span class="pre">'all',</span> <span class="pre">'front',</span> <span class="pre">'back',</span>
-<span class="pre">'origin',</span> <span class="pre">'outer'</span></code>.</p></li>
-<li><p><strong>ticks</strong> (<em>str</em><em>, </em><em>optional</em>) -- Set how the ticks are drawn on the axes grid. Options include:
-<code class="docutils literal notranslate"><span class="pre">'inside',</span> <span class="pre">'outside',</span> <span class="pre">'both'</span></code>.</p></li>
+<li><p><strong>location</strong> (<em>str</em><em>, </em><em>optional</em>) -- 軸の描画方法を，スタティック (<code class="docutils literal notranslate"><span class="pre">'all'</span></code>) ，最近接トライアド (<code class="docutils literal notranslate"><span class="pre">front</span></code>) ，最近接トライアド (<code class="docutils literal notranslate"><span class="pre">'back'</span></code>) ，原点 (<code class="docutils literal notranslate"><span class="pre">'origin'</span></code>) に最近接スタティック，またはカメラ位置に関連する外縁 (<code class="docutils literal notranslate"><span class="pre">'outer'</span></code>) のいずれかに設定します．次のオプションがあります: <code class="docutils literal notranslate"><span class="pre">'all',</span> <span class="pre">'front',</span> <span class="pre">'back',</span> <span class="pre">'origin',</span> <span class="pre">'outer'</span></code> ．</p></li>
+<li><p><strong>ticks</strong> (<em>str</em><em>, </em><em>optional</em>) -- 軸グリッドにティックを描画する方法を設定します．以下のオプションがあります: <code class="docutils literal notranslate"><span class="pre">'inside',</span> <span class="pre">'outside',</span> <span class="pre">'both'</span></code> ．</p></li>
 <li><p><strong>all_edges</strong> (<em>bool</em><em>, </em><em>optional</em>) -- プロットの境界にラベルなしのチェックボックスを追加します．境界のすべてのエッジを保持しながら，外側のグリッドをプロットする場合に便利です．</p></li>
 <li><p><strong>corner_factor</strong> (<em>float</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">all_edges``</span></code> の場合，これはデフォルトボックスを描画する各軸に沿った係数です．フルボックスを表示するには，0.5を指定します．</p></li>
 <li><p><strong>padding</strong> (<em>float</em><em>, </em><em>optional</em>) -- 軸の注釈からシーン内のデータセットを保護するための，各軸方向に沿ったオプションのパーセントパディング．デフォルトは0 (パディングなし)</p></li>

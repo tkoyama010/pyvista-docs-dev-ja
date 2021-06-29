@@ -4546,8 +4546,7 @@
 <span class="sig-prename descclassname"><span class="pre">Plotter.</span></span><span class="sig-name descname"><span class="pre">enable_geodesic_picking</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_message</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">18</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'pink'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line_width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.025</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Plotter.enable_geodesic_picking" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>測地パスでの選択を有効にします．</p>
 <p>これは， <code class="docutils literal notranslate"><span class="pre">enable_point_picking</span></code> が選択されたポイントを追跡し，それらのポイントを使用して測地線を作成するための便利な方法です．</p>
-<p>The geodesic path is saved to the <code class="docutils literal notranslate"><span class="pre">.picked_geodesic</span></code>
-attribute of this plotter.</p>
+<p>測地パスは，このプロッタの <code class="docutils literal notranslate"><span class="pre">.picked_geodesic</span></code> 属性に保存されます．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4559,21 +4558,8 @@ attribute of this plotter.</p>
 <li><p><strong>color</strong> (<em>str</em><em>, </em><em>optional</em>) -- 選択したメッシュの色が表示されます．</p></li>
 <li><p><strong>line_width</strong> (<em>float</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">show_path</span></code> が <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合のパス表現の厚さ．デフォルトは5です．</p></li>
 <li><p><strong>tolerance</strong> (<em>float</em>) -- ピック操作を実行するための公差を指定してください．許容値は，レンダリングウィンドウサイズの割合で指定します．レンダリングウィンドウのサイズは対角で測定されます．</p></li>
-<li><p><strong>keep_order</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, the created geodesic path is a single ordered
-and cleaned line from the first point to the last.</p>
-<div class="admonition note">
-<p class="admonition-title">注釈</p>
-<p>In older versions there were apparent discontinuities
-in the resulting path due to the behavior of the
-underlying VTK filter which corresponds to
-<code class="docutils literal notranslate"><span class="pre">keep_order=False</span></code>.</p>
-</div>
-<div class="versionadded">
-<p><span class="versionmodified added">バージョン 0.32.0 で追加.</span></p>
-</div>
-</p></li>
-<li><p><strong>kwargs</strong> (<em>optional</em>) -- All remaining keyword arguments are used to control how
-the picked path is interactively displayed.</p></li>
+<li><p><strong>keep_order</strong> (<em>bool</em><em>, </em><em>optional</em>) -- <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合、作成された形状沿いのパスは、最初の点から最後の点まで、順序付けられて消去された1本の直線になります。 .. note:: 古いバージョンでは、 <code class="docutils literal notranslate"><span class="pre">keep_order=False</span></code> に対応する基礎となるVTKフィルタの動作のために、結果のパスに明らかな不連続性がありました。 .. versionadded:: 0.32.0</p></li>
+<li><p><strong>kwargs</strong> (<em>optional</em>) -- 残りのキーワード引数はすべて，選択したパスを対話的に表示する方法を制御するために使用されます．</p></li>
 </ul>
 </dd>
 </dl>

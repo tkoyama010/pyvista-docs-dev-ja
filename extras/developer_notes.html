@@ -385,8 +385,7 @@ python -m pip install -e .
 <li><p>ライセンスが利用できない，または商用使用が禁止されているデータセットは含めないでください．それらはすべてのプロジェクトのライセンスを損なう可能性がある．</p></li>
 <li><p>ライセンスが利用できないコードスニペット(stackoverflowなど)や商用使用が禁止されているコードスニペットは使用しないでください．それらはすべてのプロジェクトのライセンスを損なう可能性があります．</p></li>
 </ol>
-<p>Please also take a look at our <a class="reference external" href="https://github.com/pyvista/pyvista/blob/main/CODE_OF_CONDUCT.md">Code of
-Conduct</a></p>
+<p>私達の <a class="reference external" href="https://github.com/pyvista/pyvista/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a> もご覧ください．</p>
 </div>
 <div class="section" id="contributing-to-pyvista-through-github">
 <h3>GitHub経由でpyvistaにコントリビュートする<a class="headerlink" href="#contributing-to-pyvista-through-github" title="このヘッドラインへのパーマリンク">¶</a></h3>
@@ -481,10 +480,7 @@ make html -b linkcheck
 </div>
 <div class="section" id="creating-a-new-pull-request">
 <h4>新規Pull Requestの作成<a class="headerlink" href="#creating-a-new-pull-request" title="このヘッドラインへのパーマリンク">¶</a></h4>
-<p>Once you have tested your branch locally, create a pull request on
-<a class="reference external" href="https://github.com/pyvista/pyvista">pyvista GitHub</a> while merging to
-main. This will automatically run continuous integration (CI) testing
-and verify your changes will work across several platforms.</p>
+<p>ブランチをローカルでテストしたら，mainにマージする際に <a class="reference external" href="https://github.com/pyvista/pyvista">pyvista GitHub</a> でpull requestを作成します．これにより，継続的インテグレーション (CI) テストが自動的に実行され，変更が複数のプラットフォームで機能することが検証されます．</p>
 <p>他のユーザーがコードをレビューできるようにするには，pyvistaコントリビュータグループの他の少なくとも1人のメンバーが，コードがコミュニティの標準を満たしているかどうかをレビューして検証する必要があります．承認後，書き込み権限があればブランチをマージすることができます．書き込みパーミッションがない場合，レビュー担当者または書き込みパーミッションを持つ別のユーザーがブランチをマージし，PRブランチを削除します．</p>
 <p>ブランチをカレントリリースブランチ(下記参照)とマージする必要があるかもしれませんので， <code class="docutils literal notranslate"><span class="pre">fix/</span></code> ブランチであれば削除しないでください．</p>
 </div>
@@ -494,61 +490,27 @@ and verify your changes will work across several platforms.</p>
 <p>このプロジェクトは，安定性を犠牲にすることなく機能の迅速な開発を可能にする分岐モデルを持っており， <a class="reference external" href="https://trunkbaseddevelopment.com/">Trunk Based Development</a>  アプローチに厳密に従います．</p>
 <p>ブランチモデルの主な特徴は次のとおりです．</p>
 <ul class="simple">
-<li><p>The <code class="docutils literal notranslate"><span class="pre">main</span></code> branch is the main development branch. All features,
-patches, and other branches should be merged here. While all PRs
-should pass all applicable CI checks, this branch may be functionally
-unstable as changes might have introduced unintended side-effects or
-bugs that were not caught through unit testing.</p></li>
-<li><p>There will be one or many <code class="docutils literal notranslate"><span class="pre">release/</span></code> branches based on minor
-releases (for example <code class="docutils literal notranslate"><span class="pre">release/0.24</span></code>) which contain a stable
-version of the code base that is also reflected on PyPI/. Hotfixes
-from <code class="docutils literal notranslate"><span class="pre">fix/</span></code> branches should be merged both to main and to these
-branches. When necessary to create a new patch release these release
-branches will have their <code class="docutils literal notranslate"><span class="pre">__version__.py</span></code> updated and be tagged
-with a patched semantic version (e.g. <code class="docutils literal notranslate"><span class="pre">0.24.1</span></code>). This triggers CI
-to push to PyPI, and allow us to rapidly push hotfixes for past
-versions of <code class="docutils literal notranslate"><span class="pre">pyvista</span></code> without having to worry about untested
-features.</p></li>
-<li><p>When a minor release candidate is ready, a new <code class="docutils literal notranslate"><span class="pre">release</span></code> branch
-will be created from <code class="docutils literal notranslate"><span class="pre">main</span></code> with the next incremented minor
-version (e.g. <code class="docutils literal notranslate"><span class="pre">release/0.25</span></code>), which will be thoroughly tested.
-When deemed stable, the release branch will be tagged with the
-version (<code class="docutils literal notranslate"><span class="pre">0.25.0</span></code> in this case), and if necessary merged with
-main if any changes were pushed to it. Feature development then
-continues on <code class="docutils literal notranslate"><span class="pre">main</span></code> and any hotfixes will now be merged with this
-release. Older release branches should not be deleted so they can be
-patched as needed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">main</span></code> ブランチは主要な開発ブランチです．すべてのフィーチャー，パッチ，およびその他のブランチをここにマージする必要があります．すべてのPRは適用可能なCIチェックをすべてパスする必要がありますが，変更によって予期しない副作用や単体テストで検出されなかったバグが発生する可能性があるため，このブランチは機能的に不安定になる可能性があります．</p></li>
+<li><p>マイナーリリース(例えば <code class="docutils literal notranslate"><span class="pre">release/0.24</span></code> )をベースにした <code class="docutils literal notranslate"><span class="pre">release/</span></code> ブランチがいくつかあり，そこには PyPI/ にも反映される安定版のコードベースが含まれています． <code class="docutils literal notranslate"><span class="pre">fix/</span></code> ブランチの修正パッチは，mainブランチとこれらのブランチの両方にマージする必要があります．新しいパッチリリースを作成する必要がある場合，これらのリリースブランチの <code class="docutils literal notranslate"><span class="pre">__version__.py</span></code> が更新され，パッチされたセマンティックバージョン(例えば <code class="docutils literal notranslate"><span class="pre">0.24.1</span></code> )がタグ付けされます．これによりCIはPyPIにプッシュし，テストされていない機能を気にすることなく，過去のバージョンの <code class="docutils literal notranslate"><span class="pre">pyvista</span></code> のホットフィックスを迅速にプッシュすることができます．</p></li>
+<li><p>マイナーリリース候補が準備できたら， <code class="docutils literal notranslate"><span class="pre">main</span></code> から新しい <code class="docutils literal notranslate"><span class="pre">release</span></code> ブランチが作成され，次のマイナーバージョン(例えば <code class="docutils literal notranslate"><span class="pre">release/0.25</span></code> )がインクリメントされ，徹底的にテストされます．安定していると判断された場合，リリースブランチにはバージョン(この場合の <code class="docutils literal notranslate"><span class="pre">0.25.0</span></code> )のタグが付けられ，必要に応じて変更が加えられた場合にはmainとマージされます． <code class="docutils literal notranslate"><span class="pre">main</span></code> で機能開発が継続され，ホットフィックスはこのリリースに統合されます．必要に応じてパッチを適用できるように，古いリリースブランチは削除しないでください．</p></li>
 </ul>
 <div class="section" id="minor-release-steps">
 <h4>マイナーリリース手順<a class="headerlink" href="#minor-release-steps" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <p>マイナーリリースは， <code class="docutils literal notranslate"><span class="pre">pyvista</span></code> の機能と安定性を改善する機能およびバグリリースです．マイナーリリースが作成される前に，次のことが発生します．</p>
 <ol class="arabic">
-<li><p>Create a new branch from the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch with name
-<code class="docutils literal notranslate"><span class="pre">release/MAJOR.MINOR</span></code> (e.g. <code class="docutils literal notranslate"><span class="pre">release/0.25</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">main</span></code> ブランチから <code class="docutils literal notranslate"><span class="pre">release/MAJOR.MINOR</span></code> という名前の新しいブランチを作成します(例: <code class="docutils literal notranslate"><span class="pre">release/0.25</span></code> )．</p></li>
 <li><p><a class="reference external" href="#testing">Testing Section</a> で概説されているように，すべてのテストをローカルで実行し，すべてが合格していることを確認します．</p></li>
 <li><p>リンクチェックを使用してマニュアルをローカルでテストおよびビルドし，リンクが古くなっていないことを確認します．必ず <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">clean</span></code> を実行して，結果がキャッシュされないようにしてください． <code class="docutils literal notranslate"><span class="pre">bash</span> <span class="pre">cd</span> <span class="pre">doc</span> <span class="pre">make</span> <span class="pre">clean</span> <span class="pre">#</span> <span class="pre">deletes</span> <span class="pre">the</span> <span class="pre">sphinx-gallery</span> <span class="pre">cache</span> <span class="pre">make</span> <span class="pre">doctest</span> <span class="pre">make</span> <span class="pre">html</span> <span class="pre">-b</span> <span class="pre">linkcheck</span></code></p></li>
 <li><p>ドキュメントをビルドしたら，ローカル・ビルドを開き，サンプル・ギャラリーで明らかな問題がないか調べてください．</p></li>
-<li><p>Update the version numbers in <code class="docutils literal notranslate"><span class="pre">pyvista/_version.py</span></code> and commit it.
-Push the branch to GitHub and create a new PR for this release that
-merges it to main. Development to main should be limited at this
-point while effort is focused on the release.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pyvista/_version.py</span></code> のバージョン番号を更新し，コミットします．ブランチをGitHubにプッシュし，mainにマージする今回のリリースの新しいPRを作成します．リリースに注力している間は，mainへの開発はこの時点では制限されるべきです．</p></li>
 <li><p>新しいリリースを機能的にテストするのは <code class="docutils literal notranslate"><span class="pre">pyvista</span></code> コミュニティの責任です．このブランチをローカルにインストールして運用環境で使用することをお勧めします．検出されたバグについては，ホットフィックスをこのリリースブランチにプッシュする必要があります．</p></li>
-<li><p>When the branch is deemed as stable for public release, the PR will
-be merged to main and the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch will be tagged with a
-<code class="docutils literal notranslate"><span class="pre">MAJOR.MINOR.0</span></code> release. The release branch will not be deleted.
-Tag the release with:</p>
+<li><p>ブランチが一般リリース用に安定しているとみなされた場合，PRはmainにマージされ， <code class="docutils literal notranslate"><span class="pre">main</span></code> ブランチは <code class="docutils literal notranslate"><span class="pre">MAJOR.MINOR.0</span></code> リリースでタグ付けされます．リリースブランチは削除されません．リリースに次のタグを付けます．</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git tag MAJOR.MINOR.0
 git push origin --tags
 </pre></div>
 </div>
 </li>
-<li><p>Create a list of all changes for the release. It is often helpful to
-leverage <a class="reference external" href="https://github.com/pyvista/pyvista/compare">GitHub's *compare*
-feature</a> to see the
-differences from the last tag and the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch. Be sure to
-acknowledge new contributors by their GitHub username and place
-mentions where appropriate if a specific contributor is to thank for
-a new feature.</p></li>
+<li><p>リリースのすべての変更のリストを作成します． <a class="reference external" href="https://github.com/pyvista/pyvista/compare">GitHub's *compare* feature</a> を活用して，最後のタグや <code class="docutils literal notranslate"><span class="pre">main</span></code> ブランチとの違いを確認することは，しばしば役に立ちます．特定の貢献者が新機能に感謝したい場合は，GitHubのユーザー名と適切な場所の記載で，新しい貢献者を必ず確認してください．</p></li>
 <li><p>手順8のリリースノートを <a class="reference external" href="https://github.com/pyvista/pyvista/releases/new">GitHubの新リリース</a> の説明に入れてください．</p></li>
 <li><p>ビール，コーヒー，水を飲みに行って， [&#64;regro-cf-autotick-bot](<a class="reference external" href="https://github.com/regro-cf-autotick-bot">https://github.com/regro-cf-autotick-bot</a>) がconda-forge <a class="reference external" href="https://github.com/conda-forge/pyvista-feedstock">PyVista feedstock</a> のプルリクエストを開くのを待って，そのプルリクエストをマージします．</p></li>
 <li><p>PyVista Slackワークスペースで新リリースを発表し，お祝いしましょう!</p></li>
@@ -560,10 +522,7 @@ a new feature.</p></li>
 <ol class="arabic simple">
 <li><p>必要な(複数の)バグフィックスを該当するリリースブランチにプッシュします．これは通常，最新のリリースブランチ(例 <code class="docutils literal notranslate"><span class="pre">release/0.25</span></code>)です．</p></li>
 <li><p>次のパッチ増分で <code class="docutils literal notranslate"><span class="pre">__version__.py</span></code> を更新し(例: <code class="docutils literal notranslate"><span class="pre">0.25.1</span></code> )，コミットし，リリースブランチとマージするPRをオープンします．これにより， <code class="docutils literal notranslate"><span class="pre">pyvista</span></code> コミュニティはバグ修正リリースを検証し，承認する機会を得ます．追加のホットフィックスは，このPRの範囲外でなければなりません．</p></li>
-<li><p>When approved, merge with the release branch, but not <code class="docutils literal notranslate"><span class="pre">main</span></code> as
-there is no reason to increment the version of the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch.
-Then create a tag from the release branch with the applicable version
-number (see above for the correct steps).</p></li>
+<li><p>承認されたら，リリースブランチとマージしますが， <code class="docutils literal notranslate"><span class="pre">main</span></code> ブランチのバージョンを増やす理由がないため， <code class="docutils literal notranslate"><span class="pre">main</span></code> とはマージしません．次に，リリースブランチから適切なバージョン番号(正しい手順については上記を参照してください．)のタグを作成します．</p></li>
 <li><p>必要に応じて，リリースノートページを作成します．また，condaからPRを開き，マイナーリリースセクションの手順10の指示に従います．</p></li>
 </ol>
 </div>
