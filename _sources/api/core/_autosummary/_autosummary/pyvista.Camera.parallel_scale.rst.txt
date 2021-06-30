@@ -1,0 +1,6 @@
+pyvista.Camera.parallel\_scale
+==============================
+
+.. currentmodule:: pyvista
+
+.. autoproperty:: Camera.parallel_scale

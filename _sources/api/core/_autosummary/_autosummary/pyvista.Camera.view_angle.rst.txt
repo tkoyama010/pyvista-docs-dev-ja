@@ -1,0 +1,6 @@
+pyvista.Camera.view\_angle
+==========================
+
+.. currentmodule:: pyvista
+
+.. autoproperty:: Camera.view_angle

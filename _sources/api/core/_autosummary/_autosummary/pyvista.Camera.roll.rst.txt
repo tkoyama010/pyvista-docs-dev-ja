@@ -1,0 +1,6 @@
+pyvista.Camera.roll
+===================
+
+.. currentmodule:: pyvista
+
+.. autoproperty:: Camera.roll
