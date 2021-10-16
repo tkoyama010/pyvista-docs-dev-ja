@@ -1,6 +1,0 @@
-pyvista.DataSetFilters.cell\_centers
-====================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSetFilters.cell_centers

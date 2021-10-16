@@ -1,6 +1,0 @@
-pyvista.PolyDataFilters.compute\_cell\_quality
-==============================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.compute_cell_quality

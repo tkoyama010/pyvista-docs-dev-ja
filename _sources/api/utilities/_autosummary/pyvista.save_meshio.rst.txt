@@ -1,5 +1,5 @@
-﻿pyvista.save\_meshio
-====================
+﻿save\_meshio
+============
 
 .. currentmodule:: pyvista
 

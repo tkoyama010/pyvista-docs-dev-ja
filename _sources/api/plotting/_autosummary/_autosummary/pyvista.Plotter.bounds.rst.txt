@@ -1,6 +1,0 @@
-pyvista.Plotter.bounds
-======================
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: Plotter.bounds

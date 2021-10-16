@@ -1,6 +1,0 @@
-pyvista.BasePlotter.clear\_sphere\_widgets
-==========================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.clear_sphere_widgets

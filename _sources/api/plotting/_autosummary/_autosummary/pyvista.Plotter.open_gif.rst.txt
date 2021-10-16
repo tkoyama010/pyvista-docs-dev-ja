@@ -1,6 +1,0 @@
-pyvista.Plotter.open\_gif
-=========================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Plotter.open_gif

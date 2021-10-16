@@ -1,6 +1,0 @@
-pyvista.PolyDataFilters.compute\_arc\_length
-============================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.compute_arc_length

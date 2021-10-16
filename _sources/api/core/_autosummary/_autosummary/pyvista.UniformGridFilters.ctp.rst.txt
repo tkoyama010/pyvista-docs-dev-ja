@@ -1,6 +1,0 @@
-pyvista.UniformGridFilters.ctp
-==============================
-
-.. currentmodule:: pyvista
-
-.. automethod:: UniformGridFilters.ctp

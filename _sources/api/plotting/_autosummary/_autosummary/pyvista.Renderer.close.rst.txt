@@ -1,6 +1,0 @@
-pyvista.Renderer.close
-======================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Renderer.close

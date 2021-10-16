@@ -1,6 +1,0 @@
-pyvista.BasePlotter.enable\_cell\_picking
-=========================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.enable_cell_picking

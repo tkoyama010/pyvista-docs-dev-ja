@@ -1,6 +1,0 @@
-pyvista.BasePlotter.add\_spline\_widget
-=======================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.add_spline_widget

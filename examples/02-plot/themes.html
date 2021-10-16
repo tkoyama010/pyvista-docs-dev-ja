@@ -4,11 +4,12 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>グローバルおよびローカルプロットテーマの制御 &#8212; PyVista 0.31.dev0 ドキュメント</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>グローバルおよびローカルプロットテーマの制御 &#8212; PyVista 0.32.dev0 ドキュメント</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,20 +24,19 @@
 
     
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery-rendered-html.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -53,8 +53,21 @@
     <link rel="next" title="地形図" href="topo-map.html" />
     <link rel="prev" title="テクスチャを適用する" href="texture.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="ja">
     
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-140243896-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
@@ -174,6 +187,7 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
+    
     <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../00-load/create-explicit-structured-grid.html">
@@ -190,8 +204,29 @@
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="../00-load/create-kochanek-spline.html">
+   Create a Kochanek Spline
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
   <a class="reference internal" href="../00-load/create-parametric-geometric-objects.html">
    パラメトリックジオメトリオブジェクト
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00-load/create-pixel-art.html">
+   Pixel Art of ALIEN MONSTERS
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00-load/create-platonic-solids.html">
+   Platonic Solids
   </a>
  </li>
 </ul>
@@ -239,6 +274,13 @@
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="../00-load/create-truss.html">
+   Plot Truss-like FEA Solution with Cylinders
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
   <a class="reference internal" href="../00-load/create-uniform-grid.html">
    統合グリッドを作成
   </a>
@@ -248,6 +290,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../00-load/create-unstructured-surface.html">
    非構造化グリッドの作成
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00-load/load-gltf.html">
+   Working with a glTF Files
   </a>
  </li>
 </ul>
@@ -276,6 +325,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../00-load/read-parallel.html">
    並列フィルタ
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00-load/reader.html">
+   Load data using a Reader
   </a>
  </li>
 </ul>
@@ -318,6 +374,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../01-filter/clipping.html">
    平面とボックスでクリップします
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-filter/collisions.html">
+   Collision
   </a>
  </li>
 </ul>
@@ -505,6 +568,13 @@
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="../01-filter/streamlines_2D.html">
+   2D Streamlines
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
   <a class="reference internal" href="../01-filter/subdivide.html">
    セルの細分化
   </a>
@@ -514,6 +584,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../01-filter/surface-smoothing.html">
    サーフェイススムージング
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-filter/surface_reconstruction.html">
+   Surface Reconstruction
   </a>
  </li>
 </ul>
@@ -883,6 +960,27 @@
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="../99-advanced/extending-pyvista.html">
+   Extending PyVista
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../99-advanced/osmnx-example.html">
+   Plot Open Street Map Data
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../99-advanced/ray-trace-moeller.html">
+   Visualize the Moeller–Trumbore Algorithm
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
   <a class="reference internal" href="../99-advanced/ray-trace.html">
    レイトレーシング
   </a>
@@ -901,6 +999,7 @@
  </li>
 </ul>
 
+    
   </div>
 </nav>
             </div>
@@ -965,8 +1064,8 @@
 <p>Click <a class="reference internal" href="#sphx-glr-download-examples-02-plot-themes-py"><span class="std std-ref">here</span></a>
 to download the full example code</p>
 </div>
-<div class="sphx-glr-example-title section" id="control-global-and-local-plotting-themes">
-<span id="sphx-glr-examples-02-plot-themes-py"></span><h1>グローバルおよびローカルプロットテーマの制御<a class="headerlink" href="#control-global-and-local-plotting-themes" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<section class="sphx-glr-example-title" id="control-global-and-local-plotting-themes">
+<span id="themes-example"></span><span id="sphx-glr-examples-02-plot-themes-py"></span><h1>グローバルおよびローカルプロットテーマの制御<a class="headerlink" href="#control-global-and-local-plotting-themes" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>PyVistaでは，グローバルなプロットテーマとローカルなプロットテーマを設定して，デフォルトのプロットパラメータを簡単に設定できます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
@@ -989,8 +1088,7 @@ to download the full example code</p>
 <span class="n">plot_example</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="テーマ" class="sphx-glr-single-img" src="../../_images/sphx_glr_themes_001.png" />
-<p>PyVistaにはいくつかのプロットテーマも付属しています．</p>
+<img src="../../_images/sphx_glr_themes_001.png" srcset="../../_images/sphx_glr_themes_001.png" alt="themes" class = "sphx-glr-single-img"/><p>PyVistaにはいくつかのプロットテーマも付属しています．</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">'ParaView'</span></code>: これは，ParaViewの既定のプロットテーマを模倣するように設計されています．</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'dark'</span></code>: 暗い背景とカラースキームを使用して，夜間モードに適した設計になっています．</p></li>
@@ -1002,22 +1100,19 @@ to download the full example code</p>
 <span class="n">plot_example</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="テーマ" class="sphx-glr-single-img" src="../../_images/sphx_glr_themes_002.png" />
-<p><code class="docutils literal notranslate"><span class="pre">'dark'</span></code> テーマのデモ．</p>
+<img src="../../_images/sphx_glr_themes_002.png" srcset="../../_images/sphx_glr_themes_002.png" alt="themes" class = "sphx-glr-single-img"/><p><code class="docutils literal notranslate"><span class="pre">'dark'</span></code> テーマのデモ．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pv</span><span class="o">.</span><span class="n">set_plot_theme</span><span class="p">(</span><span class="s2">&quot;dark&quot;</span><span class="p">)</span>
 
 <span class="n">plot_example</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="テーマ" class="sphx-glr-single-img" src="../../_images/sphx_glr_themes_003.png" />
-<p><code class="docutils literal notranslate"><span class="pre">'document'</span></code> テーマのデモを行います．このテーマは，オンラインの例で使用されています．</p>
+<img src="../../_images/sphx_glr_themes_003.png" srcset="../../_images/sphx_glr_themes_003.png" alt="themes" class = "sphx-glr-single-img"/><p><code class="docutils literal notranslate"><span class="pre">'document'</span></code> テーマのデモを行います．このテーマは，オンラインの例で使用されています．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pv</span><span class="o">.</span><span class="n">set_plot_theme</span><span class="p">(</span><span class="s2">&quot;document&quot;</span><span class="p">)</span>
 
 <span class="n">plot_example</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="テーマ" class="sphx-glr-single-img" src="../../_images/sphx_glr_themes_004.png" />
-<p>プロットウィンドウの背景には，カラーグラデーションを使用することもできます．</p>
+<img src="../../_images/sphx_glr_themes_004.png" srcset="../../_images/sphx_glr_themes_004.png" alt="themes" class = "sphx-glr-single-img"/><p>プロットウィンドウの背景には，カラーグラデーションを使用することもできます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">)</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">show_grid</span><span class="p">()</span>
@@ -1026,9 +1121,8 @@ to download the full example code</p>
 <span class="n">cpos</span> <span class="o">=</span> <span class="n">plotter</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="テーマ" class="sphx-glr-single-img" src="../../_images/sphx_glr_themes_005.png" />
-</div>
-<div class="section" id="modifying-the-global-theme">
+<img src="../../_images/sphx_glr_themes_005.png" srcset="../../_images/sphx_glr_themes_005.png" alt="themes" class = "sphx-glr-single-img"/></section>
+<section id="modifying-the-global-theme">
 <h1>グローバル・テーマの変更<a class="headerlink" href="#modifying-the-global-theme" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">mesh.plot(show_edges=True)</span></code> などのプロット時に個々のパラメータを設定するか，グローバルテーマを設定することで，メッシュの表示方法を制御できます． <code class="docutils literal notranslate"><span class="pre">pyvista.global_theme</span></code> を使用して，既定ですべてのメッシュを表示する方法を個々のパラメータでコントロールすることもできます．</p>
 <p>ここでは，すべての <code class="docutils literal notranslate"><span class="pre">pyvista</span></code> メッシュの現在のグローバルデフォルトを出力します．これらの値は，以前の &quot;Document&quot; テーマによって変更されています．</p>
@@ -1115,6 +1209,9 @@ Slider Styles            :
         Cap opacity      : 0.0
         Cap length       : 0.01
         Cap width        : 0.02
+Return Camera Position   : None
+Hidden Line Removal      : True
+Anti-Aliasing            : False
 </pre></div>
 </div>
 <p>デフォルトでは， <code class="docutils literal notranslate"><span class="pre">show_edges=True</span></code> を介してメッシュをプロットする際に明示的に指定しない限り，エッジはメッシュ上に表示されません．デフォルトのパラメータを変更することで，このデフォルトの動作をグローバルに変更できます．</p>
@@ -1122,15 +1219,13 @@ Slider Styles            :
 <span class="n">cpos</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="テーマ" class="sphx-glr-single-img" src="../../_images/sphx_glr_themes_006.png" />
-<p>pyvistaをデフォルトの動作にリセットするには， <code class="docutils literal notranslate"><span class="pre">restore_defaults</span></code> を使用します．図形の色は，ドキュメントテーマのデフォルトの色 &quot;黄褐色&quot; ではなく，デフォルトの色 &quot;白&quot; にリセットされたことに注意してください．内部的には，適用された各テーマは， <code class="docutils literal notranslate"><span class="pre">pyvista.global_theme</span></code> 内に格納されたグローバルデフォルトプロットを変更します．</p>
+<img src="../../_images/sphx_glr_themes_006.png" srcset="../../_images/sphx_glr_themes_006.png" alt="themes" class = "sphx-glr-single-img"/><p>pyvistaをデフォルトの動作にリセットするには， <code class="docutils literal notranslate"><span class="pre">restore_defaults</span></code> を使用します．図形の色は，ドキュメントテーマのデフォルトの色 &quot;黄褐色&quot; ではなく，デフォルトの色 &quot;白&quot; にリセットされたことに注意してください．内部的には，適用された各テーマは， <code class="docutils literal notranslate"><span class="pre">pyvista.global_theme</span></code> 内に格納されたグローバルデフォルトプロットを変更します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pv</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">restore_defaults</span><span class="p">()</span>
 <span class="n">cpos</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="テーマ" class="sphx-glr-single-img" src="../../_images/sphx_glr_themes_007.png" />
-</div>
-<div class="section" id="creating-a-custom-theme-and-applying-it-globally">
+<img src="../../_images/sphx_glr_themes_007.png" srcset="../../_images/sphx_glr_themes_007.png" alt="themes" class = "sphx-glr-single-img"/></section>
+<section id="creating-a-custom-theme-and-applying-it-globally">
 <h1>カスタム・テーマの作成とグローバルな適用<a class="headerlink" href="#creating-a-custom-theme-and-applying-it-globally" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>既存のテーマの1つを修正し，それをグローバルプロットのデフォルトにロードすることで，カスタムテーマを作成できます．</p>
 <p>ここでは，エッジを表示しながら既定でメッシュを赤でプロットする暗いテーマを作成します．</p>
@@ -1146,9 +1241,8 @@ Slider Styles            :
 <span class="n">cpos</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="テーマ" class="sphx-glr-single-img" src="../../_images/sphx_glr_themes_008.png" />
-</div>
-<div class="section" id="creating-a-custom-theme-and-applying-it-to-a-single-plotter">
+<img src="../../_images/sphx_glr_themes_008.png" srcset="../../_images/sphx_glr_themes_008.png" alt="themes" class = "sphx-glr-single-img"/></section>
+<section id="creating-a-custom-theme-and-applying-it-to-a-single-plotter">
 <h1>カスタムテーマを作成して単一のプロッタに適用する<a class="headerlink" href="#creating-a-custom-theme-and-applying-it-to-a-single-plotter" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>この例では，ベースの &quot;default&quot; テーマからカスタムテーマを作成し，それを単一のプロッタに適用します．  これは変更された <code class="docutils literal notranslate"><span class="pre">DarkTheme</span></code> に設定されたままのグローバル &quot;default&quot; の動作を変えないことに注意してください．</p>
 <p>この方法には，複数のテーマを管理し，1つまたは複数のプロッタに適用できるという利点があります．</p>
@@ -1164,20 +1258,18 @@ Slider Styles            :
 <span class="n">cpos</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">theme</span><span class="o">=</span><span class="n">my_theme</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="テーマ" class="sphx-glr-single-img" src="../../_images/sphx_glr_themes_009.png" />
-<p>または， <code class="docutils literal notranslate"><span class="pre">Plotter</span></code> のインスタンスのテーマを設定します．</p>
+<img src="../../_images/sphx_glr_themes_009.png" srcset="../../_images/sphx_glr_themes_009.png" alt="themes" class = "sphx-glr-single-img"/><p>または， <code class="docutils literal notranslate"><span class="pre">Plotter</span></code> のインスタンスのテーマを設定します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pl</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">theme</span><span class="o">=</span><span class="n">my_theme</span><span class="p">)</span>
 <span class="c1"># pl.theme = my_theme  # alternatively use the setter</span>
 <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">pv</span><span class="o">.</span><span class="n">Cube</span><span class="p">())</span>
 <span class="n">cpos</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="テーマ" class="sphx-glr-single-img" src="../../_images/sphx_glr_themes_010.png" />
-<p>ドキュメントのテーマを使用するにはリセット</p>
+<img src="../../_images/sphx_glr_themes_010.png" srcset="../../_images/sphx_glr_themes_010.png" alt="themes" class = "sphx-glr-single-img"/><p>ドキュメントのテーマを使用するにはリセット</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pv</span><span class="o">.</span><span class="n">set_plot_theme</span><span class="p">(</span><span class="s2">&quot;document&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  6.156 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  6.321 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-plot-themes-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/9818cced84c263fa13e623b67beb9ef3/themes.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">themes.py</span></code></a></p>
@@ -1187,7 +1279,7 @@ Slider Styles            :
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Sphinx-Galleryによるギャラリー</a></p>
-</div>
+</section>
 
 
               </div>
@@ -1199,30 +1291,19 @@ Slider Styles            :
       </div>
     </div>
   
-  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
-
-  
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
-<script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-140243896-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 <footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright 2017-2021, The PyVista Developers.<br/>
+    &copy; Copyright 2017-2021, The PyVista Developers.<br>
 </p>
     </div>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.2.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
 </p>
     </div>
     

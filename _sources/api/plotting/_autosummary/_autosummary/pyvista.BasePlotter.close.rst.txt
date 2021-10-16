@@ -1,6 +1,0 @@
-pyvista.BasePlotter.close
-=========================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.close

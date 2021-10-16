@@ -1,6 +1,0 @@
-pyvista.WidgetHelper.add\_mesh\_isovalue
-========================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: WidgetHelper.add_mesh_isovalue

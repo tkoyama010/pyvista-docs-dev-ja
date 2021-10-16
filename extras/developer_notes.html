@@ -4,11 +4,12 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>貢献 &#8212; PyVista 0.31.dev0 ドキュメント</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>貢献 &#8212; PyVista 0.32.dev0 ドキュメント</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,20 +24,19 @@
 
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/gallery-binder.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/gallery-dataframe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/gallery-rendered-html.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -53,8 +53,21 @@
     <link rel="next" title="Sphinx PyVista Plot Directive" href="plot_directive.html" />
     <link rel="prev" title="Flaskアプリケーション" href="flask.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="ja">
     
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-140243896-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
@@ -174,6 +187,7 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
+    
     <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="building_vtk.html">
@@ -205,8 +219,19 @@
    Sphinx PyVista Plot Directive
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vtk_data.html">
+   Using Local VTK-Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="extending_pyvista.html">
+   Extending PyVista
+  </a>
+ </li>
 </ul>
 
+    
   </div>
 </nav>
             </div>
@@ -337,11 +362,11 @@
               
               <div>
                 
-  <div class="section" id="contributing">
+  <section id="contributing">
 <span id="ref-developer-notes"></span><h1>貢献<a class="headerlink" href="#contributing" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>私たちは貢献を心から歓迎し，このガイドがPyVistaコードリポジトリの理解を促進することを願っています．PyVistaソフトウェアパッケージはボランティアベースでメンテナンスされていることに注意してください．したがって，このソフトウェアをすべてのユーザにとって有用なツールにするために，ユーザの質問をサポートし，新しい機能を開発できるコミュニティを育成する必要があります．</p>
 <p>このページでは，質問，懸念，機能のリクエスト，または貢献したいことから始めるべき概要を説明します．</p>
-<div class="section" id="cloning-the-source-repository">
+<section id="cloning-the-source-repository">
 <h2>ソースリポジトリのクローン作成<a class="headerlink" href="#cloning-the-source-repository" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>次のコマンドを実行して， <code class="docutils literal notranslate"><span class="pre">https://github.com/pyvista/pyvista</span></code> からソースリポジトリをクローンし，最新バージョンをインストールできます．</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/pyvista/pyvista.git
@@ -349,34 +374,34 @@
 python -m pip install -e .
 </pre></div>
 </div>
-</div>
-<div class="section" id="questions">
+</section>
+<section id="questions">
 <h2>質問<a class="headerlink" href="#questions" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>プロジェクト，そのアプリケーション，またはソフトウェアの使用についての一般的な質問については，コミュニティが集合的にあなたの質問に答えることができる <a class="reference external" href="https://github.com/pyvista/pyvista/discussions">pyvista/discussions</a> でディスカッションを作成してください．また， <a class="reference external" href="http://slack.pyvista.org">Slack</a> に参加したり，開発者の一人に電子メールを送ったりすることもできます．プロジェクト・サポート・チームの連絡先はinfo&#64;pyvista.orgです．</p>
 <p>より技術的な質問については， <a class="reference external" href="https://github.com/pyvista/pyvista/issues">issues ページ</a> で問題を作成していただければ，すぐに対処いたします．問題のページに投稿することで，必要な専門知識を持つコミュニティメンバーが問題に対処でき，得られた情報は他のユーザーの問題のページで引き続き利用できます．</p>
-</div>
-<div class="section" id="reporting-bugs">
+</section>
+<section id="reporting-bugs">
 <h2>バグの報告<a class="headerlink" href="#reporting-bugs" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>ここで配布されているコードの使用中にバグ，クラッシュ，または奇妙な点に遭遇した場合は，すぐに対処できるよう適切なラベルを付けて <a class="reference external" href="https://github.com/pyvista/pyvista/issues">issues ページ</a> に報告してください．問題を報告する際は，再現できるように，過度に記述してください．可能な限り，トレースバック，スクリーンショット，およびサンプルファイルを提供してください．</p>
-</div>
-<div class="section" id="feature-requests">
+</section>
+<section id="feature-requests">
 <h2>機能の要望<a class="headerlink" href="#feature-requests" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>PyVistaのコードベースを改善するためのアイデアを投稿することを推奨します! <a class="reference external" href="https://github.com/pyvista/pyvista/issues">issuesページ</a> に <em>Feature Request</em> ラベルをつけて改善を提案してください．説明的なタイトルを使用し，コミュニティがその機能を実装するのに役立つ十分な背景情報を提供してください．たとえば，特定のファイル形式のリーダーが必要な場合は，そのファイル形式のドキュメントへのリンクを提供し，操作するスクリーンショットを含むサンプルファイルを提供してください．問題のスレッドをディスカッションの場として使用し，フィードバックを提供します．</p>
-</div>
-<div class="section" id="contributing-new-code">
+</section>
+<section id="contributing-new-code">
 <h2>新しいコードの提供<a class="headerlink" href="#contributing-new-code" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>PyVistaを改善する方法についてアイデアがある場合は，まず機能リクエストとして問題を作成してください．これは，コントリビューションの実装方法を検討するためのスレッドとして使用できます．</p>
 <p>PyVista用のコーディングと開発を始める準備ができたら，詳細については <a class="reference external" href="#development-practices">Development Practices</a> セクションを参照してください．</p>
-</div>
-<div class="section" id="licensing">
+</section>
+<section id="licensing">
 <h2>ライセンス<a class="headerlink" href="#licensing" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>コントリビュートされたコードはすべて，リポジトリーにあるMITライセンスの下でライセンスされます．自分でコードを作成しなかった場合は，既存のライセンスに互換性があり，コントリビュートされたファイルに含まれていることを確認するか，元の作成者からコードを再ライセンスする許可を得る必要があります．</p>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="development-practices">
+<section id="development-practices">
 <h2>開発手法<a class="headerlink" href="#development-practices" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>この節では，PyVistaリポジトリで開発を行う方法について説明します．このリポジトリに直接コントリビュートする場合は，ここで説明するプラクティスに従ってください．</p>
-<div class="section" id="guidelines">
+<section id="guidelines">
 <h3>ガイドライン<a class="headerlink" href="#guidelines" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>配列への直接アクセスと直感的なPythonプロパティを介したVisualization Toolkit (VTK) への直接アクセスにより，VTKライブラリ全体をあらゆる分野の研究者が容易にアクセスできるようにしたいと考えています．PyVistaをVTKの事実上のPythonインターフェースにするためには，さらに改善するために皆さんの助けが必要です!</p>
 <p>1つか2つの興味深い解析アルゴリズムをフィルタとして追加したい場合，新しいプロットルーチンを実装したい場合，あるいは1-2のタイプミスを修正したい場合，あなたの努力は大歓迎です!</p>
@@ -392,21 +417,21 @@ python -m pip install -e .
 <li><p>ライセンスが利用できないコードスニペット(stackoverflowなど)や商用使用が禁止されているコードスニペットは使用しないでください．それらはすべてのプロジェクトのライセンスを損なう可能性があります．</p></li>
 </ol>
 <p>私達の <a class="reference external" href="https://github.com/pyvista/pyvista/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a> もご覧ください．</p>
-</div>
-<div class="section" id="contributing-to-pyvista-through-github">
+</section>
+<section id="contributing-to-pyvista-through-github">
 <h3>GitHub経由でpyvistaにコントリビュートする<a class="headerlink" href="#contributing-to-pyvista-through-github" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>新しいコードをpyvistaに送信するには，まず <a class="reference external" href="https://github.com/pyvista/pyvista">pyvista GitHub リポジトリ</a> をフォークし，フォークしたリポジトリをあなたのコンピュータにクローンします．次に，ローカルリポジトリの <a class="reference external" href="#branch-naming-conventions">Branch Naming Conventions Section</a> に基づいて新しいブランチを作成します．</p>
 <p>次に，新しい機能を追加し，ローカルでコミットします．特に変更が複雑な場合は，過去のコミットに戻すことが役立つことが多いので，頻繁にコミットするようにしてください．また，頻繁に検査をしてください．テストの自動化については，以下の <a class="reference external" href="#testing">Testing Section</a> を参照してください．</p>
 <p>コードをサブミットする準備ができたら， <a class="reference external" href="#creating-a-new-pull-request">Creating a New Pull Request section</a> の手順に従ってプル要求を作成します．</p>
-<div class="section" id="coding-style">
+<section id="coding-style">
 <h4>コーディングスタイル<a class="headerlink" href="#coding-style" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <p>行幅が79文字を超えて90から100文字まで許されることを除き，可能な限り <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/">PEP 8</a> に準拠します．</p>
 <p>PEP 8以外でコーディングする場合は， <a class="reference external" href="https://www.python.org/dev/peps/pep-0020/">PEP 20 -- The Zen of Python</a> を考慮してください．</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">this</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="branch-naming-conventions">
+</section>
+<section id="branch-naming-conventions">
 <h4>ブランチの命名規則<a class="headerlink" href="#branch-naming-conventions" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <p>開発を効率化するために，ブランチの命名には次の要件があります．これらの要件は，コア開発者がコードを調べる前に，あるブランチがどのような種類の変更を導入しているかを知るのに役立ちます．</p>
 <ul class="simple">
@@ -419,8 +444,8 @@ python -m pip install -e .
 <li><p><code class="docutils literal notranslate"><span class="pre">testing/</span></code>: テストの改善または変更</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">release/</span></code>: リリース(下記参照)</p></li>
 </ul>
-</div>
-<div class="section" id="testing">
+</section>
+<section id="testing">
 <h4>テスト<a class="headerlink" href="#testing" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <p>変更を行った後，プル要求を作成する前にローカルで変更をテストしてください．コミットまたはプル要求の後に次のテストが実行されます．変更から新しい問題を追跡するには，ローカルで次の手順を実行してください．</p>
 <p>総合的な単体テストを実行するには， <code class="docutils literal notranslate"><span class="pre">requirements_test.txt</span></code> ， <code class="docutils literal notranslate"><span class="pre">requirements_docs.txt</span></code> ， <code class="docutils literal notranslate"><span class="pre">requirements_style.txt</span></code> にリストされているすべての依存関係をインストールします．</p>
@@ -456,8 +481,8 @@ make html -b linkcheck
 </pre></div>
 </div>
 <p>完成したドキュメントは <code class="docutils literal notranslate"><span class="pre">doc/_build/html</span></code> ディレクトリにあります．</p>
-</div>
-<div class="section" id="notes-regarding-image-regression-testing">
+</section>
+<section id="notes-regarding-image-regression-testing">
 <h4>イメージ回帰テストに関する注意事項<a class="headerlink" href="#notes-regarding-image-regression-testing" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">pyvista</span></code> は基本的に描画モジュールなので，何らかの回帰テストで生成した画像を実際にチェックする必要があります．実際には，これはかなりの作業になります．</p>
 <ul class="simple">
@@ -483,15 +508,15 @@ make html -b linkcheck
 </pre></div>
 </div>
 <p>これにより，プロッタを閉じる直前に，現在のレンダリングウィンドウがCI内のイメージに対して検証されます．イメージが存在しない場合は，必ず <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">tests/plotting/image_cache/*</span></code> を使用して結果のイメージを追加してください．</p>
-</div>
-<div class="section" id="creating-a-new-pull-request">
+</section>
+<section id="creating-a-new-pull-request">
 <h4>新規Pull Requestの作成<a class="headerlink" href="#creating-a-new-pull-request" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <p>ブランチをローカルでテストしたら，mainにマージする際に <a class="reference external" href="https://github.com/pyvista/pyvista">pyvista GitHub</a> でpull requestを作成します．これにより，継続的インテグレーション (CI) テストが自動的に実行され，変更が複数のプラットフォームで機能することが検証されます．</p>
 <p>他のユーザーがコードをレビューできるようにするには，pyvistaコントリビュータグループの他の少なくとも1人のメンバーが，コードがコミュニティの標準を満たしているかどうかをレビューして検証する必要があります．承認後，書き込み権限があればブランチをマージすることができます．書き込みパーミッションがない場合，レビュー担当者または書き込みパーミッションを持つ別のユーザーがブランチをマージし，PRブランチを削除します．</p>
 <p>ブランチをカレントリリースブランチ(下記参照)とマージする必要があるかもしれませんので， <code class="docutils literal notranslate"><span class="pre">fix/</span></code> ブランチであれば削除しないでください．</p>
-</div>
-</div>
-<div class="section" id="branching-model">
+</section>
+</section>
+<section id="branching-model">
 <h3>ブランチモデル<a class="headerlink" href="#branching-model" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>このプロジェクトは，安定性を犠牲にすることなく機能の迅速な開発を可能にする分岐モデルを持っており， <a class="reference external" href="https://trunkbaseddevelopment.com/">Trunk Based Development</a>  アプローチに厳密に従います．</p>
 <p>ブランチモデルの主な特徴は次のとおりです．</p>
@@ -500,7 +525,7 @@ make html -b linkcheck
 <li><p>マイナーリリース(例えば <code class="docutils literal notranslate"><span class="pre">release/0.24</span></code> )をベースにした <code class="docutils literal notranslate"><span class="pre">release/</span></code> ブランチがいくつかあり，そこには PyPI/ にも反映される安定版のコードベースが含まれています． <code class="docutils literal notranslate"><span class="pre">fix/</span></code> ブランチの修正パッチは，mainブランチとこれらのブランチの両方にマージする必要があります．新しいパッチリリースを作成する必要がある場合，これらのリリースブランチの <code class="docutils literal notranslate"><span class="pre">__version__.py</span></code> が更新され，パッチされたセマンティックバージョン(例えば <code class="docutils literal notranslate"><span class="pre">0.24.1</span></code> )がタグ付けされます．これによりCIはPyPIにプッシュし，テストされていない機能を気にすることなく，過去のバージョンの <code class="docutils literal notranslate"><span class="pre">pyvista</span></code> のホットフィックスを迅速にプッシュすることができます．</p></li>
 <li><p>マイナーリリース候補が準備できたら， <code class="docutils literal notranslate"><span class="pre">main</span></code> から新しい <code class="docutils literal notranslate"><span class="pre">release</span></code> ブランチが作成され，次のマイナーバージョン(例えば <code class="docutils literal notranslate"><span class="pre">release/0.25</span></code> )がインクリメントされ，徹底的にテストされます．安定していると判断された場合，リリースブランチにはバージョン(この場合の <code class="docutils literal notranslate"><span class="pre">0.25.0</span></code> )のタグが付けられ，必要に応じて変更が加えられた場合にはmainとマージされます． <code class="docutils literal notranslate"><span class="pre">main</span></code> で機能開発が継続され，ホットフィックスはこのリリースに統合されます．必要に応じてパッチを適用できるように，古いリリースブランチは削除しないでください．</p></li>
 </ul>
-<div class="section" id="minor-release-steps">
+<section id="minor-release-steps">
 <h4>マイナーリリース手順<a class="headerlink" href="#minor-release-steps" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <p>マイナーリリースは， <code class="docutils literal notranslate"><span class="pre">pyvista</span></code> の機能と安定性を改善する機能およびバグリリースです．マイナーリリースが作成される前に，次のことが発生します．</p>
 <ol class="arabic">
@@ -521,8 +546,8 @@ git push origin --tags
 <li><p>ビール，コーヒー，水を飲みに行って， [&#64;regro-cf-autotick-bot](<a class="reference external" href="https://github.com/regro-cf-autotick-bot">https://github.com/regro-cf-autotick-bot</a>) がconda-forge <a class="reference external" href="https://github.com/conda-forge/pyvista-feedstock">PyVista feedstock</a> のプルリクエストを開くのを待って，そのプルリクエストをマージします．</p></li>
 <li><p>PyVista Slackワークスペースで新リリースを発表し，お祝いしましょう!</p></li>
 </ol>
-</div>
-<div class="section" id="patch-release-steps">
+</section>
+<section id="patch-release-steps">
 <h4>パッチリリース手順<a class="headerlink" href="#patch-release-steps" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <p>パッチリリースは重要なバグフィックスのためのもので，マイナーリリースまで待つことはできないものです．パッチリリースの手順は</p>
 <ol class="arabic simple">
@@ -531,10 +556,10 @@ git push origin --tags
 <li><p>承認されたら，リリースブランチとマージしますが， <code class="docutils literal notranslate"><span class="pre">main</span></code> ブランチのバージョンを増やす理由がないため， <code class="docutils literal notranslate"><span class="pre">main</span></code> とはマージしません．次に，リリースブランチから適切なバージョン番号(正しい手順については上記を参照してください．)のタグを作成します．</p></li>
 <li><p>必要に応じて，リリースノートページを作成します．また，condaからPRを開き，マイナーリリースセクションの手順10の指示に従います．</p></li>
 </ol>
-</div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
+</section>
 
 
               </div>
@@ -546,30 +571,19 @@ git push origin --tags
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
-
-  
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
-<script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-140243896-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 <footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright 2017-2021, The PyVista Developers.<br/>
+    &copy; Copyright 2017-2021, The PyVista Developers.<br>
 </p>
     </div>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.2.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
 </p>
     </div>
     

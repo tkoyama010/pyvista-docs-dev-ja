@@ -1,6 +1,0 @@
-pyvista.Light.hide\_actor
-=========================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Light.hide_actor

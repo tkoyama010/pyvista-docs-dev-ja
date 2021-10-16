@@ -1,6 +1,0 @@
-pyvista.DataSetFilters.triangulate
-==================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSetFilters.triangulate

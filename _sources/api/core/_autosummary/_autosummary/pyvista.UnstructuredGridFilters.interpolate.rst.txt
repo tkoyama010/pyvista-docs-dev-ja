@@ -1,6 +1,0 @@
-pyvista.UnstructuredGridFilters.interpolate
-===========================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: UnstructuredGridFilters.interpolate

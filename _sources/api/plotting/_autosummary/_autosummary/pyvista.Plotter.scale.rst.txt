@@ -1,6 +1,0 @@
-pyvista.Plotter.scale
-=====================
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: Plotter.scale

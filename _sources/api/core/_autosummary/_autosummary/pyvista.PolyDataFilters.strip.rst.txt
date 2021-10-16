@@ -1,6 +1,0 @@
-pyvista.PolyDataFilters.strip
-=============================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.strip

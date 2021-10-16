@@ -1,6 +1,0 @@
-pyvista.BasePlotter.add\_mesh\_threshold
-========================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.add_mesh_threshold

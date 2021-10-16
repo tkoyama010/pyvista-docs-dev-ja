@@ -1,6 +1,0 @@
-pyvista.DataSetFilters.extract\_feature\_edges
-==============================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSetFilters.extract_feature_edges

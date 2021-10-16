@@ -1,6 +1,0 @@
-pyvista.BasePlotter.get\_default\_cam\_pos
-==========================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.get_default_cam_pos

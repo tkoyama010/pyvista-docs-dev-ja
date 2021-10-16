@@ -1,6 +1,0 @@
-pyvista.PolyDataFilters.edge\_mask
-==================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.edge_mask

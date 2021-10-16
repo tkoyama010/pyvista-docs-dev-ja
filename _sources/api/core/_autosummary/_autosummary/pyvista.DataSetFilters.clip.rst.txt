@@ -1,6 +1,0 @@
-pyvista.DataSetFilters.clip
-===========================
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSetFilters.clip

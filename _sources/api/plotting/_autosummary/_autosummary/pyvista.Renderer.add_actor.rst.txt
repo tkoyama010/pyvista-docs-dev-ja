@@ -1,6 +1,0 @@
-pyvista.Renderer.add\_actor
-===========================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Renderer.add_actor

@@ -1,6 +1,0 @@
-pyvista.Plotter.enable\_cell\_picking
-=====================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Plotter.enable_cell_picking

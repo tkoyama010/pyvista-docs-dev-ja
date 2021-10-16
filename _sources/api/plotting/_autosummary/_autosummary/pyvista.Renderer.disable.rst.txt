@@ -1,6 +1,0 @@
-pyvista.Renderer.disable
-========================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Renderer.disable

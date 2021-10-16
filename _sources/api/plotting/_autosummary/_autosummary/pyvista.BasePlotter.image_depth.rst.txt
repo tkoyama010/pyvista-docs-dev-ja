@@ -1,6 +1,0 @@
-pyvista.BasePlotter.image\_depth
-================================
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: BasePlotter.image_depth

@@ -1,6 +1,0 @@
-pyvista.UniformGridFilters.shrink
-=================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: UniformGridFilters.shrink

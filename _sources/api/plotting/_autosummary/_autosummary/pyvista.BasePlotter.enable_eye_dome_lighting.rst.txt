@@ -1,6 +1,0 @@
-pyvista.BasePlotter.enable\_eye\_dome\_lighting
-===============================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.enable_eye_dome_lighting

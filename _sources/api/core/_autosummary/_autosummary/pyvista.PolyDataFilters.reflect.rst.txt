@@ -1,6 +1,0 @@
-pyvista.PolyDataFilters.reflect
-===============================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.reflect

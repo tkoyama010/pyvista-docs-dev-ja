@@ -1,6 +1,0 @@
-pyvista.Renderer.deep\_clean
-============================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Renderer.deep_clean

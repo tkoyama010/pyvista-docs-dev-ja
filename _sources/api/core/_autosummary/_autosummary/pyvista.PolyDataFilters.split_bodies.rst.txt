@@ -1,6 +1,0 @@
-pyvista.PolyDataFilters.split\_bodies
-=====================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.split_bodies

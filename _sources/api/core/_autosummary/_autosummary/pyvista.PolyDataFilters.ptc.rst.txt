@@ -1,6 +1,0 @@
-pyvista.PolyDataFilters.ptc
-===========================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.ptc

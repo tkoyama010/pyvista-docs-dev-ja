@@ -11,8 +11,11 @@
    .. rubric:: Methods
 
    .. autosummary::
-      :toctree: _autosummary
+      :toctree:
    
+      
+      
+      Camera.copy
       
       
       Camera.disable_parallel_projection
@@ -37,7 +40,7 @@
    .. rubric:: Attributes
 
    .. autosummary::
-      :toctree: _autosummary
+      :toctree:
    
       
       

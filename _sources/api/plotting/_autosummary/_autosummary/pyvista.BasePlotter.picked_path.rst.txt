@@ -1,6 +1,0 @@
-pyvista.BasePlotter.picked\_path
-================================
-
-.. currentmodule:: pyvista
-
-.. autoattribute:: BasePlotter.picked_path

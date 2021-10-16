@@ -1,6 +1,0 @@
-pyvista.UniformGridFilters.outline
-==================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: UniformGridFilters.outline

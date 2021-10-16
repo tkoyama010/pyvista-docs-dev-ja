@@ -1,6 +1,0 @@
-pyvista.CompositeFilters.slice
-==============================
-
-.. currentmodule:: pyvista
-
-.. automethod:: CompositeFilters.slice

@@ -1,5 +1,5 @@
-# Create a ParametricSuperToroid mesh
+# Create a ParametricSuperToroid mesh.
 #
 import pyvista
-mesh = pyvista.ParametricSuperToroid()
-cpos = mesh.plot(color='w', smooth_shading=True)
+mesh = pyvista.ParametricSuperToroid(n1=2, n2=0.3)
+mesh.plot(color='w', smooth_shading=True)

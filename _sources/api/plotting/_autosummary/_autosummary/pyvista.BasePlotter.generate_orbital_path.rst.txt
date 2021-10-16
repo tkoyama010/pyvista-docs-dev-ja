@@ -1,6 +1,0 @@
-pyvista.BasePlotter.generate\_orbital\_path
-===========================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.generate_orbital_path

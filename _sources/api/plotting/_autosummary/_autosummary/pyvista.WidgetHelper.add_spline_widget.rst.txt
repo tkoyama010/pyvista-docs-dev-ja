@@ -1,6 +1,0 @@
-pyvista.WidgetHelper.add\_spline\_widget
-========================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: WidgetHelper.add_spline_widget

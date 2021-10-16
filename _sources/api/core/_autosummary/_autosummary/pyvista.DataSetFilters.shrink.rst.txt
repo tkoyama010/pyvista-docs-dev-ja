@@ -1,6 +1,0 @@
-pyvista.DataSetFilters.shrink
-=============================
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSetFilters.shrink

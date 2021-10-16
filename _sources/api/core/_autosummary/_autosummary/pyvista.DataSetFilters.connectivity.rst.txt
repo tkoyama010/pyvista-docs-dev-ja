@@ -1,6 +1,0 @@
-pyvista.DataSetFilters.connectivity
-===================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSetFilters.connectivity

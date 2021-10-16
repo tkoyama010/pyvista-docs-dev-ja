@@ -1,5 +1,5 @@
-﻿pyvista.convert\_array
-======================
+﻿convert\_array
+==============
 
 .. currentmodule:: pyvista
 

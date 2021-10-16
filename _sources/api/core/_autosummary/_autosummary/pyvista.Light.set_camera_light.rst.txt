@@ -1,6 +1,0 @@
-pyvista.Light.set\_camera\_light
-================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Light.set_camera_light

@@ -1,6 +1,0 @@
-pyvista.PolyDataFilters.slice\_orthogonal
-=========================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.slice_orthogonal

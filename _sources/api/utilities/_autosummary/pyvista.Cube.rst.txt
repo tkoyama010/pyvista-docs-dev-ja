@@ -1,5 +1,5 @@
-﻿pyvista.Cube
-============
+﻿Cube
+====
 
 .. currentmodule:: pyvista
 

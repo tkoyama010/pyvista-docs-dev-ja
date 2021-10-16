@@ -1,6 +1,0 @@
-pyvista.BasePlotter.show\_axes\_all
-===================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.show_axes_all

@@ -1,5 +1,5 @@
-﻿pyvista.plot\_arrows
-====================
+﻿plot\_arrows
+============
 
 .. currentmodule:: pyvista
 

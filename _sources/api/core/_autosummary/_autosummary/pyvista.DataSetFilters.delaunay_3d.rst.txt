@@ -1,6 +1,0 @@
-pyvista.DataSetFilters.delaunay\_3d
-===================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSetFilters.delaunay_3d

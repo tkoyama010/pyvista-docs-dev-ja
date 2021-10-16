@@ -1,6 +1,0 @@
-pyvista.Renderer.set\_viewup
-============================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Renderer.set_viewup

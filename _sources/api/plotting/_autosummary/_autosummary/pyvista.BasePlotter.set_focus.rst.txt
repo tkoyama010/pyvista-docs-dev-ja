@@ -1,6 +1,0 @@
-pyvista.BasePlotter.set\_focus
-==============================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.set_focus

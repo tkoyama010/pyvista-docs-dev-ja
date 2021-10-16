@@ -1,6 +1,0 @@
-pyvista.UnstructuredGridFilters.merge
-=====================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: UnstructuredGridFilters.merge

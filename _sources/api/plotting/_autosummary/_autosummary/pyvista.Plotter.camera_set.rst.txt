@@ -1,6 +1,0 @@
-pyvista.Plotter.camera\_set
-===========================
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: Plotter.camera_set

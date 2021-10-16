@@ -1,6 +1,0 @@
-pyvista.BasePlotter.track\_mouse\_position
-==========================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.track_mouse_position

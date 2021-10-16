@@ -1,6 +1,0 @@
-pyvista.DataSetFilters.contour
-==============================
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSetFilters.contour

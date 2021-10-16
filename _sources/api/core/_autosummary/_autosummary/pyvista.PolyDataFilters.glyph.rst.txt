@@ -1,6 +1,0 @@
-pyvista.PolyDataFilters.glyph
-=============================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.glyph

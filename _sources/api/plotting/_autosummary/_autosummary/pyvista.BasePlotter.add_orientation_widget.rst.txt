@@ -1,6 +1,0 @@
-pyvista.BasePlotter.add\_orientation\_widget
-============================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.add_orientation_widget

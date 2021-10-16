@@ -1,6 +1,0 @@
-﻿pyvista.get\_vtk\_type
-======================
-
-.. currentmodule:: pyvista
-
-.. autofunction:: get_vtk_type

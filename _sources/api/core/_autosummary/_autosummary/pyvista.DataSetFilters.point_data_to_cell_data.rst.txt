@@ -1,6 +1,0 @@
-pyvista.DataSetFilters.point\_data\_to\_cell\_data
-==================================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSetFilters.point_data_to_cell_data

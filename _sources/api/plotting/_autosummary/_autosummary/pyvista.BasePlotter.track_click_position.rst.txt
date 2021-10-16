@@ -1,6 +1,0 @@
-pyvista.BasePlotter.track\_click\_position
-==========================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.track_click_position

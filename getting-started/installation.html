@@ -4,11 +4,12 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>インストール &#8212; PyVista 0.31.dev0 ドキュメント</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>インストール &#8212; PyVista 0.32.dev0 ドキュメント</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,20 +24,19 @@
 
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/gallery-binder.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/gallery-dataframe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/gallery-rendered-html.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -53,8 +53,21 @@
     <link rel="next" title="外部の例" href="external_examples.html" />
     <link rel="prev" title="著者と引用" href="authors.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="ja">
     
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-140243896-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
@@ -174,6 +187,7 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
+    
     <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="why.html">
@@ -279,6 +293,7 @@
  </li>
 </ul>
 
+    
   </div>
 </nav>
             </div>
@@ -314,7 +329,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#installing-the-current-development-branch-from-github">
-   Installing the Current Development Branch from GitHub
+   GitHubから現在の開発ブランチをインストールする
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -373,56 +388,53 @@
               
               <div>
                 
-  <div class="section" id="installation">
+  <section id="installation">
 <span id="install-ref"></span><h1>インストール<a class="headerlink" href="#installation" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>PyVistaはPythonバージョン3.6以降でサポートされています．以前のバージョンのPythonは， <a class="reference external" href="https://github.com/pyvista/pyvista/issues/164">this issue</a> で説明したようにサポートされなくなりました．</p>
 <p>最高の経験を得るには，AnacondaをPython用の仮想環境およびパッケージマネージャとして使用し，Anacondaを使用してPyVistaをインストールする手順に従ってください．</p>
-<div class="section" id="dependencies">
+<section id="dependencies">
 <h2>依存関係<a class="headerlink" href="#dependencies" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>PyVistaはVisualization Toolkit (VTK) とNumPyの上に構築されています-以下のプロジェクトはPyVistaに必要な依存関係です:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://pypi.org/project/vtk/">vtk</a> - PyVistaはVTKライブラリから型を直接継承します．</p></li>
-<li><p><a class="reference external" href="https://pypi.org/project/numpy/">numpy</a> - NumPy配列は，PyVistaのデータ配列アクセスのためのコア基盤を提供します．</p></li>
+<li><p><a class="reference external" href="https://pypi.org/project/numpy/">NumPy</a> - NumPy arrays provide a core foundation for PyVista's data array access.</p></li>
 <li><p><a class="reference external" href="https://pypi.org/project/imageio/">imageio</a> - このライブラリは，スクリーンショットの保存に使用されます．</p></li>
 <li><p><a class="reference external" href="https://pypi.org/project/appdirs/">appdirs</a> - サンプルデータセットのデータ管理により，ユーザはチュートリアルをその場でダウンロードできます．</p></li>
 <li><p><a class="reference external" href="https://pypi.org/project/meshio/">meshio</a> - 多くのメッシュ形式の入力/出力．</p></li>
 <li><p><a class="reference external" href="https://github.com/banesullivan/scooby">scooby</a> - デバッグツール</p></li>
 </ul>
-</div>
-<div class="section" id="pypi">
+</section>
+<section id="pypi">
 <h2>PyPI<a class="headerlink" href="#pypi" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <a class="reference external image-reference" href="https://pypi.org/project/pyvista/"><img alt="https://img.shields.io/pypi/v/pyvista.svg?logo=python&amp;logoColor=white" src="https://img.shields.io/pypi/v/pyvista.svg?logo=python&amp;logoColor=white" /></a>
 <p>PyVistaは <a class="reference external" href="https://pypi.org/project/pyvista/">PyPI</a> から <code class="docutils literal notranslate"><span class="pre">pip</span></code> を使ってインストールできます:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">pyvista</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="anaconda">
+</section>
+<section id="anaconda">
 <h2>Anaconda<a class="headerlink" href="#anaconda" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <a class="reference external image-reference" href="https://anaconda.org/conda-forge/pyvista"><img alt="https://img.shields.io/conda/vn/conda-forge/pyvista.svg?logo=conda-forge&amp;logoColor=white" src="https://img.shields.io/conda/vn/conda-forge/pyvista.svg?logo=conda-forge&amp;logoColor=white" /></a>
 <p><code class="docutils literal notranslate"><span class="pre">conda</span></code> を使ってこのパッケージをインストールするには:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">pyvista</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="installing-the-current-development-branch-from-github">
-<h2>Installing the Current Development Branch from GitHub<a class="headerlink" href="#installing-the-current-development-branch-from-github" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>There may be features or bug-fixes that have been implemented in PyVista but
-have not made their way into a release.  To install <code class="docutils literal notranslate"><span class="pre">pyvista</span></code> from the latest
-up-to-date development branch from github, use one of the following</p>
+</section>
+<section id="installing-the-current-development-branch-from-github">
+<h2>GitHubから現在の開発ブランチをインストールする<a class="headerlink" href="#installing-the-current-development-branch-from-github" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>PyVistaに実装されているが，まだリリースされていない機能やバグ修正があるかもしれません．githubの最新の開発ブランチから <code class="docutils literal notranslate"><span class="pre">pyvista</span></code> をインストールするには，以下のいずれかを使用します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">U</span> <span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">pyvista</span><span class="o">/</span><span class="n">pyvista</span><span class="o">.</span><span class="n">git</span><span class="nd">@main</span>
 </pre></div>
 </div>
-<p>Alternatively, you can clone the repository with git and install it with pip.</p>
+<p>あるいは，gitを使ってリポジトリーのクローンを作成し，pipを使ってインストールすることもできます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">pyvista</span><span class="o">/</span><span class="n">pyvista</span><span class="o">.</span><span class="n">git</span>
 <span class="n">cd</span> <span class="n">pyvista</span>
 <span class="n">pip</span> <span class="n">install</span> <span class="o">.</span> <span class="o">-</span><span class="n">e</span>
 </pre></div>
 </div>
-<p>Note the development flag <code class="docutils literal notranslate"><span class="pre">-e</span></code>.  This allows you to change pyvista in-place without
-having to reinstall it for each change.</p>
-</div>
-<div class="section" id="optional-dependencies">
+<p>開発フラグ <code class="docutils literal notranslate"><span class="pre">-e</span></code> に注意してください． これにより，pyvistaを変更するたびに再インストールすることなく，その場で変更することができます．</p>
+</section>
+<section id="optional-dependencies">
 <h2>オプションの依存関係<a class="headerlink" href="#optional-dependencies" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>次に，オプションの依存関係とその目的の一覧を示します:</p>
 <table class="table">
@@ -467,8 +479,8 @@ having to reinstall it for each change.</p>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="source-developers">
+</section>
+<section id="source-developers">
 <h2>ソース/開発者<a class="headerlink" href="#source-developers" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>あるいは，GitHubから <a class="reference external" href="https://github.com/pyvista/pyvista">PyVista</a> にアクセスして以下のコマンドを実行し，ソースをダウンロード (クローニング) して最新バージョンをインストールすることもできます:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">pyvista</span><span class="o">/</span><span class="n">pyvista</span><span class="o">.</span><span class="n">git</span>
@@ -477,35 +489,35 @@ having to reinstall it for each change.</p>
 </pre></div>
 </div>
 <p>PyVistaの <code class="docutils literal notranslate"><span class="pre">main</span></code> ブランチの最新のドキュメントは <a class="reference external" href="https://dev.pyvista.org">dev.pyvista.org</a> にあります．</p>
-</div>
-<div class="section" id="test-installation">
+</section>
+<section id="test-installation">
 <h2>インストールのテスト<a class="headerlink" href="#test-installation" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>次の例を実行して，インストールをテストできます:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
-<span class="n">examples</span><span class="o">.</span><span class="n">plot_wave</span><span class="p">()</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">demos</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">demos</span><span class="o">.</span><span class="n">plot_wave</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>その他の例とデモを参照してください:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
-<span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">demos</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">demos</span>
 
-<span class="c1"># list all examples</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">examples</span><span class="p">))</span>
+<span class="go">List all available examples.</span>
 
-<span class="c1"># list all demos</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">demos</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">examples</span><span class="p">))</span>
+
+<span class="go">List all available demos.</span>
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
 <p>ソースリポジトリーのクローンを作成すると，より包括的なテストスイートを使用できるようになります．PyVistaソースをクローンしてテストする方法の詳細については，我々の <a class="reference external" href="https://github.com/pyvista/pyvista/blob/main/CONTRIBUTING.md">Contributing Guide</a>  ，特に <a class="reference external" href="https://github.com/pyvista/pyvista/blob/main/CONTRIBUTING.md#testing">Testing</a> のセクションをご覧ください．</p>
 </div>
-</div>
-<div class="section" id="running-on-ci-services">
+</section>
+<section id="running-on-ci-services">
 <h2>CIサービスでの実行<a class="headerlink" href="#running-on-ci-services" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>TravisやAzure PipelinesのようなCIサービスをPyVistaで動作させるための設定の詳細については <a class="reference external" href="https://github.com/pyvista/gl-ci-helpers">pyvista/gl-ci-hepers</a> を参照してください．</p>
-</div>
-<div class="section" id="running-on-mybinder">
+</section>
+<section id="running-on-mybinder">
 <h2>MyBinderでの実行<a class="headerlink" href="#running-on-mybinder" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>このセクションは， <a class="reference external" href="https://mybinder.org">MyBinder</a> のようなノートブックホスティングサービスで，ヘッドレスディスプレイでPyVistaをインストールして使いたい上級ユーザ向けです．</p>
 <p>ノートPCホスティングサービス <a class="reference external" href="https://mybinder.org">MyBinder</a> でPyVistaを使い始めるのに便利な <a class="reference external" href="https://github.com/cookiecutter/cookiecutter">Cookiecutter</a> については <a class="reference external" href="https://github.com/pyvista/cookiecutter-pyvista-binder">this project</a> を見てください．</p>
@@ -528,8 +540,8 @@ sleep <span class="m">3</span>
 </pre></div>
 </div>
 <p>以上です!Python要件にPyVistaを組み込んで，データを視覚化しましょう．これらのタイプのサービスのためにPyVistaをセットアップするのにこれ以上の助けが必要なら，Slackで開発者とチャットするか，MyBinderで現在PyVistaを使っている <a class="reference external" href="https://github.com/OpenGeoVis/PVGeo-Examples">this repository</a> を見てください．</p>
-</div>
-<div class="section" id="running-on-remote-servers">
+</section>
+<section id="running-on-remote-servers">
 <h2>リモートサーバーでの実行<a class="headerlink" href="#running-on-remote-servers" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>リモートサーバでPyVistaを使うには，上記のDockerの場合と同様のセットアップ手順が必要です．例として，AWS EC 2 Ubuntu 18.04 LTS ( <code class="docutils literal notranslate"><span class="pre">us-east-1</span></code> の  <code class="docutils literal notranslate"><span class="pre">ami-0a313d6098716f372</span></code> )でPyVistaを使うための完全なステップを以下に示します．他のサーバも同様に動作します．</p>
 <p>リモートサーバにログインしたら，Minicondaと関連するパッケージをインストールします:</p>
@@ -563,8 +575,8 @@ jupyter notebook --NotebookApp.token<span class="o">=</span><span class="s1">&#3
 </pre></div>
 </div>
 <p>Webブラウザで <code class="docutils literal notranslate"><span class="pre">localhost:8888</span></code> にアクセスします．</p>
-</div>
-<div class="section" id="running-with-sphinx-gallery">
+</section>
+<section id="running-with-sphinx-gallery">
 <h2>Sphinx-Galleryでの実行<a class="headerlink" href="#running-with-sphinx-gallery" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>あなたの <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> に, 次を追加します．</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span>
@@ -586,8 +598,8 @@ jupyter notebook --NotebookApp.token<span class="o">=</span><span class="s1">&#3
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
               </div>
@@ -599,30 +611,19 @@ jupyter notebook --NotebookApp.token<span class="o">=</span><span class="s1">&#3
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
-
-  
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
-<script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-140243896-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 <footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright 2017-2021, The PyVista Developers.<br/>
+    &copy; Copyright 2017-2021, The PyVista Developers.<br>
 </p>
     </div>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.2.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
 </p>
     </div>
     

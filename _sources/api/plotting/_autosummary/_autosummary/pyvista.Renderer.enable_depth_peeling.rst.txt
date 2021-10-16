@@ -1,6 +1,0 @@
-pyvista.Renderer.enable\_depth\_peeling
-=======================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Renderer.enable_depth_peeling

@@ -1,6 +1,0 @@
-pyvista.Plotter.remove\_legend
-==============================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Plotter.remove_legend

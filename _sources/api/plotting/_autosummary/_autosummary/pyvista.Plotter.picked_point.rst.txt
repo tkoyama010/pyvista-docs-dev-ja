@@ -1,6 +1,0 @@
-pyvista.Plotter.picked\_point
-=============================
-
-.. currentmodule:: pyvista
-
-.. autoattribute:: Plotter.picked_point

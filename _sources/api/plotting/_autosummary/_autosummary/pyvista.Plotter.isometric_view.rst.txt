@@ -1,6 +1,0 @@
-pyvista.Plotter.isometric\_view
-===============================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Plotter.isometric_view

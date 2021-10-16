@@ -1,6 +1,0 @@
-pyvista.BasePlotter.add\_arrows
-===============================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.add_arrows

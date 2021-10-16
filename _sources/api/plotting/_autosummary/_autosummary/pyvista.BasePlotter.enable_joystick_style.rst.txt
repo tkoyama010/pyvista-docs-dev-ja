@@ -1,6 +1,0 @@
-pyvista.BasePlotter.enable\_joystick\_style
-===========================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.enable_joystick_style

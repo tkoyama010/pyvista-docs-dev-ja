@@ -1,6 +1,0 @@
-pyvista.BasePlotter.enable\_path\_picking
-=========================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.enable_path_picking

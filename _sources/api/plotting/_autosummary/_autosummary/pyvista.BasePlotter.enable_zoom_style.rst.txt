@@ -1,6 +1,0 @@
-pyvista.BasePlotter.enable\_zoom\_style
-=======================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.enable_zoom_style

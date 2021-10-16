@@ -1,6 +1,0 @@
-pyvista.BasePlotter.update\_scalars
-===================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.update_scalars

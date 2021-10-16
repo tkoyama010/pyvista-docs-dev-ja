@@ -1,5 +1,5 @@
-﻿pyvista.ParametricFigure8Klein
-==============================
+﻿ParametricFigure8Klein
+======================
 
 .. currentmodule:: pyvista
 

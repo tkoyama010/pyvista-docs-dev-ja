@@ -1,6 +1,0 @@
-pyvista.DataSetFilters.warp\_by\_scalar
-=======================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSetFilters.warp_by_scalar

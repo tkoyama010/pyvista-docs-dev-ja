@@ -1,6 +1,0 @@
-pyvista.Renderer.camera
-=======================
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: Renderer.camera

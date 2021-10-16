@@ -1,6 +1,0 @@
-pyvista.DataSetFilters.decimate\_boundary
-=========================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSetFilters.decimate_boundary

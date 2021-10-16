@@ -1,6 +1,0 @@
-pyvista.BasePlotter.add\_key\_event
-===================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.add_key_event

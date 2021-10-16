@@ -1,6 +1,0 @@
-pyvista.DataSetFilters.slice\_orthogonal
-========================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSetFilters.slice_orthogonal

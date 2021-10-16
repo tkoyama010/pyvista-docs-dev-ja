@@ -1,6 +1,0 @@
-pyvista.UnstructuredGridFilters.extract\_largest
-================================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: UnstructuredGridFilters.extract_largest

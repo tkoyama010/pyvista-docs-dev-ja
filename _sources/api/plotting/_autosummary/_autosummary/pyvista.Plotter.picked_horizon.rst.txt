@@ -1,6 +1,0 @@
-pyvista.Plotter.picked\_horizon
-===============================
-
-.. currentmodule:: pyvista
-
-.. autoattribute:: Plotter.picked_horizon

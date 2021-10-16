@@ -1,6 +1,0 @@
-pyvista.PolyDataFilters.clip\_box
-=================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.clip_box

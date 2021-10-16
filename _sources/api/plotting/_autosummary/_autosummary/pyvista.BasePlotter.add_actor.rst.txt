@@ -1,6 +1,0 @@
-pyvista.BasePlotter.add\_actor
-==============================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.add_actor

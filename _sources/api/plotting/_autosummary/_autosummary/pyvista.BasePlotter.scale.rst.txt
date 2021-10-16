@@ -1,6 +1,0 @@
-pyvista.BasePlotter.scale
-=========================
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: BasePlotter.scale

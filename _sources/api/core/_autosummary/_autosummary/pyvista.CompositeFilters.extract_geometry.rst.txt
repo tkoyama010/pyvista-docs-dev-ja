@@ -1,6 +1,0 @@
-pyvista.CompositeFilters.extract\_geometry
-==========================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: CompositeFilters.extract_geometry

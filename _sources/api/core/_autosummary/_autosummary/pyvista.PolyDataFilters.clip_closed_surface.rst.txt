@@ -1,6 +1,0 @@
-pyvista.PolyDataFilters.clip\_closed\_surface
-=============================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.clip_closed_surface

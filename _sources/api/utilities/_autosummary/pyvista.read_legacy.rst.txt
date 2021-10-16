@@ -1,5 +1,5 @@
-﻿pyvista.read\_legacy
-====================
+﻿read\_legacy
+============
 
 .. currentmodule:: pyvista
 

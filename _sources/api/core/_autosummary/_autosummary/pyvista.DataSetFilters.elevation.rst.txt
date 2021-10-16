@@ -1,6 +1,0 @@
-pyvista.DataSetFilters.elevation
-================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSetFilters.elevation

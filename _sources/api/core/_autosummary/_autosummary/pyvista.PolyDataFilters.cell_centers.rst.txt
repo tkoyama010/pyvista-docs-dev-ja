@@ -1,6 +1,0 @@
-pyvista.PolyDataFilters.cell\_centers
-=====================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.cell_centers

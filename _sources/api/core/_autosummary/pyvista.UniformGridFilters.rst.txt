@@ -11,7 +11,7 @@
    .. rubric:: Methods
 
    .. autosummary::
-      :toctree: _autosummary
+      :toctree:
    
       
       
@@ -123,6 +123,9 @@
       UniformGridFilters.ptc
       
       
+      UniformGridFilters.reconstruct_surface
+      
+      
       UniformGridFilters.reflect
       
       
@@ -160,6 +163,9 @@
       
       
       UniformGridFilters.streamlines
+      
+      
+      UniformGridFilters.streamlines_evenly_spaced_2D
       
       
       UniformGridFilters.streamlines_from_source

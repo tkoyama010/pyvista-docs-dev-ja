@@ -1,6 +1,0 @@
-pyvista.DataSetFilters.extract\_all\_edges
-==========================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSetFilters.extract_all_edges

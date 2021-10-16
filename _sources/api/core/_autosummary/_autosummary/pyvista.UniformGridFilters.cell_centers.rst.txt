@@ -1,6 +1,0 @@
-pyvista.UniformGridFilters.cell\_centers
-========================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: UniformGridFilters.cell_centers

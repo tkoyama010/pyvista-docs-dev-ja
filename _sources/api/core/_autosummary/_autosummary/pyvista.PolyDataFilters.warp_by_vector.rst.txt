@@ -1,6 +1,0 @@
-pyvista.PolyDataFilters.warp\_by\_vector
-========================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.warp_by_vector

@@ -11,7 +11,7 @@
    .. rubric:: Methods
 
    .. autosummary::
-      :toctree: _autosummary
+      :toctree:
    
       
       
@@ -37,6 +37,9 @@
       
       
       Plotter.add_checkbox_button_widget
+      
+      
+      Plotter.add_cursor
       
       
       Plotter.add_floor
@@ -97,6 +100,9 @@
       
       
       Plotter.add_scalar_bar
+      
+      
+      Plotter.add_silhouette
       
       
       Plotter.add_slider_widget
@@ -168,6 +174,9 @@
       Plotter.disable_eye_dome_lighting
       
       
+      Plotter.disable_hidden_line_removal
+      
+      
       Plotter.disable_parallel_projection
       
       
@@ -196,6 +205,9 @@
       
       
       Plotter.enable_geodesic_picking
+      
+      
+      Plotter.enable_hidden_line_removal
       
       
       Plotter.enable_horizon_picking
@@ -243,6 +255,12 @@
       Plotter.enable_zoom_style
       
       
+      Plotter.export_gltf
+      
+      
+      Plotter.export_html
+      
+      
       Plotter.export_obj
       
       
@@ -271,6 +289,9 @@
       
       
       Plotter.hide_axes_all
+      
+      
+      Plotter.import_gltf
       
       
       Plotter.increment_point_size_and_line_width
@@ -390,6 +411,9 @@
       Plotter.subplot
       
       
+      Plotter.to_pythreejs
+      
+      
       Plotter.track_click_position
       
       
@@ -457,7 +481,7 @@
    .. rubric:: Attributes
 
    .. autosummary::
-      :toctree: _autosummary
+      :toctree:
    
       
       Plotter.background_color

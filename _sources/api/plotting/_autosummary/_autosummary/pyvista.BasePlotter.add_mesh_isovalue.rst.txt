@@ -1,6 +1,0 @@
-pyvista.BasePlotter.add\_mesh\_isovalue
-=======================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.add_mesh_isovalue

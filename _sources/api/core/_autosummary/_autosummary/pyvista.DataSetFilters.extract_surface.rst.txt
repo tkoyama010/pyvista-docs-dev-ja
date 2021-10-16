@@ -1,6 +1,0 @@
-pyvista.DataSetFilters.extract\_surface
-=======================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSetFilters.extract_surface

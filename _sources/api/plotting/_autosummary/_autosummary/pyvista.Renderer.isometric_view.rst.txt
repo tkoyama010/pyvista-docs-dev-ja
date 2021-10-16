@@ -1,6 +1,0 @@
-pyvista.Renderer.isometric\_view
-================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Renderer.isometric_view

@@ -1,6 +1,0 @@
-pyvista.Renderer.view\_xz
-=========================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Renderer.view_xz

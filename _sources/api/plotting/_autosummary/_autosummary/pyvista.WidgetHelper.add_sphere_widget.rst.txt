@@ -1,6 +1,0 @@
-pyvista.WidgetHelper.add\_sphere\_widget
-========================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: WidgetHelper.add_sphere_widget

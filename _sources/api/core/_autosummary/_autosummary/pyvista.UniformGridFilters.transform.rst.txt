@@ -1,6 +1,0 @@
-pyvista.UniformGridFilters.transform
-====================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: UniformGridFilters.transform

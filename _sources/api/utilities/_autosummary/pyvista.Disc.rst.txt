@@ -1,5 +1,5 @@
-﻿pyvista.Disc
-============
+﻿Disc
+====
 
 .. currentmodule:: pyvista
 

@@ -1,6 +1,0 @@
-pyvista.BasePlotter.deep\_clean
-===============================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.deep_clean

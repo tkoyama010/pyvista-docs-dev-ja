@@ -1,6 +1,0 @@
-pyvista.BasePlotter.get\_pick\_position
-=======================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.get_pick_position

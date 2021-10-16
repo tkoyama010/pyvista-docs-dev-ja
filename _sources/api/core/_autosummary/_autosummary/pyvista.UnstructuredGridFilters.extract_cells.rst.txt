@@ -1,6 +1,0 @@
-pyvista.UnstructuredGridFilters.extract\_cells
-==============================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: UnstructuredGridFilters.extract_cells

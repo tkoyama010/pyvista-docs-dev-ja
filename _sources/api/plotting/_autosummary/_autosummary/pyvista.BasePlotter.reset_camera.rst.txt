@@ -1,6 +1,0 @@
-pyvista.BasePlotter.reset\_camera
-=================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.reset_camera

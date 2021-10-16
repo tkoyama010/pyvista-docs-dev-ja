@@ -1,6 +1,0 @@
-pyvista.PolyDataFilters.shrink
-==============================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.shrink

@@ -2,5 +2,5 @@
 #
 import pyvista
 mesh = pyvista.Plane()
-mesh.point_arrays.clear()
+mesh.point_data.clear()
 mesh.plot(show_edges=True)

@@ -1,6 +1,0 @@
-pyvista.PolyDataFilters.delaunay\_3d
-====================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.delaunay_3d

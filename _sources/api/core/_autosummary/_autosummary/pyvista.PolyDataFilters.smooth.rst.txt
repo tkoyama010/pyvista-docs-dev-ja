@@ -1,6 +1,0 @@
-pyvista.PolyDataFilters.smooth
-==============================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.smooth

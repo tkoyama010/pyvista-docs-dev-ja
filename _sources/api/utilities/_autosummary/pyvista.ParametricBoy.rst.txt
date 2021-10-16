@@ -1,5 +1,5 @@
-﻿pyvista.ParametricBoy
-=====================
+﻿ParametricBoy
+=============
 
 .. currentmodule:: pyvista
 

@@ -1,6 +1,0 @@
-pyvista.BasePlotter.clear\_plane\_widgets
-=========================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.clear_plane_widgets

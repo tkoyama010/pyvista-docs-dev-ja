@@ -1,6 +1,0 @@
-pyvista.PolyDataFilters.boolean\_union
-======================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.boolean_union

@@ -1,6 +1,0 @@
-pyvista.Camera.thickness
-========================
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: Camera.thickness

@@ -1,6 +1,0 @@
-pyvista.BasePlotter.unlink\_views
-=================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.unlink_views

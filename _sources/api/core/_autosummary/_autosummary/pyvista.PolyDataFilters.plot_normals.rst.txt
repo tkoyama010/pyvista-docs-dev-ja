@@ -1,6 +1,0 @@
-pyvista.PolyDataFilters.plot\_normals
-=====================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.plot_normals

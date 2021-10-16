@@ -1,6 +1,0 @@
-pyvista.UniformGridFilters.threshold
-====================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: UniformGridFilters.threshold

@@ -1,5 +1,5 @@
-﻿pyvista.vector\_poly\_data
-==========================
+﻿vector\_poly\_data
+==================
 
 .. currentmodule:: pyvista
 

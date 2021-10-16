@@ -1,6 +1,0 @@
-pyvista.BasePlotter.remove\_scalar\_bar
-=======================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.remove_scalar_bar

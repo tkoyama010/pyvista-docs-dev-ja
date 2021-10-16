@@ -1,6 +1,0 @@
-pyvista.PolyDataFilters.surface\_indices
-========================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.surface_indices

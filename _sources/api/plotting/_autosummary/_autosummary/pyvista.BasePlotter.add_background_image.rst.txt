@@ -1,6 +1,0 @@
-pyvista.BasePlotter.add\_background\_image
-==========================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.add_background_image

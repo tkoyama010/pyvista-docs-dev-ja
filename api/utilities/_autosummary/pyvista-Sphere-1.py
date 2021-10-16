@@ -2,7 +2,7 @@
 #
 import pyvista
 sphere = pyvista.Sphere()
-cpos = sphere.plot(show_edges=True)
+sphere.plot(show_edges=True)
 #
 # Create a quarter sphere by setting ``end_theta``.
 #

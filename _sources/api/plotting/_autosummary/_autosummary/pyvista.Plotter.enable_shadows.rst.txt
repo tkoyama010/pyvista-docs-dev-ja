@@ -1,6 +1,0 @@
-pyvista.Plotter.enable\_shadows
-===============================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Plotter.enable_shadows

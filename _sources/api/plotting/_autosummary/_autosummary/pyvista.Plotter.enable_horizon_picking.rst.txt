@@ -1,6 +1,0 @@
-pyvista.Plotter.enable\_horizon\_picking
-========================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Plotter.enable_horizon_picking

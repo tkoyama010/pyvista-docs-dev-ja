@@ -11,7 +11,7 @@
    .. rubric:: Methods
 
    .. autosummary::
-      :toctree: _autosummary
+      :toctree:
    
       
       
@@ -60,6 +60,9 @@
       Renderer.disable_eye_dome_lighting
       
       
+      Renderer.disable_hidden_line_removal
+      
+      
       Renderer.disable_parallel_projection
       
       
@@ -76,6 +79,9 @@
       
       
       Renderer.enable_eye_dome_lighting
+      
+      
+      Renderer.enable_hidden_line_removal
       
       
       Renderer.enable_parallel_projection
@@ -178,7 +184,7 @@
    .. rubric:: Attributes
 
    .. autosummary::
-      :toctree: _autosummary
+      :toctree:
    
       
       
@@ -453,6 +459,12 @@
       Renderer.background_color
       
       
+      Renderer.border_color
+      
+      
+      Renderer.border_width
+      
+      
       Renderer.bounds
       
       
@@ -465,6 +477,15 @@
       Renderer.center
       
       
+      Renderer.has_border
+      
+      
+      Renderer.height
+      
+      
+      Renderer.layer
+      
+      
       Renderer.length
       
       
@@ -475,6 +496,12 @@
       
       
       Renderer.parallel_scale
+      
+      
+      Renderer.viewport
+      
+      
+      Renderer.width
       
    
    

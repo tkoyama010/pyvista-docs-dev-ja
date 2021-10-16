@@ -1,6 +1,0 @@
-pyvista.Plotter.update
-======================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Plotter.update

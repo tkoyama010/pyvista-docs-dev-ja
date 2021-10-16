@@ -1,6 +1,0 @@
-pyvista.UnstructuredGridFilters.compute\_derivative
-===================================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: UnstructuredGridFilters.compute_derivative

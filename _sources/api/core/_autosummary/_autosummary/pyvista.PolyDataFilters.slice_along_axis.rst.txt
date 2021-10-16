@@ -1,6 +1,0 @@
-pyvista.PolyDataFilters.slice\_along\_axis
-==========================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.slice_along_axis

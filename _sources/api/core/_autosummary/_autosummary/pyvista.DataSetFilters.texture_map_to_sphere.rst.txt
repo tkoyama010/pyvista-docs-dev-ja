@@ -1,6 +1,0 @@
-pyvista.DataSetFilters.texture\_map\_to\_sphere
-===============================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSetFilters.texture_map_to_sphere

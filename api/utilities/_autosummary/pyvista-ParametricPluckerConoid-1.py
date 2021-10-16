@@ -1,5 +1,5 @@
-# Create a ParametricPluckerConoid mesh
+# Create a ParametricPluckerConoid mesh.
 #
 import pyvista
 mesh = pyvista.ParametricPluckerConoid()
-cpos = mesh.plot(color='w', smooth_shading=True)
+mesh.plot(color='w', smooth_shading=True)

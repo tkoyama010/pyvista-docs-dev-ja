@@ -1,6 +1,0 @@
-pyvista.BasePlotter.window\_size
-================================
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: BasePlotter.window_size

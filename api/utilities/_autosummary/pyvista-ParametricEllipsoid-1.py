@@ -2,4 +2,4 @@
 #
 import pyvista
 mesh = pyvista.ParametricEllipsoid()
-cpos = mesh.plot(color='w', smooth_shading=True)
+mesh.plot(color='w', smooth_shading=True)

@@ -1,6 +1,0 @@
-pyvista.PolyDataFilters.clean
-=============================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.clean

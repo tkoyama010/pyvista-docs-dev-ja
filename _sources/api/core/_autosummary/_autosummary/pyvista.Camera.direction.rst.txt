@@ -1,6 +1,0 @@
-pyvista.Camera.direction
-========================
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: Camera.direction

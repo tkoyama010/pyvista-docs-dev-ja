@@ -1,6 +1,0 @@
-pyvista.UnstructuredGridFilters.select\_enclosed\_points
-========================================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: UnstructuredGridFilters.select_enclosed_points

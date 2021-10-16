@@ -1,6 +1,0 @@
-pyvista.Light.intensity
-=======================
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: Light.intensity

@@ -1,6 +1,0 @@
-pyvista.DataSetFilters.reflect
-==============================
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSetFilters.reflect

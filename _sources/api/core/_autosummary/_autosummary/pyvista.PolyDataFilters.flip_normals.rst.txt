@@ -1,6 +1,0 @@
-pyvista.PolyDataFilters.flip\_normals
-=====================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.flip_normals

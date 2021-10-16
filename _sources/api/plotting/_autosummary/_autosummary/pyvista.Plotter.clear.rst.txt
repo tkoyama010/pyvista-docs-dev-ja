@@ -1,6 +1,0 @@
-pyvista.Plotter.clear
-=====================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Plotter.clear

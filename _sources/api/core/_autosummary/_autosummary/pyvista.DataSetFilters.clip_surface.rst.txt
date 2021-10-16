@@ -1,6 +1,0 @@
-pyvista.DataSetFilters.clip\_surface
-====================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSetFilters.clip_surface

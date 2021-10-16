@@ -1,6 +1,0 @@
-pyvista.BasePlotter.scalar\_bar
-===============================
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: BasePlotter.scalar_bar

@@ -1,5 +1,5 @@
-﻿pyvista.Arrow
-=============
+﻿Arrow
+=====
 
 .. currentmodule:: pyvista
 

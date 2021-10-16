@@ -1,6 +1,0 @@
-pyvista.PolyDataFilters.slice
-=============================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.slice

@@ -1,6 +1,0 @@
-pyvista.PolyDataFilters.compute\_cell\_sizes
-============================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.compute_cell_sizes

@@ -1,5 +1,5 @@
-﻿pyvista.parametric\_keywords
-============================
+﻿parametric\_keywords
+====================
 
 .. currentmodule:: pyvista
 

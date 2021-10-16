@@ -1,5 +1,5 @@
-﻿pyvista.is\_pyvista\_dataset
-============================
+﻿is\_pyvista\_dataset
+====================
 
 .. currentmodule:: pyvista
 

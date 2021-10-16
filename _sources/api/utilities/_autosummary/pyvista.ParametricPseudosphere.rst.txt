@@ -1,5 +1,5 @@
-﻿pyvista.ParametricPseudosphere
-==============================
+﻿ParametricPseudosphere
+======================
 
 .. currentmodule:: pyvista
 

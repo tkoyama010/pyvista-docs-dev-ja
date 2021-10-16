@@ -11,7 +11,7 @@
    .. rubric:: Methods
 
    .. autosummary::
-      :toctree: _autosummary
+      :toctree:
    
       
       
@@ -22,6 +22,9 @@
       
       
       PolyDataFilters.boolean_difference
+      
+      
+      PolyDataFilters.boolean_intersection
       
       
       PolyDataFilters.boolean_union
@@ -49,6 +52,9 @@
       
       
       PolyDataFilters.clip_surface
+      
+      
+      PolyDataFilters.collision
       
       
       PolyDataFilters.compute_arc_length
@@ -195,6 +201,9 @@
       PolyDataFilters.ray_trace
       
       
+      PolyDataFilters.reconstruct_surface
+      
+      
       PolyDataFilters.reflect
       
       
@@ -241,6 +250,9 @@
       
       
       PolyDataFilters.streamlines
+      
+      
+      PolyDataFilters.streamlines_evenly_spaced_2D
       
       
       PolyDataFilters.streamlines_from_source

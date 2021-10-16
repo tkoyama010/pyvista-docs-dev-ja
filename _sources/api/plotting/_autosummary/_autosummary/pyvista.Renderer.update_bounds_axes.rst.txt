@@ -1,6 +1,0 @@
-pyvista.Renderer.update\_bounds\_axes
-=====================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Renderer.update_bounds_axes

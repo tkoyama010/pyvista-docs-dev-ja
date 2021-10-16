@@ -1,6 +1,0 @@
-pyvista.DataSetFilters.compute\_cell\_sizes
-===========================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSetFilters.compute_cell_sizes

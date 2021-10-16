@@ -1,6 +1,0 @@
-pyvista.Plotter.add\_actor
-==========================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Plotter.add_actor

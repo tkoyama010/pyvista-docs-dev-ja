@@ -1,5 +1,5 @@
-﻿pyvista.Cylinder
-================
+﻿Cylinder
+========
 
 .. currentmodule:: pyvista
 

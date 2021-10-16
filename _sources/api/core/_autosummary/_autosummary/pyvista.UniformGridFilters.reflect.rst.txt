@@ -1,6 +1,0 @@
-pyvista.UniformGridFilters.reflect
-==================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: UniformGridFilters.reflect

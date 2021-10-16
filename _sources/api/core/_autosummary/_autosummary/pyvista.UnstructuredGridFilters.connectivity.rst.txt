@@ -1,6 +1,0 @@
-pyvista.UnstructuredGridFilters.connectivity
-============================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: UnstructuredGridFilters.connectivity

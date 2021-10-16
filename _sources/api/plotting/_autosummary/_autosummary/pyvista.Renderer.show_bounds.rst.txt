@@ -1,6 +1,0 @@
-pyvista.Renderer.show\_bounds
-=============================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Renderer.show_bounds

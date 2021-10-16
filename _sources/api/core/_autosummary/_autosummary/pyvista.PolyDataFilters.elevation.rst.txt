@@ -1,6 +1,0 @@
-pyvista.PolyDataFilters.elevation
-=================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.elevation

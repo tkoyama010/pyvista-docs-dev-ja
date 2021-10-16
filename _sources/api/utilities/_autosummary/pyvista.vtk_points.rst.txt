@@ -1,5 +1,5 @@
-﻿pyvista.vtk\_points
-===================
+﻿vtk\_points
+===========
 
 .. currentmodule:: pyvista
 

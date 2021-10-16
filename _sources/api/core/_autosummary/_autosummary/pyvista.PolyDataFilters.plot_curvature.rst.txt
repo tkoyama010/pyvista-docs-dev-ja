@@ -1,6 +1,0 @@
-pyvista.PolyDataFilters.plot\_curvature
-=======================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.plot_curvature

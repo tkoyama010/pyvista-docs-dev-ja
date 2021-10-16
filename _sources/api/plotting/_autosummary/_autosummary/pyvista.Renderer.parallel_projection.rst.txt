@@ -1,6 +1,0 @@
-pyvista.Renderer.parallel\_projection
-=====================================
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: Renderer.parallel_projection

@@ -1,5 +1,5 @@
-﻿pyvista.ParametricEnneper
-=========================
+﻿ParametricEnneper
+=================
 
 .. currentmodule:: pyvista
 

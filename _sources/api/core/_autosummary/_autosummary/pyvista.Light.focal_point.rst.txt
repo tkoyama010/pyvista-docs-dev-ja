@@ -1,6 +1,0 @@
-pyvista.Light.focal\_point
-==========================
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: Light.focal_point

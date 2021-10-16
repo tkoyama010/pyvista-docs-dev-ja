@@ -1,5 +1,5 @@
-﻿pyvista.set\_plot\_theme
-========================
+﻿set\_plot\_theme
+================
 
 .. currentmodule:: pyvista
 

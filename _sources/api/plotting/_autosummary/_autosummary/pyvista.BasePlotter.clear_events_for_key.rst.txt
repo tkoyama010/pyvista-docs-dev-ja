@@ -1,6 +1,0 @@
-pyvista.BasePlotter.clear\_events\_for\_key
-===========================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.clear_events_for_key

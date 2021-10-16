@@ -1,6 +1,0 @@
-pyvista.UnstructuredGridFilters.warp\_by\_scalar
-================================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: UnstructuredGridFilters.warp_by_scalar

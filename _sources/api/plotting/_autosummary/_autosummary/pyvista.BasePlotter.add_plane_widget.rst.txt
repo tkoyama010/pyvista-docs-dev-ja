@@ -1,6 +1,0 @@
-pyvista.BasePlotter.add\_plane\_widget
-======================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.add_plane_widget

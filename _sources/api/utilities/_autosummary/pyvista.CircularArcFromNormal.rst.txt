@@ -1,5 +1,5 @@
-﻿pyvista.CircularArcFromNormal
-=============================
+﻿CircularArcFromNormal
+=====================
 
 .. currentmodule:: pyvista
 

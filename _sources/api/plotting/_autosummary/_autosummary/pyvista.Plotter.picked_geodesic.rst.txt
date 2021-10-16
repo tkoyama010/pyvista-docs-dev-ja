@@ -1,6 +1,0 @@
-pyvista.Plotter.picked\_geodesic
-================================
-
-.. currentmodule:: pyvista
-
-.. autoattribute:: Plotter.picked_geodesic

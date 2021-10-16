@@ -1,6 +1,0 @@
-pyvista.Plotter.click\_position
-===============================
-
-.. currentmodule:: pyvista
-
-.. autoattribute:: Plotter.click_position

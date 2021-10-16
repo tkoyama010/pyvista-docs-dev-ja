@@ -1,6 +1,0 @@
-pyvista.DataSetFilters.slice
-============================
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSetFilters.slice

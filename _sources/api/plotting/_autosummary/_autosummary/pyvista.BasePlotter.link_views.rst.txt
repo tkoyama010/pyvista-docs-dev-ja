@@ -1,6 +1,0 @@
-pyvista.BasePlotter.link\_views
-===============================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.link_views

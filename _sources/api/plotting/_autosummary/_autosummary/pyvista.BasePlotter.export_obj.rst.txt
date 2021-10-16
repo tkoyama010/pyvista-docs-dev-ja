@@ -1,6 +1,0 @@
-pyvista.BasePlotter.export\_obj
-===============================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.export_obj

@@ -1,6 +1,0 @@
-pyvista.Light.copy
-==================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Light.copy

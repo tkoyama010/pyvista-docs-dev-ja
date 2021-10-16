@@ -1,6 +1,0 @@
-pyvista.WidgetHelper.clear\_line\_widgets
-=========================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: WidgetHelper.clear_line_widgets

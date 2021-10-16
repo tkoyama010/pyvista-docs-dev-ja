@@ -1,6 +1,0 @@
-pyvista.Plotter.add\_key\_event
-===============================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Plotter.add_key_event

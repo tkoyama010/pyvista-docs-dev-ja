@@ -1,5 +1,5 @@
-﻿pyvista.surface\_from\_para
-===========================
+﻿surface\_from\_para
+===================
 
 .. currentmodule:: pyvista
 

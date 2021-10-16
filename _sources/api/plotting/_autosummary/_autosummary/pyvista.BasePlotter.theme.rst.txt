@@ -1,6 +1,0 @@
-pyvista.BasePlotter.theme
-=========================
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: BasePlotter.theme

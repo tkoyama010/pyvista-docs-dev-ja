@@ -1,6 +1,0 @@
-pyvista.CompositeFilters.compute\_cell\_sizes
-=============================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: CompositeFilters.compute_cell_sizes

@@ -1,6 +1,0 @@
-pyvista.PolyDataFilters.outline
-===============================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.outline

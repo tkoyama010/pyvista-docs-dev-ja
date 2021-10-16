@@ -1,6 +1,0 @@
-pyvista.DataSetFilters.interpolate
-==================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSetFilters.interpolate

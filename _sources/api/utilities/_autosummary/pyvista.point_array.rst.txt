@@ -1,5 +1,5 @@
-﻿pyvista.point\_array
-====================
+﻿point\_array
+============
 
 .. currentmodule:: pyvista
 

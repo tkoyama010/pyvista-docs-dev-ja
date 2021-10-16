@@ -1,6 +1,0 @@
-pyvista.BasePlotter.enable\_fly\_to\_right\_click
-=================================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.enable_fly_to_right_click

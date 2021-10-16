@@ -1,6 +1,0 @@
-pyvista.BasePlotter.add\_light
-==============================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.add_light

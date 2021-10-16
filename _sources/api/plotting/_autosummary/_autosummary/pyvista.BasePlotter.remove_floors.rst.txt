@@ -1,6 +1,0 @@
-pyvista.BasePlotter.remove\_floors
-==================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.remove_floors

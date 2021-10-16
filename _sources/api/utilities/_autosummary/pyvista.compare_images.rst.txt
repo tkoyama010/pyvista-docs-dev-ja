@@ -1,5 +1,5 @@
-﻿pyvista.compare\_images
-=======================
+﻿compare\_images
+===============
 
 .. currentmodule:: pyvista
 

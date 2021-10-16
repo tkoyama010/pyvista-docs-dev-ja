@@ -1,6 +1,0 @@
-pyvista.UnstructuredGridFilters.extract\_points
-===============================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: UnstructuredGridFilters.extract_points

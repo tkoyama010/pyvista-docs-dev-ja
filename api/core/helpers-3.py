@@ -1,7 +1,5 @@
-# This example plots two line segments at right angles to each other.
-#
-import pyvista
 import numpy as np
-points = np.array([[0, 0, 0], [1, 0, 0], [1, 0, 0], [1, 1, 0]])
-lines = pyvista.lines_from_points(points)
-cpos = lines.plot()
+import pyvista
+points = np.array([[0, 0, 0], [1, 0, 0], [1, 1, 0]])
+poly = pyvista.lines_from_points(points)
+poly.plot(line_width=5)

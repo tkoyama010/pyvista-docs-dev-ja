@@ -1,6 +1,0 @@
-pyvista.CompositeFilters.combine
-================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: CompositeFilters.combine

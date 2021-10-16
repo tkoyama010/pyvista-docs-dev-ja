@@ -1,6 +1,0 @@
-pyvista.UnstructuredGridFilters.slice
-=====================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: UnstructuredGridFilters.slice

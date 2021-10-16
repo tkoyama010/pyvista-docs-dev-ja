@@ -1,6 +1,0 @@
-pyvista.Plotter.renderer
-========================
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: Plotter.renderer

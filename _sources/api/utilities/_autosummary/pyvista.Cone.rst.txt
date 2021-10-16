@@ -1,5 +1,5 @@
-﻿pyvista.Cone
-============
+﻿Cone
+====
 
 .. currentmodule:: pyvista
 

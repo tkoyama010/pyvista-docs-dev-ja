@@ -1,6 +1,0 @@
-pyvista.PolyDataFilters.remove\_points
-======================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.remove_points

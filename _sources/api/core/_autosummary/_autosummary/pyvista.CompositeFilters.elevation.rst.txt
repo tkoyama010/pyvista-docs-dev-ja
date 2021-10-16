@@ -1,6 +1,0 @@
-pyvista.CompositeFilters.elevation
-==================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: CompositeFilters.elevation

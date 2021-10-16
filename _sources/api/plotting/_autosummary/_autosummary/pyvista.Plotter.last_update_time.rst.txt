@@ -1,6 +1,0 @@
-pyvista.Plotter.last\_update\_time
-==================================
-
-.. currentmodule:: pyvista
-
-.. autoattribute:: Plotter.last_update_time

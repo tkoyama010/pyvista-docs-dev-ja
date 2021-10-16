@@ -1,6 +1,0 @@
-pyvista.DataSetFilters.split\_bodies
-====================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSetFilters.split_bodies

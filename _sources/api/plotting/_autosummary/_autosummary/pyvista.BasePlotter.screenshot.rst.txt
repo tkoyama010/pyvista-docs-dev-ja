@@ -1,6 +1,0 @@
-pyvista.BasePlotter.screenshot
-==============================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.screenshot

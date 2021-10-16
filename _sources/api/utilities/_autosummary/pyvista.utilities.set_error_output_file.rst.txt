@@ -1,5 +1,5 @@
-﻿pyvista.utilities.set\_error\_output\_file
-==========================================
+﻿set\_error\_output\_file
+========================
 
 .. currentmodule:: pyvista.utilities
 

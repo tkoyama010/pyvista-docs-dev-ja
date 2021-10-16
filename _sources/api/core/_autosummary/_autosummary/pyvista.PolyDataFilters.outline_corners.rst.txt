@@ -1,6 +1,0 @@
-pyvista.PolyDataFilters.outline\_corners
-========================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.outline_corners

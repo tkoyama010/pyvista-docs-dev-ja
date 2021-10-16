@@ -1,6 +1,0 @@
-pyvista.UnstructuredGridFilters.clip\_scalar
-============================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: UnstructuredGridFilters.clip_scalar

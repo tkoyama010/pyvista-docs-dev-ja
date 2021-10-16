@@ -1,5 +1,5 @@
-﻿pyvista.create\_axes\_orientation\_box
-======================================
+﻿create\_axes\_orientation\_box
+==============================
 
 .. currentmodule:: pyvista
 

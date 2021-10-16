@@ -1,6 +1,0 @@
-pyvista.DataSetFilters.outline\_corners
-=======================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSetFilters.outline_corners

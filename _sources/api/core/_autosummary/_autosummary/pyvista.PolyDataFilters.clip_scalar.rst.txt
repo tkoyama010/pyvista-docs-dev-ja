@@ -1,6 +1,0 @@
-pyvista.PolyDataFilters.clip\_scalar
-====================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.clip_scalar

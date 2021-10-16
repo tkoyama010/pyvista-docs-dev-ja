@@ -1,6 +1,0 @@
-pyvista.UniformGridFilters.triangulate
-======================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: UniformGridFilters.triangulate

@@ -1,6 +1,0 @@
-pyvista.BasePlotter.add\_point\_scalar\_labels
-==============================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.add_point_scalar_labels

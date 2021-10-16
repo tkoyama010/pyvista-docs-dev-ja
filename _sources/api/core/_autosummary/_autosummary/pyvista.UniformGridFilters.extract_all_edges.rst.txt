@@ -1,6 +1,0 @@
-pyvista.UniformGridFilters.extract\_all\_edges
-==============================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: UniformGridFilters.extract_all_edges

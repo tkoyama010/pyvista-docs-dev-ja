@@ -1,6 +1,0 @@
-pyvista.PolyDataFilters.extract\_points
-=======================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.extract_points

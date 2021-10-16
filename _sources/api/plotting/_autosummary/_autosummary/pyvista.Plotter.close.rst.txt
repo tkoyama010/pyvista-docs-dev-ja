@@ -1,6 +1,0 @@
-pyvista.Plotter.close
-=====================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Plotter.close

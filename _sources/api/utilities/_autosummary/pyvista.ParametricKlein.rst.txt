@@ -1,5 +1,5 @@
-﻿pyvista.ParametricKlein
-=======================
+﻿ParametricKlein
+===============
 
 .. currentmodule:: pyvista
 

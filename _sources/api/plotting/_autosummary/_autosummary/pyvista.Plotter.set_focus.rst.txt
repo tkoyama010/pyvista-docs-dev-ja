@@ -1,6 +1,0 @@
-pyvista.Plotter.set\_focus
-==========================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Plotter.set_focus

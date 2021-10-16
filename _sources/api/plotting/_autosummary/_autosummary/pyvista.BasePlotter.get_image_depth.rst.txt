@@ -1,6 +1,0 @@
-pyvista.BasePlotter.get\_image\_depth
-=====================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.get_image_depth

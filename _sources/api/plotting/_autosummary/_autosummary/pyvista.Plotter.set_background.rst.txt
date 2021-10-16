@@ -1,6 +1,0 @@
-pyvista.Plotter.set\_background
-===============================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Plotter.set_background

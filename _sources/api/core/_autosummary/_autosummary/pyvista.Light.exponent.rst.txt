@@ -1,6 +1,0 @@
-pyvista.Light.exponent
-======================
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: Light.exponent

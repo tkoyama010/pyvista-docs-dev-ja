@@ -1,6 +1,0 @@
-pyvista.DataSetFilters.transform
-================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSetFilters.transform

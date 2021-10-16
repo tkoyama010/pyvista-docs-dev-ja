@@ -1,6 +1,0 @@
-pyvista.BasePlotter.clear\_box\_widgets
-=======================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.clear_box_widgets

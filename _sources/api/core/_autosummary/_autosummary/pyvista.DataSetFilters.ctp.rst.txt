@@ -1,6 +1,0 @@
-pyvista.DataSetFilters.ctp
-==========================
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSetFilters.ctp

@@ -1,6 +1,0 @@
-pyvista.PolyDataFilters.transform
-=================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.transform

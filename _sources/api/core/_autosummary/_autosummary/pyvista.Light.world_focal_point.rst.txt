@@ -1,6 +1,0 @@
-pyvista.Light.world\_focal\_point
-=================================
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: Light.world_focal_point

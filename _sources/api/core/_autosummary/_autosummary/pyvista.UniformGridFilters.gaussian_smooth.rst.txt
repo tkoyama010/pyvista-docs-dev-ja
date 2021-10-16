@@ -1,6 +1,0 @@
-pyvista.UniformGridFilters.gaussian\_smooth
-===========================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: UniformGridFilters.gaussian_smooth

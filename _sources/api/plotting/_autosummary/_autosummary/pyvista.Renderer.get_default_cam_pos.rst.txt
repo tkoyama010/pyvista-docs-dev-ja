@@ -1,6 +1,0 @@
-pyvista.Renderer.get\_default\_cam\_pos
-=======================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Renderer.get_default_cam_pos

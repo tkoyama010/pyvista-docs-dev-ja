@@ -1,6 +1,0 @@
-pyvista.PolyDataFilters.boolean\_cut
-====================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.boolean_cut

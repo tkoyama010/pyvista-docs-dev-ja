@@ -1,6 +1,0 @@
-pyvista.UniformGridFilters.texture\_map\_to\_sphere
-===================================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: UniformGridFilters.texture_map_to_sphere

@@ -1,6 +1,0 @@
-pyvista.Renderer.disable\_shadows
-=================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Renderer.disable_shadows

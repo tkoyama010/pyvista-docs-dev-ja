@@ -11,7 +11,7 @@
    .. rubric:: Methods
 
    .. autosummary::
-      :toctree: _autosummary
+      :toctree:
    
       
       
@@ -117,6 +117,9 @@
       DataSetFilters.ptc
       
       
+      DataSetFilters.reconstruct_surface
+      
+      
       DataSetFilters.reflect
       
       
@@ -154,6 +157,9 @@
       
       
       DataSetFilters.streamlines
+      
+      
+      DataSetFilters.streamlines_evenly_spaced_2D
       
       
       DataSetFilters.streamlines_from_source

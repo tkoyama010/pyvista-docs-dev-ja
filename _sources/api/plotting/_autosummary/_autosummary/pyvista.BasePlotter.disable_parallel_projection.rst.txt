@@ -1,6 +1,0 @@
-pyvista.BasePlotter.disable\_parallel\_projection
-=================================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.disable_parallel_projection

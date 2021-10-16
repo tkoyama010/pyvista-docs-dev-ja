@@ -1,5 +1,5 @@
-﻿pyvista.read\_texture
-=====================
+﻿read\_texture
+=============
 
 .. currentmodule:: pyvista
 

@@ -1,5 +1,5 @@
-﻿pyvista.vtkmatrix\_from\_array
-==============================
+﻿vtkmatrix\_from\_array
+======================
 
 .. currentmodule:: pyvista
 

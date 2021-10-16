@@ -1,6 +1,0 @@
-pyvista.PolyDataFilters.sample\_over\_circular\_arc
-===================================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.sample_over_circular_arc

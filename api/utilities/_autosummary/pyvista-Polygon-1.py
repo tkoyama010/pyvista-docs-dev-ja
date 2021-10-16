@@ -1,4 +1,4 @@
-# Create a 8 sided polygon.
+# Create an 8 sided polygon.
 #
 import pyvista
 mesh = pyvista.Polygon(n_sides=8)

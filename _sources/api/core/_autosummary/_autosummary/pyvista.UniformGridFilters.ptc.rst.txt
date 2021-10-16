@@ -1,6 +1,0 @@
-pyvista.UniformGridFilters.ptc
-==============================
-
-.. currentmodule:: pyvista
-
-.. automethod:: UniformGridFilters.ptc

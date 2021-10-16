@@ -1,5 +1,5 @@
-﻿pyvista.Spline
-==============
+﻿Spline
+======
 
 .. currentmodule:: pyvista
 

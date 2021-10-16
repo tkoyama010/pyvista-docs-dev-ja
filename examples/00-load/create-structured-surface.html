@@ -4,11 +4,12 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>構造化サーフェスを作成する &#8212; PyVista 0.31.dev0 ドキュメント</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>構造化サーフェスを作成する &#8212; PyVista 0.32.dev0 ドキュメント</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,20 +24,19 @@
 
     
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery-rendered-html.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -53,8 +53,21 @@
     <link rel="next" title="線分から2 Dサーフェスをまとう" href="create-surface-draped.html" />
     <link rel="prev" title="スプラインの作成" href="create-spline.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="ja">
     
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-140243896-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
@@ -174,6 +187,7 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
+    
     <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="create-explicit-structured-grid.html">
@@ -190,8 +204,29 @@
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="create-kochanek-spline.html">
+   Create a Kochanek Spline
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
   <a class="reference internal" href="create-parametric-geometric-objects.html">
    パラメトリックジオメトリオブジェクト
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="create-pixel-art.html">
+   Pixel Art of ALIEN MONSTERS
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="create-platonic-solids.html">
+   Platonic Solids
   </a>
  </li>
 </ul>
@@ -239,6 +274,13 @@
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="create-truss.html">
+   Plot Truss-like FEA Solution with Cylinders
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
   <a class="reference internal" href="create-uniform-grid.html">
    統合グリッドを作成
   </a>
@@ -248,6 +290,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="create-unstructured-surface.html">
    非構造化グリッドの作成
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="load-gltf.html">
+   Working with a glTF Files
   </a>
  </li>
 </ul>
@@ -276,6 +325,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="read-parallel.html">
    並列フィルタ
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="reader.html">
+   Load data using a Reader
   </a>
  </li>
 </ul>
@@ -318,6 +374,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../01-filter/clipping.html">
    平面とボックスでクリップします
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-filter/collisions.html">
+   Collision
   </a>
  </li>
 </ul>
@@ -505,6 +568,13 @@
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="../01-filter/streamlines_2D.html">
+   2D Streamlines
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
   <a class="reference internal" href="../01-filter/subdivide.html">
    セルの細分化
   </a>
@@ -514,6 +584,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../01-filter/surface-smoothing.html">
    サーフェイススムージング
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-filter/surface_reconstruction.html">
+   Surface Reconstruction
   </a>
  </li>
 </ul>
@@ -883,6 +960,27 @@
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="../99-advanced/extending-pyvista.html">
+   Extending PyVista
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../99-advanced/osmnx-example.html">
+   Plot Open Street Map Data
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../99-advanced/ray-trace-moeller.html">
+   Visualize the Moeller–Trumbore Algorithm
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
   <a class="reference internal" href="../99-advanced/ray-trace.html">
    レイトレーシング
   </a>
@@ -901,6 +999,7 @@
  </li>
 </ul>
 
+    
   </div>
 </nav>
             </div>
@@ -960,7 +1059,7 @@
 <p>Click <a class="reference internal" href="#sphx-glr-download-examples-00-load-create-structured-surface-py"><span class="std std-ref">here</span></a>
 to download the full example code</p>
 </div>
-<div class="sphx-glr-example-title section" id="creating-a-structured-surface">
+<section class="sphx-glr-example-title" id="creating-a-structured-surface">
 <span id="ref-create-structured"></span><span id="sphx-glr-examples-00-load-create-structured-surface-py"></span><h1>構造化サーフェスを作成する<a class="headerlink" href="#creating-a-structured-surface" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>NumPy配列からStructuredGrid表面を作成します</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 2</span>
@@ -969,7 +1068,7 @@ to download the full example code</p>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
-<div class="section" id="from-numpy-meshgrid">
+<section id="from-numpy-meshgrid">
 <h2>NumPyメッシュグリッドから<a class="headerlink" href="#from-numpy-meshgrid" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>NumPyを使用した単純なメッシュグリッドの作成</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make data</span>
@@ -1018,8 +1117,8 @@ to download the full example code</p>
                  [  9.75      ,   9.75      ,   0.93985707]])
 </pre></div>
 </div>
-</div>
-<div class="section" id="from-xyz-points">
+</section>
+<section id="from-xyz-points">
 <h2>XYZ点から<a class="headerlink" href="#from-xyz-points" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>多くの場合，単純な表形式で座標(XYZ点)のセットが与えられ，その中には，所有するノード間にグリッドを構築できるような構造が存在します．すばらしい例は， <a class="reference external" href="https://github.com/pyvista/pyvista-support/issues/16">pyvista-support#16</a> にあり，デカルト参照フレームから回転される構造化グリッドは，単にXYZ点として与えられる．このような場合，グリッドを復元するために必要なものは，グリッドの寸法(<cite>nx</cite> x <cite>ny</cite> x <cite>nz</cite>)と，座標が適切に順序付けられていることだけです．</p>
 <p>この例では，小さなデータセットを作成し，デカルト参照フレームに直交しないように座標を回転します．</p>
@@ -1052,7 +1151,7 @@ to download the full example code</p>
 </pre></div>
 </div>
 <p>ここで，上記の(n x 3インチ) NumPy配列がXYZ点の3列のファイルから取得した座標であると仮定します．</p>
-<p>単にこれらの点が作るグリッドの寸法を回復する必要があり，それから <a class="reference internal" href="../../api/core/point-grids.html#pyvista.StructuredGrid" title="pyvista.StructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.StructuredGrid</span></code></a> メッシュを生成することができます．</p>
+<p>単にこれらの点が作るグリッドの寸法を回復する必要があり，それから <a class="reference internal" href="../../api/core/_autosummary/pyvista.StructuredGrid.html#pyvista.StructuredGrid" title="pyvista.StructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.StructuredGrid</span></code></a> メッシュを生成することができます．</p>
 <p>ポイントをプレビューして，処理対象を確認します:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
@@ -1090,11 +1189,11 @@ to download the full example code</p>
  (0.0, 1.0, 0.0)]
 </pre></div>
 </div>
-</div>
-<div class="section" id="extending-a-2d-structuredgrid-to-3d">
+</section>
+<section id="extending-a-2d-structuredgrid-to-3d">
 <h2>2 D構造グリッドを3 Dに拡張します<a class="headerlink" href="#extending-a-2d-structuredgrid-to-3d" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>A 2 D <a class="reference internal" href="../../api/core/point-grids.html#pyvista.StructuredGrid" title="pyvista.StructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.StructuredGrid</span></code></a> のメッシュは，3 Dメッシュに拡張できます．これは，地球科学の研究アプリケーションでメッシュに沿った地形を作成する場合に非常に適しています．</p>
-<p>たとえば，地形サーフェスの <a class="reference internal" href="../../api/core/point-grids.html#pyvista.StructuredGrid" title="pyvista.StructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.StructuredGrid</span></code></a> を作成し，そのサーフェスをいくつかの異なるレベルまで延長し，各 &quot;レベル&quot; を接続して，メッシュに沿って3 D地形を作成できます．</p>
+<p>A 2 D <a class="reference internal" href="../../api/core/_autosummary/pyvista.StructuredGrid.html#pyvista.StructuredGrid" title="pyvista.StructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.StructuredGrid</span></code></a> のメッシュは，3 Dメッシュに拡張できます．これは，地球科学の研究アプリケーションでメッシュに沿った地形を作成する場合に非常に適しています．</p>
+<p>たとえば，地形サーフェスの <a class="reference internal" href="../../api/core/_autosummary/pyvista.StructuredGrid.html#pyvista.StructuredGrid" title="pyvista.StructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.StructuredGrid</span></code></a> を作成し，そのサーフェスをいくつかの異なるレベルまで延長し，各 &quot;レベル&quot; を接続して，メッシュに沿って3 D地形を作成できます．</p>
 <p>まず簡単な例として，ウェーブメッシュを3 Dに拡張します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">struct</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_structured</span><span class="p">()</span>
 <span class="n">struct</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -1134,8 +1233,8 @@ to download the full example code</p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Sphinx-Galleryによるギャラリー</a></p>
-</div>
-</div>
+</section>
+</section>
 
 
               </div>
@@ -1147,30 +1246,19 @@ to download the full example code</p>
       </div>
     </div>
   
-  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
-
-  
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
-<script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-140243896-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 <footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright 2017-2021, The PyVista Developers.<br/>
+    &copy; Copyright 2017-2021, The PyVista Developers.<br>
 </p>
     </div>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.2.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
 </p>
     </div>
     

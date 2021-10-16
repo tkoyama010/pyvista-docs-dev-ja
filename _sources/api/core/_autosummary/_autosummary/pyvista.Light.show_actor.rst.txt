@@ -1,6 +1,0 @@
-pyvista.Light.show\_actor
-=========================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Light.show_actor

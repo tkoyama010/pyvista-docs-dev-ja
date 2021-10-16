@@ -1,5 +1,5 @@
-﻿pyvista.Pyramid
-===============
+﻿Pyramid
+=======
 
 .. currentmodule:: pyvista
 

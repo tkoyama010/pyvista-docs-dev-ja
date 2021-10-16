@@ -1,5 +1,5 @@
-﻿pyvista.Plane
-=============
+﻿Plane
+=====
 
 .. currentmodule:: pyvista
 

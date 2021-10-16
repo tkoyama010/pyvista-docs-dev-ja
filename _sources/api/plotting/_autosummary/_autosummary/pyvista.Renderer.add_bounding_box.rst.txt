@@ -1,6 +1,0 @@
-pyvista.Renderer.add\_bounding\_box
-===================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Renderer.add_bounding_box

@@ -1,6 +1,0 @@
-pyvista.Plotter.remove\_floors
-==============================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Plotter.remove_floors

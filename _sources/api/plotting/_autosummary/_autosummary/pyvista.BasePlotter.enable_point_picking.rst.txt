@@ -1,6 +1,0 @@
-pyvista.BasePlotter.enable\_point\_picking
-==========================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.enable_point_picking

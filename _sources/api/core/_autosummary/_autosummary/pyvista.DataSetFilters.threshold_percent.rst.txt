@@ -1,6 +1,0 @@
-pyvista.DataSetFilters.threshold\_percent
-=========================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSetFilters.threshold_percent

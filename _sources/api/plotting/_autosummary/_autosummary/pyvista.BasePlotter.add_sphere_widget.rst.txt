@@ -1,6 +1,0 @@
-pyvista.BasePlotter.add\_sphere\_widget
-=======================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.add_sphere_widget

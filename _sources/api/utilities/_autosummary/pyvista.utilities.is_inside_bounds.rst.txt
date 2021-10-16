@@ -1,5 +1,5 @@
-﻿pyvista.utilities.is\_inside\_bounds
-====================================
+﻿is\_inside\_bounds
+==================
 
 .. currentmodule:: pyvista.utilities
 

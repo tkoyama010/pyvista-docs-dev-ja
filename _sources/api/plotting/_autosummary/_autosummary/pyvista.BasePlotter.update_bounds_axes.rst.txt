@@ -1,6 +1,0 @@
-pyvista.BasePlotter.update\_bounds\_axes
-========================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.update_bounds_axes

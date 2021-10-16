@@ -1,6 +1,0 @@
-pyvista.PolyDataFilters.plot\_over\_circular\_arc
-=================================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.plot_over_circular_arc

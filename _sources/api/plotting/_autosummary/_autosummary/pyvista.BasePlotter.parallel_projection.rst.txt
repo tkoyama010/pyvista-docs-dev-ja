@@ -1,6 +1,0 @@
-pyvista.BasePlotter.parallel\_projection
-========================================
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: BasePlotter.parallel_projection

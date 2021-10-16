@@ -1,5 +1,5 @@
-﻿pyvista.cell\_array
-===================
+﻿cell\_array
+===========
 
 .. currentmodule:: pyvista
 

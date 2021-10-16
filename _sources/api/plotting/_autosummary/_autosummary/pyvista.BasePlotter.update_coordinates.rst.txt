@@ -1,6 +1,0 @@
-pyvista.BasePlotter.update\_coordinates
-=======================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.update_coordinates

@@ -1,5 +1,5 @@
-﻿pyvista.lines\_from\_points
-===========================
+﻿lines\_from\_points
+===================
 
 .. currentmodule:: pyvista
 

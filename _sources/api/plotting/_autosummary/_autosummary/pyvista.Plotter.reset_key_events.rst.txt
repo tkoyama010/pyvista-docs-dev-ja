@@ -1,6 +1,0 @@
-pyvista.Plotter.reset\_key\_events
-==================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Plotter.reset_key_events

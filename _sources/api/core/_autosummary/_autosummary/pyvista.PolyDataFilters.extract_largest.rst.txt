@@ -1,6 +1,0 @@
-pyvista.PolyDataFilters.extract\_largest
-========================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.extract_largest

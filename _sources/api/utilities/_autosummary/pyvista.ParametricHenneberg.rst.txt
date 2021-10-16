@@ -1,5 +1,5 @@
-﻿pyvista.ParametricHenneberg
-===========================
+﻿ParametricHenneberg
+===================
 
 .. currentmodule:: pyvista
 

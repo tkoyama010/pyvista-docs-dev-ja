@@ -1,6 +1,0 @@
-pyvista.WidgetHelper.clear\_box\_widgets
-========================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: WidgetHelper.clear_box_widgets

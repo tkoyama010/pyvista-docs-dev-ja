@@ -1,6 +1,0 @@
-pyvista.BasePlotter.enable\_trackball\_actor\_style
-===================================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: BasePlotter.enable_trackball_actor_style

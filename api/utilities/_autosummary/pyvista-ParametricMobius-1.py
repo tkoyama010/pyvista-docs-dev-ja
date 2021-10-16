@@ -1,5 +1,5 @@
-# Create a ParametricMobius mesh
+# Create a ParametricMobius mesh.
 #
 import pyvista
 mesh = pyvista.ParametricMobius()
-cpos = mesh.plot(color='w', smooth_shading=True)
+mesh.plot(color='w', smooth_shading=True)

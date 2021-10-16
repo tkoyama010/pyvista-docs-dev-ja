@@ -1,6 +1,0 @@
-pyvista.Plotter.set\_environment\_texture
-=========================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Plotter.set_environment_texture

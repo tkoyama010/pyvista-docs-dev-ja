@@ -1,5 +1,5 @@
-﻿pyvista.ParametricSuperEllipsoid
-================================
+﻿ParametricSuperEllipsoid
+========================
 
 .. currentmodule:: pyvista
 
