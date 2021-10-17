@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Platonic Solids &#8212; PyVista 0.32.dev0 ドキュメント</title>
+    <title>プラトン立体 &#8212; PyVista 0.32.dev0 ドキュメント</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -226,7 +226,7 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Platonic Solids
+   プラトン立体
   </a>
  </li>
 </ul>
@@ -1040,9 +1040,8 @@
 to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="platonic-solids">
-<span id="platonic-example"></span><span id="sphx-glr-examples-00-load-create-platonic-solids-py"></span><h1>Platonic Solids<a class="headerlink" href="#platonic-solids" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>PyVista wraps the <code class="docutils literal notranslate"><span class="pre">vtk.vtkPlatonicSolidSource</span></code> filter as
-<a class="reference internal" href="../../api/utilities/_autosummary/pyvista.PlatonicSolid.html#pyvista.PlatonicSolid" title="pyvista.PlatonicSolid"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PlatonicSolid()</span></code></a>.</p>
+<span id="platonic-example"></span><span id="sphx-glr-examples-00-load-create-platonic-solids-py"></span><h1>プラトン立体<a class="headerlink" href="#platonic-solids" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>PyVistaでは、 <code class="docutils literal notranslate"><span class="pre">vtk.vtkPlatonicSolidSource</span></code> フィルタを <a class="reference internal" href="../../api/utilities/_autosummary/pyvista.PlatonicSolid.html#pyvista.PlatonicSolid" title="pyvista.PlatonicSolid"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PlatonicSolid()</span></code></a> としてラップしています。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
@@ -1057,10 +1056,10 @@ wrappers:</p>
 <li><p><a class="reference internal" href="../../api/utilities/_autosummary/pyvista.Octahedron.html#pyvista.Octahedron" title="pyvista.Octahedron"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Octahedron()</span></code></a></p></li>
 <li><p><a class="reference internal" href="../../api/utilities/_autosummary/pyvista.Dodecahedron.html#pyvista.Dodecahedron" title="pyvista.Dodecahedron"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Dodecahedron()</span></code></a></p></li>
 <li><p><a class="reference internal" href="../../api/utilities/_autosummary/pyvista.Icosahedron.html#pyvista.Icosahedron" title="pyvista.Icosahedron"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Icosahedron()</span></code></a></p></li>
-<li><p><a class="reference internal" href="../../api/utilities/_autosummary/pyvista.Cube.html#pyvista.Cube" title="pyvista.Cube"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Cube()</span></code></a> (implemented via a different filter)</p></li>
+<li><p><a class="reference internal" href="../../api/utilities/_autosummary/pyvista.Cube.html#pyvista.Cube" title="pyvista.Cube"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Cube()</span></code></a> (別のフィルタで実装)</p></li>
 </ul>
 </div></blockquote>
-<p>Let's generate all the Platonic solids, along with the <a class="reference internal" href="../../api/examples/_autosummary/pyvista.examples.downloads.download_teapot.html#pyvista.examples.downloads.download_teapot" title="pyvista.examples.downloads.download_teapot"><code class="xref py py-func docutils literal notranslate"><span class="pre">teapotahedron</span></code></a>.</p>
+<p>すべてのプラトン立体を、 <a class="reference internal" href="../../api/examples/_autosummary/pyvista.examples.downloads.download_teapot.html#pyvista.examples.downloads.download_teapot" title="pyvista.examples.downloads.download_teapot"><code class="xref py py-func docutils literal notranslate"><span class="pre">teapotahedron</span></code></a> と共に生成してみましょう。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">kinds</span> <span class="o">=</span> <span class="p">[</span>
     <span class="s1">&#39;tetrahedron&#39;</span><span class="p">,</span>
     <span class="s1">&#39;cube&#39;</span><span class="p">,</span>
@@ -1090,7 +1089,7 @@ wrappers:</p>
 <span class="n">solids</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">teapot</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Now let's plot them all.</p>
+<p>ここで，すべてをプロットします．</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
 <p>特定のウィンドウサイズでシャドウをレンダリングする場合，VTKに既知の問題があります． <code class="docutils literal notranslate"><span class="pre">window_size</span></code> パラメータを試してみることをお勧めします． <code class="docutils literal notranslate"><span class="pre">(1000,</span> <span class="pre">1000)</span></code> の初期ウィンドウサイズは，問題なく手動でサイズ変更できるため，正常に動作するようです．</p>
