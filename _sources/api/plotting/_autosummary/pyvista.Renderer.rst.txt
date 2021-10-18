@@ -33,6 +33,9 @@
       Renderer.add_floor
       
       
+      Renderer.add_legend
+      
+      
       Renderer.add_light
       
       
@@ -115,6 +118,9 @@
       
       
       Renderer.remove_floors
+      
+      
+      Renderer.remove_legend
       
       
       Renderer.reset_camera
@@ -484,6 +490,9 @@
       
       
       Renderer.layer
+      
+      
+      Renderer.legend
       
       
       Renderer.length

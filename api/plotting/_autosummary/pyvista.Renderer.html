@@ -270,6 +270,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.Renderer.add_legend.html">
+       add_legend
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="pyvista.Renderer.add_light.html">
        add_light
       </a>
@@ -407,6 +412,11 @@
      <li class="toctree-l3">
       <a class="reference internal" href="pyvista.Renderer.remove_floors.html">
        remove_floors
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.Renderer.remove_legend.html">
+       remove_legend
       </a>
      </li>
      <li class="toctree-l3">
@@ -570,6 +580,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.Renderer.legend.html">
+       legend
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="pyvista.Renderer.length.html">
        length
       </a>
@@ -696,89 +711,95 @@
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.Renderer.add_floor.html#pyvista.Renderer.add_floor" title="pyvista.Renderer.add_floor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.add_floor</span></code></a>([face, i_resolution, ...])</p></td>
 <td><p>床メッシュを表示します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Renderer.add_light.html#pyvista.Renderer.add_light" title="pyvista.Renderer.add_light"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.add_light</span></code></a>(light)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Renderer.add_legend.html#pyvista.Renderer.add_legend" title="pyvista.Renderer.add_legend"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.add_legend</span></code></a>([labels, bcolor, ...])</p></td>
+<td><p>凡例をレンダリングウィンドウに追加します．</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Renderer.add_light.html#pyvista.Renderer.add_light" title="pyvista.Renderer.add_light"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.add_light</span></code></a>(light)</p></td>
 <td><p>レンダラーにライトを追加します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Renderer.add_orientation_widget.html#pyvista.Renderer.add_orientation_widget" title="pyvista.Renderer.add_orientation_widget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.add_orientation_widget</span></code></a>(actor[, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Renderer.add_orientation_widget.html#pyvista.Renderer.add_orientation_widget" title="pyvista.Renderer.add_orientation_widget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.add_orientation_widget</span></code></a>(actor[, ...])</p></td>
 <td><p>方向マーカーウィジェットで指定したアクターを使用します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Renderer.clear.html#pyvista.Renderer.clear" title="pyvista.Renderer.clear"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.clear</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Renderer.clear.html#pyvista.Renderer.clear" title="pyvista.Renderer.clear"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.clear</span></code></a>()</p></td>
 <td><p>すべてのアクターとプロパティを削除します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Renderer.close.html#pyvista.Renderer.close" title="pyvista.Renderer.close"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.close</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Renderer.close.html#pyvista.Renderer.close" title="pyvista.Renderer.close"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.close</span></code></a>()</p></td>
 <td><p>ウィジェットと重要な要素を閉じます．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Renderer.deep_clean.html#pyvista.Renderer.deep_clean" title="pyvista.Renderer.deep_clean"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.deep_clean</span></code></a>([render])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Renderer.deep_clean.html#pyvista.Renderer.deep_clean" title="pyvista.Renderer.deep_clean"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.deep_clean</span></code></a>([render])</p></td>
 <td><p>メモリのレンダラをクリアします．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Renderer.disable.html#pyvista.Renderer.disable" title="pyvista.Renderer.disable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.disable</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Renderer.disable.html#pyvista.Renderer.disable" title="pyvista.Renderer.disable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.disable</span></code></a>()</p></td>
 <td><p>このレンダラのカメラをインタラクティブにできないようにします．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Renderer.disable_anti_aliasing.html#pyvista.Renderer.disable_anti_aliasing" title="pyvista.Renderer.disable_anti_aliasing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.disable_anti_aliasing</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Renderer.disable_anti_aliasing.html#pyvista.Renderer.disable_anti_aliasing" title="pyvista.Renderer.disable_anti_aliasing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.disable_anti_aliasing</span></code></a>()</p></td>
 <td><p>Disable anti-aliasing.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Renderer.disable_depth_peeling.html#pyvista.Renderer.disable_depth_peeling" title="pyvista.Renderer.disable_depth_peeling"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.disable_depth_peeling</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Renderer.disable_depth_peeling.html#pyvista.Renderer.disable_depth_peeling" title="pyvista.Renderer.disable_depth_peeling"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.disable_depth_peeling</span></code></a>()</p></td>
 <td><p>深度ピーリングを無効にします．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Renderer.disable_eye_dome_lighting.html#pyvista.Renderer.disable_eye_dome_lighting" title="pyvista.Renderer.disable_eye_dome_lighting"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.disable_eye_dome_lighting</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Renderer.disable_eye_dome_lighting.html#pyvista.Renderer.disable_eye_dome_lighting" title="pyvista.Renderer.disable_eye_dome_lighting"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.disable_eye_dome_lighting</span></code></a>()</p></td>
 <td><p>Eye-Dome Lighting (EDL) を無効にします．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Renderer.disable_hidden_line_removal.html#pyvista.Renderer.disable_hidden_line_removal" title="pyvista.Renderer.disable_hidden_line_removal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.disable_hidden_line_removal</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Renderer.disable_hidden_line_removal.html#pyvista.Renderer.disable_hidden_line_removal" title="pyvista.Renderer.disable_hidden_line_removal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.disable_hidden_line_removal</span></code></a>()</p></td>
 <td><p>Disable hidden line removal.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Renderer.disable_parallel_projection.html#pyvista.Renderer.disable_parallel_projection" title="pyvista.Renderer.disable_parallel_projection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.disable_parallel_projection</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Renderer.disable_parallel_projection.html#pyvista.Renderer.disable_parallel_projection" title="pyvista.Renderer.disable_parallel_projection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.disable_parallel_projection</span></code></a>()</p></td>
 <td><p>パース投影を使用するようにカメラをリセットします．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Renderer.disable_shadows.html#pyvista.Renderer.disable_shadows" title="pyvista.Renderer.disable_shadows"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.disable_shadows</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Renderer.disable_shadows.html#pyvista.Renderer.disable_shadows" title="pyvista.Renderer.disable_shadows"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.disable_shadows</span></code></a>()</p></td>
 <td><p>影を無効にします．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Renderer.enable.html#pyvista.Renderer.enable" title="pyvista.Renderer.enable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.enable</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Renderer.enable.html#pyvista.Renderer.enable" title="pyvista.Renderer.enable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.enable</span></code></a>()</p></td>
 <td><p>このレンダラのカメラをインタラクティブにします．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Renderer.enable_anti_aliasing.html#pyvista.Renderer.enable_anti_aliasing" title="pyvista.Renderer.enable_anti_aliasing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.enable_anti_aliasing</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Renderer.enable_anti_aliasing.html#pyvista.Renderer.enable_anti_aliasing" title="pyvista.Renderer.enable_anti_aliasing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.enable_anti_aliasing</span></code></a>()</p></td>
 <td><p>Enable anti-aliasing using FXAA.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Renderer.enable_depth_peeling.html#pyvista.Renderer.enable_depth_peeling" title="pyvista.Renderer.enable_depth_peeling"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.enable_depth_peeling</span></code></a>([...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Renderer.enable_depth_peeling.html#pyvista.Renderer.enable_depth_peeling" title="pyvista.Renderer.enable_depth_peeling"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.enable_depth_peeling</span></code></a>([...])</p></td>
 <td><p>デプスのピーリングを有効にすると，半透明のジオメトリのレンダリングが向上します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Renderer.enable_eye_dome_lighting.html#pyvista.Renderer.enable_eye_dome_lighting" title="pyvista.Renderer.enable_eye_dome_lighting"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.enable_eye_dome_lighting</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Renderer.enable_eye_dome_lighting.html#pyvista.Renderer.enable_eye_dome_lighting" title="pyvista.Renderer.enable_eye_dome_lighting"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.enable_eye_dome_lighting</span></code></a>()</p></td>
 <td><p>Eye-Dome Lighting (EDL) を有効にします．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Renderer.enable_hidden_line_removal.html#pyvista.Renderer.enable_hidden_line_removal" title="pyvista.Renderer.enable_hidden_line_removal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.enable_hidden_line_removal</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Renderer.enable_hidden_line_removal.html#pyvista.Renderer.enable_hidden_line_removal" title="pyvista.Renderer.enable_hidden_line_removal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.enable_hidden_line_removal</span></code></a>()</p></td>
 <td><p>Enable hidden line removal.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Renderer.enable_parallel_projection.html#pyvista.Renderer.enable_parallel_projection" title="pyvista.Renderer.enable_parallel_projection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.enable_parallel_projection</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Renderer.enable_parallel_projection.html#pyvista.Renderer.enable_parallel_projection" title="pyvista.Renderer.enable_parallel_projection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.enable_parallel_projection</span></code></a>()</p></td>
 <td><p>平行投影を有効にします．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Renderer.enable_shadows.html#pyvista.Renderer.enable_shadows" title="pyvista.Renderer.enable_shadows"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.enable_shadows</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Renderer.enable_shadows.html#pyvista.Renderer.enable_shadows" title="pyvista.Renderer.enable_shadows"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.enable_shadows</span></code></a>()</p></td>
 <td><p>影を有効にします．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Renderer.get_default_cam_pos.html#pyvista.Renderer.get_default_cam_pos" title="pyvista.Renderer.get_default_cam_pos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.get_default_cam_pos</span></code></a>([negative])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Renderer.get_default_cam_pos.html#pyvista.Renderer.get_default_cam_pos" title="pyvista.Renderer.get_default_cam_pos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.get_default_cam_pos</span></code></a>([negative])</p></td>
 <td><p>デフォルトの焦点とビューアップを返します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Renderer.get_pick_position.html#pyvista.Renderer.get_pick_position" title="pyvista.Renderer.get_pick_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.get_pick_position</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Renderer.get_pick_position.html#pyvista.Renderer.get_pick_position" title="pyvista.Renderer.get_pick_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.get_pick_position</span></code></a>()</p></td>
 <td><p>Get the pick position/area as <code class="docutils literal notranslate"><span class="pre">x0,</span> <span class="pre">y0,</span> <span class="pre">x1,</span> <span class="pre">y1</span></code>.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Renderer.hide_axes.html#pyvista.Renderer.hide_axes" title="pyvista.Renderer.hide_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.hide_axes</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Renderer.hide_axes.html#pyvista.Renderer.hide_axes" title="pyvista.Renderer.hide_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.hide_axes</span></code></a>()</p></td>
 <td><p>軸方向ウィジェットを非表示にします．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Renderer.isometric_view.html#pyvista.Renderer.isometric_view" title="pyvista.Renderer.isometric_view"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.isometric_view</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Renderer.isometric_view.html#pyvista.Renderer.isometric_view" title="pyvista.Renderer.isometric_view"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.isometric_view</span></code></a>()</p></td>
 <td><p>カメラを既定のアイソメビューにリセットします．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Renderer.remove_actor.html#pyvista.Renderer.remove_actor" title="pyvista.Renderer.remove_actor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.remove_actor</span></code></a>(actor[, reset_camera, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Renderer.remove_actor.html#pyvista.Renderer.remove_actor" title="pyvista.Renderer.remove_actor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.remove_actor</span></code></a>(actor[, reset_camera, ...])</p></td>
 <td><p>レンダリングからアクターを削除します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Renderer.remove_all_lights.html#pyvista.Renderer.remove_all_lights" title="pyvista.Renderer.remove_all_lights"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.remove_all_lights</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Renderer.remove_all_lights.html#pyvista.Renderer.remove_all_lights" title="pyvista.Renderer.remove_all_lights"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.remove_all_lights</span></code></a>()</p></td>
 <td><p>レンダラーからすべてのライトを削除します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Renderer.remove_bounding_box.html#pyvista.Renderer.remove_bounding_box" title="pyvista.Renderer.remove_bounding_box"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.remove_bounding_box</span></code></a>([render])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Renderer.remove_bounding_box.html#pyvista.Renderer.remove_bounding_box" title="pyvista.Renderer.remove_bounding_box"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.remove_bounding_box</span></code></a>([render])</p></td>
 <td><p>バウンディングボックスを削除します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Renderer.remove_bounds_axes.html#pyvista.Renderer.remove_bounds_axes" title="pyvista.Renderer.remove_bounds_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.remove_bounds_axes</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Renderer.remove_bounds_axes.html#pyvista.Renderer.remove_bounds_axes" title="pyvista.Renderer.remove_bounds_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.remove_bounds_axes</span></code></a>()</p></td>
 <td><p>境界軸を削除します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Renderer.remove_floors.html#pyvista.Renderer.remove_floors" title="pyvista.Renderer.remove_floors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.remove_floors</span></code></a>([clear_kwargs, render])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Renderer.remove_floors.html#pyvista.Renderer.remove_floors" title="pyvista.Renderer.remove_floors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.remove_floors</span></code></a>([clear_kwargs, render])</p></td>
 <td><p>すべてのフロアアクターを削除します．</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Renderer.remove_legend.html#pyvista.Renderer.remove_legend" title="pyvista.Renderer.remove_legend"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.remove_legend</span></code></a>([render])</p></td>
+<td><p>凡例アクターを削除します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Renderer.reset_camera.html#pyvista.Renderer.reset_camera" title="pyvista.Renderer.reset_camera"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.reset_camera</span></code></a>([render, bounds])</p></td>
 <td><p>アクティブなレンダウィンドウのカメラをリセットします．</p></td>
@@ -885,22 +906,25 @@
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.Renderer.layer.html#pyvista.Renderer.layer" title="pyvista.Renderer.layer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.layer</span></code></a></p></td>
 <td><p>Return or set the current layer of this renderer.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Renderer.length.html#pyvista.Renderer.length" title="pyvista.Renderer.length"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.length</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Renderer.legend.html#pyvista.Renderer.legend" title="pyvista.Renderer.legend"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.legend</span></code></a></p></td>
+<td><p>Legend actor.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Renderer.length.html#pyvista.Renderer.length" title="pyvista.Renderer.length"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.length</span></code></a></p></td>
 <td><p>シーンのバウンディングボックスの対角線の長さを返します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Renderer.lights.html#pyvista.Renderer.lights" title="pyvista.Renderer.lights"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.lights</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Renderer.lights.html#pyvista.Renderer.lights" title="pyvista.Renderer.lights"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.lights</span></code></a></p></td>
 <td><p>レンダラのすべてのライトのリストを返します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Renderer.parallel_projection.html#pyvista.Renderer.parallel_projection" title="pyvista.Renderer.parallel_projection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.parallel_projection</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Renderer.parallel_projection.html#pyvista.Renderer.parallel_projection" title="pyvista.Renderer.parallel_projection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.parallel_projection</span></code></a></p></td>
 <td><p>アクティブなレンダーウィンドウの平行投影状態を返します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Renderer.parallel_scale.html#pyvista.Renderer.parallel_scale" title="pyvista.Renderer.parallel_scale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.parallel_scale</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Renderer.parallel_scale.html#pyvista.Renderer.parallel_scale" title="pyvista.Renderer.parallel_scale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.parallel_scale</span></code></a></p></td>
 <td><p>アクティブなレンダーウィンドウの平行スケールを返します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Renderer.viewport.html#pyvista.Renderer.viewport" title="pyvista.Renderer.viewport"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.viewport</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Renderer.viewport.html#pyvista.Renderer.viewport" title="pyvista.Renderer.viewport"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.viewport</span></code></a></p></td>
 <td><p>Viewport of the renderer.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Renderer.width.html#pyvista.Renderer.width" title="pyvista.Renderer.width"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.width</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Renderer.width.html#pyvista.Renderer.width" title="pyvista.Renderer.width"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Renderer.width</span></code></a></p></td>
 <td><p>Width of the renderer.</p></td>
 </tr>
 </tbody>
