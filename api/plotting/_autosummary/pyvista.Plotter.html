@@ -515,6 +515,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.Plotter.disable_stereo_render.html">
+       disable_stereo_render
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="pyvista.Plotter.enable.html">
        enable
       </a>
@@ -612,6 +617,11 @@
      <li class="toctree-l3">
       <a class="reference internal" href="pyvista.Plotter.enable_shadows.html">
        enable_shadows
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.Plotter.enable_stereo_render.html">
+       enable_stereo_render
       </a>
      </li>
      <li class="toctree-l3">
@@ -1458,65 +1468,71 @@
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.Plotter.disable_shadows.html#pyvista.Plotter.disable_shadows" title="pyvista.Plotter.disable_shadows"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.disable_shadows</span></code></a>()</p></td>
 <td><p>影を無効にします．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Plotter.enable.html#pyvista.Plotter.enable" title="pyvista.Plotter.enable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Plotter.disable_stereo_render.html#pyvista.Plotter.disable_stereo_render" title="pyvista.Plotter.disable_stereo_render"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.disable_stereo_render</span></code></a>()</p></td>
+<td><p>Disable stereo rendering.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Plotter.enable.html#pyvista.Plotter.enable" title="pyvista.Plotter.enable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable</span></code></a>()</p></td>
 <td><p>このレンダラのカメラをインタラクティブにします．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Plotter.enable_3_lights.html#pyvista.Plotter.enable_3_lights" title="pyvista.Plotter.enable_3_lights"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable_3_lights</span></code></a>([only_active])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Plotter.enable_3_lights.html#pyvista.Plotter.enable_3_lights" title="pyvista.Plotter.enable_3_lights"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable_3_lights</span></code></a>([only_active])</p></td>
 <td><p>3ライトイルミネーションを有効にします．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Plotter.enable_anti_aliasing.html#pyvista.Plotter.enable_anti_aliasing" title="pyvista.Plotter.enable_anti_aliasing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable_anti_aliasing</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Plotter.enable_anti_aliasing.html#pyvista.Plotter.enable_anti_aliasing" title="pyvista.Plotter.enable_anti_aliasing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable_anti_aliasing</span></code></a>()</p></td>
 <td><p>Enable anti-aliasing using FXAA.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Plotter.enable_cell_picking.html#pyvista.Plotter.enable_cell_picking" title="pyvista.Plotter.enable_cell_picking"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable_cell_picking</span></code></a>([mesh, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Plotter.enable_cell_picking.html#pyvista.Plotter.enable_cell_picking" title="pyvista.Plotter.enable_cell_picking"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable_cell_picking</span></code></a>([mesh, ...])</p></td>
 <td><p>セルの選択を有効にします．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Plotter.enable_depth_peeling.html#pyvista.Plotter.enable_depth_peeling" title="pyvista.Plotter.enable_depth_peeling"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable_depth_peeling</span></code></a>([...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Plotter.enable_depth_peeling.html#pyvista.Plotter.enable_depth_peeling" title="pyvista.Plotter.enable_depth_peeling"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable_depth_peeling</span></code></a>([...])</p></td>
 <td><p>デプスのピーリングを有効にすると，半透明のジオメトリのレンダリングが向上します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Plotter.enable_eye_dome_lighting.html#pyvista.Plotter.enable_eye_dome_lighting" title="pyvista.Plotter.enable_eye_dome_lighting"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable_eye_dome_lighting</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Plotter.enable_eye_dome_lighting.html#pyvista.Plotter.enable_eye_dome_lighting" title="pyvista.Plotter.enable_eye_dome_lighting"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable_eye_dome_lighting</span></code></a>()</p></td>
 <td><p>Eye-Dome Lighting (EDL) を有効にします．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Plotter.enable_fly_to_right_click.html#pyvista.Plotter.enable_fly_to_right_click" title="pyvista.Plotter.enable_fly_to_right_click"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable_fly_to_right_click</span></code></a>([callback])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Plotter.enable_fly_to_right_click.html#pyvista.Plotter.enable_fly_to_right_click" title="pyvista.Plotter.enable_fly_to_right_click"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable_fly_to_right_click</span></code></a>([callback])</p></td>
 <td><p>右クリック位置をトラックするようにカメラを設定します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Plotter.enable_geodesic_picking.html#pyvista.Plotter.enable_geodesic_picking" title="pyvista.Plotter.enable_geodesic_picking"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable_geodesic_picking</span></code></a>([callback, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Plotter.enable_geodesic_picking.html#pyvista.Plotter.enable_geodesic_picking" title="pyvista.Plotter.enable_geodesic_picking"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable_geodesic_picking</span></code></a>([callback, ...])</p></td>
 <td><p>測地パスでの選択を有効にします．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Plotter.enable_hidden_line_removal.html#pyvista.Plotter.enable_hidden_line_removal" title="pyvista.Plotter.enable_hidden_line_removal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable_hidden_line_removal</span></code></a>([...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Plotter.enable_hidden_line_removal.html#pyvista.Plotter.enable_hidden_line_removal" title="pyvista.Plotter.enable_hidden_line_removal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable_hidden_line_removal</span></code></a>([...])</p></td>
 <td><p>Enable hidden line removal.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Plotter.enable_horizon_picking.html#pyvista.Plotter.enable_horizon_picking" title="pyvista.Plotter.enable_horizon_picking"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable_horizon_picking</span></code></a>([callback, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Plotter.enable_horizon_picking.html#pyvista.Plotter.enable_horizon_picking" title="pyvista.Plotter.enable_horizon_picking"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable_horizon_picking</span></code></a>([callback, ...])</p></td>
 <td><p>範囲選択を使用可能にします．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Plotter.enable_image_style.html#pyvista.Plotter.enable_image_style" title="pyvista.Plotter.enable_image_style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable_image_style</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Plotter.enable_image_style.html#pyvista.Plotter.enable_image_style" title="pyvista.Plotter.enable_image_style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable_image_style</span></code></a>()</p></td>
 <td><p>インタラクティブスタイルをImageに設定します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Plotter.enable_joystick_actor_style.html#pyvista.Plotter.enable_joystick_actor_style" title="pyvista.Plotter.enable_joystick_actor_style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable_joystick_actor_style</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Plotter.enable_joystick_actor_style.html#pyvista.Plotter.enable_joystick_actor_style" title="pyvista.Plotter.enable_joystick_actor_style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable_joystick_actor_style</span></code></a>()</p></td>
 <td><p>インタラクティブスタイルをジョイスティックアクターに設定します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Plotter.enable_joystick_style.html#pyvista.Plotter.enable_joystick_style" title="pyvista.Plotter.enable_joystick_style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable_joystick_style</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Plotter.enable_joystick_style.html#pyvista.Plotter.enable_joystick_style" title="pyvista.Plotter.enable_joystick_style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable_joystick_style</span></code></a>()</p></td>
 <td><p>インタラクティブスタイルをジョイスティックカメラに設定します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Plotter.enable_lightkit.html#pyvista.Plotter.enable_lightkit" title="pyvista.Plotter.enable_lightkit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable_lightkit</span></code></a>([only_active])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Plotter.enable_lightkit.html#pyvista.Plotter.enable_lightkit" title="pyvista.Plotter.enable_lightkit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable_lightkit</span></code></a>([only_active])</p></td>
 <td><p>デフォルトのライトキットライティングを有効にします．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Plotter.enable_parallel_projection.html#pyvista.Plotter.enable_parallel_projection" title="pyvista.Plotter.enable_parallel_projection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable_parallel_projection</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Plotter.enable_parallel_projection.html#pyvista.Plotter.enable_parallel_projection" title="pyvista.Plotter.enable_parallel_projection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable_parallel_projection</span></code></a>()</p></td>
 <td><p>平行投影を有効にします．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Plotter.enable_path_picking.html#pyvista.Plotter.enable_path_picking" title="pyvista.Plotter.enable_path_picking"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable_path_picking</span></code></a>([callback, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Plotter.enable_path_picking.html#pyvista.Plotter.enable_path_picking" title="pyvista.Plotter.enable_path_picking"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable_path_picking</span></code></a>([callback, ...])</p></td>
 <td><p>パスの選択を有効にします．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Plotter.enable_point_picking.html#pyvista.Plotter.enable_point_picking" title="pyvista.Plotter.enable_point_picking"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable_point_picking</span></code></a>([callback, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Plotter.enable_point_picking.html#pyvista.Plotter.enable_point_picking" title="pyvista.Plotter.enable_point_picking"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable_point_picking</span></code></a>([callback, ...])</p></td>
 <td><p>ポイントでの選択を有効にします．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Plotter.enable_rubber_band_2d_style.html#pyvista.Plotter.enable_rubber_band_2d_style" title="pyvista.Plotter.enable_rubber_band_2d_style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable_rubber_band_2d_style</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Plotter.enable_rubber_band_2d_style.html#pyvista.Plotter.enable_rubber_band_2d_style" title="pyvista.Plotter.enable_rubber_band_2d_style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable_rubber_band_2d_style</span></code></a>()</p></td>
 <td><p>インタラクティブスタイルをラバーバンド2Dに設定します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Plotter.enable_rubber_band_style.html#pyvista.Plotter.enable_rubber_band_style" title="pyvista.Plotter.enable_rubber_band_style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable_rubber_band_style</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Plotter.enable_rubber_band_style.html#pyvista.Plotter.enable_rubber_band_style" title="pyvista.Plotter.enable_rubber_band_style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable_rubber_band_style</span></code></a>()</p></td>
 <td><p>インタラクティブスタイルをラバーバンド選択に設定します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Plotter.enable_shadows.html#pyvista.Plotter.enable_shadows" title="pyvista.Plotter.enable_shadows"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable_shadows</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Plotter.enable_shadows.html#pyvista.Plotter.enable_shadows" title="pyvista.Plotter.enable_shadows"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable_shadows</span></code></a>()</p></td>
 <td><p>影を有効にします．</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Plotter.enable_stereo_render.html#pyvista.Plotter.enable_stereo_render" title="pyvista.Plotter.enable_stereo_render"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable_stereo_render</span></code></a>()</p></td>
+<td><p>Enable stereo rendering.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Plotter.enable_terrain_style.html#pyvista.Plotter.enable_terrain_style" title="pyvista.Plotter.enable_terrain_style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.enable_terrain_style</span></code></a>([...])</p></td>
 <td><p>対話型スタイルを地形に設定します．</p></td>

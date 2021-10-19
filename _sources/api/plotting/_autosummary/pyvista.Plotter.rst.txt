@@ -183,6 +183,9 @@
       Plotter.disable_shadows
       
       
+      Plotter.disable_stereo_render
+      
+      
       Plotter.enable
       
       
@@ -241,6 +244,9 @@
       
       
       Plotter.enable_shadows
+      
+      
+      Plotter.enable_stereo_render
       
       
       Plotter.enable_terrain_style
