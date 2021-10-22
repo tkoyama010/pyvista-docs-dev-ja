@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Load data using a Reader &#8212; PyVista 0.32.dev0 ドキュメント</title>
+    <title>リーダーによるデータの読み込み &#8212; PyVista 0.32.dev0 ドキュメント</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -205,7 +205,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="create-kochanek-spline.html">
-   Create a Kochanek Spline
+   Kochanekスプラインの作成
   </a>
  </li>
 </ul>
@@ -219,7 +219,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="create-pixel-art.html">
-   Pixel Art of ALIEN MONSTERS
+   ALIEN MONSTERSのピクセルアート
   </a>
  </li>
 </ul>
@@ -275,7 +275,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="create-truss.html">
-   Plot Truss-like FEA Solution with Cylinders
+   円柱を用いたトラス状のFEAソリューションのプロット
   </a>
  </li>
 </ul>
@@ -296,7 +296,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="load-gltf.html">
-   Working with a glTF Files
+   glTFファイルの取り扱いについて
   </a>
  </li>
 </ul>
@@ -331,7 +331,7 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Load data using a Reader
+   リーダーによるデータの読み込み
   </a>
  </li>
 </ul>
@@ -961,7 +961,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../99-advanced/extending-pyvista.html">
-   Extending PyVista
+   PyVistaの拡張
   </a>
  </li>
 </ul>
@@ -1040,10 +1040,8 @@
 to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="load-data-using-a-reader">
-<span id="reader-example"></span><span id="sphx-glr-examples-00-load-reader-py"></span><h1>Load data using a Reader<a class="headerlink" href="#load-data-using-a-reader" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>To have more control over reading data files, use a class based reader.
-This class allows for more fine-grained control over reading datasets from
-files.  See <a class="reference internal" href="../../api/readers/_autosummary/pyvista.get_reader.html#pyvista.get_reader" title="pyvista.get_reader"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.get_reader()</span></code></a> for a list of file types supported.</p>
+<span id="reader-example"></span><span id="sphx-glr-examples-00-load-reader-py"></span><h1>リーダーによるデータの読み込み<a class="headerlink" href="#load-data-using-a-reader" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>データファイルの読み取りをより細かく制御するには、クラスベースのリーダーを使用します。このクラスは、ファイルからのデータセットの読み込みをより細かく制御することができます。 サポートされているファイルタイプのリストは、 <a class="reference internal" href="../../api/readers/_autosummary/pyvista.get_reader.html#pyvista.get_reader" title="pyvista.get_reader"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.get_reader()</span></code></a> を参照してください。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>

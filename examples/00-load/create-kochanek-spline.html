@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Create a Kochanek Spline &#8212; PyVista 0.32.dev0 ドキュメント</title>
+    <title>Kochanekスプラインの作成 &#8212; PyVista 0.32.dev0 ドキュメント</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -205,7 +205,7 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Create a Kochanek Spline
+   Kochanekスプラインの作成
   </a>
  </li>
 </ul>
@@ -219,7 +219,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="create-pixel-art.html">
-   Pixel Art of ALIEN MONSTERS
+   ALIEN MONSTERSのピクセルアート
   </a>
  </li>
 </ul>
@@ -275,7 +275,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="create-truss.html">
-   Plot Truss-like FEA Solution with Cylinders
+   円柱を用いたトラス状のFEAソリューションのプロット
   </a>
  </li>
 </ul>
@@ -296,7 +296,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="load-gltf.html">
-   Working with a glTF Files
+   glTFファイルの取り扱いについて
   </a>
  </li>
 </ul>
@@ -331,7 +331,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="reader.html">
-   Load data using a Reader
+   リーダーによるデータの読み込み
   </a>
  </li>
 </ul>
@@ -961,7 +961,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../99-advanced/extending-pyvista.html">
-   Extending PyVista
+   PyVistaの拡張
   </a>
  </li>
 </ul>
@@ -1040,8 +1040,8 @@
 to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="create-a-kochanek-spline">
-<span id="create-kochanek-spline-example"></span><span id="sphx-glr-examples-00-load-create-kochanek-spline-py"></span><h1>Create a Kochanek Spline<a class="headerlink" href="#create-a-kochanek-spline" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Create a Kochanek spline/polyline from a numpy array of XYZ vertices.</p>
+<span id="create-kochanek-spline-example"></span><span id="sphx-glr-examples-00-load-create-kochanek-spline-py"></span><h1>Kochanekスプラインの作成<a class="headerlink" href="#create-a-kochanek-spline" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>XYZ頂点の数の多い配列からKochanekスプライン/ポリラインを作成します。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
@@ -1069,7 +1069,7 @@ to download the full example code</p>
        [ 2.32057790e+00,  7.54001466e-01,  1.20000000e+00]])
 </pre></div>
 </div>
-<p>Interpolate those points onto a parametric Kochanek spline</p>
+<p>これらの点をパラメトリックなKochanekスプラインに補間します</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create Kochanek spline with 6 interpolation points</span>
 <span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
 

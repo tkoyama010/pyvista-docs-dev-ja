@@ -205,7 +205,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../00-load/create-kochanek-spline.html">
-   Create a Kochanek Spline
+   Kochanekスプラインの作成
   </a>
  </li>
 </ul>
@@ -219,7 +219,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../00-load/create-pixel-art.html">
-   Pixel Art of ALIEN MONSTERS
+   ALIEN MONSTERSのピクセルアート
   </a>
  </li>
 </ul>
@@ -275,7 +275,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../00-load/create-truss.html">
-   Plot Truss-like FEA Solution with Cylinders
+   円柱を用いたトラス状のFEAソリューションのプロット
   </a>
  </li>
 </ul>
@@ -296,7 +296,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../00-load/load-gltf.html">
-   Working with a glTF Files
+   glTFファイルの取り扱いについて
   </a>
  </li>
 </ul>
@@ -331,7 +331,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../00-load/reader.html">
-   Load data using a Reader
+   リーダーによるデータの読み込み
   </a>
  </li>
 </ul>
@@ -961,7 +961,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="extending-pyvista.html">
-   Extending PyVista
+   PyVistaの拡張
   </a>
  </li>
 </ul>
@@ -1041,12 +1041,7 @@ to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="displaying-eigenmodes-of-vibration-using-warp-by-vector">
 <span id="sphx-glr-examples-99-advanced-warp-by-vector-eigenmodes-py"></span><h1><code class="docutils literal notranslate"><span class="pre">warp_by_vector</span></code> を用いた振動固有モードの表示<a class="headerlink" href="#displaying-eigenmodes-of-vibration-using-warp-by-vector" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>This example applies the <code class="docutils literal notranslate"><span class="pre">warp_by_vector</span></code> filter to a cube whose eigenmodes
-have been computed using the Ritz method, as outlined in Visscher, William M.,
-Albert Migliori, Thomas M. Bell, et Robert A. Reinert. &quot;On the normal modes
-of free vibration of inhomogeneous and anisotropic elastic objects&quot;. The
-Journal of the Acoustical Society of America 90, n.4 (october 1991): 2154-62.
-<a class="reference external" href="https://asa.scitation.org/doi/10.1121/1.401643">https://asa.scitation.org/doi/10.1121/1.401643</a></p>
+<p>この例は，Visscher, William M., Albert Migliori, Thomas M.Bell, et Robert A.Reinertで概説されているように，固有モードがRitz法を使用して計算された立方体に <code class="docutils literal notranslate"><span class="pre">warp_by_vector</span></code> フィルタを適用します. &quot;On the normal modes of free vibration of inhomogeneous and anisotropic elastic objects&quot;. The Journal of the Acoustical Society of America 90, n.4 (october 1991): 2154-62. <a class="reference external" href="https://asa.scitation.org/doi/10.1121/1.401643">https://asa.scitation.org/doi/10.1121/1.401643</a></p>
 <p>まず，振動する立方体の固有値問題を解く．高速計算を得るために(低い最大多項式次数を選択した)粗近似を用いました．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">scipy.linalg</span> <span class="kn">import</span> <span class="n">eigh</span>

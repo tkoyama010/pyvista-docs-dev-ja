@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Pixel Art of ALIEN MONSTERS &#8212; PyVista 0.32.dev0 ドキュメント</title>
+    <title>ALIEN MONSTERSのピクセルアート &#8212; PyVista 0.32.dev0 ドキュメント</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -205,7 +205,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="create-kochanek-spline.html">
-   Create a Kochanek Spline
+   Kochanekスプラインの作成
   </a>
  </li>
 </ul>
@@ -219,7 +219,7 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Pixel Art of ALIEN MONSTERS
+   ALIEN MONSTERSのピクセルアート
   </a>
  </li>
 </ul>
@@ -275,7 +275,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="create-truss.html">
-   Plot Truss-like FEA Solution with Cylinders
+   円柱を用いたトラス状のFEAソリューションのプロット
   </a>
  </li>
 </ul>
@@ -296,7 +296,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="load-gltf.html">
-   Working with a glTF Files
+   glTFファイルの取り扱いについて
   </a>
  </li>
 </ul>
@@ -331,7 +331,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="reader.html">
-   Load data using a Reader
+   リーダーによるデータの読み込み
   </a>
  </li>
 </ul>
@@ -961,7 +961,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../99-advanced/extending-pyvista.html">
-   Extending PyVista
+   PyVistaの拡張
   </a>
  </li>
 </ul>
@@ -1020,17 +1020,17 @@
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Pixel Art of ALIEN MONSTERS
+   ALIEN MONSTERSのピクセルアート
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#convert-pixel-art-to-an-array">
-   Convert pixel art to an array
+   ピクセルアートを配列に変換
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#define-function-to-draw-pixels">
-   Define function to draw pixels
+   ピクセルを描画する関数の定義
   </a>
  </li>
 </ul>
@@ -1060,17 +1060,15 @@
 to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="pixel-art-of-alien-monsters">
-<span id="pixel-art-example"></span><span id="sphx-glr-examples-00-load-create-pixel-art-py"></span><h1>Pixel Art of ALIEN MONSTERS<a class="headerlink" href="#pixel-art-of-alien-monsters" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Here we use <a class="reference internal" href="../../api/utilities/_autosummary/pyvista.Box.html#pyvista.Box" title="pyvista.Box"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Box()</span></code></a> to make <a class="reference external" href="https://en.wikipedia.org/wiki/Pixel_art">pixel art</a>.
-Pixel string <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Noto_Emoji_Pie_1f47e.svg">source</a>
-and <a class="reference external" href="https://github.com/googlefonts/noto-emoji#license">license</a>.</p>
+<span id="pixel-art-example"></span><span id="sphx-glr-examples-00-load-create-pixel-art-py"></span><h1>ALIEN MONSTERSのピクセルアート<a class="headerlink" href="#pixel-art-of-alien-monsters" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>ここでは、 <a class="reference internal" href="../../api/utilities/_autosummary/pyvista.Box.html#pyvista.Box" title="pyvista.Box"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Box()</span></code></a> を使って、 <a class="reference external" href="https://en.wikipedia.org/wiki/Pixel_art">ピクセルアート</a> を作ります。ピクセル文字列 <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Noto_Emoji_Pie_1f47e.svg">ソース</a> と <a class="reference external" href="https://github.com/googlefonts/noto-emoji#license">ライセンス</a> 。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista.demos</span> <span class="kn">import</span> <span class="n">logo</span>
 </pre></div>
 </div>
 </section>
 <section id="convert-pixel-art-to-an-array">
-<h1>Convert pixel art to an array<a class="headerlink" href="#convert-pixel-art-to-an-array" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>ピクセルアートを配列に変換<a class="headerlink" href="#convert-pixel-art-to-an-array" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">alien_str</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">    </span><span class="si">%         %</span><span class="s2"></span>
 <span class="s2">      </span><span class="si">%     %</span><span class="s2"></span>
@@ -1096,8 +1094,8 @@ and <a class="reference external" href="https://github.com/googlefonts/noto-emoj
 </div>
 </section>
 <section id="define-function-to-draw-pixels">
-<h1>Define function to draw pixels<a class="headerlink" href="#define-function-to-draw-pixels" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Define a helper function to add pixel boxes to plotter.</p>
+<h1>ピクセルを描画する関数の定義<a class="headerlink" href="#define-function-to-draw-pixels" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>プロッタにピクセルボックスを追加するヘルパー関数を定義します。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw_pixels</span><span class="p">(</span><span class="n">plotter</span><span class="p">,</span> <span class="n">pixels</span><span class="p">,</span> <span class="n">center</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
     <span class="n">bounds</span> <span class="o">=</span> <span class="p">[</span>
         <span class="n">center</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mf">1.0</span><span class="p">,</span>
@@ -1121,7 +1119,7 @@ and <a class="reference external" href="https://github.com/googlefonts/noto-emoj
     <span class="k">return</span> <span class="n">plotter</span>
 </pre></div>
 </div>
-<p>Now you can plot a pixel art of ALIEN MONSTERS.</p>
+<p>ALIEN MONSTERS のピクセルアートを描くことができます。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Display MONSTERS</span>
 <span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">p</span> <span class="o">=</span> <span class="n">draw_pixels</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">alien</span><span class="p">,</span> <span class="p">[</span><span class="o">-</span><span class="mf">22.0</span><span class="p">,</span>  <span class="mf">22.0</span><span class="p">],</span> <span class="s2">&quot;green&quot;</span><span class="p">)</span>
