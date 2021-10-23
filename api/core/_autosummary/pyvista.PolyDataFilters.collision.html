@@ -880,16 +880,8 @@ when there are collisions.</p>
 </dd>
 </dl>
 <p class="rubric">備考</p>
-<p>Due to the nature of the <a class="reference external" href="https://vtk.org/doc/nightly/html/classvtkCollisionDetectionFilter.html">vtk.vtkCollisionDetectionFilter</a>,
-repeated uses of this method will be slower that using the
-<code class="docutils literal notranslate"><span class="pre">vtk.vtkCollisionDetectionFilter</span></code> directly.  The first
-update of the filter creates two instances of <a class="reference external" href="https://vtk.org/doc/nightly/html/classvtkOBBTree.html">vtkOBBTree</a>,
-which can be subsequently updated by modifying the transform or
-matrix of the input meshes.</p>
-<p>This method assumes no transform and is easier to use for
-single collision tests, but it is recommended to use a
-combination of <code class="docutils literal notranslate"><span class="pre">pyvista</span></code> and <code class="docutils literal notranslate"><span class="pre">vtk</span></code> for rapidly computing
-repeated collisions.  See the <a class="reference external" href="https://kitware.github.io/vtk-examples/site/Python/Visualization/CollisionDetection/">Collision Detection Example</a></p>
+<p><a class="reference external" href="https://vtk.org/doc/nightly/html/classvtkCollisionDetectionFilter.html">vtk.vtkCollisionDetectionFilter</a> の性質上、このメソッドを繰り返し使用すると <code class="docutils literal notranslate"><span class="pre">vtk.vtkCollisionDetectionFilter</span></code> を直接使用した場合よりも遅くなります。 このフィルタの最初の更新では、 <a class="reference external" href="https://vtk.org/doc/nightly/html/classvtkOBBTree.html">vtkOBBTree</a> のインスタンスが2つ作成されます。その後、入力メッシュの変換や行列を変更することで、このインスタンスを更新することができます。</p>
+<p>このメソッドは変換を前提としていないので、単一の衝突テストには使いやすいですが、繰り返される衝突を高速に計算するには <code class="docutils literal notranslate"><span class="pre">pyvista</span></code> と <code class="docutils literal notranslate"><span class="pre">vtk</span></code> の組み合わせを使うことをお勧めします。 詳しくは、 <a class="reference external" href="https://kitware.github.io/vtk-examples/site/Python/Visualization/CollisionDetection/">Collision Detection Example</a> をご覧ください。</p>
 <p class="rubric">例</p>
 <p>Compute the collision between a sphere and the back faces of a
 cube and output the cell indices of the first 10 collisions.</p>
@@ -928,7 +920,7 @@ colored red.</p>
 <figure class="align-default">
 <img alt="../../../_images/pyvista-PolyDataFilters-collision-1_01_00.png" src="../../../_images/pyvista-PolyDataFilters-collision-1_01_00.png" />
 </figure>
-<p>See <a class="reference internal" href="../../../examples/01-filter/collisions.html#collision-example"><span class="std std-ref">Collision</span></a> for more examples using this filter.</p>
+<p>See <a class="reference internal" href="../../../examples/01-filter/collisions.html#collision-example"><span class="std std-ref">衝突</span></a> for more examples using this filter.</p>
 </dd></dl>
 
 </section>

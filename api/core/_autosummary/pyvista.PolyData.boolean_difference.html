@@ -1313,11 +1313,8 @@
 <dt class="sig sig-object py" id="pyvista.PolyData.boolean_difference">
 <span class="sig-prename descclassname"><span class="pre">PolyData.</span></span><span class="sig-name descname"><span class="pre">boolean_difference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other_mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.boolean_difference" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>Perform a boolean difference operation between two meshes.</p>
-<p>Essentially, boolean union, difference, and intersection are
-all the same operation. Just different parts of the objects
-are kept at the end.</p>
-<p>The difference of two manifold meshes <code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code> is the
-volume of the mesh in <code class="docutils literal notranslate"><span class="pre">A</span></code> not belonging to <code class="docutils literal notranslate"><span class="pre">B</span></code>.</p>
+<p>基本的に、ブーリアン結合、切断、交差はすべて同じ操作です。ただ、オブジェクトの異なる部分が最終的に保持されるだけです。</p>
+<p>2つのマニフォールドメッシュ <code class="docutils literal notranslate"><span class="pre">A</span></code> と <code class="docutils literal notranslate"><span class="pre">B</span></code> の差は、 <code class="docutils literal notranslate"><span class="pre">A</span></code> のメッシュのうち <code class="docutils literal notranslate"><span class="pre">B</span></code> に属さない部分の体積である。</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
 <p>If your boolean operations don't react the way you think they

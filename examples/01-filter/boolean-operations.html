@@ -380,7 +380,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="collisions.html">
-   Collision
+   衝突
   </a>
  </li>
 </ul>
@@ -569,7 +569,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="streamlines_2D.html">
-   2D Streamlines
+   2D流線
   </a>
  </li>
 </ul>
@@ -590,7 +590,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="surface_reconstruction.html">
-   Surface Reconstruction
+   サーフェスの再構築
   </a>
  </li>
 </ul>
@@ -968,14 +968,14 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../99-advanced/osmnx-example.html">
-   Plot Open Street Map Data
+   オープンストリートマップデータのプロット
   </a>
  </li>
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../99-advanced/ray-trace-moeller.html">
-   Visualize the Moeller–Trumbore Algorithm
+   Moeller-Trumboreアルゴリズムの可視化
   </a>
  </li>
 </ul>
@@ -1035,14 +1035,14 @@
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#boolean-intersection">
-     Boolean Intersection
+     ブール交差
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#behavior-due-to-flipped-normals">
-   Behavior due to flipped normals
+   法線の反転による挙動
   </a>
  </li>
 </ul>
@@ -1073,38 +1073,22 @@ to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="boolean-operations">
 <span id="boolean-example"></span><span id="sphx-glr-examples-01-filter-boolean-operations-py"></span><h1>ブール演算<a class="headerlink" href="#boolean-operations" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Perform boolean operations with closed (manifold) surfaces.</p>
-<p>Boolean/topological operations (intersect, union, difference) methods
-are implemented for <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> mesh types only and are
-accessible directly from any <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> mesh. Check out
-<a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyDataFilters.html#pyvista.PolyDataFilters" title="pyvista.PolyDataFilters"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters</span></code></a> and take a look at the following
-filters:</p>
+<p>閉じた（多様な）曲面でブーリアン演算を行う。</p>
+<p>ブール/位相演算(交差，結合，切断)法は，  <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> メッシュタイプに対してのみ実装され，任意の <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> メッシュから直接アクセス可能である． <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyDataFilters.html#pyvista.PolyDataFilters" title="pyvista.PolyDataFilters"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters</span></code></a> をチェックして，次のフィルタを確認してください．</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyDataFilters.boolean_difference.html#pyvista.PolyDataFilters.boolean_difference" title="pyvista.PolyDataFilters.boolean_difference"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.boolean_difference()</span></code></a></p></li>
 <li><p><a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyDataFilters.boolean_union.html#pyvista.PolyDataFilters.boolean_union" title="pyvista.PolyDataFilters.boolean_union"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.boolean_union()</span></code></a></p></li>
 <li><p><a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyDataFilters.boolean_intersection.html#pyvista.PolyDataFilters.boolean_intersection" title="pyvista.PolyDataFilters.boolean_intersection"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.boolean_intersection()</span></code></a></p></li>
 </ul>
-<p>Essentially, boolean union, difference, and intersection are all the
-same operation. Just different parts of the objects are kept at the
-end.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">-</span></code> operator can be used between any two <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a>
-meshes in PyVista to cut the first mesh by the second.  These meshes
-must be all triangle meshes, which you can check with
-<a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyData.is_all_triangles.html#pyvista.PolyData.is_all_triangles" title="pyvista.PolyData.is_all_triangles"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pyvista.PolyData.is_all_triangles</span></code></a>.</p>
+<p>基本的に、ブーリアン結合、切断、交差はすべて同じ操作です。ただ、オブジェクトの異なる部分が最終的に保持されるだけです。</p>
+<p>演算子 <code class="docutils literal notranslate"><span class="pre">-</span></code> は、PyVistaの任意の2つの <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> メッシュの間で使用することができ、最初のメッシュを2番目のメッシュでカットします。 これらのメッシュはすべて三角形のメッシュでなければなりません。これは <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyData.is_all_triangles.html#pyvista.PolyData.is_all_triangles" title="pyvista.PolyData.is_all_triangles"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pyvista.PolyData.is_all_triangles</span></code></a> で確認できます。</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p>For merging, the <code class="docutils literal notranslate"><span class="pre">+</span></code> operator can be used between any two meshes
-in PyVista which simply calls the <code class="docutils literal notranslate"><span class="pre">.merge()</span></code> filter to combine
-any two meshes.  This is different from <code class="docutils literal notranslate"><span class="pre">boolean_union</span></code> as it
-simply superimposes the two meshes without performing additional
-calculations on the result.</p>
+<p>マージでは， <code class="docutils literal notranslate"><span class="pre">+</span></code> 演算子をPyVistaの任意の2つのメッシュ間で使用できます．この演算子は，任意の2つのメッシュを結合するために <code class="docutils literal notranslate"><span class="pre">.merge()</span></code> フィルタを呼び出すだけです．これは <code class="docutils literal notranslate"><span class="pre">boolean_union</span></code> とは異なり、結果に対して追加の計算を行うことなく、単純に2つのメッシュを重ね合わせるものです。</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>If your boolean operations don't react the way you think they
-should (i.e. the wrong parts disappear), one of your meshes
-probably has its normals pointing inward. Use
-<a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyDataFilters.plot_normals.html#pyvista.PolyDataFilters.plot_normals" title="pyvista.PolyDataFilters.plot_normals"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.plot_normals()</span></code></a> to visualize the normals.</p>
+<p>ブーリアン演算が思った通りに反応しない(例えば、間違った部分が消えてしまう)場合、メッシュの1つが法線を内側に向けている可能性があります。法線を視覚化するには、 <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyDataFilters.plot_normals.html#pyvista.PolyDataFilters.plot_normals" title="pyvista.PolyDataFilters.plot_normals"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.plot_normals()</span></code></a> を使用してください。</p>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 6</span>
 <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
@@ -1116,12 +1100,9 @@ probably has its normals pointing inward. Use
 </div>
 <section id="boolean-union">
 <h2>ブール演算和<a class="headerlink" href="#boolean-union" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Perform a boolean union of <code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code> using the
-<a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyDataFilters.boolean_union.html#pyvista.PolyDataFilters.boolean_union" title="pyvista.PolyDataFilters.boolean_union"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.boolean_union()</span></code></a> filter.</p>
-<p>The union of two manifold meshes <code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code> is the mesh
-which is in <code class="docutils literal notranslate"><span class="pre">A</span></code>, in <code class="docutils literal notranslate"><span class="pre">B</span></code>, or in both <code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code>.</p>
-<p>Order of operands does not matter for boolean union (the operation is
-commutative).</p>
+<p><a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyDataFilters.boolean_union.html#pyvista.PolyDataFilters.boolean_union" title="pyvista.PolyDataFilters.boolean_union"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.boolean_union()</span></code></a> フィルタを使用して、 <code class="docutils literal notranslate"><span class="pre">A</span></code> と <code class="docutils literal notranslate"><span class="pre">B</span></code> のブール結合を行います。</p>
+<p>2つの多様体メッシュ　<code class="docutils literal notranslate"><span class="pre">A</span></code> と <code class="docutils literal notranslate"><span class="pre">B</span></code> の結合は、 <code class="docutils literal notranslate"><span class="pre">A</span></code> にあるメッシュ、 <code class="docutils literal notranslate"><span class="pre">B</span></code> にあるメッシュ、または <code class="docutils literal notranslate"><span class="pre">A</span></code> と <code class="docutils literal notranslate"><span class="pre">B</span></code> の両方にあるメッシュとなります。</p>
+<p>論理和にはオペランドの順序は関係ありません（演算は可換です）。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">sphere_a</span><span class="o">.</span><span class="n">boolean_union</span><span class="p">(</span><span class="n">sphere_b</span><span class="p">)</span>
 <span class="n">pl</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">_</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">sphere_a</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;wireframe&#39;</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
@@ -1134,12 +1115,9 @@ commutative).</p>
 <img src="../../_images/sphx_glr_boolean-operations_001.png" srcset="../../_images/sphx_glr_boolean-operations_001.png" alt="boolean operations" class = "sphx-glr-single-img"/></section>
 <section id="boolean-difference">
 <h2>論理差<a class="headerlink" href="#boolean-difference" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Perform a boolean difference of <code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code> using the
-<a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyDataFilters.boolean_difference.html#pyvista.PolyDataFilters.boolean_difference" title="pyvista.PolyDataFilters.boolean_difference"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.boolean_difference()</span></code></a> filter or the
-<code class="docutils literal notranslate"><span class="pre">-</span></code> operator since both meshes are <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a>.</p>
-<p>The difference of two manifold meshes <code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code> is the volume
-of the mesh in <code class="docutils literal notranslate"><span class="pre">A</span></code> not belonging to <code class="docutils literal notranslate"><span class="pre">B</span></code>.</p>
-<p>Order of operands matters for boolean difference.</p>
+<p>両方のメッシュが <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> であるため， <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyDataFilters.boolean_difference.html#pyvista.PolyDataFilters.boolean_difference" title="pyvista.PolyDataFilters.boolean_difference"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.boolean_difference()</span></code></a> フィルタまたは <code class="docutils literal notranslate"><span class="pre">-</span></code> 演算子を使用して <code class="docutils literal notranslate"><span class="pre">A</span></code> と <code class="docutils literal notranslate"><span class="pre">B</span></code> のブーリアン値の差を実行します．</p>
+<p>2つのマニフォールドメッシュ <code class="docutils literal notranslate"><span class="pre">A</span></code> と <code class="docutils literal notranslate"><span class="pre">B</span></code> の差は、 <code class="docutils literal notranslate"><span class="pre">A</span></code> のメッシュのうち <code class="docutils literal notranslate"><span class="pre">B</span></code> に属さない部分の体積である。</p>
+<p>真偽判定にはオペランドの順序が重要です。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">sphere_a</span><span class="o">.</span><span class="n">boolean_difference</span><span class="p">(</span><span class="n">sphere_b</span><span class="p">)</span>
 <span class="n">pl</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">_</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">sphere_a</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;wireframe&#39;</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
@@ -1151,13 +1129,10 @@ of the mesh in <code class="docutils literal notranslate"><span class="pre">A</s
 </div>
 <img src="../../_images/sphx_glr_boolean-operations_002.png" srcset="../../_images/sphx_glr_boolean-operations_002.png" alt="boolean operations" class = "sphx-glr-single-img"/></section>
 <section id="boolean-intersection">
-<h2>Boolean Intersection<a class="headerlink" href="#boolean-intersection" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Perform a boolean intersection of <code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code> using the
-<a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyDataFilters.boolean_intersection.html#pyvista.PolyDataFilters.boolean_intersection" title="pyvista.PolyDataFilters.boolean_intersection"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.boolean_intersection()</span></code></a> filter.</p>
-<p>The intersection of two manifold meshes <code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code> is the mesh
-which is the volume of <code class="docutils literal notranslate"><span class="pre">A</span></code> that is also in <code class="docutils literal notranslate"><span class="pre">B</span></code>.</p>
-<p>Order of operands does not matter for boolean intersection (the
-operation is commutative).</p>
+<h2>ブール交差<a class="headerlink" href="#boolean-intersection" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyDataFilters.boolean_intersection.html#pyvista.PolyDataFilters.boolean_intersection" title="pyvista.PolyDataFilters.boolean_intersection"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.boolean_intersection()</span></code></a> フィルタを使用して、 <code class="docutils literal notranslate"><span class="pre">A</span></code> と <code class="docutils literal notranslate"><span class="pre">B</span></code> のブール交差を行います。</p>
+<p>2つの多様体メッシュ``A``と``B```の交点は、<a href="#id1"><span class="problematic" id="id2">``</span></a>A``の体積が``B``の中にもあるメッシュである。</p>
+<p>論理交差にはオペランドの順序は関係ありません（演算は可換です）。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">sphere_a</span><span class="o">.</span><span class="n">boolean_intersection</span><span class="p">(</span><span class="n">sphere_b</span><span class="p">)</span>
 <span class="n">pl</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">_</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">sphere_a</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;wireframe&#39;</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
@@ -1170,18 +1145,16 @@ operation is commutative).</p>
 <img src="../../_images/sphx_glr_boolean-operations_003.png" srcset="../../_images/sphx_glr_boolean-operations_003.png" alt="boolean operations" class = "sphx-glr-single-img"/></section>
 </section>
 <section id="behavior-due-to-flipped-normals">
-<h1>Behavior due to flipped normals<a class="headerlink" href="#behavior-due-to-flipped-normals" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Note that these boolean filters behave differently depending on the
-orientation of the normals.</p>
-<p>Boolean difference with both cube and sphere normals pointed
-outward.  This is the &quot;normal&quot; behavior.</p>
+<h1>法線の反転による挙動<a class="headerlink" href="#behavior-due-to-flipped-normals" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>これらのブーリアンフィルターは、法線の向きによって動作が異なることに注意してください。</p>
+<p>立方体と球体の両方の法線が外側に向いている状態でのブール型の差分です。 これが &quot;normal&quot; の動作です。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cube</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Cube</span><span class="p">()</span><span class="o">.</span><span class="n">triangulate</span><span class="p">()</span><span class="o">.</span><span class="n">subdivide</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">sphere</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">cube</span><span class="o">.</span><span class="n">boolean_difference</span><span class="p">(</span><span class="n">sphere</span><span class="p">)</span>
 <span class="n">result</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;tan&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_boolean-operations_004.png" srcset="../../_images/sphx_glr_boolean-operations_004.png" alt="boolean operations" class = "sphx-glr-single-img"/><p>Boolean difference with cube normals outward, sphere inward.</p>
+<img src="../../_images/sphx_glr_boolean-operations_004.png" srcset="../../_images/sphx_glr_boolean-operations_004.png" alt="boolean operations" class = "sphx-glr-single-img"/><p>立方体の法線を外側に、球体を内側にしたブール値の差。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cube</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Cube</span><span class="p">()</span><span class="o">.</span><span class="n">triangulate</span><span class="p">()</span><span class="o">.</span><span class="n">subdivide</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">sphere</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
 <span class="n">sphere</span><span class="o">.</span><span class="n">flip_normals</span><span class="p">()</span>
@@ -1189,7 +1162,7 @@ outward.  This is the &quot;normal&quot; behavior.</p>
 <span class="n">result</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;tan&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_boolean-operations_005.png" srcset="../../_images/sphx_glr_boolean-operations_005.png" alt="boolean operations" class = "sphx-glr-single-img"/><p>Boolean difference with cube normals inward, sphere outward.</p>
+<img src="../../_images/sphx_glr_boolean-operations_005.png" srcset="../../_images/sphx_glr_boolean-operations_005.png" alt="boolean operations" class = "sphx-glr-single-img"/><p>立方体の法線を内側に、球体を外側にしたブール差です。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cube</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Cube</span><span class="p">()</span><span class="o">.</span><span class="n">triangulate</span><span class="p">()</span><span class="o">.</span><span class="n">subdivide</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">cube</span><span class="o">.</span><span class="n">flip_normals</span><span class="p">()</span>
 <span class="n">sphere</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
@@ -1197,7 +1170,7 @@ outward.  This is the &quot;normal&quot; behavior.</p>
 <span class="n">result</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;tan&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_boolean-operations_006.png" srcset="../../_images/sphx_glr_boolean-operations_006.png" alt="boolean operations" class = "sphx-glr-single-img"/><p>Both cube and sphere normals inward.</p>
+<img src="../../_images/sphx_glr_boolean-operations_006.png" srcset="../../_images/sphx_glr_boolean-operations_006.png" alt="boolean operations" class = "sphx-glr-single-img"/><p>立方体と球体の両方の法線を内側にします。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cube</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Cube</span><span class="p">()</span><span class="o">.</span><span class="n">triangulate</span><span class="p">()</span><span class="o">.</span><span class="n">subdivide</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">cube</span><span class="o">.</span><span class="n">flip_normals</span><span class="p">()</span>
 <span class="n">sphere</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>

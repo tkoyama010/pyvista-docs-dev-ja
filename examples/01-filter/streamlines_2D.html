@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>2D Streamlines &#8212; PyVista 0.32.dev0 ドキュメント</title>
+    <title>2D流線 &#8212; PyVista 0.32.dev0 ドキュメント</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -380,7 +380,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="collisions.html">
-   Collision
+   衝突
   </a>
  </li>
 </ul>
@@ -569,7 +569,7 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   2D Streamlines
+   2D流線
   </a>
  </li>
 </ul>
@@ -590,7 +590,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="surface_reconstruction.html">
-   Surface Reconstruction
+   サーフェスの再構築
   </a>
  </li>
 </ul>
@@ -968,14 +968,14 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../99-advanced/osmnx-example.html">
-   Plot Open Street Map Data
+   オープンストリートマップデータのプロット
   </a>
  </li>
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../99-advanced/ray-trace-moeller.html">
-   Visualize the Moeller–Trumbore Algorithm
+   Moeller-Trumboreアルゴリズムの可視化
   </a>
  </li>
 </ul>
@@ -1040,16 +1040,15 @@
 to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="d-streamlines">
-<span id="d-streamlines-example"></span><span id="sphx-glr-examples-01-filter-streamlines-2d-py"></span><h1>2D Streamlines<a class="headerlink" href="#d-streamlines" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Integrate a vector field to generate streamlines on a 2D surface.</p>
-<p>This example generates streamlines of flow around a cylinder in cross flow.</p>
+<span id="d-streamlines-example"></span><span id="sphx-glr-examples-01-filter-streamlines-2d-py"></span><h1>2D流線<a class="headerlink" href="#d-streamlines" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>2次元表面上のベクトルフィールドを積分して，流線を生成します．</p>
+<p>この例では、クロスフローにおけるシリンダー周りの流れの流線を生成します。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 </pre></div>
 </div>
-<p>The data is multiblock with the fluid_data as the first block.
-The data lies in the xy plane, i.e. z=0, with no z velocity.</p>
+<p>データはマルチブロックで，fluid_dataが最初のブロックとなっています。データはxy平面上、つまりz=0で、z方向の速度はありません。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_cylinder_crossflow</span><span class="p">()</span>
 <span class="n">fluid_mesh</span> <span class="o">=</span> <span class="n">mesh</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">fluid_mesh</span><span class="p">)</span>
@@ -1065,12 +1064,7 @@ The data lies in the xy plane, i.e. z=0, with no z velocity.</p>
   N Arrays:     3
 </pre></div>
 </div>
-<p>The default behavior of the <a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSetFilters.streamlines.html#pyvista.DataSetFilters.streamlines" title="pyvista.DataSetFilters.streamlines"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.streamlines()</span></code></a> filter is to use
-a 3D sphere source as the seed points.  This often will not generate any
-seed points on the 2D plane of interest.  Instead, a single streamlines
-can be generated using the <cite>start_position</cite> argument.
-<cite>surface_streamlines=True</cite> argument is be needed if the dataset has
-nonzero normal velocity component.  This is not the case in this dataset.</p>
+<p><a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSetFilters.streamlines.html#pyvista.DataSetFilters.streamlines" title="pyvista.DataSetFilters.streamlines"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.streamlines()</span></code></a> フィルタのデフォルトの動作は、3Dの球体ソースを種点として使用することです。これは多くの場合、対象となる2D平面上にシードポイントを生成しません。 代わりに、 <cite>start_position</cite> の引数を使って、単一のストリームラインを生成することができます。<cite>surface_streamlines=True</cite> という引数は、データセットが非ゼロの法線速度成分を持っている場合に必要です。 このデータセットではそのようなことはありません。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">one_streamline</span> <span class="o">=</span> <span class="n">fluid_mesh</span><span class="o">.</span><span class="n">streamlines</span><span class="p">(</span>
     <span class="n">start_position</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.</span><span class="p">),</span>
     <span class="n">max_time</span> <span class="o">=</span> <span class="mf">100.</span><span class="p">,</span>
@@ -1092,8 +1086,7 @@ nonzero normal velocity component.  This is not the case in this dataset.</p>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="n">camera_position</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_streamlines_2D_001.png" srcset="../../_images/sphx_glr_streamlines_2D_001.png" alt="streamlines 2D" class = "sphx-glr-single-img"/><p>To generate multiple streamlines, a line source can be used with the <cite>pointa</cite>
-and <cite>pointb</cite> parameters.</p>
+<img src="../../_images/sphx_glr_streamlines_2D_001.png" srcset="../../_images/sphx_glr_streamlines_2D_001.png" alt="streamlines 2D" class = "sphx-glr-single-img"/><p>複数のストリームラインを生成するには、ラインソースを <cite>pointa</cite> および <cite>pointb</cite> パラメータとともに使用します。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">line_streamlines</span> <span class="o">=</span> <span class="n">fluid_mesh</span><span class="o">.</span><span class="n">streamlines</span><span class="p">(</span>
     <span class="n">pointa</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
     <span class="n">pointb</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
@@ -1110,13 +1103,8 @@ and <cite>pointb</cite> parameters.</p>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="n">camera_position</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_streamlines_2D_002.png" srcset="../../_images/sphx_glr_streamlines_2D_002.png" alt="streamlines 2D" class = "sphx-glr-single-img"/><p>The behavior immediately downstream of the cylinder is still not apparent
-using streamlines at the inlet.</p>
-<p>Another method is the use
-<a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSetFilters.streamlines_evenly_spaced_2D.html#pyvista.DataSetFilters.streamlines_evenly_spaced_2D" title="pyvista.DataSetFilters.streamlines_evenly_spaced_2D"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.streamlines_evenly_spaced_2D()</span></code></a>.
-This filter only works with 2D data that lies on the xy plane. This method
-can quickly run of memory, so particular attention must be paid to the input
-parameters.  The defaults are in cell_length units.</p>
+<img src="../../_images/sphx_glr_streamlines_2D_002.png" srcset="../../_images/sphx_glr_streamlines_2D_002.png" alt="streamlines 2D" class = "sphx-glr-single-img"/><p>シリンダーのすぐ下流の挙動は、入口の流線ではまだわかりません。</p>
+<p>もう一つの方法は、 <a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSetFilters.streamlines_evenly_spaced_2D.html#pyvista.DataSetFilters.streamlines_evenly_spaced_2D" title="pyvista.DataSetFilters.streamlines_evenly_spaced_2D"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.streamlines_evenly_spaced_2D()</span></code></a> を使うことです。このフィルタは、xy平面上にある2Dデータに対してのみ動作します。このメソッドはすぐにメモリ不足になってしまうので、入力パラメータには特に注意を払う必要があります。 デフォルトでは cell_length 単位で表示されます。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">line_streamlines</span> <span class="o">=</span> <span class="n">fluid_mesh</span><span class="o">.</span><span class="n">streamlines_evenly_spaced_2D</span><span class="p">(</span>
     <span class="n">start_position</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.</span><span class="p">),</span>
     <span class="n">separating_distance</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
@@ -1132,9 +1120,7 @@ parameters.  The defaults are in cell_length units.</p>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="n">camera_position</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_streamlines_2D_003.png" srcset="../../_images/sphx_glr_streamlines_2D_003.png" alt="streamlines 2D" class = "sphx-glr-single-img"/><p>The streamlines are only approximately evenly spaced and capture the
-vortex pair downstream of the cylinder with appropriate choice of
-<code class="docutils literal notranslate"><span class="pre">start_position</span></code>.</p>
+<img src="../../_images/sphx_glr_streamlines_2D_003.png" srcset="../../_images/sphx_glr_streamlines_2D_003.png" alt="streamlines 2D" class = "sphx-glr-single-img"/><p>この流線はほぼ等間隔に配置されており、 <code class="docutils literal notranslate"><span class="pre">start_position</span></code> を適切に選択することで、円柱の下流にある渦のペアを捉えることができます。</p>
 <p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.701 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-filter-streamlines-2d-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">

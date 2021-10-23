@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Plot Open Street Map Data &#8212; PyVista 0.32.dev0 ドキュメント</title>
+    <title>オープンストリートマップデータのプロット &#8212; PyVista 0.32.dev0 ドキュメント</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -50,7 +50,7 @@
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
-    <link rel="next" title="Visualize the Moeller–Trumbore Algorithm" href="ray-trace-moeller.html" />
+    <link rel="next" title="Moeller-Trumboreアルゴリズムの可視化" href="ray-trace-moeller.html" />
     <link rel="prev" title="PyVistaの拡張" href="extending-pyvista.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="ja">
@@ -380,7 +380,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../01-filter/collisions.html">
-   Collision
+   衝突
   </a>
  </li>
 </ul>
@@ -569,7 +569,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../01-filter/streamlines_2D.html">
-   2D Streamlines
+   2D流線
   </a>
  </li>
 </ul>
@@ -590,7 +590,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../01-filter/surface_reconstruction.html">
-   Surface Reconstruction
+   サーフェスの再構築
   </a>
  </li>
 </ul>
@@ -968,14 +968,14 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Plot Open Street Map Data
+   オープンストリートマップデータのプロット
   </a>
  </li>
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="ray-trace-moeller.html">
-   Visualize the Moeller–Trumbore Algorithm
+   Moeller-Trumboreアルゴリズムの可視化
   </a>
  </li>
 </ul>
@@ -1040,17 +1040,17 @@
 to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="plot-open-street-map-data">
-<span id="open-street-map-example"></span><span id="sphx-glr-examples-99-advanced-osmnx-example-py"></span><h1>Plot Open Street Map Data<a class="headerlink" href="#plot-open-street-map-data" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<span id="open-street-map-example"></span><span id="sphx-glr-examples-99-advanced-osmnx-example-py"></span><h1>オープンストリートマップデータのプロット<a class="headerlink" href="#plot-open-street-map-data" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>これは元々 <a class="reference external" href="https://github.com/pyvista/pyvista-support/issues/486">pyvista/pyvista-support#486</a> に投稿されました．</p>
-<p>Be sure to check out <a class="reference external" href="https://github.com/gboeing/osmnx">osmnx</a></p>
-<p>Start by generating a graph from an address.</p>
+<p><a class="reference external" href="https://github.com/gboeing/osmnx">osmnx</a> をチェックアウトしてください。</p>
+<p>まず、アドレスからグラフを生成します。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">osmnx</span> <span class="k">as</span> <span class="nn">ox</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 </pre></div>
 </div>
-<p>Read in the graph directly from the Open Street Map server.</p>
+<p>Open Street Mapサーバーから直接グラフを読み込んでください。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># address = &#39;Holzgerlingen DE&#39;</span>
 <span class="c1"># graph = ox.graph_from_address(address, dist=500, network_type=&#39;drive&#39;)</span>
 <span class="c1"># pickle.dump(graph, open(&#39;/tmp/tmp.p&#39;, &#39;wb&#39;))</span>
@@ -1060,8 +1060,7 @@ to download the full example code</p>
 <span class="n">graph</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_osmnx_graph</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Next, convert the edges into pyvista lines using
-<a class="reference internal" href="../../api/utilities/_autosummary/pyvista.lines_from_points.html#pyvista.lines_from_points" title="pyvista.lines_from_points"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.lines_from_points()</span></code></a>.</p>
+<p>次に、 <a class="reference internal" href="../../api/utilities/_autosummary/pyvista.lines_from_points.html#pyvista.lines_from_points" title="pyvista.lines_from_points"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.lines_from_points()</span></code></a> を使って、エッジを pyvista の線に変換します。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nodes</span><span class="p">,</span> <span class="n">edges</span> <span class="o">=</span> <span class="n">ox</span><span class="o">.</span><span class="n">graph_to_gdfs</span><span class="p">(</span><span class="n">graph</span><span class="p">)</span>
 <span class="n">lines</span> <span class="o">=</span> <span class="p">[]</span>
 
@@ -1075,7 +1074,7 @@ to download the full example code</p>
     <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Finally, merge the lines and plot</p>
+<p>最後に、ラインをマージしてプロットします</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">combined_lines</span> <span class="o">=</span> <span class="n">lines</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">lines</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
 <span class="n">combined_lines</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">line_width</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">)</span>
 </pre></div>

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Surface Reconstruction &#8212; PyVista 0.32.dev0 ドキュメント</title>
+    <title>サーフェスの再構築 &#8212; PyVista 0.32.dev0 ドキュメント</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -380,7 +380,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="collisions.html">
-   Collision
+   衝突
   </a>
  </li>
 </ul>
@@ -569,7 +569,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="streamlines_2D.html">
-   2D Streamlines
+   2D流線
   </a>
  </li>
 </ul>
@@ -590,7 +590,7 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Surface Reconstruction
+   サーフェスの再構築
   </a>
  </li>
 </ul>
@@ -968,14 +968,14 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../99-advanced/osmnx-example.html">
-   Plot Open Street Map Data
+   オープンストリートマップデータのプロット
   </a>
  </li>
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../99-advanced/ray-trace-moeller.html">
-   Visualize the Moeller–Trumbore Algorithm
+   Moeller-Trumboreアルゴリズムの可視化
   </a>
  </li>
 </ul>
@@ -1040,14 +1040,12 @@
 to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="surface-reconstruction">
-<span id="surface-reconstruction-example"></span><span id="sphx-glr-examples-01-filter-surface-reconstruction-py"></span><h1>Surface Reconstruction<a class="headerlink" href="#surface-reconstruction" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Surface reconstruction has a dedicated filter in PyVista and is
-handled by <a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSetFilters.reconstruct_surface.html#pyvista.DataSetFilters.reconstruct_surface" title="pyvista.DataSetFilters.reconstruct_surface"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.reconstruct_surface()</span></code></a>.  This
-tends to perform much better than <code class="xref py py-func docutils literal notranslate"><span class="pre">DataSetFilters.delaunay_3d()</span></code>.</p>
+<span id="surface-reconstruction-example"></span><span id="sphx-glr-examples-01-filter-surface-reconstruction-py"></span><h1>サーフェスの再構築<a class="headerlink" href="#surface-reconstruction" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>表面再構成は、PyVistaでは専用のフィルタが用意されており、 <a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSetFilters.reconstruct_surface.html#pyvista.DataSetFilters.reconstruct_surface" title="pyvista.DataSetFilters.reconstruct_surface"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.reconstruct_surface()</span></code></a> で処理されます。 これは <code class="xref py py-func docutils literal notranslate"><span class="pre">DataSetFilters.delaunay_3d()</span></code> よりもはるかに良いパフォーマンスを示す傾向があります。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 </pre></div>
 </div>
-<p>Create a point cloud from a sphere and then reconstruct a surface from it.</p>
+<p>球体から点群を作成し、その点群からサーフェスを再構成します。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">points</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span><span class="o">.</span><span class="n">points</span><span class="p">)</span>
 <span class="n">surf</span> <span class="o">=</span> <span class="n">points</span><span class="o">.</span><span class="n">reconstruct_surface</span><span class="p">()</span>
 <span class="n">surf</span>
@@ -1068,7 +1066,7 @@ tends to perform much better than <code class="xref py py-func docutils literal 
 
 </div>
 <br />
-<br /><p>Plot the point cloud and the reconstructed sphere.</p>
+<br /><p>点群と再構成された球体をプロットします。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pl</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
 <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
 <span class="n">pl</span><span class="o">.</span><span class="n">add_title</span><span class="p">(</span><span class="s1">&#39;Point Cloud of 3D Surface&#39;</span><span class="p">)</span>

@@ -380,7 +380,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../01-filter/collisions.html">
-   Collision
+   衝突
   </a>
  </li>
 </ul>
@@ -569,7 +569,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../01-filter/streamlines_2D.html">
-   2D Streamlines
+   2D流線
   </a>
  </li>
 </ul>
@@ -590,7 +590,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../01-filter/surface_reconstruction.html">
-   Surface Reconstruction
+   サーフェスの再構築
   </a>
  </li>
 </ul>
@@ -968,14 +968,14 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../99-advanced/osmnx-example.html">
-   Plot Open Street Map Data
+   オープンストリートマップデータのプロット
   </a>
  </li>
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../99-advanced/ray-trace-moeller.html">
-   Visualize the Moeller–Trumbore Algorithm
+   Moeller-Trumboreアルゴリズムの可視化
   </a>
  </li>
 </ul>
@@ -1048,8 +1048,7 @@ to download the full example code</p>
 <span class="kn">from</span> <span class="nn">tempfile</span> <span class="kn">import</span> <span class="n">NamedTemporaryFile</span>
 </pre></div>
 </div>
-<p>An XML PolyData file in <code class="docutils literal notranslate"><span class="pre">.vtp</span></code> format is created.  It will be saved in a
-temporary file for this example.</p>
+<p><code class="docutils literal notranslate"><span class="pre">.vtp</span></code> 形式のXML PolyDataファイルが作成されます。 このファイルは、今回の例では一時ファイルに保存されます。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">temp_file</span> <span class="o">=</span> <span class="n">NamedTemporaryFile</span><span class="p">(</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">suffix</span><span class="o">=</span><span class="s2">&quot;.vtp&quot;</span><span class="p">)</span>
 <span class="n">temp_file</span><span class="o">.</span><span class="n">name</span>
 </pre></div>
@@ -1058,16 +1057,14 @@ temporary file for this example.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;/tmp/tmpzq2ablq7.vtp&#39;
 </pre></div>
 </div>
-<p><a class="reference internal" href="../../api/utilities/_autosummary/pyvista.Sphere.html#pyvista.Sphere" title="pyvista.Sphere"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.Sphere</span></code></a> already includes <code class="docutils literal notranslate"><span class="pre">Normals</span></code> point data.  Additionally
-<code class="docutils literal notranslate"><span class="pre">height</span></code> point data and <code class="docutils literal notranslate"><span class="pre">id</span></code> cell data is added.</p>
+<p><a class="reference internal" href="../../api/utilities/_autosummary/pyvista.Sphere.html#pyvista.Sphere" title="pyvista.Sphere"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.Sphere</span></code></a> には、すでに <code class="docutils literal notranslate"><span class="pre">Normals</span></code> という点データが含まれています。 さらに、 <code class="docutils literal notranslate"><span class="pre">height</span></code> のポイントデータと <code class="docutils literal notranslate"><span class="pre">id</span></code> のセルデータを追加します。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 <span class="n">mesh</span><span class="p">[</span><span class="s1">&#39;height&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">points</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
 <span class="n">mesh</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">mesh</span><span class="o">.</span><span class="n">n_cells</span><span class="p">)</span>
 <span class="n">mesh</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">temp_file</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><a class="reference internal" href="../../api/utilities/_autosummary/pyvista.read.html#pyvista.read" title="pyvista.read"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.read()</span></code></a> function reads all the data in the file. This provides
-a quick and easy one-liner to read data from files.</p>
+<p><a class="reference internal" href="../../api/utilities/_autosummary/pyvista.read.html#pyvista.read" title="pyvista.read"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.read()</span></code></a> 関数は、ファイル内のすべてのデータを読み込みます。これは、ファイルからデータを読み取るための、迅速で簡単なワンライナーを提供します。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">new_mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">temp_file</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;All arrays: </span><span class="si">{</span><span class="n">mesh</span><span class="o">.</span><span class="n">array_names</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
@@ -1076,8 +1073,7 @@ a quick and easy one-liner to read data from files.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>All arrays: [&#39;height&#39;, &#39;Normals&#39;, &#39;id&#39;]
 </pre></div>
 </div>
-<p>Using <a class="reference internal" href="../../api/readers/_autosummary/pyvista.get_reader.html#pyvista.get_reader" title="pyvista.get_reader"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.get_reader()</span></code></a> enables more fine-grained control of reading data
-files. Reading in a <code class="docutils literal notranslate"><span class="pre">.vtp`</span></code> file uses the <a class="reference internal" href="../../api/readers/_autosummary/pyvista.XMLPolyDataReader.html#pyvista.XMLPolyDataReader" title="pyvista.XMLPolyDataReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.XMLPolyDataReader</span></code></a>.</p>
+<p><a class="reference internal" href="../../api/readers/_autosummary/pyvista.get_reader.html#pyvista.get_reader" title="pyvista.get_reader"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.get_reader()</span></code></a> を使用することで、データファイルの読み込みをより細かく制御することができます。 <code class="docutils literal notranslate"><span class="pre">.vtp`</span></code> ファイルの読み込みには、 <a class="reference internal" href="../../api/readers/_autosummary/pyvista.XMLPolyDataReader.html#pyvista.XMLPolyDataReader" title="pyvista.XMLPolyDataReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.XMLPolyDataReader</span></code></a> を使用します。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">reader</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">get_reader</span><span class="p">(</span><span class="n">temp_file</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 <span class="n">reader</span>
 <span class="c1"># Alternative method: reader = pyvista.XMLPolyDataReader(temp_file.name)</span>
@@ -1087,9 +1083,7 @@ files. Reading in a <code class="docutils literal notranslate"><span class="pre"
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>XMLPolyDataReader(&#39;/tmp/tmpzq2ablq7.vtp&#39;)
 </pre></div>
 </div>
-<p>Some reader classes, including this one, offer the ability to inspect the
-data file before loading all the data. For example, we can access the number
-and names of point and cell arrays.</p>
+<p>このクラスを含め、いくつかのリーダークラスは、すべてのデータを読み込む前にデータファイルを検査する機能を提供しています。例えば、点配列やセル配列の数や名前にアクセスすることができます。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of point arrays: </span><span class="si">{</span><span class="n">reader</span><span class="o">.</span><span class="n">number_point_arrays</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Available point data:   </span><span class="si">{</span><span class="n">reader</span><span class="o">.</span><span class="n">point_array_names</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of cell arrays:  </span><span class="si">{</span><span class="n">reader</span><span class="o">.</span><span class="n">number_cell_arrays</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -1103,10 +1097,7 @@ Number of cell arrays:  1
 Available cell data:    [&#39;id&#39;]
 </pre></div>
 </div>
-<p>We can select which data to read by selectively disabling or enabling
-specific arrays or all arrays.  Here we disable all the cell arrays and
-the <code class="docutils literal notranslate"><span class="pre">Normals</span></code> point array to leave only the <code class="docutils literal notranslate"><span class="pre">height</span></code> point array.  The data
-is finally read into a pyvista object that only has the <code class="docutils literal notranslate"><span class="pre">height</span></code> point array.</p>
+<p>特定の配列，あるいはすべての配列を選択的に無効あるいは有効にすることで，読み取るデータを選択することができます． ここでは、すべてのセル配列と <code class="docutils literal notranslate"><span class="pre">Normals</span></code> 点の配列を無効にして、 <code class="docutils literal notranslate"><span class="pre">height</span></code> 点の配列だけを残しています。 データは最終的に <code class="docutils literal notranslate"><span class="pre">height</span></code> 点の配列のみを持つ pyvista オブジェクトに読み込まれます。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">reader</span><span class="o">.</span><span class="n">disable_all_cell_arrays</span><span class="p">()</span>
 <span class="n">reader</span><span class="o">.</span><span class="n">disable_point_array</span><span class="p">(</span><span class="s1">&#39;Normals&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Point array status: </span><span class="si">{</span><span class="n">reader</span><span class="o">.</span><span class="n">all_point_arrays_status</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -1121,7 +1112,7 @@ Cell array status:  {&#39;id&#39;: False}
 Read arrays:        [&#39;height&#39;]
 </pre></div>
 </div>
-<p>We can reuse the reader object to choose different variables if needed.</p>
+<p>必要に応じて、リーダーオブジェクトを再利用して、異なる変数を選択することができます。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">reader</span><span class="o">.</span><span class="n">enable_all_cell_arrays</span><span class="p">()</span>
 <span class="n">reader_mesh_2</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;New read arrays: </span><span class="si">{</span><span class="n">reader_mesh_2</span><span class="o">.</span><span class="n">array_names</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -1131,10 +1122,7 @@ Read arrays:        [&#39;height&#39;]
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>New read arrays: [&#39;height&#39;, &#39;id&#39;]
 </pre></div>
 </div>
-<p>Some Readers support setting different time points or iterations. In both
-cases, this is done using the time point functionality. The NACA
-dataset has two such points with density.  This dataset is in EnSight format,
-which uses the <a class="reference internal" href="../../api/readers/_autosummary/pyvista.EnSightReader.html#pyvista.EnSightReader" title="pyvista.EnSightReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.EnSightReader</span></code></a> class.</p>
+<p>一部のリーダーでは、異なるタイムポイントやイテレーションの設定が可能です。いずれの場合も、タイムポイント機能を使って設定します。NACAデータセットには、密度を持つ2つのそのようなポイントがあります。 このデータセットはEnSight形式で、 <a class="reference internal" href="../../api/readers/_autosummary/pyvista.EnSightReader.html#pyvista.EnSightReader" title="pyvista.EnSightReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.EnSightReader</span></code></a> クラスを使用しています。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_naca</span><span class="p">(</span><span class="n">load</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">reader</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">get_reader</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
 <span class="n">time_values</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="n">time_values</span>
@@ -1149,11 +1137,7 @@ Available time points: [1.0, 3.0]
 Available point arrays: [&#39;DENS&#39;]
 </pre></div>
 </div>
-<p>First both time points are read in, and then the difference in density is
-calculated and saved on the second mesh.  The read method of
-<a class="reference internal" href="../../api/readers/_autosummary/pyvista.EnSightReader.html#pyvista.EnSightReader" title="pyvista.EnSightReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.EnSightReader</span></code></a> returns a <a class="reference internal" href="../../api/core/_autosummary/pyvista.MultiBlock.html#pyvista.MultiBlock" title="pyvista.MultiBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.MultiBlock</span></code></a> instance.
-In this dataset, there are 3 blocks and the new scalar must be applied on each
-block.</p>
+<p>まず両方のタイムポイントが読み込まれ、次に密度の差が計算され、2番目のメッシュに保存されます。<a class="reference internal" href="../../api/readers/_autosummary/pyvista.EnSightReader.html#pyvista.EnSightReader" title="pyvista.EnSightReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.EnSightReader</span></code></a> の read メソッドは、 <a class="reference internal" href="../../api/core/_autosummary/pyvista.MultiBlock.html#pyvista.MultiBlock" title="pyvista.MultiBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.MultiBlock</span></code></a> インスタンスを返します。このデータセットでは、3つのブロックがあり、新しいスカラーを各ブロックに適用する必要があります。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">reader</span><span class="o">.</span><span class="n">set_active_time_value</span><span class="p">(</span><span class="n">time_values</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 <span class="n">mesh_0</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 <span class="n">reader</span><span class="o">.</span><span class="n">set_active_time_value</span><span class="p">(</span><span class="n">time_values</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
@@ -1163,8 +1147,7 @@ block.</p>
     <span class="n">block_1</span><span class="p">[</span><span class="s1">&#39;DENS_DIFF&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">block_1</span><span class="p">[</span><span class="s1">&#39;DENS&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">block_0</span><span class="p">[</span><span class="s1">&#39;DENS&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>The value of <cite>DENS</cite> is plotted on the left column for both time points, and
-the difference on the right.</p>
+<p>左側の列には両時点での <cite>DENS</cite> の値が、右側の列にはその差がプロットされています。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="s1">&#39;2|1&#39;</span><span class="p">)</span>
 
 <span class="n">plotter</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
@@ -1186,10 +1169,7 @@ the difference on the right.</p>
 <span class="n">plotter</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_reader_001.png" srcset="../../_images/sphx_glr_reader_001.png" alt="reader" class = "sphx-glr-single-img"/><p>Reading time points or iterations can also be utilized to make a movie.
-Compare to <a class="reference internal" href="../02-plot/gif.html#gif-movie-example"><span class="std std-ref">GIFムービーの作成</span></a>, but here a set of files are read in
-through a ParaView Data format file. This file format and reader also return a
-<a class="reference internal" href="../../api/core/_autosummary/pyvista.MultiBlock.html#pyvista.MultiBlock" title="pyvista.MultiBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.MultiBlock</span></code></a> mesh.</p>
+<img src="../../_images/sphx_glr_reader_001.png" srcset="../../_images/sphx_glr_reader_001.png" alt="reader" class = "sphx-glr-single-img"/><p>タイムポイントやイタレーションを読み込んで、ムービーを作ることもできます。 <a class="reference internal" href="../02-plot/gif.html#gif-movie-example"><span class="std std-ref">GIFムービーの作成</span></a> と似ていますが、ここではParaViewデータ形式のファイルを使って、ファイルセットを読み込みます。このファイルフォーマットとリーダーは、 <a class="reference internal" href="../../api/core/_autosummary/pyvista.MultiBlock.html#pyvista.MultiBlock" title="pyvista.MultiBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.MultiBlock</span></code></a> メッシュも返します。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_wavy</span><span class="p">(</span><span class="n">load</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">reader</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">get_reader</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">reader</span><span class="p">)</span>
@@ -1199,8 +1179,7 @@ through a ParaView Data format file. This file format and reader also return a
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>PVDReader(&#39;/home/runner/.local/share/pyvista/examples/wavy/wavy.pvd&#39;)
 </pre></div>
 </div>
-<p>For each time point, plot the mesh colored by the height.
-Put iteration value in top left</p>
+<p>各時点で、高さによって色付けされたメッシュをプロットします。左上に反復値を表示します</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">notebook</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">off_screen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="c1"># Open a gif</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">open_gif</span><span class="p">(</span><span class="s2">&quot;wave_pvd.gif&quot;</span><span class="p">)</span>
