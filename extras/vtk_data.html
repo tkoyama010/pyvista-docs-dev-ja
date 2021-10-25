@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Using Local VTK-Data &#8212; PyVista 0.32.dev0 ドキュメント</title>
+    <title>ローカルVTKデータの使用 &#8212; PyVista 0.32.dev0 ドキュメント</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,7 +51,7 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="検索" href="../search.html" />
     <link rel="next" title="PyVistaの拡張" href="extending_pyvista.html" />
-    <link rel="prev" title="Sphinx PyVista Plot Directive" href="plot_directive.html" />
+    <link rel="prev" title="Sphinx PyVista Plot ディレクティブ" href="plot_directive.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="ja">
     
@@ -216,12 +216,12 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="plot_directive.html">
-   Sphinx PyVista Plot Directive
+   Sphinx PyVista Plot ディレクティブ
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Using Local VTK-Data
+   ローカルVTKデータの使用
   </a>
  </li>
  <li class="toctree-l1">
@@ -267,13 +267,9 @@
               <div>
                 
   <section id="using-local-vtk-data">
-<h1>Using Local VTK-Data<a class="headerlink" href="#using-local-vtk-data" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Normally, the PyVista examples will be downloaded from the
-<a class="reference external" href="https://github.com/pyvista/vtk-data">pyvista/vtk-data repository</a>.
-Alternatively, the entire pyvista/vtk-data repository can be supplied as a local folder.
-If the <code class="docutils literal notranslate"><span class="pre">PYVISTA_VTK_DATA</span></code> environment variable is set to the folder path, the examples will
-instead be copied from the local folder.</p>
-<p>This example uses a cloned vtk-data repository:</p>
+<h1>ローカルVTKデータの使用<a class="headerlink" href="#using-local-vtk-data" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>通常、PyVista のサンプルは、 <a class="reference external" href="https://github.com/pyvista/vtk-data">pyvista/vtk-data リポジトリ</a> からダウンロードします。また、pyvista/vtk-data リポジトリ全体をローカルフォルダとして提供することもできます。環境変数 <code class="docutils literal notranslate"><span class="pre">PYVISTA_VTK_DATA</span></code> にフォルダパスが設定されている場合は、代わりに例題がローカルフォルダからコピーされます。</p>
+<p>この例では、クローンされたvtk-dataリポジトリを使用しています。</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/pyvista/vtk-data.git path/to/repo/vtk-data  <span class="c1"># change the path</span>
 <span class="nb">export</span> <span class="nv">PYVISTA_VTK_DATA</span><span class="o">=</span>path/to/repo/vtk-data  <span class="c1"># change the path</span>
 </pre></div>
