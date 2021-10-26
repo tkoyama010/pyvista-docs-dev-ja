@@ -506,7 +506,7 @@
 <td><p>Remove all field data.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Table.copy.html#pyvista.Table.copy" title="pyvista.Table.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Table.copy</span></code></a>([deep])</p></td>
-<td><p>オブジェクトのコピーを返します．</p></td>
+<td><p>オブジェクトのコピーを取得します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.Table.copy_attributes.html#pyvista.Table.copy_attributes" title="pyvista.Table.copy_attributes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Table.copy_attributes</span></code></a>(dataset)</p></td>
 <td><p>入力データセットオブジェクトのデータ属性をコピーします．</p></td>
@@ -527,13 +527,13 @@
 <td><p>指定した配列のNaN以外の最小値と最大値を取得します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.Table.head.html#pyvista.Table.head" title="pyvista.Table.head"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Table.head</span></code></a>([display, html])</p></td>
-<td><p>このデータセットのヘッダ統計情報を返します．</p></td>
+<td><p>このデータセットのヘッダ統計情報を取得します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Table.items.html#pyvista.Table.items" title="pyvista.Table.items"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Table.items</span></code></a>()</p></td>
-<td><p>テーブル項目を返します．</p></td>
+<td><p>テーブル項目を取得します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.Table.keys.html#pyvista.Table.keys" title="pyvista.Table.keys"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Table.keys</span></code></a>()</p></td>
-<td><p>テーブルキーを返します．</p></td>
+<td><p>テーブルキーを取得します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Table.pop.html#pyvista.Table.pop" title="pyvista.Table.pop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Table.pop</span></code></a>(name)</p></td>
 <td><p>Pop off an array by the specified name.</p></td>
@@ -551,7 +551,7 @@
 <td><p>Set the table data using a dict-like update.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.Table.values.html#pyvista.Table.values" title="pyvista.Table.values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Table.values</span></code></a>()</p></td>
-<td><p>テーブル値を返します．</p></td>
+<td><p>テーブル値を取得します．</p></td>
 </tr>
 </tbody>
 </table>
@@ -563,10 +563,10 @@
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Table.actual_memory_size.html#pyvista.Table.actual_memory_size" title="pyvista.Table.actual_memory_size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Table.actual_memory_size</span></code></a></p></td>
-<td><p>データセットオブジェクトの実際のサイズを返します．</p></td>
+<td><p>データセットオブジェクトの実際のサイズを取得します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.Table.field_arrays.html#pyvista.Table.field_arrays" title="pyvista.Table.field_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Table.field_arrays</span></code></a></p></td>
-<td><p>DataSetAttributesとしてvtkFieldDataを返します．</p></td>
+<td><p>DataSetAttributesとしてvtkFieldDataを取得します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Table.field_data.html#pyvista.Table.field_data" title="pyvista.Table.field_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Table.field_data</span></code></a></p></td>
 <td><p>Return FieldData as DataSetAttributes.</p></td>
@@ -575,16 +575,16 @@
 <td><p>Get address of the underlying VTK C++ object.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Table.n_arrays.html#pyvista.Table.n_arrays" title="pyvista.Table.n_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Table.n_arrays</span></code></a></p></td>
-<td><p>列数を返します．</p></td>
+<td><p>列数を取得します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.Table.n_columns.html#pyvista.Table.n_columns" title="pyvista.Table.n_columns"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Table.n_columns</span></code></a></p></td>
-<td><p>列数を返します．</p></td>
+<td><p>列数を取得します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Table.n_rows.html#pyvista.Table.n_rows" title="pyvista.Table.n_rows"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Table.n_rows</span></code></a></p></td>
-<td><p>行数を返します．</p></td>
+<td><p>行数を取得します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.Table.row_arrays.html#pyvista.Table.row_arrays" title="pyvista.Table.row_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Table.row_arrays</span></code></a></p></td>
-<td><p>すべての行配列を返します．</p></td>
+<td><p>すべての行配列を取得します．</p></td>
 </tr>
 </tbody>
 </table>

@@ -701,7 +701,7 @@
 <td><p>インデックスまたは名前でブロックを取得します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.MultiBlock.get_block_name.html#pyvista.MultiBlock.get_block_name" title="pyvista.MultiBlock.get_block_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MultiBlock.get_block_name</span></code></a>(index)</p></td>
-<td><p>指定したインデックスのブロック名を文字列で返します．</p></td>
+<td><p>指定したインデックスのブロック名を文字列で取得します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.MultiBlock.get_data_range.html#pyvista.MultiBlock.get_data_range" title="pyvista.MultiBlock.get_data_range"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MultiBlock.get_data_range</span></code></a>(name)</p></td>
 <td><p>すべてのブロックにわたる配列名の最小値/最大値を取得します．</p></td>
@@ -710,7 +710,7 @@
 <td><p>ブロック名でインデックス番号を検索します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.MultiBlock.head.html#pyvista.MultiBlock.head" title="pyvista.MultiBlock.head"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MultiBlock.head</span></code></a>([display, html])</p></td>
-<td><p>このデータセットのヘッダ統計情報を返します．</p></td>
+<td><p>このデータセットのヘッダ統計情報を取得します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.MultiBlock.keys.html#pyvista.MultiBlock.keys" title="pyvista.MultiBlock.keys"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MultiBlock.keys</span></code></a>()</p></td>
 <td><p>データセット内のすべてのブロック名を取得します．</p></td>
@@ -755,7 +755,7 @@
 <td><p>3つの直交平面上のデータセットから3つの直交スライスを作成します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.MultiBlock.triangulate.html#pyvista.MultiBlock.triangulate" title="pyvista.MultiBlock.triangulate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MultiBlock.triangulate</span></code></a>([inplace, progress_bar])</p></td>
-<td><p>すべて三角形のメッシュを返します．</p></td>
+<td><p>すべて三角形のメッシュを取得します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.MultiBlock.wrap_nested.html#pyvista.MultiBlock.wrap_nested" title="pyvista.MultiBlock.wrap_nested"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MultiBlock.wrap_nested</span></code></a>()</p></td>
 <td><p>ネストされたすべてのデータ構造がPyVistaデータセットとしてラップされていることを確認します．</p></td>
@@ -770,31 +770,31 @@
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.MultiBlock.actual_memory_size.html#pyvista.MultiBlock.actual_memory_size" title="pyvista.MultiBlock.actual_memory_size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MultiBlock.actual_memory_size</span></code></a></p></td>
-<td><p>データセットオブジェクトの実際のサイズを返します．</p></td>
+<td><p>データセットオブジェクトの実際のサイズを取得します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.MultiBlock.bounds.html#pyvista.MultiBlock.bounds" title="pyvista.MultiBlock.bounds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MultiBlock.bounds</span></code></a></p></td>
 <td><p>ブロック間の境界の最小/最大を検索します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.MultiBlock.center.html#pyvista.MultiBlock.center" title="pyvista.MultiBlock.center"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MultiBlock.center</span></code></a></p></td>
-<td><p>境界ボックスの中心を返します．</p></td>
+<td><p>境界ボックスの中心を取得します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.MultiBlock.field_arrays.html#pyvista.MultiBlock.field_arrays" title="pyvista.MultiBlock.field_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MultiBlock.field_arrays</span></code></a></p></td>
-<td><p>DataSetAttributesとしてvtkFieldDataを返します．</p></td>
+<td><p>DataSetAttributesとしてvtkFieldDataを取得します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.MultiBlock.field_data.html#pyvista.MultiBlock.field_data" title="pyvista.MultiBlock.field_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MultiBlock.field_data</span></code></a></p></td>
 <td><p>Return FieldData as DataSetAttributes.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.MultiBlock.length.html#pyvista.MultiBlock.length" title="pyvista.MultiBlock.length"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MultiBlock.length</span></code></a></p></td>
-<td><p>境界ボックスの対角線の長さを返します．</p></td>
+<td><p>境界ボックスの対角線の長さを取得します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.MultiBlock.memory_address.html#pyvista.MultiBlock.memory_address" title="pyvista.MultiBlock.memory_address"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MultiBlock.memory_address</span></code></a></p></td>
 <td><p>Get address of the underlying VTK C++ object.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.MultiBlock.n_blocks.html#pyvista.MultiBlock.n_blocks" title="pyvista.MultiBlock.n_blocks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MultiBlock.n_blocks</span></code></a></p></td>
-<td><p>ブロックセットの総数を返します．</p></td>
+<td><p>ブロックセットの総数を取得します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.MultiBlock.volume.html#pyvista.MultiBlock.volume" title="pyvista.MultiBlock.volume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MultiBlock.volume</span></code></a></p></td>
-<td><p>このデータセット内のすべてのメッシュの合計ボリュームを返します．</p></td>
+<td><p>このデータセット内のすべてのメッシュの合計ボリュームを取得します．</p></td>
 </tr>
 </tbody>
 </table>

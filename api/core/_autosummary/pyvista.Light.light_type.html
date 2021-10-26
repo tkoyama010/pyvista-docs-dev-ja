@@ -487,11 +487,11 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.Light.light_type">
 <em class="property"><span class="pre">property</span> </em><span class="sig-prename descclassname"><span class="pre">Light.</span></span><span class="sig-name descname"><span class="pre">light_type</span></span><a class="headerlink" href="#pyvista.Light.light_type" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>ライトタイプを返します．</p>
+<dd><p>ライトタイプを取得します．</p>
 <p>既定のライトタイプは，ワールド座標空間に存在するシーンライトです．</p>
 <p>ヘッドライトはカメラにアタッチされ，常にカメラの焦点を指します．</p>
 <p>カメラライトもカメラとともに移動しますが，カメラに対して任意の相対位置を持つことができます．カメラライトは (0, 0, 1) にカメラが位置する座標空間で定義され，距離1で (0, 0, 0) を見て (0, 1, 0) が上になります．カメラライトは変換行列を使用してこの空間を確立します．つまり，カメラに対して固定の <a class="reference internal" href="pyvista.Light.position.html#pyvista.Light.position" title="pyvista.Light.position"><code class="xref py py-attr docutils literal notranslate"><span class="pre">position</span></code></a> を持ち，カメラを移動すると， <a class="reference internal" href="pyvista.Light.transform_matrix.html#pyvista.Light.transform_matrix" title="pyvista.Light.transform_matrix"><code class="xref py py-attr docutils literal notranslate"><span class="pre">transform_matrix</span></code></a>  (焦点についても同じことが言えます)の変更を介して <a class="reference internal" href="pyvista.Light.world_position.html#pyvista.Light.world_position" title="pyvista.Light.world_position"><code class="xref py py-attr docutils literal notranslate"><span class="pre">world_position</span></code></a> にのみ影響します．</p>
-<p>このプロパティは，列挙型からクラス定数値を返します:</p>
+<p>このプロパティは，列挙型からクラス定数値を取得します:</p>
 <blockquote>
 <div><ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">Light.HEADLIGHT</span> <span class="pre">==</span> <span class="pre">1</span></code></p></li>

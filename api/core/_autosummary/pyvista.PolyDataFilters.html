@@ -900,13 +900,13 @@
 <td><p>データから日付へのセル変換</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.PolyDataFilters.curvature.html#pyvista.PolyDataFilters.curvature" title="pyvista.PolyDataFilters.curvature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyDataFilters.curvature</span></code></a>([curv_type, ...])</p></td>
-<td><p>メッシュのポイント単位の曲率を返します．</p></td>
+<td><p>メッシュのポイント単位の曲率を取得します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyDataFilters.decimate.html#pyvista.PolyDataFilters.decimate" title="pyvista.PolyDataFilters.decimate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyDataFilters.decimate</span></code></a>(target_reduction[, ...])</p></td>
 <td><p>Reduce the number of triangles in a triangular mesh using <code class="docutils literal notranslate"><span class="pre">vtkQuadricDecimation</span></code>.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.PolyDataFilters.decimate_boundary.html#pyvista.PolyDataFilters.decimate_boundary" title="pyvista.PolyDataFilters.decimate_boundary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyDataFilters.decimate_boundary</span></code></a>([...])</p></td>
-<td><p>境界の三角形分割の小数点付きバージョンを返します．</p></td>
+<td><p>境界の三角形分割の小数点付きバージョンを取得します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyDataFilters.decimate_pro.html#pyvista.PolyDataFilters.decimate_pro" title="pyvista.PolyDataFilters.decimate_pro"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyDataFilters.decimate_pro</span></code></a>(reduction[, ...])</p></td>
 <td><p>三角形メッシュ内の三角形の数を減らします．</p></td>
@@ -918,7 +918,7 @@
 <td><p>メッシュの3D Delaunay三角形分割を作成します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.PolyDataFilters.edge_mask.html#pyvista.PolyDataFilters.edge_mask" title="pyvista.PolyDataFilters.edge_mask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyDataFilters.edge_mask</span></code></a>(angle[, progress_bar])</p></td>
-<td><p>angleより大きいサーフェス角度を持つサーフェスメッシュのポイントのマスクを返します．</p></td>
+<td><p>angleより大きいサーフェス角度を持つサーフェスメッシュのポイントのマスクを取得します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyDataFilters.elevation.html#pyvista.PolyDataFilters.elevation" title="pyvista.PolyDataFilters.elevation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyDataFilters.elevation</span></code></a>([low_point, ...])</p></td>
 <td><p>データセットにスカラー値を生成します．</p></td>
@@ -927,7 +927,7 @@
 <td><p>データセットのすべての内部/外部エッジをPolyDataとして抽出します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyDataFilters.extract_cells.html#pyvista.PolyDataFilters.extract_cells" title="pyvista.PolyDataFilters.extract_cells"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyDataFilters.extract_cells</span></code></a>(ind[, ...])</p></td>
-<td><p>グリッドのサブセットを返します．</p></td>
+<td><p>グリッドのサブセットを取得します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.PolyDataFilters.extract_feature_edges.html#pyvista.PolyDataFilters.extract_feature_edges" title="pyvista.PolyDataFilters.extract_feature_edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyDataFilters.extract_feature_edges</span></code></a>([...])</p></td>
 <td><p>メッシュの表面からエッジを抽出します．</p></td>
@@ -939,7 +939,7 @@
 <td><p>メッシュ内の最大接続セットを抽出します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyDataFilters.extract_points.html#pyvista.PolyDataFilters.extract_points" title="pyvista.PolyDataFilters.extract_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyDataFilters.extract_points</span></code></a>(ind[, ...])</p></td>
-<td><p>指定されたポイントインデックスのいずれかを含む(セルの)グリッドのサブセットを返します．</p></td>
+<td><p>指定されたポイントインデックスのいずれかを含む(セルの)グリッドのサブセットを取得します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.PolyDataFilters.extract_surface.html#pyvista.PolyDataFilters.extract_surface" title="pyvista.PolyDataFilters.extract_surface"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyDataFilters.extract_surface</span></code></a>([...])</p></td>
 <td><p>グリッドのサーフェスメッシュを抽出します．</p></td>
@@ -1083,7 +1083,7 @@
 <td><p>三角形メッシュ内の三角形の数を増やします．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyDataFilters.surface_indices.html#pyvista.PolyDataFilters.surface_indices" title="pyvista.PolyDataFilters.surface_indices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyDataFilters.surface_indices</span></code></a>([progress_bar])</p></td>
-<td><p>グリッドのサーフェスインデックスを返します．</p></td>
+<td><p>グリッドのサーフェスインデックスを取得します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.PolyDataFilters.texture_map_to_plane.html#pyvista.PolyDataFilters.texture_map_to_plane" title="pyvista.PolyDataFilters.texture_map_to_plane"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyDataFilters.texture_map_to_plane</span></code></a>([...])</p></td>
 <td><p>このデータセットをユーザ定義平面にテクスチャマップします．</p></td>
@@ -1101,7 +1101,7 @@
 <td><p>このメッシュを4x4変換で変換します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyDataFilters.triangulate.html#pyvista.PolyDataFilters.triangulate" title="pyvista.PolyDataFilters.triangulate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyDataFilters.triangulate</span></code></a>([inplace, ...])</p></td>
-<td><p>すべて三角形のメッシュを返します．</p></td>
+<td><p>すべて三角形のメッシュを取得します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.PolyDataFilters.tube.html#pyvista.PolyDataFilters.tube" title="pyvista.PolyDataFilters.tube"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyDataFilters.tube</span></code></a>([radius, scalars, ...])</p></td>
 <td><p>各入力ラインの周囲にチューブを生成します．</p></td>

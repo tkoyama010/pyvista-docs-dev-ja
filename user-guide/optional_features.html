@@ -206,7 +206,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vtk_to_pyvista.html">
-   Transitioning from VTK to PyVista
+   VTKからPyVistaへの移行
   </a>
  </li>
  <li class="toctree-l1">
@@ -226,13 +226,13 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="jupyter/pythreejs.html">
-     Using
+     PyVistaで
      <code class="docutils literal notranslate">
       <span class="pre">
        pythreejs
       </span>
      </code>
-     with PyVista
+     を使う
     </a>
    </li>
    <li class="toctree-l2">
@@ -314,7 +314,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#project-to-finite-plane">
-   Project to Finite Plane
+   有限平面への投影
   </a>
  </li>
 </ul>
@@ -378,9 +378,8 @@
 <img alt="../_images/ray_trace.png" src="../_images/ray_trace.png" />
 </section>
 <section id="project-to-finite-plane">
-<h2>Project to Finite Plane<a class="headerlink" href="#project-to-finite-plane" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>The following example expands on the vectorized ray tracing example by
-projecting the random_hills example data to a triangular plane.</p>
+<h2>有限平面への投影<a class="headerlink" href="#project-to-finite-plane" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>次の例では、ベクトル化されたレイトレーシングの例を発展させ、random_hillsの例のデータを三角形の平面に投影しています。</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">pykdtree.kdtree</span> <span class="kn">import</span> <span class="n">KDTree</span>
 <span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>

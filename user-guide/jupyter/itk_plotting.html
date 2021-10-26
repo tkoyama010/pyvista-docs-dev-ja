@@ -206,7 +206,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../vtk_to_pyvista.html">
-   Transitioning from VTK to PyVista
+   VTKからPyVistaへの移行
   </a>
  </li>
  <li class="toctree-l1">
@@ -226,13 +226,13 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="pythreejs.html">
-     Using
+     PyVistaで
      <code class="docutils literal notranslate">
       <span class="pre">
        pythreejs
       </span>
      </code>
-     with PyVista
+     を使う
     </a>
    </li>
    <li class="toctree-l2">
@@ -392,10 +392,10 @@
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.PlotterITK.background_color" title="pyvista.PlotterITK.background_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">background_color</span></code></a></p></td>
-<td><p>プロッタの背景色を返します．</p></td>
+<td><p>プロッタの背景色を取得します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.PlotterITK.camera_position" title="pyvista.PlotterITK.camera_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">camera_position</span></code></a></p></td>
-<td><p>プロッタのカメラ位置をリストとして返します．</p></td>
+<td><p>プロッタのカメラ位置をリストとして取得します．</p></td>
 </tr>
 </tbody>
 </table>
@@ -447,13 +447,9 @@
 </dd>
 <dt><strong>scalars</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>メッシュの &quot;色&quot; に使用されるスカラー．メッシュ上に存在する配列の文字列名，またはメッシュ内のセル数またはポイント数と等しい配列を受け入れます．配列は単一のベクトルとしてサイズを設定する必要があります． <code class="docutils literal notranslate"><span class="pre">color</span></code> と <code class="docutils literal notranslate"><span class="pre">scalars</span></code> が両方 <code class="docutils literal notranslate"><span class="pre">None</span></code> の場合，アクティブスカラーが使用されます．</p>
 </dd>
-<dt><strong>opacity</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Opacity of the mesh. If a single float value is given, it will be
-the global opacity of the mesh and uniformly applied everywhere -
-should be between 0 and 1.  Default 1.0.</p>
+<dt><strong>opacity</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>メッシュの不透明度．単一のfloat値を指定した場合，それはメッシュのグローバル不透明度になり，すべての場所に均一に適用されます．0から1の間でなければなりません．既定1.0．</p>
 </dd>
-<dt><strong>smooth_shading</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Smooth mesh surface mesh by taking into account surface
-normals.  Surface will appear smoother while sharp edges
-will still look sharp.  Default <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<dt><strong>smooth_shading</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>サーフェス法線を考慮してメッシュサーフェスメッシュをスムースにします．サーフェスはより滑らかに表示されますが，鋭いエッジはシャープに表示されます．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です．</p>
 </dd>
 </dl>
 </dd>
@@ -467,11 +463,9 @@ will still look sharp.  Default <code class="docutils literal notranslate"><span
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>points</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a> or <a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a></span></dt><dd><p>An <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">x</span> <span class="pre">3</span></code> numpy array of points or PyVista dataset with
-points.</p>
+<dt><strong>points</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a> or <a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a></span></dt><dd><p>点の <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">x</span> <span class="pre">3</span></code> の numpy 配列、または点を含む PyVista データセットです。</p>
 </dd>
-<dt><strong>color</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Either a string, RGB sequence, or hex color string.  For one
-of the following.</p>
+<dt><strong>color</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>文字列、RGB配列、または16進数の色文字列のいずれかです。以下のいずれかの場合。</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">color='white'</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">color='w'</span></code></p></li>
@@ -479,8 +473,7 @@ of the following.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">color='#FFFFFF'</span></code></p></li>
 </ul>
 </dd>
-<dt><strong>point_size</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Point size of any nodes in the dataset plotted. Also applicable
-when style='points'. Default <code class="docutils literal notranslate"><span class="pre">3.0</span></code>.</p>
+<dt><strong>point_size</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>プロットされたデータセット内の任意のノードのポイントサイズ． style='points' の場合にも適用できます．デフォルト <code class="docutils literal notranslate"><span class="pre">3.0</span></code> ．</p>
 </dd>
 </dl>
 </dd>
@@ -495,13 +488,13 @@ when style='points'. Default <code class="docutils literal notranslate"><span cl
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.PlotterITK.background_color">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">background_color</span></span><a class="headerlink" href="#pyvista.PlotterITK.background_color" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>プロッタの背景色を返します．</p>
+<dd><p>プロッタの背景色を取得します．</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.PlotterITK.camera_position">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">camera_position</span></span><a class="headerlink" href="#pyvista.PlotterITK.camera_position" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>プロッタのカメラ位置をリストとして返します．</p>
+<dd><p>プロッタのカメラ位置をリストとして取得します．</p>
 </dd></dl>
 
 <dl class="py method">
@@ -515,15 +508,15 @@ when style='points'. Default <code class="docutils literal notranslate"><span cl
 </dd>
 <dt><strong>rotate</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>シーンを中心にカメラを回転します．デフォルトの <code class="docutils literal notranslate"><span class="pre">False</span></code> ．計算量が多いように見えます．</p>
 </dd>
-<dt><strong>show_bounds</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Show the bounding box.  Default <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<dt><strong>show_bounds</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>境界ボックスを表示します．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> 。</p>
 </dd>
-<dt><strong>**kwargs</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Additional arguments to pass to <code class="docutils literal notranslate"><span class="pre">itkwidgets.Viewer</span></code>.</p>
+<dt><strong>**kwargs</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">itkwidgets.Viewer</span></code> に渡す追加の引数です。</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">itkwidgets.Viewer</span></code></dt><dd><p><code class="docutils literal notranslate"><span class="pre">ITKwidgets</span></code> viewer.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">itkwidgets.Viewer</span></code></dt><dd><p><code class="docutils literal notranslate"><span class="pre">ITKwidgets</span></code> ビューアー．</p>
 </dd>
 </dl>
 </dd>

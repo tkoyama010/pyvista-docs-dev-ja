@@ -221,7 +221,7 @@
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../theme.html">
-     Themes
+     テーマ
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -588,16 +588,12 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">'ipyvtklink'</span></code> : リモートでレンダリングし，結果のVTKイメージをクライアントにストリーミングします．すべてのVTKメソッドをサポートしますが，リモートレンダリングのために遅延が発生します．ヘッドレスサーバーで表示する場合は，仮想フレームバッファをセットアップする必要があります． <code class="docutils literal notranslate"><span class="pre">ipyvtklink</span></code> がインストールされている必要があります．</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'panel'</span></code> : VTKレンダーウィンドウをvtkjsオブジェクトに変換し，それをjupyterlabで視覚化します．ほとんどのVTKオブジェクトをサポートします．ヘッドレスサーバーで表示する場合は，仮想フレームバッファをセットアップする必要があります． <code class="docutils literal notranslate"><span class="pre">panel</span></code> がインストールされている必要があります．</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'ipygany'</span></code> : すべてのメッシュを <code class="docutils literal notranslate"><span class="pre">ipygany</span></code> メッシュに変換し，クライアント側でレンダリングするメッシュをストリーミングします．VTKメッシュをサポートしていますが，他にはほとんどありません． <code class="docutils literal notranslate"><span class="pre">none</span></code> を除き，これは仮想フレームバッファを必要としない唯一の方法です． <code class="docutils literal notranslate"><span class="pre">ipygany</span></code> がインストールされている必要があります．</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'pythreejs'</span></code> : Convert all the meshes into <code class="docutils literal notranslate"><span class="pre">pythreejs</span></code>
-meshes and streams those to be rendered on the client side.
-Aside from <code class="docutils literal notranslate"><span class="pre">ipygany</span></code>, this is the only method that does
-not require a virtual framebuffer.  Must have <code class="docutils literal notranslate"><span class="pre">pythreejs</span></code>
-installed.</p></li>
+<li><p>'pythreejs'`` : すべてのメッシュを <code class="docutils literal notranslate"><span class="pre">pythreejs</span></code> のメッシュに変換し、それらをストリームしてクライアント側でレンダリングします。 <code class="docutils literal notranslate"><span class="pre">ipygany</span></code> を除けば、この方法は仮想フレームバッファを必要としない唯一の方法です。 必ず <code class="docutils literal notranslate"><span class="pre">pythreejs</span></code> がインストールされている必要があります。</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'static'</span></code> : JupyterLab環境内に単一の静的イメージを表示します．ヘッドレスサーバーで表示する場合も仮想フレームバッファをセットアップする必要がありますが，追加のモジュールをインストールする必要はありません．</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'none'</span></code> : jupyterlab内にプロットを表示せず，専用のVTKレンダリングウィンドウを使用して表示します．これは，仮想フレームバッファがあっても，ヘッドレスサーバー上では何も生成しません．</p></li>
 </ul>
 <p class="rubric">例</p>
-<p>Enable the pythreejs backend.</p>
+<p>pythreejsバックエンドを有効にします．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pv</span><span class="o">.</span><span class="n">set_jupyter_backend</span><span class="p">(</span><span class="s1">&#39;pythreejs&#39;</span><span class="p">)</span>  
 </pre></div>
