@@ -441,14 +441,13 @@
 <dl class="field-list simple">
 <dt class="field-odd">戻り値</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><a class="reference internal" href="pyvista.Camera.html#pyvista.Camera" title="pyvista.Camera"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.Camera</span></code></a></dt><dd><p>Deep copy of the camera.</p>
+<dt><a class="reference internal" href="pyvista.Camera.html#pyvista.Camera" title="pyvista.Camera"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.Camera</span></code></a></dt><dd><p>カメラのディープコピー。</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>Create a camera and check that it shares a transformation
-matrix with its shallow copy.</p>
+<p>カメラを作成し，浅いコピーと変換行列を共有していることを確認します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">camera</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Camera</span><span class="p">()</span>

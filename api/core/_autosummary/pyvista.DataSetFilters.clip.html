@@ -652,7 +652,7 @@
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>normal</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a>(<a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>) <code class="xref py py-obj docutils literal notranslate"><span class="pre">or</span></code> <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>法線ベクトル方向の長さ3のタプルです． <code class="docutils literal notranslate"><span class="pre">(1,0,0)</span></code> の場合は <code class="docutils literal notranslate"><span class="pre">'x'</span></code> ， <code class="docutils literal notranslate"><span class="pre">(-1,0,0)</span></code> の場合は <code class="docutils literal notranslate"><span class="pre">'-x'</span></code> など，文字列の従来の方向として指定することもできます．</p>
+<dt><strong>normal</strong><span class="classifier">python:tuple(python:float) か python:str</span></dt><dd><p>法線ベクトル方向の長さ3のタプルです． <code class="docutils literal notranslate"><span class="pre">(1,0,0)</span></code> の場合は <code class="docutils literal notranslate"><span class="pre">'x'</span></code> ， <code class="docutils literal notranslate"><span class="pre">(-1,0,0)</span></code> の場合は <code class="docutils literal notranslate"><span class="pre">'-x'</span></code> など，文字列の従来の方向として指定することもできます．</p>
 </dd>
 <dt><strong>origin</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a>(<a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>), <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>クリップが発生する平面の中心 <code class="docutils literal notranslate"><span class="pre">(x,y,z)</span></code> 座標．デフォルトはデータセットの中心です．</p>
 </dd>
@@ -670,8 +670,7 @@
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> か <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a>(<a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a>)</dt><dd><p>Clipped mesh when <code class="docutils literal notranslate"><span class="pre">return_clipped=False</span></code>,
-otherwise a tuple containing the unclipped and clipped datasets.</p>
+<dt><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> か <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a>(<a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a>)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">return_clipped=False</span></code> の場合はクリッピングされたメッシュ．それ以外の場合は，クリッピングされていないデータセットとクリッピングされたデータセットを含むタプルです．</p>
 </dd>
 </dl>
 </dd>
@@ -697,7 +696,7 @@ otherwise a tuple containing the unclipped and clipped datasets.</p>
 <figure class="align-default">
 <img alt="../../../_images/pyvista-DataSetFilters-clip-1_01_00.png" src="../../../_images/pyvista-DataSetFilters-clip-1_01_00.png" />
 </figure>
-<p>See <a class="reference internal" href="../../../examples/01-filter/clipping-with-surface.html#clip-with-surface-example"><span class="std std-ref">サーフェスを使用したクリップ</span></a> for more examples using this filter.</p>
+<p>このフィルターを使ったその他の例については、 <a class="reference internal" href="../../../examples/01-filter/clipping-with-surface.html#clip-with-surface-example"><span class="std std-ref">サーフェスを使用したクリップ</span></a> を参照してください。</p>
 </dd></dl>
 
 </section>

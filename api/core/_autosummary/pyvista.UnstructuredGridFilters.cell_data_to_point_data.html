@@ -653,15 +653,13 @@
 <dt class="sig sig-object py" id="pyvista.UnstructuredGridFilters.cell_data_to_point_data">
 <span class="sig-prename descclassname"><span class="pre">UnstructuredGridFilters.</span></span><span class="sig-name descname"><span class="pre">cell_data_to_point_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pass_cell_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UnstructuredGridFilters.cell_data_to_point_data" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>データから日付へのセル変換</p>
-<p>Point data are specified per node and cell data specified
-within cells.  Optionally, the input point data can be passed
-through to the output.</p>
+<p>ポイントデータは，セル内で指定されたノードおよびセルデータごとに指定されます．オプションで，入力点データを出力に渡すことができます．</p>
 <p>変換の方法は，特定の点を使用してすべてのセルのデータ値を平均化することに基づいています．オプションとして，入力セルのデータを出力に渡すこともできます．</p>
-<p>See also <a class="reference internal" href="pyvista.DataSetFilters.point_data_to_cell_data.html#pyvista.DataSetFilters.point_data_to_cell_data" title="pyvista.DataSetFilters.point_data_to_cell_data"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.point_data_to_cell_data()</span></code></a>.</p>
+<p>関連項目: <a class="reference internal" href="pyvista.DataSetFilters.point_data_to_cell_data.html#pyvista.DataSetFilters.point_data_to_cell_data" title="pyvista.DataSetFilters.point_data_to_cell_data"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.point_data_to_cell_data()</span></code></a> ．</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>pass_cell_data</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>If enabled, pass the input cell data through to the output.</p>
+<dt><strong>pass_cell_data</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>使用可能にすると，入力セルのデータを出力に渡します．</p>
 </dd>
 <dt><strong>progress_bar</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>進行状況を示す進行状況バーを表示します．</p>
 </dd>
@@ -669,15 +667,13 @@ through to the output.</p>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a></dt><dd><p>Dataset with the point data transformed into cell data.
-Return type matches input.</p>
+<dt><a class="reference internal" href="pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a></dt><dd><p>点データをセルデータに変換したデータセット。戻り値のタイプは入力と一致します。</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>First compute the face area of the example airplane mesh and
-show the cell values.  This is to show discrete cell data.</p>
+<p>まず、例の飛行機のメッシュの面の面積を計算し、そのセル値を表示します。 これは、離散的なセルデータを示すためです。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">surf</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_airplane</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">surf</span> <span class="o">=</span> <span class="n">surf</span><span class="o">.</span><span class="n">compute_cell_sizes</span><span class="p">(</span><span class="n">length</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">volume</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -687,8 +683,7 @@ show the cell values.  This is to show discrete cell data.</p>
 <figure class="align-default">
 <img alt="../../../_images/pyvista-UnstructuredGridFilters-cell_data_to_point_data-1_00_00.png" src="../../../_images/pyvista-UnstructuredGridFilters-cell_data_to_point_data-1_00_00.png" />
 </figure>
-<p>These cell scalars can be applied to individual points to
-effectively smooth out the cell data onto the points.</p>
+<p>このセルスカラーを個々の点に適用することで、セルデータを点に効果的にスムージングすることができます。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">surf</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_airplane</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">surf</span> <span class="o">=</span> <span class="n">surf</span><span class="o">.</span><span class="n">compute_cell_sizes</span><span class="p">(</span><span class="n">length</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">volume</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
