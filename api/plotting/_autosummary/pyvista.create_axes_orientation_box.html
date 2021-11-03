@@ -379,18 +379,23 @@ parameters.</p>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>Create and plot an orientation box
-&gt;&gt;&gt; import pyvista
-&gt;&gt;&gt; actor = pyvista.create_axes_orientation_box(
-...    line_width=1, text_scale=0.53,
-...    edge_color='black', x_color='k',
-...    y_color=None, z_color=None,
-...    xlabel='X', ylabel='Y', zlabel='Z',
-...    color_box=False,
-...    labels_off=False, opacity=1.0)
-&gt;&gt;&gt; pl = pyvista.Plotter()
-&gt;&gt;&gt; _ = pl.add_actor(actor)
-&gt;&gt;&gt; pl.show()  # doctest:+SKIP</p>
+<p>Create and plot an orientation box</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">actor</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">create_axes_orientation_box</span><span class="p">(</span>
+<span class="gp">... </span>   <span class="n">line_width</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">text_scale</span><span class="o">=</span><span class="mf">0.53</span><span class="p">,</span>
+<span class="gp">... </span>   <span class="n">edge_color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">x_color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span>
+<span class="gp">... </span>   <span class="n">y_color</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">z_color</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<span class="gp">... </span>   <span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Y&#39;</span><span class="p">,</span> <span class="n">zlabel</span><span class="o">=</span><span class="s1">&#39;Z&#39;</span><span class="p">,</span>
+<span class="gp">... </span>   <span class="n">color_box</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="gp">... </span>   <span class="n">labels_off</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">add_actor</span><span class="p">(</span><span class="n">actor</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<figure class="align-default">
+<img alt="../../../_images/pyvista-create_axes_orientation_box-1_00_00.png" src="../../../_images/pyvista-create_axes_orientation_box-1_00_00.png" />
+</figure>
 </dd></dl>
 
 </section>
