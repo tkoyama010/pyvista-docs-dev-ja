@@ -588,20 +588,19 @@
 <dd class="field-odd"><dl>
 <dt><strong>merge_points</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>一致点をマージします．</p>
 </dd>
-<dt><strong>tolerance</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The absolute tolerance to use to find coincident points when
-<code class="docutils literal notranslate"><span class="pre">merge_points=True</span></code>.</p>
+<dt><strong>tolerance</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">merge_points=True</span></code> の時に、一致する点を見つけるのに使う絶対許容値です。</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="pyvista.UnstructuredGrid.html#pyvista.UnstructuredGrid" title="pyvista.UnstructuredGrid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.UnstructuredGrid</span></code></a></dt><dd><p>Combined blocks.</p>
+<dt><a class="reference internal" href="pyvista.UnstructuredGrid.html#pyvista.UnstructuredGrid" title="pyvista.UnstructuredGrid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.UnstructuredGrid</span></code></a></dt><dd><p>組み合わせたブロック</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>Combine blocks within a multiblock without merging points.</p>
+<p>マルチブロック内のブロックを結合点なしで結合します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">block</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">MultiBlock</span><span class="p">([</span>
 <span class="gp">... </span>    <span class="n">pyvista</span><span class="o">.</span><span class="n">Cube</span><span class="p">(</span><span class="n">clean</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
@@ -612,7 +611,7 @@
 <span class="go">48</span>
 </pre></div>
 </div>
-<p>Combine blocks and merge points</p>
+<p>ブロックとマージポイントの結合</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">merged</span> <span class="o">=</span> <span class="n">block</span><span class="o">.</span><span class="n">combine</span><span class="p">(</span><span class="n">merge_points</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">merged</span><span class="o">.</span><span class="n">n_points</span>
 <span class="go">12</span>

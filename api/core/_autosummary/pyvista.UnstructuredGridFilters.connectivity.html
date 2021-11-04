@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>接続性 &#8212; PyVista 0.32.dev0 ドキュメント</title>
+    <title>connectivity &#8212; PyVista 0.32.dev0 ドキュメント</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
   <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -311,7 +311,7 @@
        </li>
        <li class="toctree-l4 current active">
         <a class="current reference internal" href="#">
-         接続性
+         connectivity
         </a>
        </li>
        <li class="toctree-l4">
@@ -648,17 +648,13 @@
               <div>
                 
   <section id="connectivity">
-<h1>接続性<a class="headerlink" href="#connectivity" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>connectivity<a class="headerlink" href="#connectivity" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.UnstructuredGridFilters.connectivity">
 <span class="sig-prename descclassname"><span class="pre">UnstructuredGridFilters.</span></span><span class="sig-name descname"><span class="pre">connectivity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">largest</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UnstructuredGridFilters.connectivity" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>接続されたボディ/ボリュームを検索し，ラベル付けします．</p>
-<p>This adds an ID array to the point and cell data to
-distinguish separate connected bodies. This applies a
-<code class="docutils literal notranslate"><span class="pre">vtkConnectivityFilter</span></code> filter which extracts cells that
-share common points and/or meet other connectivity criterion.</p>
-<p>Cells that share vertices and meet other connectivity
-criterion such as scalar range are known as a region.</p>
+<p>これにより，個別の接続されたボディを区別するために，ポイントデータとセルデータにID配列が追加されます．これは，共通点を共有し，かつ/または他の接続基準を満たすセルを抽出する <code class="docutils literal notranslate"><span class="pre">vtkConnectivityFilter</span></code> フィルタを適用します．</p>
+<p>頂点を共有し，スカラー範囲などの接続基準を満たすセルを領域と呼びます．</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
@@ -670,14 +666,13 @@ criterion such as scalar range are known as a region.</p>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a></dt><dd><p>Dataset with labeled connected bodies.  Return type
-matches input.</p>
+<dt><a class="reference internal" href="pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a></dt><dd><p>ラベル付き連結体を持つデータセット。 戻り値のタイプは入力と一致します。</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>Join two meshes together and plot their connectivity.</p>
+<p>2つのメッシュを結合し、その接続性をプロットします。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span> <span class="o">+</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">connectivity</span><span class="p">(</span><span class="n">largest</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -687,7 +682,7 @@ matches input.</p>
 <figure class="align-default">
 <img alt="../../../_images/pyvista-UnstructuredGridFilters-connectivity-1_00_00.png" src="../../../_images/pyvista-UnstructuredGridFilters-connectivity-1_00_00.png" />
 </figure>
-<p>See <a class="reference internal" href="../../../examples/01-filter/compute-volume.html#volumetric-example"><span class="std std-ref">ボリューム分析</span></a> for more examples using this filter.</p>
+<p>このフィルターを使ったその他の例については、 <a class="reference internal" href="../../../examples/01-filter/compute-volume.html#volumetric-example"><span class="std std-ref">ボリューム分析</span></a> を参照してください。</p>
 </dd></dl>
 
 </section>

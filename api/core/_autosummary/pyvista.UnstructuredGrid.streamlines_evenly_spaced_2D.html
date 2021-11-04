@@ -381,7 +381,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.UnstructuredGrid.connectivity.html">
-         接続性
+         connectivity
         </a>
        </li>
        <li class="toctree-l4">
@@ -1112,7 +1112,7 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.UnstructuredGrid.streamlines_evenly_spaced_2D">
 <span class="sig-prename descclassname"><span class="pre">UnstructuredGrid.</span></span><span class="sig-name descname"><span class="pre">streamlines_evenly_spaced_2D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vectors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_position</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">integrator_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cl'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">terminal_speed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-12</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolator_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'point'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separating_distance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separating_distance_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">closed_loop_maximum_distance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loop_angle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minimum_number_of_loop_points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compute_vorticity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UnstructuredGrid.streamlines_evenly_spaced_2D" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Generate evenly spaced streamlines on a 2D dataset.</p>
+<dd><p>2Dデータに等間隔の流線を生成します。</p>
 <p>This filter only supports datasets that lie on the xy plane, i.e. <code class="docutils literal notranslate"><span class="pre">z=0</span></code>.
 Particular care must be used to choose a <cite>separating_distance</cite>
 that do not result in too much memory being utilized.  The
@@ -1192,7 +1192,7 @@ first block.</p>
 <figure class="align-default">
 <img alt="../../../_images/pyvista-UnstructuredGrid-streamlines_evenly_spaced_2D-1_00_00.png" src="../../../_images/pyvista-UnstructuredGrid-streamlines_evenly_spaced_2D-1_00_00.png" />
 </figure>
-<p>See <a class="reference internal" href="../../../examples/01-filter/streamlines_2D.html#d-streamlines-example"><span class="std std-ref">2D流線</span></a> for more examples using this filter.</p>
+<p>このフィルターを使ったその他の例については、 <a class="reference internal" href="../../../examples/01-filter/streamlines_2D.html#d-streamlines-example"><span class="std std-ref">2D流線</span></a> を参照してください。</p>
 </dd></dl>
 
 </section>
