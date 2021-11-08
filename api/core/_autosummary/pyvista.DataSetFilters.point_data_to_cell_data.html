@@ -371,7 +371,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.DataSetFilters.interpolate.html">
-         補間
+         interpolate
         </a>
        </li>
        <li class="toctree-l4">
@@ -426,7 +426,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.DataSetFilters.reflect.html">
-         映す
+         reflect
         </a>
        </li>
        <li class="toctree-l4">
@@ -653,7 +653,7 @@
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>pass_point_data</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>If enabled, pass the input point data through to the output.</p>
+<dt><strong>pass_point_data</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>使用可能にすると，入力ポイントのデータを出力に渡します．</p>
 </dd>
 <dt><strong>progress_bar</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>進行状況を示す進行状況バーを表示します．</p>
 </dd>
@@ -667,12 +667,8 @@
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>Color cells by their z coordinates.  First, create point
-scalars based on z-coordinates of a sample sphere mesh.  Then
-convert this point data to cell data.  Use a low resolution
-sphere for emphasis of cell valued data.</p>
-<p>First, plot these values as point values to show the
-difference between point and cell data.</p>
+<p>セルをz座標で着色します。 まず、サンプルの球体メッシュのz座標をもとにポイントスカラーを作成します。 次に、この点データをセルデータに変換します。 セルデータを強調するために、低解像度の球体を使用します。</p>
+<p>まず、ポイントデータとセルデータの違いを示すために、これらの値をポイント値としてプロットします。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">(</span><span class="n">theta_resolution</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">phi_resolution</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span><span class="p">[</span><span class="s1">&#39;Z Coordinates&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sphere</span><span class="o">.</span><span class="n">points</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span>
@@ -682,7 +678,7 @@ difference between point and cell data.</p>
 <figure class="align-default">
 <img alt="../../../_images/pyvista-DataSetFilters-point_data_to_cell_data-1_00_00.png" src="../../../_images/pyvista-DataSetFilters-point_data_to_cell_data-1_00_00.png" />
 </figure>
-<p>Now, convert these values to cell data and then plot it.</p>
+<p>では、これらの値をセルデータに変換してから、プロットしてみましょう。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">(</span><span class="n">theta_resolution</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">phi_resolution</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span><span class="p">[</span><span class="s1">&#39;Z Coordinates&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sphere</span><span class="o">.</span><span class="n">points</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span>

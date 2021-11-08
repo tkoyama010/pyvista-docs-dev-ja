@@ -631,7 +631,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.interpolate.html">
-         補間
+         interpolate
         </a>
        </li>
        <li class="toctree-l4">
@@ -736,7 +736,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.reflect.html">
-         映す
+         reflect
         </a>
        </li>
        <li class="toctree-l4">
@@ -1357,7 +1357,7 @@ file.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">PolyData</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Initialize from a <code class="docutils literal notranslate"><span class="pre">vtk.vtkPolyData</span></code> object.</p>
+<p><code class="docutils literal notranslate"><span class="pre">vtk.vtkPolyData</span></code> オブジェクトから初期化する。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">vtkobj</span> <span class="o">=</span> <span class="n">vtk</span><span class="o">.</span><span class="n">vtkPolyData</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">vtkobj</span><span class="p">)</span>
 </pre></div>
@@ -1449,10 +1449,10 @@ file.</p>
 <td><p>点/セル/フィールドデータからすべての配列を削除します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyData.clear_field_arrays.html#pyvista.PolyData.clear_field_arrays" title="pyvista.PolyData.clear_field_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.clear_field_arrays</span></code></a>()</p></td>
-<td><p>Remove all field data.</p></td>
+<td><p>すべてのフィールドデータを削除します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.PolyData.clear_field_data.html#pyvista.PolyData.clear_field_data" title="pyvista.PolyData.clear_field_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.clear_field_data</span></code></a>()</p></td>
-<td><p>Remove all field data.</p></td>
+<td><p>すべてのフィールドデータを削除します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyData.clear_point_arrays.html#pyvista.PolyData.clear_point_arrays" title="pyvista.PolyData.clear_point_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.clear_point_arrays</span></code></a>()</p></td>
 <td><p>Remove all point data.</p></td>
@@ -1902,7 +1902,7 @@ file.</p>
 <td><p>DataSetAttributesとしてvtkFieldDataを取得します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyData.field_data.html#pyvista.PolyData.field_data" title="pyvista.PolyData.field_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.field_data</span></code></a></p></td>
-<td><p>Return FieldData as DataSetAttributes.</p></td>
+<td><p>DataSetAttributesとしてFieldData を取得します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.PolyData.is_all_triangles.html#pyvista.PolyData.is_all_triangles" title="pyvista.PolyData.is_all_triangles"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.is_all_triangles</span></code></a></p></td>
 <td><p>Return if all the faces of the <a class="reference internal" href="#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> are triangles.</p></td>
@@ -1914,7 +1914,7 @@ file.</p>
 <td><p>Return a pointer to the lines as a numpy array.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyData.memory_address.html#pyvista.PolyData.memory_address" title="pyvista.PolyData.memory_address"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.memory_address</span></code></a></p></td>
-<td><p>Get address of the underlying VTK C++ object.</p></td>
+<td><p>基盤となるVTK C++オブジェクトのアドレスを取得します。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.PolyData.n_arrays.html#pyvista.PolyData.n_arrays" title="pyvista.PolyData.n_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.n_arrays</span></code></a></p></td>
 <td><p>データセット内に存在する配列の数を取得します．</p></td>

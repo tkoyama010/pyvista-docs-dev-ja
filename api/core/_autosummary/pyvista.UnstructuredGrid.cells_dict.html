@@ -541,7 +541,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.UnstructuredGrid.interpolate.html">
-         補間
+         interpolate
         </a>
        </li>
        <li class="toctree-l4">
@@ -621,7 +621,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.UnstructuredGrid.reflect.html">
-         映す
+         reflect
         </a>
        </li>
        <li class="toctree-l4">
@@ -1126,10 +1126,7 @@ Structure: vtk_enum_type (int) -&gt; cells (np.ndarray)</p>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>Return the cells dictionary of the sample hex beam.  Note how
-there is only one key/value pair as the hex beam example is
-composed of only all hexahedral cells, which is
-<code class="docutils literal notranslate"><span class="pre">vtk.VTK_HEXAHEDRON</span></code>, which evaluates to 12.</p>
+<p>サンプルの六角ビームのセル辞書を返します。ヘックスビームの例では、すべての六面体セルのみで構成されているため、キーと値のペアが1つしかないことに注意してください。これは <code class="docutils literal notranslate"><span class="pre">vtk.VTK_HEXAHEDRON</span></code> で、12と評価されます。</p>
 <p>Also note how there is no padding for the cell array.  This
 approach may be more helpful than the <code class="docutils literal notranslate"><span class="pre">cells</span></code> property when
 extracting cells.</p>

@@ -516,7 +516,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.DataSet.interpolate.html">
-         補間
+         interpolate
         </a>
        </li>
        <li class="toctree-l4">
@@ -586,7 +586,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.DataSet.reflect.html">
-         映す
+         reflect
         </a>
        </li>
        <li class="toctree-l4">
@@ -1042,10 +1042,8 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.DataSet.field_data">
 <em class="property"><span class="pre">property</span> </em><span class="sig-prename descclassname"><span class="pre">DataSet.</span></span><span class="sig-name descname"><span class="pre">field_data</span></span><em class="property"><span class="pre">:</span> <span class="pre">pyvista.core.datasetattributes.DataSetAttributes</span></em><a class="headerlink" href="#pyvista.DataSet.field_data" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return FieldData as DataSetAttributes.</p>
-<p>Use field data when size of the data you wish to associate
-with the dataset does not match the number of points or cells
-of the dataset.</p>
+<dd><p>DataSetAttributesとしてFieldData を取得します．</p>
+<p>データセットに関連付けたいデータのサイズが、データセットのポイント数やセル数と一致しない場合、フィールドデータを使用します。</p>
 <p class="rubric">例</p>
 <p>Add field data to a PolyData dataset and then return it.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>

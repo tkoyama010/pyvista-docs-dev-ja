@@ -566,7 +566,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.ExplicitStructuredGrid.interpolate.html">
-         補間
+         interpolate
         </a>
        </li>
        <li class="toctree-l4">
@@ -646,7 +646,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.ExplicitStructuredGrid.reflect.html">
-         映す
+         reflect
         </a>
        </li>
        <li class="toctree-l4">
@@ -1117,7 +1117,7 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="pyvista.ExplicitStructuredGrid">
 <em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">ExplicitStructuredGrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.ExplicitStructuredGrid" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Extend the functionality of the <code class="docutils literal notranslate"><span class="pre">vtk.vtkExplicitStructuredGrid</span></code> class.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">vtk.vtkExplicitStructuredGrid</span></code> クラスの機能を拡張します．</p>
 <p>次の方法で初期化できます．</p>
 <ul class="simple">
 <li><p>空のグリッドを作成する</p></li>
@@ -1208,10 +1208,10 @@
 <td><p>点/セル/フィールドデータからすべての配列を削除します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.ExplicitStructuredGrid.clear_field_arrays.html#pyvista.ExplicitStructuredGrid.clear_field_arrays" title="pyvista.ExplicitStructuredGrid.clear_field_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitStructuredGrid.clear_field_arrays</span></code></a>()</p></td>
-<td><p>Remove all field data.</p></td>
+<td><p>すべてのフィールドデータを削除します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.ExplicitStructuredGrid.clear_field_data.html#pyvista.ExplicitStructuredGrid.clear_field_data" title="pyvista.ExplicitStructuredGrid.clear_field_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitStructuredGrid.clear_field_data</span></code></a>()</p></td>
-<td><p>Remove all field data.</p></td>
+<td><p>すべてのフィールドデータを削除します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.ExplicitStructuredGrid.clear_point_arrays.html#pyvista.ExplicitStructuredGrid.clear_point_arrays" title="pyvista.ExplicitStructuredGrid.clear_point_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitStructuredGrid.clear_point_arrays</span></code></a>()</p></td>
 <td><p>Remove all point data.</p></td>
@@ -1583,13 +1583,13 @@
 <td><p>DataSetAttributesとしてvtkFieldDataを取得します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.ExplicitStructuredGrid.field_data.html#pyvista.ExplicitStructuredGrid.field_data" title="pyvista.ExplicitStructuredGrid.field_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitStructuredGrid.field_data</span></code></a></p></td>
-<td><p>Return FieldData as DataSetAttributes.</p></td>
+<td><p>DataSetAttributesとしてFieldData を取得します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.ExplicitStructuredGrid.length.html#pyvista.ExplicitStructuredGrid.length" title="pyvista.ExplicitStructuredGrid.length"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitStructuredGrid.length</span></code></a></p></td>
 <td><p>境界ボックスの対角線の長さを取得します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.ExplicitStructuredGrid.memory_address.html#pyvista.ExplicitStructuredGrid.memory_address" title="pyvista.ExplicitStructuredGrid.memory_address"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitStructuredGrid.memory_address</span></code></a></p></td>
-<td><p>Get address of the underlying VTK C++ object.</p></td>
+<td><p>基盤となるVTK C++オブジェクトのアドレスを取得します。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.ExplicitStructuredGrid.n_arrays.html#pyvista.ExplicitStructuredGrid.n_arrays" title="pyvista.ExplicitStructuredGrid.n_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitStructuredGrid.n_arrays</span></code></a></p></td>
 <td><p>データセット内に存在する配列の数を取得します．</p></td>

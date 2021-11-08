@@ -51,7 +51,7 @@
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="検索" href="../../../search.html" />
     <link rel="next" title="outline" href="pyvista.RectilinearGrid.outline.html" />
-    <link rel="prev" title="補間" href="pyvista.RectilinearGrid.interpolate.html" />
+    <link rel="prev" title="interpolate" href="pyvista.RectilinearGrid.interpolate.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="ja">
     
@@ -531,7 +531,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.RectilinearGrid.interpolate.html">
-         補間
+         interpolate
         </a>
        </li>
        <li class="toctree-l4 current active">
@@ -601,7 +601,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.RectilinearGrid.reflect.html">
-         映す
+         reflect
         </a>
        </li>
        <li class="toctree-l4">
@@ -1088,7 +1088,7 @@ the default parameters.</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>grid</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vtk.UnstructuredGrid</span></code> or <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> <code class="xref py py-obj docutils literal notranslate"><span class="pre">of</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">vtk.UnstructuredGrids</span></code></span></dt><dd><p>このグリッドにマージするグリッド．</p>
+<dt><strong>grid</strong><span class="classifier">vtk.UnstructuredGrid または python:vtk.UnstructuredGrids の python:list</span></dt><dd><p>このグリッドにマージするグリッド．</p>
 </dd>
 <dt><strong>merge_points</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>まったく同じ位置にあるポイントは，2つのメッシュ間でマージされます．警告:縮退した点データが残る可能性があります．</p>
 </dd>

@@ -551,7 +551,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.UniformGrid.interpolate.html">
-         補間
+         interpolate
         </a>
        </li>
        <li class="toctree-l4">
@@ -621,7 +621,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.UniformGrid.reflect.html">
-         映す
+         reflect
         </a>
        </li>
        <li class="toctree-l4">
@@ -1098,17 +1098,15 @@
 <dt class="sig sig-object py" id="pyvista.UniformGrid.slice_along_line">
 <span class="sig-prename descclassname"><span class="pre">UniformGrid.</span></span><span class="sig-name descname"><span class="pre">slice_along_line</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">line</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">generate_triangles</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contour</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UniformGrid.slice_along_line" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>パスとしてpolyline/splineを使用してデータセットをスライスします．</p>
-<p>This also works for lines generated with <a class="reference internal" href="../../utilities/_autosummary/pyvista.Line.html#pyvista.Line" title="pyvista.Line"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Line()</span></code></a>.</p>
+<p>これは <a class="reference internal" href="../../utilities/_autosummary/pyvista.Line.html#pyvista.Line" title="pyvista.Line"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Line()</span></code></a> で生成された行でも動作します．</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
 <dt><strong>line</strong><span class="classifier"><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></span></dt><dd><p>1つのPolyLineセルを含むPolyDataオブジェクト．</p>
 </dd>
-<dt><strong>generate_triangles</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>If this is enabled (<code class="docutils literal notranslate"><span class="pre">False</span></code> by default), the output will
-be triangles. Otherwise the output will be the intersection
-polygons.</p>
+<dt><strong>generate_triangles</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>これが有効な場合(デフォルトで <code class="docutils literal notranslate"><span class="pre">False</span></code> )，出力は三角形になります．それ以外の場合，出力は交差ポリゴンになります．</p>
 </dd>
-<dt><strong>contour</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, apply a <code class="docutils literal notranslate"><span class="pre">contour</span></code> filter after slicing.</p>
+<dt><strong>contour</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，スライス後に <code class="docutils literal notranslate"><span class="pre">contour</span></code> フィルタを適用します</p>
 </dd>
 <dt><strong>progress_bar</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>進行状況を示す進行状況バーを表示します．</p>
 </dd>
@@ -1116,13 +1114,13 @@ polygons.</p>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p>Sliced dataset.</p>
+<dt><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p>スライスされたデータセット。</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>Slice the random hills dataset along a circular arc.</p>
+<p>ランダムヒルズデータセットを直交する3つの平面でスライスします。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
@@ -1134,7 +1132,7 @@ polygons.</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">line_slice</span> <span class="o">=</span> <span class="n">hills</span><span class="o">.</span><span class="n">slice_along_line</span><span class="p">(</span><span class="n">arc</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Plot the circular arc and the hills mesh.</p>
+<p>円弧と丘のメッシュをプロットします。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">hills</span><span class="p">,</span> <span class="n">smooth_shading</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;wireframe&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">line_slice</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">render_lines_as_tubes</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
