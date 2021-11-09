@@ -1117,18 +1117,17 @@
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>array</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a></span></dt><dd><p>Array of data to add to the dataset as a field array.</p>
+<dt><strong>array</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a></span></dt><dd><p>データセットにフィールド配列として追加するデータの配列。</p>
 </dd>
-<dt><strong>name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name to assign the field array.</p>
+<dt><strong>name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>フィールド配列に割り当てる名前。</p>
 </dd>
-<dt><strong>deep</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Perform a deep copy of the data when adding it to the
-dataset.  Default <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<dt><strong>deep</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>データセットにデータを追加する際に、データのディープコピーを行います。 デフォルトは <code class="docutils literal notranslate"><span class="pre">True</span></code> です。</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>Add field data to a PolyData dataset.</p>
+<p>PolyDataデータセットにフィールドデータを追加します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
@@ -1137,7 +1136,7 @@ dataset.  Default <code class="docutils literal notranslate"><span class="pre">T
 <span class="go">array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])</span>
 </pre></div>
 </div>
-<p>Add field data to a UniformGrid dataset.</p>
+<p>UniformGridデータセットにフィールドデータを追加します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">UniformGrid</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span><span class="o">.</span><span class="n">add_field_data</span><span class="p">([</span><span class="s1">&#39;I could&#39;</span><span class="p">,</span> <span class="s1">&#39;write&#39;</span><span class="p">,</span> <span class="s1">&#39;notes&#39;</span><span class="p">,</span> <span class="s1">&#39;here&#39;</span><span class="p">],</span> 
 <span class="gp">... </span>                     <span class="s1">&#39;my-field-data&#39;</span><span class="p">)</span>
@@ -1145,7 +1144,7 @@ dataset.  Default <code class="docutils literal notranslate"><span class="pre">T
 <span class="go">array([&#39;I could&#39;, &#39;write&#39;, &#39;notes&#39;, &#39;here&#39;], dtype=&#39;&lt;U7&#39;)</span>
 </pre></div>
 </div>
-<p>Add field data to a MultiBlock dataset.</p>
+<p>MultiBlockデータセットにフィールドデータを追加します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">blocks</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">MultiBlock</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">blocks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">())</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">blocks</span><span class="p">[</span><span class="s2">&quot;cube&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Cube</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
