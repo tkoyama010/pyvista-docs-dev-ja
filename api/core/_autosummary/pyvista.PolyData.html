@@ -1312,7 +1312,7 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="pyvista.PolyData">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PolyData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var_inp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">faces</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_faces</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lines</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_lines</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_ext</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Dataset consisting of surface geometry (e.g. vertices, lines, and polygons).</p>
+<dd><p>表面形状（頂点、線、ポリゴンなど）で構成されるデータセット。</p>
 <p>いくつかの方法で初期化できます:</p>
 <ul class="simple">
 <li><p>空のメッシュを作成する</p></li>
@@ -1339,9 +1339,7 @@
 </dd>
 <dt><strong>deep</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>入力をコピーするか，コピーせずに入力からメッシュを作成するかを指定します． <code class="docutils literal notranslate"><span class="pre">deep=True</span></code> を設定すると，メッシュに影響を与えずにメッシュの外部でオリジナルの配列を修正できます．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です．</p>
 </dd>
-<dt><strong>force_ext</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>If initializing from a file, force the reader to treat the
-file as if it had this extension as opposed to the one in the
-file.</p>
+<dt><strong>force_ext</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>ファイルから初期化する場合、リーダーはファイルの拡張子ではなく、この拡張子を持っているかのように扱わせます。</p>
 </dd>
 </dl>
 </dd>
@@ -1353,7 +1351,7 @@ file.</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 </pre></div>
 </div>
-<p>Create an empty mesh.</p>
+<p>空のメッシュを作成する。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">PolyData</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -1362,17 +1360,17 @@ file.</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">vtkobj</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Initialize from just vertices.</p>
+<p>頂点のみから初期化。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">vertices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">vertices</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Initialize from vertices and faces.</p>
+<p>頂点と面から初期化する。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">faces</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">vertices</span><span class="p">,</span> <span class="n">faces</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Initialize from vertices and lines.</p>
+<p>頂点とラインから初期化する。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lines</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">vertices</span><span class="p">,</span> <span class="n">lines</span><span class="o">=</span><span class="n">lines</span><span class="p">)</span>
 </pre></div>
@@ -1395,16 +1393,16 @@ file.</p>
 <td><p>フィールドデータを追加します。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyData.boolean_add.html#pyvista.PolyData.boolean_add" title="pyvista.PolyData.boolean_add"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.boolean_add</span></code></a>(*args, **kwargs)</p></td>
-<td><p>Merge two meshes together.</p></td>
+<td><p>2つのメッシュを結合します。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.PolyData.boolean_cut.html#pyvista.PolyData.boolean_cut" title="pyvista.PolyData.boolean_cut"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.boolean_cut</span></code></a>(*args, **kwargs)</p></td>
-<td><p>Cut two meshes.</p></td>
+<td><p>2つのメッシュをカットします。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyData.boolean_difference.html#pyvista.PolyData.boolean_difference" title="pyvista.PolyData.boolean_difference"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.boolean_difference</span></code></a>(other_mesh[, ...])</p></td>
-<td><p>Perform a boolean difference operation between two meshes.</p></td>
+<td><p>2つのメッシュの間でブーリアン値の差分演算を行います。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.PolyData.boolean_intersection.html#pyvista.PolyData.boolean_intersection" title="pyvista.PolyData.boolean_intersection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.boolean_intersection</span></code></a>(other_mesh[, ...])</p></td>
-<td><p>Perform a boolean intersection operation on two meshes.</p></td>
+<td><p>2つのメッシュにブーリアンの交差演算を行います。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyData.boolean_union.html#pyvista.PolyData.boolean_union" title="pyvista.PolyData.boolean_union"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.boolean_union</span></code></a>(other_mesh[, ...])</p></td>
 <td><p>Perform a boolean union operation on two meshes.</p></td>
