@@ -1118,20 +1118,17 @@
 <dt class="sig sig-object py" id="pyvista.ExplicitStructuredGrid.arrows">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ExplicitStructuredGrid.</span></span><span class="sig-name descname"><span class="pre">arrows</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.core.pointset.PolyData"><span class="pre">pyvista.core.pointset.PolyData</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#pyvista.ExplicitStructuredGrid.arrows" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>アクティブなベクトルデータのグリフ表現を矢印で取得します．</p>
-<p>Arrows will be located at the points of the mesh and
-their size will be dependent on the norm of the vector.
-Their direction will be the &quot;direction&quot; of the vector</p>
+<p>矢印はメッシュのポイントに配置され，そのサイズはベクトルの法線に依存します．それらの方向はベクトルの &quot;direction&quot; である</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p>Active vectors represented as arrows.</p>
+<dt><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p>アクティブベクトルを矢印で表しています。</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>Create a mesh, compute the normals and set them active, and
-plot the active vectors.</p>
+<p>メッシュを作成し、法線を計算してそれをアクティブに設定し、アクティブなベクトルをプロットします。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Cube</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh_w_normals</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">compute_normals</span><span class="p">()</span>

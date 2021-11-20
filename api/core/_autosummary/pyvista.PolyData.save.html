@@ -1324,11 +1324,7 @@ types (<code class="docutils literal notranslate"><span class="pre">'.ply'</span
 </dd>
 <dt><strong>binary</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Writes the file as binary when <code class="docutils literal notranslate"><span class="pre">True</span></code> and ASCII when <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 </dd>
-<dt><strong>texture</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">np.ndarray</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Write a single texture array to file when using a PLY
-file.  Texture array must be a 3 or 4 component array with
-the datatype <code class="docutils literal notranslate"><span class="pre">np.uint8</span></code>.  Array may be a cell array or a
-point array, and may also be a string if the array already
-exists in the PolyData.</p>
+<dt><strong>texture</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">np.ndarray</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>PLYファイルを使用する際に、単一のテクスチャ配列をファイルに書き込みます。 テクスチャ配列は、データ型が <code class="docutils literal notranslate"><span class="pre">np.uint8</span></code> の3成分または4成分の配列である必要があります。 配列はセル配列またはポイント配列で、配列がすでにPolyDataに存在する場合は文字列にすることもできます。</p>
 <p>If a string is provided, the texture array will be saved
 to disk as that name.  If an array is provided, the
 texture array will be saved as <code class="docutils literal notranslate"><span class="pre">'RGBA'</span></code> if the array
@@ -1336,7 +1332,7 @@ contains an alpha channel (i.e. 4 component array), or
 as <code class="docutils literal notranslate"><span class="pre">'RGB'</span></code> if the array is just a 3 component array.</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p>This feature is only available when saving PLY files.</p>
+<p>この機能は、PLYファイルの保存時にのみ有効です。</p>
 </div>
 </dd>
 </dl>

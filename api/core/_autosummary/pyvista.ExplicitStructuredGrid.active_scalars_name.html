@@ -1117,10 +1117,9 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.ExplicitStructuredGrid.active_scalars_name">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ExplicitStructuredGrid.</span></span><span class="sig-name descname"><span class="pre">active_scalars_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#pyvista.ExplicitStructuredGrid.active_scalars_name" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the name of the active scalars.</p>
+<dd><p>アクティブなスカラーの名前を取得します．</p>
 <p class="rubric">例</p>
-<p>Create a mesh, add scalars to the mesh, and return the name of
-the active scalars.</p>
+<p>メッシュを作成し、そのメッシュにスカラを追加し、アクティブなスカラの名前を返します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span><span class="p">[</span><span class="s1">&#39;Z Height&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">points</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span>

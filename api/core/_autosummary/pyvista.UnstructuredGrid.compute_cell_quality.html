@@ -1113,11 +1113,8 @@
 <dt class="sig sig-object py" id="pyvista.UnstructuredGrid.compute_cell_quality">
 <span class="sig-prename descclassname"><span class="pre">UnstructuredGrid.</span></span><span class="sig-name descname"><span class="pre">compute_cell_quality</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">quality_measure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'scaled_jacobian'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">null_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UnstructuredGrid.compute_cell_quality" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>メッシュのセルごとに (ジオメトリ) 精度の関数を計算します．</p>
-<p>The per-cell quality is added to the mesh's cell data, in an
-array named <code class="docutils literal notranslate"><span class="pre">&quot;CellQuality&quot;</span></code>. Cell types not supported by this
-filter or undefined quality of supported cell types will have an
-entry of -1.</p>
-<p>Defaults to computing the scaled Jacobian.</p>
+<p>セルごとの品質は， <code class="docutils literal notranslate"><span class="pre">&quot;CellQuality&quot;</span></code> という名前の配列でメッシュのセルデータに追加されます．このフィルタでサポートされていないセルタイプ，またはサポートされているセルタイプの未定義の品質には，-1というエントリがあります．</p>
+<p>既定では，スケールされたJacobianが計算されます．</p>
 <p>セル品質計測のオプション:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">'area'</span></code></p></li>
@@ -1153,7 +1150,7 @@ entry of -1.</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>quality_measure</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>The cell quality measure to use.</p>
+<dt><strong>quality_measure</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>使用するセル品質計測。</p>
 </dd>
 <dt><strong>null_value</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>未定義の品質の浮動小数点値です．未定義の品質とは，このフィルタで処理できる品質ですが，問題のセルの特定のジオメトリは三角形のボリューム照会などに対しては十分に定義されていません．未定義の品質は常に定義されません．デフォルト値は-1です．</p>
 </dd>

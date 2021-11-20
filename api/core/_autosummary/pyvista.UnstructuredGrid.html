@@ -1164,7 +1164,7 @@
 <td><p>明示的に構造化されたグリッドにキャストします．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.cast_to_unstructured_grid.html#pyvista.UnstructuredGrid.cast_to_unstructured_grid" title="pyvista.UnstructuredGrid.cast_to_unstructured_grid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.cast_to_unstructured_grid</span></code></a>()</p></td>
-<td><p>Get a new representation of this object as a <a class="reference internal" href="#pyvista.UnstructuredGrid" title="pyvista.UnstructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UnstructuredGrid</span></code></a>.</p></td>
+<td><p>このオブジェクトの新しい表現を <a class="reference internal" href="#pyvista.UnstructuredGrid" title="pyvista.UnstructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UnstructuredGrid</span></code></a> として取得します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.cell_bounds.html#pyvista.UnstructuredGrid.cell_bounds" title="pyvista.UnstructuredGrid.cell_bounds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.cell_bounds</span></code></a>(ind)</p></td>
 <td><p>セルの境界ボックスを取得します．</p></td>
@@ -1191,7 +1191,7 @@
 <td><p>点/セル/フィールドデータからすべての配列を削除します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.clear_cell_arrays.html#pyvista.UnstructuredGrid.clear_cell_arrays" title="pyvista.UnstructuredGrid.clear_cell_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.clear_cell_arrays</span></code></a>()</p></td>
-<td><p>Remove all cell data.</p></td>
+<td><p>すべてのセルデータを削除します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.clear_cell_data.html#pyvista.UnstructuredGrid.clear_cell_data" title="pyvista.UnstructuredGrid.clear_cell_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.clear_cell_data</span></code></a>()</p></td>
 <td><p>すべてのセル配列を削除します．</p></td>
@@ -1206,7 +1206,7 @@
 <td><p>すべてのフィールドデータを削除します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.clear_point_arrays.html#pyvista.UnstructuredGrid.clear_point_arrays" title="pyvista.UnstructuredGrid.clear_point_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.clear_point_arrays</span></code></a>()</p></td>
-<td><p>Remove all point data.</p></td>
+<td><p>すべての点データを削除します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.clear_point_data.html#pyvista.UnstructuredGrid.clear_point_data" title="pyvista.UnstructuredGrid.clear_point_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.clear_point_data</span></code></a>()</p></td>
 <td><p>すべての点配列を削除します．</p></td>
@@ -1242,7 +1242,7 @@
 <td><p>接続されたボディ/ボリュームを検索し，ラベル付けします．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.contour.html#pyvista.UnstructuredGrid.contour" title="pyvista.UnstructuredGrid.contour"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.contour</span></code></a>([isosurfaces, ...])</p></td>
-<td><p>Contour an input self by an array.</p></td>
+<td><p>入力されたコンターを配列で表現します。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.copy.html#pyvista.UnstructuredGrid.copy" title="pyvista.UnstructuredGrid.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.copy</span></code></a>([deep])</p></td>
 <td><p>オブジェクトのコピーを取得します．</p></td>
@@ -1296,10 +1296,10 @@
 <td><p>グリッドのサーフェスメッシュを抽出します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.find_cells_along_line.html#pyvista.UnstructuredGrid.find_cells_along_line" title="pyvista.UnstructuredGrid.find_cells_along_line"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.find_cells_along_line</span></code></a>(...)</p></td>
-<td><p>Find the index of cells in this mesh along a line.</p></td>
+<td><p>このメッシュのセルのインデックスを、線に沿って求めます。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.find_cells_within_bounds.html#pyvista.UnstructuredGrid.find_cells_within_bounds" title="pyvista.UnstructuredGrid.find_cells_within_bounds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.find_cells_within_bounds</span></code></a>(bounds)</p></td>
-<td><p>Find the index of cells in this mesh within bounds.</p></td>
+<td><p>このメッシュの中で、境界線上にあるセルのインデックスを求めます。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.find_closest_cell.html#pyvista.UnstructuredGrid.find_closest_cell" title="pyvista.UnstructuredGrid.find_closest_cell"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.find_closest_cell</span></code></a>(point)</p></td>
 <td><p>このメッシュ内の指定したポイントに最も近いセルのインデックスを検索します．</p></td>
@@ -1308,22 +1308,22 @@
 <td><p>このメッシュ内の指定したポイントに最も近いポイントのインデックスを検索します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.flip_normal.html#pyvista.UnstructuredGrid.flip_normal" title="pyvista.UnstructuredGrid.flip_normal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.flip_normal</span></code></a>(normal[, ...])</p></td>
-<td><p>Flip mesh about the normal.</p></td>
+<td><p>フリップメッシュは通常のものと同じです。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.flip_x.html#pyvista.UnstructuredGrid.flip_x" title="pyvista.UnstructuredGrid.flip_x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.flip_x</span></code></a>([point, ...])</p></td>
-<td><p>Flip mesh about the x-axis.</p></td>
+<td><p>メッシュをX軸を中心に反転させます。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.flip_y.html#pyvista.UnstructuredGrid.flip_y" title="pyvista.UnstructuredGrid.flip_y"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.flip_y</span></code></a>([point, ...])</p></td>
-<td><p>Flip mesh about the y-axis.</p></td>
+<td><p>メッシュをY軸を中心に反転させます。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.flip_z.html#pyvista.UnstructuredGrid.flip_z" title="pyvista.UnstructuredGrid.flip_z"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.flip_z</span></code></a>([point, ...])</p></td>
-<td><p>Flip mesh about the z-axis.</p></td>
+<td><p>メッシュをZ軸を中心に反転させます。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.get_array.html#pyvista.UnstructuredGrid.get_array" title="pyvista.UnstructuredGrid.get_array"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.get_array</span></code></a>(name[, preference])</p></td>
 <td><p>点，セル，フィールドのデータの両方から配列を検索します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.get_array_association.html#pyvista.UnstructuredGrid.get_array_association" title="pyvista.UnstructuredGrid.get_array_association"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.get_array_association</span></code></a>(name)</p></td>
-<td><p>Get the association of an array.</p></td>
+<td><p>配列の関連付けを取得します。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.get_data_range.html#pyvista.UnstructuredGrid.get_data_range" title="pyvista.UnstructuredGrid.get_data_range"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.get_data_range</span></code></a>([arr_var, ...])</p></td>
 <td><p>指定した配列のNaN以外の最小値と最大値を取得します．</p></td>
@@ -1350,7 +1350,7 @@
 <td><p>入力データセットのコーナーのアウトラインを生成します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.overwrite.html#pyvista.UnstructuredGrid.overwrite" title="pyvista.UnstructuredGrid.overwrite"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.overwrite</span></code></a>(mesh)</p></td>
-<td><p>Overwrite this dataset inplace with the new dataset's geometries and data.</p></td>
+<td><p>このデータセットインプレイスを新しいデータセットのジオメトリとデータで上書きします．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.plot.html#pyvista.UnstructuredGrid.plot" title="pyvista.UnstructuredGrid.plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.plot</span></code></a>([off_screen, ...])</p></td>
 <td><p>vtkまたはnumpyオブジェクトをプロットします．</p></td>
@@ -1371,7 +1371,7 @@
 <td><p>点データをセルデータに変換します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.points_to_double.html#pyvista.UnstructuredGrid.points_to_double" title="pyvista.UnstructuredGrid.points_to_double"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.points_to_double</span></code></a>()</p></td>
-<td><p>Convert the points datatype to double precision.</p></td>
+<td><p>pointsのデータ型を倍精度に変換します。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.probe.html#pyvista.UnstructuredGrid.probe" title="pyvista.UnstructuredGrid.probe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.probe</span></code></a>(points[, tolerance, ...])</p></td>
 <td><p>指定したポイント位置のサンプルデータ値．</p></td>
@@ -1392,7 +1392,7 @@
 <td><p>配列名を変更するには，配列を検索して名前を変更します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.rotate_vector.html#pyvista.UnstructuredGrid.rotate_vector" title="pyvista.UnstructuredGrid.rotate_vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.rotate_vector</span></code></a>(vector, angle)</p></td>
-<td><p>Rotate mesh about a vector.</p></td>
+<td><p>メッシュをベクトルを中心に回転します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.rotate_x.html#pyvista.UnstructuredGrid.rotate_x" title="pyvista.UnstructuredGrid.rotate_x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.rotate_x</span></code></a>(angle[, point, ...])</p></td>
 <td><p>メッシュをX軸を中心に回転します．</p></td>
@@ -1419,7 +1419,7 @@
 <td><p>このvtkオブジェクトをファイルに保存します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.scale.html#pyvista.UnstructuredGrid.scale" title="pyvista.UnstructuredGrid.scale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.scale</span></code></a>(xyz)</p></td>
-<td><p>Scale the mesh.</p></td>
+<td><p>メッシュをスケールします。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.select_enclosed_points.html#pyvista.UnstructuredGrid.select_enclosed_points" title="pyvista.UnstructuredGrid.select_enclosed_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.select_enclosed_points</span></code></a>(surface)</p></td>
 <td><p>ポイントが閉じた表面の内側にあるかどうかをマークします．</p></td>
@@ -1503,25 +1503,25 @@
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.active_normals.html#pyvista.UnstructuredGrid.active_normals" title="pyvista.UnstructuredGrid.active_normals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.active_normals</span></code></a></p></td>
-<td><p>Return the active normals as an array.</p></td>
+<td><p>アクティブな法線を配列で取得します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.active_scalars.html#pyvista.UnstructuredGrid.active_scalars" title="pyvista.UnstructuredGrid.active_scalars"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.active_scalars</span></code></a></p></td>
 <td><p>アクティブなスカラーを配列で取得します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.active_scalars_info.html#pyvista.UnstructuredGrid.active_scalars_info" title="pyvista.UnstructuredGrid.active_scalars_info"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.active_scalars_info</span></code></a></p></td>
-<td><p>Return the active scalar's association and name.</p></td>
+<td><p>アクティブなスカラーの関連付けと名前を返します。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.active_scalars_name.html#pyvista.UnstructuredGrid.active_scalars_name" title="pyvista.UnstructuredGrid.active_scalars_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.active_scalars_name</span></code></a></p></td>
-<td><p>Return the name of the active scalars.</p></td>
+<td><p>アクティブなスカラーの名前を取得します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.active_t_coords.html#pyvista.UnstructuredGrid.active_t_coords" title="pyvista.UnstructuredGrid.active_t_coords"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.active_t_coords</span></code></a></p></td>
-<td><p>Return or set the active texture coordinates on the points.</p></td>
+<td><p>ポイント上のアクティブなテクスチャ座標を取得または設定します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.active_tensors.html#pyvista.UnstructuredGrid.active_tensors" title="pyvista.UnstructuredGrid.active_tensors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.active_tensors</span></code></a></p></td>
 <td><p>​アクティブなテンソル配列を取得します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.active_tensors_info.html#pyvista.UnstructuredGrid.active_tensors_info" title="pyvista.UnstructuredGrid.active_tensors_info"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.active_tensors_info</span></code></a></p></td>
-<td><p>Return the active tensor's field and name: [field, name].</p></td>
+<td><p>​アクティブなテンソルのフィールドと名前を取得します: [field, name]．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.active_tensors_name.html#pyvista.UnstructuredGrid.active_tensors_name" title="pyvista.UnstructuredGrid.active_tensors_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.active_tensors_name</span></code></a></p></td>
 <td><p>アクティブなテンソル配列の名前を取得します．</p></td>
@@ -1530,7 +1530,7 @@
 <td><p>アクティブなベクトル配列を取得します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.active_vectors_info.html#pyvista.UnstructuredGrid.active_vectors_info" title="pyvista.UnstructuredGrid.active_vectors_info"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.active_vectors_info</span></code></a></p></td>
-<td><p>Return the active vector's association and name.</p></td>
+<td><p>アクティブなベクトルの関連付けと名前を返します。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.active_vectors_name.html#pyvista.UnstructuredGrid.active_vectors_name" title="pyvista.UnstructuredGrid.active_vectors_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.active_vectors_name</span></code></a></p></td>
 <td><p>アクティブなベクトル配列の名前を取得します．</p></td>
@@ -1608,7 +1608,7 @@
 <td><p>DataSetAttributesとしてvtkPointDataを取得します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.points.html#pyvista.UnstructuredGrid.points" title="pyvista.UnstructuredGrid.points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.points</span></code></a></p></td>
-<td><p>Return a reference to the points as a numpy object.</p></td>
+<td><p>ポイントへの参照をnumpyオブジェクトとして取得します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.t_coords.html#pyvista.UnstructuredGrid.t_coords" title="pyvista.UnstructuredGrid.t_coords"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.t_coords</span></code></a></p></td>
 <td><p>ポイント上のアクティブなテクスチャ座標を取得します．</p></td>

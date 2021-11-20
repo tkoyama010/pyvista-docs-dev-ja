@@ -662,19 +662,13 @@
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>surface</strong><span class="classifier"><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></span></dt><dd><p>The <code class="docutils literal notranslate"><span class="pre">PolyData</span></code> surface mesh to use as a clipping
-function.  If this input mesh is not a :class`pyvista.PolyData`,
-the external surface will be extracted.</p>
+<dt><strong>surface</strong><span class="classifier"><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></span></dt><dd><p>クリップ関数として使用する <code class="docutils literal notranslate"><span class="pre">PolyData</span></code> サーフェスメッシュ．この入力メッシュが :class`pyvista.PolyData` でない場合，外部サーフェスが抽出されます．</p>
 </dd>
 <dt><strong>invert</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>クリップをフリップ/反転するかどうかを示すフラグ．</p>
 </dd>
-<dt><strong>value</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Set the clipping value of the implicit function (if
-clipping with implicit function) or scalar value (if
-clipping with scalars).  The default value is 0.0.</p>
+<dt><strong>value</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>インプリシット関数のクリッピング値(インプリシット関数によるクリッピングの場合)またはスカラー値(スカラーによるクリッピングの場合)を設定します．デフォルト値は0.0です．</p>
 </dd>
-<dt><strong>compute_distance</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Compute the implicit distance from the mesh onto the input
-dataset.  A new array called <code class="docutils literal notranslate"><span class="pre">'implicit_distance'</span></code> will
-be added to the output clipped mesh.</p>
+<dt><strong>compute_distance</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>メッシュから入力データセットへの暗黙の距離を計算します． <code class="docutils literal notranslate"><span class="pre">'implicit_distance'</span></code> という新しい配列が出力クリップメッシュに追加されます．</p>
 </dd>
 <dt><strong>progress_bar</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>進行状況を示す進行状況バーを表示します．</p>
 </dd>
@@ -682,13 +676,13 @@ be added to the output clipped mesh.</p>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p>Clipped surface.</p>
+<dt><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p>切り取られた面。</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>Clip a cube with a sphere.</p>
+<p>立方体を球体でクリップします。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">0.4</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.4</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.4</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cube</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Cube</span><span class="p">()</span><span class="o">.</span><span class="n">triangulate</span><span class="p">()</span><span class="o">.</span><span class="n">subdivide</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>

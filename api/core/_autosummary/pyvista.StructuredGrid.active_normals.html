@@ -1117,22 +1117,19 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.StructuredGrid.active_normals">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">StructuredGrid.</span></span><span class="sig-name descname"><span class="pre">active_normals</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">pyvista.core.pyvista_ndarray.pyvista_ndarray</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#pyvista.StructuredGrid.active_normals" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the active normals as an array.</p>
+<dd><p>アクティブな法線を配列で取得します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista_ndarray</span></code></dt><dd><p>Active normals of this dataset.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista_ndarray</span></code></dt><dd><p>このデータセットのアクティブな法線。</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">備考</p>
-<p>If both point and cell normals exist, this returns point
-normals by default.</p>
+<p>ポイント法線とセル法線の両方が存在する場合は、デフォルトでポイント法線を返します。</p>
 <p class="rubric">例</p>
-<p>Compute normals on an example sphere mesh and return the
-active normals for the dataset.  Show that this is the same size
-as the number of points.</p>
+<p>例題の球体メッシュの法線を計算し、データセットのアクティブな法線を返します。返した法線は点の数と同じ大きさであることを示します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">compute_normals</span><span class="p">()</span>

@@ -1117,26 +1117,20 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.StructuredGrid.active_scalars_info">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">StructuredGrid.</span></span><span class="sig-name descname"><span class="pre">active_scalars_info</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">pyvista.core.dataset.ActiveArrayInfo</span></em><a class="headerlink" href="#pyvista.StructuredGrid.active_scalars_info" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the active scalar's association and name.</p>
-<p>Association refers to the data association (e.g. point, cell, or
-field) of the active scalars.</p>
+<dd><p>アクティブなスカラーの関連付けと名前を返します。</p>
+<p>アソシエーションとは、アクティブなスカラーのデータの関連付け（ポイント、セル、フィールドなど）を指します。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">ActiveArrayInfo</span></code></dt><dd><p>The scalars info in an object with namedtuple semantics,
-with attributes <code class="docutils literal notranslate"><span class="pre">association</span></code> and <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">ActiveArrayInfo</span></code></dt><dd><p>スカラー情報は、名前付きタプルのセマンティクスを持つオブジェクトで、属性は <code class="docutils literal notranslate"><span class="pre">association</span></code> と <code class="docutils literal notranslate"><span class="pre">name</span></code> です。</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">備考</p>
-<p>If both cell and point scalars are present and neither have
-been set active within at the dataset level, point scalars
-will be made active.</p>
+<p>セルスカラーとポイントスカラーの両方が存在し、どちらもデータセットレベルで有効に設定されていない場合、ポイントスカラーが有効になります。</p>
 <p class="rubric">例</p>
-<p>Create a mesh, add scalars to the mesh, and return the active
-scalars info.  Note how when the scalars are added, they
-automatically become the active scalars.</p>
+<p>メッシュを作成し、メッシュにスカラを追加し、アクティブなスカラの情報を返します。 スカラーが追加されると、自動的にアクティブなスカラーになることに注意してください。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span><span class="p">[</span><span class="s1">&#39;Z Height&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">points</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span>
