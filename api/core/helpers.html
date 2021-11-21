@@ -568,9 +568,7 @@ triangle mesh.</p>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">vtkDataArray</span></code>, <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a>, :obj:` か ` <code class="xref py py-obj docutils literal notranslate"><span class="pre">DataFrame</span></code></dt><dd><p>The converted array.  If input is a <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a> then
-returns <code class="docutils literal notranslate"><span class="pre">vtkDataArray</span></code> or is input is <code class="docutils literal notranslate"><span class="pre">vtkDataArray</span></code> then
-returns NumPy <code class="docutils literal notranslate"><span class="pre">ndarray</span></code>.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">vtkDataArray</span></code>, <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a>, :obj:` か ` <code class="xref py py-obj docutils literal notranslate"><span class="pre">DataFrame</span></code></dt><dd><p>変換後の配列です。 入力が <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a> であれば <code class="docutils literal notranslate"><span class="pre">vtkDataArray</span></code> を返し、入力が <code class="docutils literal notranslate"><span class="pre">vtkDataArray</span></code> であれば NumPy の <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> を返す。</p>
 </dd>
 </dl>
 </dd>
@@ -605,7 +603,7 @@ returns NumPy <code class="docutils literal notranslate"><span class="pre">ndarr
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>Fit a plane to a random point cloud.</p>
+<p>ランダムな点群に平面を当てはめます。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cloud</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
@@ -613,7 +611,7 @@ returns NumPy <code class="docutils literal notranslate"><span class="pre">ndarr
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plane</span><span class="p">,</span> <span class="n">center</span><span class="p">,</span> <span class="n">normal</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">fit_plane_to_points</span><span class="p">(</span><span class="n">cloud</span><span class="p">,</span> <span class="n">return_meta</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Plot the fitted plane.</p>
+<p>フィットした平面をプロットします。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">plane</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tan&#39;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;wireframe&#39;</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">add_points</span><span class="p">(</span><span class="n">cloud</span><span class="p">,</span> <span class="n">render_points_as_spheres</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 

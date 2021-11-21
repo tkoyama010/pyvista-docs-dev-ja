@@ -658,33 +658,28 @@
 <dt class="sig sig-object py" id="pyvista.UniformGridFilters.extract_feature_edges">
 <span class="sig-prename descclassname"><span class="pre">UniformGridFilters.</span></span><span class="sig-name descname"><span class="pre">extract_feature_edges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feature_angle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary_edges</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">non_manifold_edges</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feature_edges</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">manifold_edges</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UniformGridFilters.extract_feature_edges" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>メッシュの表面からエッジを抽出します．</p>
-<p>If the given mesh is not PolyData, the external surface of the given
-mesh is extracted and used.</p>
-<p>From vtk documentation, the edges are one of the following:</p>
+<p>指定したメッシュがPolyDataでない場合，指定したメッシュの外部表面が抽出されて使用されます．</p>
+<p>vtkのマニュアルによると，エッジは次のいずれかです．</p>
 <blockquote>
 <div><ol class="arabic simple">
-<li><p>Boundary (used by one polygon) or a line cell.</p></li>
-<li><p>Non-manifold (used by three or more polygons).</p></li>
-<li><p>Feature edges (edges used by two triangles and whose
-dihedral angle &gt; feature_angle).</p></li>
-<li><p>Manifold edges (edges used by exactly two polygons).</p></li>
+<li><p>境界(1つのポリゴンで使用)またはラインセル</p></li>
+<li><p>非多様体(3つ以上の多角形によって使用されます)</p></li>
+<li><p>フィーチャエッジ(2つの三角形で使用され，二面角がfeature_angleより大きいエッジ)</p></li>
+<li><p>多様体のエッジ(ちょうど2つのポリゴンで使用されるエッジ)．</p></li>
 </ol>
 </div></blockquote>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>feature_angle</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Feature angle (in degrees) used to detect sharp edges on
-the mesh. Used only when <code class="docutils literal notranslate"><span class="pre">feature_edges=True</span></code>.  Defaults
-to 30 degrees.</p>
+<dt><strong>feature_angle</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>メッシュ上のシャープなエッジを検出するために使われる特徴的な角度（度）です。これは <code class="docutils literal notranslate"><span class="pre">feature_edges=True</span></code> の場合にのみ使用されます。 デフォルトでは30度に設定されています。</p>
 </dd>
-<dt><strong>boundary_edges</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Extract the boundary edges. Defaults to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<dt><strong>boundary_edges</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>境界線を抽出します。デフォルトは <code class="docutils literal notranslate"><span class="pre">True</span></code> です。</p>
 </dd>
-<dt><strong>non_manifold_edges</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Extract non-manifold edges. Defaults to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<dt><strong>non_manifold_edges</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>非多様体のエッジを抽出します。デフォルトは <code class="docutils literal notranslate"><span class="pre">True</span></code> です。</p>
 </dd>
-<dt><strong>feature_edges</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Extract edges exceeding <code class="docutils literal notranslate"><span class="pre">feature_angle</span></code>.  Defaults to
-<code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<dt><strong>feature_edges</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">feature_angle</span></code> を超えるエッジを抽出します。 デフォルトは <code class="docutils literal notranslate"><span class="pre">True</span></code> です。</p>
 </dd>
-<dt><strong>manifold_edges</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Extract manifold edges. Defaults to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<dt><strong>manifold_edges</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>多様体線を抽出します。デフォルトは <code class="docutils literal notranslate"><span class="pre">True</span></code> です。</p>
 </dd>
 <dt><strong>progress_bar</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>進行状況を示す進行状況バーを表示します．</p>
 </dd>
@@ -692,13 +687,13 @@ to 30 degrees.</p>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p>Extracted edges.</p>
+<dt><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p>エッジを抽出</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>Extract the edges from an unstructured grid.</p>
+<p>非構造化格子からエッジを抽出します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">hex_beam</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">examples</span><span class="o">.</span><span class="n">hexbeamfile</span><span class="p">)</span>

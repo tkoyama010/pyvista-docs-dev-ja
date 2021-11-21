@@ -1237,12 +1237,9 @@
 <dd class="field-odd"><dl>
 <dt><strong>actor</strong> : <code class="xref py py-obj docutils literal notranslate"><span class="pre">vtk.vtkActor</span></code> か <a class="reference internal" href="../../core/_autosummary/pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a><span class="classifier">vtk.vtkActor か pyvista.DataSet</span></dt><dd><p>マーカーとして使用するメッシュまたはアクター．</p>
 </dd>
-<dt><strong>interactive</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Control if the orientation widget is interactive.  By
-default uses the value from
-<a class="reference internal" href="pyvista.themes.DefaultTheme.interactive.html#pyvista.themes.DefaultTheme.interactive" title="pyvista.themes.DefaultTheme.interactive"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pyvista.global_theme.interactive</span></code></a>.</p>
+<dt><strong>interactive</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>オリエンテーション・ウィジェットがインタラクティブであるかどうかを制御します。 デフォルトでは、 <a class="reference internal" href="pyvista.themes.DefaultTheme.interactive.html#pyvista.themes.DefaultTheme.interactive" title="pyvista.themes.DefaultTheme.interactive"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pyvista.global_theme.interactive</span></code></a> の値を使用します。</p>
 </dd>
-<dt><strong>color</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The color of the actor.  This only applies if <code class="docutils literal notranslate"><span class="pre">actor</span></code> is
-a <a class="reference internal" href="../../core/_autosummary/pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a>.</p>
+<dt><strong>color</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>アクターの色です。 これは <code class="docutils literal notranslate"><span class="pre">actor</span></code> が <a class="reference internal" href="../../core/_autosummary/pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a> の場合にのみ適用されます。</p>
 </dd>
 <dt><strong>opacity</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>マーカーの不透明度．</p>
 </dd>
@@ -1250,13 +1247,13 @@ a <a class="reference internal" href="../../core/_autosummary/pyvista.DataSet.ht
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">vtk.vtkOrientationMarkerWidget</span></code></dt><dd><p>Orientation marker widget.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">vtk.vtkOrientationMarkerWidget</span></code></dt><dd><p>オリエンテーションマーカーウィジェット。</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>Use an Arrow as the orientation widget.</p>
+<p>オリエンテーション用のウィジェットとして矢印を使用します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">actor</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">pyvista</span><span class="o">.</span><span class="n">Cube</span><span class="p">(),</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>

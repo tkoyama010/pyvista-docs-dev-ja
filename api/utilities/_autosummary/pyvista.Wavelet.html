@@ -296,7 +296,7 @@
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="pyvista.Octahedron.html">
-       Octahedron
+       八面体
       </a>
      </li>
      <li class="toctree-l3">
@@ -421,40 +421,38 @@
 <dt class="sig sig-object py" id="pyvista.Wavelet">
 <span class="sig-name descname"><span class="pre">Wavelet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">extent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(-</span> <span class="pre">10,</span> <span class="pre">10,</span> <span class="pre">-</span> <span class="pre">10,</span> <span class="pre">10,</span> <span class="pre">-</span> <span class="pre">10,</span> <span class="pre">10)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">center</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0,</span> <span class="pre">0,</span> <span class="pre">0)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximum</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">255</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_freq</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">60</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_freq</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_freq</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">40</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_mag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_mag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">18</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_mag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">std</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subsample_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Wavelet" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ウェーブレットを作成します．</p>
-<p>Produces images with pixel values determined by
-<code class="docutils literal notranslate"><span class="pre">Maximum*Gaussian*x_mag*sin(x_freq*x)*sin(y_freq*y)*cos(z_freq*z)</span></code></p>
-<p>Values are float scalars on point data with name <code class="docutils literal notranslate"><span class="pre">&quot;RTData&quot;</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Maximum*Gaussian*x_mag*sin(x_freq*x)*sin(y_freq*y)*cos(z_freq*z)</span></code> で決まるピクセル値の画像を生成します。</p>
+<p>値は <code class="docutils literal notranslate"><span class="pre">&quot;RTData&quot;</span></code> という名前のポイントデータ上のフロートスカラーです。</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>extent</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Set/Get the extent of the whole output image.  Default
-<code class="docutils literal notranslate"><span class="pre">(-10,</span> <span class="pre">10,</span> <span class="pre">-10,</span> <span class="pre">10,</span> <span class="pre">-10,</span> <span class="pre">10)</span></code>.</p>
+<dt><strong>extent</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>出力画像全体の範囲を設定／取得します。 デフォルトは <code class="docutils literal notranslate"><span class="pre">(-10,</span> <span class="pre">10,</span> <span class="pre">-10,</span> <span class="pre">10,</span> <span class="pre">-10,</span> <span class="pre">10)</span></code> です。</p>
 </dd>
-<dt><strong>center</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Center of the wavelet.</p>
+<dt><strong>center</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>ウェーブレットの中心。</p>
 </dd>
-<dt><strong>maximum</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Maximum of the wavelet function.</p>
+<dt><strong>maximum</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>ウェーブレット関数の最大値。</p>
 </dd>
-<dt><strong>x_freq</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Natural frequency in the x direction.</p>
+<dt><strong>x_freq</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>x方向の固有振動数。</p>
 </dd>
-<dt><strong>y_freq</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Natural frequency in the y direction.</p>
+<dt><strong>y_freq</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>y方向の固有振動数。</p>
 </dd>
-<dt><strong>z_freq</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Natural frequency in the z direction.</p>
+<dt><strong>z_freq</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>z方向の固有振動数。</p>
 </dd>
-<dt><strong>x_mag</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Magnitude in the x direction.</p>
+<dt><strong>x_mag</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>x方向の大きさ。</p>
 </dd>
-<dt><strong>y_mag</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Magnitude in the y direction.</p>
+<dt><strong>y_mag</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>y方向の大きさ。</p>
 </dd>
-<dt><strong>z_mag</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Magnitude in the z direction.</p>
+<dt><strong>z_mag</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>z方向の大きさ。</p>
 </dd>
-<dt><strong>std</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Standard deviation.</p>
+<dt><strong>std</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>標準偏差。</p>
 </dd>
-<dt><strong>subsample_rate</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The sub-sample rate.</p>
+<dt><strong>subsample_rate</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>サブサンプルレート。</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="../../core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p>Wavelet mesh.</p>
+<dt><a class="reference internal" href="../../core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p>ウェーブレットメッシュ。</p>
 </dd>
 </dl>
 </dd>
@@ -470,7 +468,7 @@
 <figure class="align-default">
 <img alt="../../../_images/pyvista-Wavelet-1_00_00.png" src="../../../_images/pyvista-Wavelet-1_00_00.png" />
 </figure>
-<p>Extract lower valued cells of the wavelet and create a surface from it.</p>
+<p>ウェーブレットの低評価セルを抽出し、そこからサーフェスを作成します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thresh</span> <span class="o">=</span> <span class="n">wavelet</span><span class="o">.</span><span class="n">threshold</span><span class="p">(</span><span class="mi">800</span><span class="p">)</span><span class="o">.</span><span class="n">extract_surface</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">thresh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">show_scalar_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
@@ -478,7 +476,7 @@
 <figure class="align-default">
 <img alt="../../../_images/pyvista-Wavelet-1_01_00.png" src="../../../_images/pyvista-Wavelet-1_01_00.png" />
 </figure>
-<p>Smooth it to create &quot;waves&quot;</p>
+<p>滑らかにして &quot;波&quot; を作ります</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">waves</span> <span class="o">=</span> <span class="n">thresh</span><span class="o">.</span><span class="n">smooth</span><span class="p">(</span><span class="n">n_iter</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">relaxation_factor</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">waves</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">smooth_shading</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>

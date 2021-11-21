@@ -420,20 +420,19 @@
 </dd>
 <dt><strong>n2</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>x-y平面の &quot;squareness&quot; パラメータ．デフォルトは1です．</p>
 </dd>
-<dt><strong>**kwargs</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>See <a class="reference internal" href="pyvista.surface_from_para.html#pyvista.surface_from_para" title="pyvista.surface_from_para"><code class="xref py py-func docutils literal notranslate"><span class="pre">surface_from_para()</span></code></a> for additional keyword arguments.</p>
+<dt><strong>**kwargs</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>その他のキーワード引数については、 <a class="reference internal" href="pyvista.surface_from_para.html#pyvista.surface_from_para" title="pyvista.surface_from_para"><code class="xref py py-func docutils literal notranslate"><span class="pre">surface_from_para()</span></code></a> を参照してください。</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="../../core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p>ParametricSuperEllipsoid surface.</p>
+<dt><a class="reference internal" href="../../core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p>ParametricSuperEllipsoid表面．</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>Create a ParametricSuperEllipsoid surface that looks like a box
-with smooth edges.</p>
+<p>滑らかなエッジを持つボックスのようなParametricSuperEllipsoidサーフェスを作成します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">ParametricSuperEllipsoid</span><span class="p">(</span><span class="n">n1</span><span class="o">=</span><span class="mf">0.02</span><span class="p">,</span> <span class="n">n2</span><span class="o">=</span><span class="mf">0.02</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">smooth_shading</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -442,7 +441,7 @@ with smooth edges.</p>
 <figure class="align-default">
 <img alt="../../../_images/pyvista-ParametricSuperEllipsoid-1_00_00.png" src="../../../_images/pyvista-ParametricSuperEllipsoid-1_00_00.png" />
 </figure>
-<p>Create one that looks like a spinning top.</p>
+<p>回転するコマのようなものを作ります。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">ParametricSuperEllipsoid</span><span class="p">(</span><span class="n">n1</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">n2</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">smooth_shading</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s1">&#39;xz&#39;</span><span class="p">)</span>
 </pre></div>

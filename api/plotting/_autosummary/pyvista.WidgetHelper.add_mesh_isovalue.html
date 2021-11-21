@@ -431,27 +431,17 @@
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>mesh</strong><span class="classifier"><a class="reference internal" href="../../core/_autosummary/pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a></span></dt><dd><p>The input dataset to add to the scene and contour.</p>
+<dt><strong>mesh</strong><span class="classifier"><a class="reference internal" href="../../core/_autosummary/pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a></span></dt><dd><p>シーンとコンターに追加する入力データセットです。</p>
 </dd>
-<dt><strong>scalars</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The string name of the scalars on the mesh to contour and display.</p>
+<dt><strong>scalars</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>コンターを作成して表示するメッシュ上のスカラーの文字列名。</p>
 </dd>
-<dt><strong>compute_normals</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Enable or disable the computation of normals.  If the
-output data will be processed by filters that modify
-topology or geometry, it may be wise to disable computing
-normals.</p>
+<dt><strong>compute_normals</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>法線の計算を有効または無効にします。 出力データがトポロジーやジオメトリを変更するフィルタで処理される場合は、法線の計算を無効にするのが賢明です。</p>
 </dd>
-<dt><strong>compute_gradients</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Enable or disable the computation of gradients.  If the
-output data will be processed by filters that modify
-topology or geometry, it may be wise to disable computing
-gradients.</p>
+<dt><strong>compute_gradients</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>勾配の計算を有効または無効にします。 出力データがトポロジーやジオメトリを変更するフィルタで処理される場合は、勾配の計算を無効にするのが賢明です。</p>
 </dd>
-<dt><strong>compute_scalars</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Enable or disable the computation of scalars.</p>
+<dt><strong>compute_scalars</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>スカラーの計算を有効または無効にします。</p>
 </dd>
-<dt><strong>preference</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>When <code class="docutils literal notranslate"><span class="pre">mesh.n_points</span> <span class="pre">==</span> <span class="pre">mesh.n_cells</span></code> and setting
-scalars, this parameter sets how the scalars will be
-mapped to the mesh.  Default <code class="docutils literal notranslate"><span class="pre">'points'</span></code>, causes the
-scalars will be associated with the mesh points.  Can be
-either <code class="docutils literal notranslate"><span class="pre">'points'</span></code> or <code class="docutils literal notranslate"><span class="pre">'cells'</span></code>.</p>
+<dt><strong>preference</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">mesh.n_points</span> <span class="pre">==</span> <span class="pre">mesh.n_cells</span></code> でスカラを設定した場合、このパラメータはスカラがどのようにメッシュにマッピングされるかを設定します。 デフォルトの <code class="docutils literal notranslate"><span class="pre">'points'</span></code> では，スカラーはメッシュのポイントに関連付けられます． これは <code class="docutils literal notranslate"><span class="pre">'points'</span></code> または <code class="docutils literal notranslate"><span class="pre">'cell'</span></code> のいずれかです．</p>
 </dd>
 <dt><strong>title</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>スライダウィジェットの文字列ラベル．</p>
 </dd>
@@ -459,8 +449,7 @@ either <code class="docutils literal notranslate"><span class="pre">'points'</sp
 </dd>
 <dt><strong>pointb</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a></span></dt><dd><p>表示ポート上のスライダの右ポイントの相対座標。</p>
 </dd>
-<dt><strong>widget_color</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Color of the widget.  Either a string, RGB sequence, or
-hex color string.  For example:</p>
+<dt><strong>widget_color</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>ウィジェットの色。文字列、RGB配列、または16進数の色文字列のいずれかです。  例えば</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">color='white'</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">color='w'</span></code></p></li>
@@ -468,15 +457,13 @@ hex color string.  For example:</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">color='#FFFFFF'</span></code></p></li>
 </ul>
 </dd>
-<dt><strong>**kwargs</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>All additional keyword arguments are passed to
-<code class="xref py py-func docutils literal notranslate"><span class="pre">BasePlotter.add_mesh()</span></code> to control how the mesh is
-displayed.</p>
+<dt><strong>**kwargs</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>すべての追加キーワード引数は <code class="xref py py-func docutils literal notranslate"><span class="pre">BasePlotter.add_mesh()</span></code> に渡され、メッシュの表示方法を制御します。</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">vtk.vtkActor</span></code></dt><dd><p>VTK actor of the mesh.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">vtk.vtkActor</span></code></dt><dd><p>メッシュのVTKアクター．</p>
 </dd>
 </dl>
 </dd>

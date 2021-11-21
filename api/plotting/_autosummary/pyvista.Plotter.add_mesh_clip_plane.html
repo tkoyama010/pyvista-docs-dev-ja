@@ -1236,13 +1236,13 @@
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>mesh</strong><span class="classifier"><a class="reference internal" href="../../core/_autosummary/pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a></span></dt><dd><p>The input dataset to add to the scene and clip.</p>
+<dt><strong>mesh</strong><span class="classifier"><a class="reference internal" href="../../core/_autosummary/pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a></span></dt><dd><p>シーンおよびクリップに追加する入力データセット。</p>
 </dd>
-<dt><strong>normal</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a>(<a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>), <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The starting normal vector of the plane.</p>
+<dt><strong>normal</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a>(<a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>), <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>平面の開始法線ベクトル。</p>
 </dd>
 <dt><strong>invert</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>クリップをフリップ/反転するかどうかを示すフラグ．</p>
 </dd>
-<dt><strong>widget_color</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Either a string, RGB list, or hex color string.</p>
+<dt><strong>widget_color</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>文字列，RGBリスト，または16進カラー文字列．</p>
 </dd>
 <dt><strong>value</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>法線方向に沿ってクリップ値を設定します．デフォルト値は0.0です．</p>
 </dd>
@@ -1260,15 +1260,13 @@ axis.  Options are <code class="docutils literal notranslate"><span class="pre">
 </dd>
 <dt><strong>normal_rotation</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>法線ベクトル矢印の不透明度を0に設定して，実質的に無効にします．これにより，ユーザは法線を回転できなくなります． <code class="docutils literal notranslate"><span class="pre">assign_to_axis</span></code> が設定されている場合，これは強制的に <code class="docutils literal notranslate"><span class="pre">False</span></code> になります．</p>
 </dd>
-<dt><strong>**kwargs</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>All additional keyword arguments are passed to
-<code class="xref py py-func docutils literal notranslate"><span class="pre">BasePlotter.add_mesh()</span></code> to control how the mesh is
-displayed.</p>
+<dt><strong>**kwargs</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>すべての追加キーワード引数は <code class="xref py py-func docutils literal notranslate"><span class="pre">BasePlotter.add_mesh()</span></code> に渡され、メッシュの表示方法を制御します。</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">vtk.vtkActor</span></code></dt><dd><p>VTK actor of the mesh.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">vtk.vtkActor</span></code></dt><dd><p>メッシュのVTKアクター．</p>
 </dd>
 </dl>
 </dd>

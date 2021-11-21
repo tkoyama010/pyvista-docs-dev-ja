@@ -1230,17 +1230,15 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.Plotter.add_silhouette">
 <span class="sig-prename descclassname"><span class="pre">Plotter.</span></span><span class="sig-name descname"><span class="pre">add_silhouette</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Plotter.add_silhouette" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Add a silhouette of a PyVista or VTK dataset to the scene.</p>
-<p>A silhouette can also be generated directly in
-<a class="reference internal" href="pyvista.Plotter.add_mesh.html#pyvista.Plotter.add_mesh" title="pyvista.Plotter.add_mesh"><code class="xref py py-func docutils literal notranslate"><span class="pre">add_mesh</span></code></a>. See also
-<a class="reference internal" href="../../../examples/02-plot/silhouette.html#silhouette-example"><span class="std std-ref">シルエットハイライト</span></a>.</p>
+<dd><p>PyVistaまたはVTKデータセットのシルエットをシーンに追加します。</p>
+<p>シルエットは <a class="reference internal" href="pyvista.Plotter.add_mesh.html#pyvista.Plotter.add_mesh" title="pyvista.Plotter.add_mesh"><code class="xref py py-func docutils literal notranslate"><span class="pre">add_mesh</span></code></a> で直接生成することもできます。<a class="reference internal" href="../../../examples/02-plot/silhouette.html#silhouette-example"><span class="std std-ref">シルエットハイライト</span></a> も参照してください。</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>mesh</strong><span class="classifier"><a class="reference internal" href="../../core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></span></dt><dd><p>Mesh for generating silhouette to plot.</p>
+<dt><strong>mesh</strong><span class="classifier"><a class="reference internal" href="../../core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></span></dt><dd><p>シルエットをプロットするためのメッシュです。</p>
 </dd>
 <dt><strong>params</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><ul class="simple">
-<li><p>If not supplied, the default theme values will be used.</p></li>
+<li><p>提供されない場合は、デフォルトのテーマ値が使用されます。</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">color</span></code>: <code class="docutils literal notranslate"><span class="pre">str</span></code> または3点の <code class="docutils literal notranslate"><span class="pre">list</span></code> ，シルエットの色</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">line_width</span></code>: <code class="docutils literal notranslate"><span class="pre">float</span></code> ，エッジ幅</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">opacity</span></code>: 0から1の <code class="docutils literal notranslate"><span class="pre">float</span></code> ，エッジ透過性</p></li>
@@ -1252,7 +1250,7 @@
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">vtk.vtkActor</span></code></dt><dd><p>VTK actor of the silhouette.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">vtk.vtkActor</span></code></dt><dd><p>VTKアクターのシルエット.</p>
 </dd>
 </dl>
 </dd>

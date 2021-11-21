@@ -884,14 +884,13 @@
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>load</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Load the dataset after downloading it when <code class="docutils literal notranslate"><span class="pre">True</span></code>.  Set this
-to <code class="docutils literal notranslate"><span class="pre">False</span></code> and only the filename will be returned.</p>
+<dt><strong>load</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> に設定すると、データセットをダウンロードした後に読み込みます。 <code class="docutils literal notranslate"><span class="pre">False</span></code> に設定すると、ファイル名のみが返されます。</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="../../core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></dt><dd><p>DataSet or filename depending on <code class="docutils literal notranslate"><span class="pre">load</span></code>.</p>
+<dt><a class="reference internal" href="../../core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">load</span></code> に応じて、データセットまたはファイル名を指定します。</p>
 </dd>
 </dl>
 </dd>
@@ -901,8 +900,7 @@ to <code class="docutils literal notranslate"><span class="pre">False</span></co
 <span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_foot_bones</span><span class="p">()</span>  
 </pre></div>
 </div>
-<p>See <a class="reference internal" href="../../../examples/01-filter/voxelize.html#voxelize-surface-mesh-example"><span class="std std-ref">サーフェスメッシュをボクセル化する</span></a> for an example using this
-dataset.</p>
+<p>このデータセットを使った例は、 <a class="reference internal" href="../../../examples/01-filter/voxelize.html#voxelize-surface-mesh-example"><span class="std std-ref">サーフェスメッシュをボクセル化する</span></a> をご覧ください。</p>
 </dd></dl>
 
 </section>

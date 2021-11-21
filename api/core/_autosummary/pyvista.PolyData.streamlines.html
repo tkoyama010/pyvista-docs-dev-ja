@@ -1313,13 +1313,7 @@
 <dt class="sig sig-object py" id="pyvista.PolyData.streamlines">
 <span class="sig-prename descclassname"><span class="pre">PolyData.</span></span><span class="sig-name descname"><span class="pre">streamlines</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vectors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_center</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_position</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pointa</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pointb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.streamlines" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ベクトルフィールドを積分して，流線を生成します．</p>
-<p>The default behavior uses a sphere as the source - set its
-location and radius via the <code class="docutils literal notranslate"><span class="pre">source_center</span></code> and
-<code class="docutils literal notranslate"><span class="pre">source_radius</span></code> keyword arguments.  <code class="docutils literal notranslate"><span class="pre">n_points</span></code> defines the
-number of starting points on the sphere surface.
-Alternatively, a line source can be used by specifying
-<code class="docutils literal notranslate"><span class="pre">pointa</span></code> and <code class="docutils literal notranslate"><span class="pre">pointb</span></code>.  <code class="docutils literal notranslate"><span class="pre">n_points</span></code> again defines the
-number of points on the line.</p>
+<p>デフォルトの動作では，<code class="docutils literal notranslate"><span class="pre">source_center</span></code> および <code class="docutils literal notranslate"><span class="pre">source_radius</span></code> キーワード引数を使用して，球体の位置と半径をソースセットとして使用します． <code class="docutils literal notranslate"><span class="pre">n_points</span></code> は球面上の開始点の数を定義します． あるいは， <code class="docutils literal notranslate"><span class="pre">pointa</span></code> と <code class="docutils literal notranslate"><span class="pre">pointb</span></code> を指定してLineソースを使用することもできます． <code class="docutils literal notranslate"><span class="pre">n_points</span></code> もライン上のポイント数を定義します．</p>
 <p><code class="docutils literal notranslate"><span class="pre">return_source=True</span></code> を指定してソースを取得できます．</p>
 <p><a class="reference internal" href="pyvista.DataSetFilters.streamlines_from_source.html#pyvista.DataSetFilters.streamlines_from_source" title="pyvista.DataSetFilters.streamlines_from_source"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.streamlines_from_source()</span></code></a> のオプションのキーワードパラメータを使用して，流線の生成を制御できます．</p>
 <dl class="field-list">
@@ -1341,7 +1335,7 @@ number of points on the line.</p>
 </dd>
 <dt><strong>progress_bar</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>進行状況を示す進行状況バーを表示します．</p>
 </dd>
-<dt><strong>**kwargs</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>See <a class="reference internal" href="pyvista.DataSetFilters.streamlines_from_source.html#pyvista.DataSetFilters.streamlines_from_source" title="pyvista.DataSetFilters.streamlines_from_source"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.streamlines_from_source()</span></code></a>.</p>
+<dt><strong>**kwargs</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>詳しくは <a class="reference internal" href="pyvista.DataSetFilters.streamlines_from_source.html#pyvista.DataSetFilters.streamlines_from_source" title="pyvista.DataSetFilters.streamlines_from_source"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.streamlines_from_source()</span></code></a> をご覧ください。</p>
 </dd>
 </dl>
 </dd>
@@ -1349,14 +1343,13 @@ number of points on the line.</p>
 <dd class="field-even"><dl>
 <dt><strong>streamlines</strong><span class="classifier"><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></span></dt><dd><p>これにより，各セル(つまり，ポリライン)が流線を表すポリラインが出力として生成されます．各流線に関連付けられた属性値はセルデータに格納され，流線ポイントに関連付けられた属性値はポイントデータに格納されます．</p>
 </dd>
-<dt><strong>source</strong><span class="classifier"><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></span></dt><dd><p>The points of the source are the seed points for the streamlines.
-Only returned if <code class="docutils literal notranslate"><span class="pre">return_source=True</span></code>.</p>
+<dt><strong>source</strong><span class="classifier"><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></span></dt><dd><p>ソースのポイントは流線のシードポイントです． <code class="docutils literal notranslate"><span class="pre">return_source=True</span></code> の場合にのみ返されます．</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>See the <a class="reference internal" href="../../../examples/01-filter/streamlines.html#streamlines-example"><span class="std std-ref">流線</span></a> example.</p>
+<p><a class="reference internal" href="../../../examples/01-filter/streamlines.html#streamlines-example"><span class="std std-ref">流線</span></a> の例を参照してください。</p>
 </dd></dl>
 
 </section>

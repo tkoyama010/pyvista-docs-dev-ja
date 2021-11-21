@@ -379,7 +379,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inherited-classes">
-   Inherited Classes
+   継承クラス
   </a>
  </li>
 </ul>
@@ -406,7 +406,7 @@
   <section id="readers">
 <span id="reader-api"></span><h1>Readers<a class="headerlink" href="#readers" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>PyVistaには、データファイルの読み込みをより細かく制御できるクラスベースのリーダがあります。 これらのクラスは、ファイルからデータセットを読み込む際に、より細かい制御を可能にします。 サポートしているファイルタイプの一覧は、 <a class="reference internal" href="_autosummary/pyvista.get_reader.html#pyvista.get_reader" title="pyvista.get_reader"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.get_reader()</span></code></a> を参照してください。</p>
-<p>Also, see <a class="reference internal" href="../../examples/00-load/reader.html#reader-example"><span class="std std-ref">リーダーによるデータの読み込み</span></a> for a full example using reader classes.</p>
+<p>また、リーダークラスを使った完全な例として、 <a class="reference internal" href="../../examples/00-load/reader.html#reader-example"><span class="std std-ref">リーダーによるデータの読み込み</span></a> を参照してください。</p>
 <table class="longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
@@ -414,7 +414,7 @@
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/pyvista.get_reader.html#pyvista.get_reader" title="pyvista.get_reader"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_reader</span></code></a>(filename)</p></td>
-<td><p>Get a reader for fine-grained control of reading data files.</p></td>
+<td><p>データファイルの読み取りをきめ細かく制御するためのリーダーを取得します。</p></td>
 </tr>
 </tbody>
 </table>
@@ -430,77 +430,73 @@
 <td><p>.vtiファイル用のXML画像データリーダー。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/pyvista.XMLPImageDataReader.html#pyvista.XMLPImageDataReader" title="pyvista.XMLPImageDataReader"><code class="xref py py-obj docutils literal notranslate"><span class="pre">XMLPImageDataReader</span></code></a>(filename)</p></td>
-<td><p>Parallel XML Image Data Reader for .pvti files.</p></td>
+<td><p>.pvtiファイル用のParallel XML Image Data Readerです。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/pyvista.XMLRectilinearGridReader.html#pyvista.XMLRectilinearGridReader" title="pyvista.XMLRectilinearGridReader"><code class="xref py py-obj docutils literal notranslate"><span class="pre">XMLRectilinearGridReader</span></code></a>(filename)</p></td>
-<td><p>XML RectilinearGrid Reader for .vtr files.</p></td>
+<td><p>.vtrファイル用のXML RectilinearGrid Readerです。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/pyvista.XMLPRectilinearGridReader.html#pyvista.XMLPRectilinearGridReader" title="pyvista.XMLPRectilinearGridReader"><code class="xref py py-obj docutils literal notranslate"><span class="pre">XMLPRectilinearGridReader</span></code></a>(filename)</p></td>
-<td><p>Parallel XML RectilinearGrid Reader for .pvtr files.</p></td>
+<td><p>.pvtrファイル用のParallel XML RectilinearGrid Readerです。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/pyvista.XMLUnstructuredGridReader.html#pyvista.XMLUnstructuredGridReader" title="pyvista.XMLUnstructuredGridReader"><code class="xref py py-obj docutils literal notranslate"><span class="pre">XMLUnstructuredGridReader</span></code></a>(filename)</p></td>
-<td><p>XML UnstructuredGrid Reader for .vtu files.</p></td>
+<td><p>.vtuファイル用のXML UnstructuredGridリーダーです。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/pyvista.XMLPUnstructuredGridReader.html#pyvista.XMLPUnstructuredGridReader" title="pyvista.XMLPUnstructuredGridReader"><code class="xref py py-obj docutils literal notranslate"><span class="pre">XMLPUnstructuredGridReader</span></code></a>(filename)</p></td>
-<td><p>Parallel XML UnstructuredGrid Reader for .pvtu files.</p></td>
+<td><p>.pvtuファイル用のParallel XML UnstructuredGrid Readerです。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/pyvista.XMLPolyDataReader.html#pyvista.XMLPolyDataReader" title="pyvista.XMLPolyDataReader"><code class="xref py py-obj docutils literal notranslate"><span class="pre">XMLPolyDataReader</span></code></a>(filename)</p></td>
-<td><p>XML PolyData Reader for .vtp files.</p></td>
+<td><p>.vtpファイル用のXML PolyDataリーダーです。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/pyvista.XMLStructuredGridReader.html#pyvista.XMLStructuredGridReader" title="pyvista.XMLStructuredGridReader"><code class="xref py py-obj docutils literal notranslate"><span class="pre">XMLStructuredGridReader</span></code></a>(filename)</p></td>
-<td><p>XML StructuredGrid Reader for .vts files.</p></td>
+<td><p>.vtsファイル用のXML StructuredGrid Readerです。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/pyvista.XMLMultiBlockDataReader.html#pyvista.XMLMultiBlockDataReader" title="pyvista.XMLMultiBlockDataReader"><code class="xref py py-obj docutils literal notranslate"><span class="pre">XMLMultiBlockDataReader</span></code></a>(filename)</p></td>
-<td><p>XML MultiBlock Data Reader for .vtm or .vtmb files.</p></td>
+<td><p>.vtmまたはvtmbファイル用のXML MultiBlockデータリーダーです。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/pyvista.PVDReader.html#pyvista.PVDReader" title="pyvista.PVDReader"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PVDReader</span></code></a>(filename)</p></td>
 <td><p>.pvdファイル用のPVDリーダー。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/pyvista.EnSightReader.html#pyvista.EnSightReader" title="pyvista.EnSightReader"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EnSightReader</span></code></a>(filename)</p></td>
-<td><p>EnSight Reader for .case files.</p></td>
+<td><p>.caseファイル用のEnSightリーダー。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/pyvista.OpenFOAMReader.html#pyvista.OpenFOAMReader" title="pyvista.OpenFOAMReader"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader</span></code></a>(filename)</p></td>
-<td><p>OpenFOAM Reader for .foam files.</p></td>
+<td><p>.foamファイル用のOpenFOAMリーダー。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/pyvista.PLYReader.html#pyvista.PLYReader" title="pyvista.PLYReader"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PLYReader</span></code></a>(filename)</p></td>
-<td><p>PLY Reader for reading .ply files.</p></td>
+<td><p>.ply ファイル読み込み用のPLYリーダー。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/pyvista.OBJReader.html#pyvista.OBJReader" title="pyvista.OBJReader"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OBJReader</span></code></a>(filename)</p></td>
-<td><p>OBJ Reader for reading .obj files.</p></td>
+<td><p>.obj ファイル読み込み用のOBJリーダー。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/pyvista.STLReader.html#pyvista.STLReader" title="pyvista.STLReader"><code class="xref py py-obj docutils literal notranslate"><span class="pre">STLReader</span></code></a>(filename)</p></td>
-<td><p>STL Reader for .stl files.</p></td>
+<td><p>.stlファイル用のSTLリーダーです。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/pyvista.VTKDataSetReader.html#pyvista.VTKDataSetReader" title="pyvista.VTKDataSetReader"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VTKDataSetReader</span></code></a>(filename)</p></td>
-<td><p>VTK Data Set Reader for .vtk files.</p></td>
+<td><p>.vtkファイル用のVTKデータセットリーダーです。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/pyvista.VTKPDataSetReader.html#pyvista.VTKPDataSetReader" title="pyvista.VTKPDataSetReader"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VTKPDataSetReader</span></code></a>(filename)</p></td>
-<td><p>Parallel VTK Data Set Reader for .pvtk files.</p></td>
+<td><p>.pvtkファイル用のパラレルVTKデータセットリーダーです。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/pyvista.BYUReader.html#pyvista.BYUReader" title="pyvista.BYUReader"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BYUReader</span></code></a>(filename)</p></td>
-<td><p>BYU Reader for .g files.</p></td>
+<td><p>.gファイル用のBYUリーダーです。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/pyvista.FacetReader.html#pyvista.FacetReader" title="pyvista.FacetReader"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FacetReader</span></code></a>(filename)</p></td>
-<td><p>Facet Reader for .facet files.</p></td>
+<td><p>.facetファイル用のFacetリーダー。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/pyvista.Plot3DMetaReader.html#pyvista.Plot3DMetaReader" title="pyvista.Plot3DMetaReader"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plot3DMetaReader</span></code></a>(filename)</p></td>
-<td><p>Plot3DMeta Reader for .p3d files.</p></td>
+<td><p>.p3d ファイル用のPlot3DMetaリーダーです。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/pyvista.BinaryMarchingCubesReader.html#pyvista.BinaryMarchingCubesReader" title="pyvista.BinaryMarchingCubesReader"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BinaryMarchingCubesReader</span></code></a>(filename)</p></td>
-<td><p>BinaryMarchingCubes Reader for .tri files.</p></td>
+<td><p>.tri ファイルのBinaryMarchingCubesリーダー。</p></td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="inherited-classes">
-<h2>Inherited Classes<a class="headerlink" href="#inherited-classes" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>The <a class="reference internal" href="_autosummary/pyvista.BaseReader.html#pyvista.BaseReader" title="pyvista.BaseReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.BaseReader</span></code></a> is inherited by all subreaders.  It
-has the basic functionality of all readers to set filename and read
-the data.</p>
-<p>The <a class="reference internal" href="_autosummary/pyvista.PointCellDataSelection.html#pyvista.PointCellDataSelection" title="pyvista.PointCellDataSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">PointCellDataSelection</span></code></a> is inherited by readers that
-support inspecting and setting data related to point and cell arrays.</p>
-<p>The <a class="reference internal" href="_autosummary/pyvista.TimeReader.html#pyvista.TimeReader" title="pyvista.TimeReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">TimeReader</span></code></a> is inherited by readers that support inspecting
-and setting time or iterations for reading.</p>
+<h2>継承クラス<a class="headerlink" href="#inherited-classes" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><a class="reference internal" href="_autosummary/pyvista.BaseReader.html#pyvista.BaseReader" title="pyvista.BaseReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.BaseReader</span></code></a> は、すべてのサブリーダーによって継承されます。 このクラスは、ファイル名を設定してデータを読み取るという、すべてのリーダーの基本的な機能を持っています。</p>
+<p><a class="reference internal" href="_autosummary/pyvista.PointCellDataSelection.html#pyvista.PointCellDataSelection" title="pyvista.PointCellDataSelection"><code class="xref py py-class docutils literal notranslate"><span class="pre">PointCellDataSelection</span></code></a> は、ポイントやセルの配列に関連するデータの検査や設定をサポートするリーダーによって継承されます。</p>
+<p><a class="reference internal" href="_autosummary/pyvista.TimeReader.html#pyvista.TimeReader" title="pyvista.TimeReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">TimeReader</span></code></a> は、読み取りのための時間やイテレーションの検査や設定をサポートするリーダーによって継承されます。</p>
 <table class="longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
@@ -511,10 +507,10 @@ and setting time or iterations for reading.</p>
 <td><p>Base Readerクラス。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/pyvista.PointCellDataSelection.html#pyvista.PointCellDataSelection" title="pyvista.PointCellDataSelection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PointCellDataSelection</span></code></a>()</p></td>
-<td><p>Mixin for readers that support data array selections.</p></td>
+<td><p>データ配列の選択をサポートするリーダー用のMixinです。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/pyvista.TimeReader.html#pyvista.TimeReader" title="pyvista.TimeReader"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TimeReader</span></code></a>()</p></td>
-<td><p>Abstract class for readers supporting time.</p></td>
+<td><p>時間をサポートするリーダーのための抽象クラスです。</p></td>
 </tr>
 </tbody>
 </table>

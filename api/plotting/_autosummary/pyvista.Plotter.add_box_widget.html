@@ -1239,12 +1239,11 @@
 </dd>
 <dt><strong>bounds</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a>(<a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>)</span></dt><dd><p>ウィジェットが配置されるバウンディングボックスの長さ6のタプル．</p>
 </dd>
-<dt><strong>factor</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>An inflation factor to expand on the bounds when placing.</p>
+<dt><strong>factor</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>配置時に境界を拡張するための膨張係数。</p>
 </dd>
 <dt><strong>rotation_enabled</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">False</span></code> の場合，ボックスウィジェットは回転できず，直交軸に厳密に直交します．</p>
 </dd>
-<dt><strong>color</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Either a string, rgb sequence, or hex color string.
-Defaults to <a class="reference internal" href="pyvista.themes._Font.color.html#pyvista.themes._Font.color" title="pyvista.themes._Font.color"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pyvista.global_theme.font.color</span></code></a>.</p>
+<dt><strong>color</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>文字列、RGB配列、または16進数の色文字列のいずれかです。デフォルトは <a class="reference internal" href="pyvista.themes._Font.color.html#pyvista.themes._Font.color" title="pyvista.themes._Font.color"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pyvista.global_theme.font.color</span></code></a> です。</p>
 </dd>
 <dt><strong>use_planes</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>コールバックに渡される引数をボックスを構成する平面に変更します．</p>
 </dd>
@@ -1256,7 +1255,7 @@ Defaults to <a class="reference internal" href="pyvista.themes._Font.color.html#
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">vtk.vtkBoxWidget</span></code></dt><dd><p>Box widget.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">vtk.vtkBoxWidget</span></code></dt><dd><p>ボックスウィジェット</p>
 </dd>
 </dl>
 </dd>

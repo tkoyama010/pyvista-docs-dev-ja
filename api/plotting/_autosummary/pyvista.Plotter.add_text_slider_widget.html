@@ -1237,7 +1237,7 @@
 <dd class="field-odd"><dl>
 <dt><strong>callback</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#callable" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">callable()</span></code></a></span></dt><dd><p>スライダーが更新されるたびに呼び出されるメソッド．これには，単一のパラメータ: スライダーのfloat値を指定します．</p>
 </dd>
-<dt><strong>data</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a></span></dt><dd><p>The list of possible values displayed on the slider bar.</p>
+<dt><strong>data</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a></span></dt><dd><p>スライダバーに表示される使用可能な値のリスト。</p>
 </dd>
 <dt><strong>value</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>スライダの開始値．</p>
 </dd>
@@ -1245,8 +1245,7 @@
 </dd>
 <dt><strong>pointb</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a>(<a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>), <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>表示ポート上のスライダの右ポイントの相対座標。</p>
 </dd>
-<dt><strong>color</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Either a string, RGB list, or hex color string.  Defaults
-to <a class="reference internal" href="pyvista.themes._Font.color.html#pyvista.themes._Font.color" title="pyvista.themes._Font.color"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pyvista.global_theme.font.color</span></code></a>.</p>
+<dt><strong>color</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>文字列、RGBリスト、または16進数の色文字列のいずれかです。デフォルトは <a class="reference internal" href="pyvista.themes._Font.color.html#pyvista.themes._Font.color" title="pyvista.themes._Font.color"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pyvista.global_theme.font.color</span></code></a> です。</p>
 </dd>
 <dt><strong>event_type</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">'start'</span></code> ， <code class="docutils literal notranslate"><span class="pre">'end'</span></code> ，または <code class="docutils literal notranslate"><span class="pre">'always'</span></code> のいずれかで，スライダがコールバックとやり取りする頻度を定義します．</p>
 </dd>
@@ -1256,7 +1255,7 @@ to <a class="reference internal" href="pyvista.themes._Font.color.html#pyvista.t
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">vtk.vtkSliderWidget</span></code></dt><dd><p>The VTK slider widget configured to display text.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">vtk.vtkSliderWidget</span></code></dt><dd><p>テキストを表示するように設定されたVTKスライダウィジェット．</p>
 </dd>
 </dl>
 </dd>

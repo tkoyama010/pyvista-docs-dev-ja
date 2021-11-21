@@ -429,20 +429,19 @@
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>mesh</strong><span class="classifier"><a class="reference internal" href="../../core/_autosummary/pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a></span></dt><dd><p>Dataset to get the array from.</p>
+<dt><strong>mesh</strong><span class="classifier"><a class="reference internal" href="../../core/_autosummary/pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a></span></dt><dd><p>配列を取得するデータセット。</p>
 </dd>
 <dt><strong>name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>範囲を取得する配列の名前を指定します．</p>
 </dd>
 <dt><strong>preference</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>スカラーが指定されている場合，これはデータセット内で検索するために推奨される配列型です． <code class="docutils literal notranslate"><span class="pre">'point'</span></code> ， <code class="docutils literal notranslate"><span class="pre">'cell'</span></code> ，または <code class="docutils literal notranslate"><span class="pre">'field'</span></code> のいずれかである必要があります．</p>
 </dd>
-<dt><strong>err</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Whether to throw an error if array is not present.</p>
+<dt><strong>err</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>配列が存在しない場合にエラーを発生させるかどうか。</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.pyvista_ndarray</span></code> か <code class="docutils literal notranslate"><span class="pre">None</span></code></dt><dd><p>Requested array.  Return <code class="docutils literal notranslate"><span class="pre">None</span></code> if there is no array
-matching the <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">err=False</span></code>.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.pyvista_ndarray</span></code> か <code class="docutils literal notranslate"><span class="pre">None</span></code></dt><dd><p>要求された配列である。 <code class="docutils literal notranslate"><span class="pre">name</span></code> にマッチする配列がない場合は <code class="docutils literal notranslate"><span class="pre">None</span></code> を、 <code class="docutils literal notranslate"><span class="pre">err=False</span></code> を返します。</p>
 </dd>
 </dl>
 </dd>

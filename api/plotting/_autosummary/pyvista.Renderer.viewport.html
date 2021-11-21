@@ -685,24 +685,19 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.Renderer.viewport">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Renderer.</span></span><span class="sig-name descname"><span class="pre">viewport</span></span><a class="headerlink" href="#pyvista.Renderer.viewport" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Viewport of the renderer.</p>
-<p>Viewport describes the <code class="docutils literal notranslate"><span class="pre">(xstart,</span> <span class="pre">ystart,</span> <span class="pre">xend,</span> <span class="pre">yend)</span></code> square
-of the renderer relative to the main renderer window.</p>
-<p>For example, a renderer taking up the entire window will have
-a viewport of <code class="docutils literal notranslate"><span class="pre">(0.0,</span> <span class="pre">0.0,</span> <span class="pre">1.0,</span> <span class="pre">1.0)</span></code>, while the viewport of
-a renderer on the left-hand side of a horizontally split window
-would be <code class="docutils literal notranslate"><span class="pre">(0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.5,</span> <span class="pre">1.0)</span></code>.</p>
+<dd><p>レンダラのビューポート。</p>
+<p>ビューポートは、メインのレンダラーウィンドウに対するレンダラーの <code class="docutils literal notranslate"><span class="pre">(xstart,</span> <span class="pre">ystart,</span> <span class="pre">xend,</span> <span class="pre">yend)</span></code> の大きさを表します。</p>
+<p>例えば、ウィンドウ全体を占めるレンダラーのビューポートは <code class="docutils literal notranslate"><span class="pre">(0.0,</span> <span class="pre">0.0,</span> <span class="pre">1.0,</span> <span class="pre">1.0)</span></code> となり、水平方向に分割されたウィンドウの左側にあるレンダラーのビューポートは <code class="docutils literal notranslate"><span class="pre">(0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.5,</span> <span class="pre">1.0)</span></code> となります。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a></dt><dd><p>Viewport in the form <code class="docutils literal notranslate"><span class="pre">(xstart,</span> <span class="pre">ystart,</span> <span class="pre">xend,</span> <span class="pre">yend)</span></code>.</p>
+<dt><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a></dt><dd><p>ビューポートは <code class="docutils literal notranslate"><span class="pre">(xstart,</span> <span class="pre">ystart,</span> <span class="pre">xend,</span> <span class="pre">yend)</span></code> という形式で表示されます。</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>Show the viewport of a renderer taking up half the render
-window.</p>
+<p>レンダリングウィンドウの半分を占めるレンダラーのビューポートを表示します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span><span class="o">.</span><span class="n">renderers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">viewport</span>

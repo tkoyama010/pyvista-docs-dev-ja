@@ -1236,16 +1236,15 @@
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>mesh</strong><span class="classifier"><a class="reference internal" href="../../core/_autosummary/pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a></span></dt><dd><p>The input dataset to add to the scene and slice along the spline.</p>
+<dt><strong>mesh</strong><span class="classifier"><a class="reference internal" href="../../core/_autosummary/pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a></span></dt><dd><p>スプラインに沿ってシーンおよびスライスに追加する入力データセット。</p>
 </dd>
 <dt><strong>generate_triangles</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>これが有効な場合(デフォルトで <code class="docutils literal notranslate"><span class="pre">False</span></code> )，出力は三角形になります．それ以外の場合，出力は交差ポリゴンになります．</p>
 </dd>
 <dt><strong>n_handles</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>スプラインのパラメトリック機能を制御するインタラクティブな球の数です．</p>
 </dd>
-<dt><strong>resolution</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The number of points to generate on the spline.</p>
+<dt><strong>resolution</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>スプライン上に生成するポイントの数です。</p>
 </dd>
-<dt><strong>widget_color</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Color of the widget.  Either a string, RGB sequence, or
-hex color string.  For example:</p>
+<dt><strong>widget_color</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>ウィジェットの色。文字列、RGB配列、または16進数の色文字列のいずれかです。  例えば</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">color='white'</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">color='w'</span></code></p></li>
@@ -1255,25 +1254,21 @@ hex color string.  For example:</p>
 </dd>
 <dt><strong>show_ribbon</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，スライスに使用したポリゴンプレーンも表示されます．</p>
 </dd>
-<dt><strong>ribbon_color</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Color of the ribbon.  Either a string, RGB sequence, or
-hex color string.</p>
+<dt><strong>ribbon_color</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>リボンの色。 文字列、RGB配列、または16進数の色文字列のいずれかです。</p>
 </dd>
-<dt><strong>ribbon_opacity</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Opacity of ribbon. Defaults to 1.0 and must be between
-<code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1]</span></code>.</p>
+<dt><strong>ribbon_opacity</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>リボンの不透明度です。デフォルトは1.0で、<a href="#id1"><span class="problematic" id="id2">``</span></a>[0, 1]``の間でなければなりません。</p>
 </dd>
 <dt><strong>initial_points</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>ウィジェットの配置を初期化するポイント．要素の数は <code class="docutils literal notranslate"><span class="pre">n_handles</span></code> と同じでなければなりません．最初と最後の点が同じ場合，これは閉じたループスプラインになります．</p>
 </dd>
 <dt><strong>closed</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>スプラインを閉じたループにします．</p>
 </dd>
-<dt><strong>**kwargs</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>All additional keyword arguments are passed to
-<code class="xref py py-func docutils literal notranslate"><span class="pre">BasePlotter.add_mesh()</span></code> to control how the mesh is
-displayed.</p>
+<dt><strong>**kwargs</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>すべての追加キーワード引数は <code class="xref py py-func docutils literal notranslate"><span class="pre">BasePlotter.add_mesh()</span></code> に渡され、メッシュの表示方法を制御します。</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">vtk.vtkActor</span></code></dt><dd><p>VTK actor of the mesh.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">vtk.vtkActor</span></code></dt><dd><p>メッシュのVTKアクター．</p>
 </dd>
 </dl>
 </dd>
