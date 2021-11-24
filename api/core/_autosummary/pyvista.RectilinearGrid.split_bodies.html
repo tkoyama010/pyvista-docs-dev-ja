@@ -50,7 +50,7 @@
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="検索" href="../../../search.html" />
-    <link rel="next" title="流線" href="pyvista.RectilinearGrid.streamlines.html" />
+    <link rel="next" title="streamlines" href="pyvista.RectilinearGrid.streamlines.html" />
     <link rel="prev" title="slice_orthogonal" href="pyvista.RectilinearGrid.slice_orthogonal.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="ja">
@@ -211,12 +211,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../dataset.html">
-     Data Sets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../pointsets.html">
-     Point Sets
+     ポイントセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
@@ -716,7 +716,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.RectilinearGrid.streamlines.html">
-         流線
+         streamlines
         </a>
        </li>
        <li class="toctree-l4">
@@ -961,7 +961,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.RectilinearGrid.volume.html">
-         体積
+         volume
         </a>
        </li>
        <li class="toctree-l4">
@@ -1078,8 +1078,7 @@
 <dt class="sig sig-object py" id="pyvista.RectilinearGrid.split_bodies">
 <span class="sig-prename descclassname"><span class="pre">RectilinearGrid.</span></span><span class="sig-name descname"><span class="pre">split_bodies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.RectilinearGrid.split_bodies" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>接続されたボディ/ボリュームを検索，ラベル付け，および分割します．</p>
-<p>This splits different connected bodies into blocks in a
-<a class="reference internal" href="pyvista.MultiBlock.html#pyvista.MultiBlock" title="pyvista.MultiBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.MultiBlock</span></code></a> dataset.</p>
+<p>これにより， <a class="reference internal" href="pyvista.MultiBlock.html#pyvista.MultiBlock" title="pyvista.MultiBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.MultiBlock</span></code></a> データセット内のさまざまな接続ボディがブロックに分割されます．</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
@@ -1091,7 +1090,7 @@
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="pyvista.MultiBlock.html#pyvista.MultiBlock" title="pyvista.MultiBlock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.MultiBlock</span></code></a></dt><dd><p>MultiBlock with a split bodies.</p>
+<dt><a class="reference internal" href="pyvista.MultiBlock.html#pyvista.MultiBlock" title="pyvista.MultiBlock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.MultiBlock</span></code></a></dt><dd><p>体を分割したMultiBlock。</p>
 </dd>
 </dl>
 </dd>

@@ -211,12 +211,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../dataset.html">
-     Data Sets
+     データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../pointsets.html">
-     Point Sets
+     ポイントセット
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -461,7 +461,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.decimate.html">
-         間引く
+         decimate
         </a>
        </li>
        <li class="toctree-l4">
@@ -596,7 +596,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.geodesic.html">
-         測地
+         geodesic
         </a>
        </li>
        <li class="toctree-l4">
@@ -871,7 +871,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.streamlines.html">
-         流線
+         streamlines
         </a>
        </li>
        <li class="toctree-l4">
@@ -891,7 +891,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.subdivide.html">
-         細分化
+         subdivide
         </a>
        </li>
        <li class="toctree-l4">
@@ -1196,7 +1196,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.volume.html">
-         体積
+         volume
         </a>
        </li>
       </ul>
@@ -1317,13 +1317,9 @@
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/library/constants.html#None" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a></span></dt><dd><p>Name of the scalars array to assign as active.  If
-<code class="docutils literal notranslate"><span class="pre">None</span></code>, deactivates active scalars for both point and
-cell data.</p>
+<dt><strong>name</strong><span class="classifier">python:str または python:None</span></dt><dd><p>アクティブにするスカラー配列の名前です。 <code class="docutils literal notranslate"><span class="pre">None</span></code> であれば、ポイントデータとセルデータの両方で、アクティブなスカラーを無効にします。</p>
 </dd>
-<dt><strong>preference</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>If there are two arrays of the same name associated with
-points or cells, it will prioritize an array matching this
-type.  Can be either <code class="docutils literal notranslate"><span class="pre">'cell'</span></code> or <code class="docutils literal notranslate"><span class="pre">'point'</span></code>.</p>
+<dt><strong>preference</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>同じ名前の配列がポイントやセルに関連付けられている場合，このタイプに一致する配列が優先されます． これには <code class="docutils literal notranslate"><span class="pre">'cell'</span></code> または <code class="docutils literal notranslate"><span class="pre">'point'</span></code> を指定します。</p>
 </dd>
 </dl>
 </dd>

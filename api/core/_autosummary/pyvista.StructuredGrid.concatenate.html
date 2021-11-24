@@ -211,12 +211,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../dataset.html">
-     Data Sets
+     データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../pointsets.html">
-     Point Sets
+     ポイントセット
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -751,7 +751,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.StructuredGrid.streamlines.html">
-         流線
+         streamlines
         </a>
        </li>
        <li class="toctree-l4">
@@ -996,7 +996,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.StructuredGrid.volume.html">
-         体積
+         volume
         </a>
        </li>
        <li class="toctree-l4">
@@ -1117,31 +1117,28 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.StructuredGrid.concatenate">
 <span class="sig-prename descclassname"><span class="pre">StructuredGrid.</span></span><span class="sig-name descname"><span class="pre">concatenate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.StructuredGrid.concatenate" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Concatenate a structured grid to this grid.</p>
-<p>Joins structured grids into a single structured grid.  Grids
-must be of compatible dimension, and must be coincident along
-the seam. Grids must have the same point and cell data.  Field
-data is ignored.</p>
+<dd><p>構造化格子をこのグリッドに連結します。</p>
+<p>構造化されたグリッドを1つの構造化されたグリッドに結合します。 グリッドは互換性のある寸法でなければならず、シームに沿って一致していなければなりません。グリッドは同じポイントとセルデータを持っている必要があります。 フィールドデータは無視されます。</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>other</strong><span class="classifier"><a class="reference internal" href="pyvista.StructuredGrid.html#pyvista.StructuredGrid" title="pyvista.StructuredGrid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.StructuredGrid</span></code></a></span></dt><dd><p>Structured grid to concatenate.</p>
+<dt><strong>other</strong><span class="classifier"><a class="reference internal" href="pyvista.StructuredGrid.html#pyvista.StructuredGrid" title="pyvista.StructuredGrid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.StructuredGrid</span></code></a></span></dt><dd><p>構造化されたグリッドを連結します。</p>
 </dd>
-<dt><strong>axis</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Axis along which to concatenate.</p>
+<dt><strong>axis</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>連結する軸。</p>
 </dd>
-<dt><strong>tolerance</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Tolerance for point coincidence along joining seam.</p>
+<dt><strong>tolerance</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>接合部に沿った点の偶然性の許容範囲。</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="pyvista.StructuredGrid.html#pyvista.StructuredGrid" title="pyvista.StructuredGrid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.StructuredGrid</span></code></a></dt><dd><p>Concatenated grid.</p>
+<dt><a class="reference internal" href="pyvista.StructuredGrid.html#pyvista.StructuredGrid" title="pyvista.StructuredGrid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.StructuredGrid</span></code></a></dt><dd><p>連結されたグリッド。</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>Split a grid in half and join them.</p>
+<p>グリッドを半分に分割して結合します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>

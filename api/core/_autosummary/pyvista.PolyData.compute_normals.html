@@ -211,12 +211,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../dataset.html">
-     Data Sets
+     データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../pointsets.html">
-     Point Sets
+     ポイントセット
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -461,7 +461,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.decimate.html">
-         間引く
+         decimate
         </a>
        </li>
        <li class="toctree-l4">
@@ -596,7 +596,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.geodesic.html">
-         測地
+         geodesic
         </a>
        </li>
        <li class="toctree-l4">
@@ -871,7 +871,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.streamlines.html">
-         流線
+         streamlines
         </a>
        </li>
        <li class="toctree-l4">
@@ -891,7 +891,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.subdivide.html">
-         細分化
+         subdivide
         </a>
        </li>
        <li class="toctree-l4">
@@ -1196,7 +1196,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.volume.html">
-         体積
+         volume
         </a>
        </li>
       </ul>
@@ -1342,19 +1342,16 @@
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p>Updated mesh with cell and point normals.</p>
+<dt><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p>セルとポイントの法線で更新されたメッシュ。</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">備考</p>
-<p>Previous arrays named <code class="docutils literal notranslate"><span class="pre">&quot;Normals&quot;</span></code> will be overwritten.</p>
+<p><code class="docutils literal notranslate"><span class="pre">&quot;Normals&quot;</span></code> という名前の以前の配列は上書きされます．</p>
 <p>法線はポリゴンと三角形ストリップに対してのみ計算されます．線分または頂点の法線は計算されません．</p>
 <p>三角形ストリップは三角形ポリゴンに分割されます．三角形を再分割することもできます．</p>
-<p>It may be easier to run
-<a class="reference internal" href="pyvista.PolyData.point_normals.html#pyvista.PolyData.point_normals" title="pyvista.PolyData.point_normals"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyData.point_normals()</span></code></a> or
-<a class="reference internal" href="pyvista.PolyData.cell_normals.html#pyvista.PolyData.cell_normals" title="pyvista.PolyData.cell_normals"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyData.cell_normals()</span></code></a> if you would just
-like the array of point or cell normals.</p>
+<p>ポイントやセルの法線の配列を取得したい場合は、 <a class="reference internal" href="pyvista.PolyData.point_normals.html#pyvista.PolyData.point_normals" title="pyvista.PolyData.point_normals"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyData.point_normals()</span></code></a> や <a class="reference internal" href="pyvista.PolyData.cell_normals.html#pyvista.PolyData.cell_normals" title="pyvista.PolyData.cell_normals"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyData.cell_normals()</span></code></a> を実行した方が簡単かもしれません。</p>
 <p class="rubric">例</p>
 <p>球のサーフェスの点法線を計算します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>

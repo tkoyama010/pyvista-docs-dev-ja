@@ -211,12 +211,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../dataset.html">
-     Data Sets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../pointsets.html">
-     Point Sets
+     ポイントセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
@@ -736,7 +736,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.UniformGrid.streamlines.html">
-         流線
+         streamlines
         </a>
        </li>
        <li class="toctree-l4">
@@ -986,7 +986,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.UniformGrid.volume.html">
-         体積
+         volume
         </a>
        </li>
        <li class="toctree-l4">
@@ -1102,33 +1102,19 @@
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>scalars</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>String name of the scalars array to use when computing the
-derivative quantities.  Defaults to the active scalars in
-the dataset.</p>
+<dt><strong>scalars</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>派生量を計算するときに使用するスカラー配列の文字列名．デフォルトでは，データセット内のアクティブなスカラーが使用されます．</p>
 </dd>
-<dt><strong>gradient</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Calculate gradient. If a string is passed, the string will be used
-for the resulting array name. Otherwise, array name will be
-<code class="docutils literal notranslate"><span class="pre">'gradient'</span></code>. Default <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<dt><strong>gradient</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>勾配を計算します．文字列を渡すと，その文字列が配列名として使用されます．それ以外の場合，配列名は <code class="docutils literal notranslate"><span class="pre">'gradient'</span></code> になります．デフォルトは <code class="docutils literal notranslate"><span class="pre">True</span></code></p>
 </dd>
-<dt><strong>divergence</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Calculate divergence. If a string is passed, the string will be
-used for the resulting array name. Otherwise, array name will be
-<code class="docutils literal notranslate"><span class="pre">'divergence'</span></code>. Default <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<dt><strong>divergence</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>発散を計算する．文字列を渡すと，その文字列が配列名として使用されます．それ以外の場合，配列名は <code class="docutils literal notranslate"><span class="pre">'divergence'</span></code> になります．デフォルト <code class="docutils literal notranslate"><span class="pre">None</span></code> 。</p>
 </dd>
-<dt><strong>vorticity</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Calculate vorticity. If a string is passed, the string will be used
-for the resulting array name. Otherwise, array name will be
-<code class="docutils literal notranslate"><span class="pre">'vorticity'</span></code>. Default <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<dt><strong>vorticity</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>速度を計算します．文字列を渡すと，その文字列が配列名として使用されます．それ以外の場合，配列名は <code class="docutils literal notranslate"><span class="pre">'vorticity'</span></code> になります．デフォルトは  <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
 </dd>
-<dt><strong>qcriterion</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Calculate qcriterion. If a string is passed, the string will be
-used for the resulting array name. Otherwise, array name will be
-<code class="docutils literal notranslate"><span class="pre">'qcriterion'</span></code>. Default <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<dt><strong>qcriterion</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Q-criterionを計算する．文字列を渡すと，その文字列が配列名として使用されます．それ以外の場合，配列名は <code class="docutils literal notranslate"><span class="pre">'qcriterion'</span></code> になります．デフォルトは <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
 </dd>
-<dt><strong>faster</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Use faster algorithm for computing derivative quantities. Result is
-less accurate and performs fewer derivative calculations,
-increasing computation speed. The error will feature smoothing of
-the output and possibly errors at boundaries. Option has no effect
-if DataSet is not UnstructuredGrid. Default <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<dt><strong>faster</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>微分量の計算に高速アルゴリズムを使用します．結果の精度が低くなり，導関数の計算が少なくなるため，計算速度が向上します．エラーは出力のスムージングを特徴とし，場合によっては境界でエラーが発生します．DataSetがUnstructuredGridでない場合，オプションは無効です．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
-<dt><strong>preference</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Data type preference. Either <code class="docutils literal notranslate"><span class="pre">'point'</span></code> or <code class="docutils literal notranslate"><span class="pre">'cell'</span></code>.</p>
+<dt><strong>preference</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>データ型の環境設定． <code class="docutils literal notranslate"><span class="pre">'point'</span></code> か <code class="docutils literal notranslate"><span class="pre">'cell'</span></code> のどちらかです．</p>
 </dd>
 <dt><strong>progress_bar</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>進行状況を示す進行状況バーを表示します．</p>
 </dd>
@@ -1136,15 +1122,13 @@ if DataSet is not UnstructuredGrid. Default <code class="docutils literal notran
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a></dt><dd><p>Dataset with calculated derivative.</p>
+<dt><a class="reference internal" href="pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a></dt><dd><p>導関数を計算したデータセット</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>First, plot the random hills dataset with the active elevation
-scalars.  These scalars will be used for the derivative
-calculations.</p>
+<p>まず、ランダムな丘のデータセットをアクティブな標高スカラーでプロットします。 これらのスカラーは、微分の計算に使用されます。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">hills</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_random_hills</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">hills</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">smooth_shading</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -1153,7 +1137,7 @@ calculations.</p>
 <figure class="align-default">
 <img alt="../../../_images/pyvista-UniformGrid-compute_derivative-1_00_00.png" src="../../../_images/pyvista-UniformGrid-compute_derivative-1_00_00.png" />
 </figure>
-<p>Compute and plot the gradient of the active scalars.</p>
+<p>アクティブなスカラーの勾配を計算し、プロットします。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">hills</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_random_hills</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">deriv</span> <span class="o">=</span> <span class="n">hills</span><span class="o">.</span><span class="n">compute_derivative</span><span class="p">()</span>

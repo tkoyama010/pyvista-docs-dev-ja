@@ -211,12 +211,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../dataset.html">
-     Data Sets
+     データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../pointsets.html">
-     Point Sets
+     ポイントセット
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -461,7 +461,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.decimate.html">
-         間引く
+         decimate
         </a>
        </li>
        <li class="toctree-l4">
@@ -596,7 +596,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.geodesic.html">
-         測地
+         geodesic
         </a>
        </li>
        <li class="toctree-l4">
@@ -871,7 +871,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.streamlines.html">
-         流線
+         streamlines
         </a>
        </li>
        <li class="toctree-l4">
@@ -891,7 +891,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.subdivide.html">
-         細分化
+         subdivide
         </a>
        </li>
        <li class="toctree-l4">
@@ -1196,7 +1196,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.volume.html">
-         体積
+         volume
         </a>
        </li>
       </ul>
@@ -1317,27 +1317,27 @@
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>center</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">np.ndarray</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">[x,</span> <span class="pre">y,</span> <span class="pre">z]</span></code> 内の位置．</p>
+<dt><strong>center</strong><span class="classifier">np.ndarray または python:list</span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">[x,</span> <span class="pre">y,</span> <span class="pre">z]</span></code> 内の位置．</p>
 </dd>
 <dt><strong>resolution</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>円弧を分割する断片の数．デフォルトは入力メッシュ内のセル数です．正の整数でなければなりません．</p>
 </dd>
-<dt><strong>normal</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">np.ndarray</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>円弧の平面に対する法線ベクトルです．既定では，正のZ方向を指します．</p>
+<dt><strong>normal</strong><span class="classifier">np.ndarray または python:list, optional</span></dt><dd><p>円弧の平面に対する法線ベクトルです．既定では，正のZ方向を指します．</p>
 </dd>
-<dt><strong>polar</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">np.ndarray</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>極座標での円弧の始点．既定では，正のx方向の単位ベクトルです．</p>
+<dt><strong>polar</strong><span class="classifier">np.ndarray または python:list, optional</span></dt><dd><p>極座標での円弧の始点．既定では，正のx方向の単位ベクトルです．</p>
 </dd>
 <dt><strong>angle</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>極ベクトルを始点とする円弧の長さ(度単位)．方向は反時計回りです．デフォルトは360です．</p>
 </dd>
 <dt><strong>scalars</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>調査する入力データセット内の変数の文字列名．既定では，アクティブスカラーが使用されます．</p>
 </dd>
-<dt><strong>title</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The string title of the <cite>matplotlib</cite> figure.</p>
+<dt><strong>title</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><cite>matplotlib</cite> 図の文字列タイトル。</p>
 </dd>
-<dt><strong>ylabel</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The string label of the Y-axis. Defaults to variable name.</p>
+<dt><strong>ylabel</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Y軸の文字列ラベル．デフォルトは変数名。</p>
 </dd>
 <dt><strong>figsize</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a>(<a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>), <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>新しい図のサイズ</p>
 </dd>
 <dt><strong>figure</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>新しい図形を作成するかどうかのフラグ</p>
 </dd>
-<dt><strong>show</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Shows the matplotlib figure.</p>
+<dt><strong>show</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>matplotlibの図を表示します。</p>
 </dd>
 <dt><strong>tolerance</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>ソース内のポイントが入力のセル内にあるかどうかを計算するために使用される許容値です．指定しない場合，公差は自動的に生成されます．</p>
 </dd>

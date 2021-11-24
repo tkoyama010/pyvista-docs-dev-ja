@@ -211,12 +211,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../dataset.html">
-     Data Sets
+     データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../pointsets.html">
-     Point Sets
+     ポイントセット
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -461,7 +461,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.decimate.html">
-         間引く
+         decimate
         </a>
        </li>
        <li class="toctree-l4">
@@ -596,7 +596,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.geodesic.html">
-         測地
+         geodesic
         </a>
        </li>
        <li class="toctree-l4">
@@ -871,7 +871,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.streamlines.html">
-         流線
+         streamlines
         </a>
        </li>
        <li class="toctree-l4">
@@ -891,7 +891,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.subdivide.html">
-         細分化
+         subdivide
         </a>
        </li>
        <li class="toctree-l4">
@@ -1196,7 +1196,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.volume.html">
-         体積
+         volume
         </a>
        </li>
       </ul>
@@ -1312,37 +1312,29 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.PolyData.is_all_triangles">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">PolyData.</span></span><span class="sig-name descname"><span class="pre">is_all_triangles</span></span><a class="headerlink" href="#pyvista.PolyData.is_all_triangles" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return if all the faces of the <a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> are triangles.</p>
+<dd><p><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> の全ての面が三角形であるかどうかを返します。</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">バージョン 0.32.0 で変更: </span><code class="docutils literal notranslate"><span class="pre">is_all_triangles</span></code> is now a property.  Calling this value
-will warn the user that this should not be called.
-Additionally, the <code class="docutils literal notranslate"><span class="pre">is</span></code> operator will not work the return
-value of this property since it is not a <code class="docutils literal notranslate"><span class="pre">bool</span></code>           </p>
+<p><span class="versionmodified changed">バージョン 0.32.0 で変更: </span><code class="docutils literal notranslate"><span class="pre">is_all_triangles</span></code> がプロパティになりました。 この値を呼び出すと、呼び出してはいけないことをユーザーに警告します。さらに、このプロパティは <code class="docutils literal notranslate"><span class="pre">bool</span></code> ではないので、 <code class="docutils literal notranslate"><span class="pre">is</span></code> 演算子はこのプロパティの戻り値を扱うことはできません。</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">CallableBool</span></code></dt><dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if all the faces of the <a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a>
-are triangles and does not contain any vertices or lines.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">CallableBool</span></code></dt><dd><p><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> のすべての面が三角形であり、頂点や線が含まれていない場合、 <code class="docutils literal notranslate"><span class="pre">True</span></code> となります。</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">備考</p>
-<p>The return value is not a <code class="docutils literal notranslate"><span class="pre">bool</span></code> for compatibility
-reasons, though this behavior will change in a future
-release.  Future versions will simply return a <code class="docutils literal notranslate"><span class="pre">bool</span></code>.</p>
+<p>この戻り値は、互換性の理由から <code class="docutils literal notranslate"><span class="pre">bool</span></code> ではありませんが、この動作は将来のリリースで変更される予定です。 将来のバージョンでは、単に <code class="docutils literal notranslate"><span class="pre">bool</span></code> を返すようになります。</p>
 <p class="rubric">例</p>
-<p>Show a mesh from <a class="reference internal" href="../../utilities/_autosummary/pyvista.Plane.html#pyvista.Plane" title="pyvista.Plane"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Plane()</span></code></a> is not composed of all
-triangles.</p>
+<p><a class="reference internal" href="../../utilities/_autosummary/pyvista.Plane.html#pyvista.Plane" title="pyvista.Plane"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Plane()</span></code></a> のメッシュがすべての三角形で構成されていないことを示します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plane</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plane</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plane</span><span class="o">.</span><span class="n">is_all_triangles</span>
 <span class="go">False &lt;CallableBool&gt;</span>
 </pre></div>
 </div>
-<p>Show that the mesh from <a class="reference internal" href="../../utilities/_autosummary/pyvista.Sphere.html#pyvista.Sphere" title="pyvista.Sphere"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Sphere()</span></code></a> contains only
-triangles.</p>
+<p><a class="reference internal" href="../../utilities/_autosummary/pyvista.Sphere.html#pyvista.Sphere" title="pyvista.Sphere"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Sphere()</span></code></a> のメッシュには三角形しか含まれていないことを示します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span><span class="o">.</span><span class="n">is_all_triangles</span>
 <span class="go">True &lt;CallableBool&gt;</span>

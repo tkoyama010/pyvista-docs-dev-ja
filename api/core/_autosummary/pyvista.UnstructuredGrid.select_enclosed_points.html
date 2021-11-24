@@ -211,12 +211,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../dataset.html">
-     Data Sets
+     データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../pointsets.html">
-     Point Sets
+     ポイントセット
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -741,7 +741,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.UnstructuredGrid.streamlines.html">
-         流線
+         streamlines
         </a>
        </li>
        <li class="toctree-l4">
@@ -1001,7 +1001,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.UnstructuredGrid.volume.html">
-         体積
+         volume
         </a>
        </li>
       </ul>
@@ -1113,18 +1113,11 @@
 <dt class="sig sig-object py" id="pyvista.UnstructuredGrid.select_enclosed_points">
 <span class="sig-prename descclassname"><span class="pre">UnstructuredGrid.</span></span><span class="sig-name descname"><span class="pre">select_enclosed_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">surface</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inside_out</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_surface</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UnstructuredGrid.select_enclosed_points" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ポイントが閉じた表面の内側にあるかどうかをマークします．</p>
-<p>This evaluates all the input points to determine whether they are in an
-enclosed surface. The filter produces a (0,1) mask
-(in the form of a vtkDataArray) that indicates whether points are
-outside (mask value=0) or inside (mask value=1) a provided surface.
-(The name of the output vtkDataArray is <code class="docutils literal notranslate"><span class="pre">&quot;SelectedPoints&quot;</span></code>.)</p>
+<p>これにより，すべての入力ポイントが評価され，囲まれたサーフェス内にあるかどうかが判断されます．フィルタは，ポイントが指定されたサーフェスの外側(マスク値=0)か内側(マスク値=1)かを示す (0, 1) マスク(vtkDataArrayの形式で)を生成します．(出力vtkDataArrayの名前は <code class="docutils literal notranslate"><span class="pre">&quot;SelectedPoints&quot;</span></code> です．)</p>
 <p>このフィルタはデータ配列を生成して出力しますが，入力データセットは変更しません．セルまたは点を抽出する場合は，さまざまな閾値フィルタを使用できます(すなわち，出力配列の閾値)．</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>The filter assumes that the surface is closed and
-manifold. A boolean flag can be set to force the filter to
-first check whether this is true. If <code class="docutils literal notranslate"><span class="pre">False</span></code> and not manifold,
-an error will be raised.</p>
+<p>フィルタは，サーフェスが閉じていて多様体であることを前提としています．ブーリアンフラグを設定して，フィルタに最初にこれがtrueであるかどうかを強制的にチェックさせることができます．<code class="docutils literal notranslate"><span class="pre">False</span></code> で多様体でない場合は、エラーが発生します。</p>
 </div>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
@@ -1143,15 +1136,13 @@ an error will be raised.</p>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p>Mesh containing the <code class="docutils literal notranslate"><span class="pre">point_data['SelectedPoints']</span></code> array.</p>
+<dt><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">point_data['SelectedPoints']</span></code> という配列を含むメッシュ。</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>Determine which points on a plane are inside a manifold sphere
-surface mesh.  Extract these points using the
-<a class="reference internal" href="pyvista.DataSetFilters.extract_points.html#pyvista.DataSetFilters.extract_points" title="pyvista.DataSetFilters.extract_points"><code class="xref py py-func docutils literal notranslate"><span class="pre">DataSetFilters.extract_points()</span></code></a> filter and then plot them.</p>
+<p>平面上のどの点が多様体球表面メッシュの内部にあるかを決定します。 <a class="reference internal" href="pyvista.DataSetFilters.extract_points.html#pyvista.DataSetFilters.extract_points" title="pyvista.DataSetFilters.extract_points"><code class="xref py py-func docutils literal notranslate"><span class="pre">DataSetFilters.extract_points()</span></code></a> フィルタを使ってこれらの点を抽出し，それをプロットします．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plane</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plane</span><span class="p">()</span>

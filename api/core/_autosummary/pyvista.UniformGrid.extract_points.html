@@ -211,12 +211,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../dataset.html">
-     Data Sets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../pointsets.html">
-     Point Sets
+     ポイントセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
@@ -736,7 +736,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.UniformGrid.streamlines.html">
-         流線
+         streamlines
         </a>
        </li>
        <li class="toctree-l4">
@@ -986,7 +986,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.UniformGrid.volume.html">
-         体積
+         volume
         </a>
        </li>
        <li class="toctree-l4">
@@ -1101,15 +1101,11 @@
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>ind</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">np.ndarray</span></code></a>, <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">or</span></code> <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a></span></dt><dd><p>抽出されるポイントインデックスの配列．</p>
+<dt><strong>ind</strong><span class="classifier">np.ndarray, python:list, か python:sequence</span></dt><dd><p>抽出されるポイントインデックスの配列．</p>
 </dd>
-<dt><strong>adjacent_cells</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, extract the cells that contain at least one of
-the extracted points. If <code class="docutils literal notranslate"><span class="pre">False</span></code>, extract the cells that
-contain exclusively points from the extracted points list.
-The default is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<dt><strong>adjacent_cells</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，抽出された点の少なくとも1つを含むセルを抽出します． <code class="docutils literal notranslate"><span class="pre">False</span></code> の場合は，抽出された点のリストから点のみを含むセルを抽出します．デフォルトは <code class="docutils literal notranslate"><span class="pre">True</span></code> です．</p>
 </dd>
-<dt><strong>include_cells</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Specifies if the cells shall be returned or not. The default
-is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<dt><strong>include_cells</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>セルを返すかどうかを指定します．デフォルトは <code class="docutils literal notranslate"><span class="pre">True</span></code> です．</p>
 </dd>
 <dt><strong>progress_bar</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>進行状況を示す進行状況バーを表示します．</p>
 </dd>
@@ -1123,7 +1119,7 @@ is <code class="docutils literal notranslate"><span class="pre">True</span></cod
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>Extract all the points of a sphere with a Z coordinate greater than 0</p>
+<p>Z座標が0より大きい球体のすべての点を抽出します</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">extracted</span> <span class="o">=</span> <span class="n">sphere</span><span class="o">.</span><span class="n">extract_points</span><span class="p">(</span><span class="n">sphere</span><span class="o">.</span><span class="n">points</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>

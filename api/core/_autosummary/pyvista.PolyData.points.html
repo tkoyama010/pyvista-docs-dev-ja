@@ -211,12 +211,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../dataset.html">
-     Data Sets
+     データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../pointsets.html">
-     Point Sets
+     ポイントセット
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -461,7 +461,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.decimate.html">
-         間引く
+         decimate
         </a>
        </li>
        <li class="toctree-l4">
@@ -596,7 +596,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.geodesic.html">
-         測地
+         geodesic
         </a>
        </li>
        <li class="toctree-l4">
@@ -871,7 +871,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.streamlines.html">
-         流線
+         streamlines
         </a>
        </li>
        <li class="toctree-l4">
@@ -891,7 +891,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.subdivide.html">
-         細分化
+         subdivide
         </a>
        </li>
        <li class="toctree-l4">
@@ -1196,7 +1196,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.volume.html">
-         体積
+         volume
         </a>
        </li>
       </ul>
@@ -1314,8 +1314,7 @@
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">PolyData.</span></span><span class="sig-name descname"><span class="pre">points</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">pyvista.core.pyvista_ndarray.pyvista_ndarray</span></em><a class="headerlink" href="#pyvista.PolyData.points" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ポイントへの参照をnumpyオブジェクトとして取得します．</p>
 <p class="rubric">例</p>
-<p>Create a mesh and return the points of the mesh as a numpy
-array.</p>
+<p>メッシュを作成し、numpy配列としてメッシュのポイントを返します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cube</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Cube</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">points</span> <span class="o">=</span> <span class="n">cube</span><span class="o">.</span><span class="n">points</span>
@@ -1330,8 +1329,7 @@ array.</p>
 <span class="go">                 [ 0.5, -0.5,  0.5]], dtype=float32)</span>
 </pre></div>
 </div>
-<p>Shift these points in the z direction and show that their
-position is reflected in the mesh points.</p>
+<p>これらの点をz方向に移動させ、その位置がメッシュの点に反映されていることを示します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">points</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cube</span><span class="o">.</span><span class="n">points</span>
 <span class="go">pyvista_ndarray([[-0.5, -0.5,  0.5],</span>
@@ -1344,7 +1342,7 @@ position is reflected in the mesh points.</p>
 <span class="go">                 [ 0.5, -0.5,  1.5]], dtype=float32)</span>
 </pre></div>
 </div>
-<p>You can also update the points in-place:</p>
+<p>また、ポイントをその場で更新することもできます。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cube</span><span class="o">.</span><span class="n">points</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">points</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cube</span><span class="o">.</span><span class="n">points</span>
 <span class="go">pyvista_ndarray([[-1., -1.,  1.],</span>

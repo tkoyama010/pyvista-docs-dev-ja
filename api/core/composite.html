@@ -211,12 +211,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="dataset.html">
-     Data Sets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="pointsets.html">
-     Point Sets
+     ポイントセット
     </a>
    </li>
    <li class="toctree-l2">
@@ -332,42 +332,37 @@
                 
   <section id="composite-datasets">
 <h1>複合データセット<a class="headerlink" href="#composite-datasets" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>The <a class="reference internal" href="_autosummary/pyvista.MultiBlock.html#pyvista.MultiBlock" title="pyvista.MultiBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.MultiBlock</span></code></a> class is a composite class to hold many
-data sets which can be iterated over.</p>
-<p>You can think of MultiBlock like lists or dictionaries as we can
-iterate over this data structure by index and we can also access
-blocks by their string name.</p>
-<p>Create empty composite dataset</p>
+<p><a class="reference internal" href="_autosummary/pyvista.MultiBlock.html#pyvista.MultiBlock" title="pyvista.MultiBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.MultiBlock</span></code></a> クラスは反復可能な多数のデータセットを保持する複合クラスです．</p>
+<p>MultiBlockはリストや辞書のようなもので，インデックスによってこのデータ構造を繰り返し処理することができ，文字列名によってブロックにアクセスすることもできます．</p>
+<p>空の複合データセットを作成します</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">blocks</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">MultiBlock</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Add a dataset to the collection</p>
+<p>コレクションにデータセットを追加します</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">blocks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">())</span>
 </pre></div>
 </div>
-<p>Or add a named block</p>
+<p>または、名前付きのブロックを追加します</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">blocks</span><span class="p">[</span><span class="s2">&quot;cube&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Cube</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>Plotting the MultiBlock plots all the meshes contained by it.</p>
+<p>MultiBlockをプロットすると、それに含まれるすべてのメッシュがプロットされます。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">blocks</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">smooth_shading</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 <figure class="align-default">
 <img alt="../../_images/composite-1_00_00.png" src="../../_images/composite-1_00_00.png" />
 </figure>
-<p>Examples using this class:</p>
+<p>このクラスの使用例</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../../examples/01-filter/slicing.html#slice-example"><span class="std std-ref">スライシング</span></a></p></li>
 <li><p><a class="reference internal" href="../../examples/01-filter/compute-volume.html#volumetric-example"><span class="std std-ref">ボリューム分析</span></a></p></li>
-<li><p><a class="reference internal" href="../../examples/02-plot/depth-peeling.html#depth-peeling-example"><span class="std std-ref">深度ピーリング</span></a></p></li>
+<li><p><a class="reference internal" href="../../examples/02-plot/depth-peeling.html#depth-peeling-example"><span class="std std-ref">Depth Peeling</span></a></p></li>
 </ul>
 <section id="multiblock-api-reference">
 <h2>MultiBlock APIリファレンス<a class="headerlink" href="#multiblock-api-reference" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>The <a class="reference internal" href="_autosummary/pyvista.MultiBlock.html#pyvista.MultiBlock" title="pyvista.MultiBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.MultiBlock</span></code></a> class holds attributes that
-are <em>common</em> to all spatially referenced datasets in PyVista.  This
-base class is analogous to VTK's <a class="reference external" href="https://vtk.org/doc/nightly/html/classvtkMultiBlockDataSet.html">vtk.vtkMultiBlockDataSet</a> class.</p>
+<p><a class="reference internal" href="_autosummary/pyvista.MultiBlock.html#pyvista.MultiBlock" title="pyvista.MultiBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.MultiBlock</span></code></a> クラスは，PyVistaで空間的に参照される全てのデータセットに <em>共通な</em> アトリビュートを保持します．この基本クラスはVTKの <a class="reference external" href="https://vtk.org/doc/nightly/html/classvtkMultiBlockDataSet.html">vtk.vtkMultiBlockDataSet</a> クラスに似ています．</p>
 <table class="longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />

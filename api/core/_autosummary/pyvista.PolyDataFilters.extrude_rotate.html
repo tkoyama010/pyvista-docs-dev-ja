@@ -211,12 +211,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../dataset.html">
-     Data Sets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../pointsets.html">
-     Point Sets
+     ポイントセット
     </a>
    </li>
    <li class="toctree-l2">
@@ -376,7 +376,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyDataFilters.decimate.html">
-         間引く
+         decimate
         </a>
        </li>
        <li class="toctree-l4">
@@ -466,7 +466,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyDataFilters.geodesic.html">
-         測地
+         geodesic
         </a>
        </li>
        <li class="toctree-l4">
@@ -646,7 +646,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyDataFilters.streamlines.html">
-         流線
+         streamlines
         </a>
        </li>
        <li class="toctree-l4">
@@ -666,7 +666,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyDataFilters.subdivide.html">
-         細分化
+         subdivide
         </a>
        </li>
        <li class="toctree-l4">
@@ -824,18 +824,9 @@
 <span class="sig-prename descclassname"><span class="pre">PolyDataFilters.</span></span><span class="sig-name descname"><span class="pre">extrude_rotate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inplace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">translation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dradius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">360.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">capping</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyDataFilters.extrude_rotate" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>フリーエッジとフリーラインから &quot;skirt&quot; を作成し，頂点からラインを作成して，ポリゴンデータをスイープします．</p>
 <p>ポリゴンデータを入力として取り，出力時にポリゴンデータを生成します．入力データセットがZ軸を中心にスイープされ，新しいポリゴンプリミティブが作成されます．これらのプリミティブは， &quot;skirt&quot; またはスイープサーフェスを形成します．たとえば，線分をスイープすると円柱シェルが作成され，円をスイープするとトーラスが作成されます．</p>
-<p>There are a number of control parameters for this filter.  You
-can control whether the sweep of a 2D object (i.e., polygon or
-triangle strip) is capped with the generating geometry via the
-<code class="docutils literal notranslate"><span class="pre">capping</span></code> parameter. Also, you can control the angle of
-rotation, and whether translation along the z-axis is
-performed along with the rotation.  (Translation is useful for
-creating &quot;springs&quot;.) You also can adjust the radius of the
-generating geometry with the <code class="docutils literal notranslate"><span class="pre">dradius</span></code> parameter.</p>
+<p>このフィルタには多数の制御パラメータがあります．2 Dオブジェクト(多角形または三角形のストリップ)のスイープを生成するジオメトリでキャップするかどうかは， <code class="docutils literal notranslate"><span class="pre">capping</span></code> パラメータでコントロールできます．また，回転角度や，Z軸に沿った移動を回転とともに実行するかどうかも制御できます．( &quot;springs&quot; を作成するには，置き換えが役立ちます．)生成されるジオメトリの半径は， <code class="docutils literal notranslate"><span class="pre">dradius</span></code> パラメータで調整することもできます．</p>
 <p>スカートは，特定のトポロジカルフィーチャーを配置することによって生成されます．フリーエッジ(1つのポリゴンまたは三角形ストリップによってのみ使用されるポリゴンまたは三角形ストリップのエッジ)はサーフェスを生成します．これは，線分またはポリラインにも当てはまります．頂点は線を生成します．</p>
-<p>This filter can be used to model axisymmetric objects like
-cylinders, bottles, and wine glasses; or translational
-rotational symmetric objects like springs or corkscrews.</p>
+<p>このフィルタは，円柱，ボトル，ワイングラスなどの軸対称オブジェクトのモデリングに使用できます．または，スプリングやコルク抜きなどの移動回転対称オブジェクトです．</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
@@ -847,9 +838,9 @@ rotational symmetric objects like springs or corkscrews.</p>
 </dd>
 <dt><strong>dradius</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>スイープ処理中に半径を変更します．</p>
 </dd>
-<dt><strong>angle</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The angle of rotation in degrees.</p>
+<dt><strong>angle</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>回転の角度を度数で表します。</p>
 </dd>
-<dt><strong>capping</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Control if the sweep of a 2D object is capped.</p>
+<dt><strong>capping</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>2Dオブジェクトのスイープがキャップされるかどうかを制御します。</p>
 </dd>
 <dt><strong>progress_bar</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>進行状況を示す進行状況バーを表示します．</p>
 </dd>
@@ -857,13 +848,13 @@ rotational symmetric objects like springs or corkscrews.</p>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p>Rotationally extruded mesh.</p>
+<dt><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p>回転押し出し式のメッシュ。</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>Create a &quot;spring&quot; using the rotational extrusion filter.</p>
+<p>回転押し出しフィルターで &quot;バネ&quot; を作ります。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">profile</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Polygon</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">[</span><span class="mf">1.25</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span> <span class="n">radius</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>
 <span class="gp">... </span>                          <span class="n">normal</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">n_sides</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
@@ -875,7 +866,7 @@ rotational symmetric objects like springs or corkscrews.</p>
 <figure class="align-default">
 <img alt="../../../_images/pyvista-PolyDataFilters-extrude_rotate-1_00_00.png" src="../../../_images/pyvista-PolyDataFilters-extrude_rotate-1_00_00.png" />
 </figure>
-<p>Create a &quot;wine glass&quot; using the rotational extrusion filter.</p>
+<p>回転押し出しフィルターで &quot;ワイングラス&quot; を作ります。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mf">0.18</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
 <span class="gp">... </span>                   <span class="p">[</span><span class="o">-</span><span class="mf">0.18</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">],</span>

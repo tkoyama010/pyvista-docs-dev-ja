@@ -211,12 +211,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../dataset.html">
-     Data Sets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../pointsets.html">
-     Point Sets
+     ポイントセット
     </a>
    </li>
    <li class="toctree-l2">
@@ -376,7 +376,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyDataFilters.decimate.html">
-         間引く
+         decimate
         </a>
        </li>
        <li class="toctree-l4">
@@ -466,7 +466,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyDataFilters.geodesic.html">
-         測地
+         geodesic
         </a>
        </li>
        <li class="toctree-l4">
@@ -646,7 +646,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyDataFilters.streamlines.html">
-         流線
+         streamlines
         </a>
        </li>
        <li class="toctree-l4">
@@ -666,7 +666,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyDataFilters.subdivide.html">
-         細分化
+         subdivide
         </a>
        </li>
        <li class="toctree-l4">
@@ -843,7 +843,7 @@
 <td><p>2つのメッシュにブーリアンの交差演算を行います。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyDataFilters.boolean_union.html#pyvista.PolyDataFilters.boolean_union" title="pyvista.PolyDataFilters.boolean_union"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyDataFilters.boolean_union</span></code></a>(other_mesh[, ...])</p></td>
-<td><p>Perform a boolean union operation on two meshes.</p></td>
+<td><p>2つのメッシュにブーリアンの和集合演算を行います。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.PolyDataFilters.cell_centers.html#pyvista.PolyDataFilters.cell_centers" title="pyvista.PolyDataFilters.cell_centers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyDataFilters.cell_centers</span></code></a>([vertex, ...])</p></td>
 <td><p>このデータセットのセルの中心に点を生成します．</p></td>
@@ -903,7 +903,7 @@
 <td><p>メッシュのポイント単位の曲率を取得します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyDataFilters.decimate.html#pyvista.PolyDataFilters.decimate" title="pyvista.PolyDataFilters.decimate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyDataFilters.decimate</span></code></a>(target_reduction[, ...])</p></td>
-<td><p>Reduce the number of triangles in a triangular mesh using <code class="docutils literal notranslate"><span class="pre">vtkQuadricDecimation</span></code>.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">vtkQuadricDecimation</span></code> を使用して，三角形メッシュ内の三角形の数を減らします．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.PolyDataFilters.decimate_boundary.html#pyvista.PolyDataFilters.decimate_boundary" title="pyvista.PolyDataFilters.decimate_boundary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyDataFilters.decimate_boundary</span></code></a>([...])</p></td>
 <td><p>境界の三角形分割の小数点付きバージョンを取得します．</p></td>
@@ -912,7 +912,7 @@
 <td><p>三角形メッシュ内の三角形の数を減らします．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.PolyDataFilters.delaunay_2d.html#pyvista.PolyDataFilters.delaunay_2d" title="pyvista.PolyDataFilters.delaunay_2d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyDataFilters.delaunay_2d</span></code></a>([tol, alpha, ...])</p></td>
-<td><p>Apply a 2D Delaunay filter along the best fitting plane.</p></td>
+<td><p>最適フィット平面に沿って2D Delaunayフィルタを適用します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyDataFilters.delaunay_3d.html#pyvista.PolyDataFilters.delaunay_3d" title="pyvista.PolyDataFilters.delaunay_3d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyDataFilters.delaunay_3d</span></code></a>([alpha, tol, ...])</p></td>
 <td><p>メッシュの3D Delaunay三角形分割を作成します．</p></td>
@@ -972,7 +972,7 @@
 <td><p>2つのメッシュ間の交差を計算します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.PolyDataFilters.merge.html#pyvista.PolyDataFilters.merge" title="pyvista.PolyDataFilters.merge"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyDataFilters.merge</span></code></a>(dataset[, ...])</p></td>
-<td><p>Merge this mesh with one or more datasets.</p></td>
+<td><p>このメッシュを1つまたは複数のデータセットと結合します。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyDataFilters.multi_ray_trace.html#pyvista.PolyDataFilters.multi_ray_trace" title="pyvista.PolyDataFilters.multi_ray_trace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyDataFilters.multi_ray_trace</span></code></a>(origins, ...)</p></td>
 <td><p>複数のレイトレース計算を実行します．</p></td>

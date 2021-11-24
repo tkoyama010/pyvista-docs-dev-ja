@@ -211,12 +211,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../dataset.html">
-     Data Sets
+     データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../pointsets.html">
-     Point Sets
+     ポイントセット
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -741,7 +741,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.UnstructuredGrid.streamlines.html">
-         流線
+         streamlines
         </a>
        </li>
        <li class="toctree-l4">
@@ -1001,7 +1001,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.UnstructuredGrid.volume.html">
-         体積
+         volume
         </a>
        </li>
       </ul>
@@ -1113,22 +1113,21 @@
 <dt class="sig sig-object py" id="pyvista.UnstructuredGrid.find_cells_along_line">
 <span class="sig-prename descclassname"><span class="pre">UnstructuredGrid.</span></span><span class="sig-name descname"><span class="pre">find_cells_along_line</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pointa</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pointb</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><span class="pre">numpy.ndarray</span></a></span></span><a class="headerlink" href="#pyvista.UnstructuredGrid.find_cells_along_line" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>このメッシュのセルのインデックスを、線に沿って求めます。</p>
-<p>Line is defined from <code class="docutils literal notranslate"><span class="pre">pointa</span></code> to <code class="docutils literal notranslate"><span class="pre">pointb</span></code>.</p>
+<p>ラインとは、 <code class="docutils literal notranslate"><span class="pre">pointa</span></code> から <code class="docutils literal notranslate"><span class="pre">pointb</span></code> までを指します。</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>pointa</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/glossary.html#term-iterable" title="(in Python v3.11)"><span>iterable</span></a>(<a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>)</span></dt><dd><p>Length 3 coordinate of the start of the line.</p>
+<dt><strong>pointa</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/glossary.html#term-iterable" title="(in Python v3.11)"><span>iterable</span></a>(<a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>)</span></dt><dd><p>ラインの開始点の長さ3の座標。</p>
 </dd>
-<dt><strong>pointb</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/glossary.html#term-iterable" title="(in Python v3.11)"><span>iterable</span></a>(<a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>)</span></dt><dd><p>Length 3 coordinate of the end of the line.</p>
+<dt><strong>pointb</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/glossary.html#term-iterable" title="(in Python v3.11)"><span>iterable</span></a>(<a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>)</span></dt><dd><p>ラインの終了点の長さ3の座標。</p>
 </dd>
-<dt><strong>tolerance</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The absolute tolerance to use to find cells along line.</p>
+<dt><strong>tolerance</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>ラインに沿ってセルを見つけるために使用する絶対的な許容値です。</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a></dt><dd><p>Index or indices of the cell in this mesh that are closest
-to the given point.</p>
+<dt><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a></dt><dd><p>指定した点に最も近い，このメッシュ内のセルのインデックスです．</p>
 </dd>
 </dl>
 </dd>

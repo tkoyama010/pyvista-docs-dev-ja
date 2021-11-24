@@ -211,12 +211,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../dataset.html">
-     Data Sets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../pointsets.html">
-     Point Sets
+     ポイントセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
@@ -716,7 +716,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.RectilinearGrid.streamlines.html">
-         流線
+         streamlines
         </a>
        </li>
        <li class="toctree-l4">
@@ -961,7 +961,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.RectilinearGrid.volume.html">
-         体積
+         volume
         </a>
        </li>
        <li class="toctree-l4">
@@ -1078,9 +1078,7 @@
 <dt class="sig sig-object py" id="pyvista.RectilinearGrid.plot_over_line">
 <span class="sig-prename descclassname"><span class="pre">RectilinearGrid.</span></span><span class="sig-name descname"><span class="pre">plot_over_line</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pointa</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pointb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scalars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.RectilinearGrid.plot_over_line" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>高解像度の線に沿ってデータセットをサンプリングし，プロットします．</p>
-<p>Plot the variables of interest in 2D using matplotlib where the
-X-axis is distance from Point A and the Y-axis is the variable
-of interest. Note that this filter returns <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<p>X軸がA点からの距離で，Y軸が対象の変数である場合，対象の変数をmatplotlibを使って2 Dでプロットします．このフィルタでは <code class="docutils literal notranslate"><span class="pre">None</span></code> が戻されることに注意してください．</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
@@ -1092,15 +1090,15 @@ of interest. Note that this filter returns <code class="docutils literal notrans
 </dd>
 <dt><strong>scalars</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>調査する入力データセット内の変数の文字列名．既定では，アクティブスカラーが使用されます．</p>
 </dd>
-<dt><strong>title</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The string title of the matplotlib figure.</p>
+<dt><strong>title</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>matplotlib図の文字列タイトル</p>
 </dd>
-<dt><strong>ylabel</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The string label of the Y-axis. Defaults to variable name.</p>
+<dt><strong>ylabel</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Y軸の文字列ラベル．デフォルトは変数名。</p>
 </dd>
 <dt><strong>figsize</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a>(<a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>), <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>新しい図のサイズ</p>
 </dd>
 <dt><strong>figure</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>新しい図形を作成するかどうかのフラグ</p>
 </dd>
-<dt><strong>show</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Shows the matplotlib figure.</p>
+<dt><strong>show</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>matplotlibの図を表示します。</p>
 </dd>
 <dt><strong>tolerance</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>ソース内のポイントが入力のセル内にあるかどうかを計算するために使用される許容値です．指定しない場合，公差は自動的に生成されます．</p>
 </dd>
@@ -1112,7 +1110,7 @@ of interest. Note that this filter returns <code class="docutils literal notrans
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>See the <a class="reference internal" href="../../../examples/02-plot/plot-over-line.html#plot-over-line-example"><span class="std std-ref">線上のプロット</span></a> example.</p>
+<p><a class="reference internal" href="../../../examples/02-plot/plot-over-line.html#plot-over-line-example"><span class="std std-ref">線上のプロット</span></a> の例を参照してください。</p>
 </dd></dl>
 
 </section>

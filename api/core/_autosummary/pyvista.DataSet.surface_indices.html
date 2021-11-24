@@ -211,7 +211,7 @@
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../dataset.html">
-     Data Sets
+     データセット
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -701,7 +701,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.DataSet.streamlines.html">
-         流線
+         streamlines
         </a>
        </li>
        <li class="toctree-l4">
@@ -936,7 +936,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.DataSet.volume.html">
-         体積
+         volume
         </a>
        </li>
       </ul>
@@ -945,7 +945,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../pointsets.html">
-     Point Sets
+     ポイントセット
     </a>
    </li>
    <li class="toctree-l2">
@@ -1052,13 +1052,13 @@
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a></dt><dd><p>Indices of the surface points.</p>
+<dt><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a></dt><dd><p>サーフェスポイントのインデックス．</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>Return the first 10 surface indices of an UnstructuredGrid.</p>
+<p>UnstructuredGridの最初の10個のサーフェスインデックスを返します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_hexbeam</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ind</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">surface_indices</span><span class="p">()</span>

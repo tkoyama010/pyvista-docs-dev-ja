@@ -211,12 +211,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../dataset.html">
-     Data Sets
+     データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../pointsets.html">
-     Point Sets
+     ポイントセット
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -751,7 +751,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.StructuredGrid.streamlines.html">
-         流線
+         streamlines
         </a>
        </li>
        <li class="toctree-l4">
@@ -996,7 +996,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.StructuredGrid.volume.html">
-         体積
+         volume
         </a>
        </li>
        <li class="toctree-l4">
@@ -1125,28 +1125,21 @@
 <dd class="field-odd"><dl>
 <dt><strong>voi</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a>(<a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>)</span></dt><dd><p>整数の長さ6反復可能: <code class="docutils literal notranslate"><span class="pre">(xmin,</span> <span class="pre">xmax,</span> <span class="pre">ymin,</span> <span class="pre">ymax,</span> <span class="pre">zmin,</span> <span class="pre">zmax)</span></code>．これらの境界は，i-j-kの最小/最大インデックスで対象のボリュームを指定します．</p>
 </dd>
-<dt><strong>rate</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a>(<a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>), <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Length 3 iterable of ints: <code class="docutils literal notranslate"><span class="pre">(xrate,</span> <span class="pre">yrate,</span> <span class="pre">zrate)</span></code>.
-Default: <code class="docutils literal notranslate"><span class="pre">(1,</span> <span class="pre">1,</span> <span class="pre">1)</span></code>.</p>
+<dt><strong>rate</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a>(<a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>), <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>整数の反復可能な長さ3: <code class="docutils literal notranslate"><span class="pre">(xrate,</span> <span class="pre">yrate,</span> <span class="pre">zrate)</span></code> ．デフォルト: <code class="docutils literal notranslate"><span class="pre">(1,</span> <span class="pre">1,</span> <span class="pre">1)</span></code> 。</p>
 </dd>
-<dt><strong>boundary</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Control whether to enforce that the &quot;boundary&quot; of the grid
-is output in the subsampling process. (This only has
-effect when the rate in any direction is not equal to
-1). When this is on, the subsampling will always include
-the boundary of the grid even if the sample rate is
-not an even multiple of the grid dimensions.  By default
-this is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<dt><strong>boundary</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>グリッドの &quot;boundary&quot; をサブサンプリング処理で出力するかどうかを制御します．(これは，いずれかの方向の比率が1でない場合にのみ有効です)．このチェックボックスにチェックマークが付いている場合，サンプルレートがグリッド寸法の倍数でなくても，サブサンプリングには常にグリッドの境界が含まれます．デフォルトでは <code class="docutils literal notranslate"><span class="pre">False</span></code> です．</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="pyvista.StructuredGrid.html#pyvista.StructuredGrid" title="pyvista.StructuredGrid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.StructuredGrid</span></code></a></dt><dd><p>StructuredGrid with extracted subset.</p>
+<dt><a class="reference internal" href="pyvista.StructuredGrid.html#pyvista.StructuredGrid" title="pyvista.StructuredGrid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.StructuredGrid</span></code></a></dt><dd><p>サブセットを抽出したStructuredGrid。</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>Split a grid in half.</p>
+<p>グリッドを半分に分割します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
@@ -1155,8 +1148,7 @@ this is <code class="docutils literal notranslate"><span class="pre">False</span
 <span class="gp">&gt;&gt;&gt; </span><span class="n">voi_2</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">extract_subset</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">boundary</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>For fun, add the two grids back together and show they are
-identical to the original grid.</p>
+<p>面白いのは、2つのグリッドを元に戻して、元のグリッドと同じであることが示されます。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">joined</span> <span class="o">=</span> <span class="n">voi_1</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span><span class="n">voi_2</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">points</span><span class="p">,</span> <span class="n">joined</span><span class="o">.</span><span class="n">points</span><span class="p">)</span>
 </pre></div>

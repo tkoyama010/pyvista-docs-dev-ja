@@ -211,12 +211,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../dataset.html">
-     Data Sets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../pointsets.html">
-     Point Sets
+     ポイントセット
     </a>
    </li>
    <li class="toctree-l2">
@@ -491,7 +491,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.MultiBlock.volume.html">
-         体積
+         volume
         </a>
        </li>
       </ul>
@@ -586,15 +586,13 @@
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>var_item</strong><span class="classifier"><a class="reference internal" href="pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">vtk</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">or</span></code> <a class="reference external" href="https://numpy.org/doc/stable/reference/index.html#module-numpy" title="(in NumPy v1.21)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy</span></code></a> <a class="reference external" href="https://docs.python.org/dev/library/functions.html#object" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></a></span></dt><dd><p>プロットするVTKオブジェクトまたは <code class="docutils literal notranslate"><span class="pre">numpy</span></code> 配列．</p>
+<dt><strong>var_item</strong><span class="classifier">pyvista.DataSet, vtk, か numpy object</span></dt><dd><p>プロットするVTKオブジェクトまたは <code class="docutils literal notranslate"><span class="pre">numpy</span></code> 配列．</p>
 </dd>
 <dt><strong>off_screen</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，画面からプロットします．ウィンドウをポップアップしないでスクリーンショットを保存するのに便利です．デフォルトでは、グローバル設定の <code class="docutils literal notranslate"><span class="pre">pyvista.OFF_SCREEN</span></code> になります。</p>
 </dd>
 <dt><strong>full_screen</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>ウィンドウをフルスクリーンで開きます。 有効にすると、 <code class="docutils literal notranslate"><span class="pre">window_size</span></code> を無視します。 デフォルトでは、アクティブテーマ設定は <a class="reference internal" href="../../plotting/_autosummary/pyvista.themes.DefaultTheme.full_screen.html#pyvista.themes.DefaultTheme.full_screen" title="pyvista.themes.DefaultTheme.full_screen"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pyvista.global_theme.full_screen</span></code></a> となります。</p>
 </dd>
-<dt><strong>screenshot</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Saves screenshot to file when enabled.  See:
-<a class="reference internal" href="../../plotting/_autosummary/pyvista.Plotter.screenshot.html#pyvista.Plotter.screenshot" title="pyvista.Plotter.screenshot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Plotter.screenshot()</span></code></a>.
-Default <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<dt><strong>screenshot</strong><span class="classifier">python:str か bool, optional</span></dt><dd><p>有効にすると、スクリーンショットをファイルに保存します。 参照： <a class="reference internal" href="../../plotting/_autosummary/pyvista.Plotter.screenshot.html#pyvista.Plotter.screenshot" title="pyvista.Plotter.screenshot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Plotter.screenshot()</span></code></a>. デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です。</p>
 <p><code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，スクリーンショットを取得し画像の <code class="docutils literal notranslate"><span class="pre">numpy</span></code> 配列を取得します．</p>
 </dd>
 <dt><strong>interactive</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>ユーザーが図をパンしたり動かしたりできるようにします。 デフォルトでは <a class="reference internal" href="../../plotting/_autosummary/pyvista.themes.DefaultTheme.interactive.html#pyvista.themes.DefaultTheme.interactive" title="pyvista.themes.DefaultTheme.interactive"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pyvista.global_theme.interactive</span></code></a> となります。</p>
@@ -646,7 +644,7 @@ Default <code class="docutils literal notranslate"><span class="pre">False</span
 </dd>
 <dt><strong>zoom</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>カメラのズーム。 1より大きい値はズームイン、1より小さい値はズームアウト。 0より大きい値でなければなりません。</p>
 </dd>
-<dt><strong>**kwargs</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code> <a class="reference external" href="https://docs.python.org/dev/library/keyword.html#module-keyword" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">keyword</span></code></a> <code class="xref py py-obj docutils literal notranslate"><span class="pre">arguments</span></code></span></dt><dd><p>その他のオプションについては， <a class="reference internal" href="../../plotting/_autosummary/pyvista.Plotter.add_mesh.html#pyvista.Plotter.add_mesh" title="pyvista.Plotter.add_mesh"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Plotter.add_mesh()</span></code></a> を参照してください．</p>
+<dt><strong>**kwargs</strong><span class="classifier">オプションのキーワード引数</span></dt><dd><p>その他のオプションについては， <a class="reference internal" href="../../plotting/_autosummary/pyvista.Plotter.add_mesh.html#pyvista.Plotter.add_mesh" title="pyvista.Plotter.add_mesh"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Plotter.add_mesh()</span></code></a> を参照してください．</p>
 </dd>
 </dl>
 </dd>

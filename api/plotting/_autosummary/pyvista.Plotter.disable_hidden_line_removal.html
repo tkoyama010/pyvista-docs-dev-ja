@@ -1230,19 +1230,18 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.Plotter.disable_hidden_line_removal">
 <span class="sig-prename descclassname"><span class="pre">Plotter.</span></span><span class="sig-name descname"><span class="pre">disable_hidden_line_removal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">all_renderers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Plotter.disable_hidden_line_removal" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Disable hidden line removal.</p>
+<dd><p>隠線除去を無効にします。</p>
 <p>Enable again with <code class="xref py py-func docutils literal notranslate"><span class="pre">enable_hidden_line_removal</span></code></p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>all_renderers</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a></span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, applies to all renderers in subplots. If
-<code class="docutils literal notranslate"><span class="pre">False</span></code>, then only applies to the active renderer.</p>
+<dt><strong>all_renderers</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，サブプロットのすべてのレンダラーに適用されます． <code class="docutils literal notranslate"><span class="pre">False</span></code> の場合，アクティブなレンダラーにのみ適用されます．</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>Enable and then disable hidden line removal.</p>
+<p>隠線除去を有効にしてから無効にします。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span><span class="o">.</span><span class="n">enable_hidden_line_removal</span><span class="p">()</span>

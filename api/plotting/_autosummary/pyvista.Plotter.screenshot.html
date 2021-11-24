@@ -1240,13 +1240,13 @@
 </dd>
 <dt><strong>return_img</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> (デフォルト)の場合，イメージのNumPy配列が返されます．</p>
 </dd>
-<dt><strong>window_size</strong><span class="classifier">2-length <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>スクリーンショットを撮る前に，プロッタのサイズをこの <code class="docutils literal notranslate"><span class="pre">(width,</span> <span class="pre">height)</span></code> に設定します．</p>
+<dt><strong>window_size</strong><span class="classifier">長さ-2</span></dt><dd><p>スクリーンショットを撮る前に，プロッタのサイズをこの <code class="docutils literal notranslate"><span class="pre">(width,</span> <span class="pre">height)</span></code> に設定します．</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a></dt><dd><p>Array containing pixel RGB and alpha.  Sized:</p>
+<dt><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a></dt><dd><p>ピクセルRGBと，アルファを含む配列．サイズ:</p>
 <ul class="simple">
 <li><p>[ウィンドウの高さxウィンドウの幅x3] <code class="docutils literal notranslate"><span class="pre">transparent_background</span></code> が <code class="docutils literal notranslate"><span class="pre">False</span></code> に設定されている場合．</p></li>
 <li><p>[ウィンドウの高さxウィンドウの幅x4] <code class="docutils literal notranslate"><span class="pre">transparent_background</span></code> が <code class="docutils literal notranslate"><span class="pre">True</span></code> に設定されている場合．</p></li>

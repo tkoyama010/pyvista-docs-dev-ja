@@ -211,12 +211,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../dataset.html">
-     Data Sets
+     データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../pointsets.html">
-     Point Sets
+     ポイントセット
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -461,7 +461,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.decimate.html">
-         間引く
+         decimate
         </a>
        </li>
        <li class="toctree-l4">
@@ -596,7 +596,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.geodesic.html">
-         測地
+         geodesic
         </a>
        </li>
        <li class="toctree-l4">
@@ -871,7 +871,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.streamlines.html">
-         流線
+         streamlines
         </a>
        </li>
        <li class="toctree-l4">
@@ -891,7 +891,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.subdivide.html">
-         細分化
+         subdivide
         </a>
        </li>
        <li class="toctree-l4">
@@ -1196,7 +1196,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.volume.html">
-         体積
+         volume
         </a>
        </li>
       </ul>
@@ -1313,29 +1313,15 @@
 <dt class="sig sig-object py" id="pyvista.PolyData.reconstruct_surface">
 <span class="sig-prename descclassname"><span class="pre">PolyData.</span></span><span class="sig-name descname"><span class="pre">reconstruct_surface</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nbr_sz</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_spacing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.reconstruct_surface" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>このデータセットの点から曲面を再構成します。</p>
-<p>This filter takes a list of points assumed to lie on the
-surface of a solid 3D object. A signed measure of the distance
-to the surface is computed and sampled on a regular grid. The
-grid can then be contoured at zero to extract the surface. The
-default values for neighborhood size and sample spacing should
-give reasonable results for most uses but can be set if
-desired.</p>
-<p>This is helpful when generating surfaces from point clouds and
-is more reliable than <a class="reference internal" href="pyvista.DataSetFilters.delaunay_3d.html#pyvista.DataSetFilters.delaunay_3d" title="pyvista.DataSetFilters.delaunay_3d"><code class="xref py py-func docutils literal notranslate"><span class="pre">DataSetFilters.delaunay_3d()</span></code></a>.</p>
+<p>このフィルタは固体の 3D オブジェクトの表面上にあると想定される点のリストを受け取ります。表面までの距離の符号付き測定値が計算され、規則的なグリッドでサンプリングされます。そしてこの格子をゼロで輪郭を描き、表面を抽出します。近傍サイズとサンプル間隔のデフォルト値は、ほとんどの用途で妥当な結果を与えますが、必要に応じて設定することができます。</p>
+<p>これは点群からサーフェスを生成するときに便利で、 <a class="reference internal" href="pyvista.DataSetFilters.delaunay_3d.html#pyvista.DataSetFilters.delaunay_3d" title="pyvista.DataSetFilters.delaunay_3d"><code class="xref py py-func docutils literal notranslate"><span class="pre">DataSetFilters.delaunay_3d()</span></code></a> よりも信頼性が高いです。</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>nbr_sz</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Specify the number of neighbors each point has, used for
-estimating the local surface orientation.</p>
-<p>The default value of 20 should be fine for most
-applications, higher values can be specified if the spread
-of points is uneven. Values as low as 10 may yield
-adequate results for some surfaces. Higher values cause
-the algorithm to take longer and will cause
-errors on sharp boundaries.</p>
+<dt><strong>nbr_sz</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>各点が持つ隣接数を指定します。これは、ローカルな面の向きを推定するために使用されます。</p>
+<p>デフォルト値の20は、ほとんどの用途に適していますが、ポイントの広がりが不均一な場合は、より高い値を指定できます。10のような低い値でも、サーフェスによっては適切な結果が得られることがあります。高い値を設定すると、アルゴリズムに時間がかかり、鋭い境界ではエラーが発生します。</p>
 </dd>
-<dt><strong>sample_spacing</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The spacing of the 3D sampling grid.  If not set, a
-reasonable guess will be made.</p>
+<dt><strong>sample_spacing</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>3Dサンプリンググリッドの間隔を指定します。 設定されていない場合は、合理的な推測がなされます。</p>
 </dd>
 <dt><strong>progress_bar</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>進行状況を示す進行状況バーを表示します．</p>
 </dd>
@@ -1343,14 +1329,13 @@ reasonable guess will be made.</p>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p>Reconstructed surface.</p>
+<dt><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p>復元された表面。</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>Create a point cloud out of a sphere and reconstruct a surface
-from it.</p>
+<p>球体から点群を作成し、そこからサーフェスを再構成します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">points</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span><span class="o">.</span><span class="n">points</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">surf</span> <span class="o">=</span> <span class="n">points</span><span class="o">.</span><span class="n">reconstruct_surface</span><span class="p">()</span>

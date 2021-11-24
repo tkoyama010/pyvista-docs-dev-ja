@@ -211,12 +211,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../dataset.html">
-     Data Sets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../pointsets.html">
-     Point Sets
+     ポイントセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
@@ -716,7 +716,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.RectilinearGrid.streamlines.html">
-         流線
+         streamlines
         </a>
        </li>
        <li class="toctree-l4">
@@ -961,7 +961,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.RectilinearGrid.volume.html">
-         体積
+         volume
         </a>
        </li>
        <li class="toctree-l4">
@@ -1089,13 +1089,13 @@
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.pyvista_ndarray</span></code></dt><dd><p>Requested array.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.pyvista_ndarray</span></code></dt><dd><p>要求された配列。</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>Create a DataSet with a variety of arrays.</p>
+<p>様々な配列を持つDataSetを作成します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Cube</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span><span class="o">.</span><span class="n">clear_data</span><span class="p">()</span>
@@ -1106,17 +1106,17 @@
 <span class="go">[&#39;point-data&#39;, &#39;field-data&#39;, &#39;cell-data&#39;]</span>
 </pre></div>
 </div>
-<p>Get the point data array.</p>
+<p>ポイントデータの配列を取得します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span><span class="o">.</span><span class="n">get_array</span><span class="p">(</span><span class="s1">&#39;point-data&#39;</span><span class="p">)</span>
 <span class="go">array([0, 1, 2, 3, 4, 5, 6, 7])</span>
 </pre></div>
 </div>
-<p>Get the cell data array.</p>
+<p>セルデータの配列を取得します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span><span class="o">.</span><span class="n">get_array</span><span class="p">(</span><span class="s1">&#39;cell-data&#39;</span><span class="p">)</span>
 <span class="go">array([0, 1, 2, 3, 4, 5])</span>
 </pre></div>
 </div>
-<p>Get the field data array.</p>
+<p>フィールドデータの配列を取得します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span><span class="o">.</span><span class="n">get_array</span><span class="p">(</span><span class="s1">&#39;field-data&#39;</span><span class="p">)</span>
 <span class="go">array([&#39;a&#39;, &#39;b&#39;, &#39;c&#39;], dtype=&#39;&lt;U1&#39;)</span>
 </pre></div>

@@ -276,7 +276,7 @@
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="pyvista.Dodecahedron.html">
-       Dodecahedron
+       正十二面体
       </a>
      </li>
      <li class="toctree-l3">
@@ -296,7 +296,7 @@
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="pyvista.Octahedron.html">
-       八面体
+       Octahedron
       </a>
      </li>
      <li class="toctree-l3">
@@ -424,8 +424,7 @@
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>bounds</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/glossary.html#term-iterable" title="(in Python v3.11)"><span>iterable</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Specify the bounding box of the cube.
-<code class="docutils literal notranslate"><span class="pre">(xMin,</span> <span class="pre">xMax,</span> <span class="pre">yMin,</span> <span class="pre">yMax,</span> <span class="pre">zMin,</span> <span class="pre">zMax)</span></code>.</p>
+<dt><strong>bounds</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/glossary.html#term-iterable" title="(in Python v3.11)"><span>iterable</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>立方体のバウンディングボックスを指定します． <code class="docutils literal notranslate"><span class="pre">(xMin,xMax,</span> <span class="pre">yMin,yMax,</span> <span class="pre">zMin,zMax)</span></code> 。</p>
 </dd>
 <dt><strong>level</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>面の細分化レベル．</p>
 </dd>
@@ -435,13 +434,13 @@
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="../../core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p>Mesh of the box.</p>
+<dt><a class="reference internal" href="../../core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p>箱のメッシュです。</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>Create a box with subdivision <code class="docutils literal notranslate"><span class="pre">level=2</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">level=2</span></code> のボックスを作成します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Box</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>

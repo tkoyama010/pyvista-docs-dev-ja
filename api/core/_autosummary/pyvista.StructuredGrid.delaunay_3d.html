@@ -211,12 +211,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../dataset.html">
-     Data Sets
+     データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../pointsets.html">
-     Point Sets
+     ポイントセット
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -751,7 +751,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.StructuredGrid.streamlines.html">
-         流線
+         streamlines
         </a>
        </li>
        <li class="toctree-l4">
@@ -996,7 +996,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.StructuredGrid.volume.html">
-         体積
+         volume
         </a>
        </li>
        <li class="toctree-l4">
@@ -1118,25 +1118,15 @@
 <dt class="sig sig-object py" id="pyvista.StructuredGrid.delaunay_3d">
 <span class="sig-prename descclassname"><span class="pre">StructuredGrid.</span></span><span class="sig-name descname"><span class="pre">delaunay_3d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.StructuredGrid.delaunay_3d" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>メッシュの3D Delaunay三角形分割を作成します．</p>
-<p>This filter can be used to generate a 3D tetrahedral mesh from
-a surface or scattered points.  If you want to create a
-surface from a point cloud, see
-<a class="reference internal" href="pyvista.DataSetFilters.reconstruct_surface.html#pyvista.DataSetFilters.reconstruct_surface" title="pyvista.DataSetFilters.reconstruct_surface"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.reconstruct_surface()</span></code></a>.</p>
+<p>このフィルターは、曲面や散布された点から3次元の四面体メッシュを生成するのに使用できます。点群からサーフェスを生成したい場合には、 <a class="reference internal" href="pyvista.DataSetFilters.reconstruct_surface.html#pyvista.DataSetFilters.reconstruct_surface" title="pyvista.DataSetFilters.reconstruct_surface"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.reconstruct_surface()</span></code></a> を参照してください。</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>alpha</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Distance value to control output of this filter. For a
-non-zero alpha value, only vertices, edges, faces, or
-tetrahedra contained within the circumsphere (of radius
-alpha) will be output. Otherwise, only tetrahedra will be
-output.</p>
+<dt><strong>alpha</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>このフィルタの出力を制御する距離値．α値が0以外の場合は，円周に含まれる頂点，エッジ，面，または四面体(半径αの)のみが出力されます．それ以外の場合は，四面体だけが出力されます．</p>
 </dd>
-<dt><strong>tol</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Tolerance to control discarding of closely spaced points.
-This tolerance is specified as a fraction of the diagonal
-length of the bounding box of the points.</p>
+<dt><strong>tol</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>間隔の狭い点の削除を制御する許容差．この許容値は，ポイントのバウンディングボックスの対角線の長さの一部として指定されます．</p>
 </dd>
-<dt><strong>offset</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Multiplier to control the size of the initial, bounding
-Delaunay triangulation.</p>
+<dt><strong>offset</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>乗数を使用して，初期の境界Delaunay三角形分割のサイズを制御します．</p>
 </dd>
 <dt><strong>progress_bar</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>進行状況を示す進行状況バーを表示します．</p>
 </dd>
@@ -1144,14 +1134,13 @@ Delaunay triangulation.</p>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="pyvista.UnstructuredGrid.html#pyvista.UnstructuredGrid" title="pyvista.UnstructuredGrid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.UnstructuredGrid</span></code></a></dt><dd><p>UnstructuredGrid containing the Delaunay triangulation.</p>
+<dt><a class="reference internal" href="pyvista.UnstructuredGrid.html#pyvista.UnstructuredGrid" title="pyvista.UnstructuredGrid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.UnstructuredGrid</span></code></a></dt><dd><p>Delaunay Triangulationを含むUnstructuredGrid。</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>Generate a 3D Delaunay triangulation of a surface mesh of a
-sphere and plot the interior edges generated.</p>
+<p>球体の表面メッシュの3次元ドロネー三角法を生成し、生成された内縁をプロットします。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">(</span><span class="n">theta_resolution</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">phi_resolution</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">sphere</span><span class="o">.</span><span class="n">delaunay_3d</span><span class="p">()</span>

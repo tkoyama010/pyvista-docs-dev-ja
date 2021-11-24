@@ -1243,21 +1243,19 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">color='#FFFFFF'</span></code></p></li>
 </ul>
 </dd>
-<dt><strong>corner_factor</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>This is the factor along each axis to draw the default
-box. Default is 0.5 to show the full box.</p>
+<dt><strong>corner_factor</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>これはデフォルトボックスを描画する各軸に沿った係数です．フルボックスを表示するには，0.5を指定します．</p>
 </dd>
 <dt><strong>line_width</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>線の太さ．</p>
 </dd>
-<dt><strong>opacity</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Opacity of mesh.  Default 1.0 and should be between 0 and 1.</p>
+<dt><strong>opacity</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>メッシュの不透明度。デフォルトは1.0で、0から1の間で指定します。</p>
 </dd>
 <dt><strong>render_lines_as_tubes</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>線分をフラットな線分ではなく太いチューブとして表示します． <code class="docutils literal notranslate"><span class="pre">line_width</span></code> で幅を制御します．</p>
 </dd>
-<dt><strong>lighting</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Enable or disable directional lighting for this actor.</p>
+<dt><strong>lighting</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>このアクターの指向性照明を有効または無効にします。</p>
 </dd>
-<dt><strong>reset_camera</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Reset camera position when <code class="docutils literal notranslate"><span class="pre">True</span></code> to include all actors.</p>
+<dt><strong>reset_camera</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>すべてのアクターを含むように <code class="docutils literal notranslate"><span class="pre">True</span></code> を設定すると、カメラの位置をリセットします。</p>
 </dd>
-<dt><strong>outline</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a></span></dt><dd><p>Default is <code class="docutils literal notranslate"><span class="pre">True</span></code>. when <code class="docutils literal notranslate"><span class="pre">False</span></code>, a box with faces is
-shown with the specified culling.</p>
+<dt><strong>outline</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a></span></dt><dd><p>デフォルトは <code class="docutils literal notranslate"><span class="pre">True</span></code> です． <code class="docutils literal notranslate"><span class="pre">False</span></code> の場合，指定した選択で面のあるボックスが表示されます．</p>
 </dd>
 <dt><strong>culling</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>カリングされた面はレンダリングされません．オプションは <code class="docutils literal notranslate"><span class="pre">'front'</span></code> または <code class="docutils literal notranslate"><span class="pre">'back'</span></code> です．デフォルトはバウンディングボックスの <code class="docutils literal notranslate"><span class="pre">'front'</span></code> です．</p>
 </dd>
@@ -1265,7 +1263,7 @@ shown with the specified culling.</p>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">vtk.vtkActor</span></code></dt><dd><p>VTK actor of the floor.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">vtk.vtkActor</span></code></dt><dd><p>VTK actor of the bounding box.</p>
 </dd>
 </dl>
 </dd>

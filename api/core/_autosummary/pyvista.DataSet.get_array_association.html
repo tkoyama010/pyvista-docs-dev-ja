@@ -211,7 +211,7 @@
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../dataset.html">
-     Data Sets
+     データセット
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -701,7 +701,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.DataSet.streamlines.html">
-         流線
+         streamlines
         </a>
        </li>
        <li class="toctree-l4">
@@ -936,7 +936,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.DataSet.volume.html">
-         体積
+         volume
         </a>
        </li>
       </ul>
@@ -945,7 +945,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../pointsets.html">
-     Point Sets
+     ポイントセット
     </a>
    </li>
    <li class="toctree-l2">
@@ -1048,21 +1048,19 @@
 <dd class="field-odd"><dl>
 <dt><strong>name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>配列の名前。</p>
 </dd>
-<dt><strong>preference</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>When <code class="docutils literal notranslate"><span class="pre">name</span></code> is specified, this is the preferred array
-association to search for in the dataset.  Must be either
-<code class="docutils literal notranslate"><span class="pre">'point'</span></code>, <code class="docutils literal notranslate"><span class="pre">'cell'</span></code>, or <code class="docutils literal notranslate"><span class="pre">'field'</span></code>.</p>
+<dt><strong>preference</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">name</span></code> が指定されている場合，これはデータセット内で検索するために推奨される配列アソシエーションです． <code class="docutils literal notranslate"><span class="pre">'point'</span></code> ， <code class="docutils literal notranslate"><span class="pre">'cell'</span></code> ，または <code class="docutils literal notranslate"><span class="pre">'field'</span></code> のいずれかでなければなりません</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.FieldAssociation</span></code></dt><dd><p>Field association of the array.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.FieldAssociation</span></code></dt><dd><p>配列のフィールドの関連付け。</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>Create a DataSet with a variety of arrays.</p>
+<p>様々な配列を持つDataSetを作成します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Cube</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span><span class="o">.</span><span class="n">clear_data</span><span class="p">()</span>
@@ -1073,17 +1071,17 @@ association to search for in the dataset.  Must be either
 <span class="go">[&#39;point-data&#39;, &#39;field-data&#39;, &#39;cell-data&#39;]</span>
 </pre></div>
 </div>
-<p>Get the point data array association.</p>
+<p>ポイントデータの配列の関連性を取得します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span><span class="o">.</span><span class="n">get_array_association</span><span class="p">(</span><span class="s1">&#39;point-data&#39;</span><span class="p">)</span>
 <span class="go">&lt;FieldAssociation.POINT: 0&gt;</span>
 </pre></div>
 </div>
-<p>Get the cell data array association.</p>
+<p>セルデータの配列の関連性を取得します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span><span class="o">.</span><span class="n">get_array_association</span><span class="p">(</span><span class="s1">&#39;cell-data&#39;</span><span class="p">)</span>
 <span class="go">&lt;FieldAssociation.CELL: 1&gt;</span>
 </pre></div>
 </div>
-<p>Get the field data array association.</p>
+<p>フィールドデータの配列の関連性を取得します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span><span class="o">.</span><span class="n">get_array_association</span><span class="p">(</span><span class="s1">&#39;field-data&#39;</span><span class="p">)</span>
 <span class="go">&lt;FieldAssociation.NONE: 2&gt;</span>
 </pre></div>

@@ -211,12 +211,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../dataset.html">
-     Data Sets
+     データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../pointsets.html">
-     Point Sets
+     ポイントセット
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -771,7 +771,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.ExplicitStructuredGrid.streamlines.html">
-         流線
+         streamlines
         </a>
        </li>
        <li class="toctree-l4">
@@ -1016,7 +1016,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.ExplicitStructuredGrid.volume.html">
-         体積
+         volume
         </a>
        </li>
       </ul>
@@ -1121,7 +1121,7 @@
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>ind</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-iterable" title="(in Python v3.11)"><span>iterable</span></a>(<a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>)</span></dt><dd><p>セルID．</p>
+<dt><strong>ind</strong><span class="classifier">python:int か python:iterable(python:int)</span></dt><dd><p>セルID．</p>
 </dd>
 <dt><strong>rel</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>近傍関係を定義します． <code class="docutils literal notranslate"><span class="pre">'topological'</span></code> の場合， <code class="docutils literal notranslate"><span class="pre">(i-1,</span> <span class="pre">j,</span> <span class="pre">k)</span></code>, <code class="docutils literal notranslate"><span class="pre">(i+1,</span> <span class="pre">j,</span> <span class="pre">k)</span></code>, <code class="docutils literal notranslate"><span class="pre">(i,</span> <span class="pre">j-1,</span> <span class="pre">k)</span></code>, <code class="docutils literal notranslate"><span class="pre">(i,</span> <span class="pre">j+1,</span> <span class="pre">k)</span></code>, <code class="docutils literal notranslate"><span class="pre">(i,</span> <span class="pre">j,</span> <span class="pre">k-1)</span></code> と <code class="docutils literal notranslate"><span class="pre">(i,</span> <span class="pre">j,</span> <span class="pre">k+1)</span></code> セルを取得します． <code class="docutils literal notranslate"><span class="pre">'connectivity'</span></code> (デフォルト) の場合，面の接続性を考慮したトポロジ的な隣接のみを取得します． <code class="docutils literal notranslate"><span class="pre">'geometric'</span></code> の場合， <code class="docutils literal notranslate"><span class="pre">(i-1,</span> <span class="pre">j)</span></code>, <code class="docutils literal notranslate"><span class="pre">(i+1,</span> <span class="pre">j)</span></code>, <code class="docutils literal notranslate"><span class="pre">(i,j-1)</span></code> と <code class="docutils literal notranslate"><span class="pre">(i,</span> <span class="pre">j+1)</span></code> 垂直セルグループのうち，面が交差しているセルを取得します．</p>
 </dd>
@@ -1129,7 +1129,7 @@
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>(<a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>)</dt><dd><p>Indices of neighboring cells.</p>
+<dt><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>(<a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>)</dt><dd><p>隣接するセルのインデックス．</p>
 </dd>
 </dl>
 </dd>

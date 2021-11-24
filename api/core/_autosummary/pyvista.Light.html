@@ -211,12 +211,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../dataset.html">
-     Data Sets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../pointsets.html">
-     Point Sets
+     ポイントセット
     </a>
    </li>
    <li class="toctree-l2">
@@ -491,13 +491,13 @@
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>position</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>ライトの位置．位置の解釈は，ライトのタイプとライトに変換行列があるかどうかによって異なります． <a class="reference internal" href="pyvista.Light.position.html#pyvista.Light.position" title="pyvista.Light.position"><code class="xref py py-attr docutils literal notranslate"><span class="pre">position</span></code></a> プロパティも参照してください．</p>
+<dt><strong>position</strong><span class="classifier">python:list か python:tuple, optional</span></dt><dd><p>ライトの位置．位置の解釈は，ライトのタイプとライトに変換行列があるかどうかによって異なります． <a class="reference internal" href="pyvista.Light.position.html#pyvista.Light.position" title="pyvista.Light.position"><code class="xref py py-attr docutils literal notranslate"><span class="pre">position</span></code></a> プロパティも参照してください．</p>
 </dd>
-<dt><strong>focal_point</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>ライトの焦点．焦点の解釈は，ライトのタイプとライトに変換行列があるかどうかによって異なります． <a class="reference internal" href="pyvista.Light.focal_point.html#pyvista.Light.focal_point" title="pyvista.Light.focal_point"><code class="xref py py-attr docutils literal notranslate"><span class="pre">focal_point</span></code></a> プロパティも参照してください．</p>
+<dt><strong>focal_point</strong><span class="classifier">python:list か python:tuple, optional</span></dt><dd><p>ライトの焦点．焦点の解釈は，ライトのタイプとライトに変換行列があるかどうかによって異なります． <a class="reference internal" href="pyvista.Light.focal_point.html#pyvista.Light.focal_point" title="pyvista.Light.focal_point"><code class="xref py py-attr docutils literal notranslate"><span class="pre">focal_point</span></code></a> プロパティも参照してください．</p>
 </dd>
 <dt><strong>color</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or 3-length <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>ライトのカラー．作成時には，アンビエントカラー，ディフューズカラー，スペキュラカラーはすべてこのカラーに設定されます．</p>
 </dd>
-<dt><strong>light_type</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>ライトのタイプ．文字列の場合は <code class="docutils literal notranslate"><span class="pre">'headlight'</span></code> ， <code class="docutils literal notranslate"><span class="pre">'camera</span> <span class="pre">light'</span></code> ， <code class="docutils literal notranslate"><span class="pre">'scene</span> <span class="pre">light'</span></code> のいずれか．intの場合はそれぞれ1，2，3のいずれか．クラス定数 <code class="docutils literal notranslate"><span class="pre">Light.HEADLIGHT</span></code> ， <code class="docutils literal notranslate"><span class="pre">Light.CAMERA_LIGHT</span></code> ， <code class="docutils literal notranslate"><span class="pre">Light.SCENE_LIGHT</span></code> もそれぞれ使用できます．</p>
+<dt><strong>light_type</strong><span class="classifier">python:str または python:int, optional</span></dt><dd><p>ライトのタイプ．文字列の場合は <code class="docutils literal notranslate"><span class="pre">'headlight'</span></code> ， <code class="docutils literal notranslate"><span class="pre">'camera</span> <span class="pre">light'</span></code> ， <code class="docutils literal notranslate"><span class="pre">'scene</span> <span class="pre">light'</span></code> のいずれか．intの場合はそれぞれ1，2，3のいずれか．クラス定数 <code class="docutils literal notranslate"><span class="pre">Light.HEADLIGHT</span></code> ， <code class="docutils literal notranslate"><span class="pre">Light.CAMERA_LIGHT</span></code> ， <code class="docutils literal notranslate"><span class="pre">Light.SCENE_LIGHT</span></code> もそれぞれ使用できます．</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>ヘッドライトがカメラにアタッチされ，カメラの軸に沿って焦点を見ます．</p></li>
@@ -597,7 +597,7 @@
 <td><p>ポジショナルライトのコーンアングルを取得します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.Light.diffuse_color.html#pyvista.Light.diffuse_color" title="pyvista.Light.diffuse_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Light.diffuse_color</span></code></a></p></td>
-<td><p>ライトの拡散カラーを戻す、または設定します。</p></td>
+<td><p>ライトの拡散カラーを返す、または設定します。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Light.exponent.html#pyvista.Light.exponent" title="pyvista.Light.exponent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Light.exponent</span></code></a></p></td>
 <td><p>スポットライトに使用されるコサインの指数を取得します．</p></td>

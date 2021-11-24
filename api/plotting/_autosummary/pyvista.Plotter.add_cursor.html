@@ -1230,18 +1230,18 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.Plotter.add_cursor">
 <span class="sig-prename descclassname"><span class="pre">Plotter.</span></span><span class="sig-name descname"><span class="pre">add_cursor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bounds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(-</span> <span class="pre">1.0,</span> <span class="pre">1.0,</span> <span class="pre">-</span> <span class="pre">1.0,</span> <span class="pre">1.0,</span> <span class="pre">-</span> <span class="pre">1.0,</span> <span class="pre">1.0)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">focal_point</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Plotter.add_cursor" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Add a cursor of a PyVista or VTK dataset to the scene.</p>
+<dd><p>PyVistaまたはVTKデータセットのシルエットをカーソルに追加します。</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>bounds</strong><span class="classifier"><a class="reference internal" href="pyvista.Plotter.length.html#pyvista.Plotter.length" title="pyvista.Plotter.length"><code class="xref py py-obj docutils literal notranslate"><span class="pre">length</span></code></a> 6 <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a></span></dt><dd><p>Specify the bounds in the format of:</p>
+<dt><strong>bounds</strong><span class="classifier"><a class="reference internal" href="pyvista.Plotter.length.html#pyvista.Plotter.length" title="pyvista.Plotter.length"><code class="xref py py-obj docutils literal notranslate"><span class="pre">length</span></code></a> 6 <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a></span></dt><dd><p>以下の形式で境界を指定します。</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">(xmin,</span> <span class="pre">xmax,</span> <span class="pre">ymin,</span> <span class="pre">ymax,</span> <span class="pre">zmin,</span> <span class="pre">zmax)</span></code></p></li>
 </ul>
-<p>Defaults to <code class="docutils literal notranslate"><span class="pre">(-1.0,</span> <span class="pre">1.0,</span> <span class="pre">-1.0,</span> <span class="pre">1.0,</span> <span class="pre">-1.0,</span> <span class="pre">1.0)</span></code>.</p>
+<p>デフォルトは <code class="docutils literal notranslate"><span class="pre">(-1.0,</span> <span class="pre">1.0,</span> <span class="pre">-1.0,</span> <span class="pre">1.0,</span> <span class="pre">-1.0,</span> <span class="pre">1.0)</span></code> です。</p>
 </dd>
-<dt><strong>focal_point</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>カーソルの中心となる部分。</p>
-<p>Defaults to <code class="docutils literal notranslate"><span class="pre">(0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0)</span></code>.</p>
+<dt><strong>focal_point</strong><span class="classifier">python:list か python:tuple, optional</span></dt><dd><p>カーソルの中心となる部分。</p>
+<p>デフォルトは <code class="docutils literal notranslate"><span class="pre">(0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0)</span></code> です。</p>
 </dd>
 <dt><strong>color</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>文字列、RGB配列、または16進数の色文字列のいずれかです。以下のいずれかの場合。</p>
 <ul class="simple">
@@ -1255,7 +1255,7 @@
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">vtk.vtkActor</span></code></dt><dd><p>VTK actor of the 2D cursor.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">vtk.vtkActor</span></code></dt><dd><p>2DカーソルのVTKアクター。</p>
 </dd>
 </dl>
 </dd>

@@ -211,12 +211,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../dataset.html">
-     Data Sets
+     データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../pointsets.html">
-     Point Sets
+     ポイントセット
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -461,7 +461,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.decimate.html">
-         間引く
+         decimate
         </a>
        </li>
        <li class="toctree-l4">
@@ -596,7 +596,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.geodesic.html">
-         測地
+         geodesic
         </a>
        </li>
        <li class="toctree-l4">
@@ -871,7 +871,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.streamlines.html">
-         流線
+         streamlines
         </a>
        </li>
        <li class="toctree-l4">
@@ -891,7 +891,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.subdivide.html">
-         細分化
+         subdivide
         </a>
        </li>
        <li class="toctree-l4">
@@ -1196,7 +1196,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.volume.html">
-         体積
+         volume
         </a>
        </li>
       </ul>
@@ -1317,19 +1317,12 @@
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>filename</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Filename of mesh to be written.  File type is inferred from
-the extension of the filename unless overridden with
-ftype.  Can be one of many of the supported  the following
-types (<code class="docutils literal notranslate"><span class="pre">'.ply'</span></code>, <code class="docutils literal notranslate"><span class="pre">'.stl'</span></code>, <code class="docutils literal notranslate"><span class="pre">'.vtk</span></code>).</p>
+<dt><strong>filename</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>書き込むメッシュのファイル名．ftypeで上書きしない限り，ファイルタイプはファイル名の拡張子から推測されます．次のいずれかのタイプになります (<code class="docutils literal notranslate"><span class="pre">'.ply'</span></code>, <code class="docutils literal notranslate"><span class="pre">'.stl'</span></code>, <code class="docutils literal notranslate"><span class="pre">'.vtk</span></code>) ．</p>
 </dd>
-<dt><strong>binary</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Writes the file as binary when <code class="docutils literal notranslate"><span class="pre">True</span></code> and ASCII when <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<dt><strong>binary</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> の場合はバイナリとして， <code class="docutils literal notranslate"><span class="pre">False</span></code> の場合はASCIIとしてファイルを書き込みます．</p>
 </dd>
 <dt><strong>texture</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">np.ndarray</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>PLYファイルを使用する際に、単一のテクスチャ配列をファイルに書き込みます。 テクスチャ配列は、データ型が <code class="docutils literal notranslate"><span class="pre">np.uint8</span></code> の3成分または4成分の配列である必要があります。 配列はセル配列またはポイント配列で、配列がすでにPolyDataに存在する場合は文字列にすることもできます。</p>
-<p>If a string is provided, the texture array will be saved
-to disk as that name.  If an array is provided, the
-texture array will be saved as <code class="docutils literal notranslate"><span class="pre">'RGBA'</span></code> if the array
-contains an alpha channel (i.e. 4 component array), or
-as <code class="docutils literal notranslate"><span class="pre">'RGB'</span></code> if the array is just a 3 component array.</p>
+<p>文字列が指定された場合は、テクスチャ配列がその名前でディスクに保存されます。 配列が指定された場合、テクスチャの配列は、その配列がアルファチャンネルを含んでいる場合は <code class="docutils literal notranslate"><span class="pre">'RGBA'</span></code> として保存され（つまり4コンポーネントの配列）、配列が単に3コンポーネントの配列である場合は <code class="docutils literal notranslate"><span class="pre">RGB'</span></code> として保存されます。</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
 <p>この機能は、PLYファイルの保存時にのみ有効です。</p>
@@ -1341,19 +1334,18 @@ as <code class="docutils literal notranslate"><span class="pre">'RGB'</span></co
 <p class="rubric">備考</p>
 <p>バイナリファイルはASCIIよりもはるかに高速に書き込み，ファイルサイズも小さくなります</p>
 <p class="rubric">例</p>
-<p>Save a mesh as a STL.</p>
+<p>メッシュをSTLとして保存します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;my_mesh.stl&#39;</span><span class="p">)</span>  
 </pre></div>
 </div>
-<p>Save a mesh as a PLY.</p>
+<p>メッシュをPLYとして保存します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;my_mesh.ply&#39;</span><span class="p">)</span>  
 </pre></div>
 </div>
-<p>Save a mesh as a PLY with a texture array.  Here we also
-create a simple RGB array representing the texture.</p>
+<p>メッシュをPLYとしてテクスチャ配列とともに保存します。 ここでは、テクスチャを表す単純なRGB配列も作成します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">texture</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">sphere</span><span class="o">.</span><span class="n">n_points</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
@@ -1362,13 +1354,11 @@ create a simple RGB array representing the texture.</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;my_mesh.ply&#39;</span><span class="p">,</span> <span class="n">texture</span><span class="o">=</span><span class="s1">&#39;my_texture&#39;</span><span class="p">)</span>  
 </pre></div>
 </div>
-<p>Alternatively, provide just the texture array.  This will be
-written to the file as <code class="docutils literal notranslate"><span class="pre">'RGB'</span></code> since it does not contain an
-alpha channel.</p>
+<p>あるいは、テクスチャの配列だけを指定することもできます。 これはアルファチャンネルを含まないため、 <code class="docutils literal notranslate"><span class="pre">'RGB'</span></code> としてファイルに書き込まれます。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;my_mesh.ply&#39;</span><span class="p">,</span> <span class="n">texture</span><span class="o">=</span><span class="n">texture</span><span class="p">)</span>  
 </pre></div>
 </div>
-<p>Save a mesh as a VTK file.</p>
+<p>メッシュをVTKファイルとして保存します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;my_mesh.vtk&#39;</span><span class="p">)</span>  
 </pre></div>

@@ -211,7 +211,7 @@
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../dataset.html">
-     Data Sets
+     データセット
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -701,7 +701,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.DataSet.streamlines.html">
-         流線
+         streamlines
         </a>
        </li>
        <li class="toctree-l4">
@@ -936,7 +936,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.DataSet.volume.html">
-         体積
+         volume
         </a>
        </li>
       </ul>
@@ -945,7 +945,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../pointsets.html">
-     Point Sets
+     ポイントセット
     </a>
    </li>
    <li class="toctree-l2">
@@ -1047,19 +1047,15 @@
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>surface</strong><span class="classifier"><a class="reference internal" href="pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a></span></dt><dd><p>The surface used to compute the distance.</p>
+<dt><strong>surface</strong><span class="classifier"><a class="reference internal" href="pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a></span></dt><dd><p>距離の計算に使用されるサーフェス。</p>
 </dd>
-<dt><strong>inplace</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, a new scalar array will be added to the
-<code class="docutils literal notranslate"><span class="pre">point_data</span></code> of this mesh and the modified mesh will
-be returned. Otherwise a copy of this mesh is returned
-with that scalar field added.</p>
+<dt><strong>inplace</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>もし <code class="docutils literal notranslate"><span class="pre">True</span></code> ならば、新しいスカラー配列がこのメッシュの <code class="docutils literal notranslate"><span class="pre">point_data</span></code> に追加され、変更されたメッシュが返されます。そうでなければ，このメッシュのコピーにスカラーフィールドが追加されたものが返されます．</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a></dt><dd><p>Dataset containing the <code class="docutils literal notranslate"><span class="pre">'implicit_distance'</span></code> array in
-<code class="docutils literal notranslate"><span class="pre">point_data</span></code>.</p>
+<dt><a class="reference internal" href="pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a></dt><dd><p>データセット: <code class="docutils literal notranslate"><span class="pre">point_data</span></code> に含まれる <code class="docutils literal notranslate"><span class="pre">'implicit_distance'</span></code> 配列を含みます．</p>
 </dd>
 </dl>
 </dd>

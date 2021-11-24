@@ -1241,7 +1241,7 @@
 </dd>
 <dt><strong>clim</strong><span class="classifier">2 <code class="xref py py-obj docutils literal notranslate"><span class="pre">item</span></code> <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>スカラーのカラーバーの範囲．デフォルトはスカラー配列の最小値と最大値です．例: <code class="docutils literal notranslate"><span class="pre">[-1,</span> <span class="pre">2]</span></code> ．<code class="docutils literal notranslate"><span class="pre">rng</span></code> もこの別名として認められています．</p>
 </dd>
-<dt><strong>resolution</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Block resolution.</p>
+<dt><strong>resolution</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>ブロックの解像度</p>
 </dd>
 <dt><strong>opacity</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>スカラー配列の不透明度マッピング．文字列を指定して，スカラ範囲を定義済みの不透明度転送関数(オプションには， 'linear' ， 'linear_r'， 'geom' ， 'geom_r' があります．)にマッピングすることもできます．あるいは，長さが <code class="docutils literal notranslate"><span class="pre">n_colors</span></code> 以下の配列であるカスタムメイドの伝達関数を渡すこともできます．</p>
 </dd>
@@ -1251,7 +1251,7 @@
 </dd>
 <dt><strong>flip_scalars</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>cmapの方向を反転します．ほとんどのカラーマップでは， <code class="docutils literal notranslate"><span class="pre">*_r</span></code> サフィックスも同様にこれを行うことができます．</p>
 </dd>
-<dt><strong>reset_camera</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Reset the camera after adding this mesh to the scene.</p>
+<dt><strong>reset_camera</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>このメッシュをシーンに追加した後，カメラをリセットします．</p>
 </dd>
 <dt><strong>name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>簡単に更新できるように，追加したアクターの名前．この名前のアクターがレンダリングウィンドウに既に存在する場合は，新しいアクターに置き換えられます．</p>
 </dd>
@@ -1281,27 +1281,27 @@
 </dd>
 <dt><strong>shade</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a></span></dt><dd><p>デフォルトはオフです．シェーディングがオンの場合，マッパはシェーディング計算を実行できます - 場合によっては，シェーディングが適用されない(例えば，最大強度投影)ため，このフラグをオンにしてもシェーディングは実行されません．</p>
 </dd>
-<dt><strong>diffuse</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The diffuse lighting coefficient. Default <code class="docutils literal notranslate"><span class="pre">1.0</span></code>.</p>
+<dt><strong>diffuse</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>拡散照明係数．デフォルト <code class="docutils literal notranslate"><span class="pre">1.0</span></code> 。</p>
 </dd>
-<dt><strong>specular</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The specular lighting coefficient. Default <code class="docutils literal notranslate"><span class="pre">0.0</span></code>.</p>
+<dt><strong>specular</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>鏡面反射光の係数．デフォルト <code class="docutils literal notranslate"><span class="pre">0.0</span></code> 。</p>
 </dd>
-<dt><strong>specular_power</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The specular power. Between <code class="docutils literal notranslate"><span class="pre">0.0</span></code> and <code class="docutils literal notranslate"><span class="pre">128.0</span></code>.</p>
+<dt><strong>specular_power</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>鏡面パワー． <code class="docutils literal notranslate"><span class="pre">0.0</span></code> から <code class="docutils literal notranslate"><span class="pre">128.0</span></code> 。</p>
 </dd>
 <dt><strong>render</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Trueの場合，強制的にレンダリングします．デフォルトは <code class="docutils literal notranslate"><span class="pre">True</span></code> ．</p>
 </dd>
-<dt><strong>**kwargs</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Optional keyword arguments.</p>
+<dt><strong>**kwargs</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>オプションのキーワード引数。</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">vtk.vtkActor</span></code></dt><dd><p>VTK actor of the volume.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">vtk.vtkActor</span></code></dt><dd><p>体積のVTKアクター．</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>Show a built-in volume example with the coolwarm colormap.</p>
+<p>クールウォームのカラーマップを使って、内蔵されたボリュームの例を示します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">bolt_nut</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_bolt_nut</span><span class="p">()</span>

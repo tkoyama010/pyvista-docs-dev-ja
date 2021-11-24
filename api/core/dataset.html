@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Data Sets &#8212; PyVista 0.32.dev0 ドキュメント</title>
+    <title>データセット &#8212; PyVista 0.32.dev0 ドキュメント</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -211,7 +211,7 @@
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="current reference internal" href="#">
-     Data Sets
+     データセット
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -228,7 +228,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="pointsets.html">
-     Point Sets
+     ポイントセット
     </a>
    </li>
    <li class="toctree-l2">
@@ -306,7 +306,7 @@
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#dataset-api-reference">
-   Dataset API Reference
+   データセットAPIリファレンス
   </a>
  </li>
 </ul>
@@ -331,7 +331,7 @@
               <div>
                 
   <section id="data-sets">
-<span id="ref-dataset"></span><h1>Data Sets<a class="headerlink" href="#data-sets" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<span id="ref-dataset"></span><h1>データセット<a class="headerlink" href="#data-sets" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>データセットは任意の空間的参照情報であり，通常は3 D空間内の表面またはボリュームのジオメトリ表現で構成されます．VTKにおいて，このスーパークラスは <a class="reference external" href="https://vtk.org/doc/nightly/html/classvtkDataSet.html">vtk.vtkDataSet</a> 抽象クラスによって表現されます．</p>
 <p>VTKでは，データセットは，PyVistaが直接アクセスを提供するジオメトリ，トポロジ，およびアトリビュートで構成されます:</p>
 <ul class="simple">
@@ -340,10 +340,9 @@
 <li><p>アトリビュートは，データセットの点またはセルのいずれかに関連付けられた任意のデータ値です．</p></li>
 </ul>
 <p>以下のデータタイプのすべては，データセットのサブクラスにリストされ，基本クラス <a class="reference internal" href="_autosummary/pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a> にラップする共通の機能セットを共有します．</p>
-<p>For additional details regarding PyVista's data model, please see
-<a class="reference internal" href="../../user-guide/data_model.html#pyvista-data-model"><span class="std std-ref">PyVistaデータモデル</span></a>.</p>
+<p>PyVistaのデータモデルについての詳細は、 <a class="reference internal" href="../../user-guide/data_model.html#pyvista-data-model"><span class="std std-ref">PyVistaデータモデル</span></a> をご覧ください。</p>
 <section id="dataset-api-reference">
-<h2>Dataset API Reference<a class="headerlink" href="#dataset-api-reference" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>データセットAPIリファレンス<a class="headerlink" href="#dataset-api-reference" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p><a class="reference internal" href="_autosummary/pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a> クラスは，PyVistaで空間的に参照される全てのデータセットに <em>共通な</em> アトリビュートを保持します．この基本クラスはVTKの <a class="reference external" href="https://vtk.org/doc/nightly/html/classvtkDataSet.html">vtk.vtkDataSet</a> クラスに似ています．</p>
 <table class="longtable table autosummary">
 <colgroup>

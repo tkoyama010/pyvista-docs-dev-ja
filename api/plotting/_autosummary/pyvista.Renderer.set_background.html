@@ -685,11 +685,11 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.Renderer.set_background">
 <span class="sig-prename descclassname"><span class="pre">Renderer.</span></span><span class="sig-name descname"><span class="pre">set_background</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">color</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">top</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Renderer.set_background" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Set the background color of this renderer.</p>
-<dl class="field-list">
+<dd><p>このレンダラーの背景色を設定します。</p>
+<dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
-<dd class="field-odd"><dl>
-<dt><strong>color</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or 3 <code class="xref py py-obj docutils literal notranslate"><span class="pre">item</span></code> <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>文字列，RGBリスト，または16進カラー文字列．デフォルトはデフォルトテーマです．例:</p>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>color</strong><span class="classifier">python:str または 3 要素 python:list, optional</span></dt><dd><p>文字列，RGBリスト，または16進カラー文字列．デフォルトはデフォルトテーマです．例:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">color='white'</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">color='w'</span></code></p></li>
@@ -697,14 +697,13 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">color='#FFFFFF'</span></code></p></li>
 </ul>
 </dd>
-<dt><strong>top</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or 3 <code class="xref py py-obj docutils literal notranslate"><span class="pre">item</span></code> <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>これを指定すると， <code class="docutils literal notranslate"><span class="pre">color</span></code> 引数が一番下にあり， <code class="docutils literal notranslate"><span class="pre">top</span></code> で指定されたカラーがレンダラの一番上のカラーであるグラディエントバックグラウンドが有効になります．</p>
+<dt><strong>top</strong><span class="classifier">python:str または 3 要素 python:list, optional</span></dt><dd><p>これを指定すると， <code class="docutils literal notranslate"><span class="pre">color</span></code> 引数が一番下にあり， <code class="docutils literal notranslate"><span class="pre">top</span></code> で指定されたカラーがレンダラの一番上のカラーであるグラディエントバックグラウンドが有効になります．</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>Set the background color to black with a gradient to white at
-the top of the plot.</p>
+<p>背景色を黒にして、プロットの上部に白へのグラデーションを設定します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">actor</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">pyvista</span><span class="o">.</span><span class="n">Cone</span><span class="p">())</span>

@@ -211,12 +211,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../dataset.html">
-     Data Sets
+     データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../pointsets.html">
-     Point Sets
+     ポイントセット
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -751,7 +751,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.StructuredGrid.streamlines.html">
-         流線
+         streamlines
         </a>
        </li>
        <li class="toctree-l4">
@@ -996,7 +996,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.StructuredGrid.volume.html">
-         体積
+         volume
         </a>
        </li>
        <li class="toctree-l4">
@@ -1123,7 +1123,7 @@
 <dd class="field-odd"><dl>
 <dt><strong>n</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>作成するスライスの数。</p>
 </dd>
-<dt><strong>axis</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>スライスを生成する軸．スライスに垂直．文字列名 (<code class="docutils literal notranslate"><span class="pre">'x'</span></code>, <code class="docutils literal notranslate"><span class="pre">'y'</span></code>, or <code class="docutils literal notranslate"><span class="pre">'z'</span></code>) または軸インデックス (<code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span></code>, or <code class="docutils literal notranslate"><span class="pre">2</span></code>) を指定できます．</p>
+<dt><strong>axis</strong><span class="classifier">python:str または python:int</span></dt><dd><p>スライスを生成する軸．スライスに垂直．文字列名 (<code class="docutils literal notranslate"><span class="pre">'x'</span></code>, <code class="docutils literal notranslate"><span class="pre">'y'</span></code>, or <code class="docutils literal notranslate"><span class="pre">'z'</span></code>) または軸インデックス (<code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span></code>, or <code class="docutils literal notranslate"><span class="pre">2</span></code>) を指定できます．</p>
 </dd>
 <dt><strong>tolerance</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>スライスを作成するための、データセットの境界の端に対する許容範囲です。 <code class="docutils literal notranslate"><span class="pre">n</span></code> 個のスライスは、指定された軸に沿って、 <code class="docutils literal notranslate"><span class="pre">bounds</span></code> の各辺の内側に <code class="docutils literal notranslate"><span class="pre">tolerance</span></code> の絶対的なパディングを持って等間隔に配置されます。デフォルトでは、指定された軸に沿った <code class="docutils literal notranslate"><span class="pre">bounds</span></code> の1%です。</p>
 </dd>

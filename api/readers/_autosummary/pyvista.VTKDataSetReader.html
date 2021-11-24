@@ -412,9 +412,7 @@
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">VTKDataSetReader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.VTKDataSetReader" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>.vtkファイル用のVTKデータセットリーダーです。</p>
 <p class="rubric">備考</p>
-<p>This reader calls <cite>ReadAllScalarsOn</cite>, <cite>ReadAllColorScalarsOn</cite>,
-<cite>ReadAllNormalsOn</cite>, <cite>ReadAllTCoordsOn</cite>, <cite>ReadAllVectorsOn</cite>,
-and <cite>ReadAllFieldsOn</cite> on the underlying <cite>vtkDataSetReader</cite>.</p>
+<p>このリーダは下位の <cite>vtkDataSetReader</cite> に対して <cite>ReadAllScalarsOn</cite>, <cite>ReadAllColorScalarsOn</cite>, <cite>ReadAllNormalsOn</cite>, <cite>ReadAllTCoordsOn</cite>, <cite>ReadAllVectorsOn</cite>, および <cite>ReadAllFieldsOn</cite> を呼び出します。</p>
 <p class="rubric">例</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
@@ -438,7 +436,7 @@ and <cite>ReadAllFieldsOn</cite> on the underlying <cite>vtkDataSetReader</cite>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.VTKDataSetReader.read.html#pyvista.VTKDataSetReader.read" title="pyvista.VTKDataSetReader.read"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VTKDataSetReader.read</span></code></a>()</p></td>
-<td><p>Read data in file.</p></td>
+<td><p>ファイルのデータを読み込む。</p></td>
 </tr>
 </tbody>
 </table>
@@ -450,7 +448,7 @@ and <cite>ReadAllFieldsOn</cite> on the underlying <cite>vtkDataSetReader</cite>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.VTKDataSetReader.reader.html#pyvista.VTKDataSetReader.reader" title="pyvista.VTKDataSetReader.reader"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VTKDataSetReader.reader</span></code></a></p></td>
-<td><p>Return the vtk Reader object.</p></td>
+<td><p>vtk Reader オブジェクトを返します。</p></td>
 </tr>
 </tbody>
 </table>

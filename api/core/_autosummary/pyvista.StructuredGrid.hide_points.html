@@ -211,12 +211,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../dataset.html">
-     Data Sets
+     データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../pointsets.html">
-     Point Sets
+     ポイントセット
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -751,7 +751,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.StructuredGrid.streamlines.html">
-         流線
+         streamlines
         </a>
        </li>
        <li class="toctree-l4">
@@ -996,7 +996,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.StructuredGrid.volume.html">
-         体積
+         volume
         </a>
        </li>
        <li class="toctree-l4">
@@ -1117,14 +1117,12 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.StructuredGrid.hide_points">
 <span class="sig-prename descclassname"><span class="pre">StructuredGrid.</span></span><span class="sig-name descname"><span class="pre">hide_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ind</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.StructuredGrid.hide_points" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Hide points without deleting them.</p>
-<p>Hides points by setting the ghost_points array to <code class="docutils literal notranslate"><span class="pre">HIDDEN_CELL</span></code>.</p>
+<dd><p>ポイントを削除せずに非表示にします．</p>
+<p>ghost_points配列を <code class="docutils literal notranslate"><span class="pre">HIDDEN_CELL</span></code> に設定して，ポイントを非表示にします．</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>ind</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a></span></dt><dd><p>List or array of point indices to be hidden.  The array
-can also be a boolean array of the same size as the number
-of points.</p>
+<dt><strong>ind</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a></span></dt><dd><p>非表示にするポイントインデックスのリストまたは配列を指定します．配列は，ポイントの数と同じサイズのブール配列にすることもできます．</p>
 </dd>
 </dl>
 </dd>

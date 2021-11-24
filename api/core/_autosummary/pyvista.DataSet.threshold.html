@@ -211,7 +211,7 @@
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../dataset.html">
-     Data Sets
+     データセット
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -701,7 +701,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.DataSet.streamlines.html">
-         流線
+         streamlines
         </a>
        </li>
        <li class="toctree-l4">
@@ -936,7 +936,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.DataSet.volume.html">
-         体積
+         volume
         </a>
        </li>
       </ul>
@@ -945,7 +945,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../pointsets.html">
-     Point Sets
+     ポイントセット
     </a>
    </li>
    <li class="toctree-l2">
@@ -1043,29 +1043,19 @@
 <dt class="sig sig-object py" id="pyvista.DataSet.threshold">
 <span class="sig-prename descclassname"><span class="pre">DataSet.</span></span><span class="sig-name descname"><span class="pre">threshold</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scalars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">invert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">continuous</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preference</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cell'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">all_scalars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSet.threshold" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>入力データセットに <code class="docutils literal notranslate"><span class="pre">vtkThreshold</span></code> フィルタを適用します．</p>
-<p>This filter will apply a <code class="docutils literal notranslate"><span class="pre">vtkThreshold</span></code> filter to the input
-dataset and return the resulting object. This extracts cells
-where the scalar value in each cell satisfies the threshold
-criterion.  If <code class="docutils literal notranslate"><span class="pre">scalars</span></code> is <code class="docutils literal notranslate"><span class="pre">None</span></code>, the input's active
-scalars array is used.</p>
+<p>このフィルタは <code class="docutils literal notranslate"><span class="pre">vtkThreshold</span></code> フィルタを入力データセットに適用し，結果のオブジェクトを取得します．各セルのスカラー値が閾値の基準を満たすセルを抽出します． <code class="docutils literal notranslate"><span class="pre">scalars</span></code> が <code class="docutils literal notranslate"><span class="pre">None</span></code> の場合，アクティブスカラ配列が使用されます．</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>value</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>データしきい値に使用する単一の値または(最小，最大)．シーケンスの場合，長さは2にする必要があります．値を指定しない場合，NaN以外のデータ範囲を使用してNaN値が削除されます．</p>
+<dt><strong>value</strong><span class="classifier">python:float か python:sequence, optional</span></dt><dd><p>データしきい値に使用する単一の値または(最小，最大)．シーケンスの場合，長さは2にする必要があります．値を指定しない場合，NaN以外のデータ範囲を使用してNaN値が削除されます．</p>
 </dd>
 <dt><strong>scalars</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>しきい値に対するスカラーの名前．デフォルトは現在アクティブなスカラーです．</p>
 </dd>
-<dt><strong>invert</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>If value is a single value, when invert is <code class="docutils literal notranslate"><span class="pre">True</span></code> cells
-are kept when their values are below parameter <code class="docutils literal notranslate"><span class="pre">&quot;value&quot;</span></code>.
-When invert is <code class="docutils literal notranslate"><span class="pre">False</span></code> cells are kept when their value is
-above the threshold <code class="docutils literal notranslate"><span class="pre">&quot;value&quot;</span></code>.  Default is <code class="docutils literal notranslate"><span class="pre">False</span></code>:
-yielding above the threshold <code class="docutils literal notranslate"><span class="pre">&quot;value&quot;</span></code>.</p>
+<dt><strong>invert</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>値が単一の値の場合，invertがTrueのとき，セルの値がパラメータ <code class="docutils literal notranslate"><span class="pre">&quot;value&quot;</span></code> を下回っているときにセルが保持されます．invertが <code class="docutils literal notranslate"><span class="pre">False</span></code> のとき，セルの値がしきい値 <code class="docutils literal notranslate"><span class="pre">&quot;value&quot;</span></code> を上回っているときにセルが保持されます．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です:しきい値 <code class="docutils literal notranslate"><span class="pre">&quot;value&quot;</span></code> を上回ってセルが生成されます．</p>
 </dd>
 <dt><strong>continuous</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Trueの場合，頂点からの離散スカラー値のセットではなく，連続間隔[最小セルスカラー，最大セルスカラー]がしきい値境界との交差に使用されます．</p>
 </dd>
-<dt><strong>preference</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>When <code class="docutils literal notranslate"><span class="pre">scalars</span></code> is specified, this is the preferred array
-type to search for in the dataset.  Must be either
-<code class="docutils literal notranslate"><span class="pre">'point'</span></code> or <code class="docutils literal notranslate"><span class="pre">'cell'</span></code>.</p>
+<dt><strong>preference</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">scalars</span></code> が指定されている場合，これはデータセット内で検索するために推奨される配列型です． <code class="docutils literal notranslate"><span class="pre">'point'</span></code> または <code class="docutils literal notranslate"><span class="pre">'cell'</span></code> のいずれかでなければなりません。</p>
 </dd>
 <dt><strong>all_scalars</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>点データからスカラーを使用する場合，この値が <code class="docutils literal notranslate"><span class="pre">True</span></code> のときは，セル内のすべての点のすべてのスカラーが閾値を満たす必要があります． <code class="docutils literal notranslate"><span class="pre">False</span></code> のときは，閾値の基準を満たすスカラー値を持つセルの任意の点がセルを抽出します．</p>
 </dd>
@@ -1075,7 +1065,7 @@ type to search for in the dataset.  Must be either
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="pyvista.UnstructuredGrid.html#pyvista.UnstructuredGrid" title="pyvista.UnstructuredGrid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.UnstructuredGrid</span></code></a></dt><dd><p>Dataset containing geometry that meets the threshold requirements.</p>
+<dt><a class="reference internal" href="pyvista.UnstructuredGrid.html#pyvista.UnstructuredGrid" title="pyvista.UnstructuredGrid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.UnstructuredGrid</span></code></a></dt><dd><p>閾値要件を満たすジオメトリを含むデータセット。</p>
 </dd>
 </dl>
 </dd>
@@ -1097,8 +1087,7 @@ type to search for in the dataset.  Must be either
 <span class="go">  N Arrays:     1</span>
 </pre></div>
 </div>
-<p>Apply the threshold filter to Perlin noise.  First generate
-the structured grid.</p>
+<p>Perlinノイズに閾値フィルターを適用します。まず、構造化されたグリッドを生成します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">noise</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">perlin_noise</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">sample_function</span><span class="p">(</span><span class="n">noise</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">],</span>
@@ -1106,7 +1095,7 @@ the structured grid.</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gist_earth_r&#39;</span><span class="p">,</span> <span class="n">show_scalar_bar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Next, apply the threshold.</p>
+<p>次に、閾値を適用します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">noise</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">perlin_noise</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">sample_function</span><span class="p">(</span><span class="n">noise</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">],</span>

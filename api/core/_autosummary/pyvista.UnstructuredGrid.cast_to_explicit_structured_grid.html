@@ -211,12 +211,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../dataset.html">
-     Data Sets
+     データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../pointsets.html">
-     Point Sets
+     ポイントセット
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -741,7 +741,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.UnstructuredGrid.streamlines.html">
-         流線
+         streamlines
         </a>
        </li>
        <li class="toctree-l4">
@@ -1001,7 +1001,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.UnstructuredGrid.volume.html">
-         体積
+         volume
         </a>
        </li>
       </ul>
@@ -1115,7 +1115,7 @@
 <dd><p>明示的に構造化されたグリッドにキャストします．</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p>This feature is only available in <code class="docutils literal notranslate"><span class="pre">vtk&gt;=9.0.0</span></code></p>
+<p>この機能は <code class="docutils literal notranslate"><span class="pre">vtk&gt;=9.0.0</span></code> でのみ利用可能です。</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値</dt>
@@ -1126,8 +1126,7 @@
 </dd>
 <dt class="field-even">エラー処理</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference external" href="https://docs.python.org/dev/library/exceptions.html#TypeError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TypeError</span></code></a></dt><dd><p>If the unstructured grid doesn't have the <code class="docutils literal notranslate"><span class="pre">'BLOCK_I'</span></code>,
-<code class="docutils literal notranslate"><span class="pre">'BLOCK_J'</span></code> and <code class="docutils literal notranslate"><span class="pre">'BLOCK_K'</span></code> cells arrays.</p>
+<dt><a class="reference external" href="https://docs.python.org/dev/library/exceptions.html#TypeError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TypeError</span></code></a></dt><dd><p>非構造化グリッドが <code class="docutils literal notranslate"><span class="pre">'BLOCK_I'</span></code>, <code class="docutils literal notranslate"><span class="pre">'BLOCK_J'</span></code> および <code class="docutils literal notranslate"><span class="pre">'BLOCK_K'</span></code> セル配列を持たない場合．</p>
 </dd>
 </dl>
 </dd>

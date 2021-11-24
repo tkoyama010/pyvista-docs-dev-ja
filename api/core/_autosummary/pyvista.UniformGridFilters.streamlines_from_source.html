@@ -211,12 +211,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../dataset.html">
-     Data Sets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../pointsets.html">
-     Point Sets
+     ポイントセット
     </a>
    </li>
    <li class="toctree-l2">
@@ -511,7 +511,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.UniformGridFilters.streamlines.html">
-         流線
+         streamlines
         </a>
        </li>
        <li class="toctree-l4">
@@ -680,8 +680,7 @@
 </dd>
 <dt><strong>max_step_length</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>線積分に使用される最大ステップサイズで，長さまたはセル長の単位で表されます．RK45のような適応積分器にのみ有効．</p>
 </dd>
-<dt><strong>max_steps</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Maximum number of steps for integrating a streamline.
-Defaults to <code class="docutils literal notranslate"><span class="pre">2000</span></code>.</p>
+<dt><strong>max_steps</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>流線を積分するための最大ステップ数．デフォルトは <code class="docutils literal notranslate"><span class="pre">2000</span></code> 。</p>
 </dd>
 <dt><strong>terminal_speed</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>積分を終了する端子速度の値です．</p>
 </dd>
@@ -689,8 +688,7 @@ Defaults to <code class="docutils literal notranslate"><span class="pre">2000</s
 </dd>
 <dt><strong>max_time</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>LENGTH_UNITで表される流線の最大長を指定します．</p>
 </dd>
-<dt><strong>compute_vorticity</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Vorticity computation at streamline points. Necessary for generating
-proper stream-ribbons using the <code class="docutils literal notranslate"><span class="pre">vtkRibbonFilter</span></code>.</p>
+<dt><strong>compute_vorticity</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>流線点での渦度計算 ． <code class="docutils literal notranslate"><span class="pre">vtkRibbonFilter</span></code> を使用して適切な流線リボンを生成するために必要．</p>
 </dd>
 <dt><strong>rotation_scale</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>これを使用して，リボンがツイストするレートをスケールできます．デフォルトは1です．</p>
 </dd>

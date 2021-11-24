@@ -51,7 +51,7 @@
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="検索" href="../../../search.html" />
     <link rel="next" title="streamlines_from_source" href="pyvista.UnstructuredGrid.streamlines_from_source.html" />
-    <link rel="prev" title="流線" href="pyvista.UnstructuredGrid.streamlines.html" />
+    <link rel="prev" title="streamlines" href="pyvista.UnstructuredGrid.streamlines.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="ja">
     
@@ -211,12 +211,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../dataset.html">
-     Data Sets
+     データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../pointsets.html">
-     Point Sets
+     ポイントセット
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -741,7 +741,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.UnstructuredGrid.streamlines.html">
-         流線
+         streamlines
         </a>
        </li>
        <li class="toctree-l4 current active">
@@ -1001,7 +1001,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.UnstructuredGrid.volume.html">
-         体積
+         volume
         </a>
        </li>
       </ul>
@@ -1116,48 +1116,38 @@
 <p>このフィルタは xy 平面上にあるデータセット、つまり <code class="docutils literal notranslate"><span class="pre">z=0</span></code> にのみ対応しています。メモリの使用量が多くならないように、 <cite>separating_distance</cite> の選択には特に注意が必要です。 デフォルトの単位はセルの長さです。</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>This filter is unstable for <code class="docutils literal notranslate"><span class="pre">vtk&lt;9.0</span></code>.
-See <a class="reference external" href="https://github.com/pyvista/pyvista/issues/1508">pyvista issue 1508</a>.</p>
+<p>このフィルタは <code class="docutils literal notranslate"><span class="pre">vtk&lt;9.0</span></code> では不安定です。 <a class="reference external" href="https://github.com/pyvista/pyvista/issues/1508">pyvista issue 1508</a> を参照してください。</p>
 </div>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
 <dt><strong>vectors</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>積分するアクティブベクトルフィールドの文字列名．</p>
 </dd>
-<dt><strong>start_position</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a>(<a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>), <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The seed point for generating evenly spaced streamlines.
-If not supplied, a random position in the dataset is chosen.</p>
+<dt><strong>start_position</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a>(<a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>), <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>等間隔のストリームラインを生成するためのシードポイントです．指定されていない場合は，データセット内のランダムな位置が選ばれます．</p>
 </dd>
-<dt><strong>integrator_type</strong><span class="classifier">{2, 4}, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The integrator type to be used for streamline generation.
-The default is Runge-Kutta2. The recognized solvers are:
-RUNGE_KUTTA2 (<code class="docutils literal notranslate"><span class="pre">2</span></code>) and RUNGE_KUTTA4 (<code class="docutils literal notranslate"><span class="pre">4</span></code>).</p>
+<dt><strong>integrator_type</strong><span class="classifier">{2, 4}, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>流線生成に使用する積分器のタイプです．デフォルトはRunge-Kutta2です．認識されるソルバーは:  RUNGE_KUTTA2 (<code class="docutils literal notranslate"><span class="pre">2</span></code>) と RUNGE_KUTTA4 (<code class="docutils literal notranslate"><span class="pre">4</span></code>) です．</p>
 </dd>
-<dt><strong>step_length</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Constant Step size used for line integration, expressed in length
-units or cell length units (see <code class="docutils literal notranslate"><span class="pre">step_unit</span></code> parameter).</p>
+<dt><strong>step_length</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>長さ単位またはセル長単位で表されます（ <code class="docutils literal notranslate"><span class="pre">step_unit</span></code> パラメータを参照）。</p>
 </dd>
 <dt><strong>step_unit</strong><span class="classifier">{'cl', 'l'}, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>均一積分ステップ単位．有効な単位は LENGTH_UNIT (<code class="docutils literal notranslate"><span class="pre">'l'</span></code>) と CELL_LENGTH_UNIT (<code class="docutils literal notranslate"><span class="pre">'cl'</span></code>) だけに制限されます．デフォルトは CELL_LENGTH_UNIT : <code class="docutils literal notranslate"><span class="pre">'cl'</span></code> です．</p>
 </dd>
-<dt><strong>max_steps</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Maximum number of steps for integrating a streamline.
-Defaults to <code class="docutils literal notranslate"><span class="pre">2000</span></code>.</p>
+<dt><strong>max_steps</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>流線を積分するための最大ステップ数．デフォルトは <code class="docutils literal notranslate"><span class="pre">2000</span></code> 。</p>
 </dd>
 <dt><strong>terminal_speed</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>積分を終了する端子速度の値です．</p>
 </dd>
 <dt><strong>interpolator_type</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>ポイントまたはセルによる流線積分中にセルの位置を特定するために，速度フィールド補間のタイプを設定します．セルロケータはポイントロケータよりも堅牢です．オプションは <code class="docutils literal notranslate"><span class="pre">'point'</span></code> または <code class="docutils literal notranslate"><span class="pre">'cell'</span></code>  ( <code class="docutils literal notranslate"><span class="pre">'p'</span></code> および <code class="docutils literal notranslate"><span class="pre">'c'</span></code> の省略形もサポートされています．)です．</p>
 </dd>
-<dt><strong>separating_distance</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The distance between streamlines expressed in <code class="docutils literal notranslate"><span class="pre">step_unit</span></code>.</p>
+<dt><strong>separating_distance</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>流線間の距離を <code class="docutils literal notranslate"><span class="pre">step_unit</span></code> で表したものです。</p>
 </dd>
-<dt><strong>separating_distance_ratio</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Streamline integration is stopped if streamlines are closer than
-<code class="docutils literal notranslate"><span class="pre">SeparatingDistance*SeparatingDistanceRatio</span></code> to other streamlines.</p>
+<dt><strong>separating_distance_ratio</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>流線が他のストリームラインと <code class="docutils literal notranslate"><span class="pre">SeparatingDistance*SeparatingDistanceRatio</span></code> よりも近い場合、流線の積分は停止します。</p>
 </dd>
-<dt><strong>closed_loop_maximum_distance</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The distance between points on a streamline to determine a
-closed loop.</p>
+<dt><strong>closed_loop_maximum_distance</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>閉ループを決定する流線上のポイント間の距離。</p>
 </dd>
-<dt><strong>loop_angle</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The maximum angle in degrees between points to determine a closed loop.</p>
+<dt><strong>loop_angle</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>閉ループを決定するポイント間の最大角度。単位は度。</p>
 </dd>
-<dt><strong>minimum_number_of_loop_points</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The minimum number of points before which a closed loop will
-be determined.</p>
+<dt><strong>minimum_number_of_loop_points</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>閉ループが決定されるまでの最小ポイント数です。</p>
 </dd>
-<dt><strong>compute_vorticity</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Vorticity computation at streamline points. Necessary for generating
-proper stream-ribbons using the <code class="docutils literal notranslate"><span class="pre">vtkRibbonFilter</span></code>.</p>
+<dt><strong>compute_vorticity</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>流線点での渦度計算 ． <code class="docutils literal notranslate"><span class="pre">vtkRibbonFilter</span></code> を使用して適切な流線リボンを生成するために必要．</p>
 </dd>
 <dt><strong>progress_bar</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>進行状況を示す進行状況バーを表示します．</p>
 </dd>
@@ -1171,9 +1161,7 @@ proper stream-ribbons using the <code class="docutils literal notranslate"><span
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>Plot evenly spaced streamlines for cylinder in a crossflow.
-This dataset is a multiblock dataset, and the fluid velocity is in the
-first block.</p>
+<p>クロスフロー中のシリンダーの流線を等間隔でプロットします．このデータセットはマルチブロックのデータセットであり，流体の速度は最初のブロックにあります．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_cylinder_crossflow</span><span class="p">()</span>

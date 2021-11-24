@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>細分化 &#8212; PyVista 0.32.dev0 ドキュメント</title>
+    <title>subdivide &#8212; PyVista 0.32.dev0 ドキュメント</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
   <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -211,12 +211,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../dataset.html">
-     Data Sets
+     データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../pointsets.html">
-     Point Sets
+     ポイントセット
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -461,7 +461,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.decimate.html">
-         間引く
+         decimate
         </a>
        </li>
        <li class="toctree-l4">
@@ -596,7 +596,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.geodesic.html">
-         測地
+         geodesic
         </a>
        </li>
        <li class="toctree-l4">
@@ -871,7 +871,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.streamlines.html">
-         流線
+         streamlines
         </a>
        </li>
        <li class="toctree-l4">
@@ -891,7 +891,7 @@
        </li>
        <li class="toctree-l4 current active">
         <a class="current reference internal" href="#">
-         細分化
+         subdivide
         </a>
        </li>
        <li class="toctree-l4">
@@ -1196,7 +1196,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.volume.html">
-         体積
+         volume
         </a>
        </li>
       </ul>
@@ -1308,12 +1308,12 @@
               <div>
                 
   <section id="subdivide">
-<h1>細分化<a class="headerlink" href="#subdivide" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>subdivide<a class="headerlink" href="#subdivide" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.PolyData.subdivide">
 <span class="sig-prename descclassname"><span class="pre">PolyData.</span></span><span class="sig-name descname"><span class="pre">subdivide</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nsub</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subfilter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inplace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.subdivide" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>単一の接続された三角形メッシュ内の三角形の数を増やします．</p>
-<p>Uses one of the following vtk subdivision filters to subdivide a mesh:</p>
+<p>以下のvtkサブディビジョンフィルターのいずれかを使用して、メッシュを細分化します。</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">vtkButterflySubdivisionFilter</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vtkLoopSubdivisionFilter</span></code></p></li>
@@ -1323,15 +1323,14 @@
 <p>バタフライサブディビジョンとループサブディビジョンでは，分割時にスムージングが実行され，分割時にメッシュにアーティファクトが生じる場合があります．</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p>Subdivision filter sometimes fails for multiple part
-meshes.  The input should be one connected mesh.</p>
+<p>複数のパーツからなるメッシュに対して、サブディビジョンフィルタが失敗することがあります。 入力は1つの連結されたメッシュでなければなりません。</p>
 </div>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
 <dt><strong>nsub</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>サブディビジョンの数．サブディビジョンごとに4つの新しい三角形が作成されるため，作成される三角形の数は <code class="docutils literal notranslate"><span class="pre">nface*4**nsub</span></code> となります．ここで， <code class="docutils literal notranslate"><span class="pre">nface</span></code> は現在のフェースの数です．</p>
 </dd>
-<dt><strong>subfilter</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Can be one of the following:</p>
+<dt><strong>subfilter</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>以下のいずれかとなります。</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">'butterfly'</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'loop'</span></code></p></li>
@@ -1352,7 +1351,7 @@ meshes.  The input should be one connected mesh.</p>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>First, create an example coarse sphere mesh and plot it.</p>
+<p>まず、例となる粗い球体のメッシュを作成し、それをプロットします。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">(</span><span class="n">phi_resolution</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">theta_resolution</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
@@ -1362,7 +1361,7 @@ meshes.  The input should be one connected mesh.</p>
 <figure class="align-default">
 <img alt="../../../_images/pyvista-PolyData-subdivide-1_00_00.png" src="../../../_images/pyvista-PolyData-subdivide-1_00_00.png" />
 </figure>
-<p>Subdivide the sphere mesh using linear subdivision.</p>
+<p>球体メッシュを線形細分化します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">submesh</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">subdivide</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;linear&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">submesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
@@ -1370,7 +1369,7 @@ meshes.  The input should be one connected mesh.</p>
 <figure class="align-default">
 <img alt="../../../_images/pyvista-PolyData-subdivide-1_01_00.png" src="../../../_images/pyvista-PolyData-subdivide-1_01_00.png" />
 </figure>
-<p>Subdivide the sphere mesh using loop subdivision.</p>
+<p>ループ細分化で球体メッシュを細分化します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">submesh</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">subdivide</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;loop&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">submesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
@@ -1378,7 +1377,7 @@ meshes.  The input should be one connected mesh.</p>
 <figure class="align-default">
 <img alt="../../../_images/pyvista-PolyData-subdivide-1_02_00.png" src="../../../_images/pyvista-PolyData-subdivide-1_02_00.png" />
 </figure>
-<p>Subdivide the sphere mesh using butterfly subdivision.</p>
+<p>球体メッシュをButterfly subdivisionします。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">submesh</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">subdivide</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;butterfly&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">submesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>

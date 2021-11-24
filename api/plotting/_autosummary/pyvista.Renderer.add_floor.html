@@ -690,18 +690,13 @@
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>face</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The face at which to place the plane. Options are
-(<code class="docutils literal notranslate"><span class="pre">'-z'</span></code>, <code class="docutils literal notranslate"><span class="pre">'-y'</span></code>, <code class="docutils literal notranslate"><span class="pre">'-x'</span></code>, <code class="docutils literal notranslate"><span class="pre">'+z'</span></code>, <code class="docutils literal notranslate"><span class="pre">'+y'</span></code>, and
-<code class="docutils literal notranslate"><span class="pre">'+z'</span></code>). Where the <code class="docutils literal notranslate"><span class="pre">-/+</span></code> sign indicates on which side of
-the axis the plane will lie.  For example, <code class="docutils literal notranslate"><span class="pre">'-z'</span></code> would
-generate a floor on the XY-plane and the bottom of the
-scene (minimum z).</p>
+<dt><strong>face</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>平面を配置する面．オプションは (<code class="docutils literal notranslate"><span class="pre">'-z'</span></code>, <code class="docutils literal notranslate"><span class="pre">'-y'</span></code>, <code class="docutils literal notranslate"><span class="pre">'-x'</span></code>, <code class="docutils literal notranslate"><span class="pre">'+z'</span></code>, <code class="docutils literal notranslate"><span class="pre">'+y'</span></code>, and <code class="docutils literal notranslate"><span class="pre">'+z'</span></code>) で， <code class="docutils literal notranslate"><span class="pre">-/+</span></code> sign は平面が軸のどちら側に位置するかを示します．たとえば， <code class="docutils literal notranslate"><span class="pre">'-z'</span></code> はXY面とシーンの下部(最小z)にフロアを生成します．</p>
 </dd>
 <dt><strong>i_resolution</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>平面上のi方向の点の数です．</p>
 </dd>
 <dt><strong>j_resolution</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>平面上のj方向の点の数．</p>
 </dd>
-<dt><strong>color</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or 3 <code class="xref py py-obj docutils literal notranslate"><span class="pre">item</span></code> <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>すべてのラベルと軸ラベルの色です．デフォルトはグレーです．文字列，RGBリスト，または16進カラー文字列．</p>
+<dt><strong>color</strong><span class="classifier">python:str または 3 要素 python:list, optional</span></dt><dd><p>すべてのラベルと軸ラベルの色です．デフォルトはグレーです．文字列，RGBリスト，または16進カラー文字列．</p>
 </dd>
 <dt><strong>line_width</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>エッジの厚み． <code class="docutils literal notranslate"><span class="pre">show_edges</span></code> が <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合のみ．</p>
 </dd>
@@ -715,23 +710,21 @@ scene (minimum z).</p>
 </dd>
 <dt><strong>edge_color</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>メッシュのエッジのカラー．</p>
 </dd>
-<dt><strong>reset_camera</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Resets the camera when <code class="docutils literal notranslate"><span class="pre">True</span></code> after adding the floor.</p>
+<dt><strong>reset_camera</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>床を追加した後、カメラを <code class="docutils literal notranslate"><span class="pre">True</span></code> にリセットします。</p>
 </dd>
 <dt><strong>pad</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>0と1の間のパディングパーセンテージ．</p>
 </dd>
 <dt><strong>offset</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>平面法線に沿ったパーセンテージオフセット．</p>
 </dd>
-<dt><strong>pickable</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Make this floor actor pickable in the renderer.</p>
+<dt><strong>pickable</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>このフロアアクターをレンダラーで選択できるようにします。</p>
 </dd>
-<dt><strong>store_floor_kwargs</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Stores the keyword arguments used when adding this floor.
-Useful when updating the bounds and regenerating the
-floor.</p>
+<dt><strong>store_floor_kwargs</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>このフロアの追加時に使用されたキーワード引数を格納します。境界を更新してフロアを再生成するときに便利です。</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">vtk.vtkActor</span></code></dt><dd><p>VTK actor of the floor.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">vtk.vtkActor</span></code></dt><dd><p>床のVTKアクター．</p>
 </dd>
 </dl>
 </dd>

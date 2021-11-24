@@ -51,7 +51,7 @@
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="検索" href="../../../search.html" />
     <link rel="next" title="add_field_array" href="pyvista.UnstructuredGrid.add_field_array.html" />
-    <link rel="prev" title="体積" href="pyvista.PolyData.volume.html" />
+    <link rel="prev" title="volume" href="pyvista.PolyData.volume.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="ja">
     
@@ -211,12 +211,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../dataset.html">
-     Data Sets
+     データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../pointsets.html">
-     Point Sets
+     ポイントセット
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -741,7 +741,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.UnstructuredGrid.streamlines.html">
-         流線
+         streamlines
         </a>
        </li>
        <li class="toctree-l4">
@@ -1001,7 +1001,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.UnstructuredGrid.volume.html">
-         体積
+         volume
         </a>
        </li>
       </ul>
@@ -1112,7 +1112,7 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="pyvista.UnstructuredGrid">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">UnstructuredGrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UnstructuredGrid" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Dataset used for arbitrary combinations of all possible cell types.</p>
+<dd><p>データセットは、可能なすべてのセルタイプの任意の組み合わせに使用されます。</p>
 <p>次の方法で初期化できます．</p>
 <ul class="simple">
 <li><p>空のグリッドを作成する</p></li>
@@ -1185,7 +1185,7 @@
 <td><p>セルの型を取得します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.center_of_mass.html#pyvista.UnstructuredGrid.center_of_mass" title="pyvista.UnstructuredGrid.center_of_mass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.center_of_mass</span></code></a>([scalars_weight])</p></td>
-<td><p>Return the coordinates for the center of mass of the mesh.</p></td>
+<td><p>メッシュの重心の座標を返します。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.clear_arrays.html#pyvista.UnstructuredGrid.clear_arrays" title="pyvista.UnstructuredGrid.clear_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.clear_arrays</span></code></a>()</p></td>
 <td><p>点/セル/フィールドデータからすべての配列を削除します．</p></td>
@@ -1386,7 +1386,7 @@
 <td><p>平面でデータセットを反射します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.remove_cells.html#pyvista.UnstructuredGrid.remove_cells" title="pyvista.UnstructuredGrid.remove_cells"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.remove_cells</span></code></a>(ind[, inplace])</p></td>
-<td><p>Remove cells.</p></td>
+<td><p>セルの除去。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.rename_array.html#pyvista.UnstructuredGrid.rename_array" title="pyvista.UnstructuredGrid.rename_array"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.rename_array</span></code></a>(old_name, new_name)</p></td>
 <td><p>配列名を変更するには，配列を検索して名前を変更します．</p></td>
@@ -1434,7 +1434,7 @@
 <td><p>ベクトルを名前で検索し，適切にアクティブに設定します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.shallow_copy.html#pyvista.UnstructuredGrid.shallow_copy" title="pyvista.UnstructuredGrid.shallow_copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.shallow_copy</span></code></a>(to_copy)</p></td>
-<td><p>Create a shallow copy from a different dataset into this one.</p></td>
+<td><p>別のデータセットからこのデータセットへの浅いコピーを作成します。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.shrink.html#pyvista.UnstructuredGrid.shrink" title="pyvista.UnstructuredGrid.shrink"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.shrink</span></code></a>([shrink_factor, ...])</p></td>
 <td><p>メッシュの個々の面を縮小します．</p></td>
@@ -1563,7 +1563,7 @@
 <td><p>​セルタイプからマップされたすべてのセルを含むディクショナリを取得します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.celltypes.html#pyvista.UnstructuredGrid.celltypes" title="pyvista.UnstructuredGrid.celltypes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.celltypes</span></code></a></p></td>
-<td><p>Return the cell types array.</p></td>
+<td><p>セルタイプの配列を返します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.center.html#pyvista.UnstructuredGrid.center" title="pyvista.UnstructuredGrid.center"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.center</span></code></a></p></td>
 <td><p>境界ボックスの中心を取得します．</p></td>
@@ -1599,7 +1599,7 @@
 <td><p>ポイント数を取得します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.offset.html#pyvista.UnstructuredGrid.offset" title="pyvista.UnstructuredGrid.offset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.offset</span></code></a></p></td>
-<td><p>Return the cell locations array.</p></td>
+<td><p>セルの位置を示す配列を返します。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.point_arrays.html#pyvista.UnstructuredGrid.point_arrays" title="pyvista.UnstructuredGrid.point_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.point_arrays</span></code></a></p></td>
 <td><p>DataSetAttributesとしてvtkPointDataを取得します．</p></td>

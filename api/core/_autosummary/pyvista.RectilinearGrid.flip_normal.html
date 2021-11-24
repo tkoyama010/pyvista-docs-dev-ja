@@ -211,12 +211,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../dataset.html">
-     Data Sets
+     データセット
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../pointsets.html">
-     Point Sets
+     ポイントセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
@@ -716,7 +716,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.RectilinearGrid.streamlines.html">
-         流線
+         streamlines
         </a>
        </li>
        <li class="toctree-l4">
@@ -961,7 +961,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.RectilinearGrid.volume.html">
-         体積
+         volume
         </a>
        </li>
        <li class="toctree-l4">
@@ -1081,10 +1081,9 @@
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>normal</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a></span></dt><dd><p>Normal vector to flip about.</p>
+<dt><strong>normal</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a></span></dt><dd><p>反転するための法線ベクトル。</p>
 </dd>
-<dt><strong>point</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Point to rotate about.  Defaults to center of mesh at
-<a class="reference internal" href="pyvista.DataSet.center.html#pyvista.DataSet.center" title="pyvista.DataSet.center"><code class="xref py py-attr docutils literal notranslate"><span class="pre">center</span></code></a>.</p>
+<dt><strong>point</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>回転させる点です。 デフォルトでは <a class="reference internal" href="pyvista.DataSet.center.html#pyvista.DataSet.center" title="pyvista.DataSet.center"><code class="xref py py-attr docutils literal notranslate"><span class="pre">center</span></code></a> のメッシュの中心になります。</p>
 </dd>
 <dt><strong>transform_all_input_vectors</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> の時，全ての入力ベクトルは変換される．それ以外の場合は，ポイント，法線，およびアクティブなベクトルだけが変換されます．</p>
 </dd>

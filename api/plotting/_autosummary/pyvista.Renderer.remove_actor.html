@@ -689,7 +689,7 @@
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>actor</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">vtk.vtkActor</span></code>, <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a></span></dt><dd><p>タイプが <code class="docutils literal notranslate"><span class="pre">str</span></code> の場合，指定された名前で以前に追加されたアクターを削除します．タイプが <code class="docutils literal notranslate"><span class="pre">vtk.vtkActor</span></code> の場合，以前にアクターがレンダラーに追加されていたら，によってアクターが削除されます． <code class="docutils literal notranslate"><span class="pre">list</span></code> または <code class="docutils literal notranslate"><span class="pre">tuple</span></code> の場合は，各アクターを繰り返し削除します．</p>
+<dt><strong>actor</strong><span class="classifier">python:str, vtk.vtkActor, python:list または python:tuple</span></dt><dd><p>タイプが <code class="docutils literal notranslate"><span class="pre">str</span></code> の場合，指定された名前で以前に追加されたアクターを削除します．タイプが <code class="docutils literal notranslate"><span class="pre">vtk.vtkActor</span></code> の場合，以前にアクターがレンダラーに追加されていたら，によってアクターが削除されます． <code class="docutils literal notranslate"><span class="pre">list</span></code> または <code class="docutils literal notranslate"><span class="pre">tuple</span></code> の場合は，各アクターを繰り返し削除します．</p>
 </dd>
 <dt><strong>reset_camera</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>すべてのアクターが見えるようにカメラをリセットします．</p>
 </dd>
@@ -699,14 +699,13 @@
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> when actor removed.  <code class="docutils literal notranslate"><span class="pre">False</span></code> when actor has not
-been removed.</p>
+<dt><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a></dt><dd><p>アクターが削除された場合は <code class="docutils literal notranslate"><span class="pre">True</span></code> ．アクターが削除されていない場合は <code class="docutils literal notranslate"><span class="pre">False</span></code> ．</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>Add two meshes to a plotter and then remove the sphere actor.</p>
+<p>2つのメッシュをプロッターに追加し、球体のアクタを削除します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Cube</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>

@@ -51,7 +51,7 @@
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="検索" href="../../../search.html" />
     <link rel="next" title="add_field_array" href="pyvista.PolyData.add_field_array.html" />
-    <link rel="prev" title="Point Sets" href="../pointsets.html" />
+    <link rel="prev" title="ポイントセット" href="../pointsets.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="ja">
     
@@ -211,12 +211,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../dataset.html">
-     Data Sets
+     データセット
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../pointsets.html">
-     Point Sets
+     ポイントセット
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -461,7 +461,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.decimate.html">
-         間引く
+         decimate
         </a>
        </li>
        <li class="toctree-l4">
@@ -596,7 +596,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.geodesic.html">
-         測地
+         geodesic
         </a>
        </li>
        <li class="toctree-l4">
@@ -871,7 +871,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.streamlines.html">
-         流線
+         streamlines
         </a>
        </li>
        <li class="toctree-l4">
@@ -891,7 +891,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.subdivide.html">
-         細分化
+         subdivide
         </a>
        </li>
        <li class="toctree-l4">
@@ -1196,7 +1196,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.volume.html">
-         体積
+         volume
         </a>
        </li>
       </ul>
@@ -1375,7 +1375,7 @@
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">vertices</span><span class="p">,</span> <span class="n">lines</span><span class="o">=</span><span class="n">lines</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Initialize from a filename.</p>
+<p>ファイル名から初期化。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">examples</span><span class="o">.</span><span class="n">antfile</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1405,7 +1405,7 @@
 <td><p>2つのメッシュにブーリアンの交差演算を行います。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyData.boolean_union.html#pyvista.PolyData.boolean_union" title="pyvista.PolyData.boolean_union"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.boolean_union</span></code></a>(other_mesh[, ...])</p></td>
-<td><p>Perform a boolean union operation on two meshes.</p></td>
+<td><p>2つのメッシュにブーリアンの和集合演算を行います。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.PolyData.cast_to_unstructured_grid.html#pyvista.PolyData.cast_to_unstructured_grid" title="pyvista.PolyData.cast_to_unstructured_grid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.cast_to_unstructured_grid</span></code></a>()</p></td>
 <td><p>このオブジェクトの新しい表現を <a class="reference internal" href="pyvista.UnstructuredGrid.html#pyvista.UnstructuredGrid" title="pyvista.UnstructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UnstructuredGrid</span></code></a> として取得します．</p></td>
@@ -1429,7 +1429,7 @@
 <td><p>セルの型を取得します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyData.center_of_mass.html#pyvista.PolyData.center_of_mass" title="pyvista.PolyData.center_of_mass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.center_of_mass</span></code></a>([scalars_weight])</p></td>
-<td><p>Return the coordinates for the center of mass of the mesh.</p></td>
+<td><p>メッシュの重心の座標を返します。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.PolyData.clean.html#pyvista.PolyData.clean" title="pyvista.PolyData.clean"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.clean</span></code></a>([point_merging, tolerance, ...])</p></td>
 <td><p>メッシュをクリーンします．</p></td>
@@ -1522,7 +1522,7 @@
 <td><p>メッシュのポイント単位の曲率を取得します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.PolyData.decimate.html#pyvista.PolyData.decimate" title="pyvista.PolyData.decimate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.decimate</span></code></a>(target_reduction[, ...])</p></td>
-<td><p>Reduce the number of triangles in a triangular mesh using <code class="docutils literal notranslate"><span class="pre">vtkQuadricDecimation</span></code>.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">vtkQuadricDecimation</span></code> を使用して，三角形メッシュ内の三角形の数を減らします．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyData.decimate_boundary.html#pyvista.PolyData.decimate_boundary" title="pyvista.PolyData.decimate_boundary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.decimate_boundary</span></code></a>([...])</p></td>
 <td><p>境界の三角形分割の小数点付きバージョンを取得します．</p></td>
@@ -1534,7 +1534,7 @@
 <td><p>このデータオブジェクトをディープコピーとして別のデータオブジェクトで上書きします。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.PolyData.delaunay_2d.html#pyvista.PolyData.delaunay_2d" title="pyvista.PolyData.delaunay_2d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.delaunay_2d</span></code></a>([tol, alpha, offset, ...])</p></td>
-<td><p>Apply a 2D Delaunay filter along the best fitting plane.</p></td>
+<td><p>最適フィット平面に沿って2D Delaunayフィルタを適用します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyData.delaunay_3d.html#pyvista.PolyData.delaunay_3d" title="pyvista.PolyData.delaunay_3d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.delaunay_3d</span></code></a>([alpha, tol, offset, ...])</p></td>
 <td><p>メッシュの3D Delaunay三角形分割を作成します．</p></td>
@@ -1630,7 +1630,7 @@
 <td><p>2つのメッシュ間の交差を計算します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.PolyData.merge.html#pyvista.PolyData.merge" title="pyvista.PolyData.merge"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.merge</span></code></a>(dataset[, merge_points, ...])</p></td>
-<td><p>Merge this mesh with one or more datasets.</p></td>
+<td><p>このメッシュを1つまたは複数のデータセットと結合します。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyData.multi_ray_trace.html#pyvista.PolyData.multi_ray_trace" title="pyvista.PolyData.multi_ray_trace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.multi_ray_trace</span></code></a>(origins, directions)</p></td>
 <td><p>複数のレイトレース計算を実行します．</p></td>
@@ -1690,7 +1690,7 @@
 <td><p>平面でデータセットを反射します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.PolyData.remove_cells.html#pyvista.PolyData.remove_cells" title="pyvista.PolyData.remove_cells"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.remove_cells</span></code></a>(ind[, inplace])</p></td>
-<td><p>Remove cells.</p></td>
+<td><p>セルの除去。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyData.remove_points.html#pyvista.PolyData.remove_points" title="pyvista.PolyData.remove_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.remove_points</span></code></a>(remove[, mode, ...])</p></td>
 <td><p>点を削除してメッシュを再構築します．</p></td>
@@ -1744,7 +1744,7 @@
 <td><p>ベクトルを名前で検索し，適切にアクティブに設定します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.PolyData.shallow_copy.html#pyvista.PolyData.shallow_copy" title="pyvista.PolyData.shallow_copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.shallow_copy</span></code></a>(to_copy)</p></td>
-<td><p>Create a shallow copy from a different dataset into this one.</p></td>
+<td><p>別のデータセットからこのデータセットへの浅いコピーを作成します。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyData.shrink.html#pyvista.PolyData.shrink" title="pyvista.PolyData.shrink"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.shrink</span></code></a>([shrink_factor, progress_bar])</p></td>
 <td><p>メッシュの個々の面を縮小します．</p></td>
@@ -1894,7 +1894,7 @@
 <td><p>セルの法線を取得します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyData.faces.html#pyvista.PolyData.faces" title="pyvista.PolyData.faces"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.faces</span></code></a></p></td>
-<td><p>Return a pointer to the faces as a numpy array.</p></td>
+<td><p>面へのポインタをnumpy配列として取得します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.PolyData.field_arrays.html#pyvista.PolyData.field_arrays" title="pyvista.PolyData.field_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.field_arrays</span></code></a></p></td>
 <td><p>DataSetAttributesとしてvtkFieldDataを取得します．</p></td>
@@ -1903,13 +1903,13 @@
 <td><p>DataSetAttributesとしてFieldData を取得します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.PolyData.is_all_triangles.html#pyvista.PolyData.is_all_triangles" title="pyvista.PolyData.is_all_triangles"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.is_all_triangles</span></code></a></p></td>
-<td><p>Return if all the faces of the <a class="reference internal" href="#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> are triangles.</p></td>
+<td><p><a class="reference internal" href="#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> の全ての面が三角形であるかどうかを返します。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyData.length.html#pyvista.PolyData.length" title="pyvista.PolyData.length"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.length</span></code></a></p></td>
 <td><p>境界ボックスの対角線の長さを取得します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.PolyData.lines.html#pyvista.PolyData.lines" title="pyvista.PolyData.lines"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.lines</span></code></a></p></td>
-<td><p>Return a pointer to the lines as a numpy array.</p></td>
+<td><p>ラインへのポインタをnumpy配列として取得します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyData.memory_address.html#pyvista.PolyData.memory_address" title="pyvista.PolyData.memory_address"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.memory_address</span></code></a></p></td>
 <td><p>基盤となるVTK C++オブジェクトのアドレスを取得します。</p></td>
@@ -1924,7 +1924,7 @@
 <td><p>セルの数を取得します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyData.n_lines.html#pyvista.PolyData.n_lines" title="pyvista.PolyData.n_lines"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.n_lines</span></code></a></p></td>
-<td><p>Return the number of lines.</p></td>
+<td><p>線の数を返します。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.PolyData.n_open_edges.html#pyvista.PolyData.n_open_edges" title="pyvista.PolyData.n_open_edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.n_open_edges</span></code></a></p></td>
 <td><p>このメッシュ上の開いたエッジの数を取得します．</p></td>
@@ -1933,7 +1933,7 @@
 <td><p>データセット全体のポイント数を取得します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.PolyData.n_verts.html#pyvista.PolyData.n_verts" title="pyvista.PolyData.n_verts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.n_verts</span></code></a></p></td>
-<td><p>Return the number of vertices.</p></td>
+<td><p>頂点数を取得します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyData.number_of_cells.html#pyvista.PolyData.number_of_cells" title="pyvista.PolyData.number_of_cells"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.number_of_cells</span></code></a></p></td>
 <td><p>セルの数を取得します．</p></td>
