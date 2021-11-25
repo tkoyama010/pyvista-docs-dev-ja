@@ -593,16 +593,16 @@
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">blocks</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">MultiBlock</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>コレクションにデータセットを追加します。</p>
+<p>コレクションにデータセットを追加します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">blocks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sphere</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>名前付きのブロックを追加します。</p>
+<p>名前付きのブロックを追加します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">blocks</span><span class="p">[</span><span class="s2">&quot;cube&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Cube</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>オブジェクトのリストからインスタンスを作成します。</p>
+<p>オブジェクトのリストからインスタンスを作成します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)),</span> <span class="n">pv</span><span class="o">.</span><span class="n">Cube</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)),</span> 
 <span class="gp">... </span>        <span class="n">pv</span><span class="o">.</span><span class="n">Cone</span><span class="p">()]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">blocks</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">MultiBlock</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
@@ -612,7 +612,7 @@
 <figure class="align-default">
 <img alt="../../../_images/pyvista-MultiBlock-1_00_00.png" src="../../../_images/pyvista-MultiBlock-1_00_00.png" />
 </figure>
-<p>辞書からインスタンスを作成します。</p>
+<p>辞書からインスタンスを作成します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;cube&quot;</span><span class="p">:</span> <span class="n">pv</span><span class="o">.</span><span class="n">Cube</span><span class="p">(),</span> <span class="s2">&quot;sphere&quot;</span><span class="p">:</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">))}</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">blocks</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">MultiBlock</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">blocks</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
@@ -638,10 +638,10 @@
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.MultiBlock.add_field_array.html#pyvista.MultiBlock.add_field_array" title="pyvista.MultiBlock.add_field_array"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MultiBlock.add_field_array</span></code></a>(scalars, name[, deep])</p></td>
-<td><p>フィールドデータを追加します。</p></td>
+<td><p>フィールドデータを追加します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.MultiBlock.add_field_data.html#pyvista.MultiBlock.add_field_data" title="pyvista.MultiBlock.add_field_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MultiBlock.add_field_data</span></code></a>(array, name[, deep])</p></td>
-<td><p>フィールドデータを追加します。</p></td>
+<td><p>フィールドデータを追加します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.MultiBlock.append.html#pyvista.MultiBlock.append" title="pyvista.MultiBlock.append"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MultiBlock.append</span></code></a>(dataset)</p></td>
 <td><p>データセットを次のブロックインデックスに追加します．</p></td>
@@ -668,13 +668,13 @@
 <td><p>境界によって定義された境界ボックスによってデータセットをクリップします．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.MultiBlock.combine.html#pyvista.MultiBlock.combine" title="pyvista.MultiBlock.combine"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MultiBlock.combine</span></code></a>([merge_points, tolerance])</p></td>
-<td><p>すべてのブロックを1つの非構造化グリッドにまとめます。</p></td>
+<td><p>すべてのブロックを1つの非構造化グリッドにまとめます．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.MultiBlock.compute_cell_sizes.html#pyvista.MultiBlock.compute_cell_sizes" title="pyvista.MultiBlock.compute_cell_sizes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MultiBlock.compute_cell_sizes</span></code></a>([length, ...])</p></td>
 <td><p>1 D (長さ) ，2 D (面積) ，および3 D (体積) セルのサイズを計算します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.MultiBlock.copy.html#pyvista.MultiBlock.copy" title="pyvista.MultiBlock.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MultiBlock.copy</span></code></a>([deep])</p></td>
-<td><p>マルチブロックのコピーを返します。</p></td>
+<td><p>マルチブロックのコピーを返します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.MultiBlock.copy_attributes.html#pyvista.MultiBlock.copy_attributes" title="pyvista.MultiBlock.copy_attributes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MultiBlock.copy_attributes</span></code></a>(dataset)</p></td>
 <td><p>入力データセットオブジェクトのデータ属性をコピーします．</p></td>
@@ -686,7 +686,7 @@
 <td><p>入力データセットオブジェクトの構造(ジオメトリとトポロジ)をコピーします．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.MultiBlock.deep_copy.html#pyvista.MultiBlock.deep_copy" title="pyvista.MultiBlock.deep_copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MultiBlock.deep_copy</span></code></a>(to_copy)</p></td>
-<td><p>このデータオブジェクトをディープコピーとして別のデータオブジェクトで上書きします。</p></td>
+<td><p>このデータオブジェクトをディープコピーとして別のデータオブジェクトで上書きします．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.MultiBlock.elevation.html#pyvista.MultiBlock.elevation" title="pyvista.MultiBlock.elevation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MultiBlock.elevation</span></code></a>([low_point, ...])</p></td>
 <td><p>データセットにスカラー値を生成します．</p></td>
@@ -695,7 +695,7 @@
 <td><p>データセットのすべての内部/外部エッジをPolyDataとして抽出します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.MultiBlock.extract_geometry.html#pyvista.MultiBlock.extract_geometry" title="pyvista.MultiBlock.extract_geometry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MultiBlock.extract_geometry</span></code></a>()</p></td>
-<td><p>すべてのブロックのジオメトリをサーフェスに抽出します。</p></td>
+<td><p>すべてのブロックのジオメトリをサーフェスに抽出します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.MultiBlock.get.html#pyvista.MultiBlock.get" title="pyvista.MultiBlock.get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MultiBlock.get</span></code></a>(index)</p></td>
 <td><p>インデックスまたは名前でブロックを取得します．</p></td>
@@ -788,7 +788,7 @@
 <td><p>境界ボックスの対角線の長さを取得します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.MultiBlock.memory_address.html#pyvista.MultiBlock.memory_address" title="pyvista.MultiBlock.memory_address"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MultiBlock.memory_address</span></code></a></p></td>
-<td><p>基盤となるVTK C++オブジェクトのアドレスを取得します。</p></td>
+<td><p>基盤となるVTK C++オブジェクトのアドレスを取得します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.MultiBlock.n_blocks.html#pyvista.MultiBlock.n_blocks" title="pyvista.MultiBlock.n_blocks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MultiBlock.n_blocks</span></code></a></p></td>
 <td><p>ブロックセットの総数を取得します．</p></td>

@@ -1329,13 +1329,13 @@
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p>スライスされたデータセット。</p>
+<dt><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p>スライスされたデータセット．</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>ランダムヒルズデータセットを直交する3つの平面でスライスします。</p>
+<p>ランダムヒルズデータセットを直交する3つの平面でスライスします．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
@@ -1347,7 +1347,7 @@
 <span class="gp">&gt;&gt;&gt; </span><span class="n">line_slice</span> <span class="o">=</span> <span class="n">hills</span><span class="o">.</span><span class="n">slice_along_line</span><span class="p">(</span><span class="n">arc</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>円弧と丘のメッシュをプロットします。</p>
+<p>円弧と丘のメッシュをプロットします．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">hills</span><span class="p">,</span> <span class="n">smooth_shading</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;wireframe&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">line_slice</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">render_lines_as_tubes</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
@@ -1359,7 +1359,7 @@
 <figure class="align-default">
 <img alt="../../../_images/pyvista-PolyData-slice_along_line-1_00_00.png" src="../../../_images/pyvista-PolyData-slice_along_line-1_00_00.png" />
 </figure>
-<p>このフィルターを使ったその他の例については、 <a class="reference internal" href="../../../examples/01-filter/slicing.html#slice-example"><span class="std std-ref">スライシング</span></a> を参照してください。</p>
+<p>このフィルターを使ったその他の例については， <a class="reference internal" href="../../../examples/01-filter/slicing.html#slice-example"><span class="std std-ref">スライシング</span></a> を参照してください．</p>
 </dd></dl>
 
 </section>

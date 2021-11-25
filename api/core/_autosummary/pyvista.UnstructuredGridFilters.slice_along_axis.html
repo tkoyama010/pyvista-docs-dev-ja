@@ -656,19 +656,19 @@
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>n</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>作成するスライスの数。</p>
+<dt><strong>n</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>作成するスライスの数．</p>
 </dd>
 <dt><strong>axis</strong><span class="classifier">python:str または python:int</span></dt><dd><p>スライスを生成する軸．スライスに垂直．文字列名 (<code class="docutils literal notranslate"><span class="pre">'x'</span></code>, <code class="docutils literal notranslate"><span class="pre">'y'</span></code>, or <code class="docutils literal notranslate"><span class="pre">'z'</span></code>) または軸インデックス (<code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span></code>, or <code class="docutils literal notranslate"><span class="pre">2</span></code>) を指定できます．</p>
 </dd>
-<dt><strong>tolerance</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>スライスを作成するための、データセットの境界の端に対する許容範囲です。 <code class="docutils literal notranslate"><span class="pre">n</span></code> 個のスライスは、指定された軸に沿って、 <code class="docutils literal notranslate"><span class="pre">bounds</span></code> の各辺の内側に <code class="docutils literal notranslate"><span class="pre">tolerance</span></code> の絶対的なパディングを持って等間隔に配置されます。デフォルトでは、指定された軸に沿った <code class="docutils literal notranslate"><span class="pre">bounds</span></code> の1%です。</p>
+<dt><strong>tolerance</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>スライスを作成するための，データセットの境界の端に対する許容範囲です． <code class="docutils literal notranslate"><span class="pre">n</span></code> 個のスライスは，指定された軸に沿って， <code class="docutils literal notranslate"><span class="pre">bounds</span></code> の各辺の内側に <code class="docutils literal notranslate"><span class="pre">tolerance</span></code> の絶対的なパディングを持って等間隔に配置されます．デフォルトでは，指定された軸に沿った <code class="docutils literal notranslate"><span class="pre">bounds</span></code> の1%です．</p>
 </dd>
 <dt><strong>generate_triangles</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>これが有効な場合(デフォルトで <code class="docutils literal notranslate"><span class="pre">False</span></code> )，出力は三角形になります．それ以外の場合，出力は交差ポリゴンになります．</p>
 </dd>
 <dt><strong>contour</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，スライス後に <code class="docutils literal notranslate"><span class="pre">contour</span></code> フィルタを適用します</p>
 </dd>
-<dt><strong>bounds</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>メッシュの境界をオーバーライドする6つの長さのシーケンスです。指定された軸に沿った境界線は、スライスが取られる範囲を定義します。</p>
+<dt><strong>bounds</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>メッシュの境界をオーバーライドする6つの長さのシーケンスです．指定された軸に沿った境界線は，スライスが取られる範囲を定義します．</p>
 </dd>
-<dt><strong>center</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>スライスを取得する線の位置を指定する3つの長さのシーケンスです。デフォルトはメッシュの中心です。</p>
+<dt><strong>center</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>スライスを取得する線の位置を指定する3つの長さのシーケンスです．デフォルトはメッシュの中心です．</p>
 </dd>
 <dt><strong>progress_bar</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>進行状況を示す進行状況バーを表示します．</p>
 </dd>
@@ -676,13 +676,13 @@
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p>スライスされたデータセット。</p>
+<dt><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p>スライスされたデータセット．</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>ランダムヒルズデータセットをX方向にスライスします。</p>
+<p>ランダムヒルズデータセットをX方向にスライスします．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">hills</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_random_hills</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">slices</span> <span class="o">=</span> <span class="n">hills</span><span class="o">.</span><span class="n">slice_along_axis</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
@@ -692,7 +692,7 @@
 <figure class="align-default">
 <img alt="../../../_images/pyvista-UnstructuredGridFilters-slice_along_axis-1_00_00.png" src="../../../_images/pyvista-UnstructuredGridFilters-slice_along_axis-1_00_00.png" />
 </figure>
-<p>ランダムヒルズデータセットをZ方向にスライスします。</p>
+<p>ランダムヒルズデータセットをZ方向にスライスします．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">hills</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_random_hills</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">slices</span> <span class="o">=</span> <span class="n">hills</span><span class="o">.</span><span class="n">slice_along_axis</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s1">&#39;z&#39;</span><span class="p">)</span>
@@ -702,7 +702,7 @@
 <figure class="align-default">
 <img alt="../../../_images/pyvista-UnstructuredGridFilters-slice_along_axis-1_01_00.png" src="../../../_images/pyvista-UnstructuredGridFilters-slice_along_axis-1_01_00.png" />
 </figure>
-<p>このフィルターを使ったその他の例については、 <a class="reference internal" href="../../../examples/01-filter/slicing.html#slice-example"><span class="std std-ref">スライシング</span></a> を参照してください。</p>
+<p>このフィルターを使ったその他の例については， <a class="reference internal" href="../../../examples/01-filter/slicing.html#slice-example"><span class="std std-ref">スライシング</span></a> を参照してください．</p>
 </dd></dl>
 
 </section>

@@ -1334,7 +1334,7 @@
 </dd>
 <dt><strong>feature_angle</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>鋭いエッジを定義する角度．隣接するポリゴン間の角度の差がこの値より大きい場合，共有エッジは &quot;鋭い&quot; とみなされます．デフォルトは30.0です．</p>
 </dd>
-<dt><strong>inplace</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>インプレイスメッシュを更新します．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です．</p>
+<dt><strong>inplace</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>in-placeメッシュを更新します．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です．</p>
 </dd>
 <dt><strong>progress_bar</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>進行状況を示す進行状況バーを表示します．</p>
 </dd>
@@ -1342,7 +1342,7 @@
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p>セルとポイントの法線で更新されたメッシュ。</p>
+<dt><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p>セルとポイントの法線で更新されたメッシュ．</p>
 </dd>
 </dl>
 </dd>
@@ -1351,7 +1351,7 @@
 <p><code class="docutils literal notranslate"><span class="pre">&quot;Normals&quot;</span></code> という名前の以前の配列は上書きされます．</p>
 <p>法線はポリゴンと三角形ストリップに対してのみ計算されます．線分または頂点の法線は計算されません．</p>
 <p>三角形ストリップは三角形ポリゴンに分割されます．三角形を再分割することもできます．</p>
-<p>ポイントやセルの法線の配列を取得したい場合は、 <a class="reference internal" href="pyvista.PolyData.point_normals.html#pyvista.PolyData.point_normals" title="pyvista.PolyData.point_normals"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyData.point_normals()</span></code></a> や <a class="reference internal" href="pyvista.PolyData.cell_normals.html#pyvista.PolyData.cell_normals" title="pyvista.PolyData.cell_normals"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyData.cell_normals()</span></code></a> を実行した方が簡単かもしれません。</p>
+<p>ポイントやセルの法線の配列を取得したい場合は， <a class="reference internal" href="pyvista.PolyData.point_normals.html#pyvista.PolyData.point_normals" title="pyvista.PolyData.point_normals"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyData.point_normals()</span></code></a> や <a class="reference internal" href="pyvista.PolyData.cell_normals.html#pyvista.PolyData.cell_normals" title="pyvista.PolyData.cell_normals"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyData.cell_normals()</span></code></a> を実行した方が簡単かもしれません．</p>
 <p class="rubric">例</p>
 <p>球のサーフェスの点法線を計算します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
@@ -1372,7 +1372,7 @@
 <span class="go">(1680, 3)</span>
 </pre></div>
 </div>
-<p>このフィルターを使ったその他の例については、 <a class="reference internal" href="../../../examples/01-filter/compute-normals.html#surface-normal-example"><span class="std std-ref">表面の法線を計算します</span></a> を参照してください。</p>
+<p>このフィルターを使ったその他の例については， <a class="reference internal" href="../../../examples/01-filter/compute-normals.html#surface-normal-example"><span class="std std-ref">表面の法線を計算します</span></a> を参照してください．</p>
 </dd></dl>
 
 </section>

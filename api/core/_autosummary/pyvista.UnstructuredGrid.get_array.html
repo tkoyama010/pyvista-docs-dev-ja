@@ -1116,7 +1116,7 @@
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>配列の名前。</p>
+<dt><strong>name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>配列の名前．</p>
 </dd>
 <dt><strong>preference</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>スカラーが指定されている場合，これはデータセット内で検索するために推奨される配列型です． <code class="docutils literal notranslate"><span class="pre">'point'</span></code> ， <code class="docutils literal notranslate"><span class="pre">'cell'</span></code> ，または <code class="docutils literal notranslate"><span class="pre">'field'</span></code> のいずれかである必要があります．</p>
 </dd>
@@ -1124,13 +1124,13 @@
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.pyvista_ndarray</span></code></dt><dd><p>要求された配列。</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.pyvista_ndarray</span></code></dt><dd><p>要求された配列．</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>様々な配列を持つDataSetを作成します。</p>
+<p>様々な配列を持つDataSetを作成します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Cube</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span><span class="o">.</span><span class="n">clear_data</span><span class="p">()</span>
@@ -1141,17 +1141,17 @@
 <span class="go">[&#39;point-data&#39;, &#39;field-data&#39;, &#39;cell-data&#39;]</span>
 </pre></div>
 </div>
-<p>ポイントデータの配列を取得します。</p>
+<p>ポイントデータの配列を取得します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span><span class="o">.</span><span class="n">get_array</span><span class="p">(</span><span class="s1">&#39;point-data&#39;</span><span class="p">)</span>
 <span class="go">array([0, 1, 2, 3, 4, 5, 6, 7])</span>
 </pre></div>
 </div>
-<p>セルデータの配列を取得します。</p>
+<p>セルデータの配列を取得します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span><span class="o">.</span><span class="n">get_array</span><span class="p">(</span><span class="s1">&#39;cell-data&#39;</span><span class="p">)</span>
 <span class="go">array([0, 1, 2, 3, 4, 5])</span>
 </pre></div>
 </div>
-<p>フィールドデータの配列を取得します。</p>
+<p>フィールドデータの配列を取得します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span><span class="o">.</span><span class="n">get_array</span><span class="p">(</span><span class="s1">&#39;field-data&#39;</span><span class="p">)</span>
 <span class="go">array([&#39;a&#39;, &#39;b&#39;, &#39;c&#39;], dtype=&#39;&lt;U1&#39;)</span>
 </pre></div>

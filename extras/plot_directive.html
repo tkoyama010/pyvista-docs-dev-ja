@@ -290,14 +290,14 @@
                 
   <section id="sphinx-pyvista-plot-directive">
 <span id="ref-plot-directive-docs"></span><h1>Sphinx PyVista Plot ディレクティブ<a class="headerlink" href="#sphinx-pyvista-plot-directive" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Sphinxを使ってドキュメントを作成する際に、以下の内容を <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> に追加することで、 <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">pyvista-plot</span></code> ディレクティブを使用して、pyvistaのプロットの静的なイメージを生成することができます。</p>
+<p>Sphinxを使ってドキュメントを作成する際に，以下の内容を <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> に追加することで， <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">pyvista-plot</span></code> ディレクティブを使用して，pyvistaのプロットの静的なイメージを生成することができます．</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
     <span class="s2">&quot;sphinx.ext.napoleon&quot;</span><span class="p">,</span>
     <span class="s2">&quot;pyvista.ext.plot_directive&quot;</span><span class="p">,</span>
 <span class="p">]</span>
 </pre></div>
 </div>
-<p>そうすれば、sphinxのドキュメントファイルの中で、plottingディレクティブを発行することができます。</p>
+<p>そうすれば，sphinxのドキュメントファイルの中で，plottingディレクティブを発行することができます．</p>
 <blockquote>
 <div><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
@@ -311,7 +311,7 @@
 </figcaption>
 </figure>
 </div></blockquote>
-<p>以下のように表示されます。</p>
+<p>以下のように表示されます．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">out</span> <span class="o">=</span> <span class="n">sphere</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
@@ -323,13 +323,13 @@
 <p><span class="caption-text">これはデフォルトの球体</span><a class="headerlink" href="#id2" title="この画像へのパーマリンク">¶</a></p>
 </figcaption>
 </figure>
-<span class="target" id="module-pyvista.ext.plot_directive"></span><p>プロットディレクティブモジュール。</p>
+<span class="target" id="module-pyvista.ext.plot_directive"></span><p>プロットディレクティブモジュール．</p>
 <section id="a-directive-for-including-a-pyvista-plot-in-a-sphinx-document">
 <h2>SphinxドキュメントにPyVistaプロットを含めるためのディレクティブ<a class="headerlink" href="#a-directive-for-including-a-pyvista-plot-in-a-sphinx-document" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p><cite>.. pyvista-plot::</cite> sphinxディレクティブは、インラインの <code class="docutils literal notranslate"><span class="pre">.png</span></code> イメージを含みます。</p>
-<p>プロットのソースコードは、次の2つの方法のいずれかで含まれます。</p>
+<p><cite>.. pyvista-plot::</cite> sphinxディレクティブは，インラインの <code class="docutils literal notranslate"><span class="pre">.png</span></code> イメージを含みます．</p>
+<p>プロットのソースコードは，次の2つの方法のいずれかで含まれます．</p>
 <ol class="arabic">
-<li><p><strong>doctest</strong> 構文を使用しています。</p>
+<li><p><strong>doctest</strong> 構文を使用しています．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">pyvista</span><span class="o">-</span><span class="n">plot</span><span class="p">::</span>
 
    <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">pyvista</span>
@@ -342,13 +342,13 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">plot</span><span class="p">::</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">plot</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
-<p>ソースファイルへのパスが与えられている場合、ディレクティブの内容には、オプションでプロットのキャプションを含めることができます:</p>
+<p>ソースファイルへのパスが与えられている場合，ディレクティブの内容には，オプションでプロットのキャプションを含めることができます:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">plot</span><span class="p">::</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">plot</span><span class="o">.</span><span class="n">py</span>
 
    <span class="n">The</span> <span class="n">plot</span><span class="s1">&#39;s caption.</span>
 </pre></div>
 </div>
-<p>さらに、モジュールをインポートした直後に、（引数なしで）呼び出す関数の名前を指定することもできます。</p>
+<p>さらに，モジュールをインポートした直後に，（引数なしで）呼び出す関数の名前を指定することもできます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">plot</span><span class="p">::</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">plot</span><span class="o">.</span><span class="n">py</span> <span class="n">plot_function1</span>
 </pre></div>
 </div>
@@ -356,43 +356,43 @@
 </ol>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p><code class="docutils literal notranslate"><span class="pre">doctest:+SKIP</span></code> を含むコードブロックはスキップされます。</p>
+<p><code class="docutils literal notranslate"><span class="pre">doctest:+SKIP</span></code> を含むコードブロックはスキップされます．</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p>アニメーションは保存されず、最後のフレームのみが表示されます。</p>
+<p>アニメーションは保存されず，最後のフレームのみが表示されます．</p>
 </div>
 <section id="options">
 <h3>オプション<a class="headerlink" href="#options" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">`pyvista-plot</span></code> ディレクティブは，以下のオプションをサポートしています．</p>
 <blockquote>
 <div><dl class="simple">
-<dt>include-source<span class="classifier">bool</span></dt><dd><p>ソースコードを表示するかどうかを指定します。デフォルトは <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code> の <cite>plot_include_source</cite> 変数で変更できます。</p>
+<dt>include-source<span class="classifier">bool</span></dt><dd><p>ソースコードを表示するかどうかを指定します．デフォルトは <code class="file docutils literal notranslate"><span class="pre">conf.py</span></code> の <cite>plot_include_source</cite> 変数で変更できます．</p>
 </dd>
-<dt>encoding<span class="classifier">str</span></dt><dd><p>もし、このソースファイルがUTF8やASCII以外のエンコーディングである場合には、 <code class="docutils literal notranslate"><span class="pre">:encoding:</span></code> オプションを使ってエンコーディングを指定しなければなりません。 このエンコーディングは <code class="docutils literal notranslate"><span class="pre">-*-</span> <span class="pre">coding</span> <span class="pre">-*-</span></code> メタコメントを使って推測されることはありません。</p>
+<dt>encoding<span class="classifier">str</span></dt><dd><p>もし，このソースファイルがUTF8やASCII以外のエンコーディングである場合には， <code class="docutils literal notranslate"><span class="pre">:encoding:</span></code> オプションを使ってエンコーディングを指定しなければなりません． このエンコーディングは <code class="docutils literal notranslate"><span class="pre">-*-</span> <span class="pre">coding</span> <span class="pre">-*-</span></code> メタコメントを使って推測されることはありません．</p>
 </dd>
-<dt>context<span class="classifier">None</span></dt><dd><p>このオプションが指定された場合、コードは <code class="docutils literal notranslate"><span class="pre">:context:</span></code> オプションが指定された以前のすべてのプロットディレクティブのコンテクストで実行されます。 これはインラインコードのプロットディレクティブにのみ適用され、ファイルから実行されるものには適用されません。</p>
+<dt>context<span class="classifier">None</span></dt><dd><p>このオプションが指定された場合，コードは <code class="docutils literal notranslate"><span class="pre">:context:</span></code> オプションが指定された以前のすべてのプロットディレクティブのコンテクストで実行されます． これはインラインコードのプロットディレクティブにのみ適用され，ファイルから実行されるものには適用されません．</p>
 </dd>
-<dt>nofigs<span class="classifier">bool</span></dt><dd><p>指定された場合、コードブロックは実行されますが、数字は挿入されません。 これは通常 <code class="docutils literal notranslate"><span class="pre">:context:</span></code> オプションと一緒に使うと便利です。</p>
+<dt>nofigs<span class="classifier">bool</span></dt><dd><p>指定された場合，コードブロックは実行されますが，数字は挿入されません． これは通常 <code class="docutils literal notranslate"><span class="pre">:context:</span></code> オプションと一緒に使うと便利です．</p>
 </dd>
-<dt>caption<span class="classifier">str</span></dt><dd><p>指定された場合、オプションの引数が図のキャプションとして使用されます。これは、ファイルからプロットが生成された場合、コンテンツで与えられたキャプションを上書きします。</p>
+<dt>caption<span class="classifier">str</span></dt><dd><p>指定された場合，オプションの引数が図のキャプションとして使用されます．これは，ファイルからプロットが生成された場合，コンテンツで与えられたキャプションを上書きします．</p>
 </dd>
 </dl>
 </div></blockquote>
-<p>さらに、このディレクティブは、 <em>target</em> を除いて、 <cite>image</cite> ディレクティブのすべてのオプションをサポートしています (plot が独自のターゲットを追加するため)。 これらのオプションには <em>alt</em>, <em>height</em>, <em>width</em>, <em>scale</em>, <em>align</em> があります。</p>
+<p>さらに，このディレクティブは， <em>target</em> を除いて， <cite>image</cite> ディレクティブのすべてのオプションをサポートしています (plot が独自のターゲットを追加するため)． これらのオプションには <em>alt</em>, <em>height</em>, <em>width</em>, <em>scale</em>, <em>align</em> があります．</p>
 </section>
 <section id="configuration-options">
 <h3>設定オプション<a class="headerlink" href="#configuration-options" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>plotディレクティブには、以下の設定項目があります。</p>
+<p>plotディレクティブには，以下の設定項目があります．</p>
 <blockquote>
 <div><dl class="simple">
-<dt>plot_include_source</dt><dd><p>include-sourceオプションのデフォルト値。</p>
+<dt>plot_include_source</dt><dd><p>include-sourceオプションのデフォルト値．</p>
 </dd>
-<dt>plot_basedir</dt><dd><p>ベースとなるディレクトリで、 <code class="docutils literal notranslate"><span class="pre">plot::</span></code> のファイル名の相対パスを指定します。 ( <code class="docutils literal notranslate"><span class="pre">None</span></code> または空の場合には、ファイル名はそのディレクティブを含むファイルがあるディレクトリに相対します)。</p>
+<dt>plot_basedir</dt><dd><p>ベースとなるディレクトリで， <code class="docutils literal notranslate"><span class="pre">plot::</span></code> のファイル名の相対パスを指定します． ( <code class="docutils literal notranslate"><span class="pre">None</span></code> または空の場合には，ファイル名はそのディレクティブを含むファイルがあるディレクトリに相対します)．</p>
 </dd>
-<dt>plot_html_show_formats</dt><dd><p>ファイルへのリンクをHTMLで表示するかどうか。</p>
+<dt>plot_html_show_formats</dt><dd><p>ファイルへのリンクをHTMLで表示するかどうか．</p>
 </dd>
-<dt>plot_template</dt><dd><p>再構成されたテキストを作成するためのカスタマイズされたテンプレートを提供します。</p>
+<dt>plot_template</dt><dd><p>再構成されたテキストを作成するためのカスタマイズされたテンプレートを提供します．</p>
 </dd>
 </dl>
 </div></blockquote>

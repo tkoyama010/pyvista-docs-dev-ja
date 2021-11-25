@@ -1042,15 +1042,15 @@ to download the full example code</p>
 <section class="sphx-glr-example-title" id="plot-open-street-map-data">
 <span id="open-street-map-example"></span><span id="sphx-glr-examples-99-advanced-osmnx-example-py"></span><h1>オープンストリートマップデータのプロット<a class="headerlink" href="#plot-open-street-map-data" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>これは元々 <a class="reference external" href="https://github.com/pyvista/pyvista-support/issues/486">pyvista/pyvista-support#486</a> に投稿されました．</p>
-<p><a class="reference external" href="https://github.com/gboeing/osmnx">osmnx</a> をチェックアウトしてください。</p>
-<p>まず、アドレスからグラフを生成します。</p>
+<p><a class="reference external" href="https://github.com/gboeing/osmnx">osmnx</a> をチェックアウトしてください．</p>
+<p>まず，アドレスからグラフを生成します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">osmnx</span> <span class="k">as</span> <span class="nn">ox</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 </pre></div>
 </div>
-<p>Open Street Mapサーバーから直接グラフを読み込んでください。</p>
+<p>Open Street Mapサーバーから直接グラフを読み込んでください．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># address = &#39;Holzgerlingen DE&#39;</span>
 <span class="c1"># graph = ox.graph_from_address(address, dist=500, network_type=&#39;drive&#39;)</span>
 <span class="c1"># pickle.dump(graph, open(&#39;/tmp/tmp.p&#39;, &#39;wb&#39;))</span>
@@ -1060,7 +1060,7 @@ to download the full example code</p>
 <span class="n">graph</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_osmnx_graph</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>次に、 <a class="reference internal" href="../../api/utilities/_autosummary/pyvista.lines_from_points.html#pyvista.lines_from_points" title="pyvista.lines_from_points"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.lines_from_points()</span></code></a> を使って、エッジを pyvista の線に変換します。</p>
+<p>次に， <a class="reference internal" href="../../api/utilities/_autosummary/pyvista.lines_from_points.html#pyvista.lines_from_points" title="pyvista.lines_from_points"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.lines_from_points()</span></code></a> を使って，エッジを pyvista の線に変換します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nodes</span><span class="p">,</span> <span class="n">edges</span> <span class="o">=</span> <span class="n">ox</span><span class="o">.</span><span class="n">graph_to_gdfs</span><span class="p">(</span><span class="n">graph</span><span class="p">)</span>
 <span class="n">lines</span> <span class="o">=</span> <span class="p">[]</span>
 
@@ -1074,7 +1074,7 @@ to download the full example code</p>
     <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>最後に、ラインをマージしてプロットします</p>
+<p>最後に，ラインをマージしてプロットします</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">combined_lines</span> <span class="o">=</span> <span class="n">lines</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">lines</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
 <span class="n">combined_lines</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">line_width</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">)</span>
 </pre></div>

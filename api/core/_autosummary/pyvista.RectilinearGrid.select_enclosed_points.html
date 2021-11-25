@@ -1082,7 +1082,7 @@
 <p>このフィルタはデータ配列を生成して出力しますが，入力データセットは変更しません．セルまたは点を抽出する場合は，さまざまな閾値フィルタを使用できます(すなわち，出力配列の閾値)．</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>フィルタは，サーフェスが閉じていて多様体であることを前提としています．ブーリアンフラグを設定して，フィルタに最初にこれがtrueであるかどうかを強制的にチェックさせることができます．<code class="docutils literal notranslate"><span class="pre">False</span></code> で多様体でない場合は、エラーが発生します。</p>
+<p>フィルタは，サーフェスが閉じていて多様体であることを前提としています．ブーリアンフラグを設定して，フィルタに最初にこれがtrueであるかどうかを強制的にチェックさせることができます．<code class="docutils literal notranslate"><span class="pre">False</span></code> で多様体でない場合は，エラーが発生します．</p>
 </div>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
@@ -1101,13 +1101,13 @@
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">point_data['SelectedPoints']</span></code> という配列を含むメッシュ。</p>
+<dt><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">point_data['SelectedPoints']</span></code> という配列を含むメッシュ．</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>平面上のどの点が多様体球表面メッシュの内部にあるかを決定します。 <a class="reference internal" href="pyvista.DataSetFilters.extract_points.html#pyvista.DataSetFilters.extract_points" title="pyvista.DataSetFilters.extract_points"><code class="xref py py-func docutils literal notranslate"><span class="pre">DataSetFilters.extract_points()</span></code></a> フィルタを使ってこれらの点を抽出し，それをプロットします．</p>
+<p>平面上のどの点が多様体球表面メッシュの内部にあるかを決定します． <a class="reference internal" href="pyvista.DataSetFilters.extract_points.html#pyvista.DataSetFilters.extract_points" title="pyvista.DataSetFilters.extract_points"><code class="xref py py-func docutils literal notranslate"><span class="pre">DataSetFilters.extract_points()</span></code></a> フィルタを使ってこれらの点を抽出し，それをプロットします．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plane</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plane</span><span class="p">()</span>

@@ -826,7 +826,7 @@
 <p>穴は，境界エッジを配置し，それらをループにリンクして，結果のループを三角化することによって識別されます．穴埋め可能な穴のサイズの概算制限を指定できます．</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>この方法ではセグメンテーションが発生することが知られています。 ご自身の責任でお使いください。</p>
+<p>この方法ではセグメンテーションが発生することが知られています． ご自身の責任でお使いください．</p>
 </div>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
@@ -841,13 +841,13 @@
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">inplace=False</span></code> であれば、穴を埋めたメッシュです。</p>
+<dt><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">inplace=False</span></code> であれば，穴を埋めたメッシュです．</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>穴のある部分的な球を作成し，それを塗りつぶします。</p>
+<p>穴のある部分的な球を作成し，それを塗りつぶします．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sphere_with_hole</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">(</span><span class="n">end_theta</span><span class="o">=</span><span class="mi">330</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span> <span class="o">=</span> <span class="n">sphere_with_hole</span><span class="o">.</span><span class="n">fill_holes</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>  

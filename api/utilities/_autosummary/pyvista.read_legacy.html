@@ -426,7 +426,7 @@
 <dt class="sig sig-object py" id="pyvista.read_legacy">
 <span class="sig-name descname"><span class="pre">read_legacy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.read_legacy" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ファイルを読み取るには，VTKの従来のリーダーを使用します．</p>
-<p>データの読み込みには <code class="docutils literal notranslate"><span class="pre">vtk.vtkDataSetReader</span></code> を使用します。</p>
+<p>データの読み込みには <code class="docutils literal notranslate"><span class="pre">vtk.vtkDataSetReader</span></code> を使用します．</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
@@ -436,15 +436,15 @@
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="../../core/_autosummary/pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a></dt><dd><p>ラップされたpyvistaメッシュ。</p>
+<dt><a class="reference internal" href="../../core/_autosummary/pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a></dt><dd><p>ラップされたpyvistaメッシュ．</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">備考</p>
-<p>通常、ファイルからメッシュを読み込むには <a class="reference internal" href="pyvista.read.html#pyvista.read" title="pyvista.read"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.read()</span></code></a> を使うべきで、このリーダーは <code class="docutils literal notranslate"><span class="pre">'.vtk'</span></code> と <code class="docutils literal notranslate"><span class="pre">'.pvtk'</span></code> ファイルに対して自動的に使用されます。</p>
+<p>通常，ファイルからメッシュを読み込むには <a class="reference internal" href="pyvista.read.html#pyvista.read" title="pyvista.read"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.read()</span></code></a> を使うべきで，このリーダーは <code class="docutils literal notranslate"><span class="pre">'.vtk'</span></code> と <code class="docutils literal notranslate"><span class="pre">'.pvtk'</span></code> ファイルに対して自動的に使用されます．</p>
 <p class="rubric">例</p>
-<p>レガシーリーダーを使ってサンプルメッシュを読み込みます。</p>
+<p>レガシーリーダーを使ってサンプルメッシュを読み込みます．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">read_legacy</span><span class="p">(</span><span class="n">examples</span><span class="o">.</span><span class="n">uniformfile</span><span class="p">)</span>

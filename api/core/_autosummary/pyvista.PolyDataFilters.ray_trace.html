@@ -833,7 +833,7 @@
 </dd>
 <dt><strong>first_point</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>最初のポイントの交差のみを取得します．</p>
 </dd>
-<dt><strong>plot</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>レイトレースの結果をプロットするかどうか。</p>
+<dt><strong>plot</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>レイトレースの結果をプロットするかどうか．</p>
 </dd>
 <dt><strong>off_screen</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">plot=True</span></code> 時に画面から消えます．ユニットテストに使用します．</p>
 </dd>
@@ -849,7 +849,7 @@
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>原点から <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">0,</span> <span class="pre">0]</span></code> への光線と、原点を中心とする半径0.5の球との交点を計算します。</p>
+<p>原点から <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">0,</span> <span class="pre">0]</span></code> への光線と，原点を中心とする半径0.5の球との交点を計算します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">point</span><span class="p">,</span> <span class="n">cell</span> <span class="o">=</span> <span class="n">sphere</span><span class="o">.</span><span class="n">ray_trace</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">first_point</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -857,11 +857,11 @@
 <span class="go">&#39;Intersected at 0.499 0.000 0.000&#39;</span>
 </pre></div>
 </div>
-<p>レイトレースのプロットを表示します。</p>
+<p>レイトレースのプロットを表示します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">point</span><span class="p">,</span> <span class="n">cell</span> <span class="o">=</span> <span class="n">sphere</span><span class="o">.</span><span class="n">ray_trace</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">plot</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>このフィルターを使ったその他の例については、 <a class="reference internal" href="../../../examples/01-filter/poly-ray-trace.html#ray-trace-example"><span class="std std-ref">レイトレーシング</span></a> を参照してください。</p>
+<p>このフィルターを使ったその他の例については， <a class="reference internal" href="../../../examples/01-filter/poly-ray-trace.html#ray-trace-example"><span class="std std-ref">レイトレーシング</span></a> を参照してください．</p>
 <figure class="align-default">
 <img alt="../../../_images/pyvista-PolyDataFilters-ray_trace-1_00_00.png" src="../../../_images/pyvista-PolyDataFilters-ray_trace-1_00_00.png" />
 </figure>

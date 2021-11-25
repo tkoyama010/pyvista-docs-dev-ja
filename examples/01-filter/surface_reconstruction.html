@@ -1041,11 +1041,11 @@ to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="surface-reconstruction">
 <span id="surface-reconstruction-example"></span><span id="sphx-glr-examples-01-filter-surface-reconstruction-py"></span><h1>サーフェスの再構築<a class="headerlink" href="#surface-reconstruction" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>表面再構成は、PyVistaでは専用のフィルタが用意されており、 <a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSetFilters.reconstruct_surface.html#pyvista.DataSetFilters.reconstruct_surface" title="pyvista.DataSetFilters.reconstruct_surface"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.reconstruct_surface()</span></code></a> で処理されます。 これは <code class="xref py py-func docutils literal notranslate"><span class="pre">DataSetFilters.delaunay_3d()</span></code> よりもはるかに良いパフォーマンスを示す傾向があります。</p>
+<p>表面再構成は，PyVistaでは専用のフィルタが用意されており， <a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSetFilters.reconstruct_surface.html#pyvista.DataSetFilters.reconstruct_surface" title="pyvista.DataSetFilters.reconstruct_surface"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.reconstruct_surface()</span></code></a> で処理されます． これは <code class="xref py py-func docutils literal notranslate"><span class="pre">DataSetFilters.delaunay_3d()</span></code> よりもはるかに良いパフォーマンスを示す傾向があります．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 </pre></div>
 </div>
-<p>球体から点群を作成し、その点群からサーフェスを再構成します。</p>
+<p>球体から点群を作成し，その点群からサーフェスを再構成します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">points</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span><span class="o">.</span><span class="n">points</span><span class="p">)</span>
 <span class="n">surf</span> <span class="o">=</span> <span class="n">points</span><span class="o">.</span><span class="n">reconstruct_surface</span><span class="p">()</span>
 <span class="n">surf</span>
@@ -1066,7 +1066,7 @@ to download the full example code</p>
 
 </div>
 <br />
-<br /><p>点群と再構成された球体をプロットします。</p>
+<br /><p>点群と再構成された球体をプロットします．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pl</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
 <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
 <span class="n">pl</span><span class="o">.</span><span class="n">add_title</span><span class="p">(</span><span class="s1">&#39;Point Cloud of 3D Surface&#39;</span><span class="p">)</span>

@@ -651,7 +651,7 @@
 <p>スカラー値は，ユーザが指定した範囲内にあり，各データセット点の線への投影を計算することによって生成されます．線の方向は任意です．典型的な例は，平面上の高度または高さに基づいてスカラーを生成することです．</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>これは、入力データセットの点データに <code class="docutils literal notranslate"><span class="pre">'Elevation'</span></code> という名前のスカラー配列を作成し、 <code class="docutils literal notranslate"><span class="pre">'Elevation'</span></code> という名前の配列があればそれを上書きします。</p>
+<p>これは，入力データセットの点データに <code class="docutils literal notranslate"><span class="pre">'Elevation'</span></code> という名前のスカラー配列を作成し， <code class="docutils literal notranslate"><span class="pre">'Elevation'</span></code> という名前の配列があればそれを上書きします．</p>
 </div>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
@@ -672,13 +672,13 @@
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">point_data</span></code> の <code class="docutils literal notranslate"><span class="pre">&quot;Elevation&quot;</span></code> 配列に標高スカラーを含むデータセットです。</p>
+<dt><a class="reference internal" href="pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">point_data</span></code> の <code class="docutils literal notranslate"><span class="pre">&quot;Elevation&quot;</span></code> 配列に標高スカラーを含むデータセットです．</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>球体メッシュの &quot;仰角&quot; スカラーを生成します。 これは単純にXY平面からのZ方向の高さを表します。</p>
+<p>球体メッシュの &quot;仰角&quot; スカラーを生成します． これは単純にXY平面からのZ方向の高さを表します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sphere_elv</span> <span class="o">=</span> <span class="n">sphere</span><span class="o">.</span><span class="n">elevation</span><span class="p">()</span>
@@ -688,12 +688,12 @@
 <figure class="align-default">
 <img alt="../../../_images/pyvista-DataSetFilters-elevation-1_00_00.png" src="../../../_images/pyvista-DataSetFilters-elevation-1_00_00.png" />
 </figure>
-<p>最初の4つの仰角スカラーにアクセスします。 これは、各ポイントの &quot;標高&quot; を含むポイント単位の配列です。</p>
+<p>最初の4つの仰角スカラーにアクセスします． これは，各ポイントの &quot;標高&quot; を含むポイント単位の配列です．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sphere_elv</span><span class="p">[</span><span class="s1">&#39;Elevation&#39;</span><span class="p">][:</span><span class="mi">4</span><span class="p">]</span>  
 <span class="go">array([-0.5       ,  0.5       , -0.49706897, -0.48831028], dtype=float32)</span>
 </pre></div>
 </div>
-<p>このフィルターを使ったその他の例については、 <a class="reference internal" href="../../../examples/01-filter/using-filters.html#common-filter-example"><span class="std std-ref">共通フィルタの使用</span></a> を参照してください。</p>
+<p>このフィルターを使ったその他の例については， <a class="reference internal" href="../../../examples/01-filter/using-filters.html#common-filter-example"><span class="std std-ref">共通フィルタの使用</span></a> を参照してください．</p>
 </dd></dl>
 
 </section>

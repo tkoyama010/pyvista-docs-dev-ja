@@ -424,11 +424,11 @@
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>center</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/glossary.html#term-iterable" title="(in Python v3.11)"><span>iterable</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>中心は <code class="docutils literal notranslate"><span class="pre">[x,</span> <span class="pre">y,</span> <span class="pre">z]</span></code> です。ポリゴンの中心軸がこの点を通ります。</p>
+<dt><strong>center</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/glossary.html#term-iterable" title="(in Python v3.11)"><span>iterable</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>中心は <code class="docutils literal notranslate"><span class="pre">[x,</span> <span class="pre">y,</span> <span class="pre">z]</span></code> です．ポリゴンの中心軸がこの点を通ります．</p>
 </dd>
 <dt><strong>radius</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>ポリゴンの半径．</p>
 </dd>
-<dt><strong>normal</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/glossary.html#term-iterable" title="(in Python v3.11)"><span>iterable</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>ポリゴンの <code class="docutils literal notranslate"><span class="pre">[x,</span> <span class="pre">y,</span> <span class="pre">z]</span></code> の方向ベクトル．ポリゴンの向きを表すベクトルです。</p>
+<dt><strong>normal</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/glossary.html#term-iterable" title="(in Python v3.11)"><span>iterable</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>ポリゴンの <code class="docutils literal notranslate"><span class="pre">[x,</span> <span class="pre">y,</span> <span class="pre">z]</span></code> の方向ベクトル．ポリゴンの向きを表すベクトルです．</p>
 </dd>
 <dt><strong>n_sides</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>ポリゴンの辺の数．</p>
 </dd>
@@ -436,13 +436,13 @@
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="../../core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p>ポリゴンのメッシュ。</p>
+<dt><a class="reference internal" href="../../core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p>ポリゴンのメッシュ．</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>8辺の多角形を作成します。</p>
+<p>8辺の多角形を作成します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Polygon</span><span class="p">(</span><span class="n">n_sides</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>

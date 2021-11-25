@@ -1114,7 +1114,7 @@
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">UnstructuredGrid.</span></span><span class="sig-name descname"><span class="pre">points</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">pyvista.core.pyvista_ndarray.pyvista_ndarray</span></em><a class="headerlink" href="#pyvista.UnstructuredGrid.points" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ポイントへの参照をnumpyオブジェクトとして取得します．</p>
 <p class="rubric">例</p>
-<p>メッシュを作成し、numpy配列としてメッシュのポイントを返します。</p>
+<p>メッシュを作成し，numpy配列としてメッシュのポイントを返します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cube</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Cube</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">points</span> <span class="o">=</span> <span class="n">cube</span><span class="o">.</span><span class="n">points</span>
@@ -1129,7 +1129,7 @@
 <span class="go">                 [ 0.5, -0.5,  0.5]], dtype=float32)</span>
 </pre></div>
 </div>
-<p>これらの点をz方向に移動させ、その位置がメッシュの点に反映されていることを示します。</p>
+<p>これらの点をz方向に移動させ，その位置がメッシュの点に反映されていることを示します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">points</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cube</span><span class="o">.</span><span class="n">points</span>
 <span class="go">pyvista_ndarray([[-0.5, -0.5,  0.5],</span>
@@ -1142,7 +1142,7 @@
 <span class="go">                 [ 0.5, -0.5,  1.5]], dtype=float32)</span>
 </pre></div>
 </div>
-<p>また、ポイントをその場で更新することもできます。</p>
+<p>また，ポイントをその場で更新することもできます．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cube</span><span class="o">.</span><span class="n">points</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">points</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cube</span><span class="o">.</span><span class="n">points</span>
 <span class="go">pyvista_ndarray([[-1., -1.,  1.],</span>

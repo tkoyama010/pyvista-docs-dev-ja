@@ -1041,16 +1041,16 @@ to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="working-with-a-gltf-files">
 <span id="load-gltf"></span><span id="sphx-glr-examples-00-load-load-gltf-py"></span><h1>glTFファイルの取り扱いについて<a class="headerlink" href="#working-with-a-gltf-files" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>glTFをPyVistaのプロッティングシーンに直接インポートできます。 glTFフォーマットの詳細については、 <a class="reference external" href="https://www.khronos.org/gltf/">https://www.khronos.org/gltf/</a> を参照してください。</p>
+<p>glTFをPyVistaのプロッティングシーンに直接インポートできます． glTFフォーマットの詳細については， <a class="reference external" href="https://www.khronos.org/gltf/">https://www.khronos.org/gltf/</a> を参照してください．</p>
 <p>この機能は <code class="docutils literal notranslate"><span class="pre">vtk&gt;=9</span></code> だけで使用できます．</p>
-<p>まず、サンプルをダウンロードします。 なお、ここではハイダイナミックレンジのテクスチャを使用していますが、これはglTFファイルが一般的に物理ベースのレンダリングを含んでおり、VTK v9がハイダイナミックレンジのテクスチャをサポートしているためです。</p>
+<p>まず，サンプルをダウンロードします． なお，ここではハイダイナミックレンジのテクスチャを使用していますが，これはglTFファイルが一般的に物理ベースのレンダリングを含んでおり，VTK v9がハイダイナミックレンジのテクスチャをサポートしているためです．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 <span class="n">helmet_file</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">gltf</span><span class="o">.</span><span class="n">download_damaged_helmet</span><span class="p">()</span>
 <span class="n">texture</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">hdr</span><span class="o">.</span><span class="n">download_dikhololo_night</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>プロッタを設定し、環境テクスチャを有効にします。 これは、ダメージを受けたヘルメットの例のように、物理ベースのレンダリングが可能なメッシュに有効です。</p>
+<p>プロッタを設定し，環境テクスチャを有効にします． これは，ダメージを受けたヘルメットの例のように，物理ベースのレンダリングが可能なメッシュに有効です．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pl</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">pl</span><span class="o">.</span><span class="n">import_gltf</span><span class="p">(</span><span class="n">helmet_file</span><span class="p">)</span>
 <span class="n">pl</span><span class="o">.</span><span class="n">set_environment_texture</span><span class="p">(</span><span class="n">texture</span><span class="p">)</span>
@@ -1058,7 +1058,7 @@ to download the full example code</p>
 <span class="n">pl</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_load-gltf_001.png" srcset="../../_images/sphx_glr_load-gltf_001.png" alt="load gltf" class = "sphx-glr-single-img"/><p>また、gltfファイルを直接読み込んで、基礎となるメッシュを抽出することもできます。</p>
+<img src="../../_images/sphx_glr_load-gltf_001.png" srcset="../../_images/sphx_glr_load-gltf_001.png" alt="load gltf" class = "sphx-glr-single-img"/><p>また，gltfファイルを直接読み込んで，基礎となるメッシュを抽出することもできます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">block</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">helmet_file</span><span class="p">)</span>
 <span class="n">mesh</span> <span class="o">=</span> <span class="n">block</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;tan&#39;</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">)</span>

@@ -1113,21 +1113,21 @@
 <dt class="sig sig-object py" id="pyvista.UnstructuredGrid.cell_connectivity">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">UnstructuredGrid.</span></span><span class="sig-name descname"><span class="pre">cell_connectivity</span></span><a class="headerlink" href="#pyvista.UnstructuredGrid.cell_connectivity" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>vtkセルの接続性をnumpy配列で取得します．</p>
-<p>これは、パディングのない <code class="xref py py-attr docutils literal notranslate"><span class="pre">UnstructuredGrid.cell</span></code> と同じ効果があります。</p>
+<p>これは，パディングのない <code class="xref py py-attr docutils literal notranslate"><span class="pre">UnstructuredGrid.cell</span></code> と同じ効果があります．</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p>これは <code class="docutils literal notranslate"><span class="pre">vtk&gt;=9.0.0</span></code> でのみ利用可能です。</p>
+<p>これは <code class="docutils literal notranslate"><span class="pre">vtk&gt;=9.0.0</span></code> でのみ利用可能です．</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a></dt><dd><p>コネクティビティ配列。</p>
+<dt><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a></dt><dd><p>コネクティビティ配列．</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>最初の2つのセルの接続性を返します。</p>
+<p>最初の2つのセルの接続性を返します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">hex_beam</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">examples</span><span class="o">.</span><span class="n">hexbeamfile</span><span class="p">)</span>

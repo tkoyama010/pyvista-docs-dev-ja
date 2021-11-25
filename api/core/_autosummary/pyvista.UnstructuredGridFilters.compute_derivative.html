@@ -661,7 +661,7 @@
 </dd>
 <dt><strong>gradient</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>勾配を計算します．文字列を渡すと，その文字列が配列名として使用されます．それ以外の場合，配列名は <code class="docutils literal notranslate"><span class="pre">'gradient'</span></code> になります．デフォルトは <code class="docutils literal notranslate"><span class="pre">True</span></code></p>
 </dd>
-<dt><strong>divergence</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>発散を計算する．文字列を渡すと，その文字列が配列名として使用されます．それ以外の場合，配列名は <code class="docutils literal notranslate"><span class="pre">'divergence'</span></code> になります．デフォルト <code class="docutils literal notranslate"><span class="pre">None</span></code> 。</p>
+<dt><strong>divergence</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>発散を計算する．文字列を渡すと，その文字列が配列名として使用されます．それ以外の場合，配列名は <code class="docutils literal notranslate"><span class="pre">'divergence'</span></code> になります．デフォルト <code class="docutils literal notranslate"><span class="pre">None</span></code> ．</p>
 </dd>
 <dt><strong>vorticity</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>速度を計算します．文字列を渡すと，その文字列が配列名として使用されます．それ以外の場合，配列名は <code class="docutils literal notranslate"><span class="pre">'vorticity'</span></code> になります．デフォルトは  <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
 </dd>
@@ -683,7 +683,7 @@
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>まず、ランダムな丘のデータセットをアクティブな標高スカラーでプロットします。 これらのスカラーは、微分の計算に使用されます。</p>
+<p>まず，ランダムな丘のデータセットをアクティブな標高スカラーでプロットします． これらのスカラーは，微分の計算に使用されます．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">hills</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_random_hills</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">hills</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">smooth_shading</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -692,7 +692,7 @@
 <figure class="align-default">
 <img alt="../../../_images/pyvista-UnstructuredGridFilters-compute_derivative-1_00_00.png" src="../../../_images/pyvista-UnstructuredGridFilters-compute_derivative-1_00_00.png" />
 </figure>
-<p>アクティブなスカラーの勾配を計算し、プロットします。</p>
+<p>アクティブなスカラーの勾配を計算し，プロットします．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">hills</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_random_hills</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">deriv</span> <span class="o">=</span> <span class="n">hills</span><span class="o">.</span><span class="n">compute_derivative</span><span class="p">()</span>
@@ -702,7 +702,7 @@
 <figure class="align-default">
 <img alt="../../../_images/pyvista-UnstructuredGridFilters-compute_derivative-1_01_00.png" src="../../../_images/pyvista-UnstructuredGridFilters-compute_derivative-1_01_00.png" />
 </figure>
-<p>このフィルターを使ったその他の例については、 <a class="reference internal" href="../../../examples/01-filter/gradients.html#gradients-example"><span class="std std-ref">フィールドの勾配を計算する</span></a> を参照してください。</p>
+<p>このフィルターを使ったその他の例については， <a class="reference internal" href="../../../examples/01-filter/gradients.html#gradients-example"><span class="std std-ref">フィールドの勾配を計算する</span></a> を参照してください．</p>
 </dd></dl>
 
 </section>

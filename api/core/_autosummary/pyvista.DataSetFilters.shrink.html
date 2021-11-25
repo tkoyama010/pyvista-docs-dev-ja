@@ -652,7 +652,7 @@
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>shrink_factor</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>各セルのシュリンクの割合。 デフォルトは1.0で、面は変更されません。</p>
+<dt><strong>shrink_factor</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>各セルのシュリンクの割合． デフォルトは1.0で，面は変更されません．</p>
 </dd>
 <dt><strong>progress_bar</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>進行状況を示す進行状況バーを表示します．</p>
 </dd>
@@ -660,13 +660,13 @@
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a></dt><dd><p>縮小された面を持つデータセット。 戻り値のタイプは入力と一致します。</p>
+<dt><a class="reference internal" href="pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a></dt><dd><p>縮小された面を持つデータセット． 戻り値のタイプは入力と一致します．</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>まず、元の立方体をプロットします。</p>
+<p>まず，元の立方体をプロットします．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Cube</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
@@ -675,7 +675,7 @@
 <figure class="align-default">
 <img alt="../../../_images/pyvista-DataSetFilters-shrink-1_00_00.png" src="../../../_images/pyvista-DataSetFilters-shrink-1_00_00.png" />
 </figure>
-<p>次に、面を縮小したメッシュをプロットします。</p>
+<p>次に，面を縮小したメッシュをプロットします．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">shrunk</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">shrink</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">shrunk</span><span class="o">.</span><span class="n">clear_data</span><span class="p">()</span>  <span class="c1"># cleans up plot</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">shrunk</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>

@@ -831,7 +831,7 @@
 <dd class="field-odd"><dl>
 <dt><strong>vector</strong> : <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a> か <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a><span class="classifier">numpy.ndarray か python:sequence</span></dt><dd><p>メッシュを押し出す方向と長さ．</p>
 </dd>
-<dt><strong>capping</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>2Dオブジェクトのスイープがキャップされるかどうかを制御します。</p>
+<dt><strong>capping</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>2Dオブジェクトのスイープがキャップされるかどうかを制御します．</p>
 </dd>
 <dt><strong>inplace</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>元のメッシュの決まった場所に上書きします．</p>
 </dd>
@@ -841,7 +841,7 @@
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p>押出成形メッシュ。</p>
+<dt><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p>押出成形メッシュ．</p>
 </dd>
 </dl>
 </dd>
@@ -857,7 +857,7 @@
 <figure class="align-default">
 <img alt="../../../_images/pyvista-PolyDataFilters-extrude-1_00_00.png" src="../../../_images/pyvista-PolyDataFilters-extrude-1_00_00.png" />
 </figure>
-<p>8面体のポリゴンを押し出し、キャップします。</p>
+<p>8面体のポリゴンを押し出し，キャップします．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">poly</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Polygon</span><span class="p">(</span><span class="n">n_sides</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">poly</span><span class="o">.</span><span class="n">extrude</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">),</span> <span class="n">capping</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">line_width</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>

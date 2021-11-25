@@ -1057,19 +1057,19 @@
 </dd>
 <dt><strong>progress_bar</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>進行状況を示す進行状況バーを表示します．</p>
 </dd>
-<dt><strong>**kwargs</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">factor</span></code> の代わりに、 <code class="docutils literal notranslate"><span class="pre">scale_factor</span></code> を受け取ります。</p>
+<dt><strong>**kwargs</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">factor</span></code> の代わりに， <code class="docutils literal notranslate"><span class="pre">scale_factor</span></code> を受け取ります．</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a></dt><dd><p>ワープしたデータセット。 リターンタイプは入力と一致します。</p>
+<dt><a class="reference internal" href="pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a></dt><dd><p>ワープしたデータセット． リターンタイプは入力と一致します．</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>まず、ワープしていないメッシュをプロットします。</p>
+<p>まず，ワープしていないメッシュをプロットします．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_st_helens</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gist_earth&#39;</span><span class="p">,</span> <span class="n">show_scalar_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -1078,7 +1078,7 @@
 <figure class="align-default">
 <img alt="../../../_images/pyvista-DataSet-warp_by_scalar-1_00_00.png" src="../../../_images/pyvista-DataSet-warp_by_scalar-1_00_00.png" />
 </figure>
-<p>次に、 <code class="docutils literal notranslate"><span class="pre">'Elevation'</span></code> スカラーを使ってメッシュをワープさせます。</p>
+<p>次に， <code class="docutils literal notranslate"><span class="pre">'Elevation'</span></code> スカラーを使ってメッシュをワープさせます．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">warped</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">warp_by_scalar</span><span class="p">(</span><span class="s1">&#39;Elevation&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">warped</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gist_earth&#39;</span><span class="p">,</span> <span class="n">show_scalar_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
@@ -1086,7 +1086,7 @@
 <figure class="align-default">
 <img alt="../../../_images/pyvista-DataSet-warp_by_scalar-1_01_00.png" src="../../../_images/pyvista-DataSet-warp_by_scalar-1_01_00.png" />
 </figure>
-<p>このフィルターを使ったその他の例については、 <a class="reference internal" href="../../../examples/01-filter/compute-normals.html#surface-normal-example"><span class="std std-ref">表面の法線を計算します</span></a> を参照してください。</p>
+<p>このフィルターを使ったその他の例については， <a class="reference internal" href="../../../examples/01-filter/compute-normals.html#surface-normal-example"><span class="std std-ref">表面の法線を計算します</span></a> を参照してください．</p>
 </dd></dl>
 
 </section>

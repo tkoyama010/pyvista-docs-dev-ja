@@ -1041,12 +1041,12 @@ to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="plot-truss-like-fea-solution-with-cylinders">
 <span id="create-truss"></span><span id="sphx-glr-examples-00-load-create-truss-py"></span><h1>円柱を用いたトラス状のFEAソリューションのプロット<a class="headerlink" href="#plot-truss-like-fea-solution-with-cylinders" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>点と点の間のつながりを、スカラーで色づけされた円柱として3Dにプロットします。</p>
+<p>点と点の間のつながりを，スカラーで色づけされた円柱として3Dにプロットします．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pyvista</span>
 </pre></div>
 </div>
-<p>トラスの点と要素を定義します。 ここでは、有限要素解析から来ているように、 <code class="docutils literal notranslate"><span class="pre">ノード</span></code> と呼びます。</p>
+<p>トラスの点と要素を定義します． ここでは，有限要素解析から来ているように， <code class="docutils literal notranslate"><span class="pre">ノード</span></code> と呼びます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nodes</span> <span class="o">=</span> <span class="p">[</span>
     <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
     <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
@@ -1089,7 +1089,7 @@ to download the full example code</p>
        [2, 2, 6]])
 </pre></div>
 </div>
-<p>ラインをチューブとしてレンダリングしながらトラスをプロットします。</p>
+<p>ラインをチューブとしてレンダリングしながらトラスをプロットします．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">edges_w_padding</span><span class="p">)</span>
 
 <span class="n">colors</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">edges</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>

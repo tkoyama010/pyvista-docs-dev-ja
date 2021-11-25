@@ -1316,15 +1316,15 @@
 <dl class="field-list simple">
 <dt class="field-odd">戻り値</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista_ndarray</span></code></dt><dd><p>このデータセットのアクティブな法線。</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista_ndarray</span></code></dt><dd><p>このデータセットのアクティブな法線．</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">備考</p>
-<p>ポイント法線とセル法線の両方が存在する場合は、デフォルトでポイント法線を返します。</p>
+<p>ポイント法線とセル法線の両方が存在する場合は，デフォルトでポイント法線を返します．</p>
 <p class="rubric">例</p>
-<p>例題の球体メッシュの法線を計算し、データセットのアクティブな法線を返します。返した法線は点の数と同じ大きさであることを示します．</p>
+<p>例題の球体メッシュの法線を計算し，データセットのアクティブな法線を返します．返した法線は点の数と同じ大きさであることを示します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">compute_normals</span><span class="p">()</span>

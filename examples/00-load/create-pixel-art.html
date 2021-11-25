@@ -1061,7 +1061,7 @@ to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="pixel-art-of-alien-monsters">
 <span id="pixel-art-example"></span><span id="sphx-glr-examples-00-load-create-pixel-art-py"></span><h1>ALIEN MONSTERSのピクセルアート<a class="headerlink" href="#pixel-art-of-alien-monsters" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>ここでは、 <a class="reference internal" href="../../api/utilities/_autosummary/pyvista.Box.html#pyvista.Box" title="pyvista.Box"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Box()</span></code></a> を使って、 <a class="reference external" href="https://en.wikipedia.org/wiki/Pixel_art">ピクセルアート</a> を作ります。ピクセル文字列 <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Noto_Emoji_Pie_1f47e.svg">ソース</a> と <a class="reference external" href="https://github.com/googlefonts/noto-emoji#license">ライセンス</a> 。</p>
+<p>ここでは， <a class="reference internal" href="../../api/utilities/_autosummary/pyvista.Box.html#pyvista.Box" title="pyvista.Box"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Box()</span></code></a> を使って， <a class="reference external" href="https://en.wikipedia.org/wiki/Pixel_art">ピクセルアート</a> を作ります．ピクセル文字列 <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Noto_Emoji_Pie_1f47e.svg">ソース</a> と <a class="reference external" href="https://github.com/googlefonts/noto-emoji#license">ライセンス</a> ．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista.demos</span> <span class="kn">import</span> <span class="n">logo</span>
 </pre></div>
@@ -1095,7 +1095,7 @@ to download the full example code</p>
 </section>
 <section id="define-function-to-draw-pixels">
 <h1>ピクセルを描画する関数の定義<a class="headerlink" href="#define-function-to-draw-pixels" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>プロッタにピクセルボックスを追加するヘルパー関数を定義します。</p>
+<p>プロッタにピクセルボックスを追加するヘルパー関数を定義します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw_pixels</span><span class="p">(</span><span class="n">plotter</span><span class="p">,</span> <span class="n">pixels</span><span class="p">,</span> <span class="n">center</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
     <span class="n">bounds</span> <span class="o">=</span> <span class="p">[</span>
         <span class="n">center</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mf">1.0</span><span class="p">,</span>
@@ -1119,7 +1119,7 @@ to download the full example code</p>
     <span class="k">return</span> <span class="n">plotter</span>
 </pre></div>
 </div>
-<p>ALIEN MONSTERS のピクセルアートを描くことができます。</p>
+<p>ALIEN MONSTERS のピクセルアートを描くことができます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Display MONSTERS</span>
 <span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">p</span> <span class="o">=</span> <span class="n">draw_pixels</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">alien</span><span class="p">,</span> <span class="p">[</span><span class="o">-</span><span class="mf">22.0</span><span class="p">,</span>  <span class="mf">22.0</span><span class="p">],</span> <span class="s2">&quot;green&quot;</span><span class="p">)</span>

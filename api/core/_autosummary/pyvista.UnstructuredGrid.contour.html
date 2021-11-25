@@ -1112,7 +1112,7 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.UnstructuredGrid.contour">
 <span class="sig-prename descclassname"><span class="pre">UnstructuredGrid.</span></span><span class="sig-name descname"><span class="pre">contour</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">isosurfaces</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scalars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compute_normals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compute_gradients</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compute_scalars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rng</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preference</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'point'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'contour'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UnstructuredGrid.contour" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>入力されたコンターを配列で表現します。</p>
+<dd><p>入力されたコンターを配列で表現します．</p>
 <p><code class="docutils literal notranslate"><span class="pre">isosurfaces</span></code> はデータ範囲内の等値面の数を指定する整数か，明示的に等値面を設定するための値のシーケンスです．</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
@@ -1121,15 +1121,15 @@
 </dd>
 <dt><strong>scalars</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>しきい値に対するスカラーの名前．デフォルトは現在アクティブなスカラーです．</p>
 </dd>
-<dt><strong>compute_normals</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>データセットの法線を計算します。</p>
+<dt><strong>compute_normals</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>データセットの法線を計算します．</p>
 </dd>
-<dt><strong>compute_gradients</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>データセットの勾配を計算します。</p>
+<dt><strong>compute_gradients</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>データセットの勾配を計算します．</p>
 </dd>
-<dt><strong>compute_scalars</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>輪郭付けされているスカラー値を保持します。</p>
+<dt><strong>compute_scalars</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>輪郭付けされているスカラー値を保持します．</p>
 </dd>
 <dt><strong>rng</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a>(<a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>), <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>等値面の整数が指定されている場合，これは等高線を生成する範囲です．デフォルトはスカラー配列の全データ範囲です．</p>
 </dd>
-<dt><strong>preference</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">scalars</span></code> が指定されている場合，これはデータセット内で検索するために推奨される配列型です． <code class="docutils literal notranslate"><span class="pre">'point'</span></code> または <code class="docutils literal notranslate"><span class="pre">'cell'</span></code> のいずれかでなければなりません。</p>
+<dt><strong>preference</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">scalars</span></code> が指定されている場合，これはデータセット内で検索するために推奨される配列型です． <code class="docutils literal notranslate"><span class="pre">'point'</span></code> または <code class="docutils literal notranslate"><span class="pre">'cell'</span></code> のいずれかでなければなりません．</p>
 </dd>
 <dt><strong>method</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>コンターの作成に使用するベクトルフィルタを指定します． <code class="docutils literal notranslate"><span class="pre">'contour'</span></code> ， <code class="docutils literal notranslate"><span class="pre">'marching_cubes'</span></code> および <code class="docutils literal notranslate"><span class="pre">'flying_edges'</span></code> のいずれかである必要があります．デフォルトは <code class="docutils literal notranslate"><span class="pre">'contour'</span></code> です．</p>
 </dd>
@@ -1139,13 +1139,13 @@
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p>輪郭のある表面。</p>
+<dt><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p>輪郭のある表面．</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>ランダムな丘のデータセットの輪郭を生成します。</p>
+<p>ランダムな丘のデータセットの輪郭を生成します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">hills</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_random_hills</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">contours</span> <span class="o">=</span> <span class="n">hills</span><span class="o">.</span><span class="n">contour</span><span class="p">()</span>
@@ -1155,7 +1155,7 @@
 <figure class="align-default">
 <img alt="../../../_images/pyvista-UnstructuredGrid-contour-1_00_00.png" src="../../../_images/pyvista-UnstructuredGrid-contour-1_00_00.png" />
 </figure>
-<p>このフィルターを使ったその他の例については、 <a class="reference internal" href="../../../examples/01-filter/using-filters.html#common-filter-example"><span class="std std-ref">共通フィルタの使用</span></a> を参照してください。</p>
+<p>このフィルターを使ったその他の例については， <a class="reference internal" href="../../../examples/01-filter/using-filters.html#common-filter-example"><span class="std std-ref">共通フィルタの使用</span></a> を参照してください．</p>
 </dd></dl>
 
 </section>

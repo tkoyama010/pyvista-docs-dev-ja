@@ -1057,12 +1057,12 @@ to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="extending-pyvista">
 <span id="extending-pyvista-example"></span><span id="sphx-glr-examples-99-advanced-extending-pyvista-py"></span><h1>PyVistaの拡張<a class="headerlink" href="#extending-pyvista" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p><a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> のような <a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a> は、ユーザが拡張することができます。 例えば、ユーザーがメッシュ上の(1, 0, 1)方向の最大点の位置を記録したいとします。</p>
-<p>ユーザーがサブクラス化を処理する方法は2つあります。 1つは、タイプ・オブジェクトを直接管理する方法です。 この場合、フィルター操作時に型のチェックが必要になることがあります。</p>
-<p>2つ目は、タイプの自動管理です。 ユーザーは、特定のタイプのDataSetsに対して、ユーザー定義のクラスをほぼ常に使用するかどうかを制御することができます。</p>
+<p><a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> のような <a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a> は，ユーザが拡張することができます． 例えば，ユーザーがメッシュ上の(1, 0, 1)方向の最大点の位置を記録したいとします．</p>
+<p>ユーザーがサブクラス化を処理する方法は2つあります． 1つは，タイプ・オブジェクトを直接管理する方法です． この場合，フィルター操作時に型のチェックが必要になることがあります．</p>
+<p>2つ目は，タイプの自動管理です． ユーザーは，特定のタイプのDataSetsに対して，ユーザー定義のクラスをほぼ常に使用するかどうかを制御することができます．</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p>これは上級者向けの機能です。 型の自動管理は、すべての状況で機能するわけではありません。特に、組み込みデータセットが直接インスタンス化されている場合はそうです。 以下の例をご覧ください。</p>
+<p>これは上級者向けの機能です． 型の自動管理は，すべての状況で機能するわけではありません．特に，組み込みデータセットが直接インスタンス化されている場合はそうです． 以下の例をご覧ください．</p>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -1071,7 +1071,7 @@ to download the full example code</p>
 <span class="n">pyvista</span><span class="o">.</span><span class="n">set_plot_theme</span><span class="p">(</span><span class="s2">&quot;document&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> のユーザー定義サブクラスである <code class="docutils literal notranslate"><span class="pre">FooData</span></code> が定義されています。これには、メッシュ上で(1, 0, 1)方向に最も離れた点を追跡するプロパティが含まれています。</p>
+<p><a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> のユーザー定義サブクラスである <code class="docutils literal notranslate"><span class="pre">FooData</span></code> が定義されています．これには，メッシュ上で(1, 0, 1)方向に最も離れた点を追跡するプロパティが含まれています．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">FooData</span><span class="p">(</span><span class="n">pyvista</span><span class="o">.</span><span class="n">PolyData</span><span class="p">):</span>
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">max_point</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -1081,7 +1081,7 @@ to download the full example code</p>
 </div>
 <section id="directly-managing-types">
 <h2>タイプを直接管理する<a class="headerlink" href="#directly-managing-types" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>これで <code class="docutils literal notranslate"><span class="pre">FooData</span></code> 型の <code class="docutils literal notranslate"><span class="pre">foo_sphere</span></code> オブジェクトが作成されました。ポイントのインデックスと位置を直接取得することができます．球体の半径は0.5なので，(1, 0, 1)の方向への最大の広がりは <span class="math notranslate nohighlight">\(0.5\sqrt{0.5}\approx0.354\)</span> となります．</p>
+<p>これで <code class="docutils literal notranslate"><span class="pre">FooData</span></code> 型の <code class="docutils literal notranslate"><span class="pre">foo_sphere</span></code> オブジェクトが作成されました．ポイントのインデックスと位置を直接取得することができます．球体の半径は0.5なので，(1, 0, 1)の方向への最大の広がりは <span class="math notranslate nohighlight">\(0.5\sqrt{0.5}\approx0.354\)</span> となります．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">foo_sphere</span> <span class="o">=</span> <span class="n">FooData</span><span class="p">(</span><span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">(</span><span class="n">theta_resolution</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">phi_resolution</span><span class="o">=</span><span class="mi">100</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Original foo sphere:&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Type: </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">foo_sphere</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -1096,7 +1096,7 @@ Maximum point index: 4975
 Location of maximum point: [ 3.5634708e-01 -1.1460996e-16  3.5073745e-01]
 </pre></div>
 </div>
-<p><a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSet.rotate_y.html#pyvista.DataSet.rotate_y" title="pyvista.DataSet.rotate_y"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSet.rotate_y()</span></code></a> のようなインプレース操作を使っても、オブジェクトの型には影響しません。</p>
+<p><a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSet.rotate_y.html#pyvista.DataSet.rotate_y" title="pyvista.DataSet.rotate_y"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSet.rotate_y()</span></code></a> のようなインプレース操作を使っても，オブジェクトの型には影響しません．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">foo_sphere</span><span class="o">.</span><span class="n">rotate_y</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Rotated foo sphere:&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Type: </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">foo_sphere</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -1111,7 +1111,7 @@ Maximum point index: 75
 Location of maximum point: [0.35073745 0.         0.35634708]
 </pre></div>
 </div>
-<p>しかし、フィルター操作によって、元の型とは異なるものを含む、異なる <code class="docutils literal notranslate"><span class="pre">DataSet</span></code> 型が返されることがあります。 このような場合、 <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyDataFilters.decimate.html#pyvista.PolyDataFilters.decimate" title="pyvista.PolyDataFilters.decimate"><code class="xref py py-func docutils literal notranslate"><span class="pre">decimate</span></code></a> メソッドは <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> オブジェクトを取得します。</p>
+<p>しかし，フィルター操作によって，元の型とは異なるものを含む，異なる <code class="docutils literal notranslate"><span class="pre">DataSet</span></code> 型が返されることがあります． このような場合， <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyDataFilters.decimate.html#pyvista.PolyDataFilters.decimate" title="pyvista.PolyDataFilters.decimate"><code class="xref py py-func docutils literal notranslate"><span class="pre">decimate</span></code></a> メソッドは <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> オブジェクトを取得します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Decimated foo sphere:&quot;</span><span class="p">)</span>
 <span class="n">decimated_foo_sphere</span> <span class="o">=</span> <span class="n">foo_sphere</span><span class="o">.</span><span class="n">decimate</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Type: </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">decimated_foo_sphere</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -1122,7 +1122,7 @@ Location of maximum point: [0.35073745 0.         0.35634708]
 Type: &lt;class &#39;pyvista.core.pointset.PolyData&#39;&gt;
 </pre></div>
 </div>
-<p>オブジェクトを明示的に <code class="docutils literal notranslate"><span class="pre">FooData</span></code> にラップすることが必要になりました。</p>
+<p>オブジェクトを明示的に <code class="docutils literal notranslate"><span class="pre">FooData</span></code> にラップすることが必要になりました．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">decimated_foo_sphere</span> <span class="o">=</span> <span class="n">FooData</span><span class="p">(</span><span class="n">foo_sphere</span><span class="o">.</span><span class="n">decimate</span><span class="p">(</span><span class="mf">0.5</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Type: </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">decimated_foo_sphere</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Maximum point index: </span><span class="si">{</span><span class="n">decimated_foo_sphere</span><span class="o">.</span><span class="n">max_point</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -1138,12 +1138,12 @@ Location of maximum point: [0.35073745 0.         0.35634708]
 </section>
 <section id="automatically-managing-types">
 <h2>タイプを自動的に管理する<a class="headerlink" href="#automatically-managing-types" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>デフォルトの <a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a> タイプは、 <code class="docutils literal notranslate"><span class="pre">pyvista._wrappers</span></code> を使って設定することができます。一般的には、ユーザー定義のクラスを主に使用することが予想される場合に、このメソッドを使用するのがベストです。</p>
-<p>この例では、これまで <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> として作成されていたすべてのオブジェクトが、 <code class="docutils literal notranslate"><span class="pre">FooData</span></code> オブジェクトとして作成されます。キーとなるのは、基礎となるvtkオブジェクトであることに注意してください。</p>
+<p>デフォルトの <a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a> タイプは， <code class="docutils literal notranslate"><span class="pre">pyvista._wrappers</span></code> を使って設定することができます．一般的には，ユーザー定義のクラスを主に使用することが予想される場合に，このメソッドを使用するのがベストです．</p>
+<p>この例では，これまで <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> として作成されていたすべてのオブジェクトが， <code class="docutils literal notranslate"><span class="pre">FooData</span></code> オブジェクトとして作成されます．キーとなるのは，基礎となるvtkオブジェクトであることに注意してください．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pyvista</span><span class="o">.</span><span class="n">_wrappers</span><span class="p">[</span><span class="s1">&#39;vtkPolyData&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">FooData</span>
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">FooData</span></code> オブジェクトを取得するために、 <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> オブジェクトを特別にラップする必要がなくなりました。</p>
+<p><code class="docutils literal notranslate"><span class="pre">FooData</span></code> オブジェクトを取得するために， <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> オブジェクトを特別にラップする必要がなくなりました．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">foo_sphere</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">(</span><span class="n">theta_resolution</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">phi_resolution</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Original foo sphere:&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Type: </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">foo_sphere</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -1158,7 +1158,7 @@ Maximum point index: 4975
 Location of maximum point: [ 3.5634708e-01 -1.1460996e-16  3.5073745e-01]
 </pre></div>
 </div>
-<p><a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSet.rotate_y.html#pyvista.DataSet.rotate_y" title="pyvista.DataSet.rotate_y"><code class="xref py py-func docutils literal notranslate"><span class="pre">rotate_y</span></code></a> のようなインプレース操作を使っても、オブジェクトの型には影響しません。</p>
+<p><a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSet.rotate_y.html#pyvista.DataSet.rotate_y" title="pyvista.DataSet.rotate_y"><code class="xref py py-func docutils literal notranslate"><span class="pre">rotate_y</span></code></a> のようなインプレース操作を使っても，オブジェクトの型には影響しません．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">foo_sphere</span><span class="o">.</span><span class="n">rotate_y</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Rotated foo sphere:&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Type: </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">foo_sphere</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -1173,7 +1173,7 @@ Maximum point index: 75
 Location of maximum point: [0.35073745 0.         0.35634708]
 </pre></div>
 </div>
-<p><a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> を返していたフィルター操作が <code class="docutils literal notranslate"><span class="pre">FooData</span></code> を返すようになりました。</p>
+<p><a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> を返していたフィルター操作が <code class="docutils literal notranslate"><span class="pre">FooData</span></code> を返すようになりました．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Decimated foo sphere:&quot;</span><span class="p">)</span>
 <span class="n">decimated_foo_sphere</span> <span class="o">=</span> <span class="n">foo_sphere</span><span class="o">.</span><span class="n">decimate</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Type: </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">decimated_foo_sphere</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -1188,7 +1188,7 @@ Maximum point index: 94
 Location of maximum point: [0.35073745 0.         0.35634708]
 </pre></div>
 </div>
-<p>ユーザーは、ネイティブの <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> オブジェクトを作成することができますが、この方法を使用すると、意図しない結果になる可能性があります。 このような場合は、型を直接管理する方法を使用することをお勧めします。</p>
+<p>ユーザーは，ネイティブの <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> オブジェクトを作成することができますが，この方法を使用すると，意図しない結果になる可能性があります． このような場合は，型を直接管理する方法を使用することをお勧めします．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">poly_object</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">vtk</span><span class="o">.</span><span class="n">vtkPolyData</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Type: </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">poly_object</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="c1"># catch error</span>
@@ -1203,11 +1203,11 @@ Location of maximum point: [0.35073745 0.         0.35634708]
 This operation fails
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">pyvista._wrappers</span></code> を使用する際には、使用されないケースに設定が漏れないように、デフォルト値をリセットする必要があるかもしれません。</p>
+<p><code class="docutils literal notranslate"><span class="pre">pyvista._wrappers</span></code> を使用する際には，使用されないケースに設定が漏れないように，デフォルト値をリセットする必要があるかもしれません．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pyvista</span><span class="o">.</span><span class="n">_wrappers</span><span class="p">[</span><span class="s1">&#39;vtkPolyData&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">PolyData</span>
 </pre></div>
 </div>
-<p>局所的な使い方が望ましい場合には、ティアダウン方式を推奨します。 例えば、 <code class="docutils literal notranslate"><span class="pre">try...finally</span></code> ブロックです。</p>
+<p>局所的な使い方が望ましい場合には，ティアダウン方式を推奨します． 例えば， <code class="docutils literal notranslate"><span class="pre">try...finally</span></code> ブロックです．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
     <span class="n">pyvista</span><span class="o">.</span><span class="n">_wrappers</span><span class="p">[</span><span class="s1">&#39;vtkPolyData&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">FooData</span>
     <span class="c1"># some operation that sometimes raises an error</span>

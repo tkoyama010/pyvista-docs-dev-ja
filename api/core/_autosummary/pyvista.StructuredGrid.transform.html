@@ -1120,14 +1120,14 @@
 <dd><p>このメッシュを4x4変換で変換します．</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p><code class="docutils literal notranslate"><span class="pre">transform_all_input_vectors=True</span></code> を使用した場合、VTKでは3つの成分を持つベクターと配列の区別がありません。 これは、3つの成分を持つスカラーデータ(RGBデータなど)がある場合に問題となることがあります。 これは、スカラーデータではなくベクトルデータであるかのように、不適切に変換されます。 3つの成分を別々のスカラ配列として格納するという回避策が考えられます（醜いですが）。</p>
+<p><code class="docutils literal notranslate"><span class="pre">transform_all_input_vectors=True</span></code> を使用した場合，VTKでは3つの成分を持つベクターと配列の区別がありません． これは，3つの成分を持つスカラーデータ(RGBデータなど)がある場合に問題となることがあります． これは，スカラーデータではなくベクトルデータであるかのように，不適切に変換されます． 3つの成分を別々のスカラ配列として格納するという回避策が考えられます（醜いですが）．</p>
 </div>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
 <dt><strong>trans</strong><span class="classifier">vtk.vtkMatrix4x4, vtk.vtkTransform, か np.ndarray</span></dt><dd><p>vtk変換オブジェクトまたは4 x 4変換行列を受け入れます．</p>
 </dd>
-<dt><strong>transform_all_input_vectors</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，3つの成分を持つすべての配列が変換されます．それ以外の場合は，法線とベクトルのみが変換されます。 詳細は，警告を参照してください。</p>
+<dt><strong>transform_all_input_vectors</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，3つの成分を持つすべての配列が変換されます．それ以外の場合は，法線とベクトルのみが変換されます． 詳細は，警告を参照してください．</p>
 </dd>
 <dt><strong>inplace</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，データセットを直接変更します．</p>
 </dd>
@@ -1137,7 +1137,7 @@
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a></dt><dd><p>変換されたデータセットです。 入力データセットが <a class="reference internal" href="pyvista.UniformGrid.html#pyvista.UniformGrid" title="pyvista.UniformGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UniformGrid</span></code></a> でない限り、リターンタイプは入力と一致します。その場合、出力データタイプは <a class="reference internal" href="pyvista.StructuredGrid.html#pyvista.StructuredGrid" title="pyvista.StructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.StructuredGrid</span></code></a> となります。</p>
+<dt><a class="reference internal" href="pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a></dt><dd><p>変換されたデータセットです． 入力データセットが <a class="reference internal" href="pyvista.UniformGrid.html#pyvista.UniformGrid" title="pyvista.UniformGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UniformGrid</span></code></a> でない限り，リターンタイプは入力と一致します．その場合，出力データタイプは <a class="reference internal" href="pyvista.StructuredGrid.html#pyvista.StructuredGrid" title="pyvista.StructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.StructuredGrid</span></code></a> となります．</p>
 </dd>
 </dl>
 </dd>

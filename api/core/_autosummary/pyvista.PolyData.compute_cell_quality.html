@@ -1350,7 +1350,7 @@
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>quality_measure</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>使用するセル品質計測。</p>
+<dt><strong>quality_measure</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>使用するセル品質計測．</p>
 </dd>
 <dt><strong>null_value</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>未定義の品質の浮動小数点値です．未定義の品質とは，このフィルタで処理できる品質ですが，問題のセルの特定のジオメトリは三角形のボリューム照会などに対しては十分に定義されていません．未定義の品質は常に定義されません．デフォルト値は-1です．</p>
 </dd>
@@ -1360,13 +1360,13 @@
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a></dt><dd><p>データセット <code class="docutils literal notranslate"><span class="pre">cell_data</span></code> に <code class="docutils literal notranslate"><span class="pre">&quot;CellQuality&quot;</span></code> 配列として計算されたメッシュクオリティを格納します。</p>
+<dt><a class="reference internal" href="pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a></dt><dd><p>データセット <code class="docutils literal notranslate"><span class="pre">cell_data</span></code> に <code class="docutils literal notranslate"><span class="pre">&quot;CellQuality&quot;</span></code> 配列として計算されたメッシュクオリティを格納します．</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>サンプルの球体メッシュの最小角度を計算し、プロットします。</p>
+<p>サンプルの球体メッシュの最小角度を計算し，プロットします．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">(</span><span class="n">theta_resolution</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">phi_resolution</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cqual</span> <span class="o">=</span> <span class="n">sphere</span><span class="o">.</span><span class="n">compute_cell_quality</span><span class="p">(</span><span class="s1">&#39;min_angle&#39;</span><span class="p">)</span>
@@ -1376,7 +1376,7 @@
 <figure class="align-default">
 <img alt="../../../_images/pyvista-PolyData-compute_cell_quality-1_00_00.png" src="../../../_images/pyvista-PolyData-compute_cell_quality-1_00_00.png" />
 </figure>
-<p>このフィルターを使ったその他の例については、 <a class="reference internal" href="../../../examples/01-filter/mesh-quality.html#mesh-quality-example"><span class="std std-ref">メッシュ品質の計算</span></a> を参照してください。</p>
+<p>このフィルターを使ったその他の例については， <a class="reference internal" href="../../../examples/01-filter/mesh-quality.html#mesh-quality-example"><span class="std std-ref">メッシュ品質の計算</span></a> を参照してください．</p>
 </dd></dl>
 
 </section>

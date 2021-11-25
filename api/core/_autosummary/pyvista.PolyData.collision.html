@@ -1312,34 +1312,34 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.PolyData.collision">
 <span class="sig-prename descclassname"><span class="pre">PolyData.</span></span><span class="sig-name descname"><span class="pre">collision</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other_mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contact_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">box_tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cell_tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_cells_per_node</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">generate_scalars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.collision" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>2つの多面体サーフェス間の衝突判定を行います。</p>
-<p>もし <code class="docutils literal notranslate"><span class="pre">collision_mode</span></code> が all contacts に設定されている場合、出力は接触そいている線になります。もし <code class="docutils literal notranslate"><span class="pre">collision_mode</span></code> がファーストコンタクトやハーフコンタクトに設定されている場合は、コンタクトの出力は頂点になります。</p>
+<dd><p>2つの多面体サーフェス間の衝突判定を行います．</p>
+<p>もし <code class="docutils literal notranslate"><span class="pre">collision_mode</span></code> が all contacts に設定されている場合，出力は接触そいている線になります．もし <code class="docutils literal notranslate"><span class="pre">collision_mode</span></code> がファーストコンタクトやハーフコンタクトに設定されている場合は，コンタクトの出力は頂点になります．</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>現在は三角形のみが処理されます。ストリップやポリゴンをトライアングルに変換するには <a class="reference internal" href="pyvista.PolyDataFilters.triangulate.html#pyvista.PolyDataFilters.triangulate" title="pyvista.PolyDataFilters.triangulate"><code class="xref py py-func docutils literal notranslate"><span class="pre">PolyDataFilters.triangulate()</span></code></a> を使用してください。 それ以外の場合は、このメソッド内でメッシュの変換が行われます。</p>
+<p>現在は三角形のみが処理されます．ストリップやポリゴンをトライアングルに変換するには <a class="reference internal" href="pyvista.PolyDataFilters.triangulate.html#pyvista.PolyDataFilters.triangulate" title="pyvista.PolyDataFilters.triangulate"><code class="xref py py-func docutils literal notranslate"><span class="pre">PolyDataFilters.triangulate()</span></code></a> を使用してください． それ以外の場合は，このメソッド内でメッシュの変換が行われます．</p>
 </div>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>other_mesh</strong><span class="classifier"><a class="reference internal" href="pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a></span></dt><dd><p>衝突をテストする他のメッシュ。 他のメッシュがサーフェスでない場合は、その外面が抽出され、三角測量されます。</p>
+<dt><strong>other_mesh</strong><span class="classifier"><a class="reference internal" href="pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a></span></dt><dd><p>衝突をテストする他のメッシュ． 他のメッシュがサーフェスでない場合は，その外面が抽出され，三角測量されます．</p>
 </dd>
-<dt><strong>contact_mode</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>接触モード。 以下のいずれかになります。</p>
+<dt><strong>contact_mode</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>接触モード． 以下のいずれかになります．</p>
 <ul class="simple">
-<li><p>0 - すべての接触。2点/コリジョンで全ての接触セルペアを見つけます</p></li>
-<li><p>1 - ファーストコンタクト。ファーストコンタクトポイントを素早く見つけます。</p></li>
-<li><p>2 - ハーフコンタクト。接触しているすべてのセルペアを、1コリジョンにつき1ポイントで見つける。</p></li>
+<li><p>0 - すべての接触．2点/コリジョンで全ての接触セルペアを見つけます</p></li>
+<li><p>1 - ファーストコンタクト．ファーストコンタクトポイントを素早く見つけます．</p></li>
+<li><p>2 - ハーフコンタクト．接触しているすべてのセルペアを，1コリジョンにつき1ポイントで見つける．</p></li>
 </ul>
 </dd>
-<dt><strong>box_tolerance</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>全体座標でのOBB（Oriented Bounding Box）ツリーの許容範囲。</p>
+<dt><strong>box_tolerance</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>全体座標でのOBB（Oriented Bounding Box）ツリーの許容範囲．</p>
 </dd>
-<dt><strong>cell_tolerance</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>セルの許容量（二乗値）。</p>
+<dt><strong>cell_tolerance</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>セルの許容量（二乗値）．</p>
 </dd>
-<dt><strong>n_cells_per_node</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>各OBBのセルの数。</p>
+<dt><strong>n_cells_per_node</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>各OBBのセルの数．</p>
 </dd>
-<dt><strong>generate_scalars</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>コンタクトセルを視覚化するフラグ。 もし <code class="docutils literal notranslate"><span class="pre">True</span></code> ならば、接触しているセルは赤から青へと色づけされ、最初に決定された衝突は赤になります。 この配列は <code class="docutils literal notranslate"><span class="pre">&quot;collision_rgba&quot;</span></code> として格納される。</p>
+<dt><strong>generate_scalars</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>コンタクトセルを視覚化するフラグ． もし <code class="docutils literal notranslate"><span class="pre">True</span></code> ならば，接触しているセルは赤から青へと色づけされ，最初に決定された衝突は赤になります． この配列は <code class="docutils literal notranslate"><span class="pre">&quot;collision_rgba&quot;</span></code> として格納される．</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p>これにより、メッシュ内の他のセルアレイが削除されます。</p>
+<p>これにより，メッシュ内の他のセルアレイが削除されます．</p>
 </div>
 </dd>
 <dt><strong>progress_bar</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>進行状況を示す進行状況バーを表示します．</p>
@@ -1348,18 +1348,18 @@
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">&quot;ContactCells&quot;</span></code> という名前の <code class="docutils literal notranslate"><span class="pre">field_data</span></code> 属性のコリジョンを含むメッシュです。 この配列は、コリジョンがある場合にのみ存在します。</p>
+<dt><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">&quot;ContactCells&quot;</span></code> という名前の <code class="docutils literal notranslate"><span class="pre">field_data</span></code> 属性のコリジョンを含むメッシュです． この配列は，コリジョンがある場合にのみ存在します．</p>
 </dd>
-<dt><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></dt><dd><p>衝突の数。</p>
+<dt><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></dt><dd><p>衝突の数．</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">備考</p>
-<p><a class="reference external" href="https://vtk.org/doc/nightly/html/classvtkCollisionDetectionFilter.html">vtk.vtkCollisionDetectionFilter</a> の性質上、このメソッドを繰り返し使用すると <code class="docutils literal notranslate"><span class="pre">vtk.vtkCollisionDetectionFilter</span></code> を直接使用した場合よりも遅くなります。 このフィルタの最初の更新では、 <a class="reference external" href="https://vtk.org/doc/nightly/html/classvtkOBBTree.html">vtkOBBTree</a> のインスタンスが2つ作成されます。その後、入力メッシュの変換や行列を変更することで、このインスタンスを更新することができます。</p>
-<p>このメソッドは変換を前提としていないので、単一の衝突テストには使いやすいですが、繰り返される衝突を高速に計算するには <code class="docutils literal notranslate"><span class="pre">pyvista</span></code> と <code class="docutils literal notranslate"><span class="pre">vtk</span></code> の組み合わせを使うことをお勧めします。 詳しくは、 <a class="reference external" href="https://kitware.github.io/vtk-examples/site/Python/Visualization/CollisionDetection/">Collision Detection Example</a> をご覧ください。</p>
+<p><a class="reference external" href="https://vtk.org/doc/nightly/html/classvtkCollisionDetectionFilter.html">vtk.vtkCollisionDetectionFilter</a> の性質上，このメソッドを繰り返し使用すると <code class="docutils literal notranslate"><span class="pre">vtk.vtkCollisionDetectionFilter</span></code> を直接使用した場合よりも遅くなります． このフィルタの最初の更新では， <a class="reference external" href="https://vtk.org/doc/nightly/html/classvtkOBBTree.html">vtkOBBTree</a> のインスタンスが2つ作成されます．その後，入力メッシュの変換や行列を変更することで，このインスタンスを更新することができます．</p>
+<p>このメソッドは変換を前提としていないので，単一の衝突テストには使いやすいですが，繰り返される衝突を高速に計算するには <code class="docutils literal notranslate"><span class="pre">pyvista</span></code> と <code class="docutils literal notranslate"><span class="pre">vtk</span></code> の組み合わせを使うことをお勧めします． 詳しくは， <a class="reference external" href="https://kitware.github.io/vtk-examples/site/Python/Visualization/CollisionDetection/">Collision Detection Example</a> をご覧ください．</p>
 <p class="rubric">例</p>
-<p>球体と立方体の背面の衝突を計算し、最初の10個の衝突のセルインデックスを出力します。</p>
+<p>球体と立方体の背面の衝突を計算し，最初の10個の衝突のセルインデックスを出力します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh_a</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
@@ -1369,7 +1369,7 @@
 <span class="go">array([471, 471, 468, 468, 469, 469, 466, 466, 467, 467])</span>
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">&quot;ContactCells&quot;</span></code> のフィールドデータを使ってコリジョンマスクを作成し、コリジョンをプロットします。 衝突のあったセルは赤で表示されます。</p>
+<p><code class="docutils literal notranslate"><span class="pre">&quot;ContactCells&quot;</span></code> のフィールドデータを使ってコリジョンマスクを作成し，コリジョンをプロットします． 衝突のあったセルは赤で表示されます．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">scalars</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">collision</span><span class="o">.</span><span class="n">n_cells</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">scalars</span><span class="p">[</span><span class="n">collision</span><span class="o">.</span><span class="n">field_data</span><span class="p">[</span><span class="s1">&#39;ContactCells&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
@@ -1383,7 +1383,7 @@
 <figure class="align-default">
 <img alt="../../../_images/pyvista-PolyData-collision-1_00_00.png" src="../../../_images/pyvista-PolyData-collision-1_00_00.png" />
 </figure>
-<p>あるいは、 <code class="docutils literal notranslate"><span class="pre">generate_scalars</span></code> を有効にした後、デフォルトの <code class="docutils literal notranslate"><span class="pre">'collision_rgba'</span></code> 配列を使って衝突をプロットするだけでも構いません。</p>
+<p>あるいは， <code class="docutils literal notranslate"><span class="pre">generate_scalars</span></code> を有効にした後，デフォルトの <code class="docutils literal notranslate"><span class="pre">'collision_rgba'</span></code> 配列を使って衝突をプロットするだけでも構いません．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">collision</span><span class="p">,</span> <span class="n">ncol</span> <span class="o">=</span> <span class="n">mesh_a</span><span class="o">.</span><span class="n">collision</span><span class="p">(</span><span class="n">mesh_b</span><span class="p">,</span> <span class="n">cell_tolerance</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
 <span class="gp">... </span>                                   <span class="n">generate_scalars</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">collision</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
@@ -1392,7 +1392,7 @@
 <figure class="align-default">
 <img alt="../../../_images/pyvista-PolyData-collision-1_01_00.png" src="../../../_images/pyvista-PolyData-collision-1_01_00.png" />
 </figure>
-<p>このフィルターを使ったその他の例については、 <a class="reference internal" href="../../../examples/01-filter/collisions.html#collision-example"><span class="std std-ref">衝突</span></a> を参照してください。</p>
+<p>このフィルターを使ったその他の例については， <a class="reference internal" href="../../../examples/01-filter/collisions.html#collision-example"><span class="std std-ref">衝突</span></a> を参照してください．</p>
 </dd></dl>
 
 </section>
