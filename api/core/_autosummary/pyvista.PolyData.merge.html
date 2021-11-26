@@ -1317,6 +1317,13 @@
 <p class="admonition-title">注釈</p>
 <p>このフィルタの動作は <a class="reference internal" href="pyvista.PolyDataFilters.boolean_union.html#pyvista.PolyDataFilters.boolean_union" title="pyvista.PolyDataFilters.boolean_union"><code class="xref py py-func docutils literal notranslate"><span class="pre">PolyDataFilters.boolean_union()</span></code></a> フィルタとは異なります． このフィルタはマニフォールドメッシュを作成しようとはせず，2つのメッシュが重なっている場合には内部サーフェスを含みます．</p>
 </div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">+</span></code> operator between two meshes uses this filter with
+the default parameters. When the other mesh is also a
+<a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a>, in-place merging via <code class="docutils literal notranslate"><span class="pre">+=</span></code> is
+similarly possible.</p>
+</div>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
