@@ -3,7 +3,7 @@
 #
 import pyvista as pv
 light = pv.Light()
-light.transform_matrix = [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], 
+light.transform_matrix = [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0],
                           [0, 0, 0, 1]]
 shallow_copied = light.copy(deep=False)
 shallow_copied == light

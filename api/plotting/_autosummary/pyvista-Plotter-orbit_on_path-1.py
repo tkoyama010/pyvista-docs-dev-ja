@@ -12,5 +12,5 @@ plotter.open_gif(filename)
 viewup = [0, 0, 1]
 orbit = plotter.generate_orbital_path(factor=2.0, n_points=24,
                                       shift=0.0, viewup=viewup)
-plotter.orbit_on_path(orbit, write_frames=True, viewup=viewup, 
+plotter.orbit_on_path(orbit, write_frames=True, viewup=viewup,
                       step=0.02)

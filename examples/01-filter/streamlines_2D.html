@@ -1107,11 +1107,7 @@ to download the full example code</p>
 </pre></div>
 </div>
 <img src="../../_images/sphx_glr_streamlines_2D_002.png" srcset="../../_images/sphx_glr_streamlines_2D_002.png" alt="streamlines 2D" class = "sphx-glr-single-img"/><p>シリンダーのすぐ下流の挙動は，入口の流線ではまだわかりません．</p>
-<p>Another method is to use
-<a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSetFilters.streamlines_evenly_spaced_2D.html#pyvista.DataSetFilters.streamlines_evenly_spaced_2D" title="pyvista.DataSetFilters.streamlines_evenly_spaced_2D"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.streamlines_evenly_spaced_2D()</span></code></a>.
-This filter only works with 2D data that lies on the xy plane. This method
-can quickly run of memory, so particular attention must be paid to the input
-parameters.  The defaults are in cell_length units.</p>
+<p>もう一つの方法は， <a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSetFilters.streamlines_evenly_spaced_2D.html#pyvista.DataSetFilters.streamlines_evenly_spaced_2D" title="pyvista.DataSetFilters.streamlines_evenly_spaced_2D"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.streamlines_evenly_spaced_2D()</span></code></a> を使うことです．このフィルタは，xy平面上にある2Dデータに対してのみ動作します．このメソッドはすぐにメモリ不足になってしまうので，入力パラメータには特に注意を払う必要があります． デフォルトでは cell_length 単位で表示されます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">line_streamlines</span> <span class="o">=</span> <span class="n">fluid_mesh</span><span class="o">.</span><span class="n">streamlines_evenly_spaced_2D</span><span class="p">(</span>
     <span class="n">start_position</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.</span><span class="p">),</span>
     <span class="n">separating_distance</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>

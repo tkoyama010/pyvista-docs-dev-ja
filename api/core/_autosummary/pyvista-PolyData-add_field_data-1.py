@@ -11,7 +11,7 @@ mesh['my-field-data']
 # Add field data to a UniformGrid dataset.
 #
 mesh = pyvista.UniformGrid((2, 2, 1))
-mesh.add_field_data(['I could', 'write', 'notes', 'here'], 
+mesh.add_field_data(['I could', 'write', 'notes', 'here'],
                      'my-field-data')
 mesh['my-field-data']
 # Expected:

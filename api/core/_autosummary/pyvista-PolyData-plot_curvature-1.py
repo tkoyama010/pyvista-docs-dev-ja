@@ -4,5 +4,5 @@
 #
 from pyvista import examples
 hills = examples.load_random_hills()
-hills.plot_curvature(curv_type='gaussian', smooth_shading=True, 
+hills.plot_curvature(curv_type='gaussian', smooth_shading=True,
                      clim=[0, 1])
