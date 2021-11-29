@@ -1317,9 +1317,13 @@
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>orient</strong><span class="classifier">bool か python:str, optional</span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，グリフを方向付けるためにアクティブなベクトル配列を使用する．stringの場合は，グリフの向きを設定するために使用するベクトル配列です．</p>
+<dt><strong>orient</strong><span class="classifier">bool か python:str, optional</span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, use the active vectors array to orient the glyphs.
+If string, the vector array to use to orient the glyphs.
+If <code class="docutils literal notranslate"><span class="pre">False</span></code>, the glyphs will not be orientated.</p>
 </dd>
-<dt><strong>scale</strong><span class="classifier">bool, python:str か python:sequence, optional</span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> の場合は，アクティブなスカラを使用してグリフをスケーリングします．stringの場合は，グリフのスケーリングに使用するスカラ配列です．</p>
+<dt><strong>scale</strong><span class="classifier">bool, python:str か python:sequence, optional</span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, use the active scalars to scale the glyphs.
+If string, the scalar array to use to scale the glyphs.
+If <code class="docutils literal notranslate"><span class="pre">False</span></code>, the glyphs will not be scaled.</p>
 </dd>
 <dt><strong>factor</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>スケーリング配列に適用されるスケール係数です．</p>
 </dd>
