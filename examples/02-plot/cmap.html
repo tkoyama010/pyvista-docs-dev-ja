@@ -1057,11 +1057,12 @@ to download the full example code</p>
 <section class="sphx-glr-example-title" id="colormap-choices">
 <span id="colormap-example"></span><span id="sphx-glr-examples-02-plot-cmap-py"></span><h1>カラーマップの選択肢<a class="headerlink" href="#colormap-choices" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>スカラー値をプロットする場合は，Matplotlib，Colorcet，cmocean，またはカスタムカラーマップを使用します．</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
-<span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib.colors</span> <span class="kn">import</span> <span class="n">ListedColormap</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">matplotlib.colors</span> <span class="kn">import</span> <span class="n">ListedColormap</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+<span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> ， <code class="docutils literal notranslate"><span class="pre">colorcet</span></code> ， <code class="docutils literal notranslate"><span class="pre">cmocean</span></code> 用に作成されたカラーマップはすべてPyVistaと完全に互換性があります．カラーマップは通常， <code class="docutils literal notranslate"><span class="pre">cmap</span></code> 引数によってカラーマップの文字列名をプロットルーチンに渡すことで指定します．</p>
@@ -1144,7 +1145,7 @@ to download the full example code</p>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_cmap_005.png" srcset="../../_images/sphx_glr_cmap_005.png" alt="cmap" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  5.869 seconds)</p>
+<img src="../../_images/sphx_glr_cmap_005.png" srcset="../../_images/sphx_glr_cmap_005.png" alt="cmap" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>スクリプトの合計実行時間:</strong> ( 0 分  6.445 秒)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-plot-cmap-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/6ddb159974b43ad38b0ed2857cbf69bb/cmap.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">cmap.py</span></code></a></p>

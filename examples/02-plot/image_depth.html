@@ -1042,9 +1042,10 @@ to download the full example code</p>
 <section class="sphx-glr-example-title" id="render-a-depth-image">
 <span id="sphx-glr-examples-02-plot-image-depth-py"></span><h1>デプスイメージをレンダーする<a class="headerlink" href="#render-a-depth-image" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>&quot;丘&quot;メッシュの例を見ながら，カメラから見た深度イメージをプロットします．</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 2</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># sphinx_gallery_thumbnail_number = 2</span>
 <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 
 <span class="c1"># Load an interesting example of geometry</span>
@@ -1057,14 +1058,7 @@ to download the full example code</p>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="画像深度" class="sphx-glr-single-img" src="../../_images/sphx_glr_image_depth_001.png" />
-<p class="sphx-glr-script-out">出力:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(32.59238063266725, 42.5923804083449, 36.404716943411536),
- (0.0, 9.99999977567765, 3.8123363107442856),
- (0.0, 0.0, 1.0)]
-</pre></div>
-</div>
-<p>カスタム塗り潰し値を使用した場合と使用しない場合の画像深度の記録</p>
+<img src="../../_images/sphx_glr_image_depth_001.png" srcset="../../_images/sphx_glr_image_depth_001.png" alt="image depth" class = "sphx-glr-single-img"/><p>カスタム塗り潰し値を使用した場合と使用しない場合の画像深度の記録</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zval</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">get_image_depth</span><span class="p">()</span>
 <span class="n">zval_filled_by_42s</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">get_image_depth</span><span class="p">(</span><span class="n">fill_value</span><span class="o">=</span><span class="mf">42.0</span><span class="p">)</span>
 </pre></div>
@@ -1079,8 +1073,7 @@ to download the full example code</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="画像深度" class="sphx-glr-single-img" src="../../_images/sphx_glr_image_depth_002.png" />
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<img src="../../_images/sphx_glr_image_depth_002.png" srcset="../../_images/sphx_glr_image_depth_002.png" alt="Depth image" class = "sphx-glr-single-img"/><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">zval_filled_by_42s</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Depth image (custom fill_value)&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Distance to Camera&#39;</span><span class="p">)</span>
@@ -1089,8 +1082,7 @@ to download the full example code</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="深度イメージ(カスタムfill_value)" class="sphx-glr-single-img" src="../../_images/sphx_glr_image_depth_003.png" />
-<p class="sphx-glr-timing"><strong>スクリプトの合計実行時間:</strong> ( 0 分  1.715 秒)</p>
+<img src="../../_images/sphx_glr_image_depth_003.png" srcset="../../_images/sphx_glr_image_depth_003.png" alt="Depth image (custom fill_value)" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.002 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-plot-image-depth-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/7a03d325bf8be5a0e77cb3e2fed43e64/image_depth.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">image_depth.py</span></code></a></p>

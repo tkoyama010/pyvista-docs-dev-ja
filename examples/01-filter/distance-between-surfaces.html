@@ -1059,8 +1059,10 @@ to download the full example code</p>
 <p>2つのサーフェス間の平均厚みを計算します．</p>
 <p>たとえば，地下地質モデルの岩石層の境界を表す2つのサーフェスがあり，それらの境界間の単位の平均厚さを知りたいとします．</p>
 <p>2つのサーフェス間の厚みは，いくつかの異なる方法を使用して計算できます．最初に，底面サーフェスの法線を計算し，次に上面サーフェスに光線を投影してサーフェス法線に沿った距離を計算する方法をデモします．次に，KDTreeを使用して，下部メッシュの各ポイントから上部メッシュの最も近いポイントまでの距離を計算します．</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+
 
 <span class="c1"># A helper to make a random surface</span>
 <span class="k">def</span> <span class="nf">hill</span><span class="p">(</span><span class="n">seed</span><span class="p">):</span>
@@ -1084,14 +1086,7 @@ to download the full example code</p>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="サーフェス間の距離" class="sphx-glr-single-img" src="../../_images/sphx_glr_distance-between-surfaces_001.png" />
-<p class="sphx-glr-script-out">出力:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(32.92590180940077, 43.08139643188071, 35.881717899507734),
- (-0.15549468994140625, 9.999999932538536, 2.800321400165558),
- (0.0, 0.0, 1.0)]
-</pre></div>
-</div>
-<section id="ray-tracing-distance">
+<img src="../../_images/sphx_glr_distance-between-surfaces_001.png" srcset="../../_images/sphx_glr_distance-between-surfaces_001.png" alt="distance between surfaces" class = "sphx-glr-single-img"/><section id="ray-tracing-distance">
 <h2>レイトレーシング距離<a class="headerlink" href="#ray-tracing-distance" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>下部サーフェスの法線を計算</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">h0n</span> <span class="o">=</span> <span class="n">h0</span><span class="o">.</span><span class="n">compute_normals</span><span class="p">(</span><span class="n">point_normals</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cell_normals</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
@@ -1116,7 +1111,7 @@ to download the full example code</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">出力:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>5.143716063834265
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>5.144072866943829
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
@@ -1125,14 +1120,7 @@ to download the full example code</p>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="サーフェス間の距離" class="sphx-glr-single-img" src="../../_images/sphx_glr_distance-between-surfaces_002.png" />
-<p class="sphx-glr-script-out">出力:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(32.92590180940077, 43.08139643188071, 35.881717899507734),
- (-0.15549468994140625, 9.999999932538536, 2.800321400165558),
- (0.0, 0.0, 1.0)]
-</pre></div>
-</div>
-</section>
+<img src="../../_images/sphx_glr_distance-between-surfaces_002.png" srcset="../../_images/sphx_glr_distance-between-surfaces_002.png" alt="distance between surfaces" class = "sphx-glr-single-img"/></section>
 <section id="nearest-neighbor-distance">
 <h2>最近接距離<a class="headerlink" href="#nearest-neighbor-distance" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>KDTreeを使用して，上部サーフェスの各ポイントと下部サーフェスの最も近い隣接ポイント間の距離を比較することもできます．これはサーフェス間の正確な距離ではありませんが，特に大きなサーフェスでは，レイトレースよりも著しく高速になります．</p>
@@ -1154,14 +1142,7 @@ to download the full example code</p>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="サーフェス間の距離" class="sphx-glr-single-img" src="../../_images/sphx_glr_distance-between-surfaces_003.png" />
-<p class="sphx-glr-script-out">出力:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(32.92590180940077, 43.08139643188071, 35.881717899507734),
- (-0.15549468994140625, 9.999999932538536, 2.800321400165558),
- (0.0, 0.0, 1.0)]
-</pre></div>
-</div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  6.482 seconds)</p>
+<img src="../../_images/sphx_glr_distance-between-surfaces_003.png" srcset="../../_images/sphx_glr_distance-between-surfaces_003.png" alt="distance between surfaces" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.662 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-filter-distance-between-surfaces-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/c850702ad7d739f993e2acb810d247b7/distance-between-surfaces.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">distance-between-surfaces.py</span></code></a></p>

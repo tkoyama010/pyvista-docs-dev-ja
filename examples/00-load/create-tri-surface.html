@@ -1057,9 +1057,10 @@ to download the full example code</p>
 <section class="sphx-glr-example-title" id="create-triangulated-surface">
 <span id="triangulated-surface"></span><span id="sphx-glr-examples-00-load-create-tri-surface-py"></span><h1>三角形サーフェスを作成<a class="headerlink" href="#create-triangulated-surface" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>一連のポイントからDelaunay三角形分割を介してサーフェスを作成します．</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 2</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># sphinx_gallery_thumbnail_number = 2</span>
 <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
 <section id="simple-triangulations">
@@ -1079,11 +1080,11 @@ to download the full example code</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">出力:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>array([[-198.16064669, -199.27285558,    1.92765559],
-       [-177.38686784, -199.27285558,    2.84732966],
-       [-153.1313395 , -199.27285558,    4.25130622],
-       [-139.70644386, -199.27285558,    5.17475562],
-       [-114.59467135, -199.27285558,    7.12129579]])
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>array([[-200.81584333, -204.86195827,    1.63296755],
+       [-183.28337759, -204.86195827,    2.28669893],
+       [-159.68877634, -204.86195827,    3.42713222],
+       [-136.24312021, -204.86195827,    4.8483561 ],
+       [-119.52397694, -204.86195827,    6.00414483]])
 </pre></div>
 </div>
 <p>これらのポイントを使用して，ポイントクラウドPyVistaデータオブジェクトを作成します．これは <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> オブジェクトに含まれます．</p>
@@ -1119,8 +1120,8 @@ to download the full example code</p>
 <tr><th>PolyData</th><th>Information</th></tr>
 <tr><td>N Cells</td><td>100</td></tr>
 <tr><td>N Points</td><td>100</td></tr>
-<tr><td>X Bounds</td><td>6.109e-02, 9.267e+00</td></tr>
-<tr><td>Y Bounds</td><td>1.550e-03, 9.297e+00</td></tr>
+<tr><td>X Bounds</td><td>3.277e-02, 9.268e+00</td></tr>
+<tr><td>Y Bounds</td><td>9.584e-02, 9.218e+00</td></tr>
 <tr><td>Z Bounds</td><td>0.000e+00, 0.000e+00</td></tr>
 <tr><td>N Arrays</td><td>0</td></tr>
 </table>
@@ -1157,7 +1158,7 @@ to download the full example code</p>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_create-tri-surface_005.png" srcset="../../_images/sphx_glr_create-tri-surface_005.png" alt="create tri surface" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.772 seconds)</p>
+<img src="../../_images/sphx_glr_create-tri-surface_005.png" srcset="../../_images/sphx_glr_create-tri-surface_005.png" alt="create tri surface" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.961 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-load-create-tri-surface-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/738c0dd2d950447063531d80b4111e12/create-tri-surface.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">create-tri-surface.py</span></code></a></p>

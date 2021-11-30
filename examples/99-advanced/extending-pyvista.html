@@ -1064,9 +1064,10 @@ to download the full example code</p>
 <p class="admonition-title">注釈</p>
 <p>これは上級者向けの機能です． 型の自動管理は，すべての状況で機能するわけではありません．特に，組み込みデータセットが直接インスタンス化されている場合はそうです． 以下の例をご覧ください．</p>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">vtk</span>
+
+<span class="kn">import</span> <span class="nn">pyvista</span>
 
 <span class="n">pyvista</span><span class="o">.</span><span class="n">set_plot_theme</span><span class="p">(</span><span class="s2">&quot;document&quot;</span><span class="p">)</span>
 </pre></div>
@@ -1215,7 +1216,7 @@ This operation fails
     <span class="n">pyvista</span><span class="o">.</span><span class="n">_wrappers</span><span class="p">[</span><span class="s1">&#39;vtkPolyData&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">PolyData</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.166 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.230 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-99-advanced-extending-pyvista-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/d5aa63f14646f54f070d177157d810b8/extending-pyvista.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">extending-pyvista.py</span></code></a></p>

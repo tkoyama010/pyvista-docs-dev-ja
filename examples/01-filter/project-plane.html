@@ -1046,19 +1046,11 @@ to download the full example code</p>
 <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 
-
 <span class="n">poly</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_random_hills</span><span class="p">()</span>
 <span class="n">poly</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="平面に投影" class="sphx-glr-single-img" src="../../_images/sphx_glr_project-plane_001.png" />
-<p class="sphx-glr-script-out">出力:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(32.59238063266725, 42.5923804083449, 36.404716943411536),
- (0.0, 9.99999977567765, 3.8123363107442856),
- (0.0, 0.0, 1.0)]
-</pre></div>
-</div>
-<p>そのサーフェスをサーフェスの下の平面に投影します．</p>
+<img src="../../_images/sphx_glr_project-plane_001.png" srcset="../../_images/sphx_glr_project-plane_001.png" alt="project plane" class = "sphx-glr-single-img"/><p>そのサーフェスをサーフェスの下の平面に投影します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">origin</span> <span class="o">=</span> <span class="n">poly</span><span class="o">.</span><span class="n">center</span>
 <span class="n">origin</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-=</span> <span class="n">poly</span><span class="o">.</span><span class="n">length</span> <span class="o">/</span> <span class="mf">3.0</span>
 <span class="n">projected</span> <span class="o">=</span> <span class="n">poly</span><span class="o">.</span><span class="n">project_points_to_plane</span><span class="p">(</span><span class="n">origin</span><span class="o">=</span><span class="n">origin</span><span class="p">)</span>
@@ -1070,14 +1062,7 @@ to download the full example code</p>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="平面に投影" class="sphx-glr-single-img" src="../../_images/sphx_glr_project-plane_002.png" />
-<p class="sphx-glr-script-out">出力:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(34.913678491391046, 44.9136782670687, 35.691136920727594),
- (0.0, 9.99999977567765, 0.7774584293365479),
- (0.0, 0.0, 1.0)]
-</pre></div>
-</div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.631 seconds)</p>
+<img src="../../_images/sphx_glr_project-plane_002.png" srcset="../../_images/sphx_glr_project-plane_002.png" alt="project plane" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.268 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-filter-project-plane-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/74b3aae9ad6d18c1cbdd0a8d45ea3685/project-plane.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">project-plane.py</span></code></a></p>

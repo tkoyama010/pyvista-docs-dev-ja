@@ -1043,10 +1043,12 @@ to download the full example code</p>
 <span id="voxelize-surface-mesh-example"></span><span id="sphx-glr-examples-01-filter-voxelize-py"></span><h1>サーフェスメッシュをボクセル化する<a class="headerlink" href="#voxelize-a-surface-mesh" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>閉じたサーフェスまたはボリュームメッシュのボクセルモデル(レゴのように)を作成します．</p>
 <p>この例はまた，境界 <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> 表面からの陰的距離を計算する方法を示す．</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 2</span>
-<span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
 <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># sphinx_gallery_thumbnail_number = 2</span>
+<span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 
 <span class="c1"># Load a surface to voxelize</span>
 <span class="n">surface</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_foot_bones</span><span class="p">()</span>
@@ -1152,7 +1154,7 @@ to download the full example code</p>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="n">cpos</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_voxelize_004.png" srcset="../../_images/sphx_glr_voxelize_004.png" alt="voxelize" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  10.339 seconds)</p>
+<img src="../../_images/sphx_glr_voxelize_004.png" srcset="../../_images/sphx_glr_voxelize_004.png" alt="voxelize" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  11.849 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-filter-voxelize-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/ef0afe261828ec60b08f5513d3f7011f/voxelize.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">voxelize.py</span></code></a></p>

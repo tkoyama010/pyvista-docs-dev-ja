@@ -1052,9 +1052,10 @@ to download the full example code</p>
 <section class="sphx-glr-example-title" id="creating-a-spline">
 <span id="ref-create-spline"></span><span id="sphx-glr-examples-00-load-create-spline-py"></span><h1>スプラインの作成<a class="headerlink" href="#creating-a-spline" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>XYZ頂点の数の多い配列からスプライン/ポリラインを作成します</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 2</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># sphinx_gallery_thumbnail_number = 2</span>
 <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
 <p>プロットするデータセットを作成する</p>
@@ -1115,14 +1116,7 @@ to download the full example code</p>
 <span class="n">tube</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">smooth_shading</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="スプラインの作成" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-spline_001.png" />
-<p class="sphx-glr-script-out">出力:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(14.087887028287454, 14.946060132268393, 14.087887028287454),
- (4.440892098500626e-16, 0.8581731039809382, 0.0),
- (0.0, 0.0, 1.0)]
-</pre></div>
-</div>
-<p>そのチューブは，各線分セグメントに鋭いエッジを持っています．これは，すべての点に対して単一のポリラインセルを作成することで緩和できます．</p>
+<img src="../../_images/sphx_glr_create-spline_001.png" srcset="../../_images/sphx_glr_create-spline_001.png" alt="create spline" class = "sphx-glr-single-img"/><p>そのチューブは，各線分セグメントに鋭いエッジを持っています．これは，すべての点に対して単一のポリラインセルを作成することで緩和できます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">polyline_from_points</span><span class="p">(</span><span class="n">points</span><span class="p">):</span>
     <span class="n">poly</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">PolyData</span><span class="p">()</span>
     <span class="n">poly</span><span class="o">.</span><span class="n">points</span> <span class="o">=</span> <span class="n">points</span>
@@ -1137,14 +1131,7 @@ to download the full example code</p>
 <span class="n">tube</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">smooth_shading</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="スプラインの作成" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-spline_002.png" />
-<p class="sphx-glr-script-out">出力:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(14.086813345437829, 14.944844858005826, 14.086377144241794),
- (0.00031734610427580634, 0.8583488586722716, -0.0001188550917605724),
- (0.0, 0.0, 1.0)]
-</pre></div>
-</div>
-<p>これらの点をパラメトリックスプライン上に補間することもできます．</p>
+<img src="../../_images/sphx_glr_create-spline_002.png" srcset="../../_images/sphx_glr_create-spline_002.png" alt="create spline" class = "sphx-glr-single-img"/><p>これらの点をパラメトリックスプライン上に補間することもできます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create spline with 1000 interpolation points</span>
 <span class="n">spline</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Spline</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
 </pre></div>
@@ -1156,14 +1143,7 @@ to download the full example code</p>
 <span class="n">tube</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">smooth_shading</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="スプラインの作成" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-spline_003.png" />
-<p class="sphx-glr-script-out">出力:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(14.115423714961896, 14.971821105327496, 14.114901935901532),
- (0.0003743171691894531, 0.85677170753479, -0.0001474618911743164),
- (0.0, 0.0, 1.0)]
-</pre></div>
-</div>
-<p>スプラインは，プレーンラインとしてプロットすることもできます．</p>
+<img src="../../_images/sphx_glr_create-spline_003.png" srcset="../../_images/sphx_glr_create-spline_003.png" alt="create spline" class = "sphx-glr-single-img"/><p>スプラインは，プレーンラインとしてプロットすることもできます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># generate same spline with 400 interpolation points</span>
 <span class="n">spline</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Spline</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
 
@@ -1171,28 +1151,14 @@ to download the full example code</p>
 <span class="n">spline</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">line_width</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="スプラインの作成" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-spline_004.png" />
-<p class="sphx-glr-script-out">出力:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(13.745872971968165, 14.603470084623805, 13.745872971968165),
- (0.0, 0.8575971126556396, 0.0),
- (0.0, 0.0, 1.0)]
-</pre></div>
-</div>
-<section id="ribbons">
+<img src="../../_images/sphx_glr_create-spline_004.png" srcset="../../_images/sphx_glr_create-spline_004.png" alt="create spline" class = "sphx-glr-single-img"/><section id="ribbons">
 <h2>リボン<a class="headerlink" href="#ribbons" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>上記の例の線のAyyを使用してリボンを作成できます． <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyDataFilters.ribbon.html#pyvista.PolyDataFilters.ribbon" title="pyvista.PolyDataFilters.ribbon"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.ribbon()</span></code></a> フィルタを見てください．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ribbon</span> <span class="o">=</span> <span class="n">spline</span><span class="o">.</span><span class="n">compute_arc_length</span><span class="p">()</span><span class="o">.</span><span class="n">ribbon</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span> <span class="n">scalars</span><span class="o">=</span><span class="s1">&#39;arc_length&#39;</span><span class="p">)</span>
 <span class="n">ribbon</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="スプラインの作成" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-spline_005.png" />
-<p class="sphx-glr-script-out">出力:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(16.68578476672845, 17.41423101192193, 17.248056957776118),
- (0.07060718536376953, 0.799053430557251, 0.632879376411438),
- (0.0, 0.0, 1.0)]
-</pre></div>
-</div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.080 seconds)</p>
+<img src="../../_images/sphx_glr_create-spline_005.png" srcset="../../_images/sphx_glr_create-spline_005.png" alt="create spline" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>スクリプトの合計実行時間:</strong> ( 0 分  2.097 秒)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-load-create-spline-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/4d9c689003275db497162ef06a7b81c6/create-spline.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">create-spline.py</span></code></a></p>

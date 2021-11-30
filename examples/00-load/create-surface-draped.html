@@ -1047,11 +1047,12 @@ to download the full example code</p>
 <p><a class="reference external" href="https://github.com/pyvista/pyvista-support/issues/135">このサポートのイシュー</a> で最初に掲載されました．</p>
 <p>GPRデータ(深さ方向の値を持つデータの行を生成するものは何でもかまいません)があるとします．これらのデータを使用して，データ値の2 Dイメージ/配列と，その線分/プロファイルが3 D空間のどこにあるかの3 D座標を取得できます(地形の表面のデータを集めて)．以下に，1) GPRパスのXYZ座標，2) GPRから生成されたデータ値の2 D配列の例を示します．</p>
 <p>ここのデータは奇妙(質の高い共有可能なデータを入手するのは難しい)なので，無視して構造に注意してください．我々が持っている座標は技術的に上にシフトされ，我々は表面の上にいくつかのNaNフィラーがあります-それは奇妙で，それを無視します．通常は，2 D配列内の各柱の上端に関連付けられた座標を持つ，より均一に見える2 Dプロファイルが作成されます．</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 3</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># sphinx_gallery_thumbnail_number = 3</span>
 <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="c1"># Extract the data archive and load these files</span>
 <span class="c1"># 2D array of XYZ coordinates</span>
@@ -1113,7 +1114,7 @@ to download the full example code</p>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="n">cpos</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_create-surface-draped_003.png" srcset="../../_images/sphx_glr_create-surface-draped_003.png" alt="create surface draped" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>スクリプトの合計実行時間:</strong> ( 0 分  13.838 秒)</p>
+<img src="../../_images/sphx_glr_create-surface-draped_003.png" srcset="../../_images/sphx_glr_create-surface-draped_003.png" alt="create surface draped" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  12.699 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-load-create-surface-draped-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/f258c15922558e9c8b1c2e7edd9d688e/create-surface-draped.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">create-surface-draped.py</span></code></a></p>

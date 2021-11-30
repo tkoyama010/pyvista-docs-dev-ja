@@ -1042,10 +1042,12 @@ to download the full example code</p>
 <section class="sphx-glr-example-title" id="load-data-using-a-reader">
 <span id="reader-example"></span><span id="sphx-glr-examples-00-load-reader-py"></span><h1>リーダーによるデータの読み込み<a class="headerlink" href="#load-data-using-a-reader" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>データファイルの読み取りをより細かく制御するには，クラスベースのリーダーを使用します．このクラスは，ファイルからのデータセットの読み込みをより細かく制御することができます． サポートされているファイルタイプのリストは， <a class="reference internal" href="../../api/readers/_autosummary/pyvista.get_reader.html#pyvista.get_reader" title="pyvista.get_reader"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.get_reader()</span></code></a> を参照してください．</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span>
-<span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tempfile</span> <span class="kn">import</span> <span class="n">NamedTemporaryFile</span>
+
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">tempfile</span> <span class="kn">import</span> <span class="n">NamedTemporaryFile</span>
+
+<span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">.vtp</span></code> 形式のXML PolyDataファイルが作成されます． このファイルは，今回の例では一時ファイルに保存されます．</p>
@@ -1054,7 +1056,7 @@ to download the full example code</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">出力:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;/tmp/tmpv9ake4uj.vtp&#39;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;/tmp/tmpvyn_ugq5.vtp&#39;
 </pre></div>
 </div>
 <p><a class="reference internal" href="../../api/utilities/_autosummary/pyvista.Sphere.html#pyvista.Sphere" title="pyvista.Sphere"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.Sphere</span></code></a> には，すでに <code class="docutils literal notranslate"><span class="pre">Normals</span></code> という点データが含まれています． さらに， <code class="docutils literal notranslate"><span class="pre">height</span></code> のポイントデータと <code class="docutils literal notranslate"><span class="pre">id</span></code> のセルデータを追加します．</p>
@@ -1080,7 +1082,7 @@ to download the full example code</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">出力:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>XMLPolyDataReader(&#39;/tmp/tmpv9ake4uj.vtp&#39;)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>XMLPolyDataReader(&#39;/tmp/tmpvyn_ugq5.vtp&#39;)
 </pre></div>
 </div>
 <p>このクラスを含め，いくつかのリーダークラスは，すべてのデータを読み込む前にデータファイルを検査する機能を提供しています．例えば，点配列やセル配列の数や名前にアクセスすることができます．</p>
@@ -1196,7 +1198,7 @@ Available point arrays: [&#39;DENS&#39;]
 <span class="n">plotter</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_reader_002.png" srcset="../../_images/sphx_glr_reader_002.png" alt="reader" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  10.841 seconds)</p>
+<img src="../../_images/sphx_glr_reader_002.png" srcset="../../_images/sphx_glr_reader_002.png" alt="reader" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  8.628 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-load-reader-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/50c57ebb157826f0bf68d9ca2d6e414f/reader.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">reader.py</span></code></a></p>

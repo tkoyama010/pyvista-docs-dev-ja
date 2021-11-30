@@ -1044,9 +1044,10 @@ to download the full example code</p>
 <p>地形サーフェスを使用して，3 D地形フォローメッシュを作成します．</p>
 <p>メッシュに続く地形は，環境科学，例えば水文モデリング( <a class="reference external" href="https://www.sciencedirect.com/science/article/abs/pii/S0309170812002564">Maxwell 2013</a> と <a class="reference external" href="https://parflow.org">ParFlow</a> を参照)において一般的である．</p>
 <p>この例では，特定の地形サーフェスに従う3 Dグリッド/メッシュを作成する簡単な方法を適用します．この例では，指定した数値標高モデル (DEM) が構造化されていることに注意してください(グリッド付きで三角形でない): これはDEMでは一般的です．</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 3</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># sphinx_gallery_thumbnail_number = 3</span>
 <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 </pre></div>
 </div>
@@ -1154,7 +1155,7 @@ to download the full example code</p>
 <span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">lighting</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="n">cpos</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_terrain-mesh_003.png" srcset="../../_images/sphx_glr_terrain-mesh_003.png" alt="terrain mesh" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.326 seconds)</p>
+<img src="../../_images/sphx_glr_terrain-mesh_003.png" srcset="../../_images/sphx_glr_terrain-mesh_003.png" alt="terrain mesh" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  13.487 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-load-terrain-mesh-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/e1af135fcdfa4496d94066b0f7fc1ccf/terrain-mesh.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">terrain-mesh.py</span></code></a></p>

@@ -1043,9 +1043,7 @@ to download the full example code</p>
 <span id="mesh-quality-example"></span><span id="sphx-glr-examples-01-filter-mesh-quality-py"></span><h1>メッシュ品質の計算<a class="headerlink" href="#computing-mesh-quality" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>強力なVTKアルゴリズムを利用して，メッシュ品質を計算します．</p>
 <p>ここでは， <a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSetFilters.compute_cell_quality.html#pyvista.DataSetFilters.compute_cell_quality" title="pyvista.DataSetFilters.compute_cell_quality"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.compute_cell_quality()</span></code></a> フィルタを使用してセル品質を計算します．利用可能なさまざまな品質メトリックの完全なリストについては，そのフィルタのドキュメントを参照してください．</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
-<span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 
 <span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_cow</span><span class="p">()</span><span class="o">.</span><span class="n">triangulate</span><span class="p">()</span><span class="o">.</span><span class="n">decimate</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span>
 
@@ -1083,7 +1081,7 @@ to download the full example code</p>
 <br /><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">qual</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="n">cpos</span><span class="p">,</span> <span class="n">scalars</span><span class="o">=</span><span class="s1">&#39;CellQuality&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_mesh-quality_001.png" srcset="../../_images/sphx_glr_mesh-quality_001.png" alt="mesh quality" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.419 seconds)</p>
+<img src="../../_images/sphx_glr_mesh-quality_001.png" srcset="../../_images/sphx_glr_mesh-quality_001.png" alt="mesh quality" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.834 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-filter-mesh-quality-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/b839d0bdbe5c75053150c7ed14cad6c3/mesh-quality.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">mesh-quality.py</span></code></a></p>

@@ -1042,8 +1042,9 @@ to download the full example code</p>
 <section class="sphx-glr-example-title" id="table-of-glyphs">
 <span id="glyph-table-example"></span><span id="sphx-glr-examples-01-filter-glyphs-table-py"></span><h1>字形表<a class="headerlink" href="#table-of-glyphs" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">vtk</span></code> は，字形が検索される字形のテーブルをサポートします．この例では，この機能を示します．</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 </pre></div>
 </div>
 <p><a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSetFilters.glyph.html#pyvista.DataSetFilters.glyph" title="pyvista.DataSetFilters.glyph"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.glyph()</span></code></a> の <code class="docutils literal notranslate"><span class="pre">geom</span></code> kwargとして渡されるジオメトリのシーケンスと単一 (スカラ) ジオメトリを許可することによって，下位互換性のある方法でグリフのテーブルを許可することができます． <code class="docutils literal notranslate"><span class="pre">indices</span></code> オプションキーワードはテーブル内の各グリフジオメトリのインデックスを指定し，指定された場合は <code class="docutils literal notranslate"><span class="pre">geom</span></code> と同じ長さである必要があります．省略した場合は， <code class="docutils literal notranslate"><span class="pre">range(len(geom))</span></code> のデフォルト値が想定されます．</p>
@@ -1084,7 +1085,7 @@ to download the full example code</p>
 <span class="n">plotter</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_glyphs_table_001.png" srcset="../../_images/sphx_glr_glyphs_table_001.png" alt="glyphs table" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.787 seconds)</p>
+<img src="../../_images/sphx_glr_glyphs_table_001.png" srcset="../../_images/sphx_glr_glyphs_table_001.png" alt="glyphs table" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.822 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-filter-glyphs-table-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/b6bc253eb1ab9235bb3e96e05447a2fe/glyphs_table.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">glyphs_table.py</span></code></a></p>

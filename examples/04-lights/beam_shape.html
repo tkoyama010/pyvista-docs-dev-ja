@@ -1045,6 +1045,7 @@ to download the full example code</p>
 <p>2つの半球を考えてみましょう:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 5</span>
 <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+
 <span class="n">plotter</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 
 <span class="n">hemi</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span><span class="o">.</span><span class="n">clip</span><span class="p">()</span>
@@ -1058,14 +1059,7 @@ to download the full example code</p>
 <span class="n">plotter</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="ビーム形状" class="sphx-glr-single-img" src="../../_images/sphx_glr_beam_shape_001.png" />
-<p class="sphx-glr-script-out">出力:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(3.6954084971422354, 3.6954084971422354, 3.6954084971422354),
- (0.0, 0.0, 0.0),
- (0.0, 0.0, 1.0)]
-</pre></div>
-</div>
-<p>デフォルトのライティングでは，半球の形をはっきりと表現できます．</p>
+<img src="../../_images/sphx_glr_beam_shape_001.png" srcset="../../_images/sphx_glr_beam_shape_001.png" alt="beam shape" class = "sphx-glr-single-img"/><p>デフォルトのライティングでは，半球の形をはっきりと表現できます．</p>
 <p>半球の間に配置され，半球の中心に沿って方向付けられたディレクショナルライトを照らします．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">lighting</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
 
@@ -1083,14 +1077,7 @@ to download the full example code</p>
 <span class="n">plotter</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="ビーム形状" class="sphx-glr-single-img" src="../../_images/sphx_glr_beam_shape_002.png" />
-<p class="sphx-glr-script-out">出力:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(3.6954084971422354, 3.6954084971422354, 3.6954084971422354),
- (0.0, 0.0, 0.0),
- (0.0, 0.0, 1.0)]
-</pre></div>
-</div>
-<p>両半球のサーフェスは，ライトに面した側で照らされます．これは，光の公称位置から焦点に向かう無限遠に位置する点光源と一致します．</p>
+<img src="../../_images/sphx_glr_beam_shape_002.png" srcset="../../_images/sphx_glr_beam_shape_002.png" alt="beam shape" class = "sphx-glr-single-img"/><p>両半球のサーフェスは，ライトに面した側で照らされます．これは，光の公称位置から焦点に向かう無限遠に位置する点光源と一致します．</p>
 <p>ここで，ライトをポジショナルライトに変更します(スポットライトではありません):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">lighting</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
 
@@ -1110,14 +1097,7 @@ to download the full example code</p>
 <span class="n">plotter</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="ビーム形状" class="sphx-glr-single-img" src="../../_images/sphx_glr_beam_shape_003.png" />
-<p class="sphx-glr-script-out">出力:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(3.6954084971422354, 3.6954084971422354, 3.6954084971422354),
- (0.0, 0.0, 0.0),
- (0.0, 0.0, 1.0)]
-</pre></div>
-</div>
-<p>これで両半球の内側のサーフェスが照らされました．コーンアングルが90度(以上)の位置ライトは，ライトの公称位置にあるポイントソースとして機能します．減衰も表示できます． <a class="reference internal" href="attenuation.html#ref-attenuation-example"><span class="std std-ref">減衰</span></a> の例を参照してください．</p>
+<img src="../../_images/sphx_glr_beam_shape_003.png" srcset="../../_images/sphx_glr_beam_shape_003.png" alt="beam shape" class = "sphx-glr-single-img"/><p>これで両半球の内側のサーフェスが照らされました．コーンアングルが90度(以上)の位置ライトは，ライトの公称位置にあるポイントソースとして機能します．減衰も表示できます． <a class="reference internal" href="attenuation.html#ref-attenuation-example"><span class="std std-ref">減衰</span></a> の例を参照してください．</p>
 <p>スポットライト(コーンアングルが90度未満のポジショナルライト)に切り替えると， <code class="xref py py-attr docutils literal notranslate"><span class="pre">exponent</span></code> プロパティを使用したビーム成形が有効になります．このために半球を並べて，それぞれの中心にライトを配置しましょう．1つのスポットライトで，1つは単に位置を示すライトです．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">lighting</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
 
@@ -1148,14 +1128,7 @@ to download the full example code</p>
 <span class="n">plotter</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="ビーム形状" class="sphx-glr-single-img" src="../../_images/sphx_glr_beam_shape_004.png" />
-<p class="sphx-glr-script-out">出力:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(2.7976816949272623, 3.79731508165841, 3.0473150518560876),
- (-0.24963335692882538, 0.7500000298023224, 0.0),
- (0.0, 0.0, 1.0)]
-</pre></div>
-</div>
-<p>2つのライトのコーンアングルの違いはほんのわずかですが，スポットライトで有効にしたビーム成形エフェクトによって，結果に著しい違いが生じます．</p>
+<img src="../../_images/sphx_glr_beam_shape_004.png" srcset="../../_images/sphx_glr_beam_shape_004.png" alt="beam shape" class = "sphx-glr-single-img"/><p>2つのライトのコーンアングルの違いはほんのわずかですが，スポットライトで有効にしたビーム成形エフェクトによって，結果に著しい違いが生じます．</p>
 <p>スポットライトができたら，その <code class="xref py py-attr docutils literal notranslate"><span class="pre">exponent</span></code> を変更して，ビームシェイプをよりシャープにしたり，より広くしたりすることができます．シャープさが異なる3つのスポットライト:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">lighting</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
 <span class="n">hemi_template</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span><span class="o">.</span><span class="n">clip</span><span class="p">()</span>
@@ -1181,15 +1154,8 @@ to download the full example code</p>
 <span class="n">plotter</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="ビーム形状" class="sphx-glr-single-img" src="../../_images/sphx_glr_beam_shape_005.png" />
-<p class="sphx-glr-script-out">出力:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(3.5736450933356814, 4.573278480066829, 4.472797476543956),
- (-0.24963335692882538, 0.7500000298023224, 0.6495190262794495),
- (0.0, 0.0, 1.0)]
-</pre></div>
-</div>
-<p>指数0.3のスポットライトは実質的に均一で，指数5のスポットライトはライトの軸に沿って目に見えるようにフォーカスされています．</p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.978 seconds)</p>
+<img src="../../_images/sphx_glr_beam_shape_005.png" srcset="../../_images/sphx_glr_beam_shape_005.png" alt="beam shape" class = "sphx-glr-single-img"/><p>指数0.3のスポットライトは実質的に均一で，指数5のスポットライトはライトの軸に沿って目に見えるようにフォーカスされています．</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.292 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-04-lights-beam-shape-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/0d407081552f9cf08e5c613698b02d0f/beam_shape.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">beam_shape.py</span></code></a></p>

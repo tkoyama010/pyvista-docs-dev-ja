@@ -1052,9 +1052,10 @@ to download the full example code</p>
 <section class="sphx-glr-example-title" id="creating-an-unstructured-grid">
 <span id="ref-create-unstructured"></span><span id="sphx-glr-examples-00-load-create-unstructured-surface-py"></span><h1>非構造化グリッドの作成<a class="headerlink" href="#creating-an-unstructured-grid" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>NumPy配列から不規則な非構造化グリッドを作成します．</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">vtk</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 </pre></div>
 </div>
 <p>非構造化グリッドは，NumPy配列から直接作成できます．これは，グリッドを最初から作成する場合や，別の形式からコピーする場合に便利です．使用可能なセルタイプとその説明については， <a class="reference external" href="https://www.vtk.org/doc/nightly/html/classvtkUnstructuredGrid.html">vtkUnstructuredGrid</a> を参照してください．</p>
@@ -1115,7 +1116,11 @@ to download the full example code</p>
 <span class="n">_</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="非構造化サーフェスを作成する" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-unstructured-surface_001.png" />
+<img src="../../_images/sphx_glr_create-unstructured-surface_001.png" srcset="../../_images/sphx_glr_create-unstructured-surface_001.png" alt="create unstructured surface" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">出力:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/home/runner/work/pyvista-doc-translations/pyvista-doc-translations/pyvista/examples/00-load/create-unstructured-surface.py:65: UserWarning: VTK 9 no longer accepts an offset array
+  grid = pv.UnstructuredGrid(offset, cells, cell_type, points)
+</pre></div>
+</div>
 <section id="unstructuredgrid-with-shared-points">
 <h2>共有ポイントを持つ非構造化グリッド<a class="headerlink" href="#unstructuredgrid-with-shared-points" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>次の例でも，6面体セルを含み，セル間の共通点を使用する非構造グリッドを作成します．</p>
@@ -1200,8 +1205,12 @@ to download the full example code</p>
 <span class="n">_</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="非構造化サーフェスを作成する" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-unstructured-surface_002.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.312 seconds)</p>
+<img src="../../_images/sphx_glr_create-unstructured-surface_002.png" srcset="../../_images/sphx_glr_create-unstructured-surface_002.png" alt="create unstructured surface" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">出力:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/home/runner/work/pyvista-doc-translations/pyvista-doc-translations/pyvista/examples/00-load/create-unstructured-surface.py:153: UserWarning: VTK 9 no longer accepts an offset array
+  grid = pv.UnstructuredGrid(offset, cells, celltypes, points)
+</pre></div>
+</div>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.939 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-load-create-unstructured-surface-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/c0a97be65c0e930f38a48754a2eef156/create-unstructured-surface.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">create-unstructured-surface.py</span></code></a></p>
