@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Superquadric &#8212; PyVista 0.32.dev0 ドキュメント</title>
+    <title>超二次関数 &#8212; PyVista 0.32.dev0 ドキュメント</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
   <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -336,7 +336,7 @@
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       Superquadric
+       超二次関数
       </a>
      </li>
      <li class="toctree-l3">
@@ -421,43 +421,37 @@
               <div>
                 
   <section id="superquadric">
-<h1>Superquadric<a class="headerlink" href="#superquadric" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>超二次関数<a class="headerlink" href="#superquadric" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="pyvista.Superquadric">
 <span class="sig-name descname"><span class="pre">Superquadric</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(1.0,</span> <span class="pre">1.0,</span> <span class="pre">1.0)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theta_roundness</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi_roundness</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theta_resolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi_resolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">toroidal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thickness</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.3333333333333333</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Superquadric" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Create a superquadric.</p>
+<dd><p>超二次関数の作成</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>center</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/glossary.html#term-iterable" title="(in Python v3.11)"><span>iterable</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Center of the superquadric in <code class="docutils literal notranslate"><span class="pre">[x,</span> <span class="pre">y,</span> <span class="pre">z]</span></code>.</p>
+<dt><strong>center</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/glossary.html#term-iterable" title="(in Python v3.11)"><span>iterable</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">[x,</span> <span class="pre">y,</span> <span class="pre">z]</span></code> における超二次関数の中心。</p>
 </dd>
-<dt><strong>scale</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/glossary.html#term-iterable" title="(in Python v3.11)"><span>iterable</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Scale factors of the superquadric in <code class="docutils literal notranslate"><span class="pre">[x,</span> <span class="pre">y,</span> <span class="pre">z]</span></code>.</p>
+<dt><strong>scale</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/glossary.html#term-iterable" title="(in Python v3.11)"><span>iterable</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">[x,</span> <span class="pre">y,</span> <span class="pre">z]</span></code> における超二次関数のスケール係数。</p>
 </dd>
-<dt><strong>size</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Superquadric isotropic size.</p>
+<dt><strong>size</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>超二次関数の等方性サイズ。</p>
 </dd>
-<dt><strong>theta_roundness</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Superquadric east/west roundness.
-Values range from 0 (rectangular) to 1 (circular) to higher orders.</p>
+<dt><strong>theta_roundness</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>超二次関数の東西方向の丸み。値は0（長方形）から1（円形）、さらに高次のものまであります。</p>
 </dd>
-<dt><strong>phi_roundness</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Superquadric north/south roundness.
-Values range from 0 (rectangular) to 1 (circular) to higher orders.</p>
+<dt><strong>phi_roundness</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>超二次関数の南北方向の丸み。値は0（長方形）から1（円形）、さらに高次のものまであります。</p>
 </dd>
-<dt><strong>theta_resolution</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Number of points in the longitude direction.
-Values are rounded to nearest multiple of 4.</p>
+<dt><strong>theta_resolution</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>経度方向のポイント数。数値は4の倍数になるように丸められます。</p>
 </dd>
-<dt><strong>phi_resolution</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Number of points in the latitude direction.
-Values are rounded to nearest multiple of 8.</p>
+<dt><strong>phi_resolution</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>緯度方向のポイント数。数値は8の倍数になるように丸められます。</p>
 </dd>
-<dt><strong>toroidal</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Whether or not the superquadric is toroidal (<code class="docutils literal notranslate"><span class="pre">True</span></code>)
-or ellipsoidal (<code class="docutils literal notranslate"><span class="pre">False</span></code>).</p>
+<dt><strong>toroidal</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>超二次関数が環状体であるか (<code class="docutils literal notranslate"><span class="pre">True</span></code>) 、楕円体であるか (<code class="docutils literal notranslate"><span class="pre">False</span></code>) 。</p>
 </dd>
-<dt><strong>thickness</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Superquadric ring thickness.
-Only applies if toroidal is set to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<dt><strong>thickness</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>超二次関数リングの厚さ。Toroidal が <code class="docutils literal notranslate"><span class="pre">True</span></code> に設定されている場合にのみ適用されます。</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="../../core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p>Superquadric mesh.</p>
+<dt><a class="reference internal" href="../../core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p>超二次関数メッシュ。</p>
 </dd>
 </dl>
 </dd>
@@ -465,9 +459,9 @@ Only applies if toroidal is set to <code class="docutils literal notranslate"><s
 <div class="admonition seealso">
 <p class="admonition-title">参考</p>
 <dl class="simple">
-<dt><a class="reference internal" href="pyvista.ParametricSuperEllipsoid.html#pyvista.ParametricSuperEllipsoid" title="pyvista.ParametricSuperEllipsoid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.ParametricSuperEllipsoid</span></code></a></dt><dd><p>Parametric superquadric if toroidal is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<dt><a class="reference internal" href="pyvista.ParametricSuperEllipsoid.html#pyvista.ParametricSuperEllipsoid" title="pyvista.ParametricSuperEllipsoid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.ParametricSuperEllipsoid</span></code></a></dt><dd><p>toroidal が <code class="docutils literal notranslate"><span class="pre">False</span></code> の場合、パラメトリック超二次関数です。</p>
 </dd>
-<dt><a class="reference internal" href="pyvista.ParametricSuperToroid.html#pyvista.ParametricSuperToroid" title="pyvista.ParametricSuperToroid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.ParametricSuperToroid</span></code></a></dt><dd><p>Parametric superquadric if toroidal is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<dt><a class="reference internal" href="pyvista.ParametricSuperToroid.html#pyvista.ParametricSuperToroid" title="pyvista.ParametricSuperToroid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.ParametricSuperToroid</span></code></a></dt><dd><p>toroidal が <code class="docutils literal notranslate"><span class="pre">True</span></code> の場合、パラメトリック超二次関数です。</p>
 </dd>
 </dl>
 </div>
