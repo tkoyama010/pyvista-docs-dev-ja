@@ -36,6 +36,9 @@
       Plotter.add_box_widget
       
       
+      Plotter.add_camera_orientation_widget
+      
+      
       Plotter.add_checkbox_button_widget
       
       
@@ -133,6 +136,9 @@
       
       
       Plotter.clear_button_widgets
+      
+      
+      Plotter.clear_camera_widgets
       
       
       Plotter.clear_events_for_key

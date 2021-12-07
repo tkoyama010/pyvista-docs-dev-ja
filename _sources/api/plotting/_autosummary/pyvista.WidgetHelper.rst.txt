@@ -18,6 +18,9 @@
       WidgetHelper.add_box_widget
       
       
+      WidgetHelper.add_camera_orientation_widget
+      
+      
       WidgetHelper.add_checkbox_button_widget
       
       
@@ -64,6 +67,9 @@
       
       
       WidgetHelper.clear_button_widgets
+      
+      
+      WidgetHelper.clear_camera_widgets
       
       
       WidgetHelper.clear_line_widgets

@@ -76,6 +76,9 @@
       DefaultTheme.edge_color
       
       
+      DefaultTheme.enable_camera_orientation_widget
+      
+      
       DefaultTheme.floor_color
       
       

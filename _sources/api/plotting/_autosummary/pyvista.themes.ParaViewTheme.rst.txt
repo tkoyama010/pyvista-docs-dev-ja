@@ -76,6 +76,9 @@
       ParaViewTheme.edge_color
       
       
+      ParaViewTheme.enable_camera_orientation_widget
+      
+      
       ParaViewTheme.floor_color
       
       

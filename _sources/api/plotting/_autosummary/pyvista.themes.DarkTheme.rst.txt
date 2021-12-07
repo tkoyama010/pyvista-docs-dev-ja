@@ -76,6 +76,9 @@
       DarkTheme.edge_color
       
       
+      DarkTheme.enable_camera_orientation_widget
+      
+      
       DarkTheme.floor_color
       
       

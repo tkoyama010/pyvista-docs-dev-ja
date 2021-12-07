@@ -76,6 +76,9 @@
       DocumentTheme.edge_color
       
       
+      DocumentTheme.enable_camera_orientation_widget
+      
+      
       DocumentTheme.floor_color
       
       
