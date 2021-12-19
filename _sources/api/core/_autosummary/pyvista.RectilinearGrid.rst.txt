@@ -228,9 +228,6 @@
       RectilinearGrid.ptc
       
       
-      RectilinearGrid.reconstruct_surface
-      
-      
       RectilinearGrid.reflect
       
       

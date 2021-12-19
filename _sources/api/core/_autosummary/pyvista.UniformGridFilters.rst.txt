@@ -123,9 +123,6 @@
       UniformGridFilters.ptc
       
       
-      UniformGridFilters.reconstruct_surface
-      
-      
       UniformGridFilters.reflect
       
       

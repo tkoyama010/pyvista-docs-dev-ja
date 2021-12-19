@@ -117,9 +117,6 @@
       DataSetFilters.ptc
       
       
-      DataSetFilters.reconstruct_surface
-      
-      
       DataSetFilters.reflect
       
       

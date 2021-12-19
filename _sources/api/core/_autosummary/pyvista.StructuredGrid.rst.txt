@@ -243,9 +243,6 @@
       StructuredGrid.ptc
       
       
-      StructuredGrid.reconstruct_surface
-      
-      
       StructuredGrid.reflect
       
       

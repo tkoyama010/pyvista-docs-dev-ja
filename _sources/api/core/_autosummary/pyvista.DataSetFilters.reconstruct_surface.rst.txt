@@ -1,6 +1,0 @@
-reconstruct\_surface
-====================
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSetFilters.reconstruct_surface

@@ -1111,9 +1111,11 @@
 <h1>delaunay_2d<a class="headerlink" href="#delaunay-2d" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.UnstructuredGrid.delaunay_2d">
-<span class="sig-prename descclassname"><span class="pre">UnstructuredGrid.</span></span><span class="sig-name descname"><span class="pre">delaunay_2d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UnstructuredGrid.delaunay_2d" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>最適フィット平面に沿ってDelaunay2 Dフィルタを適用します．</p>
-<p>これにより，グリッドのポイントが抽出され，それらのポイントだけに対して三角形分割が実行されます．</p>
+<span class="sig-prename descclassname"><span class="pre">UnstructuredGrid.</span></span><span class="sig-name descname"><span class="pre">delaunay_2d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inplace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edge_source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UnstructuredGrid.delaunay_2d" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>最適フィット平面に沿って2D Delaunayフィルタを適用します．</p>
+<p>This filter can be used to generate a 2d surface from a set of
+points on a plane.  If you want to create a surface from a
+point cloud, see <a class="reference internal" href="pyvista.PolyDataFilters.reconstruct_surface.html#pyvista.PolyDataFilters.reconstruct_surface" title="pyvista.PolyDataFilters.reconstruct_surface"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.reconstruct_surface()</span></code></a>.</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
@@ -1125,17 +1127,41 @@
 </dd>
 <dt><strong>bound</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>ブール演算は，境界の三角形分割ポイントと関連する三角形を出力に含めるかどうかをコントロールします．これらは三角測量プロセスを開始するための初期三角測量として導入されます．この機能は，出力のデバッグに便利です．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です．</p>
 </dd>
-<dt><strong>progress_bar</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>進行状況を示す進行状況バーを表示します．</p>
+<dt><strong>inplace</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Trueの場合，このメッシュを三角メッシュで上書きします．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です．</p>
+</dd>
+<dt><strong>edge_source</strong><span class="classifier"><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>拘束されたエッジとループの指定に使用するソースオブジェクトを指定します．このオプションを設定し，線分またはポリゴンを定義すると，拘束された三角形分割が作成されます．線分/ポリゴンは，入力点セット(つまり，点IDは入力とソースで同一です)内の点を参照すると仮定されます．</p>
+</dd>
+<dt><strong>progress_bar</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>進行状況を示す進行状況バーを表示します．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> ．</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p>Delaunayフィルタを含む表面メッシュ．</p>
+<dt><a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p>2D Delaunayフィルターのメッシュ．</p>
 </dd>
 </dl>
 </dd>
 </dl>
+<p class="rubric">例</p>
+<p>まず，円上に30個のポイントを生成し，それをプロットします．</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">points</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Polygon</span><span class="p">(</span><span class="n">n_sides</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span><span class="o">.</span><span class="n">points</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">circle</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">circle</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">point_size</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+</pre></div>
+</div>
+<figure class="align-default">
+<img alt="../../../_images/pyvista-UnstructuredGrid-delaunay_2d-1_00_00.png" src="../../../_images/pyvista-UnstructuredGrid-delaunay_2d-1_00_00.png" />
+</figure>
+<p>円の内部を塗りつぶすには <a class="reference internal" href="#pyvista.UnstructuredGrid.delaunay_2d" title="pyvista.UnstructuredGrid.delaunay_2d"><code class="xref py py-func docutils literal notranslate"><span class="pre">delaunay_2d()</span></code></a> を使用します．</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">filled_circle</span> <span class="o">=</span> <span class="n">circle</span><span class="o">.</span><span class="n">delaunay_2d</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">filled_circle</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+<figure class="align-default">
+<img alt="../../../_images/pyvista-UnstructuredGrid-delaunay_2d-1_01_00.png" src="../../../_images/pyvista-UnstructuredGrid-delaunay_2d-1_01_00.png" />
+</figure>
+<p>このフィルターを使ったその他の例については， <a class="reference internal" href="../../../examples/00-load/create-tri-surface.html#triangulated-surface"><span class="std std-ref">三角形サーフェスを作成</span></a> を参照してください．</p>
 </dd></dl>
 
 </section>

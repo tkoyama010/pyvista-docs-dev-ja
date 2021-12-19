@@ -249,9 +249,6 @@
       ExplicitStructuredGrid.ptc
       
       
-      ExplicitStructuredGrid.reconstruct_surface
-      
-      
       ExplicitStructuredGrid.reflect
       
       

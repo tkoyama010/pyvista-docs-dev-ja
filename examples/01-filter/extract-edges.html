@@ -1041,7 +1041,7 @@ to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="extract-edges">
 <span id="extract-edges-example"></span><span id="sphx-glr-examples-01-filter-extract-edges-py"></span><h1>エッジを抽出<a class="headerlink" href="#extract-edges" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>サーフェスからエッジを抽出します．</p>
+<p>Extract edges from a surface.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 2</span>
 <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
@@ -1054,25 +1054,24 @@ to download the full example code</p>
 <li><p>フィーチャエッジ(2つの三角形で使用され，二面角がfeature_angleより大きいエッジ)</p></li>
 <li><p>多様体のエッジ(ちょうど2つのポリゴンで使用されるエッジ)．</p></li>
 </ol>
-<p>このフィルタは，フィーチャ角度が指定されたエッジを抽出し，元のメッシュのエッジを表す線分のデータセットを取得します．デモンストレーションでは，まずNefertiti女王の目の周りのエッジを抽出します．</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load Queen Nefertiti mesh</span>
-<span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_nefertiti</span><span class="p">()</span>
+<p>The <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyDataFilters.extract_feature_edges.html#pyvista.PolyDataFilters.extract_feature_edges" title="pyvista.PolyDataFilters.extract_feature_edges"><code class="xref py py-func docutils literal notranslate"><span class="pre">extract_feature_edges()</span></code></a>
+filter will extract those edges given a feature angle and return a dataset
+with lines that represent the edges of the original mesh.</p>
+<p>To demonstrate, we will first extract the edges around a sample CAD model:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Download the example CAD model and extract all feature edges above 45 degrees</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_cad_model</span><span class="p">()</span>
+<span class="n">edges</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">extract_feature_edges</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
 
-<span class="c1"># Extract the edges above a 12 degree feature angle</span>
-<span class="n">edges</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">extract_feature_edges</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
-
-<span class="c1"># Render the edge lines on top of the original mesh</span>
+<span class="c1"># Render the edge lines on top of the original mesh.  Zoom in to provide a better figure.</span>
 <span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">edges</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
-<span class="c1"># Define a camera position that will zoom to her eye</span>
-<span class="n">p</span><span class="o">.</span><span class="n">camera_position</span> <span class="o">=</span> <span class="p">[(</span><span class="mf">96.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">197.0</span><span class="p">,</span> <span class="mf">45.0</span><span class="p">),</span> <span class="p">(</span><span class="mf">7.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">109.0</span><span class="p">,</span> <span class="mf">22.0</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span>
+<span class="n">p</span><span class="o">.</span><span class="n">camera</span><span class="o">.</span><span class="n">zoom</span><span class="p">(</span><span class="mf">1.5</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 <img src="../../_images/sphx_glr_extract-edges_001.png" srcset="../../_images/sphx_glr_extract-edges_001.png" alt="extract edges" class = "sphx-glr-single-img"/><p>この解析は <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> オブジェクトに対して行うことができます．牛のメッシュの例を見てみましょう．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_cow</span><span class="p">()</span>
-
 <span class="n">edges</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">extract_feature_edges</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
 
 <span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
@@ -1085,9 +1084,25 @@ to download the full example code</p>
 <img src="../../_images/sphx_glr_extract-edges_002.png" srcset="../../_images/sphx_glr_extract-edges_002.png" alt="extract edges" class = "sphx-glr-single-img"/><p><a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyData.n_open_edges.html#pyvista.PolyData.n_open_edges" title="pyvista.PolyData.n_open_edges"><code class="xref any py py-attr docutils literal notranslate"><span class="pre">pyvista.PolyData.n_open_edges</span></code></a> プロパティと <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyDataFilters.extract_feature_edges.html#pyvista.PolyDataFilters.extract_feature_edges" title="pyvista.PolyDataFilters.extract_feature_edges"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.extract_feature_edges()</span></code></a> フィルタを利用して， <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> メッシュの開いたエッジをカウントおよび抽出できます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Download a sample surface mesh with visible open edges</span>
 <span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_bunny</span><span class="p">()</span>
+<span class="n">mesh</span>
 </pre></div>
 </div>
-<p>次のコマンドを使用すると，開いたエッジの数を取得できます:</p>
+<div class="output_subarea output_html rendered_html output_result">
+
+<table>
+<tr><th>PolyData</th><th>Information</th></tr>
+<tr><td>N Cells</td><td>69451</td></tr>
+<tr><td>N Points</td><td>35947</td></tr>
+<tr><td>X Bounds</td><td>-9.469e-02, 6.101e-02</td></tr>
+<tr><td>Y Bounds</td><td>3.299e-02, 1.873e-01</td></tr>
+<tr><td>Z Bounds</td><td>-6.187e-02, 5.880e-02</td></tr>
+<tr><td>N Arrays</td><td>0</td></tr>
+</table>
+
+
+</div>
+<br />
+<br /><p>次のコマンドを使用すると，開いたエッジの数を取得できます:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span><span class="o">.</span><span class="n">n_open_edges</span>
 </pre></div>
 </div>
@@ -1107,7 +1122,7 @@ to download the full example code</p>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_extract-edges_003.png" srcset="../../_images/sphx_glr_extract-edges_003.png" alt="extract edges" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  5.998 seconds)</p>
+<img src="../../_images/sphx_glr_extract-edges_003.png" srcset="../../_images/sphx_glr_extract-edges_003.png" alt="extract edges" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  5.033 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-filter-extract-edges-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/04000c73f4cbb95a7db51fa6f1e8eede/extract-edges.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">extract-edges.py</span></code></a></p>

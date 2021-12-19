@@ -225,9 +225,6 @@
       DataSet.ptc
       
       
-      DataSet.reconstruct_surface
-      
-      
       DataSet.reflect
       
       
