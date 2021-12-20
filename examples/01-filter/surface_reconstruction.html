@@ -1041,9 +1041,7 @@ to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="surface-reconstruction">
 <span id="surface-reconstruction-example"></span><span id="sphx-glr-examples-01-filter-surface-reconstruction-py"></span><h1>サーフェスの再構築<a class="headerlink" href="#surface-reconstruction" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Surface reconstruction has a dedicated filter in PyVista and is
-handled by <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyDataFilters.reconstruct_surface.html#pyvista.PolyDataFilters.reconstruct_surface" title="pyvista.PolyDataFilters.reconstruct_surface"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.reconstruct_surface()</span></code></a>.  This
-tends to perform much better than <code class="xref py py-func docutils literal notranslate"><span class="pre">DataSetFilters.delaunay_3d()</span></code>.</p>
+<p>表面再構成は，PyVistaでは専用のフィルタが用意されており， <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyDataFilters.reconstruct_surface.html#pyvista.PolyDataFilters.reconstruct_surface" title="pyvista.PolyDataFilters.reconstruct_surface"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.reconstruct_surface()</span></code></a> で処理されます． これは <code class="xref py py-func docutils literal notranslate"><span class="pre">DataSetFilters.delaunay_3d()</span></code> よりもはるかに良いパフォーマンスを示す傾向があります．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 </pre></div>
 </div>
@@ -1112,7 +1110,7 @@ tends to perform much better than <code class="xref py py-func docutils literal 
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.1.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.2.<br>
 </p>
     </div>
     

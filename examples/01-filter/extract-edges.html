@@ -1041,7 +1041,7 @@ to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="extract-edges">
 <span id="extract-edges-example"></span><span id="sphx-glr-examples-01-filter-extract-edges-py"></span><h1>エッジを抽出<a class="headerlink" href="#extract-edges" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Extract edges from a surface.</p>
+<p>サーフェスからエッジを抽出します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 2</span>
 <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
@@ -1054,10 +1054,8 @@ to download the full example code</p>
 <li><p>フィーチャエッジ(2つの三角形で使用され，二面角がfeature_angleより大きいエッジ)</p></li>
 <li><p>多様体のエッジ(ちょうど2つのポリゴンで使用されるエッジ)．</p></li>
 </ol>
-<p>The <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyDataFilters.extract_feature_edges.html#pyvista.PolyDataFilters.extract_feature_edges" title="pyvista.PolyDataFilters.extract_feature_edges"><code class="xref py py-func docutils literal notranslate"><span class="pre">extract_feature_edges()</span></code></a>
-filter will extract those edges given a feature angle and return a dataset
-with lines that represent the edges of the original mesh.</p>
-<p>To demonstrate, we will first extract the edges around a sample CAD model:</p>
+<p><a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyDataFilters.extract_feature_edges.html#pyvista.PolyDataFilters.extract_feature_edges" title="pyvista.PolyDataFilters.extract_feature_edges"><code class="xref py py-func docutils literal notranslate"><span class="pre">extract_feature_edges()</span></code></a> フィルタは、特徴的な角度が与えられたときにそれらのエッジを抽出し、元のメッシュのエッジを表す線を含むデータセットを返します。</p>
+<p>まず、サンプルのCADモデルの周囲のエッジを抽出してみましょう。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Download the example CAD model and extract all feature edges above 45 degrees</span>
 <span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_cad_model</span><span class="p">()</span>
 <span class="n">edges</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">extract_feature_edges</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
@@ -1156,7 +1154,7 @@ with lines that represent the edges of the original mesh.</p>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.1.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.2.<br>
 </p>
     </div>
     
