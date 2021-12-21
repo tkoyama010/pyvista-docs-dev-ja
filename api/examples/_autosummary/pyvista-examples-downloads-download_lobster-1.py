@@ -1,2 +1,3 @@
 from pyvista import examples
-dataset = examples.download_lobster()  # doctest:+SKIP
+dataset = examples.download_lobster()
+dataset.plot()

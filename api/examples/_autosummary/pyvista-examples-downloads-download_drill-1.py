@@ -1,2 +1,3 @@
 from pyvista import examples
-dataset = examples.download_drill()  # doctest:+SKIP
+dataset = examples.download_drill()
+dataset.plot()

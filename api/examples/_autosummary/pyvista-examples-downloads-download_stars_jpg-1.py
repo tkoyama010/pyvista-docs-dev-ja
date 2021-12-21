@@ -1,2 +1,6 @@
 from pyvista import examples
-dataset = examples.download_stars_jpg()  # doctest:+SKIP
+import pyvista as pv
+pl = pv.Plotter()
+dataset = examples.download_stars_jpg()
+pl.add_background_image(dataset)
+pl.show()

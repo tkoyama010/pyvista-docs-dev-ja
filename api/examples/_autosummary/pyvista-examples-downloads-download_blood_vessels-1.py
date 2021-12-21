@@ -1,5 +1,6 @@
 from pyvista import examples
-dataset = examples.download_blood_vessels()  # doctest:+SKIP
+dataset = examples.download_blood_vessels()
+dataset.plot()
 #
 # This dataset is used in the following examples:
 #

@@ -896,10 +896,21 @@
 </dd>
 </dl>
 <p class="rubric">例</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_gears</span><span class="p">()</span>  
+<p>Download the dataset, split the bodies, and color each one.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_gears</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">bodies</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">split_bodies</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">body</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">bodies</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">bid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">body</span><span class="o">.</span><span class="n">n_points</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">bid</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">i</span>
+<span class="gp">... </span>    <span class="n">body</span><span class="o">.</span><span class="n">point_data</span><span class="p">[</span><span class="s2">&quot;Body ID&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">bid</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">bodies</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
+<figure class="align-default">
+<img alt="../../../_images/pyvista-examples-downloads-download_gears-1_00_00.png" src="../../../_images/pyvista-examples-downloads-download_gears-1_00_00.png" />
+</figure>
 </dd></dl>
 
 </section>

@@ -898,9 +898,18 @@
 </dl>
 <p class="rubric">例</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_urn</span><span class="p">()</span>  
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cpos</span> <span class="o">=</span> <span class="p">[</span>
+<span class="gp">... </span>    <span class="p">[</span><span class="o">-</span><span class="mf">7.123e+02</span><span class="p">,</span>  <span class="mf">5.715e+02</span><span class="p">,</span>  <span class="mf">8.601e+02</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="p">[</span> <span class="mf">4.700e+00</span><span class="p">,</span>  <span class="mf">2.705e+02</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.010e+01</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="p">[</span> <span class="mf">2.000e-01</span><span class="p">,</span>  <span class="mf">1.000e+00</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.000e-01</span><span class="p">]</span>
+<span class="gp">... </span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_urn</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="n">cpos</span><span class="p">)</span>
 </pre></div>
 </div>
+<figure class="align-default">
+<img alt="../../../_images/pyvista-examples-downloads-download_urn-1_00_00.png" src="../../../_images/pyvista-examples-downloads-download_urn-1_00_00.png" />
+</figure>
 </dd></dl>
 
 </section>

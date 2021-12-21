@@ -897,9 +897,24 @@
 </dl>
 <p class="rubric">例</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_blow</span><span class="p">()</span>  
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cpos</span> <span class="o">=</span> <span class="p">[</span>
+<span class="gp">... </span>    <span class="p">[</span><span class="mf">71.96</span><span class="p">,</span> <span class="mf">86.1</span> <span class="p">,</span> <span class="mf">28.45</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="p">[</span> <span class="mf">3.5</span> <span class="p">,</span> <span class="mf">12.</span>  <span class="p">,</span>  <span class="mf">1.</span>  <span class="p">],</span>
+<span class="gp">... </span>    <span class="p">[</span><span class="o">-</span><span class="mf">0.18</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.19</span><span class="p">,</span>  <span class="mf">0.96</span><span class="p">]</span>
+<span class="gp">... </span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_blow</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">scalars</span><span class="o">=</span><span class="s1">&#39;displacement1&#39;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">component</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">cpos</span><span class="o">=</span><span class="n">cpos</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">show_scalar_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">smooth_shading</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="gp">... </span><span class="p">)</span>
 </pre></div>
 </div>
+<figure class="align-default">
+<img alt="../../../_images/pyvista-examples-downloads-download_blow-1_00_00.png" src="../../../_images/pyvista-examples-downloads-download_blow-1_00_00.png" />
+</figure>
 </dd></dl>
 
 </section>

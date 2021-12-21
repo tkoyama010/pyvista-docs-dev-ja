@@ -1,5 +1,6 @@
 from pyvista import examples
-dataset = examples.download_cow()  # doctest:+SKIP
+dataset = examples.download_cow()
+dataset.plot(cpos="xy")
 #
 # This dataset is used in the following examples:
 #

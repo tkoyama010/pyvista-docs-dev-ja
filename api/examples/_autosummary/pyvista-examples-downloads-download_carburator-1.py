@@ -1,2 +1,3 @@
 from pyvista import examples
-dataset = examples.download_carburator()  # doctest:+SKIP
+dataset = examples.download_carburator()
+dataset.plot()

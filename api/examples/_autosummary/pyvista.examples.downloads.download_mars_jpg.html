@@ -890,10 +890,49 @@
 </dd>
 </dl>
 <p class="rubric">例</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_mars_jpg</span><span class="p">()</span>  
+<p>Download the Mars JPEG and map it to spherical coordinates on a sphere.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">math</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 </pre></div>
 </div>
+<p>Download the JPEGs and convert the Mars JPEG to a texture.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mars_jpg</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_mars_jpg</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mars_tex</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">read_texture</span><span class="p">(</span><span class="n">mars_jpg</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">stars_jpg</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_stars_jpg</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Create a sphere mesh and compute the texture coordinates.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">theta_resolution</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span> <span class="n">phi_resolution</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span>
+<span class="gp">... </span>                        <span class="n">start_theta</span><span class="o">=</span><span class="mf">270.001</span><span class="p">,</span> <span class="n">end_theta</span><span class="o">=</span><span class="mi">270</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span><span class="o">.</span><span class="n">active_t_coords</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">sphere</span><span class="o">.</span><span class="n">points</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">2</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span><span class="o">.</span><span class="n">active_t_coords</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="o">-</span><span class="n">sphere</span><span class="o">.</span><span class="n">points</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span>
+<span class="gp">... </span>                                                <span class="n">sphere</span><span class="o">.</span><span class="n">points</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span><span class="o">.</span><span class="n">active_t_coords</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">arcsin</span><span class="p">(</span><span class="n">sphere</span><span class="o">.</span><span class="n">points</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">])</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span><span class="o">.</span><span class="n">point_data</span>
+<span class="go">pyvista DataSetAttributes</span>
+<span class="go">Association     : POINT</span>
+<span class="go">Active Scalars  : None</span>
+<span class="go">Active Vectors  : None</span>
+<span class="go">Active Texture  : Texture Coordinates</span>
+<span class="go">Active Normals  : Normals</span>
+<span class="go">Contains arrays :</span>
+<span class="go">    Normals                 float32  (14280, 3)           NORMALS</span>
+<span class="go">    Texture Coordinates     float64  (14280, 2)           TCOORDS</span>
+</pre></div>
+</div>
+<p>Plot with stars in the background.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span><span class="o">.</span><span class="n">add_background_image</span><span class="p">(</span><span class="n">stars_jpg</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">sphere</span><span class="p">,</span> <span class="n">texture</span><span class="o">=</span><span class="n">mars_tex</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<figure class="align-default">
+<img alt="../../../_images/pyvista-examples-downloads-download_mars_jpg-1_00_00.png" src="../../../_images/pyvista-examples-downloads-download_mars_jpg-1_00_00.png" />
+</figure>
 </dd></dl>
 
 </section>

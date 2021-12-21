@@ -1,5 +1,6 @@
 from pyvista import examples
-dataset = examples.download_topo_global()  # doctest:+SKIP
+dataset = examples.download_topo_global()
+dataset.plot(cmap="gist_earth")
 #
 # This dataset is used in the following examples:
 #

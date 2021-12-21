@@ -1,2 +1,3 @@
 from pyvista import examples
-dataset = examples.download_trumpet()  # doctest:+SKIP
+dataset = examples.download_trumpet()
+dataset.plot()

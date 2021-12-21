@@ -1,5 +1,6 @@
 from pyvista import examples
-dataset = examples.download_nefertiti()  # doctest:+SKIP
+dataset = examples.download_nefertiti()
+dataset.plot(cpos="xz")
 #
 # This dataset is used in the following examples:
 #

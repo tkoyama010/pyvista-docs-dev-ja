@@ -1,2 +1,3 @@
 from pyvista import examples
-dataset = examples.download_coastlines()  # doctest:+SKIP
+dataset = examples.download_coastlines()
+dataset.plot()

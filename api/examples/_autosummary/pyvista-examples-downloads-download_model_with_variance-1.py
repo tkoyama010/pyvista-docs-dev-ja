@@ -1,2 +1,3 @@
 from pyvista import examples
-dataset = examples.download_model_with_variance()  # doctest:+SKIP
+dataset = examples.download_model_with_variance()
+dataset.plot()

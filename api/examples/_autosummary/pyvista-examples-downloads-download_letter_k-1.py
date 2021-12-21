@@ -1,2 +1,3 @@
 from pyvista import examples
-dataset = examples.download_letter_k()  # doctest:+SKIP
+dataset = examples.download_letter_k()
+dataset.plot(cpos="xy")

@@ -1,2 +1,3 @@
 from pyvista import examples
-dataset = examples.download_clown()  # doctest:+SKIP
+dataset = examples.download_clown()
+dataset.plot()

@@ -896,10 +896,22 @@
 </dd>
 </dl>
 <p class="rubric">例</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_head</span><span class="p">()</span>  
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_head</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">add_volume</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;cool&quot;</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="s2">&quot;sigmoid_6&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span><span class="o">.</span><span class="n">camera_position</span> <span class="o">=</span> <span class="p">[</span>
+<span class="gp">... </span>    <span class="p">(</span><span class="o">-</span><span class="mf">228.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">418.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">158.0</span><span class="p">),</span>
+<span class="gp">... </span>    <span class="p">(</span><span class="mf">94.0</span><span class="p">,</span> <span class="mf">122.0</span><span class="p">,</span> <span class="mf">82.0</span><span class="p">),</span>
+<span class="gp">... </span>    <span class="p">(</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">)</span>
+<span class="gp">... </span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+<figure class="align-default">
+<img alt="../../../_images/pyvista-examples-downloads-download_head-1_00_00.png" src="../../../_images/pyvista-examples-downloads-download_head-1_00_00.png" />
+</figure>
 <p>このデータセットを使った例は， <a class="reference internal" href="../../../examples/02-plot/volume.html#volume-rendering-example"><span class="std std-ref">ボリュームレンダリング</span></a> をご覧ください．</p>
 </dd></dl>
 

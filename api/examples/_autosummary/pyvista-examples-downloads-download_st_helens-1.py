@@ -1,5 +1,6 @@
 from pyvista import examples
-dataset = examples.download_st_helens()  # doctest:+SKIP
+dataset = examples.download_st_helens()
+dataset.plot(cmap="gist_earth")
 #
 # This dataset is used in the following examples:
 #

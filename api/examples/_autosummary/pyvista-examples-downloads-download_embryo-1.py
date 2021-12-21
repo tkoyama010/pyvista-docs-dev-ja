@@ -1,5 +1,6 @@
 from pyvista import examples
-dataset = examples.download_embryo()  # doctest:+SKIP
+dataset = examples.download_embryo()
+dataset.plot(volume=True)
 #
 # This dataset is used in the following examples:
 #

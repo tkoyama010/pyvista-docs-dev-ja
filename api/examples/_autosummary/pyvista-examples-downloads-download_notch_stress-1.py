@@ -1,2 +1,3 @@
 from pyvista import examples
-dataset = examples.download_notch_stress()  # doctest:+SKIP
+dataset = examples.download_notch_stress()
+dataset.plot(cmap='bwr')

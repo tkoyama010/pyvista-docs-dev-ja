@@ -1,2 +1,3 @@
 from pyvista import examples
-dataset = examples.download_pepper()  # doctest:+SKIP
+dataset = examples.download_pepper()
+dataset.plot()

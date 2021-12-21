@@ -1,5 +1,6 @@
 from pyvista import examples
-dataset = examples.download_brain()  # doctest:+SKIP
+dataset = examples.download_brain()
+dataset.plot(volume=True)
 #
 # This dataset is used in the following examples:
 #

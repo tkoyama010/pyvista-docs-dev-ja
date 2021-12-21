@@ -1,2 +1,3 @@
 from pyvista import examples
-dataset = examples.download_motor()  # doctest:+SKIP
+dataset = examples.download_motor()
+dataset.plot()

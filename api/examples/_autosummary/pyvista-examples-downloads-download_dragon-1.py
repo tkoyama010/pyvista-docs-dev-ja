@@ -1,5 +1,6 @@
 from pyvista import examples
-dataset = examples.download_dragon()  # doctest:+SKIP
+dataset = examples.download_dragon()
+dataset.plot(cpos="xy")
 #
 # This dataset is used in the following examples:
 #

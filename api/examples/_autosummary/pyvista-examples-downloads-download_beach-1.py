@@ -1,2 +1,3 @@
 from pyvista import examples
-dataset = examples.download_beach()  # doctest:+SKIP
+dataset = examples.download_beach()
+dataset.plot(rgba=True, cpos="xy")

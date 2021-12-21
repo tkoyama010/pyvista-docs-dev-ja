@@ -1,2 +1,3 @@
 from pyvista import examples
-dataset = examples.download_torso()  # doctest:+SKIP
+dataset = examples.download_torso()
+dataset.plot(cpos="xz")

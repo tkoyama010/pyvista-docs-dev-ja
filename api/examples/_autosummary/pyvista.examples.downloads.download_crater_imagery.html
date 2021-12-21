@@ -897,9 +897,18 @@
 </dl>
 <p class="rubric">例</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_crater_imagery</span><span class="p">()</span>  
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cpos</span> <span class="o">=</span> <span class="p">[</span>
+<span class="gp">... </span>    <span class="p">[</span>  <span class="mf">66.</span><span class="p">,</span>  <span class="mf">73.</span> <span class="p">,</span> <span class="o">-</span><span class="mf">382.6</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="p">[</span>  <span class="mf">66.</span><span class="p">,</span>  <span class="mf">73.</span> <span class="p">,</span>    <span class="mf">0.</span> <span class="p">],</span>
+<span class="gp">... </span>    <span class="p">[</span>  <span class="o">-</span><span class="mf">0.</span><span class="p">,</span>  <span class="o">-</span><span class="mf">1.</span> <span class="p">,</span>    <span class="mf">0.</span> <span class="p">]</span>
+<span class="gp">... </span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_crater_imagery</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="n">cpos</span><span class="p">)</span>
 </pre></div>
 </div>
+<figure class="align-default">
+<img alt="../../../_images/pyvista-examples-downloads-download_crater_imagery-1_00_00.png" src="../../../_images/pyvista-examples-downloads-download_crater_imagery-1_00_00.png" />
+</figure>
 <p>このデータセットを使った例は， <a class="reference internal" href="../../../examples/02-plot/topo-map.html#ref-topo-map-example"><span class="std std-ref">地形図</span></a> をご覧ください．</p>
 </dd></dl>
 

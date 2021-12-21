@@ -891,9 +891,17 @@
 </dl>
 <p class="rubric">例</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_stars_jpg</span><span class="p">()</span>  
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_stars_jpg</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span><span class="o">.</span><span class="n">add_background_image</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+<figure class="align-default">
+<img alt="../../../_images/pyvista-examples-downloads-download_stars_jpg-1_00_00.png" src="../../../_images/pyvista-examples-downloads-download_stars_jpg-1_00_00.png" />
+</figure>
+<p>See <a class="reference internal" href="pyvista.examples.downloads.download_mars_jpg.html#pyvista.examples.downloads.download_mars_jpg" title="pyvista.examples.downloads.download_mars_jpg"><code class="xref py py-func docutils literal notranslate"><span class="pre">download_mars_jpg()</span></code></a> for another example using this dataset.</p>
 </dd></dl>
 
 </section>

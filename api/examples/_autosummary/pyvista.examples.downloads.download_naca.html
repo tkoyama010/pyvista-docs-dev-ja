@@ -896,10 +896,21 @@
 </dd>
 </dl>
 <p class="rubric">例</p>
+<p>Plot the density of the air surrounding the NACA airfoil using the
+<code class="docutils literal notranslate"><span class="pre">&quot;jet&quot;</span></code> color map.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_naca</span><span class="p">()</span>  
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cpos</span> <span class="o">=</span> <span class="p">[</span>
+<span class="gp">... </span>    <span class="p">[</span><span class="o">-</span><span class="mf">0.22</span><span class="p">,</span>  <span class="mf">0.</span>  <span class="p">,</span>  <span class="mf">2.52</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="p">[</span> <span class="mf">0.43</span><span class="p">,</span>  <span class="mf">0.</span>  <span class="p">,</span>  <span class="mf">0.</span>  <span class="p">],</span>
+<span class="gp">... </span>    <span class="p">[</span> <span class="mf">0.</span>  <span class="p">,</span>  <span class="mf">1.</span>  <span class="p">,</span>  <span class="mf">0.</span>  <span class="p">]</span>
+<span class="gp">... </span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_naca</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="n">cpos</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;jet&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<figure class="align-default">
+<img alt="../../../_images/pyvista-examples-downloads-download_naca-1_00_00.png" src="../../../_images/pyvista-examples-downloads-download_naca-1_00_00.png" />
+</figure>
 <p>このデータセットを使った例は， <a class="reference internal" href="../../../examples/00-load/reader.html#reader-example"><span class="std std-ref">リーダーによるデータの読み込み</span></a> をご覧ください．</p>
 </dd></dl>
 
