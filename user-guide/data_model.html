@@ -469,9 +469,9 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>vtkDoubleArray (0x55795c5e6cc0)
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>vtkDoubleArray (0x56470d170bb0)
   Debug: Off
-  Modified Time: 55761
+  Modified Time: 56029
   Reference Count: 1
   Registered Events: (none)
   Name: (none)
@@ -765,7 +765,7 @@
 <p>PyVistaでのデータ配列を説明するために，まず先ほどの例よりも少し複雑なメッシュを作ってみましょう． ここでは，まず <a class="reference internal" href="../api/core/_autosummary/pyvista.UniformGrid.html#pyvista.UniformGrid" title="pyvista.UniformGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">UniformGrid</span></code></a> から始めて， <a class="reference internal" href="../api/core/_autosummary/pyvista.DataSet.cast_to_unstructured_grid.html#pyvista.DataSet.cast_to_unstructured_grid" title="pyvista.DataSet.cast_to_unstructured_grid"><code class="xref py py-func docutils literal notranslate"><span class="pre">cast_to_unstructured_grid()</span></code></a> で <a class="reference internal" href="../api/core/_autosummary/pyvista.UnstructuredGrid.html#pyvista.UnstructuredGrid" title="pyvista.UnstructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">UnstructuredGrid</span></code></a> にキャストすることで，4つのアイソメトリックなセルを含む単純なメッシュを作成します．</p>
 <div class="jupyter_cell jupyter_container docutils container">
 <div class="cell_input code_cell docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">UniformGrid</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">UniformGrid</span><span class="p">(</span><span class="n">dims</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ugrid</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">cast_to_unstructured_grid</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ugrid</span>
 </pre></div>

@@ -344,6 +344,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../charts/index.html">
+     Charts
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="pyvista.WidgetHelper.html">
      pyvista.WidgetHelper
     </a>
@@ -416,27 +421,27 @@
 <p class="rubric">例</p>
 <p>既定のフォントファミリを 'arial' に設定します． 'arial' ， 'courier' ，または 'times' のいずれかである必要があります．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">family</span> <span class="o">=</span> <span class="s1">&#39;arial&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">family</span> <span class="o">=</span> <span class="s1">&#39;arial&#39;</span>  
 </pre></div>
 </div>
 <p>デフォルトのフォントサイズを20に設定します．</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="mi">20</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="mi">20</span>  
 </pre></div>
 </div>
 <p>デフォルトのタイトルサイズを40に設定します</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">title_size</span> <span class="o">=</span> <span class="mi">40</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">title_size</span> <span class="o">=</span> <span class="mi">40</span>  
 </pre></div>
 </div>
 <p>デフォルトのラベルサイズを10に設定します</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">label_size</span> <span class="o">=</span> <span class="mi">10</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">label_size</span> <span class="o">=</span> <span class="mi">10</span>  
 </pre></div>
 </div>
 <p>デフォルトのテキストの色を 'grey' に設定します</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;grey&#39;</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;grey&#39;</span>  
 </pre></div>
 </div>
 <p>数値データのフォーマットに使われる文字列フォーマッタを '%.6e' に設定します</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">fmt</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%.6e</span><span class="s1">&#39;</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">fmt</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%.6e</span><span class="s1">&#39;</span>  
 </pre></div>
 </div>
 <p class="rubric">メソッド</p>

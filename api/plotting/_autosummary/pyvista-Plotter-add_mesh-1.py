@@ -38,3 +38,9 @@ _ = plotter.add_mesh(mesh, scalars='colors', lighting=False,
                      rgb=True, preference='point')
 plotter.camera_position='xy'
 plotter.show()
+#
+# Plot a plane with a constant color and vary its opacity by point.
+#
+plane = pyvista.Plane()
+plane.plot(color='b', opacity=np.linspace(0, 1, plane.n_points),
+           show_edges=True)

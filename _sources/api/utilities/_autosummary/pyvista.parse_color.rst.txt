@@ -1,0 +1,6 @@
+﻿parse\_color
+============
+
+.. currentmodule:: pyvista
+
+.. autofunction:: parse_color

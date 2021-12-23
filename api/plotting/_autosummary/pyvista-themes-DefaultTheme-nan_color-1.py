@@ -1,2 +1,2 @@
 import pyvista
-pyvista.global_theme.nan_color = 'darkgray'
+pyvista.global_theme.nan_color = 'darkgray'  # doctest:+SKIP

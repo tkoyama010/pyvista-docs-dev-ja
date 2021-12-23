@@ -456,6 +456,13 @@
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="../01-filter/flying_edges.html">
+   Marching Cubes
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
   <a class="reference internal" href="../01-filter/gaussian-smoothing.html">
    Gaussianスムージング
   </a>
@@ -619,6 +626,20 @@
  <li class="toctree-l1">
   <a class="reference internal" href="background_image.html">
    背景イメージ
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="chart_basics.html">
+   Chart Basics
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="chart_overlays.html">
+   Chart Overlays
   </a>
  </li>
 </ul>
@@ -1040,39 +1061,63 @@
 to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="types-of-shading">
-<span id="sphx-glr-examples-02-plot-shading-py"></span><h1>シェーディングのタイプ<a class="headerlink" href="#types-of-shading" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<span id="shading-example"></span><span id="sphx-glr-examples-02-plot-shading-py"></span><h1>シェーディングのタイプ<a class="headerlink" href="#types-of-shading" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>デフォルトのフラットシェーディングとスムーズシェーディングの比較．</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 2</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 4</span>
 <span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
+</pre></div>
+</div>
+<p>PyVista supports two types of shading: flat and smooth shading that uses
+VTK's Phong shading algorithm.</p>
+<p>This is a plot with the default flat shading.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_nut</span><span class="p">()</span>
+<span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+<img src="../../_images/sphx_glr_shading_001.png" srcset="../../_images/sphx_glr_shading_001.png" alt="shading" class = "sphx-glr-single-img"/><p>Here's the same sphere with smooth shading.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">smooth_shading</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<img src="../../_images/sphx_glr_shading_002.png" srcset="../../_images/sphx_glr_shading_002.png" alt="shading" class = "sphx-glr-single-img"/><p>Note how smooth shading makes edges that should be sharp look odd,
+it's because the points of these normals are averaged between two
+faces that have a sharp angle between them.  You can avoid this by
+enabling <code class="docutils literal notranslate"><span class="pre">split_sharp_edges</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>You can configure the splitting angle with the optional
+<code class="docutils literal notranslate"><span class="pre">feature_angle</span></code> keyword argument.</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">smooth_shading</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">split_sharp_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<img src="../../_images/sphx_glr_shading_003.png" srcset="../../_images/sphx_glr_shading_003.png" alt="shading" class = "sphx-glr-single-img"/><p>We can even plot the edges that will be split using
+<a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyDataFilters.extract_feature_edges.html#pyvista.PolyDataFilters.extract_feature_edges" title="pyvista.PolyDataFilters.extract_feature_edges"><code class="xref py py-func docutils literal notranslate"><span class="pre">extract_feature_edges</span></code></a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># extract the feature edges exceeding 30 degrees</span>
+<span class="n">edges</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">extract_feature_edges</span><span class="p">(</span>
+    <span class="n">boundary_edges</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">non_manifold_edges</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">feature_angle</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">manifold_edges</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">)</span>
 
-<span class="n">pyvista</span><span class="o">.</span><span class="n">set_plot_theme</span><span class="p">(</span><span class="s2">&quot;document&quot;</span><span class="p">)</span>
+<span class="c1"># plot both the edges and the smoothed mesh</span>
+<span class="n">pl</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<span class="n">pl</span><span class="o">.</span><span class="n">enable_anti_aliasing</span><span class="p">()</span>
+<span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">smooth_shading</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">split_sharp_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">edges</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">pl</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>PyVistaでは，VTKのPhongシェーディングアルゴリズムを使用したフラットシェーディングとスムーズシェーディングの2種類のシェーディングがサポートされています．</p>
-<p>これは，デフォルトのフラットシェーディングを使用したプロットです．</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sphere</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
-<span class="n">sphere</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">)</span>
+<img src="../../_images/sphx_glr_shading_004.png" srcset="../../_images/sphx_glr_shading_004.png" alt="shading" class = "sphx-glr-single-img"/><p>The <code class="docutils literal notranslate"><span class="pre">split_sharp_edges</span></code> keyword argument is compatible with
+physically based rendering as well.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot both the edges and the smoothed mesh</span>
+<span class="n">pl</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<span class="n">pl</span><span class="o">.</span><span class="n">enable_anti_aliasing</span><span class="p">()</span>
+<span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">split_sharp_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">pbr</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">metallic</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">roughness</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">pl</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="シェーディング" class="sphx-glr-single-img" src="../../_images/sphx_glr_shading_001.png" />
-<p class="sphx-glr-script-out">出力:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(1.9264490110725325, 1.9264490110725325, 1.9264490110725325),
- (0.0, 0.0, 0.0),
- (0.0, 0.0, 1.0)]
-</pre></div>
-</div>
-<p>次に，スムーズシェーディングを適用した同じ球を示します．</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sphere</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">smooth_shading</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</pre></div>
-</div>
-<img alt="シェーディング" class="sphx-glr-single-img" src="../../_images/sphx_glr_shading_002.png" />
-<p class="sphx-glr-script-out">出力:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(1.9264490110725325, 1.9264490110725325, 1.9264490110725325),
- (0.0, 0.0, 0.0),
- (0.0, 0.0, 1.0)]
-</pre></div>
-</div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.226 seconds)</p>
+<img src="../../_images/sphx_glr_shading_005.png" srcset="../../_images/sphx_glr_shading_005.png" alt="shading" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.798 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-plot-shading-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/67bb08f09446a3f03d5df12f8825097d/shading.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">shading.py</span></code></a></p>

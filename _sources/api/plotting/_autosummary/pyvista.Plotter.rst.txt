@@ -39,6 +39,9 @@
       Plotter.add_camera_orientation_widget
       
       
+      Plotter.add_chart
+      
+      
       Plotter.add_checkbox_button_widget
       
       
@@ -352,6 +355,9 @@
       
       
       Plotter.remove_bounds_axes
+      
+      
+      Plotter.remove_chart
       
       
       Plotter.remove_floors

@@ -1,2 +1,2 @@
 import pyvista
-pyvista.global_theme.silhouette.opacity = 1.0
+pyvista.global_theme.silhouette.opacity = 1.0  # doctest:+SKIP

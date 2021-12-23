@@ -21,6 +21,7 @@
       load_globe
       load_globe_texture
       load_hexbeam
+      load_nut
       load_random_hills
       load_rectilinear
       load_sphere

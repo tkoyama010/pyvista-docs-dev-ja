@@ -30,6 +30,9 @@
       Renderer.add_bounding_box
       
       
+      Renderer.add_chart
+      
+      
       Renderer.add_floor
       
       
@@ -115,6 +118,9 @@
       
       
       Renderer.remove_bounds_axes
+      
+      
+      Renderer.remove_chart
       
       
       Renderer.remove_floors

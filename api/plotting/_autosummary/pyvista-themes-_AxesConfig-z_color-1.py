@@ -1,2 +1,2 @@
 import pyvista
-pyvista.global_theme.axes.z_color = 'red'
+pyvista.global_theme.axes.z_color = 'red'  # doctest:+SKIP

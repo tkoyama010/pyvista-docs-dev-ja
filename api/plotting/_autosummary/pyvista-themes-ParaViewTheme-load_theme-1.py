@@ -7,8 +7,8 @@ my_theme = DefaultTheme()
 my_theme.font.size = 20
 my_theme.font.title_size = 40
 my_theme.cmap = 'jet'
-pyvista.global_theme.load_theme(my_theme)
-pyvista.global_theme.font.size
+pyvista.global_theme.load_theme(my_theme)  # doctest:+SKIP
+pyvista.global_theme.font.size  # doctest:+SKIP
 # Expected:
 ## 20
 #
@@ -18,7 +18,7 @@ pyvista.global_theme.font.size
 from pyvista.themes import DarkTheme
 my_theme = DarkTheme()
 my_theme.show_edges = True
-pyvista.global_theme.load_theme(my_theme)
-pyvista.global_theme.show_edges
+pyvista.global_theme.load_theme(my_theme)  # doctest:+SKIP
+pyvista.global_theme.show_edges  # doctest:+SKIP
 # Expected:
 ## True

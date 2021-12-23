@@ -1,17 +1,42 @@
-import pyvista
-import vtk
-import numpy as np
+# Create an empty UniformGrid.
 #
+import pyvista
 grid = pyvista.UniformGrid()
 #
+# Initialize from a ``vtk.vtkImageData`` object.
+#
+import vtk
 vtkgrid = vtk.vtkImageData()
 grid = pyvista.UniformGrid(vtkgrid)
 #
-dims = (10, 10, 10)
-grid = pyvista.UniformGrid(dims)
+# Initialize using using just the grid dimensions and default
+# spacing and origin. These must be keyword arguments.
 #
-spacing = (2, 1, 5)
-grid = pyvista.UniformGrid(dims, spacing)
+grid = pyvista.UniformGrid(dims=(10, 10, 10))
 #
-origin = (10, 35, 50)
-grid = pyvista.UniformGrid(dims, spacing, origin)
+# Initialize using dimensions and spacing.
+#
+grid = pyvista.UniformGrid(
+    dims=(10, 10, 10),
+    spacing=(2, 1, 5),
+)
+#
+# Initialize using dimensions, spacing, and an origin.
+#
+grid = pyvista.UniformGrid(
+    dims=(10, 10, 10),
+    spacing=(2, 1, 5),
+    origin=(10, 35, 50),
+)
+#
+# Initialize from another UniformGrid.
+#
+grid = pyvista.UniformGrid(
+    dims=(10, 10, 10),
+    spacing=(2, 1, 5),
+    origin=(10, 35, 50),
+)
+grid_from_grid = pyvista.UniformGrid(grid)
+grid_from_grid == grid
+# Expected:
+## True

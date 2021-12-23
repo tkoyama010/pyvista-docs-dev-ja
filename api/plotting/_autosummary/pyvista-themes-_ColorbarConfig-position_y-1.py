@@ -1,2 +1,2 @@
 import pyvista
-pyvista.global_theme.colorbar_horizontal.position_y = 0.2
+pyvista.global_theme.colorbar_horizontal.position_y = 0.2  # doctest:+SKIP

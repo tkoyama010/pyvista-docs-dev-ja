@@ -1,2 +1,2 @@
 import pyvista
-pyvista.global_theme.slider_styles.modern.cap_length = 0.01
+pyvista.global_theme.slider_styles.modern.cap_length = 0.01  # doctest:+SKIP

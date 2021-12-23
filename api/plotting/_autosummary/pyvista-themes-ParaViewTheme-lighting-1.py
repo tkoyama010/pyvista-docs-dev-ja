@@ -1,4 +1,4 @@
 # Disable lighting globally.
 #
 import pyvista
-pyvista.global_theme.lighting = False
+pyvista.global_theme.lighting = False  # doctest:+SKIP

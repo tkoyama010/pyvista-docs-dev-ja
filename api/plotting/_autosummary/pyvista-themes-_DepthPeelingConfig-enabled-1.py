@@ -1,2 +1,2 @@
 import pyvista
-pyvista.global_theme.depth_peeling.enabled = True
+pyvista.global_theme.depth_peeling.enabled = True  # doctest:+SKIP
