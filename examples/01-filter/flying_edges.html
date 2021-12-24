@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Marching Cubes &#8212; PyVista 0.33.dev0 ドキュメント</title>
+    <title>マーチングキューブ &#8212; PyVista 0.33.dev0 ドキュメント</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -457,7 +457,7 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Marching Cubes
+   マーチングキューブ
   </a>
  </li>
 </ul>
@@ -799,6 +799,13 @@
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="../02-plot/point-picking.html">
+   Picking points on a mesh
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
   <a class="reference internal" href="../02-plot/scalar-bars.html">
    スカラバーをカスタマイズ
   </a>
@@ -1041,22 +1048,22 @@
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Marching Cubes
+   マーチングキューブ
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#spider-cage">
-   Spider Cage
+   スパイダーケイジ
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#barth-sextic">
-   Barth Sextic
+   バースセクスィック
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#animate-barth-sextic">
-   Animate Barth Sextic
+   バースセクスィックのアニメーション
   </a>
  </li>
 </ul>
@@ -1086,12 +1093,9 @@
 to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="marching-cubes">
-<span id="marching-cubes-example"></span><span id="sphx-glr-examples-01-filter-flying-edges-py"></span><h1>Marching Cubes<a class="headerlink" href="#marching-cubes" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Generate a surface from a scalar field using the flying edges and
-marching cubes filters as provided by the <cite>contour
-&lt;pyvista.core.filters.data_set.DataSetFilters.contour&gt;</cite> filter.</p>
-<p>Special thanks to GitHub user <cite>stla &lt;https://gist.github.com/stla&gt;</cite>
-for providing examples.</p>
+<span id="marching-cubes-example"></span><span id="sphx-glr-examples-01-filter-flying-edges-py"></span><h1>マーチングキューブ<a class="headerlink" href="#marching-cubes" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p><cite>contour &lt;pyvista.core.filters.data_set.DataSetFilters.contour&gt;</cite> フィルタで提供されるフライングエッジとマーチングキューブのフィルタを使って、スカラーフィールドから曲面を生成します。</p>
+<p>例題を提供してくれたGitHubユーザーの <cite>stla &lt;https://gist.github.com/stla&gt;</cite> に感謝します。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
@@ -1099,9 +1103,8 @@ for providing examples.</p>
 </div>
 </section>
 <section id="spider-cage">
-<h1>Spider Cage<a class="headerlink" href="#spider-cage" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Use the marching cubes algorithm to extract the isosurface
-generated from the spider cage function.</p>
+<h1>スパイダーケイジ<a class="headerlink" href="#spider-cage" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>marching cubesアルゴリズムを使用して、スパイダーケージ関数から生成された等値面を抽出します。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mf">0.9</span>
 <span class="k">def</span> <span class="nf">spider_cage</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
     <span class="n">x2</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
@@ -1135,9 +1138,8 @@ generated from the spider cage function.</p>
 </div>
 <img src="../../_images/sphx_glr_flying_edges_001.png" srcset="../../_images/sphx_glr_flying_edges_001.png" alt="flying edges" class = "sphx-glr-single-img"/></section>
 <section id="barth-sextic">
-<h1>Barth Sextic<a class="headerlink" href="#barth-sextic" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Use the flying edges algorithm to extract the isosurface
-generated from the barth sextic function.</p>
+<h1>バースセクスィック<a class="headerlink" href="#barth-sextic" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>flying edgesアルゴリズムを使用して、バースセクスィック関数から生成された等値面を抽出します。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">phi</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span> <span class="o">/</span> <span class="mi">2</span>
 <span class="n">phi2</span> <span class="o">=</span> <span class="n">phi</span> <span class="o">*</span> <span class="n">phi</span>
 <span class="k">def</span> <span class="nf">barth_sextic</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
@@ -1175,9 +1177,8 @@ generated from the barth sextic function.</p>
 </div>
 <img src="../../_images/sphx_glr_flying_edges_002.png" srcset="../../_images/sphx_glr_flying_edges_002.png" alt="flying edges" class = "sphx-glr-single-img"/></section>
 <section id="animate-barth-sextic">
-<h1>Animate Barth Sextic<a class="headerlink" href="#animate-barth-sextic" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Show 15 frames of various isocurves extracted from the barth sextic
-function.</p>
+<h1>バースセクスィックのアニメーション<a class="headerlink" href="#animate-barth-sextic" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>barth sextic関数から抽出した様々なアイソカーブの15フレームを表示します。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">angle_to_range</span><span class="p">(</span><span class="n">angle</span><span class="p">):</span>
     <span class="k">return</span> <span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
 
