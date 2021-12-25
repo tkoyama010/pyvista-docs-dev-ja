@@ -21,7 +21,7 @@ line = pv.Line(position, focal_point)
 
 bunny = examples.download_bunny()
 xyz = camera.position + unit_vector * 0.6 - np.mean(bunny.points, axis=0)
-bunny.translate(xyz)
+bunny.translate(xyz, inplace=True)
 
 pl = pv.Plotter(shape=(2, 1))
 pl.subplot(0, 0)

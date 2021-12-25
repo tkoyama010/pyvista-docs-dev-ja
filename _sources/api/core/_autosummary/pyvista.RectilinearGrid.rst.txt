@@ -219,9 +219,6 @@
       RectilinearGrid.point_data_to_cell_data
       
       
-      RectilinearGrid.points_to_double
-      
-      
       RectilinearGrid.probe
       
       

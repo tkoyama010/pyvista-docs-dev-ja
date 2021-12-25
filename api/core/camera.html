@@ -371,7 +371,7 @@
 
 <span class="n">bunny</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_bunny</span><span class="p">()</span>
 <span class="n">xyz</span> <span class="o">=</span> <span class="n">camera</span><span class="o">.</span><span class="n">position</span> <span class="o">+</span> <span class="n">unit_vector</span> <span class="o">*</span> <span class="mf">0.6</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">bunny</span><span class="o">.</span><span class="n">points</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">bunny</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="n">xyz</span><span class="p">)</span>
+<span class="n">bunny</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="n">xyz</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="n">pl</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
 <span class="n">pl</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>

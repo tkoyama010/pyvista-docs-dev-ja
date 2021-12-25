@@ -216,9 +216,6 @@
       DataSet.point_data_to_cell_data
       
       
-      DataSet.points_to_double
-      
-      
       DataSet.probe
       
       

@@ -632,14 +632,14 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../02-plot/chart_basics.html">
-   Chart Basics
+   チャートの基本
   </a>
  </li>
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../02-plot/chart_overlays.html">
-   Chart Overlays
+   グラフのオーバーレイ
   </a>
  </li>
 </ul>
@@ -800,7 +800,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../02-plot/point-picking.html">
-   Picking points on a mesh
+   メッシュ上の点の選択
   </a>
  </li>
 </ul>
@@ -1109,9 +1109,9 @@ to download the full example code</p>
 
 <span class="c1"># download and align teapotahedron</span>
 <span class="n">teapot</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_teapot</span><span class="p">()</span>
-<span class="n">teapot</span><span class="o">.</span><span class="n">rotate_x</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
-<span class="n">teapot</span><span class="o">.</span><span class="n">rotate_z</span><span class="p">(</span><span class="o">-</span><span class="mi">45</span><span class="p">)</span>
-<span class="n">teapot</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">0.16</span><span class="p">)</span>
+<span class="n">teapot</span><span class="o">.</span><span class="n">rotate_x</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">teapot</span><span class="o">.</span><span class="n">rotate_z</span><span class="p">(</span><span class="o">-</span><span class="mi">45</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">teapot</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">0.16</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">teapot</span><span class="o">.</span><span class="n">points</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span> <span class="o">-</span> <span class="n">teapot</span><span class="o">.</span><span class="n">center</span>
 <span class="n">solids</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">teapot</span><span class="p">)</span>
 </pre></div>
@@ -1134,7 +1134,7 @@ to download the full example code</p>
 </pre></div>
 </div>
 <img src="../../_images/sphx_glr_create-platonic-solids_001.png" srcset="../../_images/sphx_glr_create-platonic-solids_001.png" alt="create platonic solids" class = "sphx-glr-single-img"/><p>プラトン立体には，立体の各面にインデックスを付けるセルスカラーが付いています．</p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.458 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.595 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-load-create-platonic-solids-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/ef7778fe78c5e4147b4cd09f963c1f06/create-platonic-solids.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">create-platonic-solids.py</span></code></a></p>

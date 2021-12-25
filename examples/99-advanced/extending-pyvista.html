@@ -633,14 +633,14 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../02-plot/chart_basics.html">
-   Chart Basics
+   チャートの基本
   </a>
  </li>
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../02-plot/chart_overlays.html">
-   Chart Overlays
+   グラフのオーバーレイ
   </a>
  </li>
 </ul>
@@ -801,7 +801,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../02-plot/point-picking.html">
-   Picking points on a mesh
+   メッシュ上の点の選択
   </a>
  </li>
 </ul>
@@ -1126,7 +1126,7 @@ Location of maximum point: [ 3.5634708e-01 -1.1460996e-16  3.5073745e-01]
 </pre></div>
 </div>
 <p><a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSet.rotate_y.html#pyvista.DataSet.rotate_y" title="pyvista.DataSet.rotate_y"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSet.rotate_y()</span></code></a> のようなインプレース操作を使っても，オブジェクトの型には影響しません．</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">foo_sphere</span><span class="o">.</span><span class="n">rotate_y</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">foo_sphere</span><span class="o">.</span><span class="n">rotate_y</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Rotated foo sphere:&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Type: </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">foo_sphere</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Maximum point index: </span><span class="si">{</span><span class="n">foo_sphere</span><span class="o">.</span><span class="n">max_point</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -1188,7 +1188,7 @@ Location of maximum point: [ 3.5634708e-01 -1.1460996e-16  3.5073745e-01]
 </pre></div>
 </div>
 <p><a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSet.rotate_y.html#pyvista.DataSet.rotate_y" title="pyvista.DataSet.rotate_y"><code class="xref py py-func docutils literal notranslate"><span class="pre">rotate_y</span></code></a> のようなインプレース操作を使っても，オブジェクトの型には影響しません．</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">foo_sphere</span><span class="o">.</span><span class="n">rotate_y</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">foo_sphere</span><span class="o">.</span><span class="n">rotate_y</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Rotated foo sphere:&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Type: </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">foo_sphere</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Maximum point index: </span><span class="si">{</span><span class="n">foo_sphere</span><span class="o">.</span><span class="n">max_point</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -1222,7 +1222,7 @@ Location of maximum point: [0.35073745 0.         0.35634708]
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Type: </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">poly_object</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="c1"># catch error</span>
 <span class="k">try</span><span class="p">:</span>
-    <span class="n">poly_object</span><span class="o">.</span><span class="n">rotate_y</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+    <span class="n">poly_object</span><span class="o">.</span><span class="n">rotate_y</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This operation fails&quot;</span><span class="p">)</span>
 </pre></div>
@@ -1244,7 +1244,7 @@ This operation fails
     <span class="n">pyvista</span><span class="o">.</span><span class="n">_wrappers</span><span class="p">[</span><span class="s1">&#39;vtkPolyData&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">PolyData</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.230 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.320 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-99-advanced-extending-pyvista-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/d5aa63f14646f54f070d177157d810b8/extending-pyvista.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">extending-pyvista.py</span></code></a></p>

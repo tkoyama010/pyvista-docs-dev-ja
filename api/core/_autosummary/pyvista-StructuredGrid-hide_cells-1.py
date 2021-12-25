@@ -7,5 +7,5 @@ y = np.arange(-10, 10, 0.25)
 z = 0
 x, y, z = np.meshgrid(x, y, z)
 grid = pv.StructuredGrid(x, y, z)
-grid.hide_cells(range(79*30, 79*50))
+grid = grid.hide_cells(range(79*30, 79*50))
 grid.plot(color=True, show_edges=True)

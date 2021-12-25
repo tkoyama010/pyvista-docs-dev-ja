@@ -1,6 +1,0 @@
-points\_to\_double
-==================
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSet.points_to_double

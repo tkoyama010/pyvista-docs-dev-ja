@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Chart Overlays &#8212; PyVista 0.33.dev0 ドキュメント</title>
+    <title>グラフのオーバーレイ &#8212; PyVista 0.33.dev0 ドキュメント</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,7 +51,7 @@
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
     <link rel="next" title="メッシュまたはプロット全体の消去" href="clear.html" />
-    <link rel="prev" title="Chart Basics" href="chart_basics.html" />
+    <link rel="prev" title="チャートの基本" href="chart_basics.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="ja">
     
@@ -632,14 +632,14 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="chart_basics.html">
-   Chart Basics
+   チャートの基本
   </a>
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Chart Overlays
+   グラフのオーバーレイ
   </a>
  </li>
 </ul>
@@ -800,7 +800,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="point-picking.html">
-   Picking points on a mesh
+   メッシュ上の点の選択
   </a>
  </li>
 </ul>
@@ -1068,29 +1068,21 @@
 to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="chart-overlays">
-<span id="chart-overlays-example"></span><span id="sphx-glr-examples-02-plot-chart-overlays-py"></span><h1>Chart Overlays<a class="headerlink" href="#chart-overlays" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>This example shows how you can combine multiple charts as overlays in
-the same renderer. For an overview of the different chart types you
-can use, please refer to <a class="reference internal" href="chart_basics.html#chart-basics-example"><span class="std std-ref">Chart Basics</span></a>. Interaction with
-a chart can be enabled by right clicking on top of it. Note that this
-will disable interaction with the 3D scene. To stop interacting with
-the chart, perform another right click. This will either enable
-interaction with another chart (if clicked on top of it) or re-enable
-interaction with the 3D scene.</p>
+<span id="chart-overlays-example"></span><span id="sphx-glr-examples-02-plot-chart-overlays-py"></span><h1>グラフのオーバーレイ<a class="headerlink" href="#chart-overlays" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>この例では、複数のチャートを同じレンダラーでオーバーレイとして組み合わせる方法を示します。使用できるさまざまなチャートタイプの概要については、 <a class="reference internal" href="chart_basics.html#chart-basics-example"><span class="std std-ref">チャートの基本</span></a> を参照してください。チャートとのインタラクションは、チャートの上で右クリックすることで有効になります。この場合、3Dシーンとのインタラクションは無効になりますのでご注意ください。チャートとのインタラクションを止めるには、もう一度右クリックしてください。これにより、別のチャートとのインタラクションが可能になるか（チャートの上でクリックした場合）、3Dシーンとのインタラクションが再び可能になります。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 </pre></div>
 </div>
-<p>Data to display</p>
+<p>表示するデータ</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
 <span class="n">h</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
 <span class="n">v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Define Matplotlib figure
-Use a tight layout to keep axis labels visible on smaller figures</p>
+<p>Matplotlibの図の定義 小さい図で軸ラベルが見えるようにタイトなレイアウトを使います</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">tight_layout</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">h_line</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">[:</span><span class="mi">1</span><span class="p">],</span> <span class="n">h</span><span class="p">[:</span><span class="mi">1</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
@@ -1102,7 +1094,7 @@ Use a tight layout to keep axis labels visible on smaller figures</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Text(29.000000000000014, 0.5, &#39;Height (m)&#39;)
 </pre></div>
 </div>
-<p>Define plotter, add matplotlib figure as first chart and define second chart</p>
+<p>プロッターを定義し、最初のチャートとしてmatplotlibの図を追加し、2番目のチャートを定義します。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">h_chart</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">ChartMPL</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mf">0.46</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">),</span> <span class="n">loc</span><span class="o">=</span><span class="p">(</span><span class="mf">0.02</span><span class="p">,</span> <span class="mf">0.06</span><span class="p">))</span>
 <span class="n">h_chart</span><span class="o">.</span><span class="n">background_color</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">)</span>

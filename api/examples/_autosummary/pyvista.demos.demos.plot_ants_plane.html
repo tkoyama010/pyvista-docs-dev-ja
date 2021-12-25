@@ -344,13 +344,12 @@
 <span class="go">Rotate and translate ant so it is on the plane.</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ant</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_ant</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ant</span><span class="o">.</span><span class="n">rotate_x</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ant</span><span class="o">.</span><span class="n">translate</span><span class="p">([</span><span class="mi">90</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">15</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">ant</span><span class="o">.</span><span class="n">rotate_x</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">ant</span><span class="o">.</span><span class="n">translate</span><span class="p">([</span><span class="mi">90</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">15</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="go">Make a copy and add another ant.</span>
 
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ant_copy</span> <span class="o">=</span> <span class="n">ant</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ant_copy</span><span class="o">.</span><span class="n">translate</span><span class="p">([</span><span class="mi">30</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ant_copy</span> <span class="o">=</span> <span class="n">ant</span><span class="o">.</span><span class="n">translate</span><span class="p">([</span><span class="mi">30</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 <span class="go">Create plotting object.</span>
 

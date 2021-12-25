@@ -1111,13 +1111,21 @@
 <h1>hide_cells<a class="headerlink" href="#hide-cells" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.StructuredGrid.hide_cells">
-<span class="sig-prename descclassname"><span class="pre">StructuredGrid.</span></span><span class="sig-name descname"><span class="pre">hide_cells</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ind</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.StructuredGrid.hide_cells" title="この定義へのパーマリンク">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">StructuredGrid.</span></span><span class="sig-name descname"><span class="pre">hide_cells</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ind</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inplace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.StructuredGrid.hide_cells" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>セルを削除せずに非表示にします．</p>
 <p>ghost_cells配列を <code class="docutils literal notranslate"><span class="pre">HIDDEN_CELL</span></code> に設定して，セルを非表示にします．</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
 <dt><strong>ind</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a></span></dt><dd><p>非表示にするセルインデックスのリストまたは配列を指定します．配列は，セルの数と同じサイズのブール配列にすることもできます．</p>
+</dd>
+<dt><strong>inplace</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>in-placeメッシュを更新します．</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PointSet</span></code></dt><dd><p>Point set with hidden cells.</p>
 </dd>
 </dl>
 </dd>
@@ -1131,7 +1139,7 @@
 <span class="gp">&gt;&gt;&gt; </span><span class="n">z</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">StructuredGrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span><span class="o">.</span><span class="n">hide_cells</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">79</span><span class="o">*</span><span class="mi">30</span><span class="p">,</span> <span class="mi">79</span><span class="o">*</span><span class="mi">50</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">hide_cells</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">79</span><span class="o">*</span><span class="mi">30</span><span class="p">,</span> <span class="mi">79</span><span class="o">*</span><span class="mi">50</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>

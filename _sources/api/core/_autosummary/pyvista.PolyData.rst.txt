@@ -768,6 +768,9 @@
       PolyData.is_all_triangles
       
       
+      PolyData.is_manifold
+      
+      
       PolyData.length
       
       

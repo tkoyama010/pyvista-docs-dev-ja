@@ -5,7 +5,7 @@ mesh = pyvista.Sphere()
 mesh.center
 # Expected:
 ## [0.0, 0.0, 0.0]
-mesh.translate((2, 1, 2))
-mesh.center
+trans = mesh.translate((2, 1, 2), inplace=False)
+trans.center
 # Expected:
 ## [2.0, 1.0, 2.0]

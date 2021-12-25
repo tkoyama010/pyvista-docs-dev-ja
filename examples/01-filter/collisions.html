@@ -632,14 +632,14 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../02-plot/chart_basics.html">
-   Chart Basics
+   チャートの基本
   </a>
  </li>
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../02-plot/chart_overlays.html">
-   Chart Overlays
+   グラフのオーバーレイ
   </a>
  </li>
 </ul>
@@ -800,7 +800,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../02-plot/point-picking.html">
-   Picking points on a mesh
+   メッシュ上の点の選択
   </a>
  </li>
 </ul>
@@ -1107,7 +1107,7 @@ to download the full example code</p>
 
 <span class="n">delta_x</span> <span class="o">=</span> <span class="mf">0.05</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="mi">2</span><span class="o">/</span><span class="n">delta_x</span><span class="p">)):</span>
-    <span class="n">sphere1</span><span class="o">.</span><span class="n">translate</span><span class="p">([</span><span class="n">delta_x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+    <span class="n">sphere1</span><span class="o">.</span><span class="n">translate</span><span class="p">([</span><span class="n">delta_x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">col</span><span class="p">,</span> <span class="n">n_contacts</span> <span class="o">=</span> <span class="n">sphere0</span><span class="o">.</span><span class="n">collision</span><span class="p">(</span><span class="n">sphere1</span><span class="p">)</span>
 
     <span class="n">collision_mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">sphere0</span><span class="o">.</span><span class="n">n_cells</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)</span>
@@ -1122,7 +1122,7 @@ to download the full example code</p>
 <span class="n">pl</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_collisions_001.png" srcset="../../_images/sphx_glr_collisions_001.png" alt="collisions" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  9.384 seconds)</p>
+<img src="../../_images/sphx_glr_collisions_001.png" srcset="../../_images/sphx_glr_collisions_001.png" alt="collisions" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  9.390 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-filter-collisions-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/388feac842d85f1cd36faf3ba9c785ab/collisions.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">collisions.py</span></code></a></p>

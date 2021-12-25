@@ -228,9 +228,6 @@
       UniformGrid.point_data_to_cell_data
       
       
-      UniformGrid.points_to_double
-      
-      
       UniformGrid.probe
       
       

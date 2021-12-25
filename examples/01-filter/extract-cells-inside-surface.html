@@ -632,14 +632,14 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../02-plot/chart_basics.html">
-   Chart Basics
+   チャートの基本
   </a>
  </li>
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../02-plot/chart_overlays.html">
-   Chart Overlays
+   グラフのオーバーレイ
   </a>
  </li>
 </ul>
@@ -800,7 +800,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../02-plot/point-picking.html">
-   Picking points on a mesh
+   メッシュ上の点の選択
   </a>
  </li>
 </ul>
@@ -1080,8 +1080,7 @@ to download the full example code</p>
 
 <span class="n">dargs</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="c1"># Rotate the mesh to have a second mesh</span>
-<span class="n">rot</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="n">rot</span><span class="o">.</span><span class="n">rotate_y</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">rot</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">rotate_y</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 <span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;Crimson&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">dargs</span><span class="p">)</span>
@@ -1090,14 +1089,7 @@ to download the full example code</p>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="サーフェス内のセルを抽出" class="sphx-glr-single-img" src="../../_images/sphx_glr_extract-cells-inside-surface_001.png" />
-<p class="sphx-glr-script-out">出力:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(13.0, 7.6, -13.85),
- (0.44, -0.4, -0.37),
- (-0.2830738875949229, 0.9098803529836806, 0.3032934509945602)]
-</pre></div>
-</div>
-<p>内側の点を1，外側の点を0でマークします．</p>
+<img src="../../_images/sphx_glr_extract-cells-inside-surface_001.png" srcset="../../_images/sphx_glr_extract-cells-inside-surface_001.png" alt="extract cells inside surface" class = "sphx-glr-single-img"/><p>内側の点を1，外側の点を0でマークします．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">select</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">select_enclosed_points</span><span class="p">(</span><span class="n">rot</span><span class="p">)</span>
 
 <span class="n">select</span>
@@ -1139,14 +1131,7 @@ to download the full example code</p>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="サーフェス内のセルを抽出" class="sphx-glr-single-img" src="../../_images/sphx_glr_extract-cells-inside-surface_002.png" />
-<p class="sphx-glr-script-out">出力:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(13.0, 7.6, -13.85),
- (0.44, -0.4, -0.37),
- (-0.2830738875949229, 0.9098803529836806, 0.3032934509945602)]
-</pre></div>
-</div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.653 seconds)</p>
+<img src="../../_images/sphx_glr_extract-cells-inside-surface_002.png" srcset="../../_images/sphx_glr_extract-cells-inside-surface_002.png" alt="extract cells inside surface" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.369 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-filter-extract-cells-inside-surface-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/1eb55919c6143fb3d91c2d4e464c0370/extract-cells-inside-surface.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">extract-cells-inside-surface.py</span></code></a></p>

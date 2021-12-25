@@ -632,14 +632,14 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../02-plot/chart_basics.html">
-   Chart Basics
+   チャートの基本
   </a>
  </li>
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../02-plot/chart_overlays.html">
-   Chart Overlays
+   グラフのオーバーレイ
   </a>
  </li>
 </ul>
@@ -800,7 +800,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../02-plot/point-picking.html">
-   Picking points on a mesh
+   メッシュ上の点の選択
   </a>
  </li>
 </ul>
@@ -1274,7 +1274,7 @@ freq. 8:   1361.8 kHz, expected:   1360.9 kHz, error: 0.07 %
 
 <span class="n">warpby</span> <span class="o">=</span> <span class="s1">&#39;eigenmode_00&#39;</span>
 <span class="n">warped</span> <span class="o">=</span> <span class="n">vol</span><span class="o">.</span><span class="n">warp_by_vector</span><span class="p">(</span><span class="n">warpby</span><span class="p">,</span> <span class="n">factor</span><span class="o">=</span><span class="mf">0.04</span><span class="p">)</span>
-<span class="n">warped</span><span class="o">.</span><span class="n">translate</span><span class="p">([</span><span class="o">-</span><span class="mf">1.5</span> <span class="o">*</span> <span class="n">l1</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">])</span>
+<span class="n">warped</span><span class="o">.</span><span class="n">translate</span><span class="p">([</span><span class="o">-</span><span class="mf">1.5</span> <span class="o">*</span> <span class="n">l1</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">vol</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;wireframe&#39;</span><span class="p">,</span> <span class="n">scalars</span><span class="o">=</span><span class="n">warpby</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">warped</span><span class="p">,</span> <span class="n">scalars</span><span class="o">=</span><span class="n">warpby</span><span class="p">)</span>
@@ -1296,7 +1296,7 @@ freq. 8:   1361.8 kHz, expected:   1360.9 kHz, error: 0.07 %
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_warp-by-vector-eigenmodes_002.png" srcset="../../_images/sphx_glr_warp-by-vector-eigenmodes_002.png" alt="warp by vector eigenmodes" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  10.338 seconds)</p>
+<img src="../../_images/sphx_glr_warp-by-vector-eigenmodes_002.png" srcset="../../_images/sphx_glr_warp-by-vector-eigenmodes_002.png" alt="warp by vector eigenmodes" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>スクリプトの合計実行時間:</strong> ( 0 分  9.722 秒)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-99-advanced-warp-by-vector-eigenmodes-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/57b72abdb430b1b8b7ac16789ace04d3/warp-by-vector-eigenmodes.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">warp-by-vector-eigenmodes.py</span></code></a></p>

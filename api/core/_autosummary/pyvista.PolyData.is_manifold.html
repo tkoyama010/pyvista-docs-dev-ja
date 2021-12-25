@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>points_to_double &#8212; PyVista 0.33.dev0 ドキュメント</title>
+    <title>is_manifold &#8212; PyVista 0.33.dev0 ドキュメント</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
   <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -50,8 +50,8 @@
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="検索" href="../../../search.html" />
-    <link rel="next" title="probe" href="pyvista.RectilinearGrid.probe.html" />
-    <link rel="prev" title="point_data_to_cell_data" href="pyvista.RectilinearGrid.point_data_to_cell_data.html" />
+    <link rel="next" title="length" href="pyvista.PolyData.length.html" />
+    <link rel="prev" title="is_all_triangles" href="pyvista.PolyData.is_all_triangles.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="ja">
     
@@ -214,14 +214,9 @@
      データセット
     </a>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../pointsets.html">
      ポイントセット
-    </a>
-   </li>
-   <li class="toctree-l2 current active has-children">
-    <a class="reference internal" href="../grids.html">
-     グリッドデータ
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -230,8 +225,8 @@
     </label>
     <ul class="current">
      <li class="toctree-l3 current active has-children">
-      <a class="reference internal" href="pyvista.RectilinearGrid.html">
-       pyvista.RectilinearGrid
+      <a class="reference internal" href="pyvista.PolyData.html">
+       pyvista.PolyData
       </a>
       <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
       <label for="toctree-checkbox-3">
@@ -240,748 +235,998 @@
       </label>
       <ul class="current">
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.add_field_array.html">
+        <a class="reference internal" href="pyvista.PolyData.add_field_array.html">
          add_field_array
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.add_field_data.html">
+        <a class="reference internal" href="pyvista.PolyData.add_field_data.html">
          add_field_data
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.cast_to_structured_grid.html">
-         cast_to_structured_grid
+        <a class="reference internal" href="pyvista.PolyData.boolean_add.html">
+         boolean_add
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.cast_to_unstructured_grid.html">
+        <a class="reference internal" href="pyvista.PolyData.boolean_cut.html">
+         boolean_cut
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.boolean_difference.html">
+         boolean_difference
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.boolean_intersection.html">
+         boolean_intersection
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.boolean_union.html">
+         boolean_union
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.cast_to_unstructured_grid.html">
          cast_to_unstructured_grid
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.cell_bounds.html">
+        <a class="reference internal" href="pyvista.PolyData.cell_bounds.html">
          cell_bounds
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.cell_centers.html">
+        <a class="reference internal" href="pyvista.PolyData.cell_centers.html">
          cell_centers
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.cell_data_to_point_data.html">
+        <a class="reference internal" href="pyvista.PolyData.cell_data_to_point_data.html">
          cell_data_to_point_data
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.cell_n_points.html">
+        <a class="reference internal" href="pyvista.PolyData.cell_n_points.html">
          cell_n_points
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.cell_points.html">
+        <a class="reference internal" href="pyvista.PolyData.cell_points.html">
          cell_points
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.cell_type.html">
+        <a class="reference internal" href="pyvista.PolyData.cell_type.html">
          cell_type
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.clear_arrays.html">
+        <a class="reference internal" href="pyvista.PolyData.center_of_mass.html">
+         center_of_mass
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.clean.html">
+         clean
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.clear_arrays.html">
          clear_arrays
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.clear_cell_arrays.html">
+        <a class="reference internal" href="pyvista.PolyData.clear_cell_arrays.html">
          clear_cell_arrays
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.clear_cell_data.html">
+        <a class="reference internal" href="pyvista.PolyData.clear_cell_data.html">
          clear_cell_data
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.clear_data.html">
+        <a class="reference internal" href="pyvista.PolyData.clear_data.html">
          clear_data
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.clear_field_arrays.html">
+        <a class="reference internal" href="pyvista.PolyData.clear_field_arrays.html">
          clear_field_arrays
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.clear_field_data.html">
+        <a class="reference internal" href="pyvista.PolyData.clear_field_data.html">
          clear_field_data
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.clear_point_arrays.html">
+        <a class="reference internal" href="pyvista.PolyData.clear_point_arrays.html">
          clear_point_arrays
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.clear_point_data.html">
+        <a class="reference internal" href="pyvista.PolyData.clear_point_data.html">
          clear_point_data
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.clear_textures.html">
+        <a class="reference internal" href="pyvista.PolyData.clear_textures.html">
          clear_textures
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.clip.html">
+        <a class="reference internal" href="pyvista.PolyData.clip.html">
          clip
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.clip_box.html">
+        <a class="reference internal" href="pyvista.PolyData.clip_box.html">
          clip_box
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.clip_scalar.html">
+        <a class="reference internal" href="pyvista.PolyData.clip_closed_surface.html">
+         clip_closed_surface
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.clip_scalar.html">
          clip_scalar
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.clip_surface.html">
+        <a class="reference internal" href="pyvista.PolyData.clip_surface.html">
          clip_surface
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.compute_cell_quality.html">
+        <a class="reference internal" href="pyvista.PolyData.collision.html">
+         collision
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.compute_arc_length.html">
+         compute_arc_length
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.compute_cell_quality.html">
          compute_cell_quality
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.compute_cell_sizes.html">
+        <a class="reference internal" href="pyvista.PolyData.compute_cell_sizes.html">
          compute_cell_sizes
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.compute_derivative.html">
+        <a class="reference internal" href="pyvista.PolyData.compute_derivative.html">
          compute_derivative
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.compute_implicit_distance.html">
+        <a class="reference internal" href="pyvista.PolyData.compute_implicit_distance.html">
          compute_implicit_distance
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.connectivity.html">
+        <a class="reference internal" href="pyvista.PolyData.compute_normals.html">
+         compute_normals
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.connectivity.html">
          connectivity
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.contour.html">
+        <a class="reference internal" href="pyvista.PolyData.contour.html">
          contour
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.copy.html">
+        <a class="reference internal" href="pyvista.PolyData.copy.html">
          copy
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.copy_attributes.html">
+        <a class="reference internal" href="pyvista.PolyData.copy_attributes.html">
          copy_attributes
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.copy_meta_from.html">
+        <a class="reference internal" href="pyvista.PolyData.copy_meta_from.html">
          copy_meta_from
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.copy_structure.html">
+        <a class="reference internal" href="pyvista.PolyData.copy_structure.html">
          copy_structure
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.ctp.html">
+        <a class="reference internal" href="pyvista.PolyData.ctp.html">
          ctp
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.decimate_boundary.html">
+        <a class="reference internal" href="pyvista.PolyData.curvature.html">
+         curvature
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.decimate.html">
+         decimate
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.decimate_boundary.html">
          decimate_boundary
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.deep_copy.html">
+        <a class="reference internal" href="pyvista.PolyData.decimate_pro.html">
+         decimate_pro
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.deep_copy.html">
          deep_copy
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.delaunay_3d.html">
+        <a class="reference internal" href="pyvista.PolyData.delaunay_2d.html">
+         delaunay_2d
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.delaunay_3d.html">
          delaunay_3d
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.elevation.html">
+        <a class="reference internal" href="pyvista.PolyData.edge_mask.html">
+         edge_mask
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.elevation.html">
          elevation
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.extract_all_edges.html">
+        <a class="reference internal" href="pyvista.PolyData.extract_all_edges.html">
          extract_all_edges
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.extract_cells.html">
+        <a class="reference internal" href="pyvista.PolyData.extract_cells.html">
          extract_cells
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.extract_feature_edges.html">
+        <a class="reference internal" href="pyvista.PolyData.extract_feature_edges.html">
          extract_feature_edges
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.extract_geometry.html">
+        <a class="reference internal" href="pyvista.PolyData.extract_geometry.html">
          extract_geometry
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.extract_largest.html">
+        <a class="reference internal" href="pyvista.PolyData.extract_largest.html">
          extract_largest
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.extract_points.html">
+        <a class="reference internal" href="pyvista.PolyData.extract_points.html">
          extract_points
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.extract_surface.html">
+        <a class="reference internal" href="pyvista.PolyData.extract_surface.html">
          extract_surface
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.find_cells_along_line.html">
+        <a class="reference internal" href="pyvista.PolyData.extrude.html">
+         extrude
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.extrude_rotate.html">
+         extrude_rotate
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.fill_holes.html">
+         fill_holes
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.find_cells_along_line.html">
          find_cells_along_line
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.find_cells_within_bounds.html">
+        <a class="reference internal" href="pyvista.PolyData.find_cells_within_bounds.html">
          find_cells_within_bounds
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.find_closest_cell.html">
+        <a class="reference internal" href="pyvista.PolyData.find_closest_cell.html">
          find_closest_cell
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.find_closest_point.html">
+        <a class="reference internal" href="pyvista.PolyData.find_closest_point.html">
          find_closest_point
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.flip_normal.html">
+        <a class="reference internal" href="pyvista.PolyData.flip_normal.html">
          flip_normal
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.flip_x.html">
+        <a class="reference internal" href="pyvista.PolyData.flip_normals.html">
+         flip_normals
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.flip_x.html">
          flip_x
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.flip_y.html">
+        <a class="reference internal" href="pyvista.PolyData.flip_y.html">
          flip_y
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.flip_z.html">
+        <a class="reference internal" href="pyvista.PolyData.flip_z.html">
          flip_z
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.get_array.html">
+        <a class="reference internal" href="pyvista.PolyData.geodesic.html">
+         geodesic
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.geodesic_distance.html">
+         geodesic_distance
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.get_array.html">
          get_array
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.get_array_association.html">
+        <a class="reference internal" href="pyvista.PolyData.get_array_association.html">
          get_array_association
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.get_data_range.html">
+        <a class="reference internal" href="pyvista.PolyData.get_data_range.html">
          get_data_range
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.glyph.html">
+        <a class="reference internal" href="pyvista.PolyData.glyph.html">
          glyph
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.head.html">
+        <a class="reference internal" href="pyvista.PolyData.head.html">
          head
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.interpolate.html">
+        <a class="reference internal" href="pyvista.PolyData.interpolate.html">
          interpolate
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.merge.html">
+        <a class="reference internal" href="pyvista.PolyData.intersection.html">
+         intersection
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.merge.html">
          merge
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.outline.html">
+        <a class="reference internal" href="pyvista.PolyData.multi_ray_trace.html">
+         multi_ray_trace
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.outline.html">
          outline
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.outline_corners.html">
+        <a class="reference internal" href="pyvista.PolyData.outline_corners.html">
          outline_corners
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.overwrite.html">
+        <a class="reference internal" href="pyvista.PolyData.overwrite.html">
          overwrite
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.plot.html">
+        <a class="reference internal" href="pyvista.PolyData.plot.html">
          plot
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.plot_over_circular_arc.html">
+        <a class="reference internal" href="pyvista.PolyData.plot_boundaries.html">
+         plot_boundaries
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.plot_curvature.html">
+         plot_curvature
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.plot_normals.html">
+         plot_normals
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.plot_over_circular_arc.html">
          plot_over_circular_arc
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.plot_over_circular_arc_normal.html">
+        <a class="reference internal" href="pyvista.PolyData.plot_over_circular_arc_normal.html">
          plot_over_circular_arc_normal
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.plot_over_line.html">
+        <a class="reference internal" href="pyvista.PolyData.plot_over_line.html">
          plot_over_line
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.point_data_to_cell_data.html">
+        <a class="reference internal" href="pyvista.PolyData.point_data_to_cell_data.html">
          point_data_to_cell_data
         </a>
        </li>
-       <li class="toctree-l4 current active">
-        <a class="current reference internal" href="#">
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.points_to_double.html">
          points_to_double
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.probe.html">
+        <a class="reference internal" href="pyvista.PolyData.probe.html">
          probe
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.ptc.html">
+        <a class="reference internal" href="pyvista.PolyData.project_points_to_plane.html">
+         project_points_to_plane
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.ptc.html">
          ptc
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.reflect.html">
+        <a class="reference internal" href="pyvista.PolyData.ray_trace.html">
+         ray_trace
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.reconstruct_surface.html">
+         reconstruct_surface
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.reflect.html">
          reflect
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.rename_array.html">
+        <a class="reference internal" href="pyvista.PolyData.remove_cells.html">
+         remove_cells
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.remove_points.html">
+         remove_points
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.rename_array.html">
          rename_array
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.rotate_vector.html">
+        <a class="reference internal" href="pyvista.PolyData.ribbon.html">
+         ribbon
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.rotate_vector.html">
          rotate_vector
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.rotate_x.html">
+        <a class="reference internal" href="pyvista.PolyData.rotate_x.html">
          rotate_x
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.rotate_y.html">
+        <a class="reference internal" href="pyvista.PolyData.rotate_y.html">
          rotate_y
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.rotate_z.html">
+        <a class="reference internal" href="pyvista.PolyData.rotate_z.html">
          rotate_z
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.sample.html">
+        <a class="reference internal" href="pyvista.PolyData.sample.html">
          sample
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.sample_over_circular_arc.html">
+        <a class="reference internal" href="pyvista.PolyData.sample_over_circular_arc.html">
          sample_over_circular_arc
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.sample_over_circular_arc_normal.html">
+        <a class="reference internal" href="pyvista.PolyData.sample_over_circular_arc_normal.html">
          sample_over_circular_arc_normal
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.sample_over_line.html">
+        <a class="reference internal" href="pyvista.PolyData.sample_over_line.html">
          sample_over_line
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.save.html">
+        <a class="reference internal" href="pyvista.PolyData.save.html">
          save
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.scale.html">
+        <a class="reference internal" href="pyvista.PolyData.scale.html">
          scale
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.select_enclosed_points.html">
+        <a class="reference internal" href="pyvista.PolyData.select_enclosed_points.html">
          select_enclosed_points
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.set_active_scalars.html">
+        <a class="reference internal" href="pyvista.PolyData.set_active_scalars.html">
          set_active_scalars
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.set_active_tensors.html">
+        <a class="reference internal" href="pyvista.PolyData.set_active_tensors.html">
          set_active_tensors
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.set_active_vectors.html">
+        <a class="reference internal" href="pyvista.PolyData.set_active_vectors.html">
          set_active_vectors
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.shallow_copy.html">
+        <a class="reference internal" href="pyvista.PolyData.shallow_copy.html">
          shallow_copy
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.shrink.html">
+        <a class="reference internal" href="pyvista.PolyData.shrink.html">
          shrink
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.slice.html">
+        <a class="reference internal" href="pyvista.PolyData.slice.html">
          slice
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.slice_along_axis.html">
+        <a class="reference internal" href="pyvista.PolyData.slice_along_axis.html">
          slice_along_axis
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.slice_along_line.html">
+        <a class="reference internal" href="pyvista.PolyData.slice_along_line.html">
          slice_along_line
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.slice_orthogonal.html">
+        <a class="reference internal" href="pyvista.PolyData.slice_orthogonal.html">
          slice_orthogonal
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.split_bodies.html">
+        <a class="reference internal" href="pyvista.PolyData.smooth.html">
+         smooth
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.split_bodies.html">
          split_bodies
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.streamlines.html">
+        <a class="reference internal" href="pyvista.PolyData.streamlines.html">
          streamlines
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.streamlines_evenly_spaced_2D.html">
+        <a class="reference internal" href="pyvista.PolyData.streamlines_evenly_spaced_2D.html">
          streamlines_evenly_spaced_2D
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.streamlines_from_source.html">
+        <a class="reference internal" href="pyvista.PolyData.streamlines_from_source.html">
          streamlines_from_source
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.surface_indices.html">
+        <a class="reference internal" href="pyvista.PolyData.strip.html">
+         strip
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.subdivide.html">
+         subdivide
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.subdivide_adaptive.html">
+         subdivide_adaptive
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.surface_indices.html">
          surface_indices
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.texture_map_to_plane.html">
+        <a class="reference internal" href="pyvista.PolyData.texture_map_to_plane.html">
          texture_map_to_plane
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.texture_map_to_sphere.html">
+        <a class="reference internal" href="pyvista.PolyData.texture_map_to_sphere.html">
          texture_map_to_sphere
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.threshold.html">
+        <a class="reference internal" href="pyvista.PolyData.threshold.html">
          threshold
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.threshold_percent.html">
+        <a class="reference internal" href="pyvista.PolyData.threshold_percent.html">
          threshold_percent
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.transform.html">
+        <a class="reference internal" href="pyvista.PolyData.transform.html">
          transform
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.translate.html">
+        <a class="reference internal" href="pyvista.PolyData.translate.html">
          translate
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.triangulate.html">
+        <a class="reference internal" href="pyvista.PolyData.triangulate.html">
          triangulate
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.warp_by_scalar.html">
+        <a class="reference internal" href="pyvista.PolyData.tube.html">
+         tube
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.warp_by_scalar.html">
          warp_by_scalar
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.warp_by_vector.html">
+        <a class="reference internal" href="pyvista.PolyData.warp_by_vector.html">
          warp_by_vector
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.active_normals.html">
+        <a class="reference internal" href="pyvista.PolyData.active_normals.html">
          active_normals
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.active_scalars.html">
+        <a class="reference internal" href="pyvista.PolyData.active_scalars.html">
          active_scalars
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.active_scalars_info.html">
+        <a class="reference internal" href="pyvista.PolyData.active_scalars_info.html">
          active_scalars_info
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.active_scalars_name.html">
+        <a class="reference internal" href="pyvista.PolyData.active_scalars_name.html">
          active_scalars_name
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.active_t_coords.html">
+        <a class="reference internal" href="pyvista.PolyData.active_t_coords.html">
          active_t_coords
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.active_tensors.html">
+        <a class="reference internal" href="pyvista.PolyData.active_tensors.html">
          active_tensors
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.active_tensors_info.html">
+        <a class="reference internal" href="pyvista.PolyData.active_tensors_info.html">
          active_tensors_info
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.active_tensors_name.html">
+        <a class="reference internal" href="pyvista.PolyData.active_tensors_name.html">
          active_tensors_name
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.active_vectors.html">
+        <a class="reference internal" href="pyvista.PolyData.active_vectors.html">
          active_vectors
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.active_vectors_info.html">
+        <a class="reference internal" href="pyvista.PolyData.active_vectors_info.html">
          active_vectors_info
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.active_vectors_name.html">
+        <a class="reference internal" href="pyvista.PolyData.active_vectors_name.html">
          active_vectors_name
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.actual_memory_size.html">
+        <a class="reference internal" href="pyvista.PolyData.actual_memory_size.html">
          actual_memory_size
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.array_names.html">
+        <a class="reference internal" href="pyvista.PolyData.area.html">
+         area
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.array_names.html">
          array_names
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.arrows.html">
+        <a class="reference internal" href="pyvista.PolyData.arrows.html">
          arrows
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.bounds.html">
+        <a class="reference internal" href="pyvista.PolyData.bounds.html">
          bounds
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.cell_arrays.html">
+        <a class="reference internal" href="pyvista.PolyData.cell_arrays.html">
          cell_arrays
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.cell_data.html">
+        <a class="reference internal" href="pyvista.PolyData.cell_data.html">
          cell_data
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.center.html">
+        <a class="reference internal" href="pyvista.PolyData.cell_normals.html">
+         cell_normals
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.center.html">
          center
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.dimensions.html">
-         dimensions
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.extent.html">
+        <a class="reference internal" href="pyvista.PolyData.extent.html">
          extent
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.field_arrays.html">
+        <a class="reference internal" href="pyvista.PolyData.face_normals.html">
+         face_normals
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.faces.html">
+         faces
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.field_arrays.html">
          field_arrays
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.field_data.html">
+        <a class="reference internal" href="pyvista.PolyData.field_data.html">
          field_data
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.length.html">
+        <a class="reference internal" href="pyvista.PolyData.is_all_triangles.html">
+         is_all_triangles
+        </a>
+       </li>
+       <li class="toctree-l4 current active">
+        <a class="current reference internal" href="#">
+         is_manifold
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.length.html">
          length
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.memory_address.html">
+        <a class="reference internal" href="pyvista.PolyData.lines.html">
+         lines
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.memory_address.html">
          memory_address
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.meshgrid.html">
-         meshgrid
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.n_arrays.html">
+        <a class="reference internal" href="pyvista.PolyData.n_arrays.html">
          n_arrays
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.n_cells.html">
+        <a class="reference internal" href="pyvista.PolyData.n_cells.html">
          n_cells
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.n_points.html">
+        <a class="reference internal" href="pyvista.PolyData.n_faces.html">
+         n_faces
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.n_lines.html">
+         n_lines
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.n_open_edges.html">
+         n_open_edges
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.n_points.html">
          n_points
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.number_of_cells.html">
+        <a class="reference internal" href="pyvista.PolyData.n_verts.html">
+         n_verts
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.number_of_cells.html">
          number_of_cells
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.number_of_points.html">
+        <a class="reference internal" href="pyvista.PolyData.number_of_faces.html">
+         number_of_faces
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.number_of_points.html">
          number_of_points
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.point_arrays.html">
+        <a class="reference internal" href="pyvista.PolyData.obbTree.html">
+         obbTree
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.point_arrays.html">
          point_arrays
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.point_data.html">
+        <a class="reference internal" href="pyvista.PolyData.point_data.html">
          point_data
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.points.html">
+        <a class="reference internal" href="pyvista.PolyData.point_normals.html">
+         point_normals
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.points.html">
          points
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.t_coords.html">
+        <a class="reference internal" href="pyvista.PolyData.t_coords.html">
          t_coords
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.textures.html">
+        <a class="reference internal" href="pyvista.PolyData.textures.html">
          textures
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.vectors.html">
+        <a class="reference internal" href="pyvista.PolyData.vectors.html">
          vectors
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.volume.html">
+        <a class="reference internal" href="pyvista.PolyData.verts.html">
+         verts
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.volume.html">
          volume
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.x.html">
-         x
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.y.html">
-         y
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="pyvista.RectilinearGrid.z.html">
-         z
         </a>
        </li>
       </ul>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.UniformGrid.html">
-       pyvista.UniformGrid
+      <a class="reference internal" href="pyvista.UnstructuredGrid.html">
+       pyvista.UnstructuredGrid
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.StructuredGrid.html">
+       pyvista.StructuredGrid
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.ExplicitStructuredGrid.html">
+       pyvista.ExplicitStructuredGrid
       </a>
      </li>
     </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../grids.html">
+     グリッドデータ
+    </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../composite.html">
@@ -1067,21 +1312,22 @@
               
               <div>
                 
-  <section id="points-to-double">
-<h1>points_to_double<a class="headerlink" href="#points-to-double" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<dl class="py method">
-<dt class="sig sig-object py" id="pyvista.RectilinearGrid.points_to_double">
-<span class="sig-prename descclassname"><span class="pre">RectilinearGrid.</span></span><span class="sig-name descname"><span class="pre">points_to_double</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.RectilinearGrid.points_to_double" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>pointsのデータ型を倍精度に変換します．</p>
+  <section id="is-manifold">
+<h1>is_manifold<a class="headerlink" href="#is-manifold" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyvista.PolyData.is_manifold">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">PolyData.</span></span><span class="sig-name descname"><span class="pre">is_manifold</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/dev/library/functions.html#bool" title="(in Python v3.11)"><span class="pre">bool</span></a></em><a class="headerlink" href="#pyvista.PolyData.is_manifold" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Return if the mesh is manifold (no open edges).</p>
 <p class="rubric">例</p>
-<p>型の点を持つメッシュを作成し，その点を <code class="docutils literal notranslate"><span class="pre">float32</span></code> から <code class="docutils literal notranslate"><span class="pre">float64</span></code> に変換します．</p>
+<p>Show a sphere is manifold.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span><span class="o">.</span><span class="n">points</span><span class="o">.</span><span class="n">dtype</span>
-<span class="go">dtype(&#39;float32&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span><span class="o">.</span><span class="n">points_to_double</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span><span class="o">.</span><span class="n">points</span><span class="o">.</span><span class="n">dtype</span>
-<span class="go">dtype(&#39;float64&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span><span class="o">.</span><span class="n">is_manifold</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>Show a plane is not manifold.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">Plane</span><span class="p">()</span><span class="o">.</span><span class="n">is_manifold</span>
+<span class="go">False</span>
 </pre></div>
 </div>
 </dd></dl>

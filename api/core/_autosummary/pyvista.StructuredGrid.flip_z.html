@@ -1111,7 +1111,7 @@
 <h1>flip_z<a class="headerlink" href="#flip-z" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.StructuredGrid.flip_z">
-<span class="sig-prename descclassname"><span class="pre">StructuredGrid.</span></span><span class="sig-name descname"><span class="pre">flip_z</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transform_all_input_vectors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.StructuredGrid.flip_z" title="この定義へのパーマリンク">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">StructuredGrid.</span></span><span class="sig-name descname"><span class="pre">flip_z</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transform_all_input_vectors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inplace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.StructuredGrid.flip_z" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>メッシュをZ軸を中心に反転させます．</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
@@ -1119,6 +1119,14 @@
 <dt><strong>point</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>回転させる点です． デフォルトでは <a class="reference internal" href="pyvista.DataSet.center.html#pyvista.DataSet.center" title="pyvista.DataSet.center"><code class="xref py py-attr docutils literal notranslate"><span class="pre">center</span></code></a> のメッシュの中心になります．</p>
 </dd>
 <dt><strong>transform_all_input_vectors</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> の時，全ての入力ベクトルは変換される．それ以外の場合は，ポイント，法線，およびアクティブなベクトルだけが変換されます．</p>
+</dd>
+<dt><strong>inplace</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>in-placeメッシュを更新します．</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><dl class="simple">
+<dt><a class="reference internal" href="pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a></dt><dd><p>Flipped dataset.</p>
 </dd>
 </dl>
 </dd>
@@ -1133,8 +1141,7 @@
 <span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh1</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span><span class="o">.</span><span class="n">show_axes</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mesh2</span> <span class="o">=</span> <span class="n">mesh1</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mesh2</span><span class="o">.</span><span class="n">flip_z</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mesh2</span> <span class="o">=</span> <span class="n">mesh1</span><span class="o">.</span><span class="n">flip_z</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh2</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">)</span>
 </pre></div>

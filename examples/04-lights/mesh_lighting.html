@@ -632,14 +632,14 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../02-plot/chart_basics.html">
-   Chart Basics
+   チャートの基本
   </a>
  </li>
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../02-plot/chart_overlays.html">
-   Chart Overlays
+   グラフのオーバーレイ
   </a>
  </li>
 </ul>
@@ -800,7 +800,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../02-plot/point-picking.html">
-   Picking points on a mesh
+   メッシュ上の点の選択
   </a>
  </li>
 </ul>
@@ -1076,10 +1076,9 @@ to download the full example code</p>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 
 <span class="n">horse</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_horse</span><span class="p">()</span><span class="o">.</span><span class="n">decimate</span><span class="p">(</span><span class="mf">0.9</span><span class="p">)</span>
-<span class="n">horse</span><span class="o">.</span><span class="n">rotate_z</span><span class="p">(</span><span class="o">-</span><span class="mi">120</span><span class="p">)</span>
+<span class="n">horse</span><span class="o">.</span><span class="n">rotate_z</span><span class="p">(</span><span class="o">-</span><span class="mi">120</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">horse</span><span class="o">.</span><span class="n">points</span> <span class="o">=</span> <span class="p">(</span><span class="n">horse</span><span class="o">.</span><span class="n">points</span> <span class="o">-</span> <span class="n">horse</span><span class="o">.</span><span class="n">center</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
-<span class="n">shifted</span> <span class="o">=</span> <span class="n">horse</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="n">shifted</span><span class="o">.</span><span class="n">translate</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<span class="n">shifted</span> <span class="o">=</span> <span class="n">horse</span><span class="o">.</span><span class="n">translate</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 <span class="n">plotter</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">horse</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;brown&#39;</span><span class="p">)</span>
@@ -1092,7 +1091,7 @@ to download the full example code</p>
 </pre></div>
 </div>
 <img src="../../_images/sphx_glr_mesh_lighting_002.png" srcset="../../_images/sphx_glr_mesh_lighting_002.png" alt="mesh lighting" class = "sphx-glr-single-img"/><p>ライトレンダリングに影響するメッシュプロパティの微調整の詳細な例については， <a class="reference internal" href="../02-plot/lighting_mesh.html#ref-lighting-properties-example"><span class="std std-ref">照明プロパティ</span></a> の例を参照してください．</p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.410 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.833 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-04-lights-mesh-lighting-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/34c7304ef3277b4de83bafbf9bc9c127/mesh_lighting.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">mesh_lighting.py</span></code></a></p>
