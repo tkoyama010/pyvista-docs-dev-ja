@@ -1058,7 +1058,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#modify-which-actors-are-pickable">
-   Modify which actors are pickable
+   ピックアップ可能なアクターの変更
   </a>
  </li>
 </ul>
@@ -1107,8 +1107,7 @@ to download the full example code</p>
 <img src="../../_images/sphx_glr_point-picking_001.png" srcset="../../_images/sphx_glr_point-picking_001.png" alt="point picking" class = "sphx-glr-single-img"/></section>
 <section id="ignore-the-3d-window">
 <h2>3Dウィンドウを無視<a class="headerlink" href="#ignore-the-3d-window" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>In the above example, both points on the mesh and points in the 3d window can be
-selected. It is possible instead pick only points on the mesh.</p>
+<p>上の例では、メッシュ上の点と3dウィンドウ内の点の両方を選択することができます。メッシュ上の点だけを選択することも可能です。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sphere</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 
 <span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
@@ -1119,8 +1118,8 @@ selected. It is possible instead pick only points on the mesh.</p>
 </div>
 <img src="../../_images/sphx_glr_point-picking_002.png" srcset="../../_images/sphx_glr_point-picking_002.png" alt="point picking" class = "sphx-glr-single-img"/></section>
 <section id="modify-which-actors-are-pickable">
-<h2>Modify which actors are pickable<a class="headerlink" href="#modify-which-actors-are-pickable" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>After enabling point picking, we can modify which actors are pickable.</p>
+<h2>ピックアップ可能なアクターの変更<a class="headerlink" href="#modify-which-actors-are-pickable" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ポイントピッキングを有効にした後、どのアクターがピッキング可能かを変更することができます。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sphere</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 <span class="n">cube</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Cube</span><span class="p">()</span>
 <span class="n">cube</span><span class="o">.</span><span class="n">translate</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>

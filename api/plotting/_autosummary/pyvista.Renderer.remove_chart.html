@@ -700,17 +700,17 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.Renderer.remove_chart">
 <span class="sig-prename descclassname"><span class="pre">Renderer.</span></span><span class="sig-name descname"><span class="pre">remove_chart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chart_or_index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Renderer.remove_chart" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Remove a chart from this renderer.</p>
-<dl class="field-list">
+<dd><p>このレンダラーからチャートを削除します。</p>
+<dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
-<dd class="field-odd"><dl>
-<dt><strong>chart_or_index</strong><span class="classifier"><a class="reference internal" href="../charts/_autosummary/pyvista.Chart2D.html#pyvista.Chart2D" title="pyvista.Chart2D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Chart2D</span></code></a>, <a class="reference internal" href="../charts/_autosummary/pyvista.ChartBox.html#pyvista.ChartBox" title="pyvista.ChartBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChartBox</span></code></a>, <a class="reference internal" href="../charts/_autosummary/pyvista.ChartPie.html#pyvista.ChartPie" title="pyvista.ChartPie"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChartPie</span></code></a>, <a class="reference internal" href="../charts/_autosummary/pyvista.ChartMPL.html#pyvista.ChartMPL" title="pyvista.ChartMPL"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChartMPL</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Either the chart to remove from this renderer or its index in the collection of charts.</p>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>chart_or_index</strong> : <a class="reference internal" href="../charts/_autosummary/pyvista.Chart2D.html#pyvista.Chart2D" title="pyvista.Chart2D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Chart2D</span></code></a>, <a class="reference internal" href="../charts/_autosummary/pyvista.ChartBox.html#pyvista.ChartBox" title="pyvista.ChartBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChartBox</span></code></a>, <a class="reference internal" href="../charts/_autosummary/pyvista.ChartPie.html#pyvista.ChartPie" title="pyvista.ChartPie"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChartPie</span></code></a>, <a class="reference internal" href="../charts/_autosummary/pyvista.ChartMPL.html#pyvista.ChartMPL" title="pyvista.ChartMPL"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChartMPL</span></code></a> か <a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a><span class="classifier">Chart2D, ChartBox, ChartPie, ChartMPL か python:int</span></dt><dd><p>このレンダラーから削除するチャート、またはチャートのコレクション内のインデックスのいずれかです。</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>First define a function to add two charts to a renderer.</p>
+<p>まず、レンダラーに2つのチャートを追加する関数を定義します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">plotter_with_charts</span><span class="p">():</span>
 <span class="gp">... </span>    <span class="n">pl</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
@@ -730,7 +730,7 @@
 <figure class="align-default">
 <img alt="../../../_images/pyvista-Renderer-remove_chart-1_00_00.png" src="../../../_images/pyvista-Renderer-remove_chart-1_00_00.png" />
 </figure>
-<p>Now reconstruct the same plotter but remove the right chart by index.</p>
+<p>今度は、同じプロッタを再構築して、右のチャートをインデックスで削除します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span><span class="p">,</span> <span class="o">*</span><span class="n">_</span> <span class="o">=</span> <span class="n">plotter_with_charts</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span><span class="o">.</span><span class="n">remove_chart</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -739,7 +739,7 @@
 <figure class="align-default">
 <img alt="../../../_images/pyvista-Renderer-remove_chart-1_01_00.png" src="../../../_images/pyvista-Renderer-remove_chart-1_01_00.png" />
 </figure>
-<p>Finally, remove the left chart by reference.</p>
+<p>最後に、左のチャートを参照して削除します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span><span class="p">,</span> <span class="n">chart_left</span><span class="p">,</span> <span class="n">chart_right</span> <span class="o">=</span> <span class="n">plotter_with_charts</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span><span class="o">.</span><span class="n">remove_chart</span><span class="p">(</span><span class="n">chart_left</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
