@@ -1188,7 +1188,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../charts/index.html">
-     Charts
+     チャート
     </a>
    </li>
    <li class="toctree-l2">
@@ -1260,10 +1260,8 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.Plotter.pickable_actors">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Plotter.</span></span><span class="sig-name descname"><span class="pre">pickable_actors</span></span><a class="headerlink" href="#pyvista.Plotter.pickable_actors" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return or set the pickable actors.</p>
-<p>When setting, this will be the list of actors to make
-pickable. All actors not in the list will be made unpickable.
-If <code class="docutils literal notranslate"><span class="pre">actors</span></code> is <code class="docutils literal notranslate"><span class="pre">None</span></code>, all actors will be made unpickable.</p>
+<dd><p>選択可能なアクターを返す、または設定します。</p>
+<p>設定すると、これが選択可能にするアクターのリストになります。このリストに入っていないアクターはすべてピック不可になります。もし <code class="docutils literal notranslate"><span class="pre">actors</span></code> が <code class="docutils literal notranslate"><span class="pre">None</span></code> であれば、すべてのアクターがピッキング不可能になります。</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値</dt>
 <dd class="field-odd"><dl class="simple">
@@ -1272,8 +1270,7 @@ If <code class="docutils literal notranslate"><span class="pre">actors</span></c
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>Add two actors to a <a class="reference internal" href="pyvista.Plotter.html#pyvista.Plotter" title="pyvista.Plotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.Plotter</span></code></a>, make one
-pickable, and then list the pickable actors.</p>
+<p>2つのアクターを <a class="reference internal" href="pyvista.Plotter.html#pyvista.Plotter" title="pyvista.Plotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.Plotter</span></code></a> に追加し、1つを選択可能にして、選択可能なアクターをリストアップします。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sphere_actor</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">())</span>
@@ -1282,13 +1279,13 @@ pickable, and then list the pickable actors.</p>
 <span class="go">1</span>
 </pre></div>
 </div>
-<p>Set the pickable actors to both actors.</p>
+<p>選択可能なアクターを両方のアクターに設定します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span><span class="o">.</span><span class="n">pickable_actors</span> <span class="o">=</span> <span class="p">[</span><span class="n">sphere_actor</span><span class="p">,</span> <span class="n">cube_actor</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">pl</span><span class="o">.</span><span class="n">pickable_actors</span><span class="p">)</span>
 <span class="go">2</span>
 </pre></div>
 </div>
-<p>Set the pickable actors to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<p>選択可能なアクターを <code class="docutils literal notranslate"><span class="pre">None</span></code> に設定します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span><span class="o">.</span><span class="n">pickable_actors</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">pl</span><span class="o">.</span><span class="n">pickable_actors</span><span class="p">)</span>
 <span class="go">0</span>

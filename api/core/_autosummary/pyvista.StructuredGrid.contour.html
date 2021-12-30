@@ -1119,8 +1119,7 @@
 <dd class="field-odd"><dl>
 <dt><strong>isosurfaces</strong><span class="classifier">python:int または python:sequence, optional</span></dt><dd><p>有効なデータ範囲全体で計算する等値面の数，または等値面として明示的に使用する浮動小数点値のシーケンス．</p>
 </dd>
-<dt><strong>scalars</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Name or array of scalars to threshold on. Defaults to
-currently active scalars.</p>
+<dt><strong>scalars</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>しきい値に対するスカラーの名前か配列．デフォルトは現在アクティブなスカラーです．</p>
 </dd>
 <dt><strong>compute_normals</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>データセットの法線を計算します．</p>
 </dd>
@@ -1156,7 +1155,7 @@ currently active scalars.</p>
 <figure class="align-default">
 <img alt="../../../_images/pyvista-StructuredGrid-contour-1_00_00.png" src="../../../_images/pyvista-StructuredGrid-contour-1_00_00.png" />
 </figure>
-<p>Generate the surface of a mobius strip using flying edges.</p>
+<p>フライングエッジを使ってメビウスの帯の表面を生成します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="mf">0.4</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="mf">0.1</span>
@@ -1191,9 +1190,7 @@ currently active scalars.</p>
 <figure class="align-default">
 <img alt="../../../_images/pyvista-StructuredGrid-contour-1_01_00.png" src="../../../_images/pyvista-StructuredGrid-contour-1_01_00.png" />
 </figure>
-<p>See <a class="reference internal" href="../../../examples/01-filter/using-filters.html#common-filter-example"><span class="std std-ref">共通フィルタの使用</span></a> or
-<a class="reference internal" href="../../../examples/01-filter/flying_edges.html#marching-cubes-example"><span class="std std-ref">マーチングキューブ</span></a> for more examples using this
-filter.</p>
+<p>このフィルターを使ったその他の例については， <a class="reference internal" href="../../../examples/01-filter/using-filters.html#common-filter-example"><span class="std std-ref">共通フィルタの使用</span></a> と <a class="reference internal" href="../../../examples/01-filter/flying_edges.html#marching-cubes-example"><span class="std std-ref">マーチングキューブ</span></a> を参照してください．</p>
 </dd></dl>
 
 </section>

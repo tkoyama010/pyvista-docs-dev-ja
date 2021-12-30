@@ -430,14 +430,13 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="pyvista.parse_color">
 <span class="sig-name descname"><span class="pre">parse_color</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">color</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opacity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.parse_color" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Parse color into a VTK friendly RGB(A) tuple.</p>
-<p>If <code class="docutils literal notranslate"><span class="pre">color</span></code> is a sequence of RGBA floats, the <code class="docutils literal notranslate"><span class="pre">opacity</span></code> parameter
-is ignored.</p>
-<p>Values returned will be between 0 and 1.</p>
+<dd><p>色をVTKフレンドリーなRGB(A)タプルに解析します。</p>
+<p><code class="docutils literal notranslate"><span class="pre">color</span></code> が RGBA の浮動小数点数のシーケンスである場合、<code class="docutils literal notranslate"><span class="pre">opacity</span></code> パラメータは無視されます。</p>
+<p>返される値は0から1の間です。</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>color</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a></span></dt><dd><p>Either a string, RGB sequence, RGBA sequence, or hex color string.
+<dt><strong>color</strong> : <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> または <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a><span class="classifier">python:str または python:sequence</span></dt><dd><p>Either a string, RGB sequence, RGBA sequence, or hex color string.
 RGB(A) sequences should only contain values between 0 and 1.
 For example:</p>
 <ul class="simple">

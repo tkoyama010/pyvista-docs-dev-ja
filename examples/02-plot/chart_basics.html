@@ -50,7 +50,7 @@
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
-    <link rel="next" title="グラフのオーバーレイ" href="chart_overlays.html" />
+    <link rel="next" title="チャートのオーバーレイ" href="chart_overlays.html" />
     <link rel="prev" title="背景イメージ" href="background_image.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="ja">
@@ -639,7 +639,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="chart_overlays.html">
-   グラフのオーバーレイ
+   チャートのオーバーレイ
   </a>
  </li>
 </ul>
@@ -1069,7 +1069,7 @@ to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="chart-basics">
 <span id="chart-basics-example"></span><span id="sphx-glr-examples-02-plot-chart-basics-py"></span><h1>チャートの基本<a class="headerlink" href="#chart-basics" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>この例では、さまざまなタイプのチャートをシーンに追加する方法を示しています。より複雑な例として、同じレンダラーで複数のチャートをオーバーレイとして組み合わせる方法は、 <a class="reference internal" href="chart_overlays.html#chart-overlays-example"><span class="std std-ref">グラフのオーバーレイ</span></a> にあります。</p>
+<p>この例では、さまざまなタイプのチャートをシーンに追加する方法を示しています。より複雑な例として、同じレンダラーで複数のチャートをオーバーレイとして組み合わせる方法は、 <a class="reference internal" href="chart_overlays.html#chart-overlays-example"><span class="std std-ref">チャートのオーバーレイ</span></a> にあります。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
@@ -1077,7 +1077,7 @@ to download the full example code</p>
 <span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># Seeded random number generator for consistent data generation</span>
 </pre></div>
 </div>
-<p>この例では，ランダムに抽出された100個のデータポイントから2次元の散布図を作成する方法を示します。デフォルトでは、チャートは軸を自動的にリスケールし、プロットされたすべてのデータが見えるようになっています。グラフの上で右クリックすると、グラフのズームやパンが可能です。</p>
+<p>この例では，ランダムに抽出された100個のデータポイントから2次元の散布図を作成する方法を示します。デフォルトでは、チャートは軸を自動的にリスケールし、プロットされたすべてのデータが見えるようになっています。チャートの上で右クリックすると、チャートのズームやパンが可能です。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">standard_normal</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">standard_normal</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 <span class="n">chart</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Chart2D</span><span class="p">()</span>
@@ -1115,7 +1115,7 @@ to download the full example code</p>
 <span class="n">chart</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_chart_basics_004.png" srcset="../../_images/sphx_glr_chart_basics_004.png" alt="chart basics" class = "sphx-glr-single-img"/><p>棒グラフにも対応しています。複数の棒グラフが隣り合って配置されています。</p>
+<img src="../../_images/sphx_glr_chart_basics_004.png" srcset="../../_images/sphx_glr_chart_basics_004.png" alt="chart basics" class = "sphx-glr-single-img"/><p>棒チャートにも対応しています。複数の棒チャートが隣り合って配置されています。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">13</span><span class="p">)</span>
 <span class="n">y1</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">integers</span><span class="p">(</span><span class="mf">1e2</span><span class="p">,</span> <span class="mf">1e4</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
 <span class="n">y2</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">integers</span><span class="p">(</span><span class="mf">1e2</span><span class="p">,</span> <span class="mf">1e4</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
@@ -1152,7 +1152,7 @@ to download the full example code</p>
 <span class="n">chart</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_chart_basics_007.png" srcset="../../_images/sphx_glr_chart_basics_007.png" alt="chart basics" class = "sphx-glr-single-img"/><p>これまでの例で使用したフレキシブルなChart2Dの他にも、いくつかの専用チャートを作成することができます。下の例では、円グラフを作成することができます。</p>
+<img src="../../_images/sphx_glr_chart_basics_007.png" srcset="../../_images/sphx_glr_chart_basics_007.png" alt="chart basics" class = "sphx-glr-single-img"/><p>これまでの例で使用したフレキシブルなChart2Dの他にも、いくつかの専用チャートを作成することができます。下の例では、円チャートを作成することができます。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">8.4</span><span class="p">,</span><span class="mf">6.1</span><span class="p">,</span><span class="mf">2.7</span><span class="p">,</span><span class="mf">2.4</span><span class="p">,</span><span class="mf">0.9</span><span class="p">])</span>
 <span class="n">chart</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">ChartPie</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="n">chart</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;slice </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))]</span>

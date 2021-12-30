@@ -236,7 +236,7 @@
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../index.html">
-     Charts
+     チャート
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -462,11 +462,11 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="pyvista.ChartMPL">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ChartMPL</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">figure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(1,</span> <span class="pre">1)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0,</span> <span class="pre">0)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.ChartMPL" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Create new chart from an existing matplotlib figure.</p>
+<dd><p>既存のmatplotlibの図から新しいチャートを作成します。</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>figure</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/figure_api.html#matplotlib.figure.Figure" title="(in Matplotlib v3.5.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matplotlib.figure.Figure</span></code></a></span></dt><dd><p>The matplotlib figure to draw.</p>
+<dt><strong>figure</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/figure_api.html#matplotlib.figure.Figure" title="(in Matplotlib v3.5.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matplotlib.figure.Figure</span></code></a></span></dt><dd><p>描画するmatplotlibの図形。</p>
 </dd>
 <dt><strong>size</strong> : <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> か <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code><span class="classifier">python:list か python:tuple, optional</span></dt><dd><p>正規化された座標におけるチャートのサイズです。サイズが <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">0)</span></code> の場合は不可視で、 <code class="docutils literal notranslate"><span class="pre">(1,</span> <span class="pre">1)</span></code> の場合はレンダラーの幅と高さをすべて占めます。</p>
 </dd>
@@ -476,7 +476,7 @@
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>Plot streamlines of a vector field with varying colors (based on <a class="reference external" href="https://matplotlib.org/stable/gallery/images_contours_and_fields/plot_streamplot.html">this example</a>).</p>
+<p>ベクトル場の流線を様々な色でプロットします（ <a class="reference external" href="https://matplotlib.org/stable/gallery/images_contours_and_fields/plot_streamplot.html">この例</a> を参考にしています）。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -541,7 +541,7 @@
 <td><p>チャートの境界線幅を返すか設定します。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.ChartMPL.figure.html#pyvista.ChartMPL.figure" title="pyvista.ChartMPL.figure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChartMPL.figure</span></code></a></p></td>
-<td><p>Retrieve the matplotlib figure associated with this chart.</p></td>
+<td><p>このチャートに関連するmatplotlibの図を取得します。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.ChartMPL.legend_visible.html#pyvista.ChartMPL.legend_visible" title="pyvista.ChartMPL.legend_visible"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChartMPL.legend_visible</span></code></a></p></td>
 <td><p>チャートの凡例の可視性を返すか設定します。</p></td>
@@ -550,7 +550,7 @@
 <td><p>正規化された座標でチャートの位置を返す、または設定します。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.ChartMPL.position.html#pyvista.ChartMPL.position" title="pyvista.ChartMPL.position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChartMPL.position</span></code></a></p></td>
-<td><p>Chart position w.r.t the bottom left corner (in pixels).</p></td>
+<td><p>左下から見たチャートの位置（単位はピクセル）。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.ChartMPL.size.html#pyvista.ChartMPL.size" title="pyvista.ChartMPL.size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChartMPL.size</span></code></a></p></td>
 <td><p>正規化された座標でチャートのサイズを返す、または設定します。</p></td>

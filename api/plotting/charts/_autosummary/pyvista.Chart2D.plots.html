@@ -236,7 +236,7 @@
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../index.html">
-     Charts
+     チャート
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -541,23 +541,19 @@
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>plot_type</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The type of plots to return. Allowed types are
-<code class="docutils literal notranslate"><span class="pre">&quot;scatter&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;line&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;area&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;bar&quot;</span></code>
-and <code class="docutils literal notranslate"><span class="pre">&quot;stack&quot;</span></code>.
-Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>, which will return all plots,
-regardless of their type.</p>
+<dt><strong>plot_type</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>返されるプロットのタイプです。許可されているタイプは <code class="docutils literal notranslate"><span class="pre">&quot;scatter&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;line&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;area&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;bar&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;stack&quot;</span></code> です。デフォルトは <code class="docutils literal notranslate"><span class="pre">None</span></code> で、これはタイプに関係なくすべてのプロットを返します。</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">Yields</dt>
-<dd class="field-even"><dl>
-<dt><strong>plot</strong> : <a class="reference internal" href="pyvista.plotting.charts.ScatterPlot2D.html#pyvista.plotting.charts.ScatterPlot2D" title="pyvista.plotting.charts.ScatterPlot2D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotting.charts.ScatterPlot2D</span></code></a>, <a class="reference internal" href="pyvista.plotting.charts.LinePlot2D.html#pyvista.plotting.charts.LinePlot2D" title="pyvista.plotting.charts.LinePlot2D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotting.charts.LinePlot2D</span></code></a>, <a class="reference internal" href="pyvista.plotting.charts.AreaPlot.html#pyvista.plotting.charts.AreaPlot" title="pyvista.plotting.charts.AreaPlot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotting.charts.AreaPlot</span></code></a>, <a class="reference internal" href="pyvista.plotting.charts.BarPlot.html#pyvista.plotting.charts.BarPlot" title="pyvista.plotting.charts.BarPlot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotting.charts.BarPlot</span></code></a> か <a class="reference internal" href="pyvista.plotting.charts.StackPlot.html#pyvista.plotting.charts.StackPlot" title="pyvista.plotting.charts.StackPlot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotting.charts.StackPlot</span></code></a><span class="classifier"><a class="reference internal" href="pyvista.plotting.charts.ScatterPlot2D.html#pyvista.plotting.charts.ScatterPlot2D" title="pyvista.plotting.charts.ScatterPlot2D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotting.charts.ScatterPlot2D</span></code></a>, <a class="reference internal" href="pyvista.plotting.charts.LinePlot2D.html#pyvista.plotting.charts.LinePlot2D" title="pyvista.plotting.charts.LinePlot2D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotting.charts.LinePlot2D</span></code></a>, <a class="reference internal" href="pyvista.plotting.charts.AreaPlot.html#pyvista.plotting.charts.AreaPlot" title="pyvista.plotting.charts.AreaPlot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotting.charts.AreaPlot</span></code></a>, <a class="reference internal" href="pyvista.plotting.charts.BarPlot.html#pyvista.plotting.charts.BarPlot" title="pyvista.plotting.charts.BarPlot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotting.charts.BarPlot</span></code></a> or <a class="reference internal" href="pyvista.plotting.charts.StackPlot.html#pyvista.plotting.charts.StackPlot" title="pyvista.plotting.charts.StackPlot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotting.charts.StackPlot</span></code></a></span></dt><dd><p>One of the plots (of the specified type) in this chart.</p>
+<dd class="field-even"><dl class="simple">
+<dt><strong>plot</strong> : <a class="reference internal" href="pyvista.plotting.charts.ScatterPlot2D.html#pyvista.plotting.charts.ScatterPlot2D" title="pyvista.plotting.charts.ScatterPlot2D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotting.charts.ScatterPlot2D</span></code></a>, <a class="reference internal" href="pyvista.plotting.charts.LinePlot2D.html#pyvista.plotting.charts.LinePlot2D" title="pyvista.plotting.charts.LinePlot2D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotting.charts.LinePlot2D</span></code></a>, <a class="reference internal" href="pyvista.plotting.charts.AreaPlot.html#pyvista.plotting.charts.AreaPlot" title="pyvista.plotting.charts.AreaPlot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotting.charts.AreaPlot</span></code></a>, <a class="reference internal" href="pyvista.plotting.charts.BarPlot.html#pyvista.plotting.charts.BarPlot" title="pyvista.plotting.charts.BarPlot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotting.charts.BarPlot</span></code></a> か <a class="reference internal" href="pyvista.plotting.charts.StackPlot.html#pyvista.plotting.charts.StackPlot" title="pyvista.plotting.charts.StackPlot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotting.charts.StackPlot</span></code></a><span class="classifier">plotting.charts.ScatterPlot2D, plotting.charts.LinePlot2D, plotting.charts.AreaPlot, plotting.charts.BarPlot か plotting.charts.StackPlot</span></dt><dd><p>このチャートの（指定されたタイプの）プロットの1つ。</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>Create a 2D chart with a line and scatter plot.</p>
+<p>直線や散布図を含む2Dチャートを作成することができます。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">chart</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Chart2D</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">scatter_plot</span><span class="p">,</span> <span class="n">line_plot</span> <span class="o">=</span> <span class="n">chart</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="s2">&quot;o-&quot;</span><span class="p">)</span>
@@ -569,13 +565,13 @@ regardless of their type.</p>
 <figure class="align-default">
 <img alt="../../../../_images/pyvista-Chart2D-plots-1_01_00.png" src="../../../../_images/pyvista-Chart2D-plots-1_01_00.png" />
 </figure>
-<p>Retrieve all plots in the chart.</p>
+<p>チャート内のすべてのプロットを取得します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">plots</span> <span class="o">=</span> <span class="p">[</span><span class="o">*</span><span class="n">chart</span><span class="o">.</span><span class="n">plots</span><span class="p">()]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">scatter_plot</span> <span class="ow">in</span> <span class="n">plots</span> <span class="ow">and</span> <span class="n">line_plot</span> <span class="ow">in</span> <span class="n">plots</span>
 <span class="go">True</span>
 </pre></div>
 </div>
-<p>Retrieve all line plots in the chart.</p>
+<p>チャート内のすべての折れ線プロットを取得します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">line_plots</span> <span class="o">=</span> <span class="p">[</span><span class="o">*</span><span class="n">chart</span><span class="o">.</span><span class="n">plots</span><span class="p">(</span><span class="s2">&quot;line&quot;</span><span class="p">)]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">line_plot</span> <span class="o">==</span> <span class="n">line_plots</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="go">True</span>

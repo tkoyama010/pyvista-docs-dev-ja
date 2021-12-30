@@ -236,7 +236,7 @@
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../index.html">
-     Charts
+     チャート
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -541,17 +541,13 @@
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>plot_type</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The type of the plots to remove. Allowed types are
-<code class="docutils literal notranslate"><span class="pre">&quot;scatter&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;line&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;area&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;bar&quot;</span></code>
-and <code class="docutils literal notranslate"><span class="pre">&quot;stack&quot;</span></code>.
-Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>, which will remove all plots,
-regardless of their type.</p>
+<dt><strong>plot_type</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>削除するプロットのタイプです。許可されているタイプは <code class="docutils literal notranslate"><span class="pre">&quot;scatter&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;line&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;area&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;bar&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;stack&quot;</span></code> です。デフォルトは <code class="docutils literal notranslate"><span class="pre">None</span></code> で、これはタイプに関係なくすべてのプロットを削除します。</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>Create a 2D chart with multiple line and scatter plot.</p>
+<p>複数の直線や散布図を含む2Dチャートを作成することができます。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">chart</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Chart2D</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">chart</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="s2">&quot;o-b&quot;</span><span class="p">)</span>
@@ -566,7 +562,7 @@ regardless of their type.</p>
 <figure class="align-default">
 <img alt="../../../../_images/pyvista-Chart2D-clear-1_02_00.png" src="../../../../_images/pyvista-Chart2D-clear-1_02_00.png" />
 </figure>
-<p>Remove all scatter plots from the chart.</p>
+<p>チャートからすべての散布図を削除します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">chart</span><span class="o">.</span><span class="n">clear</span><span class="p">(</span><span class="s2">&quot;scatter&quot;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">chart</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>

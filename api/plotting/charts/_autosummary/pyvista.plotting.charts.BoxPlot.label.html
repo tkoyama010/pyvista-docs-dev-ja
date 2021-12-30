@@ -50,7 +50,7 @@
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <link rel="index" title="索引" href="../../../../genindex.html" />
     <link rel="search" title="検索" href="../../../../search.html" />
-    <link rel="next" title="ラベル" href="pyvista.plotting.charts.BoxPlot.labels.html" />
+    <link rel="next" title="labels" href="pyvista.plotting.charts.BoxPlot.labels.html" />
     <link rel="prev" title="data" href="pyvista.plotting.charts.BoxPlot.data.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="ja">
@@ -236,7 +236,7 @@
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../index.html">
-     Charts
+     チャート
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -356,7 +356,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.plotting.charts.BoxPlot.labels.html">
-         ラベル
+         labels
         </a>
        </li>
        <li class="toctree-l4">
@@ -462,9 +462,9 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.plotting.charts.BoxPlot.label">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">BoxPlot.</span></span><span class="sig-name descname"><span class="pre">label</span></span><a class="headerlink" href="#pyvista.plotting.charts.BoxPlot.label" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return or set the this plot's label, as shown in the chart's legend.</p>
+<dd><p>チャートの凡例に表示されている、このプロットのラベルを返すか設定します。</p>
 <p class="rubric">例</p>
-<p>Create a box plot with custom label.</p>
+<p>カスタムラベル付きの箱ひげ図を作成します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">chart</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">ChartBox</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
@@ -475,7 +475,7 @@
 <figure class="align-default">
 <img alt="../../../../_images/pyvista-plotting-charts-BoxPlot-label-1_00_00.png" src="../../../../_images/pyvista-plotting-charts-BoxPlot-label-1_00_00.png" />
 </figure>
-<p>Modify the label.</p>
+<p>ラベルを変更します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">plot</span><span class="o">.</span><span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;My awesome plot&quot;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">chart</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>

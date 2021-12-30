@@ -51,7 +51,7 @@
     <link rel="index" title="索引" href="../../../../genindex.html" />
     <link rel="search" title="検索" href="../../../../search.html" />
     <link rel="next" title="area" href="pyvista.Chart2D.area.html" />
-    <link rel="prev" title="Charts" href="../index.html" />
+    <link rel="prev" title="チャート" href="../index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="ja">
     
@@ -236,7 +236,7 @@
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../index.html">
-     Charts
+     チャート
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -537,7 +537,7 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="pyvista.Chart2D">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Chart2D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(1,</span> <span class="pre">1)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0,</span> <span class="pre">0)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'x'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'y'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Chart2D" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> の図に似た2次元のチャートクラスです。</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> の図に似た2Dチャートクラスです。</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
@@ -598,7 +598,7 @@
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Chart2D.area.html#pyvista.Chart2D.area" title="pyvista.Chart2D.area"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Chart2D.area</span></code></a>(x, y1[, y2, color, label])</p></td>
-<td><p>このチャートにエリアプロットを追加します。</p></td>
+<td><p>このチャートに面チャートを追加します。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.Chart2D.bar.html#pyvista.Chart2D.bar" title="pyvista.Chart2D.bar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Chart2D.bar</span></code></a>(x, y[, color, orientation, label])</p></td>
 <td><p>このチャートにバープロットを追加します。</p></td>
@@ -607,7 +607,7 @@
 <td><p>このチャートから、指定されたタイプのプロットをすべて削除します。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.Chart2D.hide_axes.html#pyvista.Chart2D.hide_axes" title="pyvista.Chart2D.hide_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Chart2D.hide_axes</span></code></a>()</p></td>
-<td><p>このグラフのx-軸とy-軸を隠します。</p></td>
+<td><p>このチャートのx-軸とy-軸を隠します。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Chart2D.line.html#pyvista.Chart2D.line" title="pyvista.Chart2D.line"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Chart2D.line</span></code></a>(x, y[, color, width, style, label])</p></td>
 <td><p>このチャートにラインプロットを追加します。</p></td>
@@ -679,19 +679,19 @@
 <td><p>このチャートの水平方向(x)の <a class="reference internal" href="pyvista.plotting.charts.Axis.html#pyvista.plotting.charts.Axis" title="pyvista.plotting.charts.Axis"><code class="xref py py-class docutils literal notranslate"><span class="pre">Axis</span></code></a> を返します。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Chart2D.x_label.html#pyvista.Chart2D.x_label" title="pyvista.Chart2D.x_label"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Chart2D.x_label</span></code></a></p></td>
-<td><p>Return or set the label of this chart's x axis.</p></td>
+<td><p>このチャートのx軸のラベルを返すか設定します。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.Chart2D.x_range.html#pyvista.Chart2D.x_range" title="pyvista.Chart2D.x_range"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Chart2D.x_range</span></code></a></p></td>
-<td><p>Return or set the range of this chart's x axis.</p></td>
+<td><p>このチャートのx軸のレンジを返すか設定します。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Chart2D.y_axis.html#pyvista.Chart2D.y_axis" title="pyvista.Chart2D.y_axis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Chart2D.y_axis</span></code></a></p></td>
-<td><p>Return this chart's vertical (y) <a class="reference internal" href="pyvista.plotting.charts.Axis.html#pyvista.plotting.charts.Axis" title="pyvista.plotting.charts.Axis"><code class="xref py py-class docutils literal notranslate"><span class="pre">Axis</span></code></a>.</p></td>
+<td><p>このチャートの垂直方向(y)の <a class="reference internal" href="pyvista.plotting.charts.Axis.html#pyvista.plotting.charts.Axis" title="pyvista.plotting.charts.Axis"><code class="xref py py-class docutils literal notranslate"><span class="pre">Axis</span></code></a> を返します。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.Chart2D.y_label.html#pyvista.Chart2D.y_label" title="pyvista.Chart2D.y_label"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Chart2D.y_label</span></code></a></p></td>
-<td><p>Return or set the label of this chart's y axis.</p></td>
+<td><p>このチャートのy軸のラベルを返すか設定します。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Chart2D.y_range.html#pyvista.Chart2D.y_range" title="pyvista.Chart2D.y_range"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Chart2D.y_range</span></code></a></p></td>
-<td><p>Return or set the range of this chart's y axis.</p></td>
+<td><p>このチャートのy軸のレンジを返すか設定します。</p></td>
 </tr>
 </tbody>
 </table>

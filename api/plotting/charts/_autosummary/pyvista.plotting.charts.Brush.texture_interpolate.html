@@ -51,7 +51,7 @@
     <link rel="index" title="索引" href="../../../../genindex.html" />
     <link rel="search" title="検索" href="../../../../search.html" />
     <link rel="next" title="texture_repeat" href="pyvista.plotting.charts.Brush.texture_repeat.html" />
-    <link rel="prev" title="質感" href="pyvista.plotting.charts.Brush.texture.html" />
+    <link rel="prev" title="texture" href="pyvista.plotting.charts.Brush.texture.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="ja">
     
@@ -236,7 +236,7 @@
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../index.html">
-     Charts
+     チャート
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -286,7 +286,7 @@
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.plotting.charts.Brush.texture.html">
-         質感
+         texture
         </a>
        </li>
        <li class="toctree-l4 current active">
@@ -412,14 +412,14 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.plotting.charts.Brush.texture_interpolate">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Brush.</span></span><span class="sig-name descname"><span class="pre">texture_interpolate</span></span><a class="headerlink" href="#pyvista.plotting.charts.Brush.texture_interpolate" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Set texture interpolation mode.</p>
-<p>There are two modes:</p>
+<dd><p>テクスチャの補間モードを設定します。</p>
+<p>2つのモードがあります:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">False</span></code> - NEAREST</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">True</span></code> - LINEAR</p></li>
 </ul>
 <p class="rubric">例</p>
-<p>Setup a brush with a texture.</p>
+<p>ブラシにテクスチャを設定します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">chart</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Chart2D</span><span class="p">()</span>
@@ -431,7 +431,7 @@
 <figure class="align-default">
 <img alt="../../../../_images/pyvista-plotting-charts-Brush-texture_interpolate-1_00_00.png" src="../../../../_images/pyvista-plotting-charts-Brush-texture_interpolate-1_00_00.png" />
 </figure>
-<p>Disable linear interpolation.</p>
+<p>線形補間を無効にします。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">plot</span><span class="o">.</span><span class="n">brush</span><span class="o">.</span><span class="n">texture_interpolate</span> <span class="o">=</span> <span class="kc">False</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">chart</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>

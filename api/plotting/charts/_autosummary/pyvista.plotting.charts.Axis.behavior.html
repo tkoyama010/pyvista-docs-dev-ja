@@ -236,7 +236,7 @@
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../index.html">
-     Charts
+     チャート
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -482,12 +482,10 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.plotting.charts.Axis.behavior">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Axis.</span></span><span class="sig-name descname"><span class="pre">behavior</span></span><a class="headerlink" href="#pyvista.plotting.charts.Axis.behavior" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Set the axis' scaling behavior.</p>
-<p>Allowed behaviors are <code class="docutils literal notranslate"><span class="pre">'auto'</span></code> to automatically rescale the
-axis to fit all visible datapoints in the plot, or <code class="docutils literal notranslate"><span class="pre">'fixed'</span></code>
-to use the user defined range.</p>
+<dd><p>軸のスケーリング動作を設定します。</p>
+<p>許可されている動作は <code class="docutils literal notranslate"><span class="pre">'auto'</span></code> で、軸の大きさが自動的に変更され、プロット内のすべての可視データポイントに <code class="docutils literal notranslate"><span class="pre">'fixed'</span></code> するようになります。</p>
 <p class="rubric">例</p>
-<p>Manually specify the x-axis range of a 2D chart.</p>
+<p>2DチャートのX軸範囲を手動で指定します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">chart</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Chart2D</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">chart</span><span class="o">.</span><span class="n">line</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
@@ -498,7 +496,7 @@ to use the user defined range.</p>
 <figure class="align-default">
 <img alt="../../../../_images/pyvista-plotting-charts-Axis-behavior-1_00_00.png" src="../../../../_images/pyvista-plotting-charts-Axis-behavior-1_00_00.png" />
 </figure>
-<p>Revert to automatic axis scaling.</p>
+<p>軸の自動スケーリングに戻します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">chart</span><span class="o">.</span><span class="n">x_axis</span><span class="o">.</span><span class="n">behavior</span> <span class="o">=</span> <span class="s2">&quot;auto&quot;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">chart</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>

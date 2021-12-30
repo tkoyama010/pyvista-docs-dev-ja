@@ -236,7 +236,7 @@
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../index.html">
-     Charts
+     チャート
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -482,12 +482,10 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.plotting.charts.Axis.log_scale">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Axis.</span></span><span class="sig-name descname"><span class="pre">log_scale</span></span><a class="headerlink" href="#pyvista.plotting.charts.Axis.log_scale" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Flag denoting whether a log scale is used for this axis.</p>
-<p>Note that setting this property to <code class="docutils literal notranslate"><span class="pre">True</span></code> will not guarantee
-that the log scale will be enabled.  Verify whether activating
-the log scale succeeded by rereading this property.</p>
+<dd><p>この軸に対数スケールを使用するかどうかを示すフラグ。</p>
+<p>このプロパティを <code class="docutils literal notranslate"><span class="pre">True</span></code> に設定しても、ログスケールが有効になることは保証されないことに注意してください。 このプロパティを読み直すことで、ログスケールの有効化が成功したかどうかを確認してください。</p>
 <p class="rubric">例</p>
-<p>Create a 2D chart.</p>
+<p>2Dチャートを作成します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">chart</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Chart2D</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">chart</span><span class="o">.</span><span class="n">line</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mf">1e0</span><span class="p">,</span> <span class="mf">1e1</span><span class="p">,</span> <span class="mf">1e2</span><span class="p">,</span> <span class="mf">1e3</span><span class="p">,</span> <span class="mf">1e4</span><span class="p">])</span>
@@ -497,7 +495,7 @@ the log scale succeeded by rereading this property.</p>
 <figure class="align-default">
 <img alt="../../../../_images/pyvista-plotting-charts-Axis-log_scale-1_00_00.png" src="../../../../_images/pyvista-plotting-charts-Axis-log_scale-1_00_00.png" />
 </figure>
-<p>Try to enable the log scale on the y-axis.</p>
+<p>y-軸のログスケールを有効にしてみてください。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">chart</span><span class="o">.</span><span class="n">y_axis</span><span class="o">.</span><span class="n">log_scale</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">chart</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>

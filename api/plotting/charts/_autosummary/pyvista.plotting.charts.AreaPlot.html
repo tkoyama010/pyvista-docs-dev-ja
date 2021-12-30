@@ -236,7 +236,7 @@
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../index.html">
-     Charts
+     チャート
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -452,27 +452,26 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="pyvista.plotting.charts.AreaPlot">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AreaPlot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'b'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.plotting.charts.AreaPlot" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Class representing a 2D area plot.</p>
-<p>Users should typically not directly create new plot instances, but use the dedicated 2D chart's plotting methods.</p>
+<dd><p>2Dの面グラフを表すクラス。</p>
+<p>ユーザーは通常、新しいプロットインスタンスを直接作成せず、専用の2Dチャートのプロットメソッドを使用する必要があります。</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>x</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.21)"><span>array_like</span></a></span></dt><dd><p>X coordinates of the points outlining the area to draw.</p>
+<dt><strong>x</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.21)"><span>array_like</span></a></span></dt><dd><p>描画する領域を囲む点のX座標。</p>
 </dd>
-<dt><strong>y1</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.21)"><span>array_like</span></a></span></dt><dd><p>Y coordinates of the points on the first outline of the area to draw.</p>
+<dt><strong>y1</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.21)"><span>array_like</span></a></span></dt><dd><p>描画する領域の最初の輪郭上の点のY座標。</p>
 </dd>
-<dt><strong>y2</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.21)"><span>array_like</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Y coordinates of the points on the second outline of the area to draw. Defaults to a sequence of zeros.</p>
+<dt><strong>y2</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.21)"><span>array_like</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>描画する領域の2番目の輪郭上の点のY座標。デフォルトでは、ゼロの連続です。</p>
 </dd>
-<dt><strong>color</strong><span class="classifier"><a class="reference internal" href="pyvista.plotting.charts.AreaPlot.color.html#pyvista.plotting.charts.AreaPlot.color" title="pyvista.plotting.charts.AreaPlot.color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">color</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Color of the area drawn in this plot. Any color parsable by <code class="docutils literal notranslate"><span class="pre">pyvista.parse_color</span></code> is allowed. Defaults
-to <code class="docutils literal notranslate"><span class="pre">&quot;b&quot;</span></code>.</p>
+<dt><strong>color</strong><span class="classifier">color, オプション</span></dt><dd><p>このプロットに描かれる領域の色です。 <code class="docutils literal notranslate"><span class="pre">pyvista.parse_color</span></code> で解析可能な任意の色が使用できます。デフォルトは <code class="docutils literal notranslate"><span class="pre">&quot;b&quot;</span></code> です。</p>
 </dd>
-<dt><strong>label</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Label of this plot, as shown in the chart's legend. Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>.</p>
+<dt><strong>label</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>このプロットのラベルで、チャートの凡例に表示されます。デフォルトは <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> です。</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>Create an area plot showing the minimum and maximum precipitation observed in each month.</p>
+<p>各月に観測された降水量の最小値と最大値を面グラフにしてみましょう。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
@@ -500,10 +499,10 @@ to <code class="docutils literal notranslate"><span class="pre">&quot;b&quot;</s
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.plotting.charts.AreaPlot.toggle.html#pyvista.plotting.charts.AreaPlot.toggle" title="pyvista.plotting.charts.AreaPlot.toggle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AreaPlot.toggle</span></code></a>()</p></td>
-<td><p>Toggle the plot's visibility.</p></td>
+<td><p>プロットの表示を切り替えます。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.plotting.charts.AreaPlot.update.html#pyvista.plotting.charts.AreaPlot.update" title="pyvista.plotting.charts.AreaPlot.update"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AreaPlot.update</span></code></a>(x, y1[, y2])</p></td>
-<td><p>Update this plot's points, outlining the area to draw.</p></td>
+<td><p>このプロットのポイントを更新し、描画する領域の輪郭を描きます。</p></td>
 </tr>
 </tbody>
 </table>
@@ -515,34 +514,34 @@ to <code class="docutils literal notranslate"><span class="pre">&quot;b&quot;</s
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.plotting.charts.AreaPlot.brush.html#pyvista.plotting.charts.AreaPlot.brush" title="pyvista.plotting.charts.AreaPlot.brush"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AreaPlot.brush</span></code></a></p></td>
-<td><p>Brush object controlling how shapes in this plot are filled.</p></td>
+<td><p>Brushオブジェクトは、このプロットの形状がどのように塗りつぶされるかを制御します。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.plotting.charts.AreaPlot.color.html#pyvista.plotting.charts.AreaPlot.color" title="pyvista.plotting.charts.AreaPlot.color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AreaPlot.color</span></code></a></p></td>
-<td><p>Return or set the plot's color.</p></td>
+<td><p>プロットの色を返したり設定したりします。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.plotting.charts.AreaPlot.label.html#pyvista.plotting.charts.AreaPlot.label" title="pyvista.plotting.charts.AreaPlot.label"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AreaPlot.label</span></code></a></p></td>
-<td><p>Return or set the this plot's label, as shown in the chart's legend.</p></td>
+<td><p>チャートの凡例に表示されている、このプロットのラベルを返すか設定します。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.plotting.charts.AreaPlot.line_style.html#pyvista.plotting.charts.AreaPlot.line_style" title="pyvista.plotting.charts.AreaPlot.line_style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AreaPlot.line_style</span></code></a></p></td>
-<td><p>Return or set the line style of all lines drawn in this plot.</p></td>
+<td><p>このプロットに描かれたすべての線のラインスタイルを返すか設定します。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.plotting.charts.AreaPlot.line_width.html#pyvista.plotting.charts.AreaPlot.line_width" title="pyvista.plotting.charts.AreaPlot.line_width"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AreaPlot.line_width</span></code></a></p></td>
-<td><p>Return or set the line width of all lines drawn in this plot.</p></td>
+<td><p>このプロットに描かれたすべての線のライン幅を返すか設定します。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.plotting.charts.AreaPlot.pen.html#pyvista.plotting.charts.AreaPlot.pen" title="pyvista.plotting.charts.AreaPlot.pen"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AreaPlot.pen</span></code></a></p></td>
-<td><p>Pen object controlling how lines in this plot are drawn.</p></td>
+<td><p>Penオブジェクトは、このプロットの線がどのように描かれるかを制御します。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.plotting.charts.AreaPlot.visible.html#pyvista.plotting.charts.AreaPlot.visible" title="pyvista.plotting.charts.AreaPlot.visible"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AreaPlot.visible</span></code></a></p></td>
-<td><p>Return or set the this plot's visibility.</p></td>
+<td><p>図の見え方を返すか設定します。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.plotting.charts.AreaPlot.x.html#pyvista.plotting.charts.AreaPlot.x" title="pyvista.plotting.charts.AreaPlot.x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AreaPlot.x</span></code></a></p></td>
-<td><p>Retrieve the X coordinates of the points outlining the drawn area.</p></td>
+<td><p>描画領域を囲む点のX座標を取得します。</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.plotting.charts.AreaPlot.y1.html#pyvista.plotting.charts.AreaPlot.y1" title="pyvista.plotting.charts.AreaPlot.y1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AreaPlot.y1</span></code></a></p></td>
-<td><p>Retrieve the Y coordinates of the points on the first outline of the drawn area.</p></td>
+<td><p>描画領域の最初の輪郭上の点のY座標を取得します。</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.plotting.charts.AreaPlot.y2.html#pyvista.plotting.charts.AreaPlot.y2" title="pyvista.plotting.charts.AreaPlot.y2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AreaPlot.y2</span></code></a></p></td>
-<td><p>Retrieve the Y coordinates of the points on the second outline of the drawn area.</p></td>
+<td><p>描画領域の第2の輪郭上の点のY座標を取得します。</p></td>
 </tr>
 </tbody>
 </table>

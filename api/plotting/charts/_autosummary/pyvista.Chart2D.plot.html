@@ -236,7 +236,7 @@
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../index.html">
-     Charts
+     チャート
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -541,34 +541,27 @@
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>x</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.21)"><span>array_like</span></a></span></dt><dd><p>Values to plot on the X-axis. In case <code class="docutils literal notranslate"><span class="pre">y</span></code> is <code class="docutils literal notranslate"><span class="pre">None</span></code>,
-these are the values to plot on the Y-axis instead.</p>
+<dt><strong>x</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.21)"><span>array_like</span></a></span></dt><dd><p>X軸にプロットする値です。 <code class="docutils literal notranslate"><span class="pre">y</span></code> が <code class="docutils literal notranslate"><span class="pre">None</span></code> の場合、これらは代わりにY軸にプロットされる値です。</p>
 </dd>
-<dt><strong>y</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.21)"><span>array_like</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Values to plot on the Y-axis.</p>
+<dt><strong>y</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.21)"><span>array_like</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Y軸にプロットする値。</p>
 </dd>
-<dt><strong>fmt</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>A format string, e.g. <code class="docutils literal notranslate"><span class="pre">'ro'</span></code> for red circles. See the Notes
-section for a full description of the format strings.</p>
+<dt><strong>fmt</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>フォーマット文字列です。例えば、赤丸の場合は <code class="docutils literal notranslate"><span class="pre">'ro'</span></code> と入力します。フォーマット文字列についての詳しい説明は注意事項を参照してください。</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl>
-<dt><strong>scatter_plot</strong><span class="classifier"><a class="reference internal" href="pyvista.plotting.charts.ScatterPlot2D.html#pyvista.plotting.charts.ScatterPlot2D" title="pyvista.plotting.charts.ScatterPlot2D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotting.charts.ScatterPlot2D</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The created scatter plot when a valid marker style
-was present in the format string, <code class="docutils literal notranslate"><span class="pre">None</span></code> otherwise.</p>
+<dt><strong>scatter_plot</strong><span class="classifier"><a class="reference internal" href="pyvista.plotting.charts.ScatterPlot2D.html#pyvista.plotting.charts.ScatterPlot2D" title="pyvista.plotting.charts.ScatterPlot2D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotting.charts.ScatterPlot2D</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>フォーマット文字列に有効なマーカースタイルが含まれている場合には、作成された散布図、そうでない場合は <code class="docutils literal notranslate"><span class="pre">None</span></code> となります。</p>
 </dd>
-<dt><strong>line_plot</strong><span class="classifier"><a class="reference internal" href="pyvista.plotting.charts.LinePlot2D.html#pyvista.plotting.charts.LinePlot2D" title="pyvista.plotting.charts.LinePlot2D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotting.charts.LinePlot2D</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The created line plot when a valid line style was
-present in the format string, <code class="docutils literal notranslate"><span class="pre">None</span></code> otherwise.</p>
+<dt><strong>line_plot</strong><span class="classifier"><a class="reference internal" href="pyvista.plotting.charts.LinePlot2D.html#pyvista.plotting.charts.LinePlot2D" title="pyvista.plotting.charts.LinePlot2D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotting.charts.LinePlot2D</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>フォーマット文字列に有効なラインスタイルが含まれている場合には、作成された折れ線図、そうでない場合は <code class="docutils literal notranslate"><span class="pre">None</span></code> となります。</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">備考</p>
-<p>This plot method shares many of the same plotting features as
-the <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html">matplotlib.pyplot.plot</a>.
-Please reference the documentation there for a full
-description of the allowable format strings.</p>
+<p>このプロットメソッドは、 <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html">matplotlib.pyplot.plot</a> と同じプロット機能の多くを共有しています。許容されるフォーマット文字列の完全な説明については、そのドキュメントを参照してください。</p>
 <p class="rubric">例</p>
-<p>Generate a line plot.</p>
+<p>折れ線プロットを作成します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">chart</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Chart2D</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">_</span><span class="p">,</span> <span class="n">line_plot</span> <span class="o">=</span> <span class="n">chart</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
@@ -580,7 +573,7 @@ description of the allowable format strings.</p>
 <figure class="align-default">
 <img alt="../../../../_images/pyvista-Chart2D-plot-1_01_00.png" src="../../../../_images/pyvista-Chart2D-plot-1_01_00.png" />
 </figure>
-<p>Generate a line and scatter plot.</p>
+<p>折れ線と散布プロットを作成します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">chart</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Chart2D</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">scatter_plot</span><span class="p">,</span> <span class="n">line_plot</span> <span class="o">=</span> <span class="n">chart</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;o-&#39;</span><span class="p">)</span>
 </pre></div>

@@ -236,7 +236,7 @@
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../index.html">
-     Charts
+     チャート
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -541,34 +541,27 @@
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>x</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.21)"><span>array_like</span></a></span></dt><dd><p>Positions (along the x-axis for a vertical orientation,
-along the y-axis for a horizontal orientation) of the bars
-to draw.</p>
+<dt><strong>x</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.21)"><span>array_like</span></a></span></dt><dd><p>描画するバーの位置を（垂直方向であればx軸に沿って、水平方向であればy軸に沿って）指定します。</p>
 </dd>
-<dt><strong>y</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.21)"><span>array_like</span></a></span></dt><dd><p>Size of the bars to draw. Multiple bars can be stacked by
-passing a sequence of sequences.</p>
+<dt><strong>y</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.21)"><span>array_like</span></a></span></dt><dd><p>描画するバーのサイズ。シーケンスを渡すことで、複数のバーを重ねることができます。</p>
 </dd>
-<dt><strong>color</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">color</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Color of the bars drawn in this plot. Any color parsable
-by <code class="docutils literal notranslate"><span class="pre">pyvista.parse_color</span></code> is allowed. Defaults to
-<code class="docutils literal notranslate"><span class="pre">&quot;b&quot;</span></code>.</p>
+<dt><strong>color</strong><span class="classifier">color, オプション</span></dt><dd><p>このプロットに描かれるバーの色です。 <code class="docutils literal notranslate"><span class="pre">pyvista.parse_color</span></code> で解析可能な任意の色が使用できます。デフォルトは <code class="docutils literal notranslate"><span class="pre">&quot;b&quot;</span></code> です。</p>
 </dd>
-<dt><strong>orientation</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Orientation of the bars drawn in this plot. Either <code class="docutils literal notranslate"><span class="pre">&quot;H&quot;</span></code>
-for an horizontal orientation or <code class="docutils literal notranslate"><span class="pre">&quot;V&quot;</span></code> for a vertical
-orientation. Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;V&quot;</span></code>.</p>
+<dt><strong>orientation</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>このプロットに描画される棒の向き。水平方向であれば <code class="docutils literal notranslate"><span class="pre">&quot;H&quot;</span></code> 、垂直方向であれば <code class="docutils literal notranslate"><span class="pre">&quot;V&quot;</span></code> のいずれかです。デフォルトでは <code class="docutils literal notranslate"><span class="pre">&quot;V&quot;</span></code> が表示されます。</p>
 </dd>
-<dt><strong>label</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Label of this plot, as shown in the chart's legend. Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>.</p>
+<dt><strong>label</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>このプロットのラベルで、チャートの凡例に表示されます。デフォルトは <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> です。</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="pyvista.plotting.charts.BarPlot.html#pyvista.plotting.charts.BarPlot" title="pyvista.plotting.charts.BarPlot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotting.charts.BarPlot</span></code></a></dt><dd><p>The created bar plot.</p>
+<dt><a class="reference internal" href="pyvista.plotting.charts.BarPlot.html#pyvista.plotting.charts.BarPlot" title="pyvista.plotting.charts.BarPlot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotting.charts.BarPlot</span></code></a></dt><dd><p>作成されたバーのプロット。</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>Generate a bar plot.</p>
+<p>バープロットを作成します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">chart</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Chart2D</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plot</span> <span class="o">=</span> <span class="n">chart</span><span class="o">.</span><span class="n">bar</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>

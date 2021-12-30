@@ -1323,10 +1323,7 @@
 <dd class="field-odd"><dl>
 <dt><strong>xyz</strong><span class="classifier">スケールファクター python:list か python:tuple か np.ndarray</span></dt><dd><p>長さ3のリスト，タプルまたは配列．</p>
 </dd>
-<dt><strong>transform_all_input_vectors</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>When <code class="docutils literal notranslate"><span class="pre">True</span></code>, all input vectors are
-transformed. Otherwise, only the points, normals and
-active vectors are transformed. This is only valid when not
-updating in place.</p>
+<dt><strong>transform_all_input_vectors</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> の時，全ての入力ベクトルは変換されます．それ以外の場合は，ポイント，法線，およびアクティブなベクトルだけが変換されます．これは、所定の場所で更新しない場合のみ有効です。</p>
 </dd>
 <dt><strong>inplace</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>in-placeメッシュを更新します．</p>
 </dd>
@@ -1334,13 +1331,13 @@ updating in place.</p>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PointSet</span></code></dt><dd><p>Scaled pointset.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PointSet</span></code></dt><dd><p>スケーリングされたポイントセット。</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">備考</p>
-<p><code class="docutils literal notranslate"><span class="pre">transform_all_input_vectors</span></code> is not handled when modifying inplace.</p>
+<p>インプレイスでの修正の際に <code class="docutils literal notranslate"><span class="pre">transform_all_input_vectors</span></code> が処理されません。</p>
 <p class="rubric">例</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>

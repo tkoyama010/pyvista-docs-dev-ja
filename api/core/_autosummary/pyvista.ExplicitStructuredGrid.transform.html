@@ -1117,6 +1117,16 @@
 <p class="admonition-title">警告</p>
 <p><code class="docutils literal notranslate"><span class="pre">transform_all_input_vectors=True</span></code> を使用した場合，VTKでは3つの成分を持つベクターと配列の区別がありません． これは，3つの成分を持つスカラーデータ(RGBデータなど)がある場合に問題となることがあります． これは，スカラーデータではなくベクトルデータであるかのように，不適切に変換されます． 3つの成分を別々のスカラ配列として格納するという回避策が考えられます（醜いですが）．</p>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>In general, transformations give non-integer results. This
+method converts integer-typed vector data to float before
+performing the transformation. This applies to the points
+array, as well as any vector-valued data that is affected
+by the transformation. To prevent subtle bugs arising from
+in-place transformations truncating the result to integers,
+this conversion always applies to the input mesh.</p>
+</div>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
