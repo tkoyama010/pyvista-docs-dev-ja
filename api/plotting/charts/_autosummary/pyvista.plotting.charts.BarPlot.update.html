@@ -467,19 +467,19 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.plotting.charts.BarPlot.update">
 <span class="sig-prename descclassname"><span class="pre">BarPlot.</span></span><span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.plotting.charts.BarPlot.update" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>このプロットのバーの位置やサイズを更新します。</p>
+<dd><p>このプロットのバーの位置やサイズを更新します．</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>x</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.21)"><span>array_like</span></a></span></dt><dd><p>描画するバーの新しい位置を指定します。</p>
+<dt><strong>x</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.21)"><span>array_like</span></a></span></dt><dd><p>描画するバーの新しい位置を指定します．</p>
 </dd>
-<dt><strong>y</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.21)"><span>array_like</span></a></span></dt><dd><p>描画するバーの新しいサイズを指定します。</p>
+<dt><strong>y</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.21)"><span>array_like</span></a></span></dt><dd><p>描画するバーの新しいサイズを指定します．</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>棒グラフを作成します。</p>
+<p>棒グラフを作成します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">chart</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Chart2D</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plot</span> <span class="o">=</span> <span class="n">chart</span><span class="o">.</span><span class="n">bar</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
@@ -489,7 +489,7 @@
 <figure class="align-default">
 <img alt="../../../../_images/pyvista-plotting-charts-BarPlot-update-1_00_00.png" src="../../../../_images/pyvista-plotting-charts-BarPlot-update-1_00_00.png" />
 </figure>
-<p>バーのサイズを更新します。</p>
+<p>バーのサイズを更新します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">plot</span><span class="o">.</span><span class="n">update</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">chart</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>

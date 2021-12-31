@@ -483,9 +483,9 @@
 <dt class="sig sig-object py" id="pyvista.plotting.charts.Axis.tick_locations">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Axis.</span></span><span class="sig-name descname"><span class="pre">tick_locations</span></span><a class="headerlink" href="#pyvista.plotting.charts.Axis.tick_locations" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>この軸目盛り位置を返すか設定します．</p>
-<p>これを <code class="docutils literal notranslate"><span class="pre">None</span></code> に設定すると、自動的に決定されたデフォルトの目盛りの位置に戻ります。</p>
+<p>これを <code class="docutils literal notranslate"><span class="pre">None</span></code> に設定すると，自動的に決定されたデフォルトの目盛りの位置に戻ります．</p>
 <p class="rubric">例</p>
-<p>y-軸にカスタム目盛りの位置とラベルを設定した2Dチャートを作成します。</p>
+<p>y-軸にカスタム目盛りの位置とラベルを設定した2Dチャートを作成します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">chart</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Chart2D</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">chart</span><span class="o">.</span><span class="n">line</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
@@ -499,7 +499,7 @@
 <figure class="align-default">
 <img alt="../../../../_images/pyvista-plotting-charts-Axis-tick_locations-1_00_00.png" src="../../../../_images/pyvista-plotting-charts-Axis-tick_locations-1_00_00.png" />
 </figure>
-<p>自動刻みの配置に戻します。</p>
+<p>自動刻みの配置に戻します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">chart</span><span class="o">.</span><span class="n">y_axis</span><span class="o">.</span><span class="n">tick_locations</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">chart</span><span class="o">.</span><span class="n">y_axis</span><span class="o">.</span><span class="n">tick_labels</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">chart</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>

@@ -483,9 +483,9 @@
 <dt class="sig sig-object py" id="pyvista.plotting.charts.Axis.range">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Axis.</span></span><span class="sig-name descname"><span class="pre">range</span></span><a class="headerlink" href="#pyvista.plotting.charts.Axis.range" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>軸範囲を返す，または設定します．</p>
-<p>有効な範囲が指定された場合には、自動的に軸の動作を <code class="docutils literal notranslate"><span class="pre">&quot;fixed&quot;</span></code> に設定します。範囲を <code class="docutils literal notranslate"><span class="pre">None</span></code> に設定すると、軸の動作は <code class="docutils literal notranslate"><span class="pre">&quot;auto&quot;</span></code> になります。</p>
+<p>有効な範囲が指定された場合には，自動的に軸の動作を <code class="docutils literal notranslate"><span class="pre">&quot;fixed&quot;</span></code> に設定します．範囲を <code class="docutils literal notranslate"><span class="pre">None</span></code> に設定すると，軸の動作は <code class="docutils literal notranslate"><span class="pre">&quot;auto&quot;</span></code> になります．</p>
 <p class="rubric">例</p>
-<p>2DチャートのX軸範囲を手動で指定します。</p>
+<p>2DチャートのX軸範囲を手動で指定します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">chart</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Chart2D</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">chart</span><span class="o">.</span><span class="n">line</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
@@ -496,7 +496,7 @@
 <figure class="align-default">
 <img alt="../../../../_images/pyvista-plotting-charts-Axis-range-1_00_00.png" src="../../../../_images/pyvista-plotting-charts-Axis-range-1_00_00.png" />
 </figure>
-<p>軸の自動スケーリングに戻します。</p>
+<p>軸の自動スケーリングに戻します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">chart</span><span class="o">.</span><span class="n">x_axis</span><span class="o">.</span><span class="n">range</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">chart</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>

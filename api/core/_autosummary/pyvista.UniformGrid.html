@@ -1092,21 +1092,21 @@
 <ul class="simple">
 <li><p>空のグリッドを作成</p></li>
 <li><p>vtk.vtkImageData オブジェクトから初期化します</p></li>
-<li><p>寸法、セル間隔、原点に基づいて初期化します。</p></li>
+<li><p>寸法，セル間隔，原点に基づいて初期化します．</p></li>
 </ul>
 <div class="versionchanged">
-<p><span class="versionmodified changed">バージョン 0.33.0 で変更: </span>最初の引数には、パスまたは <code class="docutils literal notranslate"><span class="pre">vtk.vtkImageData</span></code> を指定します。キーワード引数を使って、ユニフォーム・グリッドの寸法、間隔、および原点を指定します。</p>
+<p><span class="versionmodified changed">バージョン 0.33.0 で変更: </span>最初の引数には，パスまたは <code class="docutils literal notranslate"><span class="pre">vtk.vtkImageData</span></code> を指定します．キーワード引数を使って，ユニフォーム・グリッドの寸法，間隔，および原点を指定します．</p>
 </div>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>uinput</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">vtk.vtkImageData</span></code>, <a class="reference internal" href="#pyvista.UniformGrid" title="pyvista.UniformGrid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.UniformGrid</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>ユニフォームグリッドを初期化するためのファイル名またはデータセット。 設定されている場合、残りの引数は無視されます。</p>
+<dt><strong>uinput</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">vtk.vtkImageData</span></code>, <a class="reference internal" href="#pyvista.UniformGrid" title="pyvista.UniformGrid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.UniformGrid</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>ユニフォームグリッドを初期化するためのファイル名またはデータセット． 設定されている場合，残りの引数は無視されます．</p>
 </dd>
-<dt><strong>dims</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/glossary.html#term-iterable" title="(in Python v3.11)"><span>iterable</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>均一な格子の寸法。</p>
+<dt><strong>dims</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/glossary.html#term-iterable" title="(in Python v3.11)"><span>iterable</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>均一な格子の寸法．</p>
 </dd>
-<dt><strong>spacing</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/glossary.html#term-iterable" title="(in Python v3.11)"><span>iterable</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>各次元でのユニフォームの間隔です。 デフォルトは <code class="docutils literal notranslate"><span class="pre">(1.0,</span> <span class="pre">1.0,</span> <span class="pre">1.0)</span></code> です。</p>
+<dt><strong>spacing</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/glossary.html#term-iterable" title="(in Python v3.11)"><span>iterable</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>各次元でのユニフォームの間隔です． デフォルトは <code class="docutils literal notranslate"><span class="pre">(1.0,</span> <span class="pre">1.0,</span> <span class="pre">1.0)</span></code> です．</p>
 </dd>
-<dt><strong>origin</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/glossary.html#term-iterable" title="(in Python v3.11)"><span>iterable</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>ユニフォームグリッドの原点です。 デフォルトは <code class="docutils literal notranslate"><span class="pre">(0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0)</span></code> です。</p>
+<dt><strong>origin</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/glossary.html#term-iterable" title="(in Python v3.11)"><span>iterable</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>ユニフォームグリッドの原点です． デフォルトは <code class="docutils literal notranslate"><span class="pre">(0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0)</span></code> です．</p>
 </dd>
 </dl>
 </dd>
@@ -1123,18 +1123,18 @@
 <span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">UniformGrid</span><span class="p">(</span><span class="n">vtkgrid</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>グリッドの寸法とデフォルトの間隔と原点だけを使って初期化します。これらはキーワード引数でなければなりません。</p>
+<p>グリッドの寸法とデフォルトの間隔と原点だけを使って初期化します．これらはキーワード引数でなければなりません．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">UniformGrid</span><span class="p">(</span><span class="n">dims</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>寸法と間隔を使って初期化します。</p>
+<p>寸法と間隔を使って初期化します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">UniformGrid</span><span class="p">(</span>
 <span class="gp">... </span>    <span class="n">dims</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
 <span class="gp">... </span>    <span class="n">spacing</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
 <span class="gp">... </span><span class="p">)</span>
 </pre></div>
 </div>
-<p>寸法、間隔、原点を使って初期化します。</p>
+<p>寸法，間隔，原点を使って初期化します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">UniformGrid</span><span class="p">(</span>
 <span class="gp">... </span>    <span class="n">dims</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
 <span class="gp">... </span>    <span class="n">spacing</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
@@ -1142,7 +1142,7 @@
 <span class="gp">... </span><span class="p">)</span>
 </pre></div>
 </div>
-<p>別のUniformGridから初期化します。</p>
+<p>別のUniformGridから初期化します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">UniformGrid</span><span class="p">(</span>
 <span class="gp">... </span>    <span class="n">dims</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
 <span class="gp">... </span>    <span class="n">spacing</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>

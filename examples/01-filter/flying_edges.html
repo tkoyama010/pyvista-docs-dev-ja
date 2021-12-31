@@ -1094,8 +1094,8 @@ to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="marching-cubes">
 <span id="marching-cubes-example"></span><span id="sphx-glr-examples-01-filter-flying-edges-py"></span><h1>マーチングキューブ<a class="headerlink" href="#marching-cubes" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p><cite>contour &lt;pyvista.core.filters.data_set.DataSetFilters.contour&gt;</cite> フィルタで提供されるフライングエッジとマーチングキューブのフィルタを使って、スカラーフィールドから曲面を生成します。</p>
-<p>例題を提供してくれたGitHubユーザーの <cite>stla &lt;https://gist.github.com/stla&gt;</cite> に感謝します。</p>
+<p><cite>contour &lt;pyvista.core.filters.data_set.DataSetFilters.contour&gt;</cite> フィルタで提供されるフライングエッジとマーチングキューブのフィルタを使って，スカラーフィールドから曲面を生成します．</p>
+<p>例題を提供してくれたGitHubユーザーの <cite>stla &lt;https://gist.github.com/stla&gt;</cite> に感謝します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
@@ -1104,7 +1104,7 @@ to download the full example code</p>
 </section>
 <section id="spider-cage">
 <h1>スパイダーケイジ<a class="headerlink" href="#spider-cage" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>marching cubesアルゴリズムを使用して、スパイダーケージ関数から生成された等値面を抽出します。</p>
+<p>marching cubesアルゴリズムを使用して，スパイダーケージ関数から生成された等値面を抽出します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mf">0.9</span>
 <span class="k">def</span> <span class="nf">spider_cage</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
     <span class="n">x2</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
@@ -1139,7 +1139,7 @@ to download the full example code</p>
 <img src="../../_images/sphx_glr_flying_edges_001.png" srcset="../../_images/sphx_glr_flying_edges_001.png" alt="flying edges" class = "sphx-glr-single-img"/></section>
 <section id="barth-sextic">
 <h1>バースセクスィック<a class="headerlink" href="#barth-sextic" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>flying edgesアルゴリズムを使用して、バースセクスィック関数から生成された等値面を抽出します。</p>
+<p>flying edgesアルゴリズムを使用して，バースセクスィック関数から生成された等値面を抽出します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">phi</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span> <span class="o">/</span> <span class="mi">2</span>
 <span class="n">phi2</span> <span class="o">=</span> <span class="n">phi</span> <span class="o">*</span> <span class="n">phi</span>
 <span class="k">def</span> <span class="nf">barth_sextic</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
@@ -1178,7 +1178,7 @@ to download the full example code</p>
 <img src="../../_images/sphx_glr_flying_edges_002.png" srcset="../../_images/sphx_glr_flying_edges_002.png" alt="flying edges" class = "sphx-glr-single-img"/></section>
 <section id="animate-barth-sextic">
 <h1>バースセクスィックのアニメーション<a class="headerlink" href="#animate-barth-sextic" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>barth sextic関数から抽出した様々なアイソカーブの15フレームを表示します。</p>
+<p>barth sextic関数から抽出した様々なアイソカーブの15フレームを表示します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">angle_to_range</span><span class="p">(</span><span class="n">angle</span><span class="p">):</span>
     <span class="k">return</span> <span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
 

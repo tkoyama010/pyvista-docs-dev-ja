@@ -1069,7 +1069,7 @@ to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="chart-basics">
 <span id="chart-basics-example"></span><span id="sphx-glr-examples-02-plot-chart-basics-py"></span><h1>チャートの基本<a class="headerlink" href="#chart-basics" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>この例では、さまざまなタイプのチャートをシーンに追加する方法を示しています。より複雑な例として、同じレンダラーで複数のチャートをオーバーレイとして組み合わせる方法は、 <a class="reference internal" href="chart_overlays.html#chart-overlays-example"><span class="std std-ref">チャートのオーバーレイ</span></a> にあります。</p>
+<p>この例では，さまざまなタイプのチャートをシーンに追加する方法を示しています．より複雑な例として，同じレンダラーで複数のチャートをオーバーレイとして組み合わせる方法は， <a class="reference internal" href="chart_overlays.html#chart-overlays-example"><span class="std std-ref">チャートのオーバーレイ</span></a> にあります．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
@@ -1077,7 +1077,7 @@ to download the full example code</p>
 <span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># Seeded random number generator for consistent data generation</span>
 </pre></div>
 </div>
-<p>この例では，ランダムに抽出された100個のデータポイントから2次元の散布図を作成する方法を示します。デフォルトでは、チャートは軸を自動的にリスケールし、プロットされたすべてのデータが見えるようになっています。チャートの上で右クリックすると、チャートのズームやパンが可能です。</p>
+<p>この例では，ランダムに抽出された100個のデータポイントから2次元の散布図を作成する方法を示します．デフォルトでは，チャートは軸を自動的にリスケールし，プロットされたすべてのデータが見えるようになっています．チャートの上で右クリックすると，チャートのズームやパンが可能です．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">standard_normal</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">standard_normal</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 <span class="n">chart</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Chart2D</span><span class="p">()</span>
@@ -1085,7 +1085,7 @@ to download the full example code</p>
 <span class="n">chart</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_chart_basics_001.png" srcset="../../_images/sphx_glr_chart_basics_001.png" alt="chart basics" class = "sphx-glr-single-img"/><p>データポイントを線で結ぶには、以下の例のように2Dのラインプロットを作成することができます。また、カスタム軸の範囲を自分で指定することで、プロットされたデータを動的に 'ズームイン' することができます。</p>
+<img src="../../_images/sphx_glr_chart_basics_001.png" srcset="../../_images/sphx_glr_chart_basics_001.png" alt="chart basics" class = "sphx-glr-single-img"/><p>データポイントを線で結ぶには，以下の例のように2Dのラインプロットを作成することができます．また，カスタム軸の範囲を自分で指定することで，プロットされたデータを動的に 'ズームイン' することができます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">chart</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Chart2D</span><span class="p">()</span>
@@ -1094,7 +1094,7 @@ to download the full example code</p>
 <span class="n">chart</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_chart_basics_002.png" srcset="../../_images/sphx_glr_chart_basics_002.png" alt="chart basics" class = "sphx-glr-single-img"/><p>また、一般的な <a class="reference internal" href="../../api/plotting/charts/_autosummary/pyvista.Chart2D.plot.html#pyvista.Chart2D.plot" title="pyvista.Chart2D.plot"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Chart2D.plot()</span></code></a> 関数を使って、ラインとマーカーの両方のスタイルを一度に指定することで、散布図とラインプロットを簡単に組み合わせることができます。</p>
+<img src="../../_images/sphx_glr_chart_basics_002.png" srcset="../../_images/sphx_glr_chart_basics_002.png" alt="chart basics" class = "sphx-glr-single-img"/><p>また，一般的な <a class="reference internal" href="../../api/plotting/charts/_autosummary/pyvista.Chart2D.plot.html#pyvista.Chart2D.plot" title="pyvista.Chart2D.plot"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Chart2D.plot()</span></code></a> 関数を使って，ラインとマーカーの両方のスタイルを一度に指定することで，散布図とラインプロットを簡単に組み合わせることができます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">integers</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span>
 <span class="n">chart</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Chart2D</span><span class="p">()</span>
@@ -1103,7 +1103,7 @@ to download the full example code</p>
 <span class="n">chart</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_chart_basics_003.png" srcset="../../_images/sphx_glr_chart_basics_003.png" alt="chart basics" class = "sphx-glr-single-img"/><p>次の例では、2本のポリラインの間に塗りつぶし領域を作成しています。</p>
+<img src="../../_images/sphx_glr_chart_basics_003.png" srcset="../../_images/sphx_glr_chart_basics_003.png" alt="chart basics" class = "sphx-glr-single-img"/><p>次の例では，2本のポリラインの間に塗りつぶし領域を作成しています．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
 <span class="n">y1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>
 <span class="n">y2</span> <span class="o">=</span> <span class="mf">0.1</span><span class="o">*</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">5</span><span class="p">)</span>
@@ -1115,7 +1115,7 @@ to download the full example code</p>
 <span class="n">chart</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_chart_basics_004.png" srcset="../../_images/sphx_glr_chart_basics_004.png" alt="chart basics" class = "sphx-glr-single-img"/><p>棒チャートにも対応しています。複数の棒チャートが隣り合って配置されています。</p>
+<img src="../../_images/sphx_glr_chart_basics_004.png" srcset="../../_images/sphx_glr_chart_basics_004.png" alt="chart basics" class = "sphx-glr-single-img"/><p>棒チャートにも対応しています．複数の棒チャートが隣り合って配置されています．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">13</span><span class="p">)</span>
 <span class="n">y1</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">integers</span><span class="p">(</span><span class="mf">1e2</span><span class="p">,</span> <span class="mf">1e4</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
 <span class="n">y2</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">integers</span><span class="p">(</span><span class="mf">1e2</span><span class="p">,</span> <span class="mf">1e4</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
@@ -1130,7 +1130,7 @@ to download the full example code</p>
 <span class="n">chart</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_chart_basics_005.png" srcset="../../_images/sphx_glr_chart_basics_005.png" alt="chart basics" class = "sphx-glr-single-img"/><p>バーを横に並べて描くのではなく、重ねて描きたい場合は、yの値を連続して渡します。</p>
+<img src="../../_images/sphx_glr_chart_basics_005.png" srcset="../../_images/sphx_glr_chart_basics_005.png" alt="chart basics" class = "sphx-glr-single-img"/><p>バーを横に並べて描くのではなく，重ねて描きたい場合は，yの値を連続して渡します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span>
 <span class="n">ys</span> <span class="o">=</span> <span class="p">[</span><span class="n">rng</span><span class="o">.</span><span class="n">integers</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span>
 <span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;Machine </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span>
@@ -1143,7 +1143,7 @@ to download the full example code</p>
 <span class="n">chart</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_chart_basics_006.png" srcset="../../_images/sphx_glr_chart_basics_006.png" alt="chart basics" class = "sphx-glr-single-img"/><p>同様に、複数のエリアプロットを重ねることもできます。</p>
+<img src="../../_images/sphx_glr_chart_basics_006.png" srcset="../../_images/sphx_glr_chart_basics_006.png" alt="chart basics" class = "sphx-glr-single-img"/><p>同様に，複数のエリアプロットを重ねることもできます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span>
 <span class="n">ys</span> <span class="o">=</span> <span class="p">[</span><span class="n">rng</span><span class="o">.</span><span class="n">integers</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span>
 <span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;Segment </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span>
@@ -1152,21 +1152,21 @@ to download the full example code</p>
 <span class="n">chart</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_chart_basics_007.png" srcset="../../_images/sphx_glr_chart_basics_007.png" alt="chart basics" class = "sphx-glr-single-img"/><p>これまでの例で使用したフレキシブルなChart2Dの他にも、いくつかの専用チャートを作成することができます。下の例では、円チャートを作成することができます。</p>
+<img src="../../_images/sphx_glr_chart_basics_007.png" srcset="../../_images/sphx_glr_chart_basics_007.png" alt="chart basics" class = "sphx-glr-single-img"/><p>これまでの例で使用したフレキシブルなChart2Dの他にも，いくつかの専用チャートを作成することができます．下の例では，円チャートを作成することができます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">8.4</span><span class="p">,</span><span class="mf">6.1</span><span class="p">,</span><span class="mf">2.7</span><span class="p">,</span><span class="mf">2.4</span><span class="p">,</span><span class="mf">0.9</span><span class="p">])</span>
 <span class="n">chart</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">ChartPie</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="n">chart</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;slice </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))]</span>
 <span class="n">chart</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_chart_basics_008.png" srcset="../../_images/sphx_glr_chart_basics_008.png" alt="chart basics" class = "sphx-glr-single-img"/><p>データセットの統計情報を要約するには、箱ひげ図を簡単に作成することができます。</p>
+<img src="../../_images/sphx_glr_chart_basics_008.png" srcset="../../_images/sphx_glr_chart_basics_008.png" alt="chart basics" class = "sphx-glr-single-img"/><p>データセットの統計情報を要約するには，箱ひげ図を簡単に作成することができます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">rng</span><span class="o">.</span><span class="n">poisson</span><span class="p">(</span><span class="n">lam</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span> <span class="k">for</span> <span class="n">lam</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]</span>
 <span class="n">chart</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">ChartBox</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="n">chart</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;Experiment </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))]</span>
 <span class="n">chart</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_chart_basics_009.png" srcset="../../_images/sphx_glr_chart_basics_009.png" alt="chart basics" class = "sphx-glr-single-img"/><p>pyvistaやVTKでサポートされていない他のタイプのチャートを追加したい場合は、matplotlibを使ってカスタムチャートを作成し、pyvistaのプロットウィンドウに埋め込むことができます。以下の例は、これをどのように行うかを示しています。</p>
+<img src="../../_images/sphx_glr_chart_basics_009.png" srcset="../../_images/sphx_glr_chart_basics_009.png" alt="chart basics" class = "sphx-glr-single-img"/><p>pyvistaやVTKでサポートされていない他のタイプのチャートを追加したい場合は，matplotlibを使ってカスタムチャートを作成し，pyvistaのプロットウィンドウに埋め込むことができます．以下の例は，これをどのように行うかを示しています．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="c1"># First, create the matplotlib figure</span>

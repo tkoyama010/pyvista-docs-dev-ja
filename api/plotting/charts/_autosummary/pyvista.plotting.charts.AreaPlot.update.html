@@ -452,21 +452,21 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.plotting.charts.AreaPlot.update">
 <span class="sig-prename descclassname"><span class="pre">AreaPlot.</span></span><span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.plotting.charts.AreaPlot.update" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>このプロットのポイントを更新し、描画する領域の輪郭を描きます。</p>
+<dd><p>このプロットのポイントを更新し，描画する領域の輪郭を描きます．</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>x</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.21)"><span>array_like</span></a></span></dt><dd><p>領域を囲む点の新しいx座標。</p>
+<dt><strong>x</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.21)"><span>array_like</span></a></span></dt><dd><p>領域を囲む点の新しいx座標．</p>
 </dd>
-<dt><strong>y1</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.21)"><span>array_like</span></a></span></dt><dd><p>領域の最初の輪郭上にある点の新しいy座標。</p>
+<dt><strong>y1</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.21)"><span>array_like</span></a></span></dt><dd><p>領域の最初の輪郭上にある点の新しいy座標．</p>
 </dd>
-<dt><strong>y2</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.21)"><span>array_like</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>領域の2番目の輪郭上の点の新しいy座標。デフォルトでは、ゼロの連続です。</p>
+<dt><strong>y2</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.21)"><span>array_like</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>領域の2番目の輪郭上の点の新しいy座標．デフォルトでは，ゼロの連続です．</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>面グラフを作成します。</p>
+<p>面グラフを作成します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">chart</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Chart2D</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plot</span> <span class="o">=</span> <span class="n">chart</span><span class="o">.</span><span class="n">area</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
@@ -476,7 +476,7 @@
 <figure class="align-default">
 <img alt="../../../../_images/pyvista-plotting-charts-AreaPlot-update-1_00_00.png" src="../../../../_images/pyvista-plotting-charts-AreaPlot-update-1_00_00.png" />
 </figure>
-<p>領域の2番目の輪郭上にある点を更新します。</p>
+<p>領域の2番目の輪郭上にある点を更新します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">plot</span><span class="o">.</span><span class="n">update</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">chart</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>

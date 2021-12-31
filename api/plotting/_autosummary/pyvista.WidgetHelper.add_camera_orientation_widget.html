@@ -440,29 +440,29 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.WidgetHelper.add_camera_orientation_widget">
 <span class="sig-prename descclassname"><span class="pre">WidgetHelper.</span></span><span class="sig-name descname"><span class="pre">add_camera_orientation_widget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">animate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_frames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.WidgetHelper.add_camera_orientation_widget" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>カメラの向きを表すウィジェットをアクティブレンダラーに追加します。</p>
+<dd><p>カメラの向きを表すウィジェットをアクティブレンダラーに追加します．</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p>このウィジェットには <code class="docutils literal notranslate"><span class="pre">vtk&gt;=9.1.0</span></code> が必要です。</p>
+<p>このウィジェットには <code class="docutils literal notranslate"><span class="pre">vtk&gt;=9.1.0</span></code> が必要です．</p>
 </div>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>animate</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>軸方向に移動するアニメーションを有効または無効にします。</p>
+<dt><strong>animate</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>軸方向に移動するアニメーションを有効または無効にします．</p>
 </dd>
-<dt><strong>n_frames</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>軸方向の視点移動機能をアニメーション化するためのフレーム数です。</p>
+<dt><strong>n_frames</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>軸方向の視点移動機能をアニメーション化するためのフレーム数です．</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">vtkCameraOrientationWidget</span></code></dt><dd><p>カメラの向きを表すウィジェット。</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">vtkCameraOrientationWidget</span></code></dt><dd><p>カメラの向きを表すウィジェット．</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>カメラの向きを表すウィジェットをシーンに追加します。</p>
+<p>カメラの向きを表すウィジェットをシーンに追加します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Cube</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>

@@ -537,17 +537,17 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.Chart2D.remove_plot">
 <span class="sig-prename descclassname"><span class="pre">Chart2D.</span></span><span class="sig-name descname"><span class="pre">remove_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plot</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Chart2D.remove_plot" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>このチャートから与えられたプロットを削除します。</p>
+<dd><p>このチャートから与えられたプロットを削除します．</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>plot</strong> : <a class="reference internal" href="pyvista.plotting.charts.ScatterPlot2D.html#pyvista.plotting.charts.ScatterPlot2D" title="pyvista.plotting.charts.ScatterPlot2D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotting.charts.ScatterPlot2D</span></code></a>, <a class="reference internal" href="pyvista.plotting.charts.LinePlot2D.html#pyvista.plotting.charts.LinePlot2D" title="pyvista.plotting.charts.LinePlot2D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotting.charts.LinePlot2D</span></code></a>, <a class="reference internal" href="pyvista.plotting.charts.AreaPlot.html#pyvista.plotting.charts.AreaPlot" title="pyvista.plotting.charts.AreaPlot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotting.charts.AreaPlot</span></code></a>, <a class="reference internal" href="pyvista.plotting.charts.BarPlot.html#pyvista.plotting.charts.BarPlot" title="pyvista.plotting.charts.BarPlot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotting.charts.BarPlot</span></code></a> か <a class="reference internal" href="pyvista.plotting.charts.StackPlot.html#pyvista.plotting.charts.StackPlot" title="pyvista.plotting.charts.StackPlot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotting.charts.StackPlot</span></code></a><span class="classifier">plotting.charts.ScatterPlot2D, plotting.charts.LinePlot2D, plotting.charts.AreaPlot, plotting.charts.BarPlot か plotting.charts.StackPlot</span></dt><dd><p>削除するプロット。</p>
+<dt><strong>plot</strong> : <a class="reference internal" href="pyvista.plotting.charts.ScatterPlot2D.html#pyvista.plotting.charts.ScatterPlot2D" title="pyvista.plotting.charts.ScatterPlot2D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotting.charts.ScatterPlot2D</span></code></a>, <a class="reference internal" href="pyvista.plotting.charts.LinePlot2D.html#pyvista.plotting.charts.LinePlot2D" title="pyvista.plotting.charts.LinePlot2D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotting.charts.LinePlot2D</span></code></a>, <a class="reference internal" href="pyvista.plotting.charts.AreaPlot.html#pyvista.plotting.charts.AreaPlot" title="pyvista.plotting.charts.AreaPlot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotting.charts.AreaPlot</span></code></a>, <a class="reference internal" href="pyvista.plotting.charts.BarPlot.html#pyvista.plotting.charts.BarPlot" title="pyvista.plotting.charts.BarPlot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotting.charts.BarPlot</span></code></a> か <a class="reference internal" href="pyvista.plotting.charts.StackPlot.html#pyvista.plotting.charts.StackPlot" title="pyvista.plotting.charts.StackPlot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotting.charts.StackPlot</span></code></a><span class="classifier">plotting.charts.ScatterPlot2D, plotting.charts.LinePlot2D, plotting.charts.AreaPlot, plotting.charts.BarPlot か plotting.charts.StackPlot</span></dt><dd><p>削除するプロット．</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>直線や散布図を含む2Dチャートを作成することができます。</p>
+<p>直線や散布図を含む2Dチャートを作成することができます．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">chart</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Chart2D</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">scatter_plot</span><span class="p">,</span> <span class="n">line_plot</span> <span class="o">=</span> <span class="n">chart</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="s2">&quot;o-&quot;</span><span class="p">)</span>
@@ -559,7 +559,7 @@
 <figure class="align-default">
 <img alt="../../../../_images/pyvista-Chart2D-remove_plot-1_01_00.png" src="../../../../_images/pyvista-Chart2D-remove_plot-1_01_00.png" />
 </figure>
-<p>チャートから散布図を削除します。</p>
+<p>チャートから散布図を削除します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">chart</span><span class="o">.</span><span class="n">remove_plot</span><span class="p">(</span><span class="n">scatter_plot</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">chart</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>

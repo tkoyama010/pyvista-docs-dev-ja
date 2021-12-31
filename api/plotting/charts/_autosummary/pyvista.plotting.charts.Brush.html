@@ -412,19 +412,19 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="pyvista.plotting.charts.Brush">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Brush</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'k'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">texture</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_wrap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.plotting.charts.Brush" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>VTK BrushのPythonicなラッパーで、図形を塗りつぶすのに使われます。</p>
+<dd><p>VTK BrushのPythonicなラッパーで，図形を塗りつぶすのに使われます．</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>color</strong><span class="classifier">color, オプション</span></dt><dd><p>このブラシを使って描かれる図形の塗りつぶしの色です。 <a class="reference internal" href="../../../utilities/_autosummary/pyvista.parse_color.html#pyvista.parse_color" title="pyvista.parse_color"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.parse_color()</span></code></a> で解析可能な任意の色が使用できます。 デフォルトは <code class="docutils literal notranslate"><span class="pre">&quot;k&quot;</span></code> です。</p>
+<dt><strong>color</strong><span class="classifier">color, オプション</span></dt><dd><p>このブラシを使って描かれる図形の塗りつぶしの色です． <a class="reference internal" href="../../../utilities/_autosummary/pyvista.parse_color.html#pyvista.parse_color" title="pyvista.parse_color"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.parse_color()</span></code></a> で解析可能な任意の色が使用できます． デフォルトは <code class="docutils literal notranslate"><span class="pre">&quot;k&quot;</span></code> です．</p>
 </dd>
-<dt><strong>texture</strong><span class="classifier">テクスチャ, optional</span></dt><dd><p>このブラシで描かれた図形を埋めるために使用されるテクスチャです。 <code class="xref py py-class docutils literal notranslate"><span class="pre">Texture</span></code> に変換可能なオブジェクトであれば、どんなものでも構いません。デフォルトは <code class="docutils literal notranslate"><span class="pre">None</span></code> です。</p>
+<dt><strong>texture</strong><span class="classifier">テクスチャ, optional</span></dt><dd><p>このブラシで描かれた図形を埋めるために使用されるテクスチャです． <code class="xref py py-class docutils literal notranslate"><span class="pre">Texture</span></code> に変換可能なオブジェクトであれば，どんなものでも構いません．デフォルトは <code class="docutils literal notranslate"><span class="pre">None</span></code> です．</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">その他のパラメータ</dt>
 <dd class="field-even"><dl>
-<dt><strong>_wrap</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vtk.vtkBrush</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>既存のVTK Brushインスタンスをラップします。デフォルトは <code class="docutils literal notranslate"><span class="pre">None</span></code> (ラップしない)です。</p>
+<dt><strong>_wrap</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vtk.vtkBrush</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>既存のVTK Brushインスタンスをラップします．デフォルトは <code class="docutils literal notranslate"><span class="pre">None</span></code> (ラップしない)です．</p>
 </dd>
 </dl>
 </dd>
@@ -446,13 +446,13 @@
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.plotting.charts.Brush.color.html#pyvista.plotting.charts.Brush.color" title="pyvista.plotting.charts.Brush.color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Brush.color</span></code></a></p></td>
-<td><p>ブラシの色を返したり設定したりします。</p></td>
+<td><p>ブラシの色を返したり設定したりします．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.plotting.charts.Brush.texture.html#pyvista.plotting.charts.Brush.texture" title="pyvista.plotting.charts.Brush.texture"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Brush.texture</span></code></a></p></td>
-<td><p>ブラシのテクスチャを返したり設定したりします。</p></td>
+<td><p>ブラシのテクスチャを返したり設定したりします．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.plotting.charts.Brush.texture_interpolate.html#pyvista.plotting.charts.Brush.texture_interpolate" title="pyvista.plotting.charts.Brush.texture_interpolate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Brush.texture_interpolate</span></code></a></p></td>
-<td><p>テクスチャの補間モードを設定します。</p></td>
+<td><p>テクスチャの補間モードを設定します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.plotting.charts.Brush.texture_repeat.html#pyvista.plotting.charts.Brush.texture_repeat" title="pyvista.plotting.charts.Brush.texture_repeat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Brush.texture_repeat</span></code></a></p></td>
 <td><p>テクスチャーリピートモードを返す，または設定します．</p></td>

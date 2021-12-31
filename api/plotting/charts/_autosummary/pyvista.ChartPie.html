@@ -457,21 +457,21 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="pyvista.ChartPie">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ChartPie</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.ChartPie" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>円チャートを描くための専用チャート。</p>
+<dd><p>円チャートを描くための専用チャート．</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
 <dt><strong>data</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.21)"><span>array_like</span></a></span></dt><dd><p>各円セグメントの相対的な大きさ</p>
 </dd>
-<dt><strong>colors</strong> : <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> か <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a> <code class="xref py py-obj docutils literal notranslate"><span class="pre">of</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">color</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code><span class="classifier">python:list または color の python:tuple, optional</span></dt><dd><p>このプロットに描かれた各パイセグメントに使用される色です。デフォルトは <code class="docutils literal notranslate"><span class="pre">None</span></code> で、これはデフォルトの配色を使用します。</p>
+<dt><strong>colors</strong> : <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> か <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a> <code class="xref py py-obj docutils literal notranslate"><span class="pre">of</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">color</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code><span class="classifier">python:list または color の python:tuple, optional</span></dt><dd><p>このプロットに描かれた各パイセグメントに使用される色です．デフォルトは <code class="docutils literal notranslate"><span class="pre">None</span></code> で，これはデフォルトの配色を使用します．</p>
 </dd>
-<dt><strong>labels</strong> : <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> か <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a> <code class="xref py py-obj docutils literal notranslate"><span class="pre">of</span></code> <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code><span class="classifier">python:list または python:str の python:tuple, optional</span></dt><dd><p>チャートの凡例に表示される、描画された各パイセグメントのラベルです。デフォルトでは <code class="docutils literal notranslate"><span class="pre">[]</span></code> です。</p>
+<dt><strong>labels</strong> : <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> か <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a> <code class="xref py py-obj docutils literal notranslate"><span class="pre">of</span></code> <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code><span class="classifier">python:list または python:str の python:tuple, optional</span></dt><dd><p>チャートの凡例に表示される，描画された各パイセグメントのラベルです．デフォルトでは <code class="docutils literal notranslate"><span class="pre">[]</span></code> です．</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>税金の使い道を示す円グラフを作成します。</p>
+<p>税金の使い道を示す円グラフを作成します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mf">128.3</span><span class="p">,</span> <span class="mf">32.9</span><span class="p">,</span> <span class="mf">31.8</span><span class="p">,</span> <span class="mf">29.3</span><span class="p">,</span> <span class="mf">21.2</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Social benefits&quot;</span><span class="p">,</span> <span class="s2">&quot;Governance&quot;</span><span class="p">,</span> <span class="s2">&quot;Economic policy&quot;</span><span class="p">,</span> <span class="s2">&quot;Education&quot;</span><span class="p">,</span> <span class="s2">&quot;Other&quot;</span><span class="p">]</span>
@@ -490,10 +490,10 @@
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.ChartPie.show.html#pyvista.ChartPie.show" title="pyvista.ChartPie.show"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChartPie.show</span></code></a>([off_screen, full_screen, ...])</p></td>
-<td><p>このチャートを自作のプロッターに表示します。</p></td>
+<td><p>このチャートを自作のプロッターに表示します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.ChartPie.toggle.html#pyvista.ChartPie.toggle" title="pyvista.ChartPie.toggle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChartPie.toggle</span></code></a>()</p></td>
-<td><p>チャートの表示を切り替えます。</p></td>
+<td><p>チャートの表示を切り替えます．</p></td>
 </tr>
 </tbody>
 </table>
@@ -505,37 +505,37 @@
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.ChartPie.background_color.html#pyvista.ChartPie.background_color" title="pyvista.ChartPie.background_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChartPie.background_color</span></code></a></p></td>
-<td><p>チャートの背景色を返すか設定します。</p></td>
+<td><p>チャートの背景色を返すか設定します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.ChartPie.background_texture.html#pyvista.ChartPie.background_texture" title="pyvista.ChartPie.background_texture"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChartPie.background_texture</span></code></a></p></td>
-<td><p>チャートの背景テクスチャーを返すか設定します。</p></td>
+<td><p>チャートの背景テクスチャーを返すか設定します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.ChartPie.border_color.html#pyvista.ChartPie.border_color" title="pyvista.ChartPie.border_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChartPie.border_color</span></code></a></p></td>
-<td><p>チャートの境界線色を返すか設定します。</p></td>
+<td><p>チャートの境界線色を返すか設定します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.ChartPie.border_style.html#pyvista.ChartPie.border_style" title="pyvista.ChartPie.border_style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChartPie.border_style</span></code></a></p></td>
-<td><p>チャートの境界線スタイルを返すか設定します。</p></td>
+<td><p>チャートの境界線スタイルを返すか設定します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.ChartPie.border_width.html#pyvista.ChartPie.border_width" title="pyvista.ChartPie.border_width"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChartPie.border_width</span></code></a></p></td>
-<td><p>チャートの境界線幅を返すか設定します。</p></td>
+<td><p>チャートの境界線幅を返すか設定します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.ChartPie.legend_visible.html#pyvista.ChartPie.legend_visible" title="pyvista.ChartPie.legend_visible"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChartPie.legend_visible</span></code></a></p></td>
-<td><p>チャートの凡例の可視性を返すか設定します。</p></td>
+<td><p>チャートの凡例の可視性を返すか設定します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.ChartPie.loc.html#pyvista.ChartPie.loc" title="pyvista.ChartPie.loc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChartPie.loc</span></code></a></p></td>
-<td><p>正規化された座標でチャートの位置を返す、または設定します。</p></td>
+<td><p>正規化された座標でチャートの位置を返す，または設定します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.ChartPie.plot.html#pyvista.ChartPie.plot" title="pyvista.ChartPie.plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChartPie.plot</span></code></a></p></td>
-<td><p>このチャートに関連付けられた <a class="reference internal" href="pyvista.plotting.charts.PiePlot.html#pyvista.plotting.charts.PiePlot" title="pyvista.plotting.charts.PiePlot"><code class="xref py py-class docutils literal notranslate"><span class="pre">PiePlot</span></code></a> インスタンスを返します。</p></td>
+<td><p>このチャートに関連付けられた <a class="reference internal" href="pyvista.plotting.charts.PiePlot.html#pyvista.plotting.charts.PiePlot" title="pyvista.plotting.charts.PiePlot"><code class="xref py py-class docutils literal notranslate"><span class="pre">PiePlot</span></code></a> インスタンスを返します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.ChartPie.size.html#pyvista.ChartPie.size" title="pyvista.ChartPie.size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChartPie.size</span></code></a></p></td>
-<td><p>正規化された座標でチャートのサイズを返す、または設定します。</p></td>
+<td><p>正規化された座標でチャートのサイズを返す，または設定します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.ChartPie.title.html#pyvista.ChartPie.title" title="pyvista.ChartPie.title"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChartPie.title</span></code></a></p></td>
-<td><p>チャートのタイトルを返すか設定します。</p></td>
+<td><p>チャートのタイトルを返すか設定します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.ChartPie.visible.html#pyvista.ChartPie.visible" title="pyvista.ChartPie.visible"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChartPie.visible</span></code></a></p></td>
-<td><p>チャートの見え方を返すか設定します。</p></td>
+<td><p>チャートの見え方を返すか設定します．</p></td>
 </tr>
 </tbody>
 </table>

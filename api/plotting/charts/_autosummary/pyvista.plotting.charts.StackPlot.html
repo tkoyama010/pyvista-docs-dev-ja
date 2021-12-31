@@ -462,24 +462,24 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="pyvista.plotting.charts.StackPlot">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">StackPlot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ys</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.plotting.charts.StackPlot" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>2Dの積み上げグラフを表すクラス。</p>
-<p>ユーザーは通常、新しいプロットインスタンスを直接作成せず、専用の2Dチャートのプロットメソッドを使用する必要があります。</p>
+<dd><p>2Dの積み上げグラフを表すクラス．</p>
+<p>ユーザーは通常，新しいプロットインスタンスを直接作成せず，専用の2Dチャートのプロットメソッドを使用する必要があります．</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>x</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.21)"><span>array_like</span></a></span></dt><dd><p>描画するスタック（領域）を囲む点のX座標。</p>
+<dt><strong>x</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.21)"><span>array_like</span></a></span></dt><dd><p>描画するスタック（領域）を囲む点のX座標．</p>
 </dd>
-<dt><strong>ys</strong> : <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> か <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a> <code class="xref py py-obj docutils literal notranslate"><span class="pre">of</span></code> <a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.21)"><span>array_like</span></a><span class="classifier">python:list または python:tuple または numpy:array_like</span></dt><dd><p>対応するX座標に描画するスタック（領域）のサイズです。各シーケンスには、1つのスタック（領域）のサイズが定義されており、それらは互いに積み重ねられます。</p>
+<dt><strong>ys</strong> : <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> か <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a> <code class="xref py py-obj docutils literal notranslate"><span class="pre">of</span></code> <a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.21)"><span>array_like</span></a><span class="classifier">python:list または python:tuple または numpy:array_like</span></dt><dd><p>対応するX座標に描画するスタック（領域）のサイズです．各シーケンスには，1つのスタック（領域）のサイズが定義されており，それらは互いに積み重ねられます．</p>
 </dd>
-<dt><strong>colors</strong> : <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> か <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a> <code class="xref py py-obj docutils literal notranslate"><span class="pre">of</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">color</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code><span class="classifier">python:list または color の python:tuple, optional</span></dt><dd><p>このプロットに描かれるスタック(領域)の色です。 <code class="docutils literal notranslate"><span class="pre">pyvista.parse_color</span></code> で解析可能な任意の色が使用できます。デフォルトは <code class="docutils literal notranslate"><span class="pre">None</span></code> です。</p>
+<dt><strong>colors</strong> : <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> か <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a> <code class="xref py py-obj docutils literal notranslate"><span class="pre">of</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">color</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code><span class="classifier">python:list または color の python:tuple, optional</span></dt><dd><p>このプロットに描かれるスタック(領域)の色です． <code class="docutils literal notranslate"><span class="pre">pyvista.parse_color</span></code> で解析可能な任意の色が使用できます．デフォルトは <code class="docutils literal notranslate"><span class="pre">None</span></code> です．</p>
 </dd>
-<dt><strong>labels</strong> : <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> か <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a> <code class="xref py py-obj docutils literal notranslate"><span class="pre">of</span></code> <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code><span class="classifier">python:list または python:str の python:tuple, optional</span></dt><dd><p>チャートの凡例に表示される、描画された各スタック(領域)セグメントのラベルです。デフォルトでは <code class="docutils literal notranslate"><span class="pre">[]</span></code> です。</p>
+<dt><strong>labels</strong> : <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> か <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a> <code class="xref py py-obj docutils literal notranslate"><span class="pre">of</span></code> <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code><span class="classifier">python:list または python:str の python:tuple, optional</span></dt><dd><p>チャートの凡例に表示される，描画された各スタック(領域)セグメントのラベルです．デフォルトでは <code class="docutils literal notranslate"><span class="pre">[]</span></code> です．</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>タイプ別の販売台数を示す積み上げグラフを作成します。</p>
+<p>タイプ別の販売台数を示す積み上げグラフを作成します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">year</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">2011</span><span class="p">,</span> <span class="mi">2021</span><span class="p">)]</span>
@@ -511,10 +511,10 @@
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.plotting.charts.StackPlot.toggle.html#pyvista.plotting.charts.StackPlot.toggle" title="pyvista.plotting.charts.StackPlot.toggle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StackPlot.toggle</span></code></a>()</p></td>
-<td><p>プロットの表示を切り替えます。</p></td>
+<td><p>プロットの表示を切り替えます．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.plotting.charts.StackPlot.update.html#pyvista.plotting.charts.StackPlot.update" title="pyvista.plotting.charts.StackPlot.update"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StackPlot.update</span></code></a>(x, ys)</p></td>
-<td><p>このプロットの積み上げ (領域) の位置やサイズを更新します。</p></td>
+<td><p>このプロットの積み上げ (領域) の位置やサイズを更新します．</p></td>
 </tr>
 </tbody>
 </table>
@@ -526,40 +526,40 @@
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.plotting.charts.StackPlot.brush.html#pyvista.plotting.charts.StackPlot.brush" title="pyvista.plotting.charts.StackPlot.brush"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StackPlot.brush</span></code></a></p></td>
-<td><p>Brushオブジェクトは、このプロットの形状がどのように塗りつぶされるかを制御します。</p></td>
+<td><p>Brushオブジェクトは，このプロットの形状がどのように塗りつぶされるかを制御します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.plotting.charts.StackPlot.color.html#pyvista.plotting.charts.StackPlot.color" title="pyvista.plotting.charts.StackPlot.color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StackPlot.color</span></code></a></p></td>
-<td><p>プロットの色を返したり設定したりします。</p></td>
+<td><p>プロットの色を返したり設定したりします．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.plotting.charts.StackPlot.color_scheme.html#pyvista.plotting.charts.StackPlot.color_scheme" title="pyvista.plotting.charts.StackPlot.color_scheme"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StackPlot.color_scheme</span></code></a></p></td>
-<td><p>プロットの色テーマを返したり設定したりします。</p></td>
+<td><p>プロットの色テーマを返したり設定したりします．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.plotting.charts.StackPlot.colors.html#pyvista.plotting.charts.StackPlot.colors" title="pyvista.plotting.charts.StackPlot.colors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StackPlot.colors</span></code></a></p></td>
-<td><p>プロットの色を返したり設定したりします。</p></td>
+<td><p>プロットの色を返したり設定したりします．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.plotting.charts.StackPlot.label.html#pyvista.plotting.charts.StackPlot.label" title="pyvista.plotting.charts.StackPlot.label"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StackPlot.label</span></code></a></p></td>
-<td><p>チャートの凡例に表示されている、このプロットのラベルを返すか設定します。</p></td>
+<td><p>チャートの凡例に表示されている，このプロットのラベルを返すか設定します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.plotting.charts.StackPlot.labels.html#pyvista.plotting.charts.StackPlot.labels" title="pyvista.plotting.charts.StackPlot.labels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StackPlot.labels</span></code></a></p></td>
-<td><p>チャートの凡例に表示されている、このプロットのラベルを返すか設定します。</p></td>
+<td><p>チャートの凡例に表示されている，このプロットのラベルを返すか設定します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.plotting.charts.StackPlot.line_style.html#pyvista.plotting.charts.StackPlot.line_style" title="pyvista.plotting.charts.StackPlot.line_style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StackPlot.line_style</span></code></a></p></td>
-<td><p>このプロットに描かれたすべての線のラインスタイルを返すか設定します。</p></td>
+<td><p>このプロットに描かれたすべての線のラインスタイルを返すか設定します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.plotting.charts.StackPlot.line_width.html#pyvista.plotting.charts.StackPlot.line_width" title="pyvista.plotting.charts.StackPlot.line_width"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StackPlot.line_width</span></code></a></p></td>
-<td><p>このプロットに描かれたすべての線のライン幅を返すか設定します。</p></td>
+<td><p>このプロットに描かれたすべての線のライン幅を返すか設定します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.plotting.charts.StackPlot.pen.html#pyvista.plotting.charts.StackPlot.pen" title="pyvista.plotting.charts.StackPlot.pen"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StackPlot.pen</span></code></a></p></td>
-<td><p>Penオブジェクトは、このプロットの線がどのように描かれるかを制御します。</p></td>
+<td><p>Penオブジェクトは，このプロットの線がどのように描かれるかを制御します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.plotting.charts.StackPlot.visible.html#pyvista.plotting.charts.StackPlot.visible" title="pyvista.plotting.charts.StackPlot.visible"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StackPlot.visible</span></code></a></p></td>
-<td><p>図の見え方を返すか設定します。</p></td>
+<td><p>図の見え方を返すか設定します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.plotting.charts.StackPlot.x.html#pyvista.plotting.charts.StackPlot.x" title="pyvista.plotting.charts.StackPlot.x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StackPlot.x</span></code></a></p></td>
-<td><p>描画された積み上げのX座標を取得します。</p></td>
+<td><p>描画された積み上げのX座標を取得します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.plotting.charts.StackPlot.ys.html#pyvista.plotting.charts.StackPlot.ys" title="pyvista.plotting.charts.StackPlot.ys"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StackPlot.ys</span></code></a></p></td>
-<td><p>描かれた積み上げのサイズを取得します。</p></td>
+<td><p>描かれた積み上げのサイズを取得します．</p></td>
 </tr>
 </tbody>
 </table>

@@ -462,21 +462,21 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="pyvista.ChartMPL">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ChartMPL</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">figure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(1,</span> <span class="pre">1)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0,</span> <span class="pre">0)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.ChartMPL" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>既存のmatplotlibの図から新しいチャートを作成します。</p>
+<dd><p>既存のmatplotlibの図から新しいチャートを作成します．</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>figure</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/figure_api.html#matplotlib.figure.Figure" title="(in Matplotlib v3.5.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matplotlib.figure.Figure</span></code></a></span></dt><dd><p>描画するmatplotlibの図形。</p>
+<dt><strong>figure</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/figure_api.html#matplotlib.figure.Figure" title="(in Matplotlib v3.5.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matplotlib.figure.Figure</span></code></a></span></dt><dd><p>描画するmatplotlibの図形．</p>
 </dd>
-<dt><strong>size</strong> : <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> か <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code><span class="classifier">python:list か python:tuple, optional</span></dt><dd><p>正規化された座標におけるチャートのサイズです。サイズが <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">0)</span></code> の場合は不可視で、 <code class="docutils literal notranslate"><span class="pre">(1,</span> <span class="pre">1)</span></code> の場合はレンダラーの幅と高さをすべて占めます。</p>
+<dt><strong>size</strong> : <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> か <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code><span class="classifier">python:list か python:tuple, optional</span></dt><dd><p>正規化された座標におけるチャートのサイズです．サイズが <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">0)</span></code> の場合は不可視で， <code class="docutils literal notranslate"><span class="pre">(1,</span> <span class="pre">1)</span></code> の場合はレンダラーの幅と高さをすべて占めます．</p>
 </dd>
-<dt><strong>loc</strong> : <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> か <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code><span class="classifier">python:list か python:tuple, optional</span></dt><dd><p>正規化された座標におけるチャートの位置（左下隅）です。 <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">0)</span></code> という位置はレンダラーの左下に相当し、 <code class="docutils literal notranslate"><span class="pre">(1,</span> <span class="pre">1)</span></code> という位置はレンダラーの右上に相当します。</p>
+<dt><strong>loc</strong> : <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> か <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code><span class="classifier">python:list か python:tuple, optional</span></dt><dd><p>正規化された座標におけるチャートの位置（左下隅）です． <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">0)</span></code> という位置はレンダラーの左下に相当し， <code class="docutils literal notranslate"><span class="pre">(1,</span> <span class="pre">1)</span></code> という位置はレンダラーの右上に相当します．</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>ベクトル場の流線を様々な色でプロットします（ <a class="reference external" href="https://matplotlib.org/stable/gallery/images_contours_and_fields/plot_streamplot.html">この例</a> を参考にしています）。</p>
+<p>ベクトル場の流線を様々な色でプロットします（ <a class="reference external" href="https://matplotlib.org/stable/gallery/images_contours_and_fields/plot_streamplot.html">この例</a> を参考にしています）．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -511,10 +511,10 @@
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.ChartMPL.show.html#pyvista.ChartMPL.show" title="pyvista.ChartMPL.show"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChartMPL.show</span></code></a>([off_screen, full_screen, ...])</p></td>
-<td><p>このチャートを自作のプロッターに表示します。</p></td>
+<td><p>このチャートを自作のプロッターに表示します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.ChartMPL.toggle.html#pyvista.ChartMPL.toggle" title="pyvista.ChartMPL.toggle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChartMPL.toggle</span></code></a>()</p></td>
-<td><p>チャートの表示を切り替えます。</p></td>
+<td><p>チャートの表示を切り替えます．</p></td>
 </tr>
 </tbody>
 </table>
@@ -526,40 +526,40 @@
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.ChartMPL.background_color.html#pyvista.ChartMPL.background_color" title="pyvista.ChartMPL.background_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChartMPL.background_color</span></code></a></p></td>
-<td><p>チャートの背景色を返すか設定します。</p></td>
+<td><p>チャートの背景色を返すか設定します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.ChartMPL.background_texture.html#pyvista.ChartMPL.background_texture" title="pyvista.ChartMPL.background_texture"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChartMPL.background_texture</span></code></a></p></td>
-<td><p>チャートの背景テクスチャーを返すか設定します。</p></td>
+<td><p>チャートの背景テクスチャーを返すか設定します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.ChartMPL.border_color.html#pyvista.ChartMPL.border_color" title="pyvista.ChartMPL.border_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChartMPL.border_color</span></code></a></p></td>
-<td><p>チャートの境界線色を返すか設定します。</p></td>
+<td><p>チャートの境界線色を返すか設定します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.ChartMPL.border_style.html#pyvista.ChartMPL.border_style" title="pyvista.ChartMPL.border_style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChartMPL.border_style</span></code></a></p></td>
-<td><p>チャートの境界線スタイルを返すか設定します。</p></td>
+<td><p>チャートの境界線スタイルを返すか設定します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.ChartMPL.border_width.html#pyvista.ChartMPL.border_width" title="pyvista.ChartMPL.border_width"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChartMPL.border_width</span></code></a></p></td>
-<td><p>チャートの境界線幅を返すか設定します。</p></td>
+<td><p>チャートの境界線幅を返すか設定します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.ChartMPL.figure.html#pyvista.ChartMPL.figure" title="pyvista.ChartMPL.figure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChartMPL.figure</span></code></a></p></td>
-<td><p>このチャートに関連するmatplotlibの図を取得します。</p></td>
+<td><p>このチャートに関連するmatplotlibの図を取得します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.ChartMPL.legend_visible.html#pyvista.ChartMPL.legend_visible" title="pyvista.ChartMPL.legend_visible"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChartMPL.legend_visible</span></code></a></p></td>
-<td><p>チャートの凡例の可視性を返すか設定します。</p></td>
+<td><p>チャートの凡例の可視性を返すか設定します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.ChartMPL.loc.html#pyvista.ChartMPL.loc" title="pyvista.ChartMPL.loc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChartMPL.loc</span></code></a></p></td>
-<td><p>正規化された座標でチャートの位置を返す、または設定します。</p></td>
+<td><p>正規化された座標でチャートの位置を返す，または設定します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.ChartMPL.position.html#pyvista.ChartMPL.position" title="pyvista.ChartMPL.position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChartMPL.position</span></code></a></p></td>
-<td><p>左下から見たチャートの位置（単位はピクセル）。</p></td>
+<td><p>左下から見たチャートの位置（単位はピクセル）．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.ChartMPL.size.html#pyvista.ChartMPL.size" title="pyvista.ChartMPL.size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChartMPL.size</span></code></a></p></td>
-<td><p>正規化された座標でチャートのサイズを返す、または設定します。</p></td>
+<td><p>正規化された座標でチャートのサイズを返す，または設定します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.ChartMPL.title.html#pyvista.ChartMPL.title" title="pyvista.ChartMPL.title"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChartMPL.title</span></code></a></p></td>
-<td><p>チャートのタイトルを返すか設定します。</p></td>
+<td><p>チャートのタイトルを返すか設定します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.ChartMPL.visible.html#pyvista.ChartMPL.visible" title="pyvista.ChartMPL.visible"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChartMPL.visible</span></code></a></p></td>
-<td><p>チャートの見え方を返すか設定します。</p></td>
+<td><p>チャートの見え方を返すか設定します．</p></td>
 </tr>
 </tbody>
 </table>

@@ -537,31 +537,31 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.Chart2D.bar">
 <span class="sig-prename descclassname"><span class="pre">Chart2D.</span></span><span class="sig-name descname"><span class="pre">bar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'V'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Chart2D.bar" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>このチャートにバープロットを追加します。</p>
+<dd><p>このチャートにバープロットを追加します．</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>x</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.21)"><span>array_like</span></a></span></dt><dd><p>描画するバーの位置を（垂直方向であればx軸に沿って、水平方向であればy軸に沿って）指定します。</p>
+<dt><strong>x</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.21)"><span>array_like</span></a></span></dt><dd><p>描画するバーの位置を（垂直方向であればx軸に沿って，水平方向であればy軸に沿って）指定します．</p>
 </dd>
-<dt><strong>y</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.21)"><span>array_like</span></a></span></dt><dd><p>描画するバーのサイズ。シーケンスを渡すことで、複数のバーを重ねることができます。</p>
+<dt><strong>y</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.21)"><span>array_like</span></a></span></dt><dd><p>描画するバーのサイズ．シーケンスを渡すことで，複数のバーを重ねることができます．</p>
 </dd>
-<dt><strong>color</strong><span class="classifier">color, オプション</span></dt><dd><p>このプロットに描かれるバーの色です。 <code class="docutils literal notranslate"><span class="pre">pyvista.parse_color</span></code> で解析可能な任意の色が使用できます。デフォルトは <code class="docutils literal notranslate"><span class="pre">&quot;b&quot;</span></code> です。</p>
+<dt><strong>color</strong><span class="classifier">color, オプション</span></dt><dd><p>このプロットに描かれるバーの色です． <code class="docutils literal notranslate"><span class="pre">pyvista.parse_color</span></code> で解析可能な任意の色が使用できます．デフォルトは <code class="docutils literal notranslate"><span class="pre">&quot;b&quot;</span></code> です．</p>
 </dd>
-<dt><strong>orientation</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>このプロットに描画される棒の向き。水平方向であれば <code class="docutils literal notranslate"><span class="pre">&quot;H&quot;</span></code> 、垂直方向であれば <code class="docutils literal notranslate"><span class="pre">&quot;V&quot;</span></code> のいずれかです。デフォルトでは <code class="docutils literal notranslate"><span class="pre">&quot;V&quot;</span></code> が表示されます。</p>
+<dt><strong>orientation</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>このプロットに描画される棒の向き．水平方向であれば <code class="docutils literal notranslate"><span class="pre">&quot;H&quot;</span></code> ，垂直方向であれば <code class="docutils literal notranslate"><span class="pre">&quot;V&quot;</span></code> のいずれかです．デフォルトでは <code class="docutils literal notranslate"><span class="pre">&quot;V&quot;</span></code> が表示されます．</p>
 </dd>
-<dt><strong>label</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>このプロットのラベルで、チャートの凡例に表示されます。デフォルトは <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> です。</p>
+<dt><strong>label</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>このプロットのラベルで，チャートの凡例に表示されます．デフォルトは <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> です．</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="pyvista.plotting.charts.BarPlot.html#pyvista.plotting.charts.BarPlot" title="pyvista.plotting.charts.BarPlot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotting.charts.BarPlot</span></code></a></dt><dd><p>作成されたバーのプロット。</p>
+<dt><a class="reference internal" href="pyvista.plotting.charts.BarPlot.html#pyvista.plotting.charts.BarPlot" title="pyvista.plotting.charts.BarPlot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotting.charts.BarPlot</span></code></a></dt><dd><p>作成されたバーのプロット．</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>バープロットを作成します。</p>
+<p>バープロットを作成します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">chart</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Chart2D</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plot</span> <span class="o">=</span> <span class="n">chart</span><span class="o">.</span><span class="n">bar</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>

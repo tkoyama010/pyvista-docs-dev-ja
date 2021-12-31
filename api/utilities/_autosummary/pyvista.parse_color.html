@@ -430,15 +430,13 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="pyvista.parse_color">
 <span class="sig-name descname"><span class="pre">parse_color</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">color</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opacity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.parse_color" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>色をVTKフレンドリーなRGB(A)タプルに解析します。</p>
-<p><code class="docutils literal notranslate"><span class="pre">color</span></code> が RGBA の浮動小数点数のシーケンスである場合、<code class="docutils literal notranslate"><span class="pre">opacity</span></code> パラメータは無視されます。</p>
-<p>返される値は0から1の間です。</p>
+<dd><p>色をVTKフレンドリーなRGB(A)タプルに解析します．</p>
+<p><code class="docutils literal notranslate"><span class="pre">color</span></code> が RGBA の浮動小数点数のシーケンスである場合，<code class="docutils literal notranslate"><span class="pre">opacity</span></code> パラメータは無視されます．</p>
+<p>返される値は0から1の間です．</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>color</strong> : <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> または <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a><span class="classifier">python:str または python:sequence</span></dt><dd><p>Either a string, RGB sequence, RGBA sequence, or hex color string.
-RGB(A) sequences should only contain values between 0 and 1.
-For example:</p>
+<dt><strong>color</strong> : <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> または <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a><span class="classifier">python:str または python:sequence</span></dt><dd><p>文字列，RGB配列，RGBA配列，または16進数の色文字列のいずれかです．RGB(A)配列は，0から1の値のみを含みます．例えば:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">'white'</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'w'</span></code></p></li>
@@ -447,21 +445,15 @@ For example:</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">'#FFFFFF'</span></code></p></li>
 </ul>
 </dd>
-<dt><strong>opacity</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Default opacity of the returned color. Used when <code class="docutils literal notranslate"><span class="pre">color</span></code> is
-not a length 4 RGBA sequence. Only opacities between 0 and 1
-are allowed.</p>
+<dt><strong>opacity</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>返される色のデフォルトの不透明度です． <code class="docutils literal notranslate"><span class="pre">color</span></code> が長さ 4 の RGBA シーケンスでない場合に使用します．0 から 1 の間の不透明度のみが許可されます．</p>
 </dd>
-<dt><strong>default_color</strong> : <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> か <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Default color to use when <code class="docutils literal notranslate"><span class="pre">color</span></code> is None.  If this value is
-<code class="docutils literal notranslate"><span class="pre">None</span></code>, then defaults to the global theme color.  Format is
-identical to <code class="docutils literal notranslate"><span class="pre">color</span></code>.</p>
+<dt><strong>default_color</strong> : <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> か <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">color</span></code> が None の場合に使用されるデフォルトの色です． もしこの値が <code class="docutils literal notranslate"><span class="pre">None</span></code> であれば，デフォルトではグローバルテーマカラーを使用します． フォーマットは <code class="docutils literal notranslate"><span class="pre">color</span></code> と同じです．</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a></dt><dd><p>Either a length 3 RGB sequence if opacity is unset, or an RGBA
-sequence when <code class="docutils literal notranslate"><span class="pre">opacity</span></code> is set or the input <code class="docutils literal notranslate"><span class="pre">color</span></code> is an
-RGBA sequence.</p>
+<dt><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">opacity</span></code> が設定されていない場合は長さ3のRGBシーケンス， <code class="docutils literal notranslate"><span class="pre">opacity</span></code> が設定されているか，入力の <code class="docutils literal notranslate"><span class="pre">color</span></code> がRGBAシーケンスの場合はRGBAシーケンスとなります．</p>
 </dd>
 </dl>
 </dd>
