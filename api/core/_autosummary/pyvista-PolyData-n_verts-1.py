@@ -2,7 +2,7 @@
 # number of vertices.
 #
 import pyvista
-mesh = pyvista.PolyData([[1, 0, 0], [1, 1, 1]])
+mesh = pyvista.PolyData([[1.0, 0.0, 0.0], [1.0, 1.0, 1.0]])
 mesh.n_verts
 # Expected:
 ## 2

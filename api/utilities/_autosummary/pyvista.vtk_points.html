@@ -429,7 +429,7 @@
 <h1>vtk_points<a class="headerlink" href="#vtk-points" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="pyvista.vtk_points">
-<span class="sig-name descname"><span class="pre">vtk_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.vtk_points" title="この定義へのパーマリンク">¶</a></dt>
+<span class="sig-name descname"><span class="pre">vtk_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_float</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.vtk_points" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>numpy配列または配列のようなものを <code class="docutils literal notranslate"><span class="pre">vtkPoints</span></code> オブジェクトに変換します．</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
@@ -437,6 +437,11 @@
 <dt><strong>points</strong> : <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a> か <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a><span class="classifier">numpy.ndarray か python:sequence</span></dt><dd><p>変換するポイント．1次元または2次元である必要があります．1つの点または複数の点を受け入れます．</p>
 </dd>
 <dt><strong>deep</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>配列のディープコピーを行います． これは <code class="docutils literal notranslate"><span class="pre">points</span></code> が <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a> である場合にのみ適用されます．</p>
+</dd>
+<dt><strong>force_float</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Casts the datatype to <code class="docutils literal notranslate"><span class="pre">float32</span></code> if points datatype is
+non-float.  Set this to <code class="docutils literal notranslate"><span class="pre">False</span></code> to allow non-float types,
+though this may lead to truncation of intermediate floats
+when transforming datasets.</p>
 </dd>
 </dl>
 </dd>
@@ -476,7 +481,7 @@
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright 2017-2021, The PyVista Developers.<br>
+    &copy; Copyright 2017-2022, The PyVista Developers.<br>
 </p>
     </div>
     
