@@ -1104,7 +1104,8 @@
 </dd>
 <dt><strong>dims</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/glossary.html#term-iterable" title="(in Python v3.11)"><span>iterable</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>均一な格子の寸法．</p>
 </dd>
-<dt><strong>spacing</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/glossary.html#term-iterable" title="(in Python v3.11)"><span>iterable</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>各次元でのユニフォームの間隔です． デフォルトは <code class="docutils literal notranslate"><span class="pre">(1.0,</span> <span class="pre">1.0,</span> <span class="pre">1.0)</span></code> です．</p>
+<dt><strong>spacing</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/glossary.html#term-iterable" title="(in Python v3.11)"><span>iterable</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Spacing of the uniform in each dimension.  Defaults to
+<code class="docutils literal notranslate"><span class="pre">(1.0,</span> <span class="pre">1.0,</span> <span class="pre">1.0)</span></code>. Must be positive.</p>
 </dd>
 <dt><strong>origin</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/glossary.html#term-iterable" title="(in Python v3.11)"><span>iterable</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>ユニフォームグリッドの原点です． デフォルトは <code class="docutils literal notranslate"><span class="pre">(0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0)</span></code> です．</p>
 </dd>
@@ -1551,7 +1552,7 @@
 <td><p>境界ボックスの中心を取得します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UniformGrid.dimensions.html#pyvista.UniformGrid.dimensions" title="pyvista.UniformGrid.dimensions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UniformGrid.dimensions</span></code></a></p></td>
-<td><p>グリッドの次元の長さ3タプルを戻します．</p></td>
+<td><p>Return the grid's dimensions.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.UniformGrid.extent.html#pyvista.UniformGrid.extent" title="pyvista.UniformGrid.extent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UniformGrid.extent</span></code></a></p></td>
 <td><p>バウンディングボックスの範囲を取得します．</p></td>
@@ -1596,7 +1597,7 @@
 <td><p>暗黙的に定義されたポイントのコピーを，数値配列として作成します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.UniformGrid.spacing.html#pyvista.UniformGrid.spacing" title="pyvista.UniformGrid.spacing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UniformGrid.spacing</span></code></a></p></td>
-<td><p>各軸方向の間隔を取得します．</p></td>
+<td><p>Return or set the spacing for each axial direction.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UniformGrid.t_coords.html#pyvista.UniformGrid.t_coords" title="pyvista.UniformGrid.t_coords"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UniformGrid.t_coords</span></code></a></p></td>
 <td><p>ポイント上のアクティブなテクスチャ座標を取得します．</p></td>

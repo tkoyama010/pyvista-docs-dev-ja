@@ -4,4 +4,4 @@ import pyvista
 cube = pyvista.Cube()
 cube.bounds
 # Expected:
-## [-0.5, 0.5, -0.5, 0.5, -0.5, 0.5]
+## (-0.5, 0.5, -0.5, 0.5, -0.5, 0.5)

@@ -1066,8 +1066,30 @@
 <h1>points<a class="headerlink" href="#points" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.RectilinearGrid.points">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">RectilinearGrid.</span></span><span class="sig-name descname"><span class="pre">points</span></span><a class="headerlink" href="#pyvista.RectilinearGrid.points" title="この定義へのパーマリンク">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">RectilinearGrid.</span></span><span class="sig-name descname"><span class="pre">points</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.22)"><span class="pre">numpy.ndarray</span></a></em><a class="headerlink" href="#pyvista.RectilinearGrid.points" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>点のコピーをn x 3 numpy配列として取得します．</p>
+<p class="rubric">備考</p>
+<p>Points of a <a class="reference internal" href="pyvista.RectilinearGrid.html#pyvista.RectilinearGrid" title="pyvista.RectilinearGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.RectilinearGrid</span></code></a> cannot be
+set. Set point coordinates with <a class="reference internal" href="pyvista.RectilinearGrid.x.html#pyvista.RectilinearGrid.x" title="pyvista.RectilinearGrid.x"><code class="xref py py-attr docutils literal notranslate"><span class="pre">RectilinearGrid.x</span></code></a>,
+<a class="reference internal" href="pyvista.RectilinearGrid.y.html#pyvista.RectilinearGrid.y" title="pyvista.RectilinearGrid.y"><code class="xref py py-attr docutils literal notranslate"><span class="pre">RectilinearGrid.y</span></code></a>, or <a class="reference internal" href="pyvista.RectilinearGrid.z.html#pyvista.RectilinearGrid.z" title="pyvista.RectilinearGrid.z"><code class="xref py py-attr docutils literal notranslate"><span class="pre">RectilinearGrid.z</span></code></a>.</p>
+<p class="rubric">例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">xrng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">yrng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">zrng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">RectilinearGrid</span><span class="p">(</span><span class="n">xrng</span><span class="p">,</span> <span class="n">yrng</span><span class="p">,</span> <span class="n">zrng</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span><span class="o">.</span><span class="n">points</span>
+<span class="go">array([[-10., -10., -10.],</span>
+<span class="go">       [  0., -10., -10.],</span>
+<span class="go">       [-10.,   0., -10.],</span>
+<span class="go">       [  0.,   0., -10.],</span>
+<span class="go">       [-10., -10.,   0.],</span>
+<span class="go">       [  0., -10.,   0.],</span>
+<span class="go">       [-10.,   0.,   0.],</span>
+<span class="go">       [  0.,   0.,   0.]])</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </section>
