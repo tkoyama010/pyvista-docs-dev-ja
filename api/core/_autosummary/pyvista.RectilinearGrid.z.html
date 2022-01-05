@@ -1067,9 +1067,9 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.RectilinearGrid.z">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">RectilinearGrid.</span></span><span class="sig-name descname"><span class="pre">z</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.22)"><span class="pre">numpy.ndarray</span></a></em><a class="headerlink" href="#pyvista.RectilinearGrid.z" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return or set the coordinates along the Z-direction.</p>
+<dd><p>Z方向に沿った座標を返すか設定します．</p>
 <p class="rubric">例</p>
-<p>Return the z coordinates of a RectilinearGrid.</p>
+<p>RectilinearGrid のz座標を取得します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">xrng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
@@ -1080,7 +1080,7 @@
 <span class="go">array([-10.,   0.])</span>
 </pre></div>
 </div>
-<p>Set the z coordinates of a RectilinearGrid.</p>
+<p>RectilinearGrid のz座標を設定します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">10.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span><span class="o">.</span><span class="n">z</span>
 <span class="go">array([-10.,   0.,  10.])</span>
