@@ -21,10 +21,16 @@
       OpenFOAMReader.disable_all_cell_arrays
       
       
+      OpenFOAMReader.disable_all_patch_arrays
+      
+      
       OpenFOAMReader.disable_all_point_arrays
       
       
       OpenFOAMReader.disable_cell_array
+      
+      
+      OpenFOAMReader.disable_patch_array
       
       
       OpenFOAMReader.disable_point_array
@@ -33,13 +39,22 @@
       OpenFOAMReader.enable_all_cell_arrays
       
       
+      OpenFOAMReader.enable_all_patch_arrays
+      
+      
       OpenFOAMReader.enable_all_point_arrays
       
       
       OpenFOAMReader.enable_cell_array
       
       
+      OpenFOAMReader.enable_patch_array
+      
+      
       OpenFOAMReader.enable_point_array
+      
+      
+      OpenFOAMReader.patch_array_status
       
       
       OpenFOAMReader.point_array_status
@@ -73,19 +88,31 @@
       OpenFOAMReader.all_cell_arrays_status
       
       
+      OpenFOAMReader.all_patch_arrays_status
+      
+      
       OpenFOAMReader.all_point_arrays_status
       
       
       OpenFOAMReader.cell_array_names
       
       
+      OpenFOAMReader.cell_to_point_creation
+      
+      
       OpenFOAMReader.number_cell_arrays
+      
+      
+      OpenFOAMReader.number_patch_arrays
       
       
       OpenFOAMReader.number_point_arrays
       
       
       OpenFOAMReader.number_time_points
+      
+      
+      OpenFOAMReader.patch_array_names
       
       
       OpenFOAMReader.point_array_names

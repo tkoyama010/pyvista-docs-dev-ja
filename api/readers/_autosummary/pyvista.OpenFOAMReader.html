@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>pyvista.OpenFOAMReader &#8212; PyVista 0.33.dev0 ドキュメント</title>
+    <title>pyvista.OpenFOAMReader &#8212; PyVista 0.34.dev0 ドキュメント</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
   <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -300,6 +300,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.OpenFOAMReader.disable_all_patch_arrays.html">
+       disable_all_patch_arrays
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="pyvista.OpenFOAMReader.disable_all_point_arrays.html">
        disable_all_point_arrays
       </a>
@@ -307,6 +312,11 @@
      <li class="toctree-l3">
       <a class="reference internal" href="pyvista.OpenFOAMReader.disable_cell_array.html">
        disable_cell_array
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.OpenFOAMReader.disable_patch_array.html">
+       disable_patch_array
       </a>
      </li>
      <li class="toctree-l3">
@@ -320,6 +330,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.OpenFOAMReader.enable_all_patch_arrays.html">
+       enable_all_patch_arrays
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="pyvista.OpenFOAMReader.enable_all_point_arrays.html">
        enable_all_point_arrays
       </a>
@@ -330,8 +345,18 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.OpenFOAMReader.enable_patch_array.html">
+       enable_patch_array
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="pyvista.OpenFOAMReader.enable_point_array.html">
        enable_point_array
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.OpenFOAMReader.patch_array_status.html">
+       patch_array_status
       </a>
      </li>
      <li class="toctree-l3">
@@ -370,6 +395,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.OpenFOAMReader.all_patch_arrays_status.html">
+       all_patch_arrays_status
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="pyvista.OpenFOAMReader.all_point_arrays_status.html">
        all_point_arrays_status
       </a>
@@ -380,8 +410,18 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.OpenFOAMReader.cell_to_point_creation.html">
+       cell_to_point_creation
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="pyvista.OpenFOAMReader.number_cell_arrays.html">
        number_cell_arrays
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.OpenFOAMReader.number_patch_arrays.html">
+       number_patch_arrays
       </a>
      </li>
      <li class="toctree-l3">
@@ -392,6 +432,11 @@
      <li class="toctree-l3">
       <a class="reference internal" href="pyvista.OpenFOAMReader.number_time_points.html">
        number_time_points
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.OpenFOAMReader.patch_array_names.html">
+       patch_array_names
       </a>
      </li>
      <li class="toctree-l3">
@@ -534,11 +579,17 @@
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.disable_all_cell_arrays.html#pyvista.OpenFOAMReader.disable_all_cell_arrays" title="pyvista.OpenFOAMReader.disable_all_cell_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.disable_all_cell_arrays</span></code></a>()</p></td>
 <td><p>すべてのポイント配列を無効にします．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.disable_all_point_arrays.html#pyvista.OpenFOAMReader.disable_all_point_arrays" title="pyvista.OpenFOAMReader.disable_all_point_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.disable_all_point_arrays</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.disable_all_patch_arrays.html#pyvista.OpenFOAMReader.disable_all_patch_arrays" title="pyvista.OpenFOAMReader.disable_all_patch_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.disable_all_patch_arrays</span></code></a>()</p></td>
+<td><p>Disable reading of all patch arrays.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.disable_all_point_arrays.html#pyvista.OpenFOAMReader.disable_all_point_arrays" title="pyvista.OpenFOAMReader.disable_all_point_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.disable_all_point_arrays</span></code></a>()</p></td>
 <td><p>すべてのポイント配列を無効にします．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.disable_cell_array.html#pyvista.OpenFOAMReader.disable_cell_array" title="pyvista.OpenFOAMReader.disable_cell_array"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.disable_cell_array</span></code></a>(name)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.disable_cell_array.html#pyvista.OpenFOAMReader.disable_cell_array" title="pyvista.OpenFOAMReader.disable_cell_array"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.disable_cell_array</span></code></a>(name)</p></td>
 <td><p>名前付きのセル配列を無効にします．</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.disable_patch_array.html#pyvista.OpenFOAMReader.disable_patch_array" title="pyvista.OpenFOAMReader.disable_patch_array"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.disable_patch_array</span></code></a>(name)</p></td>
+<td><p>Disable reading of patch array.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.disable_point_array.html#pyvista.OpenFOAMReader.disable_point_array" title="pyvista.OpenFOAMReader.disable_point_array"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.disable_point_array</span></code></a>(name)</p></td>
 <td><p>名前の付いたポイント配列を無効にします．</p></td>
@@ -546,28 +597,37 @@
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.enable_all_cell_arrays.html#pyvista.OpenFOAMReader.enable_all_cell_arrays" title="pyvista.OpenFOAMReader.enable_all_cell_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.enable_all_cell_arrays</span></code></a>()</p></td>
 <td><p>すべてのポイント配列を有効にします．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.enable_all_point_arrays.html#pyvista.OpenFOAMReader.enable_all_point_arrays" title="pyvista.OpenFOAMReader.enable_all_point_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.enable_all_point_arrays</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.enable_all_patch_arrays.html#pyvista.OpenFOAMReader.enable_all_patch_arrays" title="pyvista.OpenFOAMReader.enable_all_patch_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.enable_all_patch_arrays</span></code></a>()</p></td>
+<td><p>Enable reading of all patch arrays.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.enable_all_point_arrays.html#pyvista.OpenFOAMReader.enable_all_point_arrays" title="pyvista.OpenFOAMReader.enable_all_point_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.enable_all_point_arrays</span></code></a>()</p></td>
 <td><p>すべてのポイントアレイを有効にします．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.enable_cell_array.html#pyvista.OpenFOAMReader.enable_cell_array" title="pyvista.OpenFOAMReader.enable_cell_array"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.enable_cell_array</span></code></a>(name)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.enable_cell_array.html#pyvista.OpenFOAMReader.enable_cell_array" title="pyvista.OpenFOAMReader.enable_cell_array"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.enable_cell_array</span></code></a>(name)</p></td>
 <td><p>名前付きのセル配列を有効にします．</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.enable_patch_array.html#pyvista.OpenFOAMReader.enable_patch_array" title="pyvista.OpenFOAMReader.enable_patch_array"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.enable_patch_array</span></code></a>(name)</p></td>
+<td><p>Enable reading of patch array.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.enable_point_array.html#pyvista.OpenFOAMReader.enable_point_array" title="pyvista.OpenFOAMReader.enable_point_array"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.enable_point_array</span></code></a>(name)</p></td>
 <td><p>名前付きの点状配列を有効にします．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.point_array_status.html#pyvista.OpenFOAMReader.point_array_status" title="pyvista.OpenFOAMReader.point_array_status"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.point_array_status</span></code></a>(name)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.patch_array_status.html#pyvista.OpenFOAMReader.patch_array_status" title="pyvista.OpenFOAMReader.patch_array_status"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.patch_array_status</span></code></a>(name)</p></td>
+<td><p>Return status of reading patch array.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.point_array_status.html#pyvista.OpenFOAMReader.point_array_status" title="pyvista.OpenFOAMReader.point_array_status"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.point_array_status</span></code></a>(name)</p></td>
 <td><p>名前付きのポイント配列の状態を取得します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.read.html#pyvista.OpenFOAMReader.read" title="pyvista.OpenFOAMReader.read"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.read</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.read.html#pyvista.OpenFOAMReader.read" title="pyvista.OpenFOAMReader.read"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.read</span></code></a>()</p></td>
 <td><p>ファイルのデータを読み込む．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.set_active_time_point.html#pyvista.OpenFOAMReader.set_active_time_point" title="pyvista.OpenFOAMReader.set_active_time_point"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.set_active_time_point</span></code></a>(time_point)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.set_active_time_point.html#pyvista.OpenFOAMReader.set_active_time_point" title="pyvista.OpenFOAMReader.set_active_time_point"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.set_active_time_point</span></code></a>(time_point)</p></td>
 <td><p>アクティブ時間やイテレーションをインデックスで設定します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.set_active_time_value.html#pyvista.OpenFOAMReader.set_active_time_value" title="pyvista.OpenFOAMReader.set_active_time_value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.set_active_time_value</span></code></a>(time_value)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.set_active_time_value.html#pyvista.OpenFOAMReader.set_active_time_value" title="pyvista.OpenFOAMReader.set_active_time_value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.set_active_time_value</span></code></a>(time_value)</p></td>
 <td><p>アクティブ時刻またはイテレーション値を設定します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.time_point_value.html#pyvista.OpenFOAMReader.time_point_value" title="pyvista.OpenFOAMReader.time_point_value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.time_point_value</span></code></a>(time_point)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.time_point_value.html#pyvista.OpenFOAMReader.time_point_value" title="pyvista.OpenFOAMReader.time_point_value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.time_point_value</span></code></a>(time_point)</p></td>
 <td><p>インデックスによるタイムポイントまたはイテレーションの値．</p></td>
 </tr>
 </tbody>
@@ -585,20 +645,32 @@
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.all_cell_arrays_status.html#pyvista.OpenFOAMReader.all_cell_arrays_status" title="pyvista.OpenFOAMReader.all_cell_arrays_status"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.all_cell_arrays_status</span></code></a></p></td>
 <td><p>すべてのセル配列の状態を返します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.all_point_arrays_status.html#pyvista.OpenFOAMReader.all_point_arrays_status" title="pyvista.OpenFOAMReader.all_point_arrays_status"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.all_point_arrays_status</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.all_patch_arrays_status.html#pyvista.OpenFOAMReader.all_patch_arrays_status" title="pyvista.OpenFOAMReader.all_patch_arrays_status"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.all_patch_arrays_status</span></code></a></p></td>
+<td><p>Status of reading all patch arrays.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.all_point_arrays_status.html#pyvista.OpenFOAMReader.all_point_arrays_status" title="pyvista.OpenFOAMReader.all_point_arrays_status"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.all_point_arrays_status</span></code></a></p></td>
 <td><p>すべての点配列の状態を返します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.cell_array_names.html#pyvista.OpenFOAMReader.cell_array_names" title="pyvista.OpenFOAMReader.cell_array_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.cell_array_names</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.cell_array_names.html#pyvista.OpenFOAMReader.cell_array_names" title="pyvista.OpenFOAMReader.cell_array_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.cell_array_names</span></code></a></p></td>
 <td><p>すべてのセル配列名のリストを返します．</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.cell_to_point_creation.html#pyvista.OpenFOAMReader.cell_to_point_creation" title="pyvista.OpenFOAMReader.cell_to_point_creation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.cell_to_point_creation</span></code></a></p></td>
+<td><p>Whether cell data is translated to point data when read.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.number_cell_arrays.html#pyvista.OpenFOAMReader.number_cell_arrays" title="pyvista.OpenFOAMReader.number_cell_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.number_cell_arrays</span></code></a></p></td>
 <td><p>セル配列の数を返します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.number_point_arrays.html#pyvista.OpenFOAMReader.number_point_arrays" title="pyvista.OpenFOAMReader.number_point_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.number_point_arrays</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.number_patch_arrays.html#pyvista.OpenFOAMReader.number_patch_arrays" title="pyvista.OpenFOAMReader.number_patch_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.number_patch_arrays</span></code></a></p></td>
+<td><p>Return number of patch arrays in dataset.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.number_point_arrays.html#pyvista.OpenFOAMReader.number_point_arrays" title="pyvista.OpenFOAMReader.number_point_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.number_point_arrays</span></code></a></p></td>
 <td><p>ポイント配列の数を返します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.number_time_points.html#pyvista.OpenFOAMReader.number_time_points" title="pyvista.OpenFOAMReader.number_time_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.number_time_points</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.number_time_points.html#pyvista.OpenFOAMReader.number_time_points" title="pyvista.OpenFOAMReader.number_time_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.number_time_points</span></code></a></p></td>
 <td><p>読み取り可能なタイムポイントまたはイタレーションの数を返します．</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.patch_array_names.html#pyvista.OpenFOAMReader.patch_array_names" title="pyvista.OpenFOAMReader.patch_array_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.patch_array_names</span></code></a></p></td>
+<td><p>Names of patch arrays in a list.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.point_array_names.html#pyvista.OpenFOAMReader.point_array_names" title="pyvista.OpenFOAMReader.point_array_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.point_array_names</span></code></a></p></td>
 <td><p>すべてのポイント配列名のリストを返します．</p></td>

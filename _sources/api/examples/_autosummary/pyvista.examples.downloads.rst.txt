@@ -33,6 +33,7 @@
       download_cake_easy_texture
       download_carburator
       download_carotid
+      download_cavity
       download_clown
       download_coastlines
       download_cow
