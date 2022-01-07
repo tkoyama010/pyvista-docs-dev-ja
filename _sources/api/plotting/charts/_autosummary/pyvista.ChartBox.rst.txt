@@ -15,6 +15,9 @@
    
       
       
+      ChartBox.deep_clean
+      
+      
       ChartBox.show
       
       

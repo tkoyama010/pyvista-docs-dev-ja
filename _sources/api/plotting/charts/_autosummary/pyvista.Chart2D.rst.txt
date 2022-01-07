@@ -24,6 +24,9 @@
       Chart2D.clear
       
       
+      Chart2D.deep_clean
+      
+      
       Chart2D.hide_axes
       
       

@@ -1,0 +1,6 @@
+deep\_clean
+===========
+
+.. currentmodule:: pyvista
+
+.. automethod:: Chart2D.deep_clean
