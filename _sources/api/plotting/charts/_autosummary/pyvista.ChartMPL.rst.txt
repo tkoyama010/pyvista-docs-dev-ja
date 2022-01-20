@@ -15,9 +15,6 @@
    
       
       
-      ChartMPL.deep_clean
-      
-      
       ChartMPL.show
       
       

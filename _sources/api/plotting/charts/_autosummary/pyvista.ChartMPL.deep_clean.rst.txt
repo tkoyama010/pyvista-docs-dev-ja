@@ -1,6 +1,0 @@
-deep\_clean
-===========
-
-.. currentmodule:: pyvista
-
-.. automethod:: ChartMPL.deep_clean

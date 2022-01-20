@@ -15,9 +15,6 @@
    
       
       
-      ChartPie.deep_clean
-      
-      
       ChartPie.show
       
       
