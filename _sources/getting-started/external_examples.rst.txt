@@ -21,6 +21,34 @@ https://github.com/pyvista and we would be glad to add it!
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="I like the Python library PyVista very much. In this blog post I show a sample of the animations I realized with this library.">
+
+.. only:: html
+
+    .. figure:: ../images/external-examples/Duoprism_3-30.gif
+       :target: https://laustep.github.io/stlahblog/posts/MyPyVistaArtworks.html
+
+       My PyVista artworks
+
+
+
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   My PyVista artworks <https://laustep.github.io/stlahblog/posts/MyPyVistaArtworks.html>
+
+
+
+
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="An open-source application for vasculature dataset analysis and visualization">
 
 .. only:: html
