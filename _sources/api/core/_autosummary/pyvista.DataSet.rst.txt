@@ -159,6 +159,9 @@
       DataSet.find_closest_point
       
       
+      DataSet.find_containing_cell
+      
+      
       DataSet.flip_normal
       
       

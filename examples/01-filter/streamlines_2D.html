@@ -288,7 +288,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../00-load/load-gltf.html">
-   Working with glTF Files
+   glTFファイルの取り扱いについて
   </a>
  </li>
 </ul>
@@ -1079,8 +1079,7 @@
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 </pre></div>
 </div>
-<p>The data is multiblock with the fluid data as the first block.
-The data lies in the <cite>xy</cite> plane, i.e. <cite>z=0</cite>, with no <cite>z</cite> velocity.</p>
+<p>データはマルチブロックで，流体データが最初のブロックとなっています．データは <cite>xy</cite> 平面上，つまり <cite>z=0</cite> で， <cite>z</cite> 方向の速度はありません．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_cylinder_crossflow</span><span class="p">()</span>
 <span class="n">fluid_mesh</span> <span class="o">=</span> <span class="n">mesh</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">fluid_mesh</span><span class="p">)</span>
@@ -1096,12 +1095,7 @@ The data lies in the <cite>xy</cite> plane, i.e. <cite>z=0</cite>, with no <cite
   N Arrays:     3
 </pre></div>
 </div>
-<p>The default behavior of the <a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSetFilters.streamlines.html#pyvista.DataSetFilters.streamlines" title="pyvista.DataSetFilters.streamlines"><code class="xref py py-func docutils literal notranslate"><span class="pre">streamlines()</span></code></a> filter is to use a 3D sphere source as
-the seed points.  This often will not generate any seed points on the 2D
-plane of interest.  Instead, a single streamline can be generated using the
-<code class="docutils literal notranslate"><span class="pre">start_position</span></code> argument. The <code class="docutils literal notranslate"><span class="pre">surface_streamlines=True</span></code> argument is
-also needed if the dataset has nonzero normal velocity component.  This is
-not the case in this dataset.</p>
+<p><a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSetFilters.streamlines.html#pyvista.DataSetFilters.streamlines" title="pyvista.DataSetFilters.streamlines"><code class="xref py py-func docutils literal notranslate"><span class="pre">streamlines()</span></code></a> フィルタのデフォルトの動作は，3Dの球体ソースを種点として使用することです．これは多くの場合，対象となる2D平面上にシードポイントを生成しません． 代わりに， <code class="docutils literal notranslate"><span class="pre">start_position</span></code> の引数を使って，単一のストリームラインを生成することができます． <code class="docutils literal notranslate"><span class="pre">surface_streamlines=True</span></code> という引数も，データセットが非ゼロの法線速度成分を持っている場合に必要です． このデータセットではそのようなことはありません．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">one_streamline</span> <span class="o">=</span> <span class="n">fluid_mesh</span><span class="o">.</span><span class="n">streamlines</span><span class="p">(</span>
     <span class="n">start_position</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.</span><span class="p">),</span>
     <span class="n">max_time</span> <span class="o">=</span> <span class="mf">100.</span><span class="p">,</span>
@@ -1123,8 +1117,7 @@ not the case in this dataset.</p>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="n">camera_position</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_streamlines_2D_001.png" srcset="../../_images/sphx_glr_streamlines_2D_001.png" alt="streamlines 2D" class = "sphx-glr-single-img"/><p>To generate multiple streamlines, a line source can be used with the <code class="docutils literal notranslate"><span class="pre">pointa</span></code>
-and <code class="docutils literal notranslate"><span class="pre">pointb</span></code> parameters.</p>
+<img src="../../_images/sphx_glr_streamlines_2D_001.png" srcset="../../_images/sphx_glr_streamlines_2D_001.png" alt="streamlines 2D" class = "sphx-glr-single-img"/><p>複数のストリームラインを生成するには，ラインソースを <code class="docutils literal notranslate"><span class="pre">pointa</span></code> および <code class="docutils literal notranslate"><span class="pre">pointb</span></code> パラメータとともに使用します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">line_streamlines</span> <span class="o">=</span> <span class="n">fluid_mesh</span><span class="o">.</span><span class="n">streamlines</span><span class="p">(</span>
     <span class="n">pointa</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
     <span class="n">pointb</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
@@ -1142,10 +1135,7 @@ and <code class="docutils literal notranslate"><span class="pre">pointb</span></
 </pre></div>
 </div>
 <img src="../../_images/sphx_glr_streamlines_2D_002.png" srcset="../../_images/sphx_glr_streamlines_2D_002.png" alt="streamlines 2D" class = "sphx-glr-single-img"/><p>シリンダーのすぐ下流の挙動は，入口の流線ではまだわかりません．</p>
-<p>Another method is to use <a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSetFilters.streamlines_evenly_spaced_2D.html#pyvista.DataSetFilters.streamlines_evenly_spaced_2D" title="pyvista.DataSetFilters.streamlines_evenly_spaced_2D"><code class="xref py py-func docutils literal notranslate"><span class="pre">streamlines_evenly_spaced_2D()</span></code></a>.
-This filter only works with 2D data that lies on the xy plane. This method
-can quickly run of memory, so particular attention must be paid to the input
-parameters.  The defaults are in cell length units.</p>
+<p>もう一つの方法は， <a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSetFilters.streamlines_evenly_spaced_2D.html#pyvista.DataSetFilters.streamlines_evenly_spaced_2D" title="pyvista.DataSetFilters.streamlines_evenly_spaced_2D"><code class="xref py py-func docutils literal notranslate"><span class="pre">streamlines_evenly_spaced_2D()</span></code></a> を使うことです．このフィルタは，xy平面上にある2Dデータに対してのみ動作します．このメソッドはすぐにメモリ不足になってしまうので，入力パラメータには特に注意を払う必要があります． デフォルトではセルの長さ単位で表示されます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">line_streamlines</span> <span class="o">=</span> <span class="n">fluid_mesh</span><span class="o">.</span><span class="n">streamlines_evenly_spaced_2D</span><span class="p">(</span>
     <span class="n">start_position</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.</span><span class="p">),</span>
     <span class="n">separating_distance</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>

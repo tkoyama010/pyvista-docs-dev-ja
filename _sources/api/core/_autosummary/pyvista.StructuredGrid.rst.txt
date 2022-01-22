@@ -168,6 +168,9 @@
       StructuredGrid.find_closest_point
       
       
+      StructuredGrid.find_containing_cell
+      
+      
       StructuredGrid.flip_normal
       
       

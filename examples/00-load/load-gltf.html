@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Working with glTF Files &#8212; PyVista 0.34.dev0 ドキュメント</title>
+    <title>glTFファイルの取り扱いについて &#8212; PyVista 0.34.dev0 ドキュメント</title>
     
     <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -288,7 +288,7 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Working with glTF Files
+   glTFファイルの取り扱いについて
   </a>
  </li>
 </ul>
@@ -1069,10 +1069,8 @@
 <p><a class="reference internal" href="#sphx-glr-download-examples-00-load-load-gltf-py"><span class="std std-ref">ここ</span></a> をクリックすると完全なサンプルコードをダウンロードできます．</p>
 </div>
 <section class="sphx-glr-example-title" id="working-with-gltf-files">
-<span id="load-gltf"></span><span id="sphx-glr-examples-00-load-load-gltf-py"></span><h1>Working with glTF Files<a class="headerlink" href="#working-with-gltf-files" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Import a glTF file directly into a PyVista plotting scene.  For more
-details regarding the glTF format, see:
-<a class="reference external" href="https://www.khronos.org/gltf/">https://www.khronos.org/gltf/</a></p>
+<span id="load-gltf"></span><span id="sphx-glr-examples-00-load-load-gltf-py"></span><h1>glTFファイルの取り扱いについて<a class="headerlink" href="#working-with-gltf-files" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>glTFファイルをPyVistaのプロッティングシーンに直接インポートできます． glTFフォーマットの詳細については， <a class="reference external" href="https://www.khronos.org/gltf/">https://www.khronos.org/gltf/</a> を参照してください．</p>
 <p>この機能は <code class="docutils literal notranslate"><span class="pre">vtk&gt;=9</span></code> だけで使用できます．</p>
 <p>まず，サンプルをダウンロードします． なお，ここではハイダイナミックレンジのテクスチャを使用していますが，これはglTFファイルが一般的に物理ベースのレンダリングを含んでおり，VTK v9がハイダイナミックレンジのテクスチャをサポートしているためです．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span>

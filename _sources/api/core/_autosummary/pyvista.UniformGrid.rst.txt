@@ -168,6 +168,9 @@
       UniformGrid.find_closest_point
       
       
+      UniformGrid.find_containing_cell
+      
+      
       UniformGrid.flip_normal
       
       

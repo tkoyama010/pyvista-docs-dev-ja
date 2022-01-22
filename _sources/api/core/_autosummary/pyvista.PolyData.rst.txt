@@ -216,6 +216,9 @@
       PolyData.find_closest_point
       
       
+      PolyData.find_containing_cell
+      
+      
       PolyData.flip_normal
       
       

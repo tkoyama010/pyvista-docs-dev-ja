@@ -162,6 +162,9 @@
       RectilinearGrid.find_closest_point
       
       
+      RectilinearGrid.find_containing_cell
+      
+      
       RectilinearGrid.flip_normal
       
       

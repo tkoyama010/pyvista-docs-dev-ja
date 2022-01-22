@@ -288,7 +288,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../00-load/load-gltf.html">
-   Working with glTF Files
+   glTFファイルの取り扱いについて
   </a>
  </li>
 </ul>
@@ -1095,10 +1095,8 @@
 </div>
 <section class="sphx-glr-example-title" id="marching-cubes">
 <span id="marching-cubes-example"></span><span id="sphx-glr-examples-01-filter-flying-edges-py"></span><h1>マーチングキューブ<a class="headerlink" href="#marching-cubes" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Generate a surface from a scalar field using the flying edges and
-marching cubes filters as provided by the <a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSetFilters.contour.html#pyvista.DataSetFilters.contour" title="pyvista.DataSetFilters.contour"><code class="xref py py-func docutils literal notranslate"><span class="pre">contour</span></code></a> filter.</p>
-<p>Special thanks to GitHub user <a class="reference external" href="https://gist.github.com/stla">stla</a>
-for providing examples.</p>
+<p><a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSetFilters.contour.html#pyvista.DataSetFilters.contour" title="pyvista.DataSetFilters.contour"><code class="xref py py-func docutils literal notranslate"><span class="pre">contour</span></code></a> フィルタで提供されるフライングエッジとマーチングキューブのフィルタを使って，スカラーフィールドから曲面を生成します．</p>
+<p>例題を提供してくれたGitHubユーザーの <a class="reference external" href="https://gist.github.com/stla">stla</a> に感謝します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
@@ -1142,8 +1140,7 @@ for providing examples.</p>
 <img src="../../_images/sphx_glr_flying_edges_001.png" srcset="../../_images/sphx_glr_flying_edges_001.png" alt="flying edges" class = "sphx-glr-single-img"/></section>
 <section id="barth-sextic">
 <h1>バースセクスィック<a class="headerlink" href="#barth-sextic" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Use the flying edges algorithm to extract the isosurface
-generated from the Barth sextic function.</p>
+<p>flying edgesアルゴリズムを使用して， Barth sextic 関数から生成された等値面を抽出します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">phi</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span> <span class="o">/</span> <span class="mi">2</span>
 <span class="n">phi2</span> <span class="o">=</span> <span class="n">phi</span> <span class="o">*</span> <span class="n">phi</span>
 <span class="k">def</span> <span class="nf">barth_sextic</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
@@ -1182,8 +1179,7 @@ generated from the Barth sextic function.</p>
 <img src="../../_images/sphx_glr_flying_edges_002.png" srcset="../../_images/sphx_glr_flying_edges_002.png" alt="flying edges" class = "sphx-glr-single-img"/></section>
 <section id="animate-barth-sextic">
 <h1>バースセクスィックのアニメーション<a class="headerlink" href="#animate-barth-sextic" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Show 15 frames of various isocurves extracted from the Barth sextic
-function.</p>
+<p>Barth sextic関数から抽出した様々なアイソカーブの15フレームを表示します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">angle_to_range</span><span class="p">(</span><span class="n">angle</span><span class="p">):</span>
     <span class="k">return</span> <span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
 

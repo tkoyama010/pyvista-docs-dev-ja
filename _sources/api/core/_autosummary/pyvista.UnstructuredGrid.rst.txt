@@ -168,6 +168,9 @@
       UnstructuredGrid.find_closest_point
       
       
+      UnstructuredGrid.find_containing_cell
+      
+      
       UnstructuredGrid.flip_normal
       
       
