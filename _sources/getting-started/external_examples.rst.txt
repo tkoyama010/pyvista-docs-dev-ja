@@ -21,14 +21,14 @@ https://github.com/pyvista and we would be glad to add it!
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="I like the Python library PyVista very much. In this blog post I show a sample of the animations I realized with this library.">
+    <div class="sphx-glr-thumbcontainer" tooltip="Stéphane Laurent's blog showing a sample of the animations they realized with PyVista.">
 
 .. only:: html
 
     .. figure:: ../images/external-examples/Duoprism_3-30.gif
        :target: https://laustep.github.io/stlahblog/posts/MyPyVistaArtworks.html
 
-       My PyVista artworks
+       Stéphane Laurent's artwork
 
 
 
@@ -41,7 +41,7 @@ https://github.com/pyvista and we would be glad to add it!
 .. toctree::
    :hidden:
 
-   My PyVista artworks <https://laustep.github.io/stlahblog/posts/MyPyVistaArtworks.html>
+   Stéphane Laurent's artwork <https://laustep.github.io/stlahblog/posts/MyPyVistaArtworks.html>
 
 
 
