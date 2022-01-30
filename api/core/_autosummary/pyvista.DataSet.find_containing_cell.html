@@ -1071,7 +1071,7 @@
 <span class="go">-1</span>
 </pre></div>
 </div>
-<p>Find the cells that contain 1000 random points inside the mesh.</p>
+<p>メッシュ内の1000個のランダムな点を含むセルを見つけます。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">indices</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">find_containing_cell</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>

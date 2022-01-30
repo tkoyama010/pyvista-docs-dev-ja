@@ -1090,11 +1090,7 @@
 <span class="go">(5000,)</span>
 </pre></div>
 </div>
-<p>For the closest cell, find the point inside the cell that is
-closest to the supplied point.  The rectangle is a unit square
-with 1 cell and 4 nodal points at the corners in the plane with
-<code class="docutils literal notranslate"><span class="pre">z</span></code> normal and <code class="docutils literal notranslate"><span class="pre">z=0</span></code>.  The closest point inside the cell is
-not usually at a nodal point.</p>
+<p>最も近いセルについて、与えられた点に最も近いセル内の点を求めよ。 長方形は単位正方形で、1つのセルと、法線 <code class="docutils literal notranslate"><span class="pre">z</span></code> と <code class="docutils literal notranslate"><span class="pre">z=0</span></code> の平面上の角にある4つの節点からなる。 セル内の最も近い点は、通常、節点にはない。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">unit_square</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Rectangle</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">index</span><span class="p">,</span> <span class="n">closest_point</span> <span class="o">=</span> <span class="n">unit_square</span><span class="o">.</span><span class="n">find_closest_cell</span><span class="p">(</span>
 <span class="gp">... </span>    <span class="p">[</span><span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span>
@@ -1104,9 +1100,7 @@ not usually at a nodal point.</p>
 <span class="go">array([0.25, 0.25, 0.  ])</span>
 </pre></div>
 </div>
-<p>But, the closest point can be a nodal point, although the index of
-that point is not returned.  If the closest nodal point by index is
-desired, see <a class="reference internal" href="pyvista.DataSet.find_closest_point.html#pyvista.DataSet.find_closest_point" title="pyvista.DataSet.find_closest_point"><code class="xref py py-func docutils literal notranslate"><span class="pre">DataSet.find_closest_point()</span></code></a>.</p>
+<p>しかし、最も近い点は、その点のインデックスを返さないが、ノーダル点であることができる。 もしインデックスに最も近いノーダルポイントを取得したい場合は、 <a class="reference internal" href="pyvista.DataSet.find_closest_point.html#pyvista.DataSet.find_closest_point" title="pyvista.DataSet.find_closest_point"><code class="xref py py-func docutils literal notranslate"><span class="pre">DataSet.find_closest_point()</span></code></a> を参照してください。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">index</span><span class="p">,</span> <span class="n">closest_point</span> <span class="o">=</span> <span class="n">unit_square</span><span class="o">.</span><span class="n">find_closest_cell</span><span class="p">(</span>
 <span class="gp">... </span>    <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span>
 <span class="gp">... </span>    <span class="n">return_closest_point</span><span class="o">=</span><span class="kc">True</span>

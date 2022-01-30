@@ -21,6 +21,34 @@ https://github.com/pyvista and we would be glad to add it!
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="Ptera Software is a fast, easy-to-use, and open-source software package for analyzing flapping-wing flight.">
+
+.. only:: html
+
+    .. figure:: ../images/external-examples/ptera_software.gif
+       :target: https://github.com/camurban/pterasoftware
+
+       PteraSoftware
+
+
+
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   PteraSoftware <https://github.com/camurban/pterasoftware>
+
+
+
+
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="Stéphane Laurent's blog showing a sample of the animations they realized with PyVista.">
 
 .. only:: html
