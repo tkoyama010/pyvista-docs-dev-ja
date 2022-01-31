@@ -1118,7 +1118,7 @@
 <dd class="field-odd"><dl>
 <dt><strong>point</strong><span class="classifier">Sequence(python:float) または np.ndarray</span></dt><dd><p>照会する点の座標（長さ3），または形状 <code class="docutils literal notranslate"><span class="pre">(n,</span> <span class="pre">3)</span></code> の <code class="docutils literal notranslate"><span class="pre">n</span></code> 点の <code class="docutils literal notranslate"><span class="pre">numpy</span></code> 配列です．</p>
 </dd>
-<dt><strong>return_closest_point</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> の場合、メッシュセル内でその点に最も近い点を返します。 これは必ずしもメッシュ上の最も近いノーダルポイントであるとは限りません。 デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です。</p>
+<dt><strong>return_closest_point</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，メッシュセル内でその点に最も近い点を返します． これは必ずしもメッシュ上の最も近いノーダルポイントであるとは限りません． デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です．</p>
 </dd>
 </dl>
 </dd>
@@ -1126,7 +1126,7 @@
 <dd class="field-even"><dl class="simple">
 <dt><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a> or <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.22)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a></dt><dd><p>指定した点(複数可)に最も近い，このメッシュ内のセルのインデックスです．</p>
 </dd>
-<dt><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.22)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a></dt><dd><p>与えられた点(複数可)に最も近い、メッシュのセル内にある点です。 これは <code class="docutils literal notranslate"><span class="pre">return_closest_point=True</span></code> の場合にのみ返されます。</p>
+<dt><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.22)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a></dt><dd><p>与えられた点(複数可)に最も近い，メッシュのセル内にある点です． これは <code class="docutils literal notranslate"><span class="pre">return_closest_point=True</span></code> の場合にのみ返されます．</p>
 </dd>
 </dl>
 </dd>
@@ -1170,7 +1170,7 @@
 <span class="go">(5000,)</span>
 </pre></div>
 </div>
-<p>最も近いセルについて、与えられた点に最も近いセル内の点を求めよ。 長方形は単位正方形で、1つのセルと、法線 <code class="docutils literal notranslate"><span class="pre">z</span></code> と <code class="docutils literal notranslate"><span class="pre">z=0</span></code> の平面上の角にある4つの節点からなる。 セル内の最も近い点は、通常、節点にはない。</p>
+<p>最も近いセルについて，与えられた点に最も近いセル内の点を求めよ． 長方形は単位正方形で，1つのセルと，法線 <code class="docutils literal notranslate"><span class="pre">z</span></code> と <code class="docutils literal notranslate"><span class="pre">z=0</span></code> の平面上の角にある4つの節点からなる． セル内の最も近い点は，通常，節点にはない．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">unit_square</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Rectangle</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">index</span><span class="p">,</span> <span class="n">closest_point</span> <span class="o">=</span> <span class="n">unit_square</span><span class="o">.</span><span class="n">find_closest_cell</span><span class="p">(</span>
 <span class="gp">... </span>    <span class="p">[</span><span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span>
@@ -1180,7 +1180,7 @@
 <span class="go">array([0.25, 0.25, 0.  ])</span>
 </pre></div>
 </div>
-<p>しかし、最も近い点は、その点のインデックスを返さないが、ノーダル点であることができる。 もしインデックスに最も近いノーダルポイントを取得したい場合は、 <a class="reference internal" href="pyvista.DataSet.find_closest_point.html#pyvista.DataSet.find_closest_point" title="pyvista.DataSet.find_closest_point"><code class="xref py py-func docutils literal notranslate"><span class="pre">DataSet.find_closest_point()</span></code></a> を参照してください。</p>
+<p>しかし，最も近い点は，その点のインデックスを返さないが，ノーダル点であることができる． もしインデックスに最も近いノーダルポイントを取得したい場合は， <a class="reference internal" href="pyvista.DataSet.find_closest_point.html#pyvista.DataSet.find_closest_point" title="pyvista.DataSet.find_closest_point"><code class="xref py py-func docutils literal notranslate"><span class="pre">DataSet.find_closest_point()</span></code></a> を参照してください．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">index</span><span class="p">,</span> <span class="n">closest_point</span> <span class="o">=</span> <span class="n">unit_square</span><span class="o">.</span><span class="n">find_closest_cell</span><span class="p">(</span>
 <span class="gp">... </span>    <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span>
 <span class="gp">... </span>    <span class="n">return_closest_point</span><span class="o">=</span><span class="kc">True</span>

@@ -464,7 +464,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>vtkDoubleArray (0x5621bc238590)
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>vtkDoubleArray (0x55ea039b8a10)
   Debug: Off
   Modified Time: 56030
   Reference Count: 1
@@ -854,7 +854,7 @@ Contains arrays :
 <figure class="align-default">
 <img alt="../_images/data_model-8_00_00.png" src="../_images/data_model-8_00_00.png" />
 </figure>
-<p><code class="docutils literal notranslate"><span class="pre">[]</span></code> 演算子を使って <a class="reference internal" href="../api/core/_autosummary/pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataSet</span></code></a> にセルデータを割り当て続けることができますが，新しいアレイをアクティブなアレイにしたくない場合は， <code class="xref py py-func docutils literal notranslate"><span class="pre">set_array()</span></code> を使って追加することができます．</p>
+<p><code class="docutils literal notranslate"><span class="pre">[]</span></code> 演算子を使って <a class="reference internal" href="../api/core/_autosummary/pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataSet</span></code></a> にセルデータを割り当て続けることができますが，新しいアレイをアクティブなアレイにしたくない場合は， <a class="reference internal" href="../api/core/_autosummary/pyvista.DataSetAttributes.set_array.html#pyvista.DataSetAttributes.set_array" title="pyvista.DataSetAttributes.set_array"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_array()</span></code></a> を使って追加することができます．</p>
 <div class="jupyter_cell jupyter_container docutils container">
 <div class="cell_input code_cell docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ugrid</span><span class="o">.</span><span class="n">n_cells</span><span class="p">)</span>
@@ -952,7 +952,7 @@ Contains arrays :
 <figure class="align-default">
 <img alt="../_images/data_model-10_00_00.png" src="../_images/data_model-10_00_00.png" />
 </figure>
-<p>また， <a class="reference internal" href="#pyvista-data-model-cell-data"><span class="std std-ref">セルデータ</span></a> と同様に， <code class="xref py py-func docutils literal notranslate"><span class="pre">set_array()</span></code> を使って， <a class="reference internal" href="../api/core/_autosummary/pyvista.DataSet.point_data.html#pyvista.DataSet.point_data" title="pyvista.DataSet.point_data"><code class="xref py py-attr docutils literal notranslate"><span class="pre">point_data</span></code></a> に複数の配列を割り当てることができます．</p>
+<p>また， <a class="reference internal" href="#pyvista-data-model-cell-data"><span class="std std-ref">セルデータ</span></a> と同様に， <a class="reference internal" href="../api/core/_autosummary/pyvista.DataSetAttributes.set_array.html#pyvista.DataSetAttributes.set_array" title="pyvista.DataSetAttributes.set_array"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_array()</span></code></a> を使って， <a class="reference internal" href="../api/core/_autosummary/pyvista.DataSet.point_data.html#pyvista.DataSet.point_data" title="pyvista.DataSet.point_data"><code class="xref py py-attr docutils literal notranslate"><span class="pre">point_data</span></code></a> に複数の配列を割り当てることができます．</p>
 <div class="jupyter_cell jupyter_container docutils container">
 <div class="cell_input code_cell docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ugrid</span><span class="o">.</span><span class="n">n_points</span><span class="p">)</span>

@@ -1092,10 +1092,10 @@
 <span id="sphx-glr-examples-01-filter-distance-between-surfaces-py"></span><h1>2つのサーフェス間の距離<a class="headerlink" href="#distance-between-two-surfaces" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>2つのサーフェス間の平均厚みを計算します．</p>
 <p>たとえば，地下地質モデルの岩石層の境界を表す2つのサーフェスがあり，それらの境界間の単位の平均厚さを知りたいとします．</p>
-<p>この例では、用語を明確にすることが重要です。 メッシュポイントは、メッシュ上の各セルの頂点に存在します。 <a class="reference internal" href="../../user-guide/what-is-a-mesh.html#what-is-a-mesh"><span class="std std-ref">メッシュとは?</span></a> を参照してください。この例の各セルは、無限の空間ポイントを含む2Dの空間領域を包含しています。これらの空間ポイントはメッシュポイントではありません。2つのサーフェス間の距離は、文脈や使用方法によって異なる意味を持ちます。 ここでの各例では、下のメッシュの頂点から上のメッシュまでの距離の異なる側面を探っています。</p>
-<p>まず、下面の頂点の法線を計算し、上面に光線を投影して、表面の法線に沿った距離を計算する方法をデモします。このレイは通常、メッシュのセル内の空間点で上面と交差します。</p>
-<p>次に、KDTreeを使って、下のメッシュの各頂点から上のメッシュの最も近い頂点までの距離を計算します。</p>
-<p>最後に、PyVistaのフィルタである <a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSet.find_closest_cell.html#pyvista.DataSet.find_closest_cell" title="pyvista.DataSet.find_closest_cell"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSet.find_closest_cell()</span></code></a> を使って、下のメッシュのすべての頂点から、上のメッシュのセル内にある最も近い空間点までの距離を計算します。 これは、最初の2つの例とは異なり、頂点点から上面までの最短距離となります。</p>
+<p>この例では，用語を明確にすることが重要です． メッシュポイントは，メッシュ上の各セルの頂点に存在します． <a class="reference internal" href="../../user-guide/what-is-a-mesh.html#what-is-a-mesh"><span class="std std-ref">メッシュとは?</span></a> を参照してください．この例の各セルは，無限の空間ポイントを含む2Dの空間領域を包含しています．これらの空間ポイントはメッシュポイントではありません．2つのサーフェス間の距離は，文脈や使用方法によって異なる意味を持ちます． ここでの各例では，下のメッシュの頂点から上のメッシュまでの距離の異なる側面を探っています．</p>
+<p>まず，下面の頂点の法線を計算し，上面に光線を投影して，表面の法線に沿った距離を計算する方法をデモします．このレイは通常，メッシュのセル内の空間点で上面と交差します．</p>
+<p>次に，KDTreeを使って，下のメッシュの各頂点から上のメッシュの最も近い頂点までの距離を計算します．</p>
+<p>最後に，PyVistaのフィルタである <a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSet.find_closest_cell.html#pyvista.DataSet.find_closest_cell" title="pyvista.DataSet.find_closest_cell"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSet.find_closest_cell()</span></code></a> を使って，下のメッシュのすべての頂点から，上のメッシュのセル内にある最も近い空間点までの距離を計算します． これは，最初の2つの例とは異なり，頂点点から上面までの最短距離となります．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
@@ -1182,7 +1182,7 @@
 <img src="../../_images/sphx_glr_distance-between-surfaces_003.png" srcset="../../_images/sphx_glr_distance-between-surfaces_003.png" alt="distance between surfaces" class = "sphx-glr-single-img"/></section>
 <section id="using-pyvista-filter">
 <h2>PyVistaフィルタの使い方<a class="headerlink" href="#using-pyvista-filter" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p><a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSet.find_closest_cell.html#pyvista.DataSet.find_closest_cell" title="pyvista.DataSet.find_closest_cell"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSet.find_closest_cell()</span></code></a> フィルタは、上面のセルの中で、下面の頂点ポイントに最も近い空間ポイントを返します。 <code class="docutils literal notranslate"><span class="pre">return_closest_point=True</span></code> を使用すると、 <code class="docutils literal notranslate"><span class="pre">closest_points</span></code> が返されます。</p>
+<p><a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSet.find_closest_cell.html#pyvista.DataSet.find_closest_cell" title="pyvista.DataSet.find_closest_cell"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSet.find_closest_cell()</span></code></a> フィルタは，上面のセルの中で，下面の頂点ポイントに最も近い空間ポイントを返します． <code class="docutils literal notranslate"><span class="pre">return_closest_point=True</span></code> を使用すると， <code class="docutils literal notranslate"><span class="pre">closest_points</span></code> が返されます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">closest_cells</span><span class="p">,</span> <span class="n">closest_points</span> <span class="o">=</span> <span class="n">h1</span><span class="o">.</span><span class="n">find_closest_cell</span><span class="p">(</span><span class="n">h0</span><span class="o">.</span><span class="n">points</span><span class="p">,</span>
                                                      <span class="n">return_closest_point</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">d_exact</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">h0</span><span class="o">.</span><span class="n">points</span> <span class="o">-</span> <span class="n">closest_points</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -1194,7 +1194,7 @@
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>4.841284537743174
 </pre></div>
 </div>
-<p>予想通り、この方法とKDTree法の間にはわずかな違いしかありません。</p>
+<p>予想通り，この方法とKDTree法の間にはわずかな違いしかありません．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">h0</span><span class="p">,</span> <span class="n">scalars</span><span class="o">=</span><span class="s2">&quot;distances&quot;</span><span class="p">,</span> <span class="n">smooth_shading</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">h1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span> <span class="n">smooth_shading</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
