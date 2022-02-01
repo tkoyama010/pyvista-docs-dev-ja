@@ -1070,13 +1070,18 @@
 </div>
 <section class="sphx-glr-example-title" id="create-a-gif-movie">
 <span id="gif-movie-example"></span><span id="sphx-glr-examples-02-plot-gif-py"></span><h1>GIFムービーの作成<a class="headerlink" href="#create-a-gif-movie" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>アクティブなプロッタから動くgifを生成する</p>
+<p>Generate a moving gif from an active plotter.</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">lighting=False</span></code> to reduce the size of the color space to avoid
+&quot;jittery&quot; GIFs, especially for the scalar bar.</p>
+</div>
 <img src="../../_images/sphx_glr_gif_001.png" srcset="../../_images/sphx_glr_gif_001.png" alt="gif" class = "sphx-glr-single-img"/><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
 <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 <span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">y</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
 <span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
@@ -1086,7 +1091,14 @@
 
 <span class="c1"># Create a plotter object and set the scalars to the Z height</span>
 <span class="n">plotter</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">notebook</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">off_screen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">scalars</span><span class="o">=</span><span class="n">z</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="n">smooth_shading</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span>
+    <span class="n">grid</span><span class="p">,</span>
+    <span class="n">scalars</span><span class="o">=</span><span class="n">z</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span>
+    <span class="n">lighting</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">scalar_bar_args</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Height&quot;</span><span class="p">},</span>
+    <span class="n">clim</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+<span class="p">)</span>
 
 <span class="c1"># Open a gif</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">open_gif</span><span class="p">(</span><span class="s2">&quot;wave.gif&quot;</span><span class="p">)</span>
@@ -1101,16 +1113,14 @@
     <span class="n">plotter</span><span class="o">.</span><span class="n">update_coordinates</span><span class="p">(</span><span class="n">pts</span><span class="p">,</span> <span class="n">render</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
     <span class="n">plotter</span><span class="o">.</span><span class="n">update_scalars</span><span class="p">(</span><span class="n">z</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="n">render</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
-    <span class="c1"># must update normals when smooth shading is enabled</span>
-    <span class="n">plotter</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">compute_normals</span><span class="p">(</span><span class="n">cell_normals</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    <span class="n">plotter</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>
+    <span class="c1"># Write a frame. This triggers a render.</span>
     <span class="n">plotter</span><span class="o">.</span><span class="n">write_frame</span><span class="p">()</span>
 
 <span class="c1"># Closes and finalizes movie</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  4.425 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.174 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-plot-gif-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/d4ff4e92f37feb399b859a140b3e672e/gif.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">gif.py</span></code></a></p>
