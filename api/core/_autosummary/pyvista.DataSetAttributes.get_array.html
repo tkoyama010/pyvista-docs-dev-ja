@@ -452,51 +452,43 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataSetAttributes.get_array">
 <span class="sig-prename descclassname"><span class="pre">DataSetAttributes.</span></span><span class="sig-name descname"><span class="pre">get_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/dev/library/typing.html#typing.Union" title="(in Python v3.11)"><span class="pre">Union</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/dev/library/typing.html#typing.Union" title="(in Python v3.11)"><span class="pre">Union</span></a><span class="p"><span class="pre">[</span></span><span class="pre">pyvista.core.pyvista_ndarray.pyvista_ndarray</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">vtkmodules.vtkCommonCore.vtkDataArray</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">vtkmodules.vtkCommonCore.vtkAbstractArray</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pyvista.DataSetAttributes.get_array" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Get an array in this object.</p>
+<dd><p>このオブジェクトの配列を取得します．</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>key</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>The name or index of the array to return.  Arrays are
-ordered within VTK DataSetAttributes, and this feature is
-mirrored here.</p>
+<dt><strong>key</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>返す配列の名前あるいはインデックス． 配列は VTK DataSetAttributes 内で順序付けされ，この機能はここでミラー化されます．</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.pyvista_ndarray</span></code> or <code class="xref py py-obj docutils literal notranslate"><span class="pre">vtkDataArray</span></code></dt><dd><p>Returns a <code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.pyvista_ndarray</span></code> if the
-underlying array is either a <code class="docutils literal notranslate"><span class="pre">vtk.vtkDataArray</span></code> or
-<code class="docutils literal notranslate"><span class="pre">vtk.vtkStringArray</span></code>.  Otherwise, returns a
-<code class="docutils literal notranslate"><span class="pre">vtk.vtkAbstractArray</span></code>.</p>
+<dt>obj:<cite>pyvista.pyvista_ndarray</cite> または <code class="xref py py-obj docutils literal notranslate"><span class="pre">vtkDataArray</span></code></dt><dd><p>配列が <code class="docutils literal notranslate"><span class="pre">vtk.vtkDataArray</span></code> または <code class="docutils literal notranslate"><span class="pre">vtk.vtkStringArray</span></code> である場合， <code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.pyvista_ndarray</span></code> を返します． それ以外の場合は， <code class="docutils literal notranslate"><span class="pre">vtk.vtkAbstractArray</span></code> を返します．</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-odd">エラー処理</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><a class="reference external" href="https://docs.python.org/dev/library/exceptions.html#KeyError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">KeyError</span></code></a></dt><dd><p>If the key does not exist.</p>
+<dt><a class="reference external" href="https://docs.python.org/dev/library/exceptions.html#KeyError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">KeyError</span></code></a></dt><dd><p>キーが存在しない場合．</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">備考</p>
-<p>This is provided since arrays are ordered within VTK and can
-be indexed via an int.  When getting an array, you can just
-use the key of the array with the <code class="docutils literal notranslate"><span class="pre">[]</span></code> operator with the
-name of the array.</p>
+<p>これは，VTK内で配列が順序付けられ，int型を介してインデックスを付けることができるため提供されています． 配列を取得する際には，配列のキーを <code class="docutils literal notranslate"><span class="pre">[]</span></code> 演算子と一緒に配列名として使用すればよいのです．</p>
 <p class="rubric">例</p>
-<p>Store data with point association in a DataSet.</p>
+<p>点の関連付けをしたデータをDataSetに格納します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Cube</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span><span class="o">.</span><span class="n">clear_data</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span><span class="o">.</span><span class="n">point_data</span><span class="p">[</span><span class="s1">&#39;my_data&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">mesh</span><span class="o">.</span><span class="n">n_points</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Access using an index.</p>
+<p>インデックスを使ったアクセス．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span><span class="o">.</span><span class="n">point_data</span><span class="o">.</span><span class="n">get_array</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="go">pyvista_ndarray([0, 1, 2, 3, 4, 5, 6, 7])</span>
 </pre></div>
 </div>
-<p>Access using a key.</p>
+<p>キーを使ってアクセスします．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span><span class="o">.</span><span class="n">point_data</span><span class="o">.</span><span class="n">get_array</span><span class="p">(</span><span class="s1">&#39;my_data&#39;</span><span class="p">)</span>
 <span class="go">pyvista_ndarray([0, 1, 2, 3, 4, 5, 6, 7])</span>
 </pre></div>

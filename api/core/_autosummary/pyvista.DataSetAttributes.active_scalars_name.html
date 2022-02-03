@@ -452,9 +452,9 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.DataSetAttributes.active_scalars_name">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DataSetAttributes.</span></span><span class="sig-name descname"><span class="pre">active_scalars_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#pyvista.DataSetAttributes.active_scalars_name" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Name of the active scalars.</p>
+<dd><p>アクティブなスカラーの名前．</p>
 <p class="rubric">例</p>
-<p>Add two arrays to the mesh point data.</p>
+<p>メッシュポイントデータに2つの配列を追加します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span><span class="o">.</span><span class="n">point_data</span><span class="p">[</span><span class="s1">&#39;my_data&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">mesh</span><span class="o">.</span><span class="n">n_points</span><span class="p">)</span>
@@ -463,7 +463,7 @@
 <span class="go">&#39;my_other_data&#39;</span>
 </pre></div>
 </div>
-<p>Set the name of the active scalars.</p>
+<p>アクティブなスカラーの名前を設定します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span><span class="o">.</span><span class="n">point_data</span><span class="o">.</span><span class="n">active_scalars_name</span> <span class="o">=</span> <span class="s1">&#39;my_data&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span><span class="o">.</span><span class="n">point_data</span><span class="o">.</span><span class="n">active_scalars_name</span>
 <span class="go">&#39;my_data&#39;</span>

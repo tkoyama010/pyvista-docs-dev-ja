@@ -1075,13 +1075,10 @@
 <p class="admonition-title">注釈</p>
 <p><code class="docutils literal notranslate"><span class="pre">p.open_gif('orbit.gif')</span></code> ではなく， <code class="docutils literal notranslate"><span class="pre">p.open_movie('orbit.mp4')</span></code> を使うと，ムービーの品質が向上します．</p>
 </div>
-<p>For orbiting to work you first have to show the scene and leave the plotter open
-with <code class="docutils literal notranslate"><span class="pre">.show(auto_close=False)</span></code>.  You may also have to set
-<code class="docutils literal notranslate"><span class="pre">pv.Plotter(off_screen=True)</span></code></p>
+<p>軌道を描くには，まずシーンを表示し，プロッターを <code class="docutils literal notranslate"><span class="pre">.show(auto_close=False)</span></code> で開いたままにしておく必要があります． また， <code class="docutils literal notranslate"><span class="pre">pv.Plotter(off_screen=True)</span></code> を設定する必要があるかもしれません．</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p>Use <code class="docutils literal notranslate"><span class="pre">lighting=False</span></code> to reduce the size of the color space to avoid
-&quot;jittery&quot; GIFs when showing the scalar bar.</p>
+<p>スカラーバーを表示する際に &quot;カクカク &quot;したGIFにならないように， <code class="docutils literal notranslate"><span class="pre">lighting=False</span></code> を使って色空間のサイズを小さくしてください．</p>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
@@ -1089,7 +1086,7 @@ with <code class="docutils literal notranslate"><span class="pre">.show(auto_clo
 <span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_st_helens</span><span class="p">()</span><span class="o">.</span><span class="n">warp_by_scalar</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Orbit around the Mt. St Helens dataset.</p>
+<p>St Helens山のデータセット周辺の軌道．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">lighting</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">camera</span><span class="o">.</span><span class="n">zoom</span><span class="p">(</span><span class="mf">1.5</span><span class="p">)</span>

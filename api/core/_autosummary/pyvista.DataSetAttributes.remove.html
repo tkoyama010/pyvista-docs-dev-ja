@@ -452,26 +452,26 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataSetAttributes.remove">
 <span class="sig-prename descclassname"><span class="pre">DataSetAttributes.</span></span><span class="sig-name descname"><span class="pre">remove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/dev/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pyvista.DataSetAttributes.remove" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Remove an array.</p>
+<dd><p>配列を削除する．</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>key</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>The name of the array to remove.</p>
+<dt><strong>key</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>削除する配列の名前．</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">備考</p>
-<p>You can also use the <code class="docutils literal notranslate"><span class="pre">del</span></code> statement.</p>
+<p>また， <code class="docutils literal notranslate"><span class="pre">del</span></code> ステートメントを使用することもできます．</p>
 <p class="rubric">例</p>
-<p>Add a point data array to a DataSet and then remove it.</p>
+<p>DataSet に点データ配列を追加し，削除します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Cube</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span><span class="o">.</span><span class="n">point_data</span><span class="p">[</span><span class="s1">&#39;my_data&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">mesh</span><span class="o">.</span><span class="n">n_points</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span><span class="o">.</span><span class="n">point_data</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;my_data&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Show that the array no longer exists in <code class="docutils literal notranslate"><span class="pre">point_data</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">point_data</span></code> に配列が存在しないことを示します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;my_data&#39;</span> <span class="ow">in</span> <span class="n">mesh</span><span class="o">.</span><span class="n">point_data</span>
 <span class="go">False</span>
 </pre></div>
