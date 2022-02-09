@@ -338,9 +338,7 @@
   <section id="using-ipyvtklink-with-pyvista">
 <span id="ipyvtk-plotting"></span><h1>PyVistaで <code class="docutils literal notranslate"><span class="pre">ipyvtklink</span></code> を使う<a class="headerlink" href="#using-ipyvtklink-with-pyvista" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">pyvista</span></code> には， <code class="docutils literal notranslate"><span class="pre">ipyvtklink</span></code> を使用して，JupyterLab環境内にフル機能のプロットを表示する機能があります．この機能は，現在のレンダリングウィンドウをJupyterLab内のキャンバスにストリーミングし，キャンバスからのユーザアクションをすべてVTKレンダリングウィンドウに戻すことで機能します．</p>
-<p>While this isn't an exciting feature when JupyterLab is being run
-locally, this has huge implications when plotting remotely as you can
-display any plot, with subplots and widgets, from JupyterLab.</p>
+<p>JupyterLabがローカルで実行されている場合，これはエキサイティングな機能ではありませんが，JupyterLabからサブプロットやウィジェットを含む任意のプロットを表示できるため，リモートでプロットする場合には大きな意味があります．</p>
 <p>たとえば，コードの両方のセクションは，JupyterLab内に対話型キャンバスを表示します．</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="n">sphere</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
@@ -377,7 +375,7 @@ display any plot, with subplots and widgets, from JupyterLab.</p>
   <span class="o">-</span> <span class="n">matplotlib</span>
 </pre></div>
 </div>
-<p>Using pip, you can setup your jupyterlab environment with:</p>
+<p>pipを使って，次のようにしてjupyterlab環境をセットアップすることができます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="s1">&#39;jupyterlab&gt;=3&#39;</span> <span class="n">ipywidgets</span> <span class="s1">&#39;pyvista[all]&#39;</span> <span class="n">ipyvtklink</span>
 </pre></div>
 </div>
