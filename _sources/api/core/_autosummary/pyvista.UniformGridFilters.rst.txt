@@ -93,7 +93,13 @@
       UniformGridFilters.glyph
       
       
+      UniformGridFilters.image_threshold
+      
+      
       UniformGridFilters.interpolate
+      
+      
+      UniformGridFilters.median_smooth
       
       
       UniformGridFilters.merge

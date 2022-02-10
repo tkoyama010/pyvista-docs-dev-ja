@@ -152,7 +152,7 @@
             <label class="sr-only">Support</label></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyvista/pyvista/blob/main/CONTRIBUTING.md" rel="noopener" target="_blank" title="Contributing"><span><i class="fa fa-gavel fa-fw"></i></span>
+          <a class="nav-link" href="https://github.com/pyvista/pyvista/blob/main/CONTRIBUTING.rst" rel="noopener" target="_blank" title="Contributing"><span><i class="fa fa-gavel fa-fw"></i></span>
             <label class="sr-only">Contributing</label></a>
         </li>
         <li class="nav-item">
@@ -246,6 +246,11 @@
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#being-respectful">
+   Being Respectful
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#cloning-the-source-repository">
    ソースリポジトリのクローン作成
   </a>
@@ -305,11 +310,13 @@
        テスト
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#notes-regarding-image-regression-testing">
-       イメージ回帰テストに関する注意事項
-      </a>
-     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#notes-regarding-image-regression-testing">
+     イメージ回帰テストに関する注意事項
+    </a>
+    <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#creating-a-new-pull-request">
        新規Pull Requestの作成
@@ -361,6 +368,13 @@
 <span id="ref-developer-notes"></span><h1>貢献<a class="headerlink" href="#contributing" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>私たちは貢献を心から歓迎し，このガイドがPyVistaコードリポジトリの理解を促進することを願っています．PyVistaソフトウェアパッケージはボランティアベースでメンテナンスされていることに注意してください．したがって，このソフトウェアをすべてのユーザにとって有用なツールにするために，ユーザの質問をサポートし，新しい機能を開発できるコミュニティを育成する必要があります．</p>
 <p>このページでは，質問，懸念，機能のリクエスト，または貢献したいことから始めるべき概要を説明します．</p>
+<section id="being-respectful">
+<h2>Being Respectful<a class="headerlink" href="#being-respectful" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Please demonstrate empathy and kindness toward other people, other software,
+and the communities who have worked diligently to build (un-)related tools.</p>
+<p>Please do not talk down in Pull Requests, Issues, or otherwise in a way that
+portrays other people or their works in a negative light.</p>
+</section>
 <section id="cloning-the-source-repository">
 <h2>ソースリポジトリのクローン作成<a class="headerlink" href="#cloning-the-source-repository" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>次のコマンドを実行して， <code class="docutils literal notranslate"><span class="pre">https://github.com/pyvista/pyvista</span></code> からソースリポジトリをクローンし，最新バージョンをインストールできます．</p>
@@ -372,7 +386,13 @@ python -m pip install -e .
 </section>
 <section id="questions">
 <h2>質問<a class="headerlink" href="#questions" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>プロジェクト，そのアプリケーション，またはソフトウェアの使用についての一般的な質問については，コミュニティが集合的にあなたの質問に答えることができる <a class="reference external" href="https://github.com/pyvista/pyvista/discussions">pyvista/discussions</a> でディスカッションを作成してください．また， <a class="reference external" href="http://slack.pyvista.org">Slack</a> に参加したり，開発者の一人に電子メールを送ったりすることもできます．プロジェクト・サポート・チームの連絡先はinfo&#64;pyvista.orgです．</p>
+<p>For general questions about the project, its applications, or about
+software usage, please create a discussion in the
+<a class="reference external" href="https://github.com/pyvista/pyvista/discussions">Discussions</a>
+repository where the community can collectively address your questions.
+You are also welcome to join us on <a class="reference external" href="http://slack.pyvista.org">Slack</a>
+or send one of the developers an email. The project support team can be
+reached at <a class="reference external" href="mailto:info&#37;&#52;&#48;pyvista&#46;org">info<span>&#64;</span>pyvista<span>&#46;</span>org</a></p>
 <p>より技術的な質問については， <a class="reference external" href="https://github.com/pyvista/pyvista/issues">issues ページ</a> で問題を作成していただければ，すぐに対処いたします．問題のページに投稿することで，必要な専門知識を持つコミュニティメンバーが問題に対処でき，得られた情報は他のユーザーの問題のページで引き続き利用できます．</p>
 </section>
 <section id="reporting-bugs">
@@ -381,7 +401,7 @@ python -m pip install -e .
 </section>
 <section id="feature-requests">
 <h2>機能の要望<a class="headerlink" href="#feature-requests" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>PyVistaのコードベースを改善するためのアイデアを投稿することを推奨します! <a class="reference external" href="https://github.com/pyvista/pyvista/issues">issuesページ</a> に <em>Feature Request</em> ラベルをつけて改善を提案してください．説明的なタイトルを使用し，コミュニティがその機能を実装するのに役立つ十分な背景情報を提供してください．たとえば，特定のファイル形式のリーダーが必要な場合は，そのファイル形式のドキュメントへのリンクを提供し，操作するスクリーンショットを含むサンプルファイルを提供してください．問題のスレッドをディスカッションの場として使用し，フィードバックを提供します．また，私たちのライブラリがどのように使用されているのかも知りたいです．もしあなたがこのライブラリを使っていたり， <a class="reference external" href="https://github.com/pyvista/pyvista/network/dependents">PyVistaを使った</a> 素晴らしい例を見つけたりしたら，<a href="#id1"><span class="problematic" id="id2">*</span></a>Feature Request*として報告することもできます．</p>
+<p>PyVistaのコードベースを改善するためのアイデアを投稿することを推奨します! <a class="reference external" href="https://github.com/pyvista/pyvista/issues">issuesページ</a> に <em>Feature Request</em> ラベルをつけて改善を提案してください．説明的なタイトルを使用し，コミュニティがその機能を実装するのに役立つ十分な背景情報を提供してください．たとえば，特定のファイル形式のリーダーが必要な場合は，そのファイル形式のドキュメントへのリンクを提供し，操作するスクリーンショットを含むサンプルファイルを提供してください．問題のスレッドをディスカッションの場として使用し，フィードバックを提供します．</p>
 </section>
 <section id="contributing-new-code">
 <h2>新しいコードの提供<a class="headerlink" href="#contributing-new-code" title="このヘッドラインへのパーマリンク">¶</a></h2>
@@ -402,27 +422,66 @@ python -m pip install -e .
 <p>1つか2つの興味深い解析アルゴリズムをフィルタとして追加したい場合，新しいプロットルーチンを実装したい場合，あるいは1-2のタイプミスを修正したい場合，あなたの努力は大歓迎です!</p>
 <p>私たちが信じている3つの一般的なコーディングパラダイムがあります．</p>
 <ol class="arabic simple">
-<li><p><strong>直感的な操作</strong>． PyVistaの目標は，直感的で使いやすいインターフェースをVTKライブラリーに戻すことです．すべての新機能には，初心者ユーザがライブラリの大部分にアクセスできるように，直感的な命名規則と明示的なキーワード引数が必要です．</p></li>
-<li><p><strong>すべてをドキュメント化します!</strong> 少なくとも，追加されたメソッドまたはクラスのdocstringを含めます．何をしているのかを説明するのではなく，なぜそうしているのかを説明し，新しい機能の簡単な使用例を示します．</p></li>
+<li><p><strong>Make it intuitive</strong>. PyVista’s goal is to create an intuitive and
+easy to use interface back to the VTK library. Any new features
+should have intuitive naming conventions and explicit keyword
+arguments for users to make the bulk of the library accessible to
+novice users.</p></li>
+<li><p><strong>Document everything!</strong> At the least, include a docstring for any
+method or class added. Do not describe what you are doing but why you
+are doing it and provide a simple example for the new features.</p></li>
 <li><p><strong>テストを続ける</strong>． 高いテストカバレッジを目指します．詳細については， テストを参照してください．</p></li>
 </ol>
 <p>著作権に関する2つの重要なガイドラインがあります．</p>
 <ol class="arabic simple" start="4">
 <li><p>ライセンスが利用できない，または商用使用が禁止されているデータセットは含めないでください．それらはすべてのプロジェクトのライセンスを損なう可能性がある．</p></li>
-<li><p>ライセンスが利用できないコードスニペット(stackoverflowなど)や商用使用が禁止されているコードスニペットは使用しないでください．それらはすべてのプロジェクトのライセンスを損なう可能性があります．</p></li>
+<li><p>Do not use code snippets for which a license is not available
+(e.g. from stackoverflow) or commercial use is prohibited. Those can
+undermine the license of the whole projects.</p></li>
 </ol>
-<p>私達の <a class="reference external" href="https://github.com/pyvista/pyvista/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a> もご覧ください．</p>
+<p>Please also take a look at our <a class="reference external" href="https://github.com/pyvista/pyvista/blob/main/CODE_OF_CONDUCT.rst">Code of
+Conduct</a></p>
 </section>
 <section id="contributing-to-pyvista-through-github">
 <h3>GitHub経由でpyvistaにコントリビュートする<a class="headerlink" href="#contributing-to-pyvista-through-github" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>新しいコードをpyvistaに送信するには，まず <a class="reference external" href="https://github.com/pyvista/pyvista">pyvista GitHub リポジトリ</a> をフォークし，フォークしたリポジトリをあなたのコンピュータにクローンします．次に，ローカルリポジトリの <a class="reference external" href="#branch-naming-conventions">Branch Naming Conventions Section</a> に基づいて新しいブランチを作成します．</p>
-<p>次に，新しい機能を追加し，ローカルでコミットします．特に変更が複雑な場合は，過去のコミットに戻すことが役立つことが多いので，頻繁にコミットするようにしてください．また，頻繁に検査をしてください．テストの自動化については，以下の <a class="reference external" href="#testing">Testing Section</a> を参照してください．</p>
+<p>Next, add your new feature and commit it locally. Be sure to commit
+frequently as it is often helpful to revert to past commits, especially
+if your change is complex. Also, be sure to test often. See the <a class="reference external" href="#testing">Testing
+Section</a> below for automating testing.</p>
 <p>コードをサブミットする準備ができたら， <a class="reference external" href="#creating-a-new-pull-request">Creating a New Pull Request section</a> の手順に従ってプル要求を作成します．</p>
 <section id="coding-style">
 <h4>コーディングスタイル<a class="headerlink" href="#coding-style" title="このヘッドラインへのパーマリンク">¶</a></h4>
-<p>行幅が79文字を超えて90から100文字まで許されることを除き，可能な限り <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/">PEP 8</a> に準拠します．</p>
-<p>PEP 8以外でコーディングする場合は， <a class="reference external" href="https://www.python.org/dev/peps/pep-0020/">PEP 20 -- The Zen of Python</a> を考慮してください．</p>
+<p>We adhere to <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/">PEP 8</a>
+wherever possible, except that line widths are permitted to go beyond 79
+characters to a max of 99 characters for code. This should tend to be
+the exception rather than the norm.</p>
+<p>As for docstrings, follow the guidelines specified in <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/#maximum-line-length">PEP 8 Maximum
+Line
+Length</a>
+of limiting docstrings to 72 characters per line. This follows the
+directive:</p>
+<blockquote>
+<div><p>Some teams strongly prefer a longer line length. For code maintained
+exclusively or primarily by a team that can reach agreement on this
+issue, it is okay to increase the line length limit up to 99
+characters, provided that comments and docstrings are still wrapped
+at 72 characters.</p>
+</div></blockquote>
+<p>Outside of PEP 8, when coding please consider <a class="reference external" href="https://www.python.org/dev/peps/pep-0020/">PEP 20 – The Zen of
+Python</a>. When in doubt:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">this</span>
+</pre></div>
+</div>
+<p>Please also use the linting and format checks through the <code class="docutils literal notranslate"><span class="pre">Makefile</span></code>
+to make sure your code adheres to our standards regarding trailing white
+space, unused imports, and sorting of imports.</p>
+<p>To test the format locally, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make stylecheck
+</pre></div>
+</div>
+<p>To automatically sort Python imports, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make isort
 </pre></div>
 </div>
 </section>
@@ -454,18 +513,27 @@ pip install -r requirements_style.txt
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m pytest -v --cov pyvista
 </pre></div>
 </div>
-<p>docstring内のすべてのコード例を実行します．</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m pytest -v --doctest-modules pyvista
+<p>Unit testing can take some time, if you wish to speed it up, set the
+number of processors with the <code class="docutils literal notranslate"><span class="pre">-n</span></code> flag. This uses <code class="docutils literal notranslate"><span class="pre">pytest-xdist</span></code> to
+leverage multiple processes. Example usage:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m pytest -n &lt;NUMCORE&gt; --cov pyvista
 </pre></div>
 </div>
-<p>次を実行して，ドキュメントテストを実行します．</p>
+<p>Run all code examples in the docstrings. Be sure to export the
+<code class="docutils literal notranslate"><span class="pre">PYVISTA_OFF_SCREEN</span></code> environmental variable to enable off-screen
+plotting.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PYVISTA_OFF_SCREEN</span><span class="o">=</span>True
+python -m pytest -v --doctest-modules pyvista
+</pre></div>
+</div>
+<p>Run documentation testing by running:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make
 </pre></div>
 </div>
 <p>Windowsを実行していて <code class="docutils literal notranslate"><span class="pre">make</span></code> が使用できない場合は，次のコマンドを実行します．</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pydocstyle</span> <span class="n">pyvista</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pydocstyle pyvista
 
-<span class="n">codespell</span> <span class="n">pyvista</span><span class="o">/</span> <span class="n">examples</span><span class="o">/</span> <span class="n">tests</span><span class="o">/</span> <span class="o">-</span><span class="n">S</span> <span class="s2">&quot;*.pyc,*.txt,*.gif,*.png,*.jpg,*.ply,*.vtk,*.vti,*.js,*.html,*.doctree,*.ttf,*.woff,*.woff2,*.eot,*.mp4,*.inv,*.pickle,*.ipynb,flycheck*&quot;</span> <span class="o">-</span><span class="n">I</span> <span class="s2">&quot;ignore_words.txt&quot;</span>
+codespell pyvista/ examples/ tests/ -S <span class="s2">&quot;*.pyc,*.txt,*.gif,*.png,*.jpg,*.ply,*.vtk,*.vti,*.js,*.html,*.doctree,*.ttf,*.woff,*.woff2,*.eot,*.mp4,*.inv,*.pickle,*.ipynb,flycheck*&quot;</span> -I <span class="s2">&quot;ignore_words.txt&quot;</span>
 </pre></div>
 </div>
 <p>最後に，ドキュメントの例をテストします．</p>
@@ -477,24 +545,46 @@ make html -b linkcheck
 </div>
 <p>完成したドキュメントは <code class="docutils literal notranslate"><span class="pre">doc/_build/html</span></code> ディレクトリにあります．</p>
 </section>
+</section>
 <section id="notes-regarding-image-regression-testing">
-<h4>イメージ回帰テストに関する注意事項<a class="headerlink" href="#notes-regarding-image-regression-testing" title="このヘッドラインへのパーマリンク">¶</a></h4>
-<p><code class="docutils literal notranslate"><span class="pre">pyvista</span></code> は基本的に描画モジュールなので，何らかの回帰テストで生成した画像を実際にチェックする必要があります．実際には，これはかなりの作業になります．</p>
+<h3>イメージ回帰テストに関する注意事項<a class="headerlink" href="#notes-regarding-image-regression-testing" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>Since <code class="docutils literal notranslate"><span class="pre">pyvista</span></code> is primarily a plotting module, it’s imperative we
+actually check the images that we generate in some sort of regression
+testing. In practice, this ends up being quite a bit of work because:</p>
 <ul class="simple">
-<li><p>OpenGLソフトウェアとハードウェアレンダリングでは，レンダリングされるイメージがわずかに異なります．</p></li>
+<li><p>OpenGL software vs. hardware rending causes slightly different images
+to be rendered.</p></li>
 <li><p>CI (仮想フレームバッファを使用します)をデスクトップイメージ(ハードウェアアクセラレーションを使用します)と一致させたいと考えています．</p></li>
 <li><p>OSによってレンダリングされるイメージは異なります．</p></li>
 </ul>
-<p>各プラットフォームと環境では，Linuxと比較してわずかに異なるイメージをレンダリングするため(これらの画像は)，すべてのOSでこれらのテストを実行するのは最適ではありません．OSごとに異なるイメージを生成することもできますが，私の意見ではやり過ぎです．プロットを実際に見ることなく，プロットによって何か根本的な変化があったかどうかを知る必要があります(dev.pyvista.comのドキュメントのように)．</p>
+<p>As each platform and environment renders different slightly images
+relative to Linux (which these images were built from), so running these
+tests across all OSes isn’t optimal. We could generate different images
+for each OS, but it’s overkill in my opinion; we need to know if
+something fundamental changed with our plotting without actually looking
+at the plots (like the docs at dev.pyvista.com)</p>
 <p>これらの点に基づいて，イメージ回帰テストはLinux CIでのみ行われ，マルチサンプリングは，ソフトウェアベースのレンダリングとハードウェアベースのレンダリングの最大の違いの1つと思われるため，無効になっています．</p>
 <p>画像キャッシュは ./image_cache としてここに保存されます</p>
-<p>大きな画像でgitを汚したくないので，画像解像度は400x400で低く保たれます．バージョンや環境によって多少の違いがあることが予想されるため， error &lt; <code class="docutils literal notranslate"><span class="pre">IMAGE_REGRESSION_ERROR</span></code> は許容されます(警告としてログに記録されます．)が，この値を超えるとエラーが発生します．</p>
-<p><code class="docutils literal notranslate"><span class="pre">pytest</span></code> には，画像リグレッションテストを制御する2つのメカニズム， <code class="docutils literal notranslate"><span class="pre">--reset_image_cache</span></code> と <code class="docutils literal notranslate"><span class="pre">--ignore_image_cache</span></code> があります．</p>
+<p>Image resolution is kept low at 400x400 as we don’t want to pollute git
+with large images. Small variations between versions and environments
+are to be expected, so error &lt; <code class="docutils literal notranslate"><span class="pre">IMAGE_REGRESSION_ERROR</span></code> is allowable
+(and will be logged as a warning) while values over that amount will
+trigger an error.</p>
+<p>There are two mechanisms within <code class="docutils literal notranslate"><span class="pre">pytest</span></code> to control image regression
+testing, <code class="docutils literal notranslate"><span class="pre">--reset_image_cache</span></code> and <code class="docutils literal notranslate"><span class="pre">--ignore_image_cache</span></code>. For
+example:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pytest tests/plotting --reset_image_cache
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">--reset_image_cache</span></code> を実行すると， <code class="docutils literal notranslate"><span class="pre">tests/plotting/test_plotting.py</span></code> の各テストに対して新しいイメージが作成されます．テストや，メジャーまたはマイナーリリースの可能性がある場合を除き，推奨されません．Linux上で実行していて，リグレッションテストを一時的に無視したい場合は， <code class="docutils literal notranslate"><span class="pre">--ignore_image_cache</span></code> を使用することができます．CIテストでは，回帰テストが引き続き行われることを理解してください．</p>
-<p><code class="docutils literal notranslate"><span class="pre">tests/plotting/test_plotting.py</span></code> に新しいテストを追加する必要があり，イメージ回帰テストを含めたい場合は，必ず <code class="docutils literal notranslate"><span class="pre">show</span></code> に <code class="docutils literal notranslate"><span class="pre">verify_cache_image</span></code> を追加してください．例:</p>
+<p>Running <code class="docutils literal notranslate"><span class="pre">--reset_image_cache</span></code> creates a new image for each test in
+<code class="docutils literal notranslate"><span class="pre">tests/plotting/test_plotting.py</span></code> and is not recommended except for
+testing or for potentially a major or minor release. You can use
+<code class="docutils literal notranslate"><span class="pre">--ignore_image_cache</span></code> if you’re running on Linux and want to
+temporarily ignore regression testing. Realize that regression testing
+will still occur on our CI testing.</p>
+<p>If you need to add a new test to <code class="docutils literal notranslate"><span class="pre">tests/plotting/test_plotting.py</span></code> and
+wish to include image regression testing, be sure to add
+<code class="docutils literal notranslate"><span class="pre">verify_cache_image</span></code> to <code class="docutils literal notranslate"><span class="pre">show</span></code>. For example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@skip_no_plotting</span>
 <span class="k">def</span> <span class="nf">test_add_background_image_not_global</span><span class="p">():</span>
     <span class="n">plotter</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
@@ -502,12 +592,19 @@ make html -b linkcheck
     <span class="n">plotter</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">before_close_callback</span><span class="o">=</span><span class="n">verify_cache_image</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>これにより，プロッタを閉じる直前に，現在のレンダリングウィンドウがCI内のイメージに対して検証されます．イメージが存在しない場合は，必ず <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">tests/plotting/image_cache/*</span></code> を使用して結果のイメージを追加してください．</p>
-</section>
+<p>This ensures that immediately before the plotter is closed, the current
+render window will be verified against the image in CI. If no image
+exists, be sure to add the resulting image with `git add
+tests/plotting/image_cache/<a href="#id1"><span class="problematic" id="id2">*</span></a><a href="#id3"><span class="problematic" id="id4">``</span></a>.</p>
 <section id="creating-a-new-pull-request">
 <h4>新規Pull Requestの作成<a class="headerlink" href="#creating-a-new-pull-request" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <p>ブランチをローカルでテストしたら，mainにマージする際に <a class="reference external" href="https://github.com/pyvista/pyvista">pyvista GitHub</a> でpull requestを作成します．これにより，継続的インテグレーション (CI) テストが自動的に実行され，変更が複数のプラットフォームで機能することが検証されます．</p>
-<p>他のユーザーがコードをレビューできるようにするには，pyvistaコントリビュータグループの他の少なくとも1人のメンバーが，コードがコミュニティの標準を満たしているかどうかをレビューして検証する必要があります．承認後，書き込み権限があればブランチをマージすることができます．書き込みパーミッションがない場合，レビュー担当者または書き込みパーミッションを持つ別のユーザーがブランチをマージし，PRブランチを削除します．</p>
+<p>To ensure someone else reviews your code, at least one other member of
+the pyvista contributors group must review and verify your code meets
+our community’s standards. Once approved, if you have write permission
+you may merge the branch. If you don’t have write permission, the
+reviewer or someone else with write permission will merge the branch and
+delete the PR branch.</p>
 <p>ブランチをカレントリリースブランチ(下記参照)とマージする必要があるかもしれませんので， <code class="docutils literal notranslate"><span class="pre">fix/</span></code> ブランチであれば削除しないでください．</p>
 </section>
 </section>
@@ -517,14 +614,32 @@ make html -b linkcheck
 <p>ブランチモデルの主な特徴は次のとおりです．</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">main</span></code> ブランチは主要な開発ブランチです．すべてのフィーチャー，パッチ，およびその他のブランチをここにマージする必要があります．すべてのPRは適用可能なCIチェックをすべてパスする必要がありますが，変更によって予期しない副作用や単体テストで検出されなかったバグが発生する可能性があるため，このブランチは機能的に不安定になる可能性があります．</p></li>
-<li><p>マイナーリリース(例えば <code class="docutils literal notranslate"><span class="pre">release/0.24</span></code> )をベースにした <code class="docutils literal notranslate"><span class="pre">release/</span></code> ブランチがいくつかあり，そこには PyPI/ にも反映される安定版のコードベースが含まれています． <code class="docutils literal notranslate"><span class="pre">fix/</span></code> ブランチの修正パッチは，mainブランチとこれらのブランチの両方にマージする必要があります．新しいパッチリリースを作成する必要がある場合，これらのリリースブランチの <code class="docutils literal notranslate"><span class="pre">__version__.py</span></code> が更新され，パッチされたセマンティックバージョン(例えば <code class="docutils literal notranslate"><span class="pre">0.24.1</span></code> )がタグ付けされます．これによりCIはPyPIにプッシュし，テストされていない機能を気にすることなく，過去のバージョンの <code class="docutils literal notranslate"><span class="pre">pyvista</span></code> のホットフィックスを迅速にプッシュすることができます．</p></li>
-<li><p>マイナーリリース候補が準備できたら， <code class="docutils literal notranslate"><span class="pre">main</span></code> から新しい <code class="docutils literal notranslate"><span class="pre">release</span></code> ブランチが作成され，次のマイナーバージョン(例えば <code class="docutils literal notranslate"><span class="pre">release/0.25</span></code> )がインクリメントされ，徹底的にテストされます．安定していると判断された場合，リリースブランチにはバージョン(この場合の <code class="docutils literal notranslate"><span class="pre">0.25.0</span></code> )のタグが付けられ，必要に応じて変更が加えられた場合にはmainとマージされます． <code class="docutils literal notranslate"><span class="pre">main</span></code> で機能開発が継続され，ホットフィックスはこのリリースに統合されます．必要に応じてパッチを適用できるように，古いリリースブランチは削除しないでください．</p></li>
+<li><p>There will be one or many <code class="docutils literal notranslate"><span class="pre">release/</span></code> branches based on minor
+releases (for example <code class="docutils literal notranslate"><span class="pre">release/0.24</span></code>) which contain a stable
+version of the code base that is also reflected on PyPI/. Hotfixes
+from <code class="docutils literal notranslate"><span class="pre">fix/</span></code> branches should be merged both to main and to these
+branches. When necessary to create a new patch release these release
+branches will have their <code class="docutils literal notranslate"><span class="pre">__version__.py</span></code> updated and be tagged
+with a patched semantic version (e.g. <code class="docutils literal notranslate"><span class="pre">0.24.1</span></code>). This triggers CI
+to push to PyPI, and allow us to rapidly push hotfixes for past
+versions of <code class="docutils literal notranslate"><span class="pre">pyvista</span></code> without having to worry about untested
+features.</p></li>
+<li><p>When a minor release candidate is ready, a new <code class="docutils literal notranslate"><span class="pre">release</span></code> branch
+will be created from <code class="docutils literal notranslate"><span class="pre">main</span></code> with the next incremented minor version
+(e.g. <code class="docutils literal notranslate"><span class="pre">release/0.25</span></code>), which will be thoroughly tested. When deemed
+stable, the release branch will be tagged with the version
+(<code class="docutils literal notranslate"><span class="pre">0.25.0</span></code> in this case), and if necessary merged with main if any
+changes were pushed to it. Feature development then continues on
+<code class="docutils literal notranslate"><span class="pre">main</span></code> and any hotfixes will now be merged with this release. Older
+release branches should not be deleted so they can be patched as
+needed.</p></li>
 </ul>
 <section id="minor-release-steps">
 <h4>マイナーリリース手順<a class="headerlink" href="#minor-release-steps" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <p>マイナーリリースは， <code class="docutils literal notranslate"><span class="pre">pyvista</span></code> の機能と安定性を改善する機能およびバグリリースです．マイナーリリースが作成される前に，次のことが発生します．</p>
 <ol class="arabic">
-<li><p><code class="docutils literal notranslate"><span class="pre">main</span></code> ブランチから <code class="docutils literal notranslate"><span class="pre">release/MAJOR.MINOR</span></code> という名前の新しいブランチを作成します(例: <code class="docutils literal notranslate"><span class="pre">release/0.25</span></code> )．</p></li>
+<li><p>Create a new branch from the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch with name
+<code class="docutils literal notranslate"><span class="pre">release/MAJOR.MINOR</span></code> (e.g. <code class="docutils literal notranslate"><span class="pre">release/0.25</span></code>).</p></li>
 <li><p><a class="reference external" href="#testing">Testing Section</a> で概説されているように，すべてのテストをローカルで実行し，すべてが合格していることを確認します．</p></li>
 <li><p>リンクチェックを使用してマニュアルをローカルでテストおよびビルドし，リンクが古くなっていないことを確認します．必ず <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">clean</span></code> を実行して，結果がキャッシュされないようにしてください． <code class="docutils literal notranslate"><span class="pre">bash</span> <span class="pre">cd</span> <span class="pre">doc</span> <span class="pre">make</span> <span class="pre">clean</span> <span class="pre">#</span> <span class="pre">deletes</span> <span class="pre">the</span> <span class="pre">sphinx-gallery</span> <span class="pre">cache</span> <span class="pre">make</span> <span class="pre">doctest</span> <span class="pre">make</span> <span class="pre">html</span> <span class="pre">-b</span> <span class="pre">linkcheck</span></code></p></li>
 <li><p>ドキュメントをビルドしたら，ローカル・ビルドを開き，サンプル・ギャラリーで明らかな問題がないか調べてください．</p></li>
@@ -536,7 +651,13 @@ git push origin --tags
 </pre></div>
 </div>
 </li>
-<li><p>リリースのすべての変更のリストを作成します． <a class="reference external" href="https://github.com/pyvista/pyvista/compare">GitHub's *compare* feature</a> を活用して，最後のタグや <code class="docutils literal notranslate"><span class="pre">main</span></code> ブランチとの違いを確認することは，しばしば役に立ちます．特定の貢献者が新機能に感謝したい場合は，GitHubのユーザー名と適切な場所の記載で，新しい貢献者を必ず確認してください．</p></li>
+<li><p>Create a list of all changes for the release. It is often helpful to
+leverage <a class="reference external" href="https://github.com/pyvista/pyvista/compare">GitHub’s compare
+feature</a> to see the
+differences from the last tag and the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch. Be sure to
+acknowledge new contributors by their GitHub username and place
+mentions where appropriate if a specific contributor is to thank for
+a new feature.</p></li>
 <li><p>手順8のリリースノートを <a class="reference external" href="https://github.com/pyvista/pyvista/releases/new">GitHubの新リリース</a> の説明に入れてください．</p></li>
 <li><p>ビール，コーヒー，水を飲みに行って， [&#64;regro-cf-autotick-bot](<a class="reference external" href="https://github.com/regro-cf-autotick-bot">https://github.com/regro-cf-autotick-bot</a>) がconda-forge <a class="reference external" href="https://github.com/conda-forge/pyvista-feedstock">PyVista feedstock</a> のプルリクエストを開くのを待って，そのプルリクエストをマージします．</p></li>
 <li><p>PyVista Slackワークスペースで新リリースを発表し，お祝いしましょう!</p></li>
@@ -546,7 +667,8 @@ git push origin --tags
 <h4>パッチリリース手順<a class="headerlink" href="#patch-release-steps" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <p>パッチリリースは重要なバグフィックスのためのもので，マイナーリリースまで待つことはできないものです．パッチリリースの手順は</p>
 <ol class="arabic simple">
-<li><p>必要な(複数の)バグフィックスを該当するリリースブランチにプッシュします．これは通常，最新のリリースブランチ(例 <code class="docutils literal notranslate"><span class="pre">release/0.25</span></code>)です．</p></li>
+<li><p>Push the necessary bugfix(es) to the applicable release branch. This
+will generally be the latest release branch (e.g. <code class="docutils literal notranslate"><span class="pre">release/0.25</span></code>).</p></li>
 <li><p>次のパッチ増分で <code class="docutils literal notranslate"><span class="pre">__version__.py</span></code> を更新し(例: <code class="docutils literal notranslate"><span class="pre">0.25.1</span></code> )，コミットし，リリースブランチとマージするPRをオープンします．これにより， <code class="docutils literal notranslate"><span class="pre">pyvista</span></code> コミュニティはバグ修正リリースを検証し，承認する機会を得ます．追加のホットフィックスは，このPRの範囲外でなければなりません．</p></li>
 <li><p>承認されたら，リリースブランチとマージしますが， <code class="docutils literal notranslate"><span class="pre">main</span></code> ブランチのバージョンを増やす理由がないため， <code class="docutils literal notranslate"><span class="pre">main</span></code> とはマージしません．次に，リリースブランチから適切なバージョン番号(正しい手順については上記を参照してください．)のタグを作成します．</p></li>
 <li><p>必要に応じて，リリースノートページを作成します．また，condaからPRを開き，マイナーリリースセクションの手順10の指示に従います．</p></li>

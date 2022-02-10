@@ -201,7 +201,13 @@
       UniformGrid.head
       
       
+      UniformGrid.image_threshold
+      
+      
       UniformGrid.interpolate
+      
+      
+      UniformGrid.median_smooth
       
       
       UniformGrid.merge

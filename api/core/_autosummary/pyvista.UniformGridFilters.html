@@ -152,7 +152,7 @@
             <label class="sr-only">Support</label></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyvista/pyvista/blob/main/CONTRIBUTING.md" rel="noopener" target="_blank" title="Contributing"><span><i class="fa fa-gavel fa-fw"></i></span>
+          <a class="nav-link" href="https://github.com/pyvista/pyvista/blob/main/CONTRIBUTING.rst" rel="noopener" target="_blank" title="Contributing"><span><i class="fa fa-gavel fa-fw"></i></span>
             <label class="sr-only">Contributing</label></a>
         </li>
         <li class="nav-item">
@@ -387,8 +387,18 @@
         </a>
        </li>
        <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.UniformGridFilters.image_threshold.html">
+         image_threshold
+        </a>
+       </li>
+       <li class="toctree-l4">
         <a class="reference internal" href="pyvista.UniformGridFilters.interpolate.html">
          interpolate
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.UniformGridFilters.median_smooth.html">
+         median_smooth
         </a>
        </li>
        <li class="toctree-l4">
@@ -733,8 +743,14 @@
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.UniformGridFilters.glyph.html#pyvista.UniformGridFilters.glyph" title="pyvista.UniformGridFilters.glyph"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UniformGridFilters.glyph</span></code></a>([orient, scale, ...])</p></td>
 <td><p>入力データセットに(グリフと呼ばれる)ジオメトリ表示をコピーします．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UniformGridFilters.interpolate.html#pyvista.UniformGridFilters.interpolate" title="pyvista.UniformGridFilters.interpolate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UniformGridFilters.interpolate</span></code></a>(target[, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UniformGridFilters.image_threshold.html#pyvista.UniformGridFilters.image_threshold" title="pyvista.UniformGridFilters.image_threshold"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UniformGridFilters.image_threshold</span></code></a>(threshold)</p></td>
+<td><p>Apply a threshold to scalar values in a uniform grid.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.UniformGridFilters.interpolate.html#pyvista.UniformGridFilters.interpolate" title="pyvista.UniformGridFilters.interpolate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UniformGridFilters.interpolate</span></code></a>(target[, ...])</p></td>
 <td><p>特定のデータセットからこのメッシュに値を補間します．</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UniformGridFilters.median_smooth.html#pyvista.UniformGridFilters.median_smooth" title="pyvista.UniformGridFilters.median_smooth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UniformGridFilters.median_smooth</span></code></a>([...])</p></td>
+<td><p>Smooth data using a median filter.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.UniformGridFilters.merge.html#pyvista.UniformGridFilters.merge" title="pyvista.UniformGridFilters.merge"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UniformGridFilters.merge</span></code></a>([grid, ...])</p></td>
 <td><p>1つまたは複数の他のグリッドをこのグリッドに結合します．</p></td>
