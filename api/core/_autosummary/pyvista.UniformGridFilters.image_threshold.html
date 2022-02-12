@@ -665,11 +665,9 @@
 <dd class="field-odd"><dl>
 <dt><strong>threshold</strong> : <a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a> または <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a><span class="classifier">python:float または python:sequence</span></dt><dd><p>データの閾値として使用する単一値または(min, max)．直列の場合，長さは2でなければなりません．スカラーデータに基づいて，どのセルや点が <code class="docutils literal notranslate"><span class="pre">'in'</span></code> や <code class="docutils literal notranslate"><span class="pre">'out'</span></code> になるかを決定するための(複数の)閾値．</p>
 </dd>
-<dt><strong>in_value</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/library/constants.html#None" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Scalars that match the threshold criteria for <code class="docutils literal notranslate"><span class="pre">'in'</span></code> will be replaced with this.
-Default is 1.</p>
+<dt><strong>in_value</strong> : <a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a> または <a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a> または <a class="reference external" href="https://docs.python.org/dev/library/constants.html#None" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code><span class="classifier">python:float または python:int または python:None, optional</span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">'in'</span></code> の閾値基準に一致するスカラーは、これに置き換えられます。デフォルトは1です。</p>
 </dd>
-<dt><strong>out_value</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/library/constants.html#None" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Scalars that match the threshold criteria for <code class="docutils literal notranslate"><span class="pre">'out'</span></code> will be replaced with this.
-Default is 0.</p>
+<dt><strong>out_value</strong> : <a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a> または <a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a> または <a class="reference external" href="https://docs.python.org/dev/library/constants.html#None" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code><span class="classifier">python:float または python:int または python:None, optional</span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">'out'</span></code> の閾値基準に一致するスカラーは、これに置き換えられます。デフォルトは0です。</p>
 </dd>
 <dt><strong>scalars</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>処理に使用するスカラーの名前．デフォルトは現在アクティブなスカラーです．</p>
 </dd>
@@ -681,14 +679,13 @@ Default is 0.</p>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="pyvista.UniformGrid.html#pyvista.UniformGrid" title="pyvista.UniformGrid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.UniformGrid</span></code></a></dt><dd><p>Dataset with the specified scalars thresholded.</p>
+<dt><a class="reference internal" href="pyvista.UniformGrid.html#pyvista.UniformGrid" title="pyvista.UniformGrid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.UniformGrid</span></code></a></dt><dd><p>指定したスカラーを閾値処理したデータセット．</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>Demonstrate image threshold on an example dataset. First, plot
-the example dataset with the active scalars.</p>
+<p>例題のデータセットで画像閾値のデモを行います。まず、アクティブなスカラーを持つサンプルデータセットをプロットします。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">uni</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_uniform</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">uni</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
@@ -697,8 +694,7 @@ the example dataset with the active scalars.</p>
 <figure class="align-default">
 <img alt="../../../_images/pyvista-UniformGridFilters-image_threshold-1_00_00.png" src="../../../_images/pyvista-UniformGridFilters-image_threshold-1_00_00.png" />
 </figure>
-<p>Now, plot the image threshold with <code class="docutils literal notranslate"><span class="pre">threshold=100</span></code>. Note how
-values above the threshold are 1 and below are 0.</p>
+<p>では、画像の閾値を <code class="docutils literal notranslate"><span class="pre">threshold=100</span></code> でプロットしてみましょう。閾値より上の値は1、下の値は0であることに注意してください。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ithresh</span> <span class="o">=</span> <span class="n">uni</span><span class="o">.</span><span class="n">image_threshold</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ithresh</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
