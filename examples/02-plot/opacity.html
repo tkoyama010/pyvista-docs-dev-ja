@@ -1098,8 +1098,7 @@
 <section class="sphx-glr-example-title" id="plot-with-opacity">
 <span id="plot-opacity-example"></span><span id="sphx-glr-examples-02-plot-opacity-py"></span><h1>不透明度を指定してプロット<a class="headerlink" href="#plot-with-opacity" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>不透明度伝達関数またはスカラー配列に基づく不透明度マッピングを使用して，メッシュのスカラー配列をプロットします．</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 2</span>
-<span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 
 <span class="c1"># Load St Helens DEM and warp the topography</span>
@@ -1111,8 +1110,11 @@
 <h2>グローバル値<a class="headerlink" href="#global-value" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>また，0から1の範囲で1つのfloat値を渡すことにより，グローバル不透明度値をメッシュに適用し，メッシュの背後にあるオブジェクトを表示することもできます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
-<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">contour</span><span class="p">(),</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">5</span><span class="p">,)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.85</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span>
+    <span class="n">image</span><span class="o">.</span><span class="n">contour</span><span class="p">(),</span>
+    <span class="n">line_width</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">opacity</span></a><span class="o">=</span><span class="mf">0.85</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -1131,32 +1133,32 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">'sigmoid_r'</span></code>: S字曲線上の不透明度を，プロットされたスカラー範囲の高低で変化 (増加) させる</p></li>
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Show the linear opacity transfer function</span>
-<span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">opacity</span><span class="o">=</span><span class="s2">&quot;linear&quot;</span><span class="p">)</span>
+<span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">opacity</span></a><span class="o">=</span><span class="s2">&quot;linear&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <img src="../../_images/sphx_glr_opacity_002.png" srcset="../../_images/sphx_glr_opacity_002.png" alt="opacity" class = "sphx-glr-single-img"/><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Show the sigmoid opacity transfer function</span>
-<span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">opacity</span><span class="o">=</span><span class="s2">&quot;sigmoid&quot;</span><span class="p">)</span>
+<span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">opacity</span></a><span class="o">=</span><span class="s2">&quot;sigmoid&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <img src="../../_images/sphx_glr_opacity_003.png" srcset="../../_images/sphx_glr_opacity_003.png" alt="opacity" class = "sphx-glr-single-img"/><p>また，プロットされたスカラー配列に線形にマップされる独自の伝達関数を使用することもできます．たとえば，次のように不透明度マッピングを作成できます．</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">opacity</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">opacity</span></a> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>上記のように最小化された不透明度マッピングが与えられると，PyVistaはスカラーをマッピングするときに表示される色の数の範囲にわたって不透明度マッピングを補間します． <code class="docutils literal notranslate"><span class="pre">scipy</span></code> が利用可能なら，二次補間が使用されます-そうでなければ，単純な線形補間が使用されます．不透明度伝達関数がどのようなものか知りたいですか?次のようにして取得できます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Have PyVista interpolate the transfer function</span>
-<span class="n">tf</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">opacity_transfer_function</span><span class="p">(</span><span class="n">opacity</span><span class="p">,</span> <span class="mi">256</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span> <span class="o">/</span> <span class="mf">255.</span>
+<a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">tf</span></a> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">opacity_transfer_function</span><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">opacity</span></a><span class="p">,</span> <span class="mi">256</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span> <span class="o">/</span> <span class="mf">255.0</span>
 
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tf</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;My Interpolated Opacity Transfer Function&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Opacity&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Index along scalar mapping&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot" title="matplotlib.pyplot.plot" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">tf</span></a><span class="p">)</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.title.html#matplotlib.pyplot.title" title="matplotlib.pyplot.title" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">title</span></a><span class="p">(</span><span class="s1">&#39;My Interpolated Opacity Transfer Function&#39;</span><span class="p">)</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.ylabel.html#matplotlib.pyplot.ylabel" title="matplotlib.pyplot.ylabel" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span></a><span class="p">(</span><span class="s1">&#39;Opacity&#39;</span><span class="p">)</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.xlabel.html#matplotlib.pyplot.xlabel" title="matplotlib.pyplot.xlabel" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span></a><span class="p">(</span><span class="s1">&#39;Index along scalar mapping&#39;</span><span class="p">)</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
 <img src="../../_images/sphx_glr_opacity_004.png" srcset="../../_images/sphx_glr_opacity_004.png" alt="My Interpolated Opacity Transfer Function" class = "sphx-glr-single-img"/><p>不透明度マッピングの不透明度は，最小スカラー範囲で0.0，値はスカラー範囲の中央で0.9，値はスカラー範囲の最大で0.3になります．</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">opacity</span><span class="o">=</span><span class="n">opacity</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">opacity</span></a><span class="o">=</span><a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">opacity</span></a><span class="p">)</span>
 </pre></div>
 </div>
 <img src="../../_images/sphx_glr_opacity_005.png" srcset="../../_images/sphx_glr_opacity_005.png" alt="opacity" class = "sphx-glr-single-img"/><p>不透明度マッピングは， DICOM画像をプロットするときにしばしば有用である．たとえば，サンプルのknee DICOMイメージをダウンロードします．</p>
@@ -1170,18 +1172,15 @@
 <span class="n">p</span><span class="o">.</span><span class="n">view_xy</span><span class="p">()</span>
 
 <span class="n">p</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">knee</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;bone&quot;</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="s2">&quot;linear&quot;</span><span class="p">,</span>
-           <span class="n">scalar_bar_args</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s2">&quot;Linear Opacity&quot;</span><span class="p">})</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">knee</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;bone&quot;</span><span class="p">,</span> <a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">opacity</span></a><span class="o">=</span><span class="s2">&quot;linear&quot;</span><span class="p">,</span> <span class="n">scalar_bar_args</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s2">&quot;Linear Opacity&quot;</span><span class="p">})</span>
 <span class="n">p</span><span class="o">.</span><span class="n">view_xy</span><span class="p">()</span>
 
 <span class="n">p</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">knee</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;bone&quot;</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="s2">&quot;sigmoid&quot;</span><span class="p">,</span>
-           <span class="n">scalar_bar_args</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s2">&quot;Sigmoidal Opacity&quot;</span><span class="p">})</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">knee</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;bone&quot;</span><span class="p">,</span> <a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">opacity</span></a><span class="o">=</span><span class="s2">&quot;sigmoid&quot;</span><span class="p">,</span> <span class="n">scalar_bar_args</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s2">&quot;Sigmoidal Opacity&quot;</span><span class="p">})</span>
 <span class="n">p</span><span class="o">.</span><span class="n">view_xy</span><span class="p">()</span>
 
 <span class="n">p</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">knee</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;bone&quot;</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="s2">&quot;geom_r&quot;</span><span class="p">,</span>
-           <span class="n">scalar_bar_args</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s2">&quot;Log Scale Opacity&quot;</span><span class="p">})</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">knee</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;bone&quot;</span><span class="p">,</span> <a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">opacity</span></a><span class="o">=</span><span class="s2">&quot;geom_r&quot;</span><span class="p">,</span> <span class="n">scalar_bar_args</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s2">&quot;Log Scale Opacity&quot;</span><span class="p">})</span>
 <span class="n">p</span><span class="o">.</span><span class="n">view_xy</span><span class="p">()</span>
 
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -1211,19 +1210,21 @@ variance will be completely transparent.</p>
 
 <span class="n">p</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_text</span><span class="p">(</span><span class="s1">&#39;Opacity by Array&#39;</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">contours</span><span class="o">.</span><span class="n">copy</span><span class="p">(),</span> <span class="n">scalars</span><span class="o">=</span><span class="s1">&#39;Temperature&#39;</span><span class="p">,</span>
-           <span class="n">opacity</span><span class="o">=</span><span class="s1">&#39;Temperature_var&#39;</span><span class="p">,</span>
-           <span class="n">use_transparency</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-           <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;bwr&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span>
+    <span class="n">contours</span><span class="o">.</span><span class="n">copy</span><span class="p">(),</span>
+    <span class="n">scalars</span><span class="o">=</span><span class="s1">&#39;Temperature&#39;</span><span class="p">,</span>
+    <a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">opacity</span></a><span class="o">=</span><span class="s1">&#39;Temperature_var&#39;</span><span class="p">,</span>
+    <span class="n">use_transparency</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;bwr&#39;</span><span class="p">,</span>
+<span class="p">)</span>
 
 <span class="n">p</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_text</span><span class="p">(</span><span class="s1">&#39;No Opacity&#39;</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">contours</span><span class="p">,</span> <span class="n">scalars</span><span class="o">=</span><span class="s1">&#39;Temperature&#39;</span><span class="p">,</span>
-           <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;bwr&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">contours</span><span class="p">,</span> <span class="n">scalars</span><span class="o">=</span><span class="s1">&#39;Temperature&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;bwr&#39;</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_opacity_007.png" srcset="../../_images/sphx_glr_opacity_007.png" alt="opacity" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  10.531 seconds)</p>
+<img src="../../_images/sphx_glr_opacity_007.png" srcset="../../_images/sphx_glr_opacity_007.png" alt="opacity" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  7.225 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-plot-opacity-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/30881ad9d9fe0e94b2037a5a2d8642e8/opacity.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">opacity.py</span></code></a></p>

@@ -1088,7 +1088,7 @@
 <section class="sphx-glr-example-title" id="slider-bar-widget">
 <span id="slider-bar-widget-example"></span><span id="sphx-glr-examples-03-widgets-slider-bar-widget-py"></span><h1>スライダバーウィジェット<a class="headerlink" href="#slider-bar-widget" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>スライダウィジェットは， <a class="reference internal" href="../../api/plotting/_autosummary/pyvista.WidgetHelper.add_slider_widget.html#pyvista.WidgetHelper.add_slider_widget" title="pyvista.WidgetHelper.add_slider_widget"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.WidgetHelper.add_slider_widget()</span></code></a> メソッドおよび <a class="reference internal" href="../../api/plotting/_autosummary/pyvista.WidgetHelper.clear_slider_widgets.html#pyvista.WidgetHelper.clear_slider_widgets" title="pyvista.WidgetHelper.clear_slider_widgets"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.WidgetHelper.clear_slider_widgets()</span></code></a> メソッドによって，それぞれ有効および無効にすることができます．これは，ほぼすべてのものに使用できる値を制御できるため，最も用途の広いウィジェットの1つです．</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 <p>追加したヘルパーメソッドの1つに <a class="reference internal" href="../../api/plotting/_autosummary/pyvista.WidgetHelper.add_mesh_threshold.html#pyvista.WidgetHelper.add_mesh_threshold" title="pyvista.WidgetHelper.add_mesh_threshold"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.WidgetHelper.add_mesh_threshold()</span></code></a> メソッドがあります．これは，スライダウィジェットを利用して閾値を制御します．</p>
@@ -1107,7 +1107,7 @@
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">出力:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[UnstructuredGrid (0x7f3a88190e80)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[UnstructuredGrid (0x7f0081af5910)
   N Cells:  115425
   N Points: 179772
   X Bounds: 3.760e+01, 1.171e+02
@@ -1124,11 +1124,13 @@
 <p>あるいは，スライダから1つの値を引数として取るカスタムコールバック関数を利用して，メッシュの解像度を制御するなどのことができます．ここでも <code class="docutils literal notranslate"><span class="pre">add_mesh</span></code> における <code class="docutils literal notranslate"><span class="pre">name</span></code> 引数の使用に注意してください．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 
+
 <span class="k">def</span> <span class="nf">create_mesh</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
     <span class="n">res</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
     <span class="n">sphere</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">(</span><span class="n">phi_resolution</span><span class="o">=</span><span class="n">res</span><span class="p">,</span> <span class="n">theta_resolution</span><span class="o">=</span><span class="n">res</span><span class="p">)</span>
     <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">sphere</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;sphere&#39;</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="k">return</span>
+
 
 <span class="n">p</span><span class="o">.</span><span class="n">add_slider_widget</span><span class="p">(</span><span class="n">create_mesh</span><span class="p">,</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Resolution&#39;</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -1136,7 +1138,7 @@
 </div>
 <img src="../../_images/sphx_glr_slider-bar-widget_002.png" srcset="../../_images/sphx_glr_slider-bar-widget_002.png" alt="slider bar widget" class = "sphx-glr-single-img"/><p>以下はユーザ対話型のスクリーンショットです</p>
 <img alt="../../_images/slider-widget-resolution.gif" src="../../_images/slider-widget-resolution.gif" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.994 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.322 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-03-widgets-slider-bar-widget-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/aa2c7dd4e54a5469da7c8e70ad16c422/slider-bar-widget.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">slider-bar-widget.py</span></code></a></p>

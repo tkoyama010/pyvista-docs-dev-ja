@@ -1094,8 +1094,7 @@
 <span id="sphx-glr-examples-03-widgets-checkbox-widget-py"></span><h1>チェックボックスウィジェット<a class="headerlink" href="#checkbox-widget" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>チェックボックスを使用して，シーン内のメッシュの表示/非表示を切り替えます．</p>
 <p>詳細については， <a class="reference internal" href="../../api/plotting/_autosummary/pyvista.WidgetHelper.add_checkbox_button_widget.html#pyvista.WidgetHelper.add_checkbox_button_widget" title="pyvista.WidgetHelper.add_checkbox_button_widget"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.WidgetHelper.add_checkbox_button_widget()</span></code></a> を参照してください．</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 2</span>
-<span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 </pre></div>
 </div>
 <section id="single-checkbox">
@@ -1105,32 +1104,31 @@
 <span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">actor</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">)</span>
 
+
 <span class="k">def</span> <span class="nf">toggle_vis</span><span class="p">(</span><span class="n">flag</span><span class="p">):</span>
     <span class="n">actor</span><span class="o">.</span><span class="n">SetVisibility</span><span class="p">(</span><span class="n">flag</span><span class="p">)</span>
+
 
 <span class="n">p</span><span class="o">.</span><span class="n">add_checkbox_button_widget</span><span class="p">(</span><span class="n">toggle_vis</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="チェックボックスウィジェット" class="sphx-glr-single-img" src="../../_images/sphx_glr_checkbox-widget_001.png" />
-<p class="sphx-glr-script-out">出力:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(1.9264490110725325, 1.9264490110725325, 1.9264490110725325),
- (0.0, 0.0, 0.0),
- (0.0, 0.0, 1.0)]
-</pre></div>
-</div>
-</section>
+<img src="../../_images/sphx_glr_checkbox-widget_001.png" srcset="../../_images/sphx_glr_checkbox-widget_001.png" alt="checkbox widget" class = "sphx-glr-single-img"/></section>
 <section id="multiple-checkboxes">
 <h2>複数のチェックボックス<a class="headerlink" href="#multiple-checkboxes" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>この例では，一意のカラーを持つ多数のメッシュをシーンに追加し，同じカラーのメッシュに対応するチェックボックスを作成してシーン内での可視性を切り替えます．</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">colors</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;ff0000&quot;</span><span class="p">,</span> <span class="s2">&quot;28e5da&quot;</span><span class="p">,</span> <span class="s2">&quot;0000ff&quot;</span><span class="p">],</span>
-          <span class="p">[</span><span class="s2">&quot;ffff00&quot;</span><span class="p">,</span> <span class="s2">&quot;c8bebe&quot;</span><span class="p">,</span> <span class="s2">&quot;f79292&quot;</span><span class="p">],</span>
-          <span class="p">[</span><span class="s2">&quot;fffff0&quot;</span><span class="p">,</span> <span class="s2">&quot;f18c1d&quot;</span><span class="p">,</span> <span class="s2">&quot;23dcaa&quot;</span><span class="p">],</span>
-          <span class="p">[</span><span class="s2">&quot;d785ec&quot;</span><span class="p">,</span> <span class="s2">&quot;9d5b13&quot;</span><span class="p">,</span> <span class="s2">&quot;e4e0b1&quot;</span><span class="p">],</span>
-          <span class="p">[</span><span class="s2">&quot;894509&quot;</span><span class="p">,</span> <span class="s2">&quot;af45f5&quot;</span><span class="p">,</span> <span class="s2">&quot;fff000&quot;</span><span class="p">]]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">colors</span></a> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="s2">&quot;ff0000&quot;</span><span class="p">,</span> <span class="s2">&quot;28e5da&quot;</span><span class="p">,</span> <span class="s2">&quot;0000ff&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;ffff00&quot;</span><span class="p">,</span> <span class="s2">&quot;c8bebe&quot;</span><span class="p">,</span> <span class="s2">&quot;f79292&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;fffff0&quot;</span><span class="p">,</span> <span class="s2">&quot;f18c1d&quot;</span><span class="p">,</span> <span class="s2">&quot;23dcaa&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;d785ec&quot;</span><span class="p">,</span> <span class="s2">&quot;9d5b13&quot;</span><span class="p">,</span> <span class="s2">&quot;e4e0b1&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;894509&quot;</span><span class="p">,</span> <span class="s2">&quot;af45f5&quot;</span><span class="p">,</span> <span class="s2">&quot;fff000&quot;</span><span class="p">],</span>
+<span class="p">]</span>
+
 
 <span class="k">class</span> <span class="nc">SetVisibilityCallback</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Helper callback to keep a reference to the actor being modified.&quot;&quot;&quot;</span>
+
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">actor</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">actor</span> <span class="o">=</span> <span class="n">actor</span>
 
@@ -1139,35 +1137,32 @@
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Widget size</span>
-<span class="n">size</span> <span class="o">=</span> <span class="mi">50</span>
+<a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">size</span></a> <span class="o">=</span> <span class="mi">50</span>
 
 <span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 
-<span class="n">Startpos</span> <span class="o">=</span> <span class="mi">12</span>
-<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">lst</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">colors</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">color</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
-        <span class="n">actor</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="mi">0</span><span class="p">)),</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
+<a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">Startpos</span></a> <span class="o">=</span> <span class="mi">12</span>
+<span class="k">for</span> <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">i</span></a><span class="p">,</span> <a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">lst</span></a> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">colors</span></a><span class="p">):</span>
+    <span class="k">for</span> <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">j</span></a><span class="p">,</span> <a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">color</span></a> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">lst</span></a><span class="p">):</span>
+        <span class="n">actor</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">(</span><a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">i</span></a><span class="p">,</span> <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">j</span></a><span class="p">,</span> <span class="mi">0</span><span class="p">)),</span> <a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">color</span></a><span class="o">=</span><a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">color</span></a><span class="p">)</span>
         <span class="c1"># Make a separate callback for each widget</span>
         <span class="n">callback</span> <span class="o">=</span> <span class="n">SetVisibilityCallback</span><span class="p">(</span><span class="n">actor</span><span class="p">)</span>
-        <span class="n">p</span><span class="o">.</span><span class="n">add_checkbox_button_widget</span><span class="p">(</span><span class="n">callback</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-                                     <span class="n">position</span><span class="o">=</span><span class="p">(</span><span class="mf">5.0</span><span class="p">,</span> <span class="n">Startpos</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="n">size</span><span class="p">,</span>
-                                     <span class="n">border_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-                                     <span class="n">color_on</span><span class="o">=</span><span class="n">color</span><span class="p">,</span>
-                                     <span class="n">color_off</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">,</span>
-                                     <span class="n">background_color</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">)</span>
-        <span class="n">Startpos</span> <span class="o">=</span> <span class="n">Startpos</span> <span class="o">+</span> <span class="n">size</span> <span class="o">+</span> <span class="p">(</span><span class="n">size</span> <span class="o">//</span> <span class="mi">10</span><span class="p">)</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">add_checkbox_button_widget</span><span class="p">(</span>
+            <span class="n">callback</span><span class="p">,</span>
+            <span class="n">value</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">position</span><span class="o">=</span><span class="p">(</span><span class="mf">5.0</span><span class="p">,</span> <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">Startpos</span></a><span class="p">),</span>
+            <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">size</span></a><span class="o">=</span><a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">size</span></a><span class="p">,</span>
+            <span class="n">border_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+            <span class="n">color_on</span><span class="o">=</span><a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">color</span></a><span class="p">,</span>
+            <span class="n">color_off</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">,</span>
+            <span class="n">background_color</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">Startpos</span></a> <span class="o">=</span> <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">Startpos</span></a> <span class="o">+</span> <a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">size</span></a> <span class="o">+</span> <span class="p">(</span><a href="https://docs.python.org/dev/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">size</span></a> <span class="o">//</span> <span class="mi">10</span><span class="p">)</span>
 
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="チェックボックスウィジェット" class="sphx-glr-single-img" src="../../_images/sphx_glr_checkbox-widget_002.png" />
-<p class="sphx-glr-script-out">出力:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(8.593226343715338, 7.593226418221144, 6.593226388418822),
- (1.9999999552965164, 1.0000000298023224, 0.0),
- (0.0, 0.0, 1.0)]
-</pre></div>
-</div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.270 seconds)</p>
+<img src="../../_images/sphx_glr_checkbox-widget_002.png" srcset="../../_images/sphx_glr_checkbox-widget_002.png" alt="checkbox widget" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.696 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-03-widgets-checkbox-widget-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/3c5ceba99f1afa0ece5f219bf6eefe77/checkbox-widget.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">checkbox-widget.py</span></code></a></p>

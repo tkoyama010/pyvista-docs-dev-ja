@@ -1102,7 +1102,6 @@
 
 <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 
-<span class="c1"># sphinx_gallery_thumbnail_number = 3</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 </pre></div>
 </div>
@@ -1110,7 +1109,7 @@
 <h2>ラベル文字列配列<a class="headerlink" href="#label-string-array" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>この例では，各ノードの文字列ラベルの配列を使用して，メッシュのノードにラベルを付けます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make some random points</span>
-<span class="n">poly</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="n">poly</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><a href="https://numpy.org/doc/stable/reference/random/generated/numpy.random.rand.html#numpy.random.rand" title="numpy.random.rand" class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span></a><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>文字列ラベルをポイントデータに追加します．これにより，各ノードにラベルが関連付けられます．</p>
@@ -1124,9 +1123,9 @@
 <tr><th>PolyData</th><th>Information</th></tr>
 <tr><td>N Cells</td><td>10</td></tr>
 <tr><td>N Points</td><td>10</td></tr>
-<tr><td>X Bounds</td><td>2.140e-01, 9.914e-01</td></tr>
-<tr><td>Y Bounds</td><td>3.565e-02, 8.812e-01</td></tr>
-<tr><td>Z Bounds</td><td>7.888e-03, 9.118e-01</td></tr>
+<tr><td>X Bounds</td><td>1.014e-01, 8.972e-01</td></tr>
+<tr><td>Y Bounds</td><td>2.640e-01, 9.728e-01</td></tr>
+<tr><td>Z Bounds</td><td>1.167e-01, 7.564e-01</td></tr>
 <tr><td>N Arrays</td><td>1</td></tr>
 </table>
 
@@ -1150,7 +1149,7 @@
 <h2>ラベルノードの位置<a class="headerlink" href="#label-node-locations" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>この例では，メッシュの節点に座標位置のラベルを付けます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load example beam file</span>
-<span class="n">grid</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">UnstructuredGrid</span><span class="p">(</span><span class="n">examples</span><span class="o">.</span><span class="n">hexbeamfile</span><span class="p">)</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">UnstructuredGrid</span><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">examples</span><span class="o">.</span><span class="n">hexbeamfile</span></a><span class="p">)</span>
 </pre></div>
 </div>
 <p>プロッティングクラスを作成し，非構造化グリッドを追加します</p>
@@ -1160,14 +1159,9 @@
 <span class="c1"># Add labels to points on the yz plane (where x == 0)</span>
 <span class="n">points</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">points</span>
 <span class="n">mask</span> <span class="o">=</span> <span class="n">points</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span>
-<span class="n">plotter</span><span class="o">.</span><span class="n">add_point_labels</span><span class="p">(</span>
-    <span class="n">points</span><span class="p">[</span><span class="n">mask</span><span class="p">],</span> <span class="n">points</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span> <span class="n">point_size</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">36</span>
-<span class="p">)</span>
+<span class="n">plotter</span><span class="o">.</span><span class="n">add_point_labels</span><span class="p">(</span><span class="n">points</span><span class="p">[</span><span class="n">mask</span><span class="p">],</span> <span class="n">points</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span> <span class="n">point_size</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">36</span><span class="p">)</span>
 
-<span class="n">plotter</span><span class="o">.</span><span class="n">camera_position</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">),</span>
-    <span class="p">(</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">),</span>
-    <span class="p">(</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.25</span><span class="p">)]</span>
+<span class="n">plotter</span><span class="o">.</span><span class="n">camera_position</span> <span class="o">=</span> <span class="p">[(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.25</span><span class="p">)]</span>
 
 <span class="n">plotter</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -1192,7 +1186,7 @@
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_labels_003.png" srcset="../../_images/sphx_glr_labels_003.png" alt="labels" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.212 seconds)</p>
+<img src="../../_images/sphx_glr_labels_003.png" srcset="../../_images/sphx_glr_labels_003.png" alt="labels" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.865 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-plot-labels-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/d5df6aa397d5aa0ffd9ac9147da7ea61/labels.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">labels.py</span></code></a></p>

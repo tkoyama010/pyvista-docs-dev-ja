@@ -1079,100 +1079,53 @@
 <span id="ref-lighting-properties-example"></span><span id="sphx-glr-examples-02-plot-lighting-mesh-py"></span><h1>照明プロパティ<a class="headerlink" href="#lighting-properties" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>周囲光 ，拡散反射光 ， 鏡面反射光など，レンダリングされたメッシュのライティングを制御します．これらのオプションは， <code class="docutils literal notranslate"><span class="pre">add_mesh</span></code> への <code class="docutils literal notranslate"><span class="pre">lighting</span></code> 引数が <code class="docutils literal notranslate"><span class="pre">True</span></code>  (デフォルトでは <code class="docutils literal notranslate"><span class="pre">True</span></code> です．)の場合にのみ動作します．</p>
 <p><code class="docutils literal notranslate"><span class="pre">lighting=False</span></code> を <code class="docutils literal notranslate"><span class="pre">add_mesh</span></code> に渡すと，指定したメッシュのすべてのライティングをオフにできます．</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 4</span>
-<span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 
 <span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_st_helens</span><span class="p">()</span><span class="o">.</span><span class="n">warp_by_scalar</span><span class="p">()</span>
 
-<span class="n">cpos</span> <span class="o">=</span> <span class="p">[(</span><span class="mf">575848.</span><span class="p">,</span> <span class="mf">5128459.</span><span class="p">,</span> <span class="mf">22289.</span><span class="p">),</span>
-        <span class="p">(</span><span class="mf">562835.0</span><span class="p">,</span> <span class="mf">5114981.5</span><span class="p">,</span> <span class="mf">2294.5</span><span class="p">),</span>
-        <span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">)]</span>
+<a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cpos</span></a> <span class="o">=</span> <span class="p">[(</span><span class="mf">575848.0</span><span class="p">,</span> <span class="mf">5128459.0</span><span class="p">,</span> <span class="mf">22289.0</span><span class="p">),</span> <span class="p">(</span><span class="mf">562835.0</span><span class="p">,</span> <span class="mf">5114981.5</span><span class="p">,</span> <span class="mf">2294.5</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">)]</span>
 </pre></div>
 </div>
 <p>まず，デフォルトのライティング条件を持つメッシュを見てみましょう．</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="n">cpos</span><span class="p">,</span> <span class="n">show_scalar_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cpos</span></a><span class="o">=</span><a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cpos</span></a><span class="p">,</span> <span class="n">show_scalar_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="ライティングメッシュ" class="sphx-glr-single-img" src="../../_images/sphx_glr_lighting_mesh_001.png" />
-<p class="sphx-glr-script-out">出力:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(575848.0, 5128459.0, 22289.0),
- (562835.0, 5114981.5, 2294.5),
- (-0.502518907629606, -0.502518907629606, 0.7035264706814484)]
+<img src="../../_images/sphx_glr_lighting_mesh_001.png" srcset="../../_images/sphx_glr_lighting_mesh_001.png" alt="lighting mesh" class = "sphx-glr-single-img"/><p>照明なしではどうですか</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lighting</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cpos</span></a><span class="o">=</span><a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cpos</span></a><span class="p">,</span> <span class="n">show_scalar_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>照明なしではどうですか</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lighting</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="n">cpos</span><span class="p">,</span> <span class="n">show_scalar_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</pre></div>
-</div>
-<img alt="ライティングメッシュ" class="sphx-glr-single-img" src="../../_images/sphx_glr_lighting_mesh_002.png" />
-<p class="sphx-glr-script-out">出力:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(575848.0, 5128459.0, 22289.0),
- (562835.0, 5114981.5, 2294.5),
- (-0.502518907629606, -0.502518907629606, 0.7035264706814484)]
-</pre></div>
-</div>
-<p>鏡面特性の実証</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="n">window_size</span><span class="o">=</span><span class="p">[</span><span class="mi">1500</span><span class="p">,</span> <span class="mi">500</span><span class="p">])</span>
+<img src="../../_images/sphx_glr_lighting_mesh_002.png" srcset="../../_images/sphx_glr_lighting_mesh_002.png" alt="lighting mesh" class = "sphx-glr-single-img"/><p>鏡面特性の実証</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">window_size</span><span class="o">=</span><span class="p">[</span><span class="mi">1500</span><span class="p">,</span> <span class="mi">500</span><span class="p">])</span>
 
-<span class="n">p</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">show_scalar_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_text</span><span class="p">(</span><span class="s1">&#39;No Specular&#39;</span><span class="p">)</span>
 
-<span class="n">p</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">s</span> <span class="o">=</span> <span class="mf">1.0</span>
-<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">specular</span><span class="o">=</span><span class="n">s</span><span class="p">,</span> <span class="n">show_scalar_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">add_text</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Specular of </span><span class="si">{</span><span class="n">s</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">s</span></a> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">specular</span><span class="o">=</span><a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">s</span></a><span class="p">,</span> <span class="n">show_scalar_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_text</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Specular of </span><span class="si">{</span><a href="https://docs.python.org/dev/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">s</span></a><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 
 <span class="n">p</span><span class="o">.</span><span class="n">link_views</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">view_isometric</span><span class="p">()</span>
-<span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="n">cpos</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cpos</span></a><span class="o">=</span><a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cpos</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="ライティングメッシュ" class="sphx-glr-single-img" src="../../_images/sphx_glr_lighting_mesh_003.png" />
-<p class="sphx-glr-script-out">出力:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(575848.0, 5128459.0, 22289.0),
- (562835.0, 5114981.5, 2294.5),
- (-0.502518907629606, -0.502518907629606, 0.7035264706814484)]
+<img src="../../_images/sphx_glr_lighting_mesh_003.png" srcset="../../_images/sphx_glr_lighting_mesh_003.png" alt="lighting mesh" class = "sphx-glr-single-img"/><p>鏡面反射のみ</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">specular</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cpos</span></a><span class="o">=</span><a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cpos</span></a><span class="p">,</span> <span class="n">show_scalar_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>鏡面反射のみ</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">specular</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="n">cpos</span><span class="p">,</span> <span class="n">show_scalar_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<img src="../../_images/sphx_glr_lighting_mesh_004.png" srcset="../../_images/sphx_glr_lighting_mesh_004.png" alt="lighting mesh" class = "sphx-glr-single-img"/><p>スペキュラパワー</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">specular</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">specular_power</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cpos</span></a><span class="o">=</span><a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cpos</span></a><span class="p">,</span> <span class="n">show_scalar_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="ライティングメッシュ" class="sphx-glr-single-img" src="../../_images/sphx_glr_lighting_mesh_004.png" />
-<p class="sphx-glr-script-out">出力:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(575848.0, 5128459.0, 22289.0),
- (562835.0, 5114981.5, 2294.5),
- (-0.502518907629606, -0.502518907629606, 0.7035264706814484)]
+<img src="../../_images/sphx_glr_lighting_mesh_005.png" srcset="../../_images/sphx_glr_lighting_mesh_005.png" alt="lighting mesh" class = "sphx-glr-single-img"/><p>3機種の使用実績</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">diffuse</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">specular</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">ambient</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cpos</span></a><span class="o">=</span><a href="https://docs.python.org/dev/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cpos</span></a><span class="p">,</span> <span class="n">show_scalar_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>スペキュラパワー</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">specular</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">specular_power</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span>
-          <span class="n">cpos</span><span class="o">=</span><span class="n">cpos</span><span class="p">,</span> <span class="n">show_scalar_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</pre></div>
-</div>
-<img alt="ライティングメッシュ" class="sphx-glr-single-img" src="../../_images/sphx_glr_lighting_mesh_005.png" />
-<p class="sphx-glr-script-out">出力:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(575848.0, 5128459.0, 22289.0),
- (562835.0, 5114981.5, 2294.5),
- (-0.502518907629606, -0.502518907629606, 0.7035264706814484)]
-</pre></div>
-</div>
-<p>3機種の使用実績</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">diffuse</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">specular</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">ambient</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
-          <span class="n">cpos</span><span class="o">=</span><span class="n">cpos</span><span class="p">,</span> <span class="n">show_scalar_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</pre></div>
-</div>
-<img alt="ライティングメッシュ" class="sphx-glr-single-img" src="../../_images/sphx_glr_lighting_mesh_006.png" />
-<p class="sphx-glr-script-out">出力:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[(575848.0, 5128459.0, 22289.0),
- (562835.0, 5114981.5, 2294.5),
- (-0.502518907629606, -0.502518907629606, 0.7035264706814484)]
-</pre></div>
-</div>
-<p>一般的なライティング条件の詳細については， <a class="reference internal" href="../index.html#ref-light-examples"><span class="std std-ref">照明</span></a> の例を参照してください．</p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  6.417 seconds)</p>
+<img src="../../_images/sphx_glr_lighting_mesh_006.png" srcset="../../_images/sphx_glr_lighting_mesh_006.png" alt="lighting mesh" class = "sphx-glr-single-img"/><p>一般的なライティング条件の詳細については， <a class="reference internal" href="../index.html#ref-light-examples"><span class="std std-ref">照明</span></a> の例を参照してください．</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  4.468 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-plot-lighting-mesh-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/179dff1eef1c450e45f9c1c607e905a1/lighting_mesh.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">lighting_mesh.py</span></code></a></p>

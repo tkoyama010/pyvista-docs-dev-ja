@@ -1089,27 +1089,26 @@
 <span class="k">def</span> <span class="nf">generate_points</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="mf">0.02</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;A helper to make a 3D NumPy array of points (n_points by 3)&quot;&quot;&quot;</span>
     <span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_lidar</span><span class="p">()</span>
-    <span class="n">ids</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="n">dataset</span><span class="o">.</span><span class="n">n_points</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span>
-                            <span class="n">size</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">dataset</span><span class="o">.</span><span class="n">n_points</span> <span class="o">*</span> <span class="n">subset</span><span class="p">))</span>
-    <span class="k">return</span> <span class="n">dataset</span><span class="o">.</span><span class="n">points</span><span class="p">[</span><span class="n">ids</span><span class="p">]</span>
+    <span class="n">ids</span> <span class="o">=</span> <a href="https://numpy.org/doc/stable/reference/random/generated/numpy.random.randint.html#numpy.random.randint" title="numpy.random.randint" class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span></a><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="n">dataset</span><span class="o">.</span><span class="n">n_points</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">dataset</span><span class="o">.</span><span class="n">n_points</span> <span class="o">*</span> <span class="n">subset</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">dataset</span><span class="o">.</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">points</span></a><span class="p">[</span><span class="n">ids</span><span class="p">]</span>
 
 
-<span class="n">points</span> <span class="o">=</span> <span class="n">generate_points</span><span class="p">()</span>
+<a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">points</span></a> <span class="o">=</span> <span class="n">generate_points</span><span class="p">()</span>
 <span class="c1"># Print first 5 rows to prove its a numpy array (n_points by 3)</span>
 <span class="c1"># Columns are (X Y Z)</span>
-<span class="n">points</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="p">:]</span>
+<a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">points</span></a><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="p">:]</span>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">出力:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>pyvista_ndarray([[4.81002175e+05, 4.40017420e+06, 1.76005005e+03],
-                 [4.81042075e+05, 4.40020200e+06, 1.75857996e+03],
-                 [4.81106875e+05, 4.40016610e+06, 1.75894995e+03],
-                 [4.81034375e+05, 4.40011220e+06, 1.76842004e+03],
-                 [4.81017075e+05, 4.40014750e+06, 1.76107996e+03]])
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>pyvista_ndarray([[4.80938275e+05, 4.40024560e+06, 1.76290002e+03],
+                 [4.80993375e+05, 4.40020120e+06, 1.76987000e+03],
+                 [4.80965075e+05, 4.40018950e+06, 1.76184998e+03],
+                 [4.81033575e+05, 4.40016670e+06, 1.76031006e+03],
+                 [4.81111675e+05, 4.40011970e+06, 1.75952002e+03]])
 </pre></div>
 </div>
 <p>サンプルデータまたは独自のプロジェクトからポイント/頂点のNumPy配列を取得したので，これらのポイントのPyVistaメッシュを作成するのは簡単です．</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">point_cloud</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">point_cloud</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">points</span></a><span class="p">)</span>
 <span class="n">point_cloud</span>
 </pre></div>
 </div>
@@ -1129,7 +1128,7 @@
 </div>
 <br />
 <br /><p>健全性のチェックもできます</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">point_cloud</span><span class="o">.</span><span class="n">points</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://numpy.org/doc/stable/reference/generated/numpy.allclose.html#numpy.allclose" title="numpy.allclose" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">allclose</span></a><span class="p">(</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">points</span></a><span class="p">,</span> <span class="n">point_cloud</span><span class="o">.</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">points</span></a><span class="p">)</span>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">出力:</p>
@@ -1143,7 +1142,7 @@
 <img src="../../_images/sphx_glr_create-point-cloud_001.png" srcset="../../_images/sphx_glr_create-point-cloud_001.png" alt="create point cloud" class = "sphx-glr-single-img"/><p>ここで，メッシュのすべてのノードに関連付けるデータアトリビュート(スカラー/ベクトル配列)があるとします．最初の軸に沿ったメッシュ内の点の数と同じ長さのNumPyデータ配列を簡単に追加できます．例えば，この新しい <code class="docutils literal notranslate"><span class="pre">point_cloud</span></code> メッシュにいくつかの配列を追加しましょう．</p>
 <p>points配列と同じ長さのスカラ値の配列を作成します．この配列の各要素は，同じインデックスのポイントに対応します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make data array using z-component of points array</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">points</span><span class="p">[:,</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">data</span> <span class="o">=</span> <a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">points</span></a><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 
 <span class="c1"># Add that data to the mesh with the name &quot;uniform dist&quot;</span>
 <span class="n">point_cloud</span><span class="p">[</span><span class="s2">&quot;elevation&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span>
@@ -1156,39 +1155,43 @@
 <img src="../../_images/sphx_glr_create-point-cloud_002.png" srcset="../../_images/sphx_glr_create-point-cloud_002.png" alt="create point cloud" class = "sphx-glr-single-img"/><p>そのデータは退屈ですよね?複数のスカラ値を持つデータ配列，例えば3つの要素を持つベクトルを追加することもできます．ポイントクラウド内のすべてのノードのベクトルを計算し，それらのベクトルをメッシュに追加する簡単な関数を作成します．</p>
 <p>そのデータは退屈ですよね?複数のスカラ値を持つデータ配列，例えば3つの要素を持つベクトルを追加することもできます．ポイントクラウド内のすべてのノードのベクトルを計算し，それらのベクトルをメッシュに追加する簡単な関数を作成します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create random XYZ points</span>
-<span class="n">points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">points</span></a> <span class="o">=</span> <a href="https://numpy.org/doc/stable/reference/random/generated/numpy.random.rand.html#numpy.random.rand" title="numpy.random.rand" class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span></a><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 <span class="c1"># Make PolyData</span>
-<span class="n">point_cloud</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
+<span class="n">point_cloud</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">points</span></a><span class="p">)</span>
 
 
 <span class="k">def</span> <span class="nf">compute_vectors</span><span class="p">(</span><span class="n">mesh</span><span class="p">):</span>
     <span class="n">origin</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">center</span>
-    <span class="n">vectors</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">points</span> <span class="o">-</span> <span class="n">origin</span>
-    <span class="n">vectors</span> <span class="o">=</span> <span class="n">vectors</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">vectors</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)[:,</span> <span class="kc">None</span><span class="p">]</span>
+    <span class="n">vectors</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">points</span></a> <span class="o">-</span> <span class="n">origin</span>
+    <span class="n">vectors</span> <span class="o">=</span> <span class="n">vectors</span> <span class="o">/</span> <a href="https://numpy.org/doc/stable/reference/generated/numpy.linalg.norm.html#numpy.linalg.norm" title="numpy.linalg.norm" class="sphx-glr-backref-module-numpy-linalg sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span></a><span class="p">(</span><span class="n">vectors</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)[:,</span> <span class="kc">None</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">vectors</span>
+
 
 <span class="n">vectors</span> <span class="o">=</span> <span class="n">compute_vectors</span><span class="p">(</span><span class="n">point_cloud</span><span class="p">)</span>
 <span class="n">vectors</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="p">:]</span>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">出力:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>pyvista_ndarray([[-0.55900346,  0.57092667, -0.60129683],
-                 [ 0.23136505,  0.87809317,  0.41883481],
-                 [-0.77822785, -0.60338264,  0.17404255],
-                 [ 0.33661148, -0.91339709, -0.2289071 ],
-                 [-0.3916899 ,  0.77759868,  0.49185293]])
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>pyvista_ndarray([[-0.36200292,  0.92549358, -0.11142497],
+                 [ 0.75981164, -0.63914863, -0.11906006],
+                 [ 0.84610979, -0.11574597, -0.52028944],
+                 [ 0.13393827,  0.67409645,  0.72639832],
+                 [ 0.5838394 , -0.04075584, -0.81084556]])
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">point_cloud</span><span class="p">[</span><span class="s1">&#39;vectors&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">vectors</span>
 </pre></div>
 </div>
 <p>今度は，グリフフィルター(詳細は <a class="reference internal" href="../01-filter/glyphs.html#glyph-example"><span class="std std-ref">字形のプロット (ベクトルかPolyData)</span></a> を参照)を使って，これらのベクトルを使って矢印を作ることができます．</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">arrows</span> <span class="o">=</span> <span class="n">point_cloud</span><span class="o">.</span><span class="n">glyph</span><span class="p">(</span><span class="n">orient</span><span class="o">=</span><span class="s1">&#39;vectors&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">factor</span><span class="o">=</span><span class="mf">0.15</span><span class="p">,)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">arrows</span> <span class="o">=</span> <span class="n">point_cloud</span><span class="o">.</span><span class="n">glyph</span><span class="p">(</span>
+    <span class="n">orient</span><span class="o">=</span><span class="s1">&#39;vectors&#39;</span><span class="p">,</span>
+    <span class="n">scale</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">factor</span><span class="o">=</span><span class="mf">0.15</span><span class="p">,</span>
+<span class="p">)</span>
 
 <span class="c1"># Display the arrows</span>
 <span class="n">plotter</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
-<span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">point_cloud</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;maroon&#39;</span><span class="p">,</span> <span class="n">point_size</span><span class="o">=</span><span class="mf">10.</span><span class="p">,</span>
-                 <span class="n">render_points_as_spheres</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">point_cloud</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;maroon&#39;</span><span class="p">,</span> <span class="n">point_size</span><span class="o">=</span><span class="mf">10.0</span><span class="p">,</span> <span class="n">render_points_as_spheres</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">arrows</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;lightblue&#39;</span><span class="p">)</span>
 <span class="c1"># plotter.add_point_labels([point_cloud.center,], [&#39;Center&#39;,],</span>
 <span class="c1">#                          point_color=&#39;yellow&#39;, point_size=20)</span>
@@ -1196,7 +1199,7 @@
 <span class="n">plotter</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_create-point-cloud_003.png" srcset="../../_images/sphx_glr_create-point-cloud_003.png" alt="create point cloud" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  5.578 seconds)</p>
+<img src="../../_images/sphx_glr_create-point-cloud_003.png" srcset="../../_images/sphx_glr_create-point-cloud_003.png" alt="create point cloud" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.007 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-load-create-point-cloud-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/b56f133896ca717685efadc3dcd1d66c/create-point-cloud.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">create-point-cloud.py</span></code></a></p>
