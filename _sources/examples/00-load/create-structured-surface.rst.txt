@@ -58,7 +58,7 @@ Create a simple meshgrid using NumPy
     x = np.arange(-10, 10, 0.25)
     y = np.arange(-10, 10, 0.25)
     x, y = np.meshgrid(x, y)
-    r = np.sqrt(x ** 2 + y ** 2)
+    r = np.sqrt(x**2 + y**2)
     z = np.sin(r)
 
 
@@ -202,11 +202,11 @@ frame.
  .. code-block:: none
 
 
-    pyvista_ndarray([[ -37.85776154, -281.22745911,    1.78437014],
-                     [ -24.99041393, -271.67132344,    2.41978513],
-                     [ -14.73269352, -264.05326795,    3.02863238],
-                     [  -1.64022674, -254.32994402,    3.93869578],
-                     [   9.01398455, -246.41742843,    4.78281908]])
+    pyvista_ndarray([[ -44.50032772, -279.19741198,    1.83785014],
+                     [ -33.21693969, -270.8176285 ,    2.41788342],
+                     [ -23.32701032, -263.47271874,    3.02547783],
+                     [ -11.94115357, -255.01683528,    3.84341508],
+                     [   4.31365284, -242.94495067,    5.22328938]])
 
 
 
@@ -348,7 +348,7 @@ Let's start with a simple example by extending the wave mesh to 3D
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.837 seconds)
+   **Total running time of the script:** ( 0 minutes  2.437 seconds)
 
 
 .. _sphx_glr_download_examples_00-load_create-structured-surface.py:

@@ -1083,8 +1083,8 @@
 </div>
 <p>この例では，天井駆動キャビティー流れのデータを使用しています． データの読み込みをより制御するために，OpenFOAMファイルの読み込みには <a class="reference internal" href="../../api/readers/_autosummary/pyvista.OpenFOAMReader.html#pyvista.OpenFOAMReader" title="pyvista.OpenFOAMReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.OpenFOAMReader</span></code></a> を使用することをお勧めします． pyvistaのOpenFOAMReaderは，新しいメッシュが読み込まれるたびに再作成する必要があります．</p>
 <p>この例は，vtk&gt;=9.1.0のバージョンでのみ正しく動作します．それ以前のバージョンでは，パッチ配列の名前と，読み込んだメッシュのキーの結果が異なります．</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">filename</span></a> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_cavity</span><span class="p">(</span><span class="n">load</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">reader</span> <span class="o">=</span> <a href="https://docs.python.org/dev/library/abc.html#abc.ABC" title="abc.ABC" class="sphx-glr-backref-module-abc sphx-glr-backref-type-py-class"><span class="n">pyvista</span><span class="o">.</span><span class="n">OpenFOAMReader</span></a><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">filename</span></a><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_cavity</span><span class="p">(</span><span class="n">load</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">reader</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">OpenFOAMReader</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>OpenFOAMのデータセットには，内部メッシュやパッチ，通常は境界を含む複数のサブデータセットが含まれています．これは，データを読み込む前に検査することができます．</p>
@@ -1112,7 +1112,7 @@ All patch status: {&#39;internalMesh&#39;: True, &#39;patch/movingWall&#39;: Tru
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">出力:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>UnstructuredGrid (0x7f0081a95210)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>UnstructuredGrid (0x7f5296c1d580)
   N Cells:      400
   N Points:     882
   X Bounds:     0.000e+00, 1.000e-01
@@ -1129,14 +1129,14 @@ All patch status: {&#39;internalMesh&#39;: True, &#39;patch/movingWall&#39;: Tru
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">出力:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>MultiBlock (0x7f0081af9f30)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>MultiBlock (0x7f528f1ebca0)
   N Blocks:     3
   X Bounds:     0.000, 0.100
   Y Bounds:     0.000, 0.100
   Z Bounds:     0.000, 0.010
 
 Boundaries patches: [&#39;movingWall&#39;, &#39;fixedWalls&#39;, &#39;frontAndBack&#39;]
-PolyData (0x7f0081af9980)
+PolyData (0x7f528f1ebe20)
   N Cells:      20
   N Points:     42
   X Bounds:     0.000e+00, 1.000e-01
@@ -1177,7 +1177,7 @@ Contains arrays :
 </pre></div>
 </div>
 <p>セルデータのみが必要な場合は，この動作をオフにすることができます．</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">reader</span> <span class="o">=</span> <a href="https://docs.python.org/dev/library/abc.html#abc.ABC" title="abc.ABC" class="sphx-glr-backref-module-abc sphx-glr-backref-type-py-class"><span class="n">pyvista</span><span class="o">.</span><span class="n">OpenFOAMReader</span></a><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">filename</span></a><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">reader</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">OpenFOAMReader</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
 <span class="n">reader</span><span class="o">.</span><span class="n">cell_to_point_creation</span> <span class="o">=</span> <span class="kc">False</span>
 <span class="n">internal_mesh</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="n">read</span><span class="p">()[</span><span class="s2">&quot;internalMesh&quot;</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cell Data:&quot;</span><span class="p">)</span>
@@ -1209,7 +1209,7 @@ Contains arrays : None
 </pre></div>
 </div>
 <p>ここで，最後の時刻でのすべてのデータを読み込んでみます．</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">reader</span> <span class="o">=</span> <a href="https://docs.python.org/dev/library/abc.html#abc.ABC" title="abc.ABC" class="sphx-glr-backref-module-abc sphx-glr-backref-type-py-class"><span class="n">pyvista</span><span class="o">.</span><span class="n">OpenFOAMReader</span></a><span class="p">(</span><a href="https://docs.python.org/dev/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">filename</span></a><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">reader</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">OpenFOAMReader</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Available Time Values: </span><span class="si">{</span><span class="n">reader</span><span class="o">.</span><span class="n">time_values</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="n">reader</span><span class="o">.</span><span class="n">set_active_time_value</span><span class="p">(</span><span class="mf">2.5</span><span class="p">)</span>
 <span class="n">mesh</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
@@ -1254,7 +1254,7 @@ Contains arrays : None
 <span class="n">plotter</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_openfoam-example_001.png" srcset="../../_images/sphx_glr_openfoam-example_001.png" alt="openfoam example" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.734 seconds)</p>
+<img src="../../_images/sphx_glr_openfoam-example_001.png" srcset="../../_images/sphx_glr_openfoam-example_001.png" alt="openfoam example" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.989 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-99-advanced-openfoam-example-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/3a23e009a74f58f49c0a2b0e98d27043/openfoam-example.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">openfoam-example.py</span></code></a></p>

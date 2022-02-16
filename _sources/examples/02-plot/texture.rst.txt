@@ -91,7 +91,7 @@ For example, let's map that same image of bricks to a curvey surface:
     x = np.arange(-10, 10, 0.25)
     y = np.arange(-10, 10, 0.25)
     x, y = np.meshgrid(x, y)
-    r = np.sqrt(x ** 2 + y ** 2)
+    r = np.sqrt(x**2 + y**2)
     z = np.sin(r)
     curvsurf = pv.StructuredGrid(x, y, z)
 
@@ -513,7 +513,7 @@ overlappig
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  8.482 seconds)
+   **Total running time of the script:** ( 0 minutes  10.979 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_texture.py:

@@ -25,7 +25,7 @@ Create a GIF Movie of a Static Object with a Moving Colormap
 Generate a gif movie of a Hopf torus with a moving colormap,
 by updating the scalars.
 
-.. GENERATED FROM PYTHON SOURCE LINES 10-79
+.. GENERATED FROM PYTHON SOURCE LINES 10-76
 
 
 
@@ -55,17 +55,14 @@ by updating the scalars.
 
     # Hopf fiber
     def hopf_fiber(p, phi):
-        return (
-            np.array(
-                [
-                    (1 + p[2]) * np.cos(phi),
-                    p[0] * np.sin(phi) - p[1] * np.cos(phi),
-                    p[0] * np.cos(phi) + p[1] * np.sin(phi),
-                    (1 + p[2]) * np.sin(phi),
-                ]
-            )
-            / np.sqrt(2 * (1 + p[2]))
-        )
+        return np.array(
+            [
+                (1 + p[2]) * np.cos(phi),
+                p[0] * np.sin(phi) - p[1] * np.cos(phi),
+                p[0] * np.cos(phi) + p[1] * np.sin(phi),
+                (1 + p[2]) * np.sin(phi),
+            ]
+        ) / np.sqrt(2 * (1 + p[2]))
 
 
     # Stereographic projection
@@ -113,7 +110,7 @@ by updating the scalars.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  12.090 seconds)
+   **Total running time of the script:** ( 0 minutes  15.700 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_moving_cmap.py:
