@@ -782,6 +782,11 @@
         </a>
        </li>
        <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.ExplicitStructuredGrid.tessellate.html">
+         tessellate
+        </a>
+       </li>
+       <li class="toctree-l4">
         <a class="reference internal" href="pyvista.ExplicitStructuredGrid.texture_map_to_plane.html">
          texture_map_to_plane
         </a>
@@ -1111,7 +1116,7 @@
 <h1>pyvista.ExplicitStructuredGrid<a class="headerlink" href="#pyvista-explicitstructuredgrid" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyvista.ExplicitStructuredGrid">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ExplicitStructuredGrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.ExplicitStructuredGrid" title="この定義へのパーマリンク">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ExplicitStructuredGrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/pyvista/core/pointset.html#ExplicitStructuredGrid"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#pyvista.ExplicitStructuredGrid" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">vtk.vtkExplicitStructuredGrid</span></code> クラスの機能を拡張します．</p>
 <p>次の方法で初期化できます．</p>
 <ul class="simple">
@@ -1478,31 +1483,34 @@
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.ExplicitStructuredGrid.surface_indices.html#pyvista.ExplicitStructuredGrid.surface_indices" title="pyvista.ExplicitStructuredGrid.surface_indices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitStructuredGrid.surface_indices</span></code></a>([...])</p></td>
 <td><p>グリッドのサーフェスインデックスを取得します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.ExplicitStructuredGrid.texture_map_to_plane.html#pyvista.ExplicitStructuredGrid.texture_map_to_plane" title="pyvista.ExplicitStructuredGrid.texture_map_to_plane"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitStructuredGrid.texture_map_to_plane</span></code></a>([...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.ExplicitStructuredGrid.tessellate.html#pyvista.ExplicitStructuredGrid.tessellate" title="pyvista.ExplicitStructuredGrid.tessellate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitStructuredGrid.tessellate</span></code></a>([...])</p></td>
+<td><p>Tessellate a mesh.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.ExplicitStructuredGrid.texture_map_to_plane.html#pyvista.ExplicitStructuredGrid.texture_map_to_plane" title="pyvista.ExplicitStructuredGrid.texture_map_to_plane"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitStructuredGrid.texture_map_to_plane</span></code></a>([...])</p></td>
 <td><p>このデータセットをユーザ定義平面にテクスチャマップします．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.ExplicitStructuredGrid.texture_map_to_sphere.html#pyvista.ExplicitStructuredGrid.texture_map_to_sphere" title="pyvista.ExplicitStructuredGrid.texture_map_to_sphere"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitStructuredGrid.texture_map_to_sphere</span></code></a>([...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.ExplicitStructuredGrid.texture_map_to_sphere.html#pyvista.ExplicitStructuredGrid.texture_map_to_sphere" title="pyvista.ExplicitStructuredGrid.texture_map_to_sphere"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitStructuredGrid.texture_map_to_sphere</span></code></a>([...])</p></td>
 <td><p>このデータセットをユーザ定義球にテクスチャマップします．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.ExplicitStructuredGrid.threshold.html#pyvista.ExplicitStructuredGrid.threshold" title="pyvista.ExplicitStructuredGrid.threshold"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitStructuredGrid.threshold</span></code></a>([value, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.ExplicitStructuredGrid.threshold.html#pyvista.ExplicitStructuredGrid.threshold" title="pyvista.ExplicitStructuredGrid.threshold"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitStructuredGrid.threshold</span></code></a>([value, ...])</p></td>
 <td><p>入力データセットに <code class="docutils literal notranslate"><span class="pre">vtkThreshold</span></code> フィルタを適用します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.ExplicitStructuredGrid.threshold_percent.html#pyvista.ExplicitStructuredGrid.threshold_percent" title="pyvista.ExplicitStructuredGrid.threshold_percent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitStructuredGrid.threshold_percent</span></code></a>([...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.ExplicitStructuredGrid.threshold_percent.html#pyvista.ExplicitStructuredGrid.threshold_percent" title="pyvista.ExplicitStructuredGrid.threshold_percent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitStructuredGrid.threshold_percent</span></code></a>([...])</p></td>
 <td><p>データセットを，アクティブなスカラー配列上の範囲のパーセンテージでしきい値化します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.ExplicitStructuredGrid.transform.html#pyvista.ExplicitStructuredGrid.transform" title="pyvista.ExplicitStructuredGrid.transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitStructuredGrid.transform</span></code></a>(trans[, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.ExplicitStructuredGrid.transform.html#pyvista.ExplicitStructuredGrid.transform" title="pyvista.ExplicitStructuredGrid.transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitStructuredGrid.transform</span></code></a>(trans[, ...])</p></td>
 <td><p>このメッシュを4x4変換で変換します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.ExplicitStructuredGrid.translate.html#pyvista.ExplicitStructuredGrid.translate" title="pyvista.ExplicitStructuredGrid.translate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitStructuredGrid.translate</span></code></a>(xyz[, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.ExplicitStructuredGrid.translate.html#pyvista.ExplicitStructuredGrid.translate" title="pyvista.ExplicitStructuredGrid.translate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitStructuredGrid.translate</span></code></a>(xyz[, ...])</p></td>
 <td><p>メッシュを移動します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.ExplicitStructuredGrid.triangulate.html#pyvista.ExplicitStructuredGrid.triangulate" title="pyvista.ExplicitStructuredGrid.triangulate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitStructuredGrid.triangulate</span></code></a>([...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.ExplicitStructuredGrid.triangulate.html#pyvista.ExplicitStructuredGrid.triangulate" title="pyvista.ExplicitStructuredGrid.triangulate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitStructuredGrid.triangulate</span></code></a>([...])</p></td>
 <td><p>すべて三角形のメッシュを取得します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.ExplicitStructuredGrid.warp_by_scalar.html#pyvista.ExplicitStructuredGrid.warp_by_scalar" title="pyvista.ExplicitStructuredGrid.warp_by_scalar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitStructuredGrid.warp_by_scalar</span></code></a>([...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.ExplicitStructuredGrid.warp_by_scalar.html#pyvista.ExplicitStructuredGrid.warp_by_scalar" title="pyvista.ExplicitStructuredGrid.warp_by_scalar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitStructuredGrid.warp_by_scalar</span></code></a>([...])</p></td>
 <td><p>データセットのポイントをポイントデータスカラー配列の値でワープします．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.ExplicitStructuredGrid.warp_by_vector.html#pyvista.ExplicitStructuredGrid.warp_by_vector" title="pyvista.ExplicitStructuredGrid.warp_by_vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitStructuredGrid.warp_by_vector</span></code></a>([...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.ExplicitStructuredGrid.warp_by_vector.html#pyvista.ExplicitStructuredGrid.warp_by_vector" title="pyvista.ExplicitStructuredGrid.warp_by_vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitStructuredGrid.warp_by_vector</span></code></a>([...])</p></td>
 <td><p>データセットのポイントをポイントデータスカラー配列の値でワープします．</p></td>
 </tr>
 </tbody>

@@ -492,6 +492,11 @@
         </a>
        </li>
        <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.DataSetFilters.tessellate.html">
+         tessellate
+        </a>
+       </li>
+       <li class="toctree-l4">
         <a class="reference internal" href="pyvista.DataSetFilters.texture_map_to_plane.html">
          texture_map_to_plane
         </a>
@@ -636,7 +641,7 @@
 <h1>pyvista.DataSetFilters<a class="headerlink" href="#pyvista-datasetfilters" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyvista.DataSetFilters">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DataSetFilters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters" title="この定義へのパーマリンク">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DataSetFilters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/pyvista/core/filters/data_set.html#DataSetFilters"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#pyvista.DataSetFilters" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>任意のvtkDataSetに適用できる共通フィルタのセット．</p>
 <p class="rubric">メソッド</p>
 <table class="longtable table autosummary">
@@ -795,28 +800,31 @@
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.DataSetFilters.surface_indices.html#pyvista.DataSetFilters.surface_indices" title="pyvista.DataSetFilters.surface_indices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataSetFilters.surface_indices</span></code></a>([progress_bar])</p></td>
 <td><p>グリッドのサーフェスインデックスを取得します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.DataSetFilters.texture_map_to_plane.html#pyvista.DataSetFilters.texture_map_to_plane" title="pyvista.DataSetFilters.texture_map_to_plane"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataSetFilters.texture_map_to_plane</span></code></a>([...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.DataSetFilters.tessellate.html#pyvista.DataSetFilters.tessellate" title="pyvista.DataSetFilters.tessellate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataSetFilters.tessellate</span></code></a>([max_n_subdivide, ...])</p></td>
+<td><p>Tessellate a mesh.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.DataSetFilters.texture_map_to_plane.html#pyvista.DataSetFilters.texture_map_to_plane" title="pyvista.DataSetFilters.texture_map_to_plane"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataSetFilters.texture_map_to_plane</span></code></a>([...])</p></td>
 <td><p>このデータセットをユーザ定義平面にテクスチャマップします．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.DataSetFilters.texture_map_to_sphere.html#pyvista.DataSetFilters.texture_map_to_sphere" title="pyvista.DataSetFilters.texture_map_to_sphere"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataSetFilters.texture_map_to_sphere</span></code></a>([...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.DataSetFilters.texture_map_to_sphere.html#pyvista.DataSetFilters.texture_map_to_sphere" title="pyvista.DataSetFilters.texture_map_to_sphere"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataSetFilters.texture_map_to_sphere</span></code></a>([...])</p></td>
 <td><p>このデータセットをユーザ定義球にテクスチャマップします．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.DataSetFilters.threshold.html#pyvista.DataSetFilters.threshold" title="pyvista.DataSetFilters.threshold"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataSetFilters.threshold</span></code></a>([value, scalars, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.DataSetFilters.threshold.html#pyvista.DataSetFilters.threshold" title="pyvista.DataSetFilters.threshold"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataSetFilters.threshold</span></code></a>([value, scalars, ...])</p></td>
 <td><p>入力データセットに <code class="docutils literal notranslate"><span class="pre">vtkThreshold</span></code> フィルタを適用します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.DataSetFilters.threshold_percent.html#pyvista.DataSetFilters.threshold_percent" title="pyvista.DataSetFilters.threshold_percent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataSetFilters.threshold_percent</span></code></a>([percent, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.DataSetFilters.threshold_percent.html#pyvista.DataSetFilters.threshold_percent" title="pyvista.DataSetFilters.threshold_percent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataSetFilters.threshold_percent</span></code></a>([percent, ...])</p></td>
 <td><p>データセットを，アクティブなスカラー配列上の範囲のパーセンテージでしきい値化します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.DataSetFilters.transform.html#pyvista.DataSetFilters.transform" title="pyvista.DataSetFilters.transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataSetFilters.transform</span></code></a>(trans[, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.DataSetFilters.transform.html#pyvista.DataSetFilters.transform" title="pyvista.DataSetFilters.transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataSetFilters.transform</span></code></a>(trans[, ...])</p></td>
 <td><p>このメッシュを4x4変換で変換します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.DataSetFilters.triangulate.html#pyvista.DataSetFilters.triangulate" title="pyvista.DataSetFilters.triangulate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataSetFilters.triangulate</span></code></a>([inplace, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.DataSetFilters.triangulate.html#pyvista.DataSetFilters.triangulate" title="pyvista.DataSetFilters.triangulate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataSetFilters.triangulate</span></code></a>([inplace, ...])</p></td>
 <td><p>すべて三角形のメッシュを取得します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.DataSetFilters.warp_by_scalar.html#pyvista.DataSetFilters.warp_by_scalar" title="pyvista.DataSetFilters.warp_by_scalar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataSetFilters.warp_by_scalar</span></code></a>([scalars, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.DataSetFilters.warp_by_scalar.html#pyvista.DataSetFilters.warp_by_scalar" title="pyvista.DataSetFilters.warp_by_scalar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataSetFilters.warp_by_scalar</span></code></a>([scalars, ...])</p></td>
 <td><p>データセットのポイントをポイントデータスカラー配列の値でワープします．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.DataSetFilters.warp_by_vector.html#pyvista.DataSetFilters.warp_by_vector" title="pyvista.DataSetFilters.warp_by_vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataSetFilters.warp_by_vector</span></code></a>([vectors, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.DataSetFilters.warp_by_vector.html#pyvista.DataSetFilters.warp_by_vector" title="pyvista.DataSetFilters.warp_by_vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataSetFilters.warp_by_vector</span></code></a>([vectors, ...])</p></td>
 <td><p>データセットのポイントをポイントデータスカラー配列の値でワープします．</p></td>
 </tr>
 </tbody>

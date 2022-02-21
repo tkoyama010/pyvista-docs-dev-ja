@@ -270,6 +270,9 @@
       PolyDataFilters.surface_indices
       
       
+      PolyDataFilters.tessellate
+      
+      
       PolyDataFilters.texture_map_to_plane
       
       

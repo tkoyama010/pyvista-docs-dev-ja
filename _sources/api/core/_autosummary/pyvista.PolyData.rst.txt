@@ -420,6 +420,9 @@
       PolyData.surface_indices
       
       
+      PolyData.tessellate
+      
+      
       PolyData.texture_map_to_plane
       
       

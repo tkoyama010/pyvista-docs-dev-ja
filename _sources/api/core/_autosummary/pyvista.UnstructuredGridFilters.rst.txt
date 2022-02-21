@@ -171,6 +171,9 @@
       UnstructuredGridFilters.surface_indices
       
       
+      UnstructuredGridFilters.tessellate
+      
+      
       UnstructuredGridFilters.texture_map_to_plane
       
       

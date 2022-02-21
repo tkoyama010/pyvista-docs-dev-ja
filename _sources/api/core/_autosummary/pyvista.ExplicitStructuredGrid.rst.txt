@@ -339,6 +339,9 @@
       ExplicitStructuredGrid.surface_indices
       
       
+      ExplicitStructuredGrid.tessellate
+      
+      
       ExplicitStructuredGrid.texture_map_to_plane
       
       

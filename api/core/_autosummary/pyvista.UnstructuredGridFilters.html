@@ -512,6 +512,11 @@
         </a>
        </li>
        <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.UnstructuredGridFilters.tessellate.html">
+         tessellate
+        </a>
+       </li>
+       <li class="toctree-l4">
         <a class="reference internal" href="pyvista.UnstructuredGridFilters.texture_map_to_plane.html">
          texture_map_to_plane
         </a>
@@ -646,7 +651,7 @@
 <h1>pyvista.UnstructuredGridFilters<a class="headerlink" href="#pyvista-unstructuredgridfilters" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyvista.UnstructuredGridFilters">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">UnstructuredGridFilters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UnstructuredGridFilters" title="この定義へのパーマリンク">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">UnstructuredGridFilters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/pyvista/core/filters/unstructured_grid.html#UnstructuredGridFilters"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#pyvista.UnstructuredGridFilters" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>非構造化グリッドデータセットのフィルタ/アルゴリズムを管理する内部クラス．</p>
 <p class="rubric">メソッド</p>
 <table class="longtable table autosummary">
@@ -811,28 +816,31 @@
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGridFilters.surface_indices.html#pyvista.UnstructuredGridFilters.surface_indices" title="pyvista.UnstructuredGridFilters.surface_indices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGridFilters.surface_indices</span></code></a>([...])</p></td>
 <td><p>グリッドのサーフェスインデックスを取得します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGridFilters.texture_map_to_plane.html#pyvista.UnstructuredGridFilters.texture_map_to_plane" title="pyvista.UnstructuredGridFilters.texture_map_to_plane"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGridFilters.texture_map_to_plane</span></code></a>([...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGridFilters.tessellate.html#pyvista.UnstructuredGridFilters.tessellate" title="pyvista.UnstructuredGridFilters.tessellate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGridFilters.tessellate</span></code></a>([...])</p></td>
+<td><p>Tessellate a mesh.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGridFilters.texture_map_to_plane.html#pyvista.UnstructuredGridFilters.texture_map_to_plane" title="pyvista.UnstructuredGridFilters.texture_map_to_plane"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGridFilters.texture_map_to_plane</span></code></a>([...])</p></td>
 <td><p>このデータセットをユーザ定義平面にテクスチャマップします．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGridFilters.texture_map_to_sphere.html#pyvista.UnstructuredGridFilters.texture_map_to_sphere" title="pyvista.UnstructuredGridFilters.texture_map_to_sphere"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGridFilters.texture_map_to_sphere</span></code></a>([...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGridFilters.texture_map_to_sphere.html#pyvista.UnstructuredGridFilters.texture_map_to_sphere" title="pyvista.UnstructuredGridFilters.texture_map_to_sphere"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGridFilters.texture_map_to_sphere</span></code></a>([...])</p></td>
 <td><p>このデータセットをユーザ定義球にテクスチャマップします．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGridFilters.threshold.html#pyvista.UnstructuredGridFilters.threshold" title="pyvista.UnstructuredGridFilters.threshold"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGridFilters.threshold</span></code></a>([value, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGridFilters.threshold.html#pyvista.UnstructuredGridFilters.threshold" title="pyvista.UnstructuredGridFilters.threshold"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGridFilters.threshold</span></code></a>([value, ...])</p></td>
 <td><p>入力データセットに <code class="docutils literal notranslate"><span class="pre">vtkThreshold</span></code> フィルタを適用します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGridFilters.threshold_percent.html#pyvista.UnstructuredGridFilters.threshold_percent" title="pyvista.UnstructuredGridFilters.threshold_percent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGridFilters.threshold_percent</span></code></a>([...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGridFilters.threshold_percent.html#pyvista.UnstructuredGridFilters.threshold_percent" title="pyvista.UnstructuredGridFilters.threshold_percent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGridFilters.threshold_percent</span></code></a>([...])</p></td>
 <td><p>データセットを，アクティブなスカラー配列上の範囲のパーセンテージでしきい値化します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGridFilters.transform.html#pyvista.UnstructuredGridFilters.transform" title="pyvista.UnstructuredGridFilters.transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGridFilters.transform</span></code></a>(trans[, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGridFilters.transform.html#pyvista.UnstructuredGridFilters.transform" title="pyvista.UnstructuredGridFilters.transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGridFilters.transform</span></code></a>(trans[, ...])</p></td>
 <td><p>このメッシュを4x4変換で変換します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGridFilters.triangulate.html#pyvista.UnstructuredGridFilters.triangulate" title="pyvista.UnstructuredGridFilters.triangulate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGridFilters.triangulate</span></code></a>([...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGridFilters.triangulate.html#pyvista.UnstructuredGridFilters.triangulate" title="pyvista.UnstructuredGridFilters.triangulate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGridFilters.triangulate</span></code></a>([...])</p></td>
 <td><p>すべて三角形のメッシュを取得します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGridFilters.warp_by_scalar.html#pyvista.UnstructuredGridFilters.warp_by_scalar" title="pyvista.UnstructuredGridFilters.warp_by_scalar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGridFilters.warp_by_scalar</span></code></a>([...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGridFilters.warp_by_scalar.html#pyvista.UnstructuredGridFilters.warp_by_scalar" title="pyvista.UnstructuredGridFilters.warp_by_scalar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGridFilters.warp_by_scalar</span></code></a>([...])</p></td>
 <td><p>データセットのポイントをポイントデータスカラー配列の値でワープします．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGridFilters.warp_by_vector.html#pyvista.UnstructuredGridFilters.warp_by_vector" title="pyvista.UnstructuredGridFilters.warp_by_vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGridFilters.warp_by_vector</span></code></a>([...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGridFilters.warp_by_vector.html#pyvista.UnstructuredGridFilters.warp_by_vector" title="pyvista.UnstructuredGridFilters.warp_by_vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGridFilters.warp_by_vector</span></code></a>([...])</p></td>
 <td><p>データセットのポイントをポイントデータスカラー配列の値でワープします．</p></td>
 </tr>
 </tbody>

@@ -306,6 +306,9 @@
       DataSet.surface_indices
       
       
+      DataSet.tessellate
+      
+      
       DataSet.texture_map_to_plane
       
       

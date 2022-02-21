@@ -165,6 +165,9 @@
       DataSetFilters.surface_indices
       
       
+      DataSetFilters.tessellate
+      
+      
       DataSetFilters.texture_map_to_plane
       
       

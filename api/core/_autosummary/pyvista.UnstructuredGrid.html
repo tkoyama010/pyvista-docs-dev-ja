@@ -757,6 +757,11 @@
         </a>
        </li>
        <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.UnstructuredGrid.tessellate.html">
+         tessellate
+        </a>
+       </li>
+       <li class="toctree-l4">
         <a class="reference internal" href="pyvista.UnstructuredGrid.texture_map_to_plane.html">
          texture_map_to_plane
         </a>
@@ -1111,7 +1116,7 @@
 <h1>pyvista.UnstructuredGrid<a class="headerlink" href="#pyvista-unstructuredgrid" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyvista.UnstructuredGrid">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">UnstructuredGrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UnstructuredGrid" title="この定義へのパーマリンク">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">UnstructuredGrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/pyvista/core/pointset.html#UnstructuredGrid"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#pyvista.UnstructuredGrid" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>データセットは，可能なすべてのセルタイプの任意の組み合わせに使用されます．</p>
 <p>次の方法で初期化できます．</p>
 <ul class="simple">
@@ -1469,31 +1474,34 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.surface_indices.html#pyvista.UnstructuredGrid.surface_indices" title="pyvista.UnstructuredGrid.surface_indices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.surface_indices</span></code></a>([progress_bar])</p></td>
 <td><p>グリッドのサーフェスインデックスを取得します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.texture_map_to_plane.html#pyvista.UnstructuredGrid.texture_map_to_plane" title="pyvista.UnstructuredGrid.texture_map_to_plane"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.texture_map_to_plane</span></code></a>([...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.tessellate.html#pyvista.UnstructuredGrid.tessellate" title="pyvista.UnstructuredGrid.tessellate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.tessellate</span></code></a>([...])</p></td>
+<td><p>Tessellate a mesh.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.texture_map_to_plane.html#pyvista.UnstructuredGrid.texture_map_to_plane" title="pyvista.UnstructuredGrid.texture_map_to_plane"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.texture_map_to_plane</span></code></a>([...])</p></td>
 <td><p>このデータセットをユーザ定義平面にテクスチャマップします．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.texture_map_to_sphere.html#pyvista.UnstructuredGrid.texture_map_to_sphere" title="pyvista.UnstructuredGrid.texture_map_to_sphere"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.texture_map_to_sphere</span></code></a>([...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.texture_map_to_sphere.html#pyvista.UnstructuredGrid.texture_map_to_sphere" title="pyvista.UnstructuredGrid.texture_map_to_sphere"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.texture_map_to_sphere</span></code></a>([...])</p></td>
 <td><p>このデータセットをユーザ定義球にテクスチャマップします．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.threshold.html#pyvista.UnstructuredGrid.threshold" title="pyvista.UnstructuredGrid.threshold"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.threshold</span></code></a>([value, scalars, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.threshold.html#pyvista.UnstructuredGrid.threshold" title="pyvista.UnstructuredGrid.threshold"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.threshold</span></code></a>([value, scalars, ...])</p></td>
 <td><p>入力データセットに <code class="docutils literal notranslate"><span class="pre">vtkThreshold</span></code> フィルタを適用します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.threshold_percent.html#pyvista.UnstructuredGrid.threshold_percent" title="pyvista.UnstructuredGrid.threshold_percent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.threshold_percent</span></code></a>([...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.threshold_percent.html#pyvista.UnstructuredGrid.threshold_percent" title="pyvista.UnstructuredGrid.threshold_percent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.threshold_percent</span></code></a>([...])</p></td>
 <td><p>データセットを，アクティブなスカラー配列上の範囲のパーセンテージでしきい値化します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.transform.html#pyvista.UnstructuredGrid.transform" title="pyvista.UnstructuredGrid.transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.transform</span></code></a>(trans[, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.transform.html#pyvista.UnstructuredGrid.transform" title="pyvista.UnstructuredGrid.transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.transform</span></code></a>(trans[, ...])</p></td>
 <td><p>このメッシュを4x4変換で変換します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.translate.html#pyvista.UnstructuredGrid.translate" title="pyvista.UnstructuredGrid.translate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.translate</span></code></a>(xyz[, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.translate.html#pyvista.UnstructuredGrid.translate" title="pyvista.UnstructuredGrid.translate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.translate</span></code></a>(xyz[, ...])</p></td>
 <td><p>メッシュを移動します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.triangulate.html#pyvista.UnstructuredGrid.triangulate" title="pyvista.UnstructuredGrid.triangulate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.triangulate</span></code></a>([inplace, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.triangulate.html#pyvista.UnstructuredGrid.triangulate" title="pyvista.UnstructuredGrid.triangulate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.triangulate</span></code></a>([inplace, ...])</p></td>
 <td><p>すべて三角形のメッシュを取得します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.warp_by_scalar.html#pyvista.UnstructuredGrid.warp_by_scalar" title="pyvista.UnstructuredGrid.warp_by_scalar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.warp_by_scalar</span></code></a>([scalars, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.warp_by_scalar.html#pyvista.UnstructuredGrid.warp_by_scalar" title="pyvista.UnstructuredGrid.warp_by_scalar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.warp_by_scalar</span></code></a>([scalars, ...])</p></td>
 <td><p>データセットのポイントをポイントデータスカラー配列の値でワープします．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.warp_by_vector.html#pyvista.UnstructuredGrid.warp_by_vector" title="pyvista.UnstructuredGrid.warp_by_vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.warp_by_vector</span></code></a>([vectors, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.UnstructuredGrid.warp_by_vector.html#pyvista.UnstructuredGrid.warp_by_vector" title="pyvista.UnstructuredGrid.warp_by_vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnstructuredGrid.warp_by_vector</span></code></a>([vectors, ...])</p></td>
 <td><p>データセットのポイントをポイントデータスカラー配列の値でワープします．</p></td>
 </tr>
 </tbody>

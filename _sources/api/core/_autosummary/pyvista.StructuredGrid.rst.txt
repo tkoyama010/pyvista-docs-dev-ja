@@ -330,6 +330,9 @@
       StructuredGrid.surface_indices
       
       
+      StructuredGrid.tessellate
+      
+      
       StructuredGrid.texture_map_to_plane
       
       

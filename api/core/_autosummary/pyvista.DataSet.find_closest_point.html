@@ -707,6 +707,11 @@
         </a>
        </li>
        <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.DataSet.tessellate.html">
+         tessellate
+        </a>
+       </li>
+       <li class="toctree-l4">
         <a class="reference internal" href="pyvista.DataSet.texture_map_to_plane.html">
          texture_map_to_plane
         </a>
@@ -1036,7 +1041,7 @@
 <h1>find_closest_point<a class="headerlink" href="#find-closest-point" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataSet.find_closest_point">
-<span class="sig-prename descclassname"><span class="pre">DataSet.</span></span><span class="sig-name descname"><span class="pre">find_closest_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/dev/library/typing.html#typing.Iterable" title="(in Python v3.11)"><span class="pre">Iterable</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></span><a class="headerlink" href="#pyvista.DataSet.find_closest_point" title="この定義へのパーマリンク">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">DataSet.</span></span><span class="sig-name descname"><span class="pre">find_closest_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/dev/library/typing.html#typing.Iterable" title="(in Python v3.11)"><span class="pre">Iterable</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></span><a class="reference internal" href="../../../_modules/pyvista/core/dataset.html#DataSet.find_closest_point"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#pyvista.DataSet.find_closest_point" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>このメッシュ内の指定したポイントに最も近いポイントのインデックスを検索します．</p>
 <p>多数の点をクエリーする場合は，scipyまたは別のライブラリを含むKDTreeを使用します．これは，これらの実装での作業が簡単になるためです．</p>
 <p>参照: <a class="reference external" href="https://github.com/pyvista/pyvista-support/issues/107">https://github.com/pyvista/pyvista-support/issues/107</a></p>

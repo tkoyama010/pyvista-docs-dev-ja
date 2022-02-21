@@ -309,6 +309,9 @@
       RectilinearGrid.surface_indices
       
       
+      RectilinearGrid.tessellate
+      
+      
       RectilinearGrid.texture_map_to_plane
       
       

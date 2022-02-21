@@ -177,6 +177,9 @@
       UniformGridFilters.surface_indices
       
       
+      UniformGridFilters.tessellate
+      
+      
       UniformGridFilters.texture_map_to_plane
       
       

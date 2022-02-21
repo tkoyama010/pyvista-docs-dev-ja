@@ -722,6 +722,11 @@
         </a>
        </li>
        <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.RectilinearGrid.tessellate.html">
+         tessellate
+        </a>
+       </li>
+       <li class="toctree-l4">
         <a class="reference internal" href="pyvista.RectilinearGrid.texture_map_to_plane.html">
          texture_map_to_plane
         </a>
@@ -1066,7 +1071,7 @@
 <h1>pyvista.RectilinearGrid<a class="headerlink" href="#pyvista-rectilineargrid" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyvista.RectilinearGrid">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RectilinearGrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.RectilinearGrid" title="この定義へのパーマリンク">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RectilinearGrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/pyvista/core/grid.html#RectilinearGrid"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#pyvista.RectilinearGrid" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>3つの座標方向に可変の間隔を持つデータセット．</p>
 <p>いくつかの方法で初期化できます:</p>
 <ul class="simple">
@@ -1398,31 +1403,34 @@
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.RectilinearGrid.surface_indices.html#pyvista.RectilinearGrid.surface_indices" title="pyvista.RectilinearGrid.surface_indices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RectilinearGrid.surface_indices</span></code></a>([progress_bar])</p></td>
 <td><p>グリッドのサーフェスインデックスを取得します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.RectilinearGrid.texture_map_to_plane.html#pyvista.RectilinearGrid.texture_map_to_plane" title="pyvista.RectilinearGrid.texture_map_to_plane"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RectilinearGrid.texture_map_to_plane</span></code></a>([...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.RectilinearGrid.tessellate.html#pyvista.RectilinearGrid.tessellate" title="pyvista.RectilinearGrid.tessellate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RectilinearGrid.tessellate</span></code></a>([...])</p></td>
+<td><p>Tessellate a mesh.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.RectilinearGrid.texture_map_to_plane.html#pyvista.RectilinearGrid.texture_map_to_plane" title="pyvista.RectilinearGrid.texture_map_to_plane"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RectilinearGrid.texture_map_to_plane</span></code></a>([...])</p></td>
 <td><p>このデータセットをユーザ定義平面にテクスチャマップします．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.RectilinearGrid.texture_map_to_sphere.html#pyvista.RectilinearGrid.texture_map_to_sphere" title="pyvista.RectilinearGrid.texture_map_to_sphere"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RectilinearGrid.texture_map_to_sphere</span></code></a>([...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.RectilinearGrid.texture_map_to_sphere.html#pyvista.RectilinearGrid.texture_map_to_sphere" title="pyvista.RectilinearGrid.texture_map_to_sphere"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RectilinearGrid.texture_map_to_sphere</span></code></a>([...])</p></td>
 <td><p>このデータセットをユーザ定義球にテクスチャマップします．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.RectilinearGrid.threshold.html#pyvista.RectilinearGrid.threshold" title="pyvista.RectilinearGrid.threshold"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RectilinearGrid.threshold</span></code></a>([value, scalars, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.RectilinearGrid.threshold.html#pyvista.RectilinearGrid.threshold" title="pyvista.RectilinearGrid.threshold"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RectilinearGrid.threshold</span></code></a>([value, scalars, ...])</p></td>
 <td><p>入力データセットに <code class="docutils literal notranslate"><span class="pre">vtkThreshold</span></code> フィルタを適用します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.RectilinearGrid.threshold_percent.html#pyvista.RectilinearGrid.threshold_percent" title="pyvista.RectilinearGrid.threshold_percent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RectilinearGrid.threshold_percent</span></code></a>([percent, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.RectilinearGrid.threshold_percent.html#pyvista.RectilinearGrid.threshold_percent" title="pyvista.RectilinearGrid.threshold_percent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RectilinearGrid.threshold_percent</span></code></a>([percent, ...])</p></td>
 <td><p>データセットを，アクティブなスカラー配列上の範囲のパーセンテージでしきい値化します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.RectilinearGrid.transform.html#pyvista.RectilinearGrid.transform" title="pyvista.RectilinearGrid.transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RectilinearGrid.transform</span></code></a>(trans[, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.RectilinearGrid.transform.html#pyvista.RectilinearGrid.transform" title="pyvista.RectilinearGrid.transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RectilinearGrid.transform</span></code></a>(trans[, ...])</p></td>
 <td><p>このメッシュを4x4変換で変換します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.RectilinearGrid.translate.html#pyvista.RectilinearGrid.translate" title="pyvista.RectilinearGrid.translate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RectilinearGrid.translate</span></code></a>(xyz[, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.RectilinearGrid.translate.html#pyvista.RectilinearGrid.translate" title="pyvista.RectilinearGrid.translate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RectilinearGrid.translate</span></code></a>(xyz[, ...])</p></td>
 <td><p>メッシュを移動します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.RectilinearGrid.triangulate.html#pyvista.RectilinearGrid.triangulate" title="pyvista.RectilinearGrid.triangulate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RectilinearGrid.triangulate</span></code></a>([inplace, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.RectilinearGrid.triangulate.html#pyvista.RectilinearGrid.triangulate" title="pyvista.RectilinearGrid.triangulate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RectilinearGrid.triangulate</span></code></a>([inplace, ...])</p></td>
 <td><p>すべて三角形のメッシュを取得します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.RectilinearGrid.warp_by_scalar.html#pyvista.RectilinearGrid.warp_by_scalar" title="pyvista.RectilinearGrid.warp_by_scalar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RectilinearGrid.warp_by_scalar</span></code></a>([scalars, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.RectilinearGrid.warp_by_scalar.html#pyvista.RectilinearGrid.warp_by_scalar" title="pyvista.RectilinearGrid.warp_by_scalar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RectilinearGrid.warp_by_scalar</span></code></a>([scalars, ...])</p></td>
 <td><p>データセットのポイントをポイントデータスカラー配列の値でワープします．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.RectilinearGrid.warp_by_vector.html#pyvista.RectilinearGrid.warp_by_vector" title="pyvista.RectilinearGrid.warp_by_vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RectilinearGrid.warp_by_vector</span></code></a>([vectors, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.RectilinearGrid.warp_by_vector.html#pyvista.RectilinearGrid.warp_by_vector" title="pyvista.RectilinearGrid.warp_by_vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RectilinearGrid.warp_by_vector</span></code></a>([vectors, ...])</p></td>
 <td><p>データセットのポイントをポイントデータスカラー配列の値でワープします．</p></td>
 </tr>
 </tbody>

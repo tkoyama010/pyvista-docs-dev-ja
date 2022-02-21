@@ -52,7 +52,7 @@
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="検索" href="../../../search.html" />
     <link rel="next" title="texture_map_to_sphere" href="pyvista.DataSetFilters.texture_map_to_sphere.html" />
-    <link rel="prev" title="surface_indices" href="pyvista.DataSetFilters.surface_indices.html" />
+    <link rel="prev" title="tessellate" href="pyvista.DataSetFilters.tessellate.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="ja">
     
@@ -491,6 +491,11 @@
          surface_indices
         </a>
        </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.DataSetFilters.tessellate.html">
+         tessellate
+        </a>
+       </li>
        <li class="toctree-l4 current active">
         <a class="current reference internal" href="#">
          texture_map_to_plane
@@ -636,7 +641,7 @@
 <h1>texture_map_to_plane<a class="headerlink" href="#texture-map-to-plane" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.DataSetFilters.texture_map_to_plane">
-<span class="sig-prename descclassname"><span class="pre">DataSetFilters.</span></span><span class="sig-name descname"><span class="pre">texture_map_to_plane</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">origin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point_u</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point_v</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inplace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Texture</span> <span class="pre">Coordinates'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_bounds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.texture_map_to_plane" title="この定義へのパーマリンク">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">DataSetFilters.</span></span><span class="sig-name descname"><span class="pre">texture_map_to_plane</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">origin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point_u</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point_v</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inplace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Texture</span> <span class="pre">Coordinates'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_bounds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/pyvista/core/filters/data_set.html#DataSetFilters.texture_map_to_plane"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#pyvista.DataSetFilters.texture_map_to_plane" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>このデータセットをユーザ定義平面にテクスチャマップします．</p>
 <p>これは，イメージをこのデータセットにテクスチャマッピングするプレーンを定義するためによく使用されます．平面は，そのイメージの空間参照と範囲を定義します．</p>
 <dl class="field-list">

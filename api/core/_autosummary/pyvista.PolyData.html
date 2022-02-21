@@ -902,6 +902,11 @@
         </a>
        </li>
        <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.tessellate.html">
+         tessellate
+        </a>
+       </li>
+       <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.texture_map_to_plane.html">
          texture_map_to_plane
         </a>
@@ -1316,7 +1321,7 @@
 <h1>pyvista.PolyData<a class="headerlink" href="#pyvista-polydata" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyvista.PolyData">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PolyData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var_inp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">faces</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_faces</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lines</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_lines</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_ext</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_float</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData" title="この定義へのパーマリンク">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PolyData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var_inp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">faces</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_faces</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lines</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_lines</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_ext</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_float</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/pyvista/core/pointset.html#PolyData"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#pyvista.PolyData" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>表面形状（頂点，線，ポリゴンなど）で構成されるデータセット．</p>
 <p>いくつかの方法で初期化できます:</p>
 <ul class="simple">
@@ -1798,34 +1803,37 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyData.surface_indices.html#pyvista.PolyData.surface_indices" title="pyvista.PolyData.surface_indices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.surface_indices</span></code></a>([progress_bar])</p></td>
 <td><p>グリッドのサーフェスインデックスを取得します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.PolyData.texture_map_to_plane.html#pyvista.PolyData.texture_map_to_plane" title="pyvista.PolyData.texture_map_to_plane"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.texture_map_to_plane</span></code></a>([origin, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.PolyData.tessellate.html#pyvista.PolyData.tessellate" title="pyvista.PolyData.tessellate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.tessellate</span></code></a>([max_n_subdivide, ...])</p></td>
+<td><p>Tessellate a mesh.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyData.texture_map_to_plane.html#pyvista.PolyData.texture_map_to_plane" title="pyvista.PolyData.texture_map_to_plane"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.texture_map_to_plane</span></code></a>([origin, ...])</p></td>
 <td><p>このデータセットをユーザ定義平面にテクスチャマップします．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyData.texture_map_to_sphere.html#pyvista.PolyData.texture_map_to_sphere" title="pyvista.PolyData.texture_map_to_sphere"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.texture_map_to_sphere</span></code></a>([center, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.PolyData.texture_map_to_sphere.html#pyvista.PolyData.texture_map_to_sphere" title="pyvista.PolyData.texture_map_to_sphere"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.texture_map_to_sphere</span></code></a>([center, ...])</p></td>
 <td><p>このデータセットをユーザ定義球にテクスチャマップします．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.PolyData.threshold.html#pyvista.PolyData.threshold" title="pyvista.PolyData.threshold"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.threshold</span></code></a>([value, scalars, invert, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyData.threshold.html#pyvista.PolyData.threshold" title="pyvista.PolyData.threshold"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.threshold</span></code></a>([value, scalars, invert, ...])</p></td>
 <td><p>入力データセットに <code class="docutils literal notranslate"><span class="pre">vtkThreshold</span></code> フィルタを適用します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyData.threshold_percent.html#pyvista.PolyData.threshold_percent" title="pyvista.PolyData.threshold_percent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.threshold_percent</span></code></a>([percent, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.PolyData.threshold_percent.html#pyvista.PolyData.threshold_percent" title="pyvista.PolyData.threshold_percent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.threshold_percent</span></code></a>([percent, ...])</p></td>
 <td><p>データセットを，アクティブなスカラー配列上の範囲のパーセンテージでしきい値化します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.PolyData.transform.html#pyvista.PolyData.transform" title="pyvista.PolyData.transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.transform</span></code></a>(trans[, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyData.transform.html#pyvista.PolyData.transform" title="pyvista.PolyData.transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.transform</span></code></a>(trans[, ...])</p></td>
 <td><p>このメッシュを4x4変換で変換します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyData.translate.html#pyvista.PolyData.translate" title="pyvista.PolyData.translate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.translate</span></code></a>(xyz[, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.PolyData.translate.html#pyvista.PolyData.translate" title="pyvista.PolyData.translate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.translate</span></code></a>(xyz[, ...])</p></td>
 <td><p>メッシュを移動します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.PolyData.triangulate.html#pyvista.PolyData.triangulate" title="pyvista.PolyData.triangulate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.triangulate</span></code></a>([inplace, progress_bar])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyData.triangulate.html#pyvista.PolyData.triangulate" title="pyvista.PolyData.triangulate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.triangulate</span></code></a>([inplace, progress_bar])</p></td>
 <td><p>すべて三角形のメッシュを取得します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyData.tube.html#pyvista.PolyData.tube" title="pyvista.PolyData.tube"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.tube</span></code></a>([radius, scalars, capping, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.PolyData.tube.html#pyvista.PolyData.tube" title="pyvista.PolyData.tube"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.tube</span></code></a>([radius, scalars, capping, ...])</p></td>
 <td><p>各入力ラインの周囲にチューブを生成します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.PolyData.warp_by_scalar.html#pyvista.PolyData.warp_by_scalar" title="pyvista.PolyData.warp_by_scalar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.warp_by_scalar</span></code></a>([scalars, factor, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyData.warp_by_scalar.html#pyvista.PolyData.warp_by_scalar" title="pyvista.PolyData.warp_by_scalar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.warp_by_scalar</span></code></a>([scalars, factor, ...])</p></td>
 <td><p>データセットのポイントをポイントデータスカラー配列の値でワープします．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PolyData.warp_by_vector.html#pyvista.PolyData.warp_by_vector" title="pyvista.PolyData.warp_by_vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.warp_by_vector</span></code></a>([vectors, factor, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.PolyData.warp_by_vector.html#pyvista.PolyData.warp_by_vector" title="pyvista.PolyData.warp_by_vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PolyData.warp_by_vector</span></code></a>([vectors, factor, ...])</p></td>
 <td><p>データセットのポイントをポイントデータスカラー配列の値でワープします．</p></td>
 </tr>
 </tbody>

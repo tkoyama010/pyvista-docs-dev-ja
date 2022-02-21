@@ -330,6 +330,9 @@
       UnstructuredGrid.surface_indices
       
       
+      UnstructuredGrid.tessellate
+      
+      
       UnstructuredGrid.texture_map_to_plane
       
       
