@@ -419,15 +419,6 @@ $PYBIN setup.py bdist_wheel
 <span class="c1"># build based on python version from args</span>
 <span class="nv">PYTHON_VERSION</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span>
 <span class="k">case</span> <span class="nv">$PYTHON_VERSION</span> <span class="k">in</span>
-<span class="m">2</span>.7<span class="o">)</span>
-  <span class="nv">PYBIN</span><span class="o">=</span><span class="s2">&quot;/opt/python/cp27-cp27m/bin/python&quot;</span>
-  <span class="p">;;</span>
-<span class="m">3</span>.5<span class="o">)</span>
-  <span class="nv">PYBIN</span><span class="o">=</span><span class="s2">&quot;/opt/python/cp35-cp35m/bin/python&quot;</span>
-  <span class="p">;;</span>
-<span class="m">3</span>.6<span class="o">)</span>
-  <span class="nv">PYBIN</span><span class="o">=</span><span class="s2">&quot;/opt/python/cp36-cp36m/bin/python&quot;</span>
-  <span class="p">;;</span>
 <span class="m">3</span>.7<span class="o">)</span>
   <span class="nv">PYBIN</span><span class="o">=</span><span class="s2">&quot;/opt/python/cp37-cp37m/bin/python&quot;</span>
   <span class="p">;;</span>
@@ -436,6 +427,9 @@ $PYBIN setup.py bdist_wheel
   <span class="p">;;</span>
 <span class="m">3</span>.9<span class="o">)</span>
   <span class="nv">PYBIN</span><span class="o">=</span><span class="s2">&quot;/opt/python/cp39-cp39/bin/python&quot;</span>
+  <span class="p">;;</span>
+<span class="m">3</span>.10<span class="o">)</span>
+  <span class="nv">PYBIN</span><span class="o">=</span><span class="s2">&quot;/opt/python/cp310-cp310/bin/python&quot;</span>
   <span class="p">;;</span>
 <span class="k">esac</span>
 
@@ -486,7 +480,7 @@ docker run -e <span class="se">\</span>
 <h2>Raspberry Pi上のPython VTK Wheel(64ビット)構築<a class="headerlink" href="#building-python-vtk-wheel-on-raspberry-pi-64-bit" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>32ビット版Raspberry Pi(ARMv7)で構築することは可能だが，32ビット版のホイールを構築する際にはいくつかの問題が生じます( <a class="reference external" href="https://github.com/pypa/manylinux/issues/84">manylinux issue 84</a> を参照)．32ビットで構築しようとする場合は， <a class="reference external" href="https://github.com/dockcross/dockcross">dockcross</a> を使ってwheelを構築してみてください．そうしないとメモリの制限が生じる可能性があります(特に1GBのRAMしかない場合)．</p>
 <p><code class="docutils literal notranslate"><span class="pre">aarch64</span></code>  manylinux wheel のビルドは， <code class="docutils literal notranslate"><span class="pre">quay.io/pypa/manylinux2014_aarch64</span></code> イメージを使ったDockerで行うことができます．以下を実行します:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">PYTHON_VERSION</span><span class="o">=</span><span class="m">3</span>.6
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">PYTHON_VERSION</span><span class="o">=</span><span class="m">3</span>.7
 rm -rf build
 docker run -e <span class="se">\</span>
        --rm -v <span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>:/io quay.io/pypa/manylinux2014_aarch64 <span class="se">\</span>
@@ -502,15 +496,6 @@ docker run -e <span class="se">\</span>
 <span class="c1"># build based on python version from args</span>
 <span class="nv">PYTHON_VERSION</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span>
 <span class="k">case</span> <span class="nv">$PYTHON_VERSION</span> <span class="k">in</span>
-<span class="m">2</span>.7<span class="o">)</span>
-  <span class="nv">PYBIN</span><span class="o">=</span><span class="s2">&quot;/opt/python/cp27-cp27m/bin/python&quot;</span>
-  <span class="p">;;</span>
-<span class="m">3</span>.5<span class="o">)</span>
-  <span class="nv">PYBIN</span><span class="o">=</span><span class="s2">&quot;/opt/python/cp35-cp35m/bin/python&quot;</span>
-  <span class="p">;;</span>
-<span class="m">3</span>.6<span class="o">)</span>
-  <span class="nv">PYBIN</span><span class="o">=</span><span class="s2">&quot;/opt/python/cp36-cp36m/bin/python&quot;</span>
-  <span class="p">;;</span>
 <span class="m">3</span>.7<span class="o">)</span>
   <span class="nv">PYBIN</span><span class="o">=</span><span class="s2">&quot;/opt/python/cp37-cp37m/bin/python&quot;</span>
   <span class="p">;;</span>
@@ -519,6 +504,9 @@ docker run -e <span class="se">\</span>
   <span class="p">;;</span>
 <span class="m">3</span>.9<span class="o">)</span>
   <span class="nv">PYBIN</span><span class="o">=</span><span class="s2">&quot;/opt/python/cp39-cp39/bin/python&quot;</span>
+  <span class="p">;;</span>
+<span class="m">3</span>.10<span class="o">)</span>
+  <span class="nv">PYBIN</span><span class="o">=</span><span class="s2">&quot;/opt/python/cp310-cp310/bin/python&quot;</span>
   <span class="p">;;</span>
 <span class="k">esac</span>
 
