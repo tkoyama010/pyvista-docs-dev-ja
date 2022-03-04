@@ -30,6 +30,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/no_search_highlight.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/summary.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
@@ -1269,11 +1270,11 @@
 </dd>
 <dt><strong>font_size</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>タイトルフォントのサイズを設定します．デフォルトは16です．</p>
 </dd>
-<dt><strong>text_color</strong><span class="classifier">python:str または 3 要素 python:list, optional</span></dt><dd><p>テキストの色．文字列，RGB配列，または16進数の色文字列のいずれかです．</p>
+<dt><strong>text_color</strong><span class="classifier"><a class="reference internal" href="../../utilities/_autosummary/pyvista.color_like.html#pyvista.color_like" title="pyvista.color_like"><code class="xref py py-obj docutils literal notranslate"><span class="pre">color_like</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>テキストの色．文字列，RGB配列，または16進数の色文字列のいずれかです．</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">text_color='white'</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">text_color='w'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">text_color=[1,</span> <span class="pre">1,</span> <span class="pre">1]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">text_color=[1.0,</span> <span class="pre">1.0,</span> <span class="pre">1.0]</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">text_color='#FFFFFF'</span></code></p></li>
 </ul>
 </dd>
@@ -1283,11 +1284,11 @@
 </dd>
 <dt><strong>show_points</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>ポイントを表示するかどうかをコントロールします．デフォルト <code class="docutils literal notranslate"><span class="pre">True</span></code> ．</p>
 </dd>
-<dt><strong>point_color</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>文字列，rgbリスト，または16進数の色文字列のいずれかです． 以下のいずれかです．</p>
+<dt><strong>point_color</strong><span class="classifier"><a class="reference internal" href="../../utilities/_autosummary/pyvista.color_like.html#pyvista.color_like" title="pyvista.color_like"><code class="xref py py-obj docutils literal notranslate"><span class="pre">color_like</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>文字列，rgbリスト，または16進数の色文字列のいずれかです． 以下のいずれかです．</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">point_color='white'</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">point_color='w'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">point_color=[1,</span> <span class="pre">1,</span> <span class="pre">1]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">point_color=[1.0,</span> <span class="pre">1.0,</span> <span class="pre">1.0]</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">point_color='#FFFFFF'</span></code></p></li>
 </ul>
 </dd>
@@ -1295,7 +1296,7 @@
 </dd>
 <dt><strong>name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>簡単に更新できるように，追加したアクターの名前．この名前のアクターがレンダリングウィンドウに既に存在する場合は，新しいアクターに置き換えられます．</p>
 </dd>
-<dt><strong>shape_color</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>ポイントの色（表示されている場合）． 文字列，RGB配列，または16進数の色文字列のいずれかです．</p>
+<dt><strong>shape_color</strong><span class="classifier"><a class="reference internal" href="../../utilities/_autosummary/pyvista.color_like.html#pyvista.color_like" title="pyvista.color_like"><code class="xref py py-obj docutils literal notranslate"><span class="pre">color_like</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>ポイントの色（表示されている場合）． 文字列，RGB配列，または16進数の色文字列のいずれかです．</p>
 </dd>
 <dt><strong>shape</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>使用する図形の文字列名を指定します．オプションは <code class="docutils literal notranslate"><span class="pre">'rect'</span></code> または <code class="docutils literal notranslate"><span class="pre">'rounded_rect'</span></code> です．シェイプを作成しない場合は <code class="docutils literal notranslate"><span class="pre">None</span></code> を渡します．</p>
 </dd>

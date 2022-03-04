@@ -29,6 +29,7 @@
     <link rel="stylesheet" type="text/css" href="../../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/no_search_highlight.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/summary.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery-dataframe.css" />
@@ -2194,7 +2195,7 @@
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
-<span class="sd">        edge_color : str, optional</span>
+<span class="sd">        edge_color : color_like, optional</span>
 <span class="sd">            The color of the edges when they are added to the plotter.</span>
 
 <span class="sd">        line_width : int, optional</span>
@@ -2257,7 +2258,7 @@
 <span class="sd">        faces : bool, optional</span>
 <span class="sd">            Plot face normals instead of the default point normals.</span>
 
-<span class="sd">        color : str, optional</span>
+<span class="sd">        color : color_like, optional</span>
 <span class="sd">            Color of the arrows.  Defaults to</span>
 <span class="sd">            :attr:`pyvista.themes.DefaultTheme.edge_color`.</span>
 
@@ -2292,8 +2293,7 @@
         <span class="k">if</span> <span class="n">show_mesh</span><span class="p">:</span>
             <span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
-        <span class="k">if</span> <span class="n">color</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">color</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">edge_color</span>
+        <span class="n">color</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="n">default_color</span><span class="o">=</span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">edge_color</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">faces</span><span class="p">:</span>
             <span class="n">centers</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cell_centers</span><span class="p">()</span><span class="o">.</span><span class="n">points</span><span class="p">[::</span><span class="n">use_every</span><span class="p">]</span>

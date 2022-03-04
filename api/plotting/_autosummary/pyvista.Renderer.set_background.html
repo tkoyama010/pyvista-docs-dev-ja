@@ -30,6 +30,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/no_search_highlight.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/summary.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
@@ -696,18 +697,18 @@
 <dt class="sig sig-object py" id="pyvista.Renderer.set_background">
 <span class="sig-prename descclassname"><span class="pre">Renderer.</span></span><span class="sig-name descname"><span class="pre">set_background</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">color</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">top</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/pyvista/plotting/renderer.html#Renderer.set_background"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#pyvista.Renderer.set_background" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>このレンダラーの背景色を設定します．</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>color</strong><span class="classifier">python:str または 3 要素 python:list, optional</span></dt><dd><p>文字列，RGBリスト，または16進カラー文字列．デフォルトはデフォルトテーマです．例:</p>
+<dd class="field-odd"><dl>
+<dt><strong>color</strong><span class="classifier"><a class="reference internal" href="../../utilities/_autosummary/pyvista.color_like.html#pyvista.color_like" title="pyvista.color_like"><code class="xref py py-obj docutils literal notranslate"><span class="pre">color_like</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>文字列，RGBリスト，または16進カラー文字列．デフォルトはデフォルトテーマです．例:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">color='white'</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">color='w'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">color=[1,</span> <span class="pre">1,</span> <span class="pre">1]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">color=[1.0,</span> <span class="pre">1.0,</span> <span class="pre">1.0]</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">color='#FFFFFF'</span></code></p></li>
 </ul>
 </dd>
-<dt><strong>top</strong><span class="classifier">python:str または 3 要素 python:list, optional</span></dt><dd><p>これを指定すると， <code class="docutils literal notranslate"><span class="pre">color</span></code> 引数が一番下にあり， <code class="docutils literal notranslate"><span class="pre">top</span></code> で指定されたカラーがレンダラの一番上のカラーであるグラディエントバックグラウンドが有効になります．</p>
+<dt><strong>top</strong><span class="classifier"><a class="reference internal" href="../../utilities/_autosummary/pyvista.color_like.html#pyvista.color_like" title="pyvista.color_like"><code class="xref py py-obj docutils literal notranslate"><span class="pre">color_like</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>これを指定すると， <code class="docutils literal notranslate"><span class="pre">color</span></code> 引数が一番下にあり， <code class="docutils literal notranslate"><span class="pre">top</span></code> で指定されたカラーがレンダラの一番上のカラーであるグラディエントバックグラウンドが有効になります．</p>
 </dd>
 </dl>
 </dd>

@@ -29,6 +29,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/no_search_highlight.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/summary.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
@@ -218,7 +219,8 @@
 
 <span class="kn">from</span> <span class="nn">.camera</span> <span class="kn">import</span> <span class="n">Camera</span>
 <span class="kn">from</span> <span class="nn">.charts</span> <span class="kn">import</span> <span class="n">Charts</span>
-<span class="kn">from</span> <span class="nn">.tools</span> <span class="kn">import</span> <span class="n">create_axes_marker</span><span class="p">,</span> <span class="n">create_axes_orientation_box</span><span class="p">,</span> <span class="n">parse_color</span><span class="p">,</span> <span class="n">parse_font_family</span>
+<span class="kn">from</span> <span class="nn">.colors</span> <span class="kn">import</span> <span class="n">Color</span>
+<span class="kn">from</span> <span class="nn">.tools</span> <span class="kn">import</span> <span class="n">create_axes_marker</span><span class="p">,</span> <span class="n">create_axes_orientation_box</span><span class="p">,</span> <span class="n">parse_font_family</span>
 
 <span class="n">ACTOR_LOC_MAP</span> <span class="o">=</span> <span class="p">[</span>
     <span class="s1">&#39;upper right&#39;</span><span class="p">,</span>
@@ -401,7 +403,7 @@
         <span class="s1">&#39;iso&#39;</span><span class="p">:</span> <span class="s1">&#39;view_isometric&#39;</span><span class="p">,</span>
     <span class="p">}</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">border</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">border_color</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">border_width</span><span class="o">=</span><span class="mf">2.0</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">border</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">border_color</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">border_width</span><span class="o">=</span><span class="mf">2.0</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Initialize the renderer.&quot;&quot;&quot;</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_actors</span> <span class="o">=</span> <span class="p">{}</span>
@@ -584,7 +586,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">background_color</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Return the background color of this renderer.&quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">GetBackground</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">Color</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">GetBackground</span><span class="p">())</span>
 
     <span class="nd">@background_color</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">background_color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
@@ -671,12 +673,12 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">SetUseFXAA</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">Modified</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="Renderer.add_border"><a class="viewcode-back" href="../../../api/plotting/_autosummary/pyvista.Renderer.add_border.html#pyvista.Renderer.add_border">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">add_border</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">width</span><span class="o">=</span><span class="mf">2.0</span><span class="p">):</span>
+<div class="viewcode-block" id="Renderer.add_border"><a class="viewcode-back" href="../../../api/plotting/_autosummary/pyvista.Renderer.add_border.html#pyvista.Renderer.add_border">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">add_border</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">2.0</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Add borders around the frame.</span>
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
-<span class="sd">        color : str or sequence, optional</span>
+<span class="sd">        color : color_like, optional</span>
 <span class="sd">            Color of the border.</span>
 
 <span class="sd">        width : float, optional</span>
@@ -705,7 +707,7 @@
 
         <span class="n">actor</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkActor2D</span><span class="p">()</span>
         <span class="n">actor</span><span class="o">.</span><span class="n">SetMapper</span><span class="p">(</span><span class="n">mapper</span><span class="p">)</span>
-        <span class="n">actor</span><span class="o">.</span><span class="n">GetProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">parse_color</span><span class="p">(</span><span class="n">color</span><span class="p">))</span>
+        <span class="n">actor</span><span class="o">.</span><span class="n">GetProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">Color</span><span class="p">(</span><span class="n">color</span><span class="p">)</span><span class="o">.</span><span class="n">float_rgb</span><span class="p">)</span>
         <span class="n">actor</span><span class="o">.</span><span class="n">GetProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetLineWidth</span><span class="p">(</span><span class="n">width</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">AddViewProp</span><span class="p">(</span><span class="n">actor</span><span class="p">)</span>
@@ -730,7 +732,7 @@
     <span class="k">def</span> <span class="nf">border_color</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Return the border color.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">has_border</span><span class="p">:</span>
-            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_border_actor</span><span class="o">.</span><span class="n">GetProperty</span><span class="p">()</span><span class="o">.</span><span class="n">GetColor</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">Color</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_border_actor</span><span class="o">.</span><span class="n">GetProperty</span><span class="p">()</span><span class="o">.</span><span class="n">GetColor</span><span class="p">())</span>
         <span class="k">return</span> <span class="kc">None</span>
 
 <div class="viewcode-block" id="Renderer.add_chart"><a class="viewcode-back" href="../../../api/plotting/_autosummary/pyvista.Renderer.add_chart.html#pyvista.Renderer.add_chart">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">add_chart</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chart</span><span class="p">,</span> <span class="o">*</span><span class="n">charts</span><span class="p">):</span>
@@ -918,13 +920,13 @@
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
-<span class="sd">        x_color : str or 3 item sequence, optional</span>
+<span class="sd">        x_color : color_like, optional</span>
 <span class="sd">            The color of the x axes arrow.</span>
 
-<span class="sd">        y_color : str or 3 item sequence, optional</span>
+<span class="sd">        y_color : color_like, optional</span>
 <span class="sd">            The color of the y axes arrow.</span>
 
-<span class="sd">        z_color : str or 3 item sequence, optional</span>
+<span class="sd">        z_color : color_like, optional</span>
 <span class="sd">            The color of the z axes arrow.</span>
 
 <span class="sd">        xlabel : str, optional</span>
@@ -990,7 +992,7 @@
 <span class="sd">            :attr:`pyvista.global_theme.interactive</span>
 <span class="sd">            &lt;pyvista.themes.DefaultTheme.interactive&gt;`.</span>
 
-<span class="sd">        color : str or sequence, optional</span>
+<span class="sd">        color : color_like, optional</span>
 <span class="sd">            The color of the actor.  This only applies if ``actor`` is</span>
 <span class="sd">            a :class:`pyvista.DataSet`.</span>
 
@@ -1022,7 +1024,7 @@
             <span class="n">actor</span><span class="o">.</span><span class="n">SetMapper</span><span class="p">(</span><span class="n">mapper</span><span class="p">)</span>
             <span class="n">prop</span> <span class="o">=</span> <span class="n">actor</span><span class="o">.</span><span class="n">GetProperty</span><span class="p">()</span>
             <span class="k">if</span> <span class="n">color</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-                <span class="n">prop</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">parse_color</span><span class="p">(</span><span class="n">color</span><span class="p">))</span>
+                <span class="n">prop</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">Color</span><span class="p">(</span><span class="n">color</span><span class="p">)</span><span class="o">.</span><span class="n">float_rgb</span><span class="p">)</span>
             <span class="n">prop</span><span class="o">.</span><span class="n">SetOpacity</span><span class="p">(</span><span class="n">opacity</span><span class="p">)</span>
         <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;axes_widget&#39;</span><span class="p">):</span>
             <span class="c1"># Delete the old one</span>
@@ -1066,16 +1068,16 @@
 <span class="sd">        line_width : int, optional</span>
 <span class="sd">            The width of the marker lines.</span>
 
-<span class="sd">        color : str or sequence, optional</span>
+<span class="sd">        color : color_like, optional</span>
 <span class="sd">            Color of the labels.</span>
 
-<span class="sd">        x_color : str or sequence, optional</span>
+<span class="sd">        x_color : color_like, optional</span>
 <span class="sd">            Color used for the x axis arrow.  Defaults to theme axes parameters.</span>
 
-<span class="sd">        y_color : str or sequence, optional</span>
+<span class="sd">        y_color : color_like, optional</span>
 <span class="sd">            Color used for the y axis arrow.  Defaults to theme axes parameters.</span>
 
-<span class="sd">        z_color : str or sequence, optional</span>
+<span class="sd">        z_color : color_like, optional</span>
 <span class="sd">            Color used for the z axis arrow.  Defaults to theme axes parameters.</span>
 
 <span class="sd">        xlabel : str, optional</span>
@@ -1278,14 +1280,14 @@
 <span class="sd">            Font family.  Must be either ``&#39;courier&#39;``, ``&#39;times&#39;``,</span>
 <span class="sd">            or ``&#39;arial&#39;``.</span>
 
-<span class="sd">        color : str or 3 item list, optional</span>
+<span class="sd">        color : color_like, optional</span>
 <span class="sd">            Color of all labels and axis titles.  Default white.</span>
 <span class="sd">            Either a string, rgb list, or hex color string.  For</span>
 <span class="sd">            example:</span>
 
 <span class="sd">            * ``color=&#39;white&#39;``</span>
 <span class="sd">            * ``color=&#39;w&#39;``</span>
-<span class="sd">            * ``color=[1, 1, 1]``</span>
+<span class="sd">            * ``color=[1.0, 1.0, 1.0]``</span>
 <span class="sd">            * ``color=&#39;#FFFFFF&#39;``</span>
 
 <span class="sd">        xlabel : str, optional</span>
@@ -1368,12 +1370,10 @@
             <span class="n">font_family</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_theme</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">family</span>
         <span class="k">if</span> <span class="n">font_size</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">font_size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_theme</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">size</span>
-        <span class="k">if</span> <span class="n">color</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">color</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_theme</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">color</span>
         <span class="k">if</span> <span class="n">fmt</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">fmt</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_theme</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">fmt</span>
 
-        <span class="n">color</span> <span class="o">=</span> <span class="n">parse_color</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+        <span class="n">color</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="n">default_color</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_theme</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">color</span><span class="p">)</span>
 
         <span class="c1"># Use the bounds of all data in the rendering window</span>
         <span class="k">if</span> <span class="n">mesh</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">bounds</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
@@ -1398,9 +1398,9 @@
             <span class="n">cube_axes_actor</span><span class="o">.</span><span class="n">SetDrawYGridlines</span><span class="p">(</span><span class="n">show_yaxis</span><span class="p">)</span>
             <span class="n">cube_axes_actor</span><span class="o">.</span><span class="n">SetDrawZGridlines</span><span class="p">(</span><span class="n">show_zaxis</span><span class="p">)</span>
             <span class="c1"># Set the colors</span>
-            <span class="n">cube_axes_actor</span><span class="o">.</span><span class="n">GetXAxesGridlinesProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
-            <span class="n">cube_axes_actor</span><span class="o">.</span><span class="n">GetYAxesGridlinesProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
-            <span class="n">cube_axes_actor</span><span class="o">.</span><span class="n">GetZAxesGridlinesProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+            <span class="n">cube_axes_actor</span><span class="o">.</span><span class="n">GetXAxesGridlinesProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">color</span><span class="o">.</span><span class="n">float_rgb</span><span class="p">)</span>
+            <span class="n">cube_axes_actor</span><span class="o">.</span><span class="n">GetYAxesGridlinesProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">color</span><span class="o">.</span><span class="n">float_rgb</span><span class="p">)</span>
+            <span class="n">cube_axes_actor</span><span class="o">.</span><span class="n">GetZAxesGridlinesProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">color</span><span class="o">.</span><span class="n">float_rgb</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ticks</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
             <span class="n">ticks</span> <span class="o">=</span> <span class="n">ticks</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
@@ -1463,9 +1463,9 @@
         <span class="n">cube_axes_actor</span><span class="o">.</span><span class="n">SetCamera</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">camera</span><span class="p">)</span>
 
         <span class="c1"># set color</span>
-        <span class="n">cube_axes_actor</span><span class="o">.</span><span class="n">GetXAxesLinesProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
-        <span class="n">cube_axes_actor</span><span class="o">.</span><span class="n">GetYAxesLinesProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
-        <span class="n">cube_axes_actor</span><span class="o">.</span><span class="n">GetZAxesLinesProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+        <span class="n">cube_axes_actor</span><span class="o">.</span><span class="n">GetXAxesLinesProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">color</span><span class="o">.</span><span class="n">float_rgb</span><span class="p">)</span>
+        <span class="n">cube_axes_actor</span><span class="o">.</span><span class="n">GetYAxesLinesProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">color</span><span class="o">.</span><span class="n">float_rgb</span><span class="p">)</span>
+        <span class="n">cube_axes_actor</span><span class="o">.</span><span class="n">GetZAxesLinesProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">color</span><span class="o">.</span><span class="n">float_rgb</span><span class="p">)</span>
 
         <span class="c1"># empty string used for clearing axis labels</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_empty_str</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkStringArray</span><span class="p">()</span>
@@ -1500,12 +1500,12 @@
         <span class="n">font_family</span> <span class="o">=</span> <span class="n">parse_font_family</span><span class="p">(</span><span class="n">font_family</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
             <span class="n">cube_axes_actor</span><span class="o">.</span><span class="n">GetTitleTextProperty</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">SetFontSize</span><span class="p">(</span><span class="n">font_size</span><span class="p">)</span>
-            <span class="n">cube_axes_actor</span><span class="o">.</span><span class="n">GetTitleTextProperty</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+            <span class="n">cube_axes_actor</span><span class="o">.</span><span class="n">GetTitleTextProperty</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">color</span><span class="o">.</span><span class="n">float_rgb</span><span class="p">)</span>
             <span class="n">cube_axes_actor</span><span class="o">.</span><span class="n">GetTitleTextProperty</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">SetFontFamily</span><span class="p">(</span><span class="n">font_family</span><span class="p">)</span>
             <span class="n">cube_axes_actor</span><span class="o">.</span><span class="n">GetTitleTextProperty</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">SetBold</span><span class="p">(</span><span class="n">bold</span><span class="p">)</span>
 
             <span class="n">cube_axes_actor</span><span class="o">.</span><span class="n">GetLabelTextProperty</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">SetFontSize</span><span class="p">(</span><span class="n">font_size</span><span class="p">)</span>
-            <span class="n">cube_axes_actor</span><span class="o">.</span><span class="n">GetLabelTextProperty</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+            <span class="n">cube_axes_actor</span><span class="o">.</span><span class="n">GetLabelTextProperty</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">color</span><span class="o">.</span><span class="n">float_rgb</span><span class="p">)</span>
             <span class="n">cube_axes_actor</span><span class="o">.</span><span class="n">GetLabelTextProperty</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">SetFontFamily</span><span class="p">(</span><span class="n">font_family</span><span class="p">)</span>
             <span class="n">cube_axes_actor</span><span class="o">.</span><span class="n">GetLabelTextProperty</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">SetBold</span><span class="p">(</span><span class="n">bold</span><span class="p">)</span>
 
@@ -1599,14 +1599,14 @@
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
-<span class="sd">        color : str or sequence, optional</span>
+<span class="sd">        color : color_like, optional</span>
 <span class="sd">            Color of all labels and axis titles.  Default white.</span>
 <span class="sd">            Either a string, rgb sequence, or hex color string.  For</span>
 <span class="sd">            example:</span>
 
 <span class="sd">            * ``color=&#39;white&#39;``</span>
 <span class="sd">            * ``color=&#39;w&#39;``</span>
-<span class="sd">            * ``color=[1, 1, 1]``</span>
+<span class="sd">            * ``color=[1.0, 1.0, 1.0]``</span>
 <span class="sd">            * ``color=&#39;#FFFFFF&#39;``</span>
 
 <span class="sd">        corner_factor : float, optional</span>
@@ -1656,9 +1656,6 @@
             <span class="n">lighting</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_theme</span><span class="o">.</span><span class="n">lighting</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">remove_bounding_box</span><span class="p">()</span>
-        <span class="k">if</span> <span class="n">color</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">color</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_theme</span><span class="o">.</span><span class="n">outline_color</span>
-        <span class="n">rgb_color</span> <span class="o">=</span> <span class="n">parse_color</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">outline</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_bounding_box</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkOutlineCornerSource</span><span class="p">()</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_bounding_box</span><span class="o">.</span><span class="n">SetCornerFactor</span><span class="p">(</span><span class="n">corner_factor</span><span class="p">)</span>
@@ -1675,7 +1672,7 @@
             <span class="n">mapper</span><span class="p">,</span> <span class="n">reset_camera</span><span class="o">=</span><span class="n">reset_camera</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">culling</span><span class="o">=</span><span class="n">culling</span><span class="p">,</span> <span class="n">pickable</span><span class="o">=</span><span class="kc">False</span>
         <span class="p">)</span>
 
-        <span class="n">prop</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">rgb_color</span><span class="p">)</span>
+        <span class="n">prop</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">Color</span><span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="n">default_color</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_theme</span><span class="o">.</span><span class="n">outline_color</span><span class="p">)</span><span class="o">.</span><span class="n">float_rgb</span><span class="p">)</span>
         <span class="n">prop</span><span class="o">.</span><span class="n">SetOpacity</span><span class="p">(</span><span class="n">opacity</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">render_lines_as_tubes</span><span class="p">:</span>
             <span class="n">prop</span><span class="o">.</span><span class="n">SetRenderLinesAsTubes</span><span class="p">(</span><span class="n">render_lines_as_tubes</span><span class="p">)</span>
@@ -1730,7 +1727,7 @@
 <span class="sd">        j_resolution : int, optional</span>
 <span class="sd">            Number of points on the plane in the j direction.</span>
 
-<span class="sd">        color : str or 3 item list, optional</span>
+<span class="sd">        color : color_like, optional</span>
 <span class="sd">            Color of all labels and axis titles.  Default gray.</span>
 <span class="sd">            Either a string, rgb list, or hex color string.</span>
 
@@ -1752,7 +1749,7 @@
 <span class="sd">            Enable or disable view direction lighting.  Default</span>
 <span class="sd">            ``False``.</span>
 
-<span class="sd">        edge_color : str or sequence, optional</span>
+<span class="sd">        edge_color : color_like, optional</span>
 <span class="sd">            Color of of the edges of the mesh.</span>
 
 <span class="sd">        reset_camera : bool, optional</span>
@@ -1840,26 +1837,20 @@
         <span class="k">if</span> <span class="n">lighting</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">lighting</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_theme</span><span class="o">.</span><span class="n">lighting</span>
 
-        <span class="k">if</span> <span class="n">edge_color</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">edge_color</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_theme</span><span class="o">.</span><span class="n">edge_color</span>
-
         <span class="bp">self</span><span class="o">.</span><span class="n">remove_bounding_box</span><span class="p">()</span>
-        <span class="k">if</span> <span class="n">color</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">color</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_theme</span><span class="o">.</span><span class="n">floor_color</span>
-        <span class="n">rgb_color</span> <span class="o">=</span> <span class="n">parse_color</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
         <span class="n">mapper</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkDataSetMapper</span><span class="p">()</span>
         <span class="n">mapper</span><span class="o">.</span><span class="n">SetInputData</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_floor</span><span class="p">)</span>
         <span class="n">actor</span><span class="p">,</span> <span class="n">prop</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_actor</span><span class="p">(</span>
             <span class="n">mapper</span><span class="p">,</span> <span class="n">reset_camera</span><span class="o">=</span><span class="n">reset_camera</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Floor(</span><span class="si">{</span><span class="n">face</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">,</span> <span class="n">pickable</span><span class="o">=</span><span class="n">pickable</span>
         <span class="p">)</span>
 
-        <span class="n">prop</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">rgb_color</span><span class="p">)</span>
+        <span class="n">prop</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">Color</span><span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="n">default_color</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_theme</span><span class="o">.</span><span class="n">floor_color</span><span class="p">)</span><span class="o">.</span><span class="n">float_rgb</span><span class="p">)</span>
         <span class="n">prop</span><span class="o">.</span><span class="n">SetOpacity</span><span class="p">(</span><span class="n">opacity</span><span class="p">)</span>
 
         <span class="c1"># edge display style</span>
         <span class="k">if</span> <span class="n">show_edges</span><span class="p">:</span>
             <span class="n">prop</span><span class="o">.</span><span class="n">EdgeVisibilityOn</span><span class="p">()</span>
-        <span class="n">prop</span><span class="o">.</span><span class="n">SetEdgeColor</span><span class="p">(</span><span class="n">parse_color</span><span class="p">(</span><span class="n">edge_color</span><span class="p">))</span>
+        <span class="n">prop</span><span class="o">.</span><span class="n">SetEdgeColor</span><span class="p">(</span><span class="n">Color</span><span class="p">(</span><span class="n">edge_color</span><span class="p">,</span> <span class="n">default_color</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_theme</span><span class="o">.</span><span class="n">edge_color</span><span class="p">)</span><span class="o">.</span><span class="n">float_rgb</span><span class="p">)</span>
 
         <span class="c1"># lighting display style</span>
         <span class="k">if</span> <span class="n">lighting</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
@@ -2759,16 +2750,16 @@
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
-<span class="sd">        color : str or 3 item list, optional</span>
+<span class="sd">        color : color_like, optional</span>
 <span class="sd">            Either a string, rgb list, or hex color string.  Defaults</span>
 <span class="sd">            to theme default.  For example:</span>
 
 <span class="sd">            * ``color=&#39;white&#39;``</span>
 <span class="sd">            * ``color=&#39;w&#39;``</span>
-<span class="sd">            * ``color=[1, 1, 1]``</span>
+<span class="sd">            * ``color=[1.0, 1.0, 1.0]``</span>
 <span class="sd">            * ``color=&#39;#FFFFFF&#39;``</span>
 
-<span class="sd">        top : str or 3 item list, optional</span>
+<span class="sd">        top : color_like, optional</span>
 <span class="sd">            If given, this will enable a gradient background where the</span>
 <span class="sd">            ``color`` argument is at the bottom and the color given in</span>
 <span class="sd">            ``top`` will be the color at the top of the renderer.</span>
@@ -2785,17 +2776,14 @@
 <span class="sd">        &gt;&gt;&gt; pl.show()</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="n">color</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">color</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_theme</span><span class="o">.</span><span class="n">background</span>
-
         <span class="n">use_gradient</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="k">if</span> <span class="n">top</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">use_gradient</span> <span class="o">=</span> <span class="kc">True</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">SetBackground</span><span class="p">(</span><span class="n">parse_color</span><span class="p">(</span><span class="n">color</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">SetBackground</span><span class="p">(</span><span class="n">Color</span><span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="n">default_color</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_theme</span><span class="o">.</span><span class="n">background</span><span class="p">)</span><span class="o">.</span><span class="n">float_rgb</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">use_gradient</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">GradientBackgroundOn</span><span class="p">()</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">SetBackground2</span><span class="p">(</span><span class="n">parse_color</span><span class="p">(</span><span class="n">top</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">SetBackground2</span><span class="p">(</span><span class="n">Color</span><span class="p">(</span><span class="n">top</span><span class="p">)</span><span class="o">.</span><span class="n">float_rgb</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">GradientBackgroundOff</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">Modified</span><span class="p">()</span></div>
@@ -2957,7 +2945,7 @@
 <span class="sd">            color], where label is the name of the item to add, and</span>
 <span class="sd">            color is the color of the label to add.</span>
 
-<span class="sd">        bcolor : list or str, optional</span>
+<span class="sd">        bcolor : color_like, optional</span>
 <span class="sd">            Background color, either a three item 0 to 1 RGB color</span>
 <span class="sd">            list, or a matplotlib color string (e.g. ``&#39;w&#39;`` or ``&#39;white&#39;``</span>
 <span class="sd">            for a white color).  If None, legend background is</span>
@@ -3057,14 +3045,14 @@
                     <span class="c1"># dummy vtk object</span>
                     <span class="n">vtk_object</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">PolyData</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">])</span>
 
-                <span class="bp">self</span><span class="o">.</span><span class="n">_legend</span><span class="o">.</span><span class="n">SetEntry</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">vtk_object</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">parse_color</span><span class="p">(</span><span class="n">color</span><span class="p">))</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_legend</span><span class="o">.</span><span class="n">SetEntry</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">vtk_object</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">color</span><span class="o">.</span><span class="n">float_rgb</span><span class="p">)</span>
 
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_legend</span><span class="o">.</span><span class="n">SetNumberOfEntries</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">labels</span><span class="p">))</span>
 
             <span class="n">legend_face</span> <span class="o">=</span> <span class="n">make_legend_face</span><span class="p">(</span><span class="n">face</span><span class="p">)</span>
             <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">labels</span><span class="p">):</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">_legend</span><span class="o">.</span><span class="n">SetEntry</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">legend_face</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">parse_color</span><span class="p">(</span><span class="n">color</span><span class="p">))</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_legend</span><span class="o">.</span><span class="n">SetEntry</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">legend_face</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">Color</span><span class="p">(</span><span class="n">color</span><span class="p">)</span><span class="o">.</span><span class="n">float_rgb</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">loc</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">loc</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ACTOR_LOC_MAP</span><span class="p">:</span>
@@ -3078,7 +3066,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">_legend</span><span class="o">.</span><span class="n">UseBackgroundOff</span><span class="p">()</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_legend</span><span class="o">.</span><span class="n">UseBackgroundOn</span><span class="p">()</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_legend</span><span class="o">.</span><span class="n">SetBackgroundColor</span><span class="p">(</span><span class="n">parse_color</span><span class="p">(</span><span class="n">bcolor</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_legend</span><span class="o">.</span><span class="n">SetBackgroundColor</span><span class="p">(</span><span class="n">Color</span><span class="p">(</span><span class="n">bcolor</span><span class="p">)</span><span class="o">.</span><span class="n">float_rgb</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_legend</span><span class="o">.</span><span class="n">SetBorder</span><span class="p">(</span><span class="n">border</span><span class="p">)</span>
 

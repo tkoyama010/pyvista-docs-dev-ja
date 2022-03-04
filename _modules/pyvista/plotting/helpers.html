@@ -29,6 +29,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/no_search_highlight.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/summary.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
@@ -290,7 +291,7 @@
 <span class="sd">        When ``True``, the resulting plot is placed inline a jupyter</span>
 <span class="sd">        notebook.  Assumes a jupyter console is active.</span>
 
-<span class="sd">    background : str or sequence, optional</span>
+<span class="sd">    background : color_like, optional</span>
 <span class="sd">        Color of the background.</span>
 
 <span class="sd">    text : str, optional</span>
@@ -598,10 +599,10 @@
 <span class="sd">        :func:`pyvista.wrap` can handle including NumPy arrays of XYZ</span>
 <span class="sd">        points.</span>
 
-<span class="sd">    color : str or 3 item list, optional, defaults to white</span>
+<span class="sd">    color : color_like, optional, defaults to white</span>
 <span class="sd">        Use to make the entire mesh have a single solid color.  Either</span>
 <span class="sd">        a string, RGB list, or hex color string.  For example:</span>
-<span class="sd">        ``color=&#39;white&#39;``, ``color=&#39;w&#39;``, ``color=[1, 1, 1]``, or</span>
+<span class="sd">        ``color=&#39;white&#39;``, ``color=&#39;w&#39;``, ``color=[1.0, 1.0, 1.0]``, or</span>
 <span class="sd">        ``color=&#39;#FFFFFF&#39;``. Color will be overridden if scalars are</span>
 <span class="sd">        specified.</span>
 

@@ -30,6 +30,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/no_search_highlight.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/summary.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
@@ -1273,11 +1274,11 @@
 </dd>
 <dt><strong>label_font_size</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>タイトルフォントのサイズを設定します． デフォルトは <code class="docutils literal notranslate"><span class="pre">None</span></code> で， <a class="reference internal" href="pyvista.themes.DefaultTheme.font.html#pyvista.themes.DefaultTheme.font" title="pyvista.themes.DefaultTheme.font"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pyvista.themes.DefaultTheme.font</span></code></a> に従ってサイズが設定されます．</p>
 </dd>
-<dt><strong>color</strong><span class="classifier">python:str または 3 要素 python:list, optional</span></dt><dd><p>文字列，RGBリスト，または16進数の色文字列のいずれかです． デフォルトは <a class="reference internal" href="pyvista.themes.DefaultTheme.font.html#pyvista.themes.DefaultTheme.font" title="pyvista.themes.DefaultTheme.font"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pyvista.themes.DefaultTheme.font</span></code></a> で設定されています． 次のいずれかの形式で指定します．</p>
+<dt><strong>color</strong><span class="classifier"><a class="reference internal" href="../../utilities/_autosummary/pyvista.color_like.html#pyvista.color_like" title="pyvista.color_like"><code class="xref py py-obj docutils literal notranslate"><span class="pre">color_like</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>文字列，RGBリスト，または16進数の色文字列のいずれかです． デフォルトは <a class="reference internal" href="pyvista.themes.DefaultTheme.font.html#pyvista.themes.DefaultTheme.font" title="pyvista.themes.DefaultTheme.font"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pyvista.themes.DefaultTheme.font</span></code></a> で設定されています． 次のいずれかの形式で指定します．</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">color='white'</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">color='w'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">color=[1,</span> <span class="pre">1,</span> <span class="pre">1]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">color=[1.0,</span> <span class="pre">1.0,</span> <span class="pre">1.0]</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">color='#FFFFFF'</span></code></p></li>
 </ul>
 </dd>
@@ -1309,7 +1310,7 @@
 </dd>
 <dt><strong>above_label</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>スカラー範囲より上の値の文字列注釈．</p>
 </dd>
-<dt><strong>background_color</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.22)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">array</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>RGB形式で背景に使用される色です．</p>
+<dt><strong>background_color</strong><span class="classifier"><a class="reference internal" href="../../utilities/_autosummary/pyvista.color_like.html#pyvista.color_like" title="pyvista.color_like"><code class="xref py py-obj docutils literal notranslate"><span class="pre">color_like</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>RGB形式で背景に使用される色です．</p>
 </dd>
 <dt><strong>n_colors</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>スカラーバーに表示されるカラーの最大数．</p>
 </dd>

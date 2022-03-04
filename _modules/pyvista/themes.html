@@ -29,6 +29,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/no_search_highlight.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/summary.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
@@ -241,8 +242,9 @@
 <span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Union</span>
 <span class="kn">import</span> <span class="nn">warnings</span>
 
-<span class="kn">from</span> <span class="nn">.plotting.colors</span> <span class="kn">import</span> <span class="n">PARAVIEW_BACKGROUND</span><span class="p">,</span> <span class="n">get_cmap_safe</span>
-<span class="kn">from</span> <span class="nn">.plotting.tools</span> <span class="kn">import</span> <span class="n">parse_color</span><span class="p">,</span> <span class="n">parse_font_family</span>
+<span class="kn">from</span> <span class="nn">._typing</span> <span class="kn">import</span> <span class="n">color_like</span>
+<span class="kn">from</span> <span class="nn">.plotting.colors</span> <span class="kn">import</span> <span class="n">Color</span><span class="p">,</span> <span class="n">get_cmap_safe</span>
+<span class="kn">from</span> <span class="nn">.plotting.tools</span> <span class="kn">import</span> <span class="n">parse_font_family</span>
 <span class="kn">from</span> <span class="nn">.utilities.misc</span> <span class="kn">import</span> <span class="n">PyvistaDeprecationWarning</span>
 
 
@@ -511,14 +513,14 @@
     <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_color&#39;</span><span class="p">,</span> <span class="s1">&#39;_line_width&#39;</span><span class="p">,</span> <span class="s1">&#39;_opacity&#39;</span><span class="p">,</span> <span class="s1">&#39;_feature_angle&#39;</span><span class="p">,</span> <span class="s1">&#39;_decimate&#39;</span><span class="p">]</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_color</span> <span class="o">=</span> <span class="n">parse_color</span><span class="p">(</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_color</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_line_width</span> <span class="o">=</span> <span class="mi">2</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_opacity</span> <span class="o">=</span> <span class="mf">1.0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_feature_angle</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_decimate</span> <span class="o">=</span> <span class="mf">0.9</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">color</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">color</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Color</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Return or set the silhouette color.</span>
 
 <span class="sd">        Examples</span>
@@ -530,8 +532,8 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_color</span>
 
     <span class="nd">@color</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">tuple</span><span class="p">,</span> <span class="nb">str</span><span class="p">]):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_color</span> <span class="o">=</span> <span class="n">parse_color</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">:</span> <span class="n">color_like</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_color</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">line_width</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
@@ -738,9 +740,9 @@
     <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_x_color&#39;</span><span class="p">,</span> <span class="s1">&#39;_y_color&#39;</span><span class="p">,</span> <span class="s1">&#39;_z_color&#39;</span><span class="p">,</span> <span class="s1">&#39;_box&#39;</span><span class="p">,</span> <span class="s1">&#39;_show&#39;</span><span class="p">]</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_x_color</span> <span class="o">=</span> <span class="n">parse_color</span><span class="p">(</span><span class="s1">&#39;tomato&#39;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_y_color</span> <span class="o">=</span> <span class="n">parse_color</span><span class="p">(</span><span class="s1">&#39;seagreen&#39;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_z_color</span> <span class="o">=</span> <span class="n">parse_color</span><span class="p">(</span><span class="s1">&#39;mediumblue&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_x_color</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="s1">&#39;tomato&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_y_color</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="s1">&#39;seagreen&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_z_color</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="s1">&#39;mediumblue&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_box</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_show</span> <span class="o">=</span> <span class="kc">True</span>
 
@@ -760,7 +762,7 @@
         <span class="k">return</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">txt</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">x_color</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">x_color</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Color</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Return or set x axis color.</span>
 
 <span class="sd">        Examples</span>
@@ -771,11 +773,11 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_x_color</span>
 
     <span class="nd">@x_color</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">x_color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">tuple</span><span class="p">,</span> <span class="nb">str</span><span class="p">]):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_x_color</span> <span class="o">=</span> <span class="n">parse_color</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">x_color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">:</span> <span class="n">color_like</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_x_color</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">y_color</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">y_color</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Color</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Return or set y axis color.</span>
 
 <span class="sd">        Examples</span>
@@ -786,11 +788,11 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_y_color</span>
 
     <span class="nd">@y_color</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">y_color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">tuple</span><span class="p">,</span> <span class="nb">str</span><span class="p">]):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_y_color</span> <span class="o">=</span> <span class="n">parse_color</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">y_color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">:</span> <span class="n">color_like</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_y_color</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">z_color</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">z_color</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Color</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Return or set z axis color.</span>
 
 <span class="sd">        Examples</span>
@@ -801,8 +803,8 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_z_color</span>
 
     <span class="nd">@z_color</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">z_color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">tuple</span><span class="p">,</span> <span class="nb">str</span><span class="p">]):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_z_color</span> <span class="o">=</span> <span class="n">parse_color</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">z_color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">:</span> <span class="n">color_like</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_z_color</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">box</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
@@ -879,7 +881,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_size</span> <span class="o">=</span> <span class="mi">12</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_title_size</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_label_size</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_color</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_color</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_fmt</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -980,7 +982,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">_label_size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">label_size</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">color</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">color</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Color</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Return or set the font color.</span>
 
 <span class="sd">        Examples</span>
@@ -991,8 +993,8 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_color</span>
 
     <span class="nd">@color</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">tuple</span><span class="p">,</span> <span class="nb">str</span><span class="p">]):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_color</span> <span class="o">=</span> <span class="n">parse_color</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">:</span> <span class="n">color_like</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_color</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">fmt</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
@@ -1098,7 +1100,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_cap_opacity</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">cap_opacity</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">tube_color</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">tube_color</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Color</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Return or set the tube color.</span>
 
 <span class="sd">        Examples</span>
@@ -1109,8 +1111,8 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tube_color</span>
 
     <span class="nd">@tube_color</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">tube_color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tube_color</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">tuple</span><span class="p">,</span> <span class="nb">str</span><span class="p">]):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_tube_color</span> <span class="o">=</span> <span class="n">parse_color</span><span class="p">(</span><span class="n">tube_color</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">tube_color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tube_color</span><span class="p">:</span> <span class="n">color_like</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_tube_color</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="n">tube_color</span><span class="p">)</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">tube_width</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
@@ -1129,7 +1131,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_tube_width</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">tube_width</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">slider_color</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">slider_color</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Color</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Return or set the slider color.</span>
 
 <span class="sd">        Examples</span>
@@ -1141,8 +1143,8 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_slider_color</span>
 
     <span class="nd">@slider_color</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">slider_color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">slider_color</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">tuple</span><span class="p">,</span> <span class="nb">str</span><span class="p">]):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_slider_color</span> <span class="o">=</span> <span class="n">parse_color</span><span class="p">(</span><span class="n">slider_color</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">slider_color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">slider_color</span><span class="p">:</span> <span class="n">color_like</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_slider_color</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="n">slider_color</span><span class="p">)</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">slider_width</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
@@ -1206,7 +1208,7 @@
 <span class="sd">    &gt;&gt;&gt; pyvista.global_theme.slider_styles.classic.slider_width = 0.04</span>
 <span class="sd">    &gt;&gt;&gt; pyvista.global_theme.slider_styles.classic.slider_color = (0.5, 0.5, 0.5)</span>
 <span class="sd">    &gt;&gt;&gt; pyvista.global_theme.slider_styles.classic.tube_width = 0.005</span>
-<span class="sd">    &gt;&gt;&gt; pyvista.global_theme.slider_styles.classic.tube_color = (1, 1, 1)</span>
+<span class="sd">    &gt;&gt;&gt; pyvista.global_theme.slider_styles.classic.tube_color = (1.0, 1.0, 1.0)</span>
 <span class="sd">    &gt;&gt;&gt; pyvista.global_theme.slider_styles.classic.cap_opacity = 1</span>
 <span class="sd">    &gt;&gt;&gt; pyvista.global_theme.slider_styles.classic.cap_length = 0.01</span>
 <span class="sd">    &gt;&gt;&gt; pyvista.global_theme.slider_styles.classic.cap_width = 0.02</span>
@@ -1232,9 +1234,9 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_classic</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;classic&#39;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_classic</span><span class="o">.</span><span class="n">slider_length</span> <span class="o">=</span> <span class="mf">0.02</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_classic</span><span class="o">.</span><span class="n">slider_width</span> <span class="o">=</span> <span class="mf">0.04</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_classic</span><span class="o">.</span><span class="n">slider_color</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_classic</span><span class="o">.</span><span class="n">slider_color</span> <span class="o">=</span> <span class="s1">&#39;gray&#39;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_classic</span><span class="o">.</span><span class="n">tube_width</span> <span class="o">=</span> <span class="mf">0.005</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_classic</span><span class="o">.</span><span class="n">tube_color</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_classic</span><span class="o">.</span><span class="n">tube_color</span> <span class="o">=</span> <span class="s1">&#39;white&#39;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_classic</span><span class="o">.</span><span class="n">cap_opacity</span> <span class="o">=</span> <span class="mi">1</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_classic</span><span class="o">.</span><span class="n">cap_length</span> <span class="o">=</span> <span class="mf">0.01</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_classic</span><span class="o">.</span><span class="n">cap_width</span> <span class="o">=</span> <span class="mf">0.02</span>
@@ -1243,9 +1245,9 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_modern</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;modern&#39;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_modern</span><span class="o">.</span><span class="n">slider_length</span> <span class="o">=</span> <span class="mf">0.02</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_modern</span><span class="o">.</span><span class="n">slider_width</span> <span class="o">=</span> <span class="mf">0.04</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_modern</span><span class="o">.</span><span class="n">slider_color</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.43137255</span><span class="p">,</span> <span class="mf">0.44313725</span><span class="p">,</span> <span class="mf">0.45882353</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_modern</span><span class="o">.</span><span class="n">slider_color</span> <span class="o">=</span> <span class="p">(</span><span class="mi">110</span><span class="p">,</span> <span class="mi">113</span><span class="p">,</span> <span class="mi">117</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_modern</span><span class="o">.</span><span class="n">tube_width</span> <span class="o">=</span> <span class="mf">0.04</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_modern</span><span class="o">.</span><span class="n">tube_color</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.69803922</span><span class="p">,</span> <span class="mf">0.70196078</span><span class="p">,</span> <span class="mf">0.70980392</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_modern</span><span class="o">.</span><span class="n">tube_color</span> <span class="o">=</span> <span class="p">(</span><span class="mi">178</span><span class="p">,</span> <span class="mi">179</span><span class="p">,</span> <span class="mi">181</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_modern</span><span class="o">.</span><span class="n">cap_opacity</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_modern</span><span class="o">.</span><span class="n">cap_length</span> <span class="o">=</span> <span class="mf">0.01</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_modern</span><span class="o">.</span><span class="n">cap_width</span> <span class="o">=</span> <span class="mf">0.02</span>
@@ -1354,7 +1356,7 @@
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Initialize the theme.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;default&#39;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_background</span> <span class="o">=</span> <span class="n">parse_color</span><span class="p">([</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_background</span> <span class="o">=</span> <span class="n">Color</span><span class="p">([</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">])</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_full_screen</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_camera</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">&#39;position&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
@@ -1365,11 +1367,11 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_window_size</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1024</span><span class="p">,</span> <span class="mi">768</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_font</span> <span class="o">=</span> <span class="n">_Font</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_cmap</span> <span class="o">=</span> <span class="s1">&#39;viridis&#39;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_color</span> <span class="o">=</span> <span class="n">parse_color</span><span class="p">(</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_nan_color</span> <span class="o">=</span> <span class="n">parse_color</span><span class="p">(</span><span class="s1">&#39;darkgray&#39;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_edge_color</span> <span class="o">=</span> <span class="n">parse_color</span><span class="p">(</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_outline_color</span> <span class="o">=</span> <span class="n">parse_color</span><span class="p">(</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_floor_color</span> <span class="o">=</span> <span class="n">parse_color</span><span class="p">(</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_color</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_nan_color</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="s1">&#39;darkgray&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_edge_color</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_outline_color</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_floor_color</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_orientation</span> <span class="o">=</span> <span class="s1">&#39;horizontal&#39;</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_horizontal</span> <span class="o">=</span> <span class="n">_ColorbarConfig</span><span class="p">()</span>
@@ -1459,7 +1461,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_return_cpos</span> <span class="o">=</span> <span class="n">value</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">background</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">background</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Color</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Return or set the default background color of pyvista plots.</span>
 
 <span class="sd">        Examples</span>
@@ -1472,8 +1474,8 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_background</span>
 
     <span class="nd">@background</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">background</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_background</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_background</span> <span class="o">=</span> <span class="n">parse_color</span><span class="p">(</span><span class="n">new_background</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">background</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_background</span><span class="p">:</span> <span class="n">color_like</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_background</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="n">new_background</span><span class="p">)</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">jupyter_backend</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
@@ -1760,7 +1762,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_cmap</span> <span class="o">=</span> <span class="n">cmap</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">color</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">color</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Color</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Return or set the default color of meshes in pyvista.</span>
 
 <span class="sd">        Used for meshes without ``scalars``.</span>
@@ -1770,7 +1772,7 @@
 
 <span class="sd">        * ``color=&#39;white&#39;``</span>
 <span class="sd">        * ``color=&#39;w&#39;``</span>
-<span class="sd">        * ``color=[1, 1, 1]``</span>
+<span class="sd">        * ``color=[1.0, 1.0, 1.0]``</span>
 <span class="sd">        * ``color=&#39;#FFFFFF&#39;``</span>
 
 <span class="sd">        Examples</span>
@@ -1784,11 +1786,11 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_color</span>
 
     <span class="nd">@color</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">tuple</span><span class="p">,</span> <span class="nb">str</span><span class="p">]):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_color</span> <span class="o">=</span> <span class="n">parse_color</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">:</span> <span class="n">color_like</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_color</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">nan_color</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">nan_color</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Color</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Return or set the default NaN color.</span>
 
 <span class="sd">        This color is used to plot all NaN values.</span>
@@ -1802,11 +1804,11 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_nan_color</span>
 
     <span class="nd">@nan_color</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">nan_color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nan_color</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">tuple</span><span class="p">,</span> <span class="nb">str</span><span class="p">]):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_nan_color</span> <span class="o">=</span> <span class="n">parse_color</span><span class="p">(</span><span class="n">nan_color</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">nan_color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nan_color</span><span class="p">:</span> <span class="n">color_like</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_nan_color</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="n">nan_color</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">edge_color</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">edge_color</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Color</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Return or set the default edge color.</span>
 
 <span class="sd">        Examples</span>
@@ -1820,11 +1822,11 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edge_color</span>
 
     <span class="nd">@edge_color</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">edge_color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edge_color</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">tuple</span><span class="p">,</span> <span class="nb">str</span><span class="p">]):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_edge_color</span> <span class="o">=</span> <span class="n">parse_color</span><span class="p">(</span><span class="n">edge_color</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">edge_color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edge_color</span><span class="p">:</span> <span class="n">color_like</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_edge_color</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="n">edge_color</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">outline_color</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">outline_color</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Color</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Return or set the default outline color.</span>
 
 <span class="sd">        Examples</span>
@@ -1836,11 +1838,11 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_outline_color</span>
 
     <span class="nd">@outline_color</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">outline_color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">outline_color</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">tuple</span><span class="p">,</span> <span class="nb">str</span><span class="p">]):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_outline_color</span> <span class="o">=</span> <span class="n">parse_color</span><span class="p">(</span><span class="n">outline_color</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">outline_color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">outline_color</span><span class="p">:</span> <span class="n">color_like</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_outline_color</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="n">outline_color</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">floor_color</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">floor_color</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Color</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Return or set the default floor color.</span>
 
 <span class="sd">        Examples</span>
@@ -1852,8 +1854,8 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_floor_color</span>
 
     <span class="nd">@floor_color</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">floor_color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">floor_color</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">tuple</span><span class="p">,</span> <span class="nb">str</span><span class="p">]):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_floor_color</span> <span class="o">=</span> <span class="n">parse_color</span><span class="p">(</span><span class="n">floor_color</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">floor_color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">floor_color</span><span class="p">:</span> <span class="n">color_like</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_floor_color</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="n">floor_color</span><span class="p">)</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">colorbar_orientation</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
@@ -2459,7 +2461,7 @@
         <span class="sd">&quot;&quot;&quot;Initialize theme.&quot;&quot;&quot;</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;paraview&#39;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">background</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">PARAVIEW_BACKGROUND</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">background</span> <span class="o">=</span> <span class="s1">&#39;paraview&#39;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;coolwarm&#39;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">family</span> <span class="o">=</span> <span class="s1">&#39;arial&#39;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">label_size</span> <span class="o">=</span> <span class="mi">16</span>

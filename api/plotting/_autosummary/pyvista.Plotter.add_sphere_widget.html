@@ -30,6 +30,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/no_search_highlight.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/summary.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
@@ -1270,17 +1271,17 @@
 </dd>
 <dt><strong>phi_resolution</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>緯度方向のポイント数を設定します．</p>
 </dd>
-<dt><strong>color</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or 3 <code class="xref py py-obj docutils literal notranslate"><span class="pre">item</span></code> <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-iterable" title="(in Python v3.11)"><span>iterable</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>球の表面の色です．複数の中心が渡される場合，これは色のリストである必要があります．各色は文字列，RGBリストまたはHEX色文字列のいずれかです．次に例を示します:</p>
+<dt><strong>color</strong><span class="classifier"><a class="reference internal" href="../../utilities/_autosummary/pyvista.color_like.html#pyvista.color_like" title="pyvista.color_like"><code class="xref py py-obj docutils literal notranslate"><span class="pre">color_like</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>球の表面の色です．複数の中心が渡される場合，これは色のリストである必要があります．各色は文字列，RGBリストまたはHEX色文字列のいずれかです．次に例を示します:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">color='white'</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">color='w'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">color=[1,</span> <span class="pre">1,</span> <span class="pre">1]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">color=[1.0,</span> <span class="pre">1.0,</span> <span class="pre">1.0]</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">color='#FFFFFF'</span></code></p></li>
 </ul>
 </dd>
 <dt><strong>style</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>表示スタイル: <code class="docutils literal notranslate"><span class="pre">'surface'</span></code> または <code class="docutils literal notranslate"><span class="pre">'wireframe'</span></code> ．</p>
 </dd>
-<dt><strong>selected_color</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>インタラクション中に選択したときのウィジェットの色．</p>
+<dt><strong>selected_color</strong><span class="classifier"><a class="reference internal" href="../../utilities/_autosummary/pyvista.color_like.html#pyvista.color_like" title="pyvista.color_like"><code class="xref py py-obj docutils literal notranslate"><span class="pre">color_like</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>インタラクション中に選択したときのウィジェットの色．</p>
 </dd>
 <dt><strong>indices</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>球体のウィジェットを割り当てるインデックス．</p>
 </dd>

@@ -29,6 +29,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/no_search_highlight.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/summary.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
@@ -217,7 +218,7 @@
 <span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">_vtk</span>
 
-<span class="kn">from</span> <span class="nn">.tools</span> <span class="kn">import</span> <span class="n">parse_color</span>
+<span class="kn">from</span> <span class="nn">.colors</span> <span class="kn">import</span> <span class="n">Color</span><span class="p">,</span> <span class="n">color_synonyms</span><span class="p">,</span> <span class="n">hexcolors</span>
 
 
 <span class="c1"># region Some metaclass wrapping magic</span>
@@ -354,9 +355,9 @@
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
-<span class="sd">    color : color, optional</span>
+<span class="sd">    color : color_like, optional</span>
 <span class="sd">        Color of the lines drawn using this pen. Any color parsable by</span>
-<span class="sd">        :func:`pyvista.parse_color` is allowed. Defaults to ``&quot;k&quot;``.</span>
+<span class="sd">        :class:`pyvista.Color` is allowed. Defaults to ``&quot;k&quot;``.</span>
 
 <span class="sd">    width : float, optional</span>
 <span class="sd">        Width of the lines drawn using this pen. Defaults to ``1``.</span>
@@ -417,8 +418,8 @@
 
     <span class="nd">@color</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_color</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="k">if</span> <span class="n">val</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">parse_color</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">SetColorF</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">_color</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_color</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">default_color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">_color</span><span class="o">.</span><span class="n">int_rgba</span><span class="p">)</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">width</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -475,9 +476,9 @@
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
-<span class="sd">    color : color, optional</span>
+<span class="sd">    color : color_like, optional</span>
 <span class="sd">        Fill color of the shapes drawn using this brush. Any color</span>
-<span class="sd">        parsable by :func:`pyvista.parse_color` is allowed.  Defaults to</span>
+<span class="sd">        parsable by :class:`pyvista.Color` is allowed.  Defaults to</span>
 <span class="sd">        ``&quot;k&quot;``.</span>
 
 <span class="sd">    texture : Texture, optional</span>
@@ -519,8 +520,8 @@
 
     <span class="nd">@color</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_color</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="k">if</span> <span class="n">val</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">parse_color</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">SetColorF</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">_color</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_color</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">default_color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">_color</span><span class="o">.</span><span class="n">int_rgba</span><span class="p">)</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">texture</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -1435,7 +1436,7 @@
 
     <span class="nd">@background_color</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">background_color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
-        <span class="c1"># self.GetBackgroundBrush().SetColorF(*parse_color(val))</span>
+        <span class="c1"># self.GetBackgroundBrush().SetColor(*Color(val).int_rgba)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_background</span><span class="o">.</span><span class="n">BackgroundBrush</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">val</span>
 
     <span class="nd">@property</span>  <span class="c1"># type: ignore</span>
@@ -1595,10 +1596,10 @@
 <span class="sd">            When ``True``, the resulting plot is placed inline a</span>
 <span class="sd">            jupyter notebook.  Assumes a jupyter console is active.</span>
 
-<span class="sd">        background : str or 3 item list, optional</span>
+<span class="sd">        background : color_like, optional</span>
 <span class="sd">            Use to make the entire mesh have a single solid color.</span>
 <span class="sd">            Either a string, RGB list, or hex color string.  For example:</span>
-<span class="sd">            ``color=&#39;white&#39;``, ``color=&#39;w&#39;``, ``color=[1, 1, 1]``, or</span>
+<span class="sd">            ``color=&#39;white&#39;``, ``color=&#39;w&#39;``, ``color=[1.0, 1.0, 1.0]``, or</span>
 <span class="sd">            ``color=&#39;#FFFFFF&#39;``.  Defaults to ``&#39;w&#39;``.</span>
 
 <span class="sd">        Returns</span>
@@ -2097,16 +2098,6 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">SetLabels</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_labels</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">color_scheme</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">DEFAULT_COLOR_SCHEME</span>
 
-    <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">_from_c3ub</span><span class="p">(</span><span class="n">c3ub</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Convert vtkColor3ub to an RGBA color tuple (with values in range [0;1]).&quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="nb">tuple</span><span class="p">([</span><span class="nb">float</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">/</span> <span class="mi">255</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">c3ub</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">])</span>
-
-    <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">_to_c3ub</span><span class="p">(</span><span class="n">color</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Convert an RGB(A) color tuple/sequence to a vtkColor3ub object (with values in range [0;255]).&quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkColor3ub</span><span class="p">(</span><span class="o">*</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="mi">255</span> <span class="o">*</span> <span class="n">c</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">color</span><span class="p">[:</span><span class="mi">3</span><span class="p">]])</span>
-
     <span class="nd">@property</span>  <span class="c1"># type: ignore</span>
     <span class="nd">@doc_subs</span>
     <span class="k">def</span> <span class="nf">color_scheme</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -2166,7 +2157,7 @@
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="p">[</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_from_c3ub</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_color_series</span><span class="o">.</span><span class="n">GetColor</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+            <span class="n">Color</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_color_series</span><span class="o">.</span><span class="n">GetColor</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
             <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_color_series</span><span class="o">.</span><span class="n">GetNumberOfColors</span><span class="p">())</span>
         <span class="p">]</span>
 
@@ -2182,7 +2173,7 @@
             <span class="k">try</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">_color_series</span><span class="o">.</span><span class="n">SetNumberOfColors</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">val</span><span class="p">))</span>
                 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">color</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">val</span><span class="p">):</span>
-                    <span class="bp">self</span><span class="o">.</span><span class="n">_color_series</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_to_c3ub</span><span class="p">(</span><span class="n">parse_color</span><span class="p">(</span><span class="n">color</span><span class="p">)))</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_color_series</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">Color</span><span class="p">(</span><span class="n">color</span><span class="p">)</span><span class="o">.</span><span class="n">vtk_c3ub</span><span class="p">)</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">_color_series</span><span class="o">.</span><span class="n">BuildLookupTable</span><span class="p">(</span>
                     <span class="bp">self</span><span class="o">.</span><span class="n">_lookup_table</span><span class="p">,</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkColorSeries</span><span class="o">.</span><span class="n">CATEGORICAL</span>
                 <span class="p">)</span>
@@ -2297,8 +2288,8 @@
 <span class="sd">    y : array_like</span>
 <span class="sd">        Y coordinates of the points through which a line should be drawn.</span>
 
-<span class="sd">    color : color, optional</span>
-<span class="sd">        Color of the line drawn in this plot. Any color parsable by ``pyvista.parse_color`` is allowed. Defaults</span>
+<span class="sd">    color : color_like, optional</span>
+<span class="sd">        Color of the line drawn in this plot. Any color parsable by :class:`pyvista.Color` is allowed. Defaults</span>
 <span class="sd">        to ``&quot;b&quot;``.</span>
 
 <span class="sd">    width : float, optional</span>
@@ -2429,8 +2420,8 @@
 <span class="sd">    y : array_like</span>
 <span class="sd">        Y coordinates of the points to draw.</span>
 
-<span class="sd">    color : color, optional</span>
-<span class="sd">        Color of the points drawn in this plot. Any color parsable by ``pyvista.parse_color`` is allowed. Defaults</span>
+<span class="sd">    color : color_like, optional</span>
+<span class="sd">        Color of the points drawn in this plot. Any color parsable by :class:`pyvista.Color` is allowed. Defaults</span>
 <span class="sd">        to ``&quot;b&quot;``.</span>
 
 <span class="sd">    size : float, optional</span>
@@ -2633,8 +2624,8 @@
 <span class="sd">    y2 : array_like, optional</span>
 <span class="sd">        Y coordinates of the points on the second outline of the area to draw. Defaults to a sequence of zeros.</span>
 
-<span class="sd">    color : color, optional</span>
-<span class="sd">        Color of the area drawn in this plot. Any color parsable by ``pyvista.parse_color`` is allowed. Defaults</span>
+<span class="sd">    color : color_like, optional</span>
+<span class="sd">        Color of the area drawn in this plot. Any color parsable by :class:`pyvista.Color` is allowed. Defaults</span>
 <span class="sd">        to ``&quot;b&quot;``.</span>
 
 <span class="sd">    label : str, optional</span>
@@ -2797,8 +2788,8 @@
 <span class="sd">    y : array_like</span>
 <span class="sd">        Size of the bars to draw. Multiple bars can be stacked by passing a sequence of sequences.</span>
 
-<span class="sd">    color : color, optional</span>
-<span class="sd">        Color of the bars drawn in this plot. Any color parsable by ``pyvista.parse_color`` is allowed. Defaults</span>
+<span class="sd">    color : color_like, optional</span>
+<span class="sd">        Color of the bars drawn in this plot. Any color parsable by :class:`pyvista.Color` is allowed. Defaults</span>
 <span class="sd">        to ``&quot;b&quot;``.</span>
 
 <span class="sd">    orientation : str, optional</span>
@@ -2859,9 +2850,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">colors</span> <span class="o">=</span> <span class="n">color</span>  <span class="c1"># None will use default scheme</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">labels</span> <span class="o">=</span> <span class="n">label</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="p">(</span>
-                <span class="s2">&quot;b&quot;</span> <span class="k">if</span> <span class="n">color</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">color</span>
-            <span class="p">)</span>  <span class="c1"># Use blue bars by default in single component mode</span>
+            <span class="c1"># Use blue bars by default in single component mode</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;b&quot;</span> <span class="k">if</span> <span class="n">color</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">color</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">label</span> <span class="o">=</span> <span class="n">label</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">orientation</span> <span class="o">=</span> <span class="n">orientation</span>
 
@@ -2984,9 +2974,9 @@
 <span class="sd">        coordinates. Each sequence defines the sizes of one stack</span>
 <span class="sd">        (area), which are stacked on top of each other.</span>
 
-<span class="sd">    colors : list or tuple of color, optional</span>
+<span class="sd">    colors : list or tuple of color_like, optional</span>
 <span class="sd">        Color of the stacks (areas) drawn in this plot. Any color</span>
-<span class="sd">        parsable by ``pyvista.parse_color`` is allowed.  Defaults to</span>
+<span class="sd">        parsable by :class:`pyvista.Color` is allowed.  Defaults to</span>
 <span class="sd">        ``None``.</span>
 
 <span class="sd">    labels : list or tuple of str, optional</span>
@@ -3236,7 +3226,7 @@
 <span class="sd">            matter. See :attr:`pyvista.ScatterPlot2D.MARKER_STYLES`</span>
 <span class="sd">            for a list of valid marker styles,</span>
 <span class="sd">            :attr:`pyvista.Pen.LINE_STYLES` for a list of valid line</span>
-<span class="sd">            styles and :func:`pyvista.parse_color` for an overview of</span>
+<span class="sd">            styles and :class:`pyvista.Color` for an overview of</span>
 <span class="sd">            parsable colors.</span>
 
 <span class="sd">        Returns</span>
@@ -3265,13 +3255,13 @@
         <span class="c1"># Note: All colors, marker styles and line styles are sorted in decreasing order of length to be able to find</span>
         <span class="c1"># the largest match first (e.g. find &#39;darkred&#39; and &#39;--&#39; first instead of &#39;red&#39; and &#39;-&#39;)</span>
         <span class="n">colors</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span>
-            <span class="n">itertools</span><span class="o">.</span><span class="n">chain</span><span class="p">(</span><span class="n">pyvista</span><span class="o">.</span><span class="n">hexcolors</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">color_char_to_word</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span>
+            <span class="n">itertools</span><span class="o">.</span><span class="n">chain</span><span class="p">(</span><span class="n">hexcolors</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span> <span class="n">color_synonyms</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span>
             <span class="n">key</span><span class="o">=</span><span class="nb">len</span><span class="p">,</span>
             <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
         <span class="p">)</span>
         <span class="n">marker_styles</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">ScatterPlot2D</span><span class="o">.</span><span class="n">MARKER_STYLES</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="nb">len</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
         <span class="n">line_styles</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">Pen</span><span class="o">.</span><span class="n">LINE_STYLES</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="nb">len</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-        <span class="n">hex_pattern</span> <span class="o">=</span> <span class="s2">&quot;#[A-Fa-f0-9]</span><span class="si">{6}</span><span class="s2">&quot;</span>
+        <span class="n">hex_pattern</span> <span class="o">=</span> <span class="s2">&quot;(#|0x)[A-Fa-f0-9]</span><span class="si">{6}</span><span class="s2">([A-Fa-f0-9]</span><span class="si">{2}</span><span class="s2">)?&quot;</span>  <span class="c1"># Match RGB(A) hex string</span>
         <span class="c1"># Extract color from format string</span>
         <span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">hex_pattern</span><span class="p">,</span> <span class="n">fmt</span><span class="p">)</span>  <span class="c1"># Start with matching hex strings</span>
         <span class="k">if</span> <span class="n">match</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -3377,9 +3367,9 @@
 <span class="sd">        y : array_like</span>
 <span class="sd">            Y coordinates of the points to draw.</span>
 
-<span class="sd">        color : color, optional</span>
+<span class="sd">        color : color_like, optional</span>
 <span class="sd">            Color of the points drawn in this plot. Any color parsable</span>
-<span class="sd">            by ``pyvista.parse_color`` is allowed. Defaults to</span>
+<span class="sd">            by :class:`pyvista.Color` is allowed. Defaults to</span>
 <span class="sd">            ``&quot;b&quot;``.</span>
 
 <span class="sd">        size : float, optional</span>
@@ -3421,9 +3411,9 @@
 <span class="sd">        y : array_like</span>
 <span class="sd">            Y coordinates of the points through which a line should be drawn.</span>
 
-<span class="sd">        color : color, optional</span>
+<span class="sd">        color : color_like, optional</span>
 <span class="sd">            Color of the line drawn in this plot. Any color parsable</span>
-<span class="sd">            by :func:`pyvista.parse_color` is allowed. Defaults to</span>
+<span class="sd">            by :class:`pyvista.Color` is allowed. Defaults to</span>
 <span class="sd">            ``&quot;b&quot;``.</span>
 
 <span class="sd">        width : float, optional</span>
@@ -3469,9 +3459,9 @@
 <span class="sd">            Y coordinates of the points on the second outline of the</span>
 <span class="sd">            area to draw. Defaults to a sequence of zeros.</span>
 
-<span class="sd">        color : color, optional</span>
+<span class="sd">        color : color_like, optional</span>
 <span class="sd">            Color of the area drawn in this plot. Any color parsable</span>
-<span class="sd">            by ``pyvista.parse_color`` is allowed. Defaults to</span>
+<span class="sd">            by :class:`pyvista.Color` is allowed. Defaults to</span>
 <span class="sd">            ``&quot;b&quot;``.</span>
 
 <span class="sd">        label : str, optional</span>
@@ -3508,9 +3498,9 @@
 <span class="sd">            Size of the bars to draw. Multiple bars can be stacked by</span>
 <span class="sd">            passing a sequence of sequences.</span>
 
-<span class="sd">        color : color, optional</span>
+<span class="sd">        color : color_like, optional</span>
 <span class="sd">            Color of the bars drawn in this plot. Any color parsable</span>
-<span class="sd">            by ``pyvista.parse_color`` is allowed. Defaults to</span>
+<span class="sd">            by :class:`pyvista.Color` is allowed. Defaults to</span>
 <span class="sd">            ``&quot;b&quot;``.</span>
 
 <span class="sd">        orientation : str, optional</span>
@@ -3551,9 +3541,9 @@
 <span class="sd">            coordinates. Each sequence defines the sizes of one stack</span>
 <span class="sd">            (area), which are stacked on top of each other.</span>
 
-<span class="sd">        colors : list or tuple of color, optional</span>
+<span class="sd">        colors : list or tuple of color_like, optional</span>
 <span class="sd">            Color of the stacks (areas) drawn in this plot. Any color</span>
-<span class="sd">            parsable by ``pyvista.parse_color`` is allowed.  Defaults</span>
+<span class="sd">            parsable by :class:`pyvista.Color` is allowed.  Defaults</span>
 <span class="sd">            to ``None``.</span>
 
 <span class="sd">        labels : list or tuple of str, optional</span>
@@ -3875,9 +3865,9 @@
 <span class="sd">        Dataset(s) from which the relevant statistics will be</span>
 <span class="sd">        calculated used to draw the box plot.</span>
 
-<span class="sd">    colors : list or tuple of color, optional</span>
+<span class="sd">    colors : list or tuple of color_like, optional</span>
 <span class="sd">        Color of the boxes drawn in this plot. Any color parsable by</span>
-<span class="sd">        ``pyvista.parse_color`` is allowed.  Defaults to ``None``.</span>
+<span class="sd">        :class:`pyvista.Color` is allowed.  Defaults to ``None``.</span>
 
 <span class="sd">    labels : list or tuple of str, optional</span>
 <span class="sd">        Label for each box drawn in this plot, as shown in the chart&#39;s</span>
@@ -3990,7 +3980,7 @@
 <span class="sd">        Dataset(s) from which the relevant statistics will be</span>
 <span class="sd">        calculated used to draw the box plot.</span>
 
-<span class="sd">    colors : list or tuple of color, optional</span>
+<span class="sd">    colors : list or tuple of color_like, optional</span>
 <span class="sd">        Color used for each drawn boxplot. Defaults to ``None``, which</span>
 <span class="sd">        uses the default color scheme.</span>
 
@@ -4112,9 +4102,9 @@
 <span class="sd">    data : array_like</span>
 <span class="sd">        Relative size of each pie segment.</span>
 
-<span class="sd">    colors : list or tuple of color, optional</span>
+<span class="sd">    colors : list or tuple of color_like, optional</span>
 <span class="sd">        Color of the segments drawn in this plot. Any color parsable</span>
-<span class="sd">        by ``pyvista.parse_color`` is allowed.  Defaults to ``None``.</span>
+<span class="sd">        by :class:`pyvista.Color` is allowed.  Defaults to ``None``.</span>
 
 <span class="sd">    labels : list or tuple of str, optional</span>
 <span class="sd">        Label for each pie segment drawn in this plot, as shown in the</span>
@@ -4208,7 +4198,7 @@
 <span class="sd">    data : array_like</span>
 <span class="sd">        Relative size of each pie segment.</span>
 
-<span class="sd">    colors : list or tuple of color, optional</span>
+<span class="sd">    colors : list or tuple of color_like, optional</span>
 <span class="sd">        Color used for each pie segment drawn in this plot. Defaults</span>
 <span class="sd">        to ``None``, which uses the default color scheme.</span>
 
@@ -4238,10 +4228,10 @@
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Initialize a new chart containing a pie plot.&quot;&quot;&quot;</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">AddPlot</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># We can&#39;t manually set a wrapped vtkPlotPie instance...</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_plot</span> <span class="o">=</span> <span class="n">PiePlot</span><span class="p">(</span>
-            <span class="n">data</span><span class="p">,</span> <span class="n">colors</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">_wrap</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">GetPlot</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-        <span class="p">)</span>  <span class="c1"># So we have to wrap the existing one</span>
+        <span class="c1"># We can&#39;t manually set a wrapped vtkPlotPie instance (for now), so we</span>
+        <span class="c1"># have to wrap the existing one.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">AddPlot</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_plot</span> <span class="o">=</span> <span class="n">PiePlot</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">colors</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">_wrap</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">GetPlot</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">legend_visible</span> <span class="o">=</span> <span class="kc">True</span>
 
     <span class="k">def</span> <span class="nf">_render_event</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -4480,7 +4470,7 @@
     <span class="c1">#</span>
     <span class="c1"># @background_color.setter</span>
     <span class="c1"># def background_color(self, val):</span>
-    <span class="c1">#     color = parse_color(val) if val is not None else [1, 1, 1, 1]</span>
+    <span class="c1">#     color = parse_color(val) if val is not None else [1.0, 1.0, 1.0, 1.0]</span>
     <span class="c1">#     opacity = color[3] if len(color) == 4 else 1</span>
     <span class="c1">#     self._bg_color = color</span>
     <span class="c1">#     self._fig.patch.set_color(color[:3])</span>

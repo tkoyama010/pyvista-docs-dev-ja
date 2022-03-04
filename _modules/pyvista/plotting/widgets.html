@@ -29,6 +29,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/no_search_highlight.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/summary.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
@@ -219,7 +220,7 @@
     <span class="n">try_callback</span><span class="p">,</span>
 <span class="p">)</span>
 
-<span class="kn">from</span> <span class="nn">.tools</span> <span class="kn">import</span> <span class="n">parse_color</span>
+<span class="kn">from</span> <span class="nn">.colors</span> <span class="kn">import</span> <span class="n">Color</span>
 
 
 <div class="viewcode-block" id="WidgetHelper"><a class="viewcode-back" href="../../../api/plotting/_autosummary/pyvista.WidgetHelper.html#pyvista.WidgetHelper">[ドキュメント]</a><span class="k">class</span> <span class="nc">WidgetHelper</span><span class="p">:</span>
@@ -269,7 +270,7 @@
 <span class="sd">            If ``False``, the box widget cannot be rotated and is</span>
 <span class="sd">            strictly orthogonal to the cartesian axes.</span>
 
-<span class="sd">        color : str or sequence, optional</span>
+<span class="sd">        color : color_like, optional</span>
 <span class="sd">            Either a string, rgb sequence, or hex color string.</span>
 <span class="sd">            Defaults to :attr:`pyvista.global_theme.font.color</span>
 <span class="sd">            &lt;pyvista.themes._Font.color&gt;`.</span>
@@ -298,9 +299,6 @@
         <span class="k">if</span> <span class="n">bounds</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">bounds</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bounds</span>
 
-        <span class="k">if</span> <span class="n">color</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">color</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">color</span>
-
         <span class="k">def</span> <span class="nf">_the_callback</span><span class="p">(</span><span class="n">box_widget</span><span class="p">,</span> <span class="n">event_id</span><span class="p">):</span>
             <span class="n">the_box</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">PolyData</span><span class="p">()</span>
             <span class="n">box_widget</span><span class="o">.</span><span class="n">GetPolyData</span><span class="p">(</span><span class="n">the_box</span><span class="p">)</span>
@@ -317,7 +315,9 @@
             <span class="k">return</span>
 
         <span class="n">box_widget</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkBoxWidget</span><span class="p">()</span>
-        <span class="n">box_widget</span><span class="o">.</span><span class="n">GetOutlineProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">parse_color</span><span class="p">(</span><span class="n">color</span><span class="p">))</span>
+        <span class="n">box_widget</span><span class="o">.</span><span class="n">GetOutlineProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span>
+            <span class="n">Color</span><span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="n">default_color</span><span class="o">=</span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">color</span><span class="p">)</span><span class="o">.</span><span class="n">float_rgb</span>
+        <span class="p">)</span>
         <span class="n">box_widget</span><span class="o">.</span><span class="n">SetInteractor</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">iren</span><span class="o">.</span><span class="n">interactor</span><span class="p">)</span>
         <span class="n">box_widget</span><span class="o">.</span><span class="n">SetCurrentRenderer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">renderer</span><span class="p">)</span>
         <span class="n">box_widget</span><span class="o">.</span><span class="n">SetPlaceFactor</span><span class="p">(</span><span class="n">factor</span><span class="p">)</span>
@@ -368,13 +368,13 @@
 <span class="sd">            If ``False``, the box widget cannot be rotated and is strictly</span>
 <span class="sd">            orthogonal to the cartesian axes.</span>
 
-<span class="sd">        widget_color : str or sequence, optional</span>
+<span class="sd">        widget_color : color_like, optional</span>
 <span class="sd">            Color of the widget.  Either a string, RGB sequence, or</span>
 <span class="sd">            hex color string.  For example:</span>
 
 <span class="sd">            * ``color=&#39;white&#39;``</span>
 <span class="sd">            * ``color=&#39;w&#39;``</span>
-<span class="sd">            * ``color=[1, 1, 1]``</span>
+<span class="sd">            * ``color=[1.0, 1.0, 1.0]``</span>
 <span class="sd">            * ``color=&#39;#FFFFFF&#39;``</span>
 
 <span class="sd">        outline_translation : bool, optional</span>
@@ -483,7 +483,7 @@
 <span class="sd">        factor : float, optional</span>
 <span class="sd">            An inflation factor to expand on the bounds when placing.</span>
 
-<span class="sd">        color : str or sequence, optional</span>
+<span class="sd">        color : color_like, optional</span>
 <span class="sd">            Either a string, rgb list, or hex color string.</span>
 
 <span class="sd">        assign_to_axis : str or int, optional</span>
@@ -540,8 +540,7 @@
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">normal</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
             <span class="n">normal</span> <span class="o">=</span> <span class="n">NORMALS</span><span class="p">[</span><span class="n">normal</span><span class="o">.</span><span class="n">lower</span><span class="p">()]</span>
 
-        <span class="k">if</span> <span class="n">color</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">color</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">color</span>
+        <span class="n">color</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="n">default_color</span><span class="o">=</span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">color</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">assign_to_axis</span><span class="p">:</span>
             <span class="n">normal_rotation</span> <span class="o">=</span> <span class="kc">False</span>
@@ -560,9 +559,9 @@
 
         <span class="k">if</span> <span class="n">implicit</span><span class="p">:</span>
             <span class="n">plane_widget</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkImplicitPlaneWidget</span><span class="p">()</span>
-            <span class="n">plane_widget</span><span class="o">.</span><span class="n">GetNormalProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">parse_color</span><span class="p">(</span><span class="n">color</span><span class="p">))</span>
-            <span class="n">plane_widget</span><span class="o">.</span><span class="n">GetOutlineProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">parse_color</span><span class="p">(</span><span class="n">color</span><span class="p">))</span>
-            <span class="n">plane_widget</span><span class="o">.</span><span class="n">GetOutlineProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">parse_color</span><span class="p">(</span><span class="n">color</span><span class="p">))</span>
+            <span class="n">plane_widget</span><span class="o">.</span><span class="n">GetNormalProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">color</span><span class="o">.</span><span class="n">float_rgb</span><span class="p">)</span>
+            <span class="n">plane_widget</span><span class="o">.</span><span class="n">GetOutlineProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">color</span><span class="o">.</span><span class="n">float_rgb</span><span class="p">)</span>
+            <span class="n">plane_widget</span><span class="o">.</span><span class="n">GetOutlineProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">color</span><span class="o">.</span><span class="n">float_rgb</span><span class="p">)</span>
             <span class="n">plane_widget</span><span class="o">.</span><span class="n">SetTubing</span><span class="p">(</span><span class="n">tubing</span><span class="p">)</span>
             <span class="n">plane_widget</span><span class="o">.</span><span class="n">SetOutlineTranslation</span><span class="p">(</span><span class="n">outline_translation</span><span class="p">)</span>
             <span class="n">plane_widget</span><span class="o">.</span><span class="n">SetOriginTranslation</span><span class="p">(</span><span class="n">origin_translation</span><span class="p">)</span>
@@ -604,8 +603,8 @@
             <span class="n">plane_widget</span><span class="o">.</span><span class="n">SetPlaceFactor</span><span class="p">(</span><span class="n">factor</span><span class="p">)</span>
             <span class="n">plane_widget</span><span class="o">.</span><span class="n">PlaceWidget</span><span class="p">(</span><span class="n">bounds</span><span class="p">)</span>
             <span class="n">plane_widget</span><span class="o">.</span><span class="n">SetCenter</span><span class="p">(</span><span class="n">origin</span><span class="p">)</span>  <span class="c1"># Necessary</span>
-            <span class="n">plane_widget</span><span class="o">.</span><span class="n">GetPlaneProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">parse_color</span><span class="p">(</span><span class="n">color</span><span class="p">))</span>  <span class="c1"># self.C_LOT[fn])</span>
-            <span class="n">plane_widget</span><span class="o">.</span><span class="n">GetHandleProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">parse_color</span><span class="p">(</span><span class="n">color</span><span class="p">))</span>
+            <span class="n">plane_widget</span><span class="o">.</span><span class="n">GetPlaneProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">color</span><span class="o">.</span><span class="n">float_rgb</span><span class="p">)</span>  <span class="c1"># self.C_LOT[fn])</span>
+            <span class="n">plane_widget</span><span class="o">.</span><span class="n">GetHandleProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">color</span><span class="o">.</span><span class="n">float_rgb</span><span class="p">)</span>
 
             <span class="k">if</span> <span class="ow">not</span> <span class="n">normal_rotation</span><span class="p">:</span>
                 <span class="n">plane_widget</span><span class="o">.</span><span class="n">GetHandleProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetOpacity</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
@@ -681,7 +680,7 @@
 <span class="sd">        invert : bool, optional</span>
 <span class="sd">            Flag on whether to flip/invert the clip.</span>
 
-<span class="sd">        widget_color : str or sequence, optional</span>
+<span class="sd">        widget_color : color_like, optional</span>
 <span class="sd">            Either a string, RGB list, or hex color string.</span>
 
 <span class="sd">        value : float, optional</span>
@@ -807,7 +806,7 @@
 <span class="sd">            If this is enabled (``False`` by default), the output will be</span>
 <span class="sd">            triangles otherwise, the output will be the intersection polygons.</span>
 
-<span class="sd">        widget_color : str or sequence, optional</span>
+<span class="sd">        widget_color : color_like, optional</span>
 <span class="sd">            Either a string, RGB sequence, or hex color string.  Defaults</span>
 <span class="sd">            to ``&#39;white&#39;``.</span>
 
@@ -906,13 +905,13 @@
 <span class="sd">            If this is enabled (``False`` by default), the output will be</span>
 <span class="sd">            triangles otherwise, the output will be the intersection polygons.</span>
 
-<span class="sd">        widget_color : str or sequence, optional</span>
+<span class="sd">        widget_color : color_like, optional</span>
 <span class="sd">            Color of the widget.  Either a string, RGB sequence, or</span>
 <span class="sd">            hex color string.  For example:</span>
 
 <span class="sd">            * ``color=&#39;white&#39;``</span>
 <span class="sd">            * ``color=&#39;w&#39;``</span>
-<span class="sd">            * ``color=[1, 1, 1]``</span>
+<span class="sd">            * ``color=[1.0, 1.0, 1.0]``</span>
 <span class="sd">            * ``color=&#39;#FFFFFF&#39;``</span>
 
 <span class="sd">        tubing : bool, optional</span>
@@ -981,7 +980,7 @@
 <span class="sd">        resolution : int, optional</span>
 <span class="sd">            The number of points in the line created.</span>
 
-<span class="sd">        color : str or 3 item sequence, optional, defaults to white</span>
+<span class="sd">        color : color_like, optional, defaults to white</span>
 <span class="sd">            Either a string, rgb sequence, or hex color string.</span>
 
 <span class="sd">        use_vertices : bool, optional</span>
@@ -1004,8 +1003,7 @@
         <span class="k">if</span> <span class="n">bounds</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">bounds</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bounds</span>
 
-        <span class="k">if</span> <span class="n">color</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">color</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">color</span>
+        <span class="n">color</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="n">default_color</span><span class="o">=</span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">color</span><span class="p">)</span>
 
         <span class="k">def</span> <span class="nf">_the_callback</span><span class="p">(</span><span class="n">widget</span><span class="p">,</span> <span class="n">event_id</span><span class="p">):</span>
             <span class="n">pointa</span> <span class="o">=</span> <span class="n">widget</span><span class="o">.</span><span class="n">GetPoint1</span><span class="p">()</span>
@@ -1021,7 +1019,7 @@
                 <span class="n">try_callback</span><span class="p">(</span><span class="n">callback</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
 
         <span class="n">line_widget</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkLineWidget</span><span class="p">()</span>
-        <span class="n">line_widget</span><span class="o">.</span><span class="n">GetLineProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">parse_color</span><span class="p">(</span><span class="n">color</span><span class="p">))</span>
+        <span class="n">line_widget</span><span class="o">.</span><span class="n">GetLineProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">color</span><span class="o">.</span><span class="n">float_rgb</span><span class="p">)</span>
         <span class="n">line_widget</span><span class="o">.</span><span class="n">SetInteractor</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">iren</span><span class="o">.</span><span class="n">interactor</span><span class="p">)</span>
         <span class="n">line_widget</span><span class="o">.</span><span class="n">SetCurrentRenderer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">renderer</span><span class="p">)</span>
         <span class="n">line_widget</span><span class="o">.</span><span class="n">SetPlaceFactor</span><span class="p">(</span><span class="n">factor</span><span class="p">)</span>
@@ -1079,7 +1077,7 @@
 <span class="sd">            The relative coordinates of the right point of the slider on the</span>
 <span class="sd">            display port.</span>
 
-<span class="sd">        color : str or sequence, optional</span>
+<span class="sd">        color : color_like, optional</span>
 <span class="sd">            Either a string, RGB list, or hex color string.  Defaults</span>
 <span class="sd">            to :attr:`pyvista.global_theme.font.color</span>
 <span class="sd">            &lt;pyvista.themes._Font.color&gt;`.</span>
@@ -1203,7 +1201,7 @@
 <span class="sd">            The relative coordinates of the right point of the slider</span>
 <span class="sd">            on the display port.</span>
 
-<span class="sd">        color : str or sequence, optional</span>
+<span class="sd">        color : color_like, optional</span>
 <span class="sd">            Either a string, RGB list, or hex color string.  Defaults</span>
 <span class="sd">            to :attr:`pyvista.global_theme.font.color</span>
 <span class="sd">            &lt;pyvista.themes._Font.color&gt;`.</span>
@@ -1228,7 +1226,7 @@
 <span class="sd">        title_opacity : float, optional</span>
 <span class="sd">            Opacity of title. Defaults to 1.0.</span>
 
-<span class="sd">        title_color : str or sequence, optional</span>
+<span class="sd">        title_color : color_like, optional</span>
 <span class="sd">            Either a string, RGB sequence, or hex color string.  Defaults</span>
 <span class="sd">            to the value given in ``color``.</span>
 
@@ -1266,11 +1264,8 @@
         <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">value</span> <span class="o">=</span> <span class="p">((</span><span class="n">rng</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">rng</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">rng</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
-        <span class="k">if</span> <span class="n">color</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">color</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">color</span>
-
-        <span class="k">if</span> <span class="n">title_color</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">title_color</span> <span class="o">=</span> <span class="n">color</span>
+        <span class="n">color</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="n">default_color</span><span class="o">=</span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">color</span><span class="p">)</span>
+        <span class="n">title_color</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="n">title_color</span><span class="p">,</span> <span class="n">default_color</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">fmt</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">fmt</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">fmt</span>
@@ -1287,11 +1282,11 @@
         <span class="n">slider_rep</span><span class="o">.</span><span class="n">SetMaximumValue</span><span class="p">(</span><span class="n">rng</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
         <span class="n">slider_rep</span><span class="o">.</span><span class="n">SetValue</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
         <span class="n">slider_rep</span><span class="o">.</span><span class="n">SetTitleText</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
-        <span class="n">slider_rep</span><span class="o">.</span><span class="n">GetTitleProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">parse_color</span><span class="p">(</span><span class="n">color</span><span class="p">))</span>
-        <span class="n">slider_rep</span><span class="o">.</span><span class="n">GetSliderProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">parse_color</span><span class="p">(</span><span class="n">color</span><span class="p">))</span>
-        <span class="n">slider_rep</span><span class="o">.</span><span class="n">GetCapProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">parse_color</span><span class="p">(</span><span class="n">color</span><span class="p">))</span>
-        <span class="n">slider_rep</span><span class="o">.</span><span class="n">GetLabelProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">parse_color</span><span class="p">(</span><span class="n">color</span><span class="p">))</span>
-        <span class="n">slider_rep</span><span class="o">.</span><span class="n">GetTubeProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">parse_color</span><span class="p">(</span><span class="n">color</span><span class="p">))</span>
+        <span class="n">slider_rep</span><span class="o">.</span><span class="n">GetTitleProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">color</span><span class="o">.</span><span class="n">float_rgb</span><span class="p">)</span>
+        <span class="n">slider_rep</span><span class="o">.</span><span class="n">GetSliderProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">color</span><span class="o">.</span><span class="n">float_rgb</span><span class="p">)</span>
+        <span class="n">slider_rep</span><span class="o">.</span><span class="n">GetCapProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">color</span><span class="o">.</span><span class="n">float_rgb</span><span class="p">)</span>
+        <span class="n">slider_rep</span><span class="o">.</span><span class="n">GetLabelProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">color</span><span class="o">.</span><span class="n">float_rgb</span><span class="p">)</span>
+        <span class="n">slider_rep</span><span class="o">.</span><span class="n">GetTubeProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">color</span><span class="o">.</span><span class="n">float_rgb</span><span class="p">)</span>
         <span class="n">slider_rep</span><span class="o">.</span><span class="n">GetPoint1Coordinate</span><span class="p">()</span><span class="o">.</span><span class="n">SetCoordinateSystemToNormalizedDisplay</span><span class="p">()</span>
         <span class="n">slider_rep</span><span class="o">.</span><span class="n">GetPoint1Coordinate</span><span class="p">()</span><span class="o">.</span><span class="n">SetValue</span><span class="p">(</span><span class="n">pointa</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pointa</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
         <span class="n">slider_rep</span><span class="o">.</span><span class="n">GetPoint2Coordinate</span><span class="p">()</span><span class="o">.</span><span class="n">SetCoordinateSystemToNormalizedDisplay</span><span class="p">()</span>
@@ -1308,9 +1303,9 @@
             <span class="n">slider_style</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">slider_styles</span><span class="p">,</span> <span class="n">style</span><span class="p">)</span>
             <span class="n">slider_rep</span><span class="o">.</span><span class="n">SetSliderLength</span><span class="p">(</span><span class="n">slider_style</span><span class="o">.</span><span class="n">slider_length</span><span class="p">)</span>
             <span class="n">slider_rep</span><span class="o">.</span><span class="n">SetSliderWidth</span><span class="p">(</span><span class="n">slider_style</span><span class="o">.</span><span class="n">slider_width</span><span class="p">)</span>
-            <span class="n">slider_rep</span><span class="o">.</span><span class="n">GetSliderProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">slider_style</span><span class="o">.</span><span class="n">slider_color</span><span class="p">)</span>
+            <span class="n">slider_rep</span><span class="o">.</span><span class="n">GetSliderProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">slider_style</span><span class="o">.</span><span class="n">slider_color</span><span class="o">.</span><span class="n">float_rgb</span><span class="p">)</span>
             <span class="n">slider_rep</span><span class="o">.</span><span class="n">SetTubeWidth</span><span class="p">(</span><span class="n">slider_style</span><span class="o">.</span><span class="n">tube_width</span><span class="p">)</span>
-            <span class="n">slider_rep</span><span class="o">.</span><span class="n">GetTubeProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">slider_style</span><span class="o">.</span><span class="n">tube_color</span><span class="p">)</span>
+            <span class="n">slider_rep</span><span class="o">.</span><span class="n">GetTubeProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">slider_style</span><span class="o">.</span><span class="n">tube_color</span><span class="o">.</span><span class="n">float_rgb</span><span class="p">)</span>
             <span class="n">slider_rep</span><span class="o">.</span><span class="n">GetCapProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetOpacity</span><span class="p">(</span><span class="n">slider_style</span><span class="o">.</span><span class="n">cap_opacity</span><span class="p">)</span>
             <span class="n">slider_rep</span><span class="o">.</span><span class="n">SetEndCapLength</span><span class="p">(</span><span class="n">slider_style</span><span class="o">.</span><span class="n">cap_length</span><span class="p">)</span>
             <span class="n">slider_rep</span><span class="o">.</span><span class="n">SetEndCapWidth</span><span class="p">(</span><span class="n">slider_style</span><span class="o">.</span><span class="n">cap_width</span><span class="p">)</span>
@@ -1330,7 +1325,7 @@
         <span class="n">slider_widget</span><span class="o">.</span><span class="n">SetRepresentation</span><span class="p">(</span><span class="n">slider_rep</span><span class="p">)</span>
         <span class="n">slider_widget</span><span class="o">.</span><span class="n">GetRepresentation</span><span class="p">()</span><span class="o">.</span><span class="n">SetTitleHeight</span><span class="p">(</span><span class="n">title_height</span><span class="p">)</span>
         <span class="n">slider_widget</span><span class="o">.</span><span class="n">GetRepresentation</span><span class="p">()</span><span class="o">.</span><span class="n">GetTitleProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetOpacity</span><span class="p">(</span><span class="n">title_opacity</span><span class="p">)</span>
-        <span class="n">slider_widget</span><span class="o">.</span><span class="n">GetRepresentation</span><span class="p">()</span><span class="o">.</span><span class="n">GetTitleProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">parse_color</span><span class="p">(</span><span class="n">title_color</span><span class="p">))</span>
+        <span class="n">slider_widget</span><span class="o">.</span><span class="n">GetRepresentation</span><span class="p">()</span><span class="o">.</span><span class="n">GetTitleProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">title_color</span><span class="o">.</span><span class="n">float_rgb</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">fmt</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">slider_widget</span><span class="o">.</span><span class="n">GetRepresentation</span><span class="p">()</span><span class="o">.</span><span class="n">SetLabelFormat</span><span class="p">(</span><span class="n">fmt</span><span class="p">)</span>
         <span class="n">slider_widget</span><span class="o">.</span><span class="n">On</span><span class="p">()</span>
@@ -1391,13 +1386,13 @@
 <span class="sd">        invert : bool, optional</span>
 <span class="sd">            Invert (flip) the threshold.</span>
 
-<span class="sd">        widget_color : str or sequence, optional</span>
+<span class="sd">        widget_color : color_like, optional</span>
 <span class="sd">            Color of the widget.  Either a string, RGB sequence, or</span>
 <span class="sd">            hex color string.  For example:</span>
 
 <span class="sd">            * ``color=&#39;white&#39;``</span>
 <span class="sd">            * ``color=&#39;w&#39;``</span>
-<span class="sd">            * ``color=[1, 1, 1]``</span>
+<span class="sd">            * ``color=[1.0, 1.0, 1.0]``</span>
 <span class="sd">            * ``color=&#39;#FFFFFF&#39;``</span>
 
 <span class="sd">        preference : str, optional</span>
@@ -1548,13 +1543,13 @@
 <span class="sd">            The relative coordinates of the right point of the slider</span>
 <span class="sd">            on the display port.</span>
 
-<span class="sd">        widget_color : str or sequence, optional</span>
+<span class="sd">        widget_color : color_like, optional</span>
 <span class="sd">            Color of the widget.  Either a string, RGB sequence, or</span>
 <span class="sd">            hex color string.  For example:</span>
 
 <span class="sd">            * ``color=&#39;white&#39;``</span>
 <span class="sd">            * ``color=&#39;w&#39;``</span>
-<span class="sd">            * ``color=[1, 1, 1]``</span>
+<span class="sd">            * ``color=[1.0, 1.0, 1.0]``</span>
 <span class="sd">            * ``color=&#39;#FFFFFF&#39;``</span>
 
 <span class="sd">        **kwargs : dict, optional</span>
@@ -1663,13 +1658,13 @@
 <span class="sd">        resolution : int, optional</span>
 <span class="sd">            The number of points in the spline created between all the handles.</span>
 
-<span class="sd">        color : str or sequence, optional</span>
+<span class="sd">        color : color_like, optional</span>
 <span class="sd">            Either a string, RGB sequence, or hex color string.</span>
 
 <span class="sd">        show_ribbon : bool, optional</span>
 <span class="sd">            If ``True``, the poly plane used for slicing will also be shown.</span>
 
-<span class="sd">        ribbon_color : str or sequence, optional</span>
+<span class="sd">        ribbon_color : color_like, optional</span>
 <span class="sd">            Color of the ribbon.  Either a string, RGB sequence, or</span>
 <span class="sd">            hex color string.</span>
 
@@ -1707,8 +1702,7 @@
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;spline_widgets&quot;</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">spline_widgets</span> <span class="o">=</span> <span class="p">[]</span>
 
-        <span class="k">if</span> <span class="n">color</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">color</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">color</span>
+        <span class="n">color</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="n">default_color</span><span class="o">=</span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">color</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">bounds</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">bounds</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bounds</span>
@@ -1729,7 +1723,7 @@
             <span class="k">return</span>
 
         <span class="n">spline_widget</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkSplineWidget</span><span class="p">()</span>
-        <span class="n">spline_widget</span><span class="o">.</span><span class="n">GetLineProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">parse_color</span><span class="p">(</span><span class="n">color</span><span class="p">))</span>
+        <span class="n">spline_widget</span><span class="o">.</span><span class="n">GetLineProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">color</span><span class="o">.</span><span class="n">float_rgb</span><span class="p">)</span>
         <span class="n">spline_widget</span><span class="o">.</span><span class="n">SetNumberOfHandles</span><span class="p">(</span><span class="n">n_handles</span><span class="p">)</span>
         <span class="n">spline_widget</span><span class="o">.</span><span class="n">SetInteractor</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">iren</span><span class="o">.</span><span class="n">interactor</span><span class="p">)</span>
         <span class="n">spline_widget</span><span class="o">.</span><span class="n">SetCurrentRenderer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">renderer</span><span class="p">)</span>
@@ -1796,19 +1790,19 @@
 <span class="sd">        resolution : int, optional</span>
 <span class="sd">            The number of points to generate on the spline.</span>
 
-<span class="sd">        widget_color : str or sequence, optional</span>
+<span class="sd">        widget_color : color_like, optional</span>
 <span class="sd">            Color of the widget.  Either a string, RGB sequence, or</span>
 <span class="sd">            hex color string.  For example:</span>
 
 <span class="sd">            * ``color=&#39;white&#39;``</span>
 <span class="sd">            * ``color=&#39;w&#39;``</span>
-<span class="sd">            * ``color=[1, 1, 1]``</span>
+<span class="sd">            * ``color=[1.0, 1.0, 1.0]``</span>
 <span class="sd">            * ``color=&#39;#FFFFFF&#39;``</span>
 
 <span class="sd">        show_ribbon : bool, optional</span>
 <span class="sd">            If ``True``, the poly plane used for slicing will also be shown.</span>
 
-<span class="sd">        ribbon_color : str or sequence, optional</span>
+<span class="sd">        ribbon_color : color_like, optional</span>
 <span class="sd">            Color of the ribbon.  Either a string, RGB sequence, or</span>
 <span class="sd">            hex color string.</span>
 
@@ -1920,7 +1914,7 @@
 <span class="sd">        phi_resolution : int, optional</span>
 <span class="sd">            Set the number of points in the latitude direction.</span>
 
-<span class="sd">        color : str or 3 item iterable, optional</span>
+<span class="sd">        color : color_like, optional</span>
 <span class="sd">            The color of the sphere&#39;s surface.  If multiple centers</span>
 <span class="sd">            are passed, then this must be a list of colors.  Each</span>
 <span class="sd">            color is either a string, rgb list, or hex color string.</span>
@@ -1928,13 +1922,13 @@
 
 <span class="sd">            * ``color=&#39;white&#39;``</span>
 <span class="sd">            * ``color=&#39;w&#39;``</span>
-<span class="sd">            * ``color=[1, 1, 1]``</span>
+<span class="sd">            * ``color=[1.0, 1.0, 1.0]``</span>
 <span class="sd">            * ``color=&#39;#FFFFFF&#39;``</span>
 
 <span class="sd">        style : str, optional</span>
 <span class="sd">            Representation style: ``&#39;surface&#39;`` or ``&#39;wireframe&#39;``.</span>
 
-<span class="sd">        selected_color : str, optional</span>
+<span class="sd">        selected_color : color_like, optional</span>
 <span class="sd">            Color of the widget when selected during interaction.</span>
 
 <span class="sd">        indices : sequence, optional</span>
@@ -1958,7 +1952,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">sphere_widgets</span> <span class="o">=</span> <span class="p">[]</span>
 
         <span class="k">if</span> <span class="n">color</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">color</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">color</span>
+            <span class="n">color</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">color</span><span class="o">.</span><span class="n">float_rgb</span>
+        <span class="n">selected_color</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="n">selected_color</span><span class="p">)</span>
 
         <span class="n">center</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">center</span><span class="p">)</span>
         <span class="n">num</span> <span class="o">=</span> <span class="mi">1</span>
@@ -2000,8 +1995,8 @@
                 <span class="n">sphere_widget</span><span class="o">.</span><span class="n">SetRepresentationToWireframe</span><span class="p">()</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">sphere_widget</span><span class="o">.</span><span class="n">SetRepresentationToSurface</span><span class="p">()</span>
-            <span class="n">sphere_widget</span><span class="o">.</span><span class="n">GetSphereProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">parse_color</span><span class="p">(</span><span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
-            <span class="n">sphere_widget</span><span class="o">.</span><span class="n">GetSelectedSphereProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">parse_color</span><span class="p">(</span><span class="n">selected_color</span><span class="p">))</span>
+            <span class="n">sphere_widget</span><span class="o">.</span><span class="n">GetSphereProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">Color</span><span class="p">(</span><span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">.</span><span class="n">float_rgb</span><span class="p">)</span>
+            <span class="n">sphere_widget</span><span class="o">.</span><span class="n">GetSelectedSphereProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">selected_color</span><span class="o">.</span><span class="n">float_rgb</span><span class="p">)</span>
             <span class="n">sphere_widget</span><span class="o">.</span><span class="n">SetInteractor</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">iren</span><span class="o">.</span><span class="n">interactor</span><span class="p">)</span>
             <span class="n">sphere_widget</span><span class="o">.</span><span class="n">SetCurrentRenderer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">renderer</span><span class="p">)</span>
             <span class="n">sphere_widget</span><span class="o">.</span><span class="n">SetRadius</span><span class="p">(</span><span class="n">radius</span><span class="p">)</span>
@@ -2063,13 +2058,13 @@
 <span class="sd">        border_size : int, optional</span>
 <span class="sd">            The size of the borders of the button in pixels.</span>
 
-<span class="sd">        color_on : str or 3 item list, optional</span>
+<span class="sd">        color_on : color_like, optional</span>
 <span class="sd">            The color used when the button is checked. Default is ``&#39;blue&#39;``.</span>
 
-<span class="sd">        color_off : str or 3 item list, optional</span>
+<span class="sd">        color_off : color_like, optional</span>
 <span class="sd">            The color used when the button is not checked. Default is ``&#39;grey&#39;``.</span>
 
-<span class="sd">        background_color : str or sequence, optional</span>
+<span class="sd">        background_color : color_like, optional</span>
 <span class="sd">            The background color of the button. Default is ``&#39;white&#39;``.</span>
 
 <span class="sd">        Returns</span>
@@ -2082,9 +2077,9 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">button_widgets</span> <span class="o">=</span> <span class="p">[]</span>
 
         <span class="k">def</span> <span class="nf">create_button</span><span class="p">(</span><span class="n">color1</span><span class="p">,</span> <span class="n">color2</span><span class="p">,</span> <span class="n">color3</span><span class="p">,</span> <span class="n">dims</span><span class="o">=</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="mi">1</span><span class="p">)):</span>
-            <span class="n">color1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">parse_color</span><span class="p">(</span><span class="n">color1</span><span class="p">))</span> <span class="o">*</span> <span class="mi">255</span>
-            <span class="n">color2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">parse_color</span><span class="p">(</span><span class="n">color2</span><span class="p">))</span> <span class="o">*</span> <span class="mi">255</span>
-            <span class="n">color3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">parse_color</span><span class="p">(</span><span class="n">color3</span><span class="p">))</span> <span class="o">*</span> <span class="mi">255</span>
+            <span class="n">color1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">Color</span><span class="p">(</span><span class="n">color1</span><span class="p">)</span><span class="o">.</span><span class="n">int_rgb</span><span class="p">)</span>
+            <span class="n">color2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">Color</span><span class="p">(</span><span class="n">color2</span><span class="p">)</span><span class="o">.</span><span class="n">int_rgb</span><span class="p">)</span>
+            <span class="n">color3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">Color</span><span class="p">(</span><span class="n">color3</span><span class="p">)</span><span class="o">.</span><span class="n">int_rgb</span><span class="p">)</span>
 
             <span class="n">n_points</span> <span class="o">=</span> <span class="n">dims</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">dims</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
             <span class="n">button</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">UniformGrid</span><span class="p">(</span><span class="n">dims</span><span class="o">=</span><span class="n">dims</span><span class="p">)</span>

@@ -5,4 +5,4 @@ light = pv.Light()
 light.specular_color = '#00FF00'
 light.specular_color
 # Expected:
-## (0.0, 1.0, 0.0)
+## Color(name='lime', hex='#00ff00ff')

@@ -29,6 +29,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/no_search_highlight.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/summary.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
@@ -259,13 +260,13 @@
 <span class="sd">            An ``n x 3`` numpy array of points or PyVista dataset with</span>
 <span class="sd">            points.</span>
 
-<span class="sd">        color : str or sequence, optional</span>
+<span class="sd">        color : color_like, optional</span>
 <span class="sd">            Either a string, RGB sequence, or hex color string.  For one</span>
 <span class="sd">            of the following.</span>
 
 <span class="sd">            * ``color=&#39;white&#39;``</span>
 <span class="sd">            * ``color=&#39;w&#39;``</span>
-<span class="sd">            * ``color=[1, 1, 1]``</span>
+<span class="sd">            * ``color=[1.0, 1.0, 1.0]``</span>
 <span class="sd">            * ``color=&#39;#FFFFFF&#39;``</span>
 
 <span class="sd">        point_size : float, optional</span>
@@ -295,7 +296,7 @@
             <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;``point_size`` parameter must be a float&#39;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_point_set_sizes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">point_size</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_point_set_colors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pv</span><span class="o">.</span><span class="n">parse_color</span><span class="p">(</span><span class="n">color</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_point_set_colors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pv</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="n">color</span><span class="p">)</span><span class="o">.</span><span class="n">float_rgb</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_point_sets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">point_array</span><span class="p">)</span></div>
         <span class="c1"># self._point_set_representations.append(style)</span>
 
@@ -312,10 +313,10 @@
 <span class="sd">            that :func:`pyvista.wrap` can handle including NumPy arrays of XYZ</span>
 <span class="sd">            points.</span>
 
-<span class="sd">        color : str sequence, optional</span>
+<span class="sd">        color : color_like, optional</span>
 <span class="sd">            Use to make the entire mesh have a single solid color.</span>
 <span class="sd">            Either a string, RGB list, or hex color string.  For example:</span>
-<span class="sd">            ``color=&#39;white&#39;``, ``color=&#39;w&#39;``, ``color=[1, 1, 1]``, or</span>
+<span class="sd">            ``color=&#39;white&#39;``, ``color=&#39;w&#39;``, ``color=[1.0, 1.0, 1.0]``, or</span>
 <span class="sd">            ``color=&#39;#FFFFFF&#39;``. Color will be overridden if scalars are</span>
 <span class="sd">            specified.</span>
 
@@ -384,7 +385,7 @@
 
         <span class="n">mesh</span> <span class="o">=</span> <span class="n">to_geometry</span><span class="p">(</span><span class="n">mesh</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_geometries</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mesh</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_geometry_colors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pv</span><span class="o">.</span><span class="n">parse_color</span><span class="p">(</span><span class="n">color</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_geometry_colors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pv</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="n">color</span><span class="p">)</span><span class="o">.</span><span class="n">float_rgb</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_geometry_opacities</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">opacity</span><span class="p">)</span></div>
 
     <span class="nd">@property</span>
@@ -402,7 +403,7 @@
 
 <span class="sd">        &gt;&gt;&gt; plotter.background_color = &#39;k&#39;</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_background_color</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">parse_color</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_background_color</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="n">color</span><span class="p">)</span><span class="o">.</span><span class="n">float_rgb</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">camera_position</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

@@ -5,4 +5,4 @@ light = pyvista.Light()
 light.ambient_color = 'red'
 light.ambient_color
 # Expected:
-## (1.0, 0.0, 0.0)
+## Color(name='red', hex='#ff0000ff')

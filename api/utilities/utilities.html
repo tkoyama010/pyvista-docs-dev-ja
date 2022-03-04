@@ -30,6 +30,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/no_search_highlight.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/summary.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
@@ -357,6 +358,16 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="_autosummary/pyvista.Color.html">
+       pyvista.Color
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="_autosummary/pyvista.color_like.html">
+       color_like
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="_autosummary/pyvista.parse_color.html">
        parse_color
       </a>
@@ -433,6 +444,8 @@
   <a class="reference internal nav-link" href="#miscellaneous">
    その他
   </a>
+  <ul class="nav section-nav flex-column">
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vtk-version-information">
@@ -611,10 +624,24 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/pyvista.parse_color.html#pyvista.parse_color" title="pyvista.parse_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parse_color</span></code></a>(color[, opacity, default_color])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/pyvista.Color.html#pyvista.Color" title="pyvista.Color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Color</span></code></a>([color, opacity, default_color, ...])</p></td>
+<td><p>pyvista ライブラリで使用される異なる色表現間の変換を行うヘルパークラスです。</p></td>
+</tr>
+</tbody>
+</table>
+<table class="longtable table autosummary">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/pyvista.color_like.html#pyvista.color_like" title="pyvista.color_like"><code class="xref py py-obj docutils literal notranslate"><span class="pre">color_like</span></code></a></p></td>
+<td><p><a class="reference internal" href="_autosummary/pyvista.Color.html#pyvista.Color" title="pyvista.Color"><code class="xref py py-class docutils literal notranslate"><span class="pre">Color</span></code></a> に変換できる任意のオブジェクトです。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/pyvista.parse_color.html#pyvista.parse_color" title="pyvista.parse_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parse_color</span></code></a>(color[, opacity, default_color])</p></td>
 <td><p>色をVTKフレンドリーなRGB(A)タプルに解析します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/pyvista.start_xvfb.html#pyvista.start_xvfb" title="pyvista.start_xvfb"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start_xvfb</span></code></a>([wait, window_size])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/pyvista.start_xvfb.html#pyvista.start_xvfb" title="pyvista.start_xvfb"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start_xvfb</span></code></a>([wait, window_size])</p></td>
 <td><p>バーチャルフレームバッファXvfbを起動します．</p></td>
 </tr>
 </tbody>
