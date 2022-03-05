@@ -12,3 +12,12 @@ pl = pyvista.Plotter()
 actor = pl.add_mesh(pyvista.Sphere())
 _ = pl.add_axes(box=True)
 pl.show()
+#
+# Specify more parameters for the axes marker.
+#
+import pyvista
+pl = pyvista.Plotter()
+actor = pl.add_mesh(pyvista.Box(), show_edges=True)
+marker_args = dict(cone_radius=0.6, shaft_length=0.7, tip_length=0.3, ambient=0.5, label_size=(0.4, 0.16))
+_ = pl.add_axes(line_width=5, marker_args=marker_args)
+pl.show()

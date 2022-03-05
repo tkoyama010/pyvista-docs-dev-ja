@@ -322,6 +322,11 @@
     <span class="n">zlabel</span><span class="o">=</span><span class="s1">&#39;Z&#39;</span><span class="p">,</span>
     <span class="n">labels_off</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="n">line_width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">cone_radius</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span>
+    <span class="n">shaft_length</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span>
+    <span class="n">tip_length</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>
+    <span class="n">ambient</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+    <span class="n">label_size</span><span class="o">=</span><span class="p">(</span><span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">),</span>
 <span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Create an axis actor.</span>
 
@@ -354,6 +359,18 @@
 <span class="sd">    line_width : float, optional</span>
 <span class="sd">        The width of the marker lines.</span>
 
+<span class="sd">    cone_radius: float, optional</span>
+<span class="sd">        The radius of the axes arrow tips.</span>
+
+<span class="sd">    shaft_length: float, optional</span>
+<span class="sd">        The length of the axes arrow shafts.</span>
+
+<span class="sd">    ambient: float, optional</span>
+<span class="sd">        The ambient of the axes arrows.</span>
+
+<span class="sd">    label_size: sequence, optoinal</span>
+<span class="sd">        The width and height of the axes label actors.</span>
+
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
 <span class="sd">    vtk.vtkAxesActor</span>
@@ -380,6 +397,24 @@
     <span class="n">axes_actor</span><span class="o">.</span><span class="n">GetXAxisShaftProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetLineWidth</span><span class="p">(</span><span class="n">line_width</span><span class="p">)</span>
     <span class="n">axes_actor</span><span class="o">.</span><span class="n">GetYAxisShaftProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetLineWidth</span><span class="p">(</span><span class="n">line_width</span><span class="p">)</span>
     <span class="n">axes_actor</span><span class="o">.</span><span class="n">GetZAxisShaftProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetLineWidth</span><span class="p">(</span><span class="n">line_width</span><span class="p">)</span>
+
+    <span class="n">axes_actor</span><span class="o">.</span><span class="n">SetConeRadius</span><span class="p">(</span><span class="n">cone_radius</span><span class="p">)</span>
+    <span class="n">axes_actor</span><span class="o">.</span><span class="n">SetNormalizedShaftLength</span><span class="p">([</span><span class="n">shaft_length</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
+    <span class="n">axes_actor</span><span class="o">.</span><span class="n">SetNormalizedTipLength</span><span class="p">([</span><span class="n">tip_length</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
+    <span class="n">axes_actor</span><span class="o">.</span><span class="n">GetXAxisShaftProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetAmbient</span><span class="p">(</span><span class="n">ambient</span><span class="p">)</span>
+    <span class="n">axes_actor</span><span class="o">.</span><span class="n">GetYAxisShaftProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetAmbient</span><span class="p">(</span><span class="n">ambient</span><span class="p">)</span>
+    <span class="n">axes_actor</span><span class="o">.</span><span class="n">GetZAxisShaftProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetAmbient</span><span class="p">(</span><span class="n">ambient</span><span class="p">)</span>
+    <span class="n">axes_actor</span><span class="o">.</span><span class="n">GetXAxisTipProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetAmbient</span><span class="p">(</span><span class="n">ambient</span><span class="p">)</span>
+    <span class="n">axes_actor</span><span class="o">.</span><span class="n">GetYAxisTipProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetAmbient</span><span class="p">(</span><span class="n">ambient</span><span class="p">)</span>
+    <span class="n">axes_actor</span><span class="o">.</span><span class="n">GetZAxisTipProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetAmbient</span><span class="p">(</span><span class="n">ambient</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">label_actor</span> <span class="ow">in</span> <span class="p">[</span>
+        <span class="n">axes_actor</span><span class="o">.</span><span class="n">GetXAxisCaptionActor2D</span><span class="p">(),</span>
+        <span class="n">axes_actor</span><span class="o">.</span><span class="n">GetYAxisCaptionActor2D</span><span class="p">(),</span>
+        <span class="n">axes_actor</span><span class="o">.</span><span class="n">GetZAxisCaptionActor2D</span><span class="p">(),</span>
+    <span class="p">]:</span>
+        <span class="n">label_actor</span><span class="o">.</span><span class="n">SetWidth</span><span class="p">(</span><span class="n">label_size</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">label_actor</span><span class="o">.</span><span class="n">SetHeight</span><span class="p">(</span><span class="n">label_size</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 
     <span class="n">_update_axes_label_color</span><span class="p">(</span><span class="n">axes_actor</span><span class="p">,</span> <span class="n">label_color</span><span class="p">)</span>
 

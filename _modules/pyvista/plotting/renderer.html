@@ -1055,8 +1055,10 @@
         <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Y&#39;</span><span class="p">,</span>
         <span class="n">zlabel</span><span class="o">=</span><span class="s1">&#39;Z&#39;</span><span class="p">,</span>
         <span class="n">labels_off</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">marker_args</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
         <span class="n">box</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
         <span class="n">box_args</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">viewport</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">),</span>
     <span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Add an interactive axes widget in the bottom left corner.</span>
 
@@ -1092,6 +1094,10 @@
 <span class="sd">        labels_off : bool, optional</span>
 <span class="sd">            Enable or disable the text labels for the axes.</span>
 
+<span class="sd">        marker_args : dict, optional</span>
+<span class="sd">            Parameters for the orientation marker widget. See the parameters of</span>
+<span class="sd">            :func:`pyvista.create_axes_marker`.</span>
+
 <span class="sd">        box : bool, optional</span>
 <span class="sd">            Show a box orientation marker. Use ``box_args`` to adjust.</span>
 <span class="sd">            See :func:`pyvista.create_axes_orientation_box` for details.</span>
@@ -1100,6 +1106,9 @@
 <span class="sd">            Parameters for the orientation box widget when</span>
 <span class="sd">            ``box=True``. See the parameters of</span>
 <span class="sd">            :func:`pyvista.create_axes_orientation_box`.</span>
+
+<span class="sd">        viewport : tuple, optional</span>
+<span class="sd">            Viewport ``(xstart, ystart, xend, yend)`` of the widget.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
@@ -1121,6 +1130,15 @@
 <span class="sd">        &gt;&gt;&gt; pl = pyvista.Plotter()</span>
 <span class="sd">        &gt;&gt;&gt; actor = pl.add_mesh(pyvista.Sphere())</span>
 <span class="sd">        &gt;&gt;&gt; _ = pl.add_axes(box=True)</span>
+<span class="sd">        &gt;&gt;&gt; pl.show()</span>
+
+<span class="sd">        Specify more parameters for the axes marker.</span>
+
+<span class="sd">        &gt;&gt;&gt; import pyvista</span>
+<span class="sd">        &gt;&gt;&gt; pl = pyvista.Plotter()</span>
+<span class="sd">        &gt;&gt;&gt; actor = pl.add_mesh(pyvista.Box(), show_edges=True)</span>
+<span class="sd">        &gt;&gt;&gt; marker_args = dict(cone_radius=0.6, shaft_length=0.7, tip_length=0.3, ambient=0.5, label_size=(0.4, 0.16))</span>
+<span class="sd">        &gt;&gt;&gt; _ = pl.add_axes(line_width=5, marker_args=marker_args)</span>
 <span class="sd">        &gt;&gt;&gt; pl.show()</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -1148,6 +1166,8 @@
                 <span class="o">**</span><span class="n">box_args</span><span class="p">,</span>
             <span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">marker_args</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">marker_args</span> <span class="o">=</span> <span class="p">{}</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">axes_actor</span> <span class="o">=</span> <span class="n">create_axes_marker</span><span class="p">(</span>
                 <span class="n">label_color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span>
                 <span class="n">line_width</span><span class="o">=</span><span class="n">line_width</span><span class="p">,</span>
@@ -1158,8 +1178,12 @@
                 <span class="n">ylabel</span><span class="o">=</span><span class="n">ylabel</span><span class="p">,</span>
                 <span class="n">zlabel</span><span class="o">=</span><span class="n">zlabel</span><span class="p">,</span>
                 <span class="n">labels_off</span><span class="o">=</span><span class="n">labels_off</span><span class="p">,</span>
+                <span class="o">**</span><span class="n">marker_args</span><span class="p">,</span>
             <span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">add_orientation_widget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">axes_actor</span><span class="p">,</span> <span class="n">interactive</span><span class="o">=</span><span class="n">interactive</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+        <span class="n">axes_widget</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_orientation_widget</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">axes_actor</span><span class="p">,</span> <span class="n">interactive</span><span class="o">=</span><span class="n">interactive</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="kc">None</span>
+        <span class="p">)</span>
+        <span class="n">axes_widget</span><span class="o">.</span><span class="n">SetViewport</span><span class="p">(</span><span class="n">viewport</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">axes_actor</span></div>
 
 <div class="viewcode-block" id="Renderer.hide_axes"><a class="viewcode-back" href="../../../api/plotting/_autosummary/pyvista.Renderer.hide_axes.html#pyvista.Renderer.hide_axes">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">hide_axes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
