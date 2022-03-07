@@ -513,12 +513,12 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="pyvista.Color">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Color</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">color_like</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opacity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><span class="pre">float</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_color</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">color_like</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_opacity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><span class="pre">float</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">255</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/pyvista/plotting/colors.html#Color"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#pyvista.Color" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>pyvista ライブラリで使用される異なる色表現間の変換を行うヘルパークラスです。</p>
-<p>多くの pyvista メソッドは <a class="reference internal" href="pyvista.color_like.html#pyvista.color_like" title="pyvista.color_like"><code class="xref py py-data docutils literal notranslate"><span class="pre">color_like</span></code></a> パラメータを受け取ります。このヘルパークラスは、そのようなパラメータを、基本的な (VTK) メソッドで使用される必要な形式に変換するために使用されます。色名 ( <code class="docutils literal notranslate"><span class="pre">str</span></code> ) や 16 進文字列 ( <code class="docutils literal notranslate"><span class="pre">str</span></code> ) 、 RGB(A) 配列 ( <code class="docutils literal notranslate"><span class="pre">tuple</span></code> , <code class="docutils literal notranslate"><span class="pre">list</span></code> または <code class="docutils literal notranslate"><span class="pre">int</span></code> や <code class="docutils literal notranslate"><span class="pre">float</span></code> ) の <code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code> は <a class="reference internal" href="pyvista.color_like.html#pyvista.color_like" title="pyvista.color_like"><code class="xref py py-data docutils literal notranslate"><span class="pre">color_like</span></code></a> パラメータとみなされ、このクラスによって変換することが可能です。サポートされる色名の一覧は <a class="reference internal" href="pyvista.Color.name.html#pyvista.Color.name" title="pyvista.Color.name"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Color.name</span></code></a> を参照してください。</p>
+<dd><p>pyvista ライブラリで使用される異なる色表現間の変換を行うヘルパークラスです．</p>
+<p>多くの pyvista メソッドは <a class="reference internal" href="pyvista.color_like.html#pyvista.color_like" title="pyvista.color_like"><code class="xref py py-data docutils literal notranslate"><span class="pre">color_like</span></code></a> パラメータを受け取ります．このヘルパークラスは，そのようなパラメータを，基本的な (VTK) メソッドで使用される必要な形式に変換するために使用されます．色名 ( <code class="docutils literal notranslate"><span class="pre">str</span></code> ) や 16 進文字列 ( <code class="docutils literal notranslate"><span class="pre">str</span></code> ) ， RGB(A) 配列 ( <code class="docutils literal notranslate"><span class="pre">tuple</span></code> , <code class="docutils literal notranslate"><span class="pre">list</span></code> または <code class="docutils literal notranslate"><span class="pre">int</span></code> や <code class="docutils literal notranslate"><span class="pre">float</span></code> ) の <code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code> は <a class="reference internal" href="pyvista.color_like.html#pyvista.color_like" title="pyvista.color_like"><code class="xref py py-data docutils literal notranslate"><span class="pre">color_like</span></code></a> パラメータとみなされ，このクラスによって変換することが可能です．サポートされる色名の一覧は <a class="reference internal" href="pyvista.Color.name.html#pyvista.Color.name" title="pyvista.Color.name"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Color.name</span></code></a> を参照してください．</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>color</strong><span class="classifier"><a class="reference internal" href="pyvista.color_like.html#pyvista.color_like" title="pyvista.color_like"><code class="xref py py-obj docutils literal notranslate"><span class="pre">color_like</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>文字列、RGB配列、RGBA配列、16進数色文字列のいずれか。RGB(A)シーケンスは、0から1までのfloatか、0から255までのintとして提供されるべきです。16進数の色文字列には、オプションで <code class="docutils literal notranslate"><span class="pre">'#'</span></code> や <code class="docutils literal notranslate"><span class="pre">0x'</span></code> という接頭辞をつけることができます。不透明度を指定しなかった場合は、 <code class="docutils literal notranslate"><span class="pre">default_opacity</span></code> が使用されます。また、 <code class="docutils literal notranslate"><span class="pre">color</span></code> に <code class="docutils literal notranslate"><span class="pre">None</span></code> を指定すると、 <code class="docutils literal notranslate"><span class="pre">default_color</span></code> が代わりに使用されます。以下の例では、すべて '白' の色で表現しています。</p>
+<dt><strong>color</strong><span class="classifier"><a class="reference internal" href="pyvista.color_like.html#pyvista.color_like" title="pyvista.color_like"><code class="xref py py-obj docutils literal notranslate"><span class="pre">color_like</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>文字列，RGB配列，RGBA配列，16進数色文字列のいずれか．RGB(A)シーケンスは，0から1までのfloatか，0から255までのintとして提供されるべきです．16進数の色文字列には，オプションで <code class="docutils literal notranslate"><span class="pre">'#'</span></code> や <code class="docutils literal notranslate"><span class="pre">0x'</span></code> という接頭辞をつけることができます．不透明度を指定しなかった場合は， <code class="docutils literal notranslate"><span class="pre">default_opacity</span></code> が使用されます．また， <code class="docutils literal notranslate"><span class="pre">color</span></code> に <code class="docutils literal notranslate"><span class="pre">None</span></code> を指定すると， <code class="docutils literal notranslate"><span class="pre">default_color</span></code> が代わりに使用されます．以下の例では，すべて '白' の色で表現しています．</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">'white'</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'w'</span></code></p></li>
@@ -527,7 +527,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">'#FFFFFF'</span></code></p></li>
 </ul>
 </dd>
-<dt><strong>opacity</strong> : <a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a> または <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code><span class="classifier">python:int, python:float または python:str, optional</span></dt><dd><p>表現された色の不透明度。与えられた <code class="docutils literal notranslate"><span class="pre">color</span></code> に関連するすべての不透明度を上書きします。許容される不透明度は，0 から 1 までの浮動小数点数，0 から 255 までの整数，または長さ 2（とオプションのプレフィックス長）の 16 進文字列です．以下の例では、すべて完全に不透明な色を表現しています。</p>
+<dt><strong>opacity</strong> : <a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a> または <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code><span class="classifier">python:int, python:float または python:str, optional</span></dt><dd><p>表現された色の不透明度．与えられた <code class="docutils literal notranslate"><span class="pre">color</span></code> に関連するすべての不透明度を上書きします．許容される不透明度は，0 から 1 までの浮動小数点数，0 から 255 までの整数，または長さ 2（とオプションのプレフィックス長）の 16 進文字列です．以下の例では，すべて完全に不透明な色を表現しています．</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">1.0</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">255</span></code></p></li>
@@ -536,14 +536,14 @@
 </dd>
 <dt><strong>default_color</strong><span class="classifier"><a class="reference internal" href="pyvista.color_like.html#pyvista.color_like" title="pyvista.color_like"><code class="xref py py-obj docutils literal notranslate"><span class="pre">color_like</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">color</span></code> が <code class="docutils literal notranslate"><span class="pre">None</span></code> の場合に使用されるデフォルトの色です． もしこの値が <code class="docutils literal notranslate"><span class="pre">None</span></code> であれば，デフォルトではグローバルテーマカラーを使用します． フォーマットは <code class="docutils literal notranslate"><span class="pre">color</span></code> と同じです．</p>
 </dd>
-<dt><strong>default_opacity</strong> : <a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a> または <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code><span class="classifier">python:int, python:float または python:str, optional</span></dt><dd><p>表現された色のデフォルトの不透明度。color`` が不透明度を指定しない場合、および <code class="docutils literal notranslate"><span class="pre">opacity</span></code> が <code class="docutils literal notranslate"><span class="pre">None</span></code> の場合に使用されます。フォーマットは <code class="docutils literal notranslate"><span class="pre">opacity</span></code> と同じです。</p>
+<dt><strong>default_opacity</strong> : <a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a> または <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code><span class="classifier">python:int, python:float または python:str, optional</span></dt><dd><p>表現された色のデフォルトの不透明度．color`` が不透明度を指定しない場合，および <code class="docutils literal notranslate"><span class="pre">opacity</span></code> が <code class="docutils literal notranslate"><span class="pre">None</span></code> の場合に使用されます．フォーマットは <code class="docutils literal notranslate"><span class="pre">opacity</span></code> と同じです．</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">備考</p>
-<p>内部で使用される表現は、整数のRGBA配列（0～255の値）です。しかし、これは将来のリリースで変更される可能性があります。</p>
-<details><summary>対応色一覧は下表をご参照ください。</summary><table class="colwidths-given table">
+<p>内部で使用される表現は，整数のRGBA配列（0～255の値）です．しかし，これは将来のリリースで変更される可能性があります．</p>
+<details><summary>対応色一覧は下表をご参照ください．</summary><table class="colwidths-given table">
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 20%" />
@@ -1163,7 +1163,7 @@
 </tbody>
 </table>
 </details><p class="rubric">例</p>
-<p>色名、float RGBA 列、integer RGBA 列、RGBA 16 進文字列を使用して、透明な緑色を作成します。</p>
+<p>色名，float RGBA 列，integer RGBA 列，RGBA 16 進文字列を使用して，透明な緑色を作成します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
 <span class="go">Color(name=&#39;green&#39;, hex=&#39;#00800080&#39;)</span>
@@ -1183,22 +1183,22 @@
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Color.convert_color_channel.html#pyvista.Color.convert_color_channel" title="pyvista.Color.convert_color_channel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Color.convert_color_channel</span></code></a>(val)</p></td>
-<td><p>与えられた色チャンネルの値を整数表現に変換します。</p></td>
+<td><p>与えられた色チャンネルの値を整数表現に変換します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.Color.from_dict.html#pyvista.Color.from_dict" title="pyvista.Color.from_dict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Color.from_dict</span></code></a>(dict_)</p></td>
-<td><p>JSONデシリアライズのために辞書から構築します。</p></td>
+<td><p>JSONデシリアライズのために辞書から構築します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Color.linear_to_srgb.html#pyvista.Color.linear_to_srgb" title="pyvista.Color.linear_to_srgb"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Color.linear_to_srgb</span></code></a>()</p></td>
-<td><p>リニアカラー値からsRGBカラー値へ変換します。</p></td>
+<td><p>リニアカラー値からsRGBカラー値へ変換します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.Color.srgb_to_linear.html#pyvista.Color.srgb_to_linear" title="pyvista.Color.srgb_to_linear"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Color.srgb_to_linear</span></code></a>()</p></td>
-<td><p>リニアカラー値からsRGBカラー値へ変換します。</p></td>
+<td><p>リニアカラー値からsRGBカラー値へ変換します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Color.strip_hex_prefix.html#pyvista.Color.strip_hex_prefix" title="pyvista.Color.strip_hex_prefix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Color.strip_hex_prefix</span></code></a>(h)</p></td>
-<td><p>16進文字列から <code class="docutils literal notranslate"><span class="pre">'#'</span></code> または <code class="docutils literal notranslate"><span class="pre">0x'</span></code> という接頭辞を取り除きます。</p></td>
+<td><p>16進文字列から <code class="docutils literal notranslate"><span class="pre">'#'</span></code> または <code class="docutils literal notranslate"><span class="pre">0x'</span></code> という接頭辞を取り除きます．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.Color.to_dict.html#pyvista.Color.to_dict" title="pyvista.Color.to_dict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Color.to_dict</span></code></a>()</p></td>
-<td><p>JSONシリアライズのために辞書に変換します。</p></td>
+<td><p>JSONシリアライズのために辞書に変換します．</p></td>
 </tr>
 </tbody>
 </table>
@@ -1210,28 +1210,28 @@
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Color.float_rgb.html#pyvista.Color.float_rgb" title="pyvista.Color.float_rgb"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Color.float_rgb</span></code></a></p></td>
-<td><p>色の値を RGB float のタプルとして取得します。</p></td>
+<td><p>色の値を RGB float のタプルとして取得します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.Color.float_rgba.html#pyvista.Color.float_rgba" title="pyvista.Color.float_rgba"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Color.float_rgba</span></code></a></p></td>
-<td><p>色の値を RGBA float のタプルとして取得します。</p></td>
+<td><p>色の値を RGBA float のタプルとして取得します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Color.hex_rgb.html#pyvista.Color.hex_rgb" title="pyvista.Color.hex_rgb"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Color.hex_rgb</span></code></a></p></td>
-<td><p>色の値をRGBの16進数で取得します。</p></td>
+<td><p>色の値をRGBの16進数で取得します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.Color.hex_rgba.html#pyvista.Color.hex_rgba" title="pyvista.Color.hex_rgba"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Color.hex_rgba</span></code></a></p></td>
-<td><p>色の値をRGBAの16進数で取得します。</p></td>
+<td><p>色の値をRGBAの16進数で取得します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Color.int_rgb.html#pyvista.Color.int_rgb" title="pyvista.Color.int_rgb"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Color.int_rgb</span></code></a></p></td>
-<td><p>色の値を RGB integer のタプルとして取得します。</p></td>
+<td><p>色の値を RGB integer のタプルとして取得します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.Color.int_rgba.html#pyvista.Color.int_rgba" title="pyvista.Color.int_rgba"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Color.int_rgba</span></code></a></p></td>
-<td><p>色の値を RGBA integer のタプルとして取得します。</p></td>
+<td><p>色の値を RGBA integer のタプルとして取得します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Color.name.html#pyvista.Color.name" title="pyvista.Color.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Color.name</span></code></a></p></td>
-<td><p>色名を取得します。</p></td>
+<td><p>色名を取得します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.Color.vtk_c3ub.html#pyvista.Color.vtk_c3ub" title="pyvista.Color.vtk_c3ub"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Color.vtk_c3ub</span></code></a></p></td>
-<td><p>色の値をVTK Color3ubのインスタンスとして取得します。</p></td>
+<td><p>色の値をVTK Color3ubのインスタンスとして取得します．</p></td>
 </tr>
 </tbody>
 </table>

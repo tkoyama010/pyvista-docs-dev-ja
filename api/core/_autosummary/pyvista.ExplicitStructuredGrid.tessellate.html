@@ -1118,15 +1118,15 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.ExplicitStructuredGrid.tessellate">
 <span class="sig-prename descclassname"><span class="pre">ExplicitStructuredGrid.</span></span><span class="sig-name descname"><span class="pre">tessellate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_n_subdivide</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">merge_points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.ExplicitStructuredGrid.tessellate" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>メッシュをテッセレーションします。</p>
-<p>非線形 FEM-like 要素を線形簡略化で近似するフィルタです。出力メッシュは、入力メッシュの点データの属性として指定されたジオメトリと任意のフィールドを持ちます。属性のコピーフラグは、法線を除き、尊重されます。</p>
-<p>詳細は <a class="reference external" href="https://vtk.org/doc/nightly/html/classvtkTessellatorFilter.html#details">vtkTessellatorFilter</a> を参照してください。</p>
+<dd><p>メッシュをテッセレーションします．</p>
+<p>非線形 FEM-like 要素を線形簡略化で近似するフィルタです．出力メッシュは，入力メッシュの点データの属性として指定されたジオメトリと任意のフィールドを持ちます．属性のコピーフラグは，法線を除き，尊重されます．</p>
+<p>詳細は <a class="reference external" href="https://vtk.org/doc/nightly/html/classvtkTessellatorFilter.html#details">vtkTessellatorFilter</a> を参照してください．</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>max_n_subdivide</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>最大細分化数。デフォルトは <code class="docutils literal notranslate"><span class="pre">3</span></code> です。</p>
+<dt><strong>max_n_subdivide</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>最大細分化数．デフォルトは <code class="docutils literal notranslate"><span class="pre">3</span></code> です．</p>
 </dd>
-<dt><strong>merge_points</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>アダプティブ・テセレーションは、セル間で共有されるべき頂点であっても、共有されない頂点を出力します。これはある程度修正することができます。デフォルトは <code class="docutils literal notranslate"><span class="pre">True</span></code> です。</p>
+<dt><strong>merge_points</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>アダプティブ・テセレーションは，セル間で共有されるべき頂点であっても，共有されない頂点を出力します．これはある程度修正することができます．デフォルトは <code class="docutils literal notranslate"><span class="pre">True</span></code> です．</p>
 </dd>
 <dt><strong>progress_bar</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>進行状況を示す進行状況バーを表示します．</p>
 </dd>
@@ -1134,13 +1134,13 @@
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a></dt><dd><p>データセットをテッセレーションしたメッシュ。 戻り値の型は入力と一致します。</p>
+<dt><a class="reference internal" href="pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a></dt><dd><p>データセットをテッセレーションしたメッシュ． 戻り値の型は入力と一致します．</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>まず、高次のFEM的要素をプロットします。</p>
+<p>まず，高次のFEM的要素をプロットします．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
@@ -1162,7 +1162,7 @@
 <figure class="align-default">
 <img alt="../../../_images/pyvista-ExplicitStructuredGrid-tessellate-1_00_00.png" src="../../../_images/pyvista-ExplicitStructuredGrid-tessellate-1_00_00.png" />
 </figure>
-<p>さて、テッセレーションされたメッシュをプロットしてみましょう。</p>
+<p>さて，テッセレーションされたメッシュをプロットしてみましょう．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tessellated</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">tessellate</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">tessellated</span><span class="o">.</span><span class="n">clear_data</span><span class="p">()</span>  <span class="c1"># cleans up plot</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">tessellated</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>

@@ -295,8 +295,8 @@
   <section id="building-vtk">
 <span id="ref-building-vtk"></span><h1>VTKの構築<a class="headerlink" href="#building-vtk" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>Kitwareは <a class="reference external" href="https://pypi.org/project/vtk/">PyPI VTK</a> でVTK用のPythonホイールを提供していますが，場合によってはソースからVTKをビルドする必要があります(たとえば，Pythonの新リリース，EGLレンダリング，追加機能など)． <code class="docutils literal notranslate"><span class="pre">pyvista</span></code> は <code class="docutils literal notranslate"><span class="pre">vtk</span></code> を提供しないため，手動で構築する必要があります．</p>
-<p>既成のホイールが必要な場合は、<a class="reference external" href="https://github.com/pyvista/pyvista-wheels">pyvista-wheels</a> にさまざまな既成のホイールがありますが、自分で作った方がよいかもしれません。</p>
-<p><a class="reference external" href="https://gitlab.kitware.com/vtk/vtk/-/blob/master/Documentation/dev/build.md">VTKのビルド方法</a> を参照してください。以下の説明は、EGLのような非標準的な状況でPythonホイールをビルドしたい場合を想定しています。</p>
+<p>既成のホイールが必要な場合は，<a class="reference external" href="https://github.com/pyvista/pyvista-wheels">pyvista-wheels</a> にさまざまな既成のホイールがありますが，自分で作った方がよいかもしれません．</p>
+<p><a class="reference external" href="https://gitlab.kitware.com/vtk/vtk/-/blob/master/Documentation/dev/build.md">VTKのビルド方法</a> を参照してください．以下の説明は，EGLのような非標準的な状況でPythonホイールをビルドしたい場合を想定しています．</p>
 <section id="building-wheels">
 <h2>ホイールを作る<a class="headerlink" href="#building-wheels" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>ソースからVTKを構築するのはかなりストレートです．デフォルトのビルド設定を使用し，次のスクリプトを使用して <code class="docutils literal notranslate"><span class="pre">ninja</span></code> を使用し，VTKのPythonホイールをビルドします．このスクリプトはpython 3を使用していますが，最新のPythonバージョンを使用することができます．その他の便利なオプションについては， <a class="reference external" href="https://github.com/conda-forge/vtk-feedstock/blob/master/recipe/build.sh">conda-forge recipe</a> を参照してください．以下のほとんどのオプションは，構築時間を短縮し，ホイールサイズを小さくするように設計されています．</p>
@@ -377,7 +377,7 @@ pip install dist/vtk-*.whl  <span class="c1"># optionally install it</span>
 </section>
 <section id="building-osmesa">
 <h2>OSMesaの構築<a class="headerlink" href="#building-osmesa" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>OSMesaはCPUベースのホストでより高い可視化性能を提供します。xvfb`` の代わりに、これを使用してください。</p>
+<p>OSMesaはCPUベースのホストでより高い可視化性能を提供します．xvfb`` の代わりに，これを使用してください．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sudo apt-get install libosmesa6-dev cmake ninja-build
 
 git clone https://github.com/Kitware/VTK.git
@@ -407,7 +407,7 @@ ninja
 $PYBIN setup.py bdist_wheel
 </pre></div>
 </div>
-<p>Wheels は <code class="docutils literal notranslate"><span class="pre">dist</span></code> ディレクトリに生成されます。</p>
+<p>Wheels は <code class="docutils literal notranslate"><span class="pre">dist</span></code> ディレクトリに生成されます．</p>
 </section>
 <section id="building-manylinux-wheels">
 <h2>ManyLinux wheel の構築<a class="headerlink" href="#building-manylinux-wheels" title="このヘッドラインへのパーマリンク">¶</a></h2>

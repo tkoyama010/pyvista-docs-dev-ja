@@ -371,8 +371,8 @@
 <p>このページでは，質問，懸念，機能のリクエスト，または貢献したいことから始めるべき概要を説明します．</p>
 <section id="being-respectful">
 <h2>尊敬の念を抱くこと<a class="headerlink" href="#being-respectful" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>他の人々、他のソフトウェア、そして（関連性のない）ツールを作るために熱心に働いてきたコミュニティに対して、共感と優しさを示してください。</p>
-<p>Pull RequestsやIssuesなどで、他人やその作品を否定するような言い方をしないでください。</p>
+<p>他の人々，他のソフトウェア，そして（関連性のない）ツールを作るために熱心に働いてきたコミュニティに対して，共感と優しさを示してください．</p>
+<p>Pull RequestsやIssuesなどで，他人やその作品を否定するような言い方をしないでください．</p>
 </section>
 <section id="cloning-the-source-repository">
 <h2>ソースリポジトリのクローン作成<a class="headerlink" href="#cloning-the-source-repository" title="このヘッドラインへのパーマリンク">¶</a></h2>
@@ -433,21 +433,21 @@ python -m pip install -e .
 <p>コードをサブミットする準備ができたら， <a class="reference external" href="#creating-a-new-pull-request">Creating a New Pull Request section</a> の手順に従ってプル要求を作成します．</p>
 <section id="coding-style">
 <h4>コーディングスタイル<a class="headerlink" href="#coding-style" title="このヘッドラインへのパーマリンク">¶</a></h4>
-<p>行幅が79文字を超えて99文字コードまで許されることを除き，可能な限り <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/">PEP 8</a> に準拠します．これは標準ではなく、むしろ例外となる傾向があるはずです．スタイルの不一致によるエネルギーの浪費を防ぐために， <a class="reference external" href="https://github.com/psf/black">black</a> によって統一されたコードスタイルが強制されます．</p>
-<p>docstringについては、<a class="reference external" href="https://www.python.org/dev/peps/pep-0008/#maximum-line-length">PEP 8 Maximum Line Length</a> で規定されているガイドラインに従って、1行あたり72文字に制限してください。これは指令に従います。</p>
+<p>行幅が79文字を超えて99文字コードまで許されることを除き，可能な限り <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/">PEP 8</a> に準拠します．これは標準ではなく，むしろ例外となる傾向があるはずです．スタイルの不一致によるエネルギーの浪費を防ぐために， <a class="reference external" href="https://github.com/psf/black">black</a> によって統一されたコードスタイルが強制されます．</p>
+<p>docstringについては，<a class="reference external" href="https://www.python.org/dev/peps/pep-0008/#maximum-line-length">PEP 8 Maximum Line Length</a> で規定されているガイドラインに従って，1行あたり72文字に制限してください．これは指令に従います．</p>
 <blockquote>
-<div><p>チームによっては、より長い行数を強く希望する場合もあります。この問題に関して合意に達することができるチームによってのみ、または主にメンテナンスされているコードについては、コメントとdocstringを72文字で折り返すことを条件に、行の長さの制限を99文字まで増やしてもかまいません。</p>
+<div><p>チームによっては，より長い行数を強く希望する場合もあります．この問題に関して合意に達することができるチームによってのみ，または主にメンテナンスされているコードについては，コメントとdocstringを72文字で折り返すことを条件に，行の長さの制限を99文字まで増やしてもかまいません．</p>
 </div></blockquote>
 <p>PEP 8以外でコーディングする場合は， <a class="reference external" href="https://www.python.org/dev/peps/pep-0020/">PEP 20 – The Zen of Python</a> を考慮してください．</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">this</span>
 </pre></div>
 </div>
-<p>また、 <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> による linting と format checks を使って、あなたのコードが、末尾の空白、未使用の import、および import のソートに関する私たちの標準に準拠していることを確認してください。</p>
-<p>ローカルでフォーマットをテストするには、以下を実行します。</p>
+<p>また， <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> による linting と format checks を使って，あなたのコードが，末尾の空白，未使用の import，および import のソートに関する私たちの標準に準拠していることを確認してください．</p>
+<p>ローカルでフォーマットをテストするには，以下を実行します．</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make stylecheck
 </pre></div>
 </div>
-<p>スタイルの問題 (<code class="docutils literal notranslate"><span class="pre">black</span></code> が見つけたものも含む) を自動的に修正するには、以下を実行します。</p>
+<p>スタイルの問題 (<code class="docutils literal notranslate"><span class="pre">black</span></code> が見つけたものも含む) を自動的に修正するには，以下を実行します．</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make format
 </pre></div>
 </div>
@@ -480,11 +480,11 @@ pip install -r requirements_style.txt
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m pytest -v --cov pyvista
 </pre></div>
 </div>
-<p>ユニットテストには時間がかかることがあります。高速化したい場合は、 <code class="docutils literal notranslate"><span class="pre">n</span></code> フラグでプロセッサの数を設定してください。これは <code class="docutils literal notranslate"><span class="pre">pytest-xdist</span></code> を使用して、複数のプロセスを利用するものです。使用例です。</p>
+<p>ユニットテストには時間がかかることがあります．高速化したい場合は， <code class="docutils literal notranslate"><span class="pre">n</span></code> フラグでプロセッサの数を設定してください．これは <code class="docutils literal notranslate"><span class="pre">pytest-xdist</span></code> を使用して，複数のプロセスを利用するものです．使用例です．</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m pytest -n &lt;NUMCORE&gt; --cov pyvista
 </pre></div>
 </div>
-<p>ドキュメントにあるすべてのコード例を実行します。オフスクリーンプロッティングを有効にするために、環境変数 <code class="docutils literal notranslate"><span class="pre">PYVISTA_OFF_SCREEN</span></code> を必ずエクスポートしてください。</p>
+<p>ドキュメントにあるすべてのコード例を実行します．オフスクリーンプロッティングを有効にするために，環境変数 <code class="docutils literal notranslate"><span class="pre">PYVISTA_OFF_SCREEN</span></code> を必ずエクスポートしてください．</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PYVISTA_OFF_SCREEN</span><span class="o">=</span>True
 python -m pytest -v --doctest-modules pyvista
 </pre></div>
@@ -560,7 +560,7 @@ make html -b linkcheck
 <ol class="arabic">
 <li><p><code class="docutils literal notranslate"><span class="pre">main</span></code> ブランチから <code class="docutils literal notranslate"><span class="pre">release/MAJOR.MINOR</span></code> という名前の新しいブランチを作成します(例: <code class="docutils literal notranslate"><span class="pre">release/0.25</span></code> )．</p></li>
 <li><p><a class="reference external" href="#testing">Testing Section</a> で概説されているように，すべてのテストをローカルで実行し，すべてが合格していることを確認します．</p></li>
-<li><p>リンクが古くなっていないことを確認するために、リンクチェックを行いながらドキュメントをローカルにテストしてビルドします。また、 <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">clean</span></code> を実行して、結果がキャッシュされていないことを確認してください。</p>
+<li><p>リンクが古くなっていないことを確認するために，リンクチェックを行いながらドキュメントをローカルにテストしてビルドします．また， <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">clean</span></code> を実行して，結果がキャッシュされていないことを確認してください．</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> doc
 make clean  <span class="c1"># deletes the sphinx-gallery cache</span>
 make doctest
