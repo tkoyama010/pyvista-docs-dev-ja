@@ -1326,7 +1326,11 @@
 <dd><p>2つのメッシュ間の交差を計算します．</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p>このメソッドは，2つのメッシュ（多くの場合，線として解決されます）からサーフェスの方向を返します．一方， <a class="reference internal" href="pyvista.PolyDataFilters.boolean_intersection.html#pyvista.PolyDataFilters.boolean_intersection" title="pyvista.PolyDataFilters.boolean_intersection"><code class="xref py py-func docutils literal notranslate"><span class="pre">PolyDataFilters.boolean_intersection()</span></code></a> フィルタは，2つの閉じた（多様体）メッシュ間の &quot;volume&quot; の交点を返します．</p>
+<p>This method returns the surface intersection from two meshes
+(which often resolves as a line), whereas the
+<a class="reference internal" href="pyvista.PolyDataFilters.boolean_intersection.html#pyvista.PolyDataFilters.boolean_intersection" title="pyvista.PolyDataFilters.boolean_intersection"><code class="xref py py-func docutils literal notranslate"><span class="pre">PolyDataFilters.boolean_intersection()</span></code></a> filter returns
+the &quot;volume&quot; intersection between two closed (manifold)
+meshes.</p>
 </div>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
