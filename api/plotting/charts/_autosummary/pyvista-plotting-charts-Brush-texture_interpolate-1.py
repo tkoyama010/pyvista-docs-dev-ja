@@ -1,4 +1,4 @@
-# Setup a brush with a texture.
+# Set up a brush with a texture.
 #
 import pyvista
 from pyvista import examples
