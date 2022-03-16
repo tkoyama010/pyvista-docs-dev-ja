@@ -1019,6 +1019,8 @@
         <span class="n">preference</span><span class="o">=</span><span class="s1">&#39;cell&#39;</span><span class="p">,</span>
         <span class="n">all_scalars</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
         <span class="n">progress_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">component_mode</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">,</span>
+        <span class="n">component</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
     <span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Apply a ``vtkThreshold`` filter to the input dataset.</span>
 
@@ -1064,6 +1066,17 @@
 
 <span class="sd">        progress_bar : bool, optional</span>
 <span class="sd">            Display a progress bar to indicate progress.</span>
+
+<span class="sd">        component_mode : {&#39;selected&#39;, &#39;all&#39;, &#39;any&#39;}</span>
+<span class="sd">            The method to satsfy the criteria for threshold for</span>
+<span class="sd">            multicomponent scalars.  &#39;selected&#39; (default)</span>
+<span class="sd">            uses only the ``component``.  &#39;all&#39; requires all</span>
+<span class="sd">            components to meet criteria.  &#39;any&#39; is when</span>
+<span class="sd">            any component satisfies the criteria.</span>
+
+<span class="sd">        component : int</span>
+<span class="sd">            When using ``component_mode=&#39;selected&#39;``, this sets</span>
+<span class="sd">            which component to threshold on.  Default is ``0``.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
@@ -1175,6 +1188,24 @@
                 <span class="n">alg</span><span class="o">.</span><span class="n">ThresholdByLower</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">alg</span><span class="o">.</span><span class="n">ThresholdByUpper</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">component_mode</span> <span class="o">==</span> <span class="s2">&quot;component&quot;</span><span class="p">:</span>
+            <span class="n">alg</span><span class="o">.</span><span class="n">SetComponentModeToUseSelected</span><span class="p">()</span>
+            <span class="n">dim</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">component</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">integer</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;component must be int&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">component</span> <span class="o">&gt;</span> <span class="p">(</span><span class="n">dim</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="ow">or</span> <span class="n">component</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;scalars has </span><span class="si">{</span><span class="n">dim</span><span class="si">}</span><span class="s2"> components: supplied component </span><span class="si">{</span><span class="n">component</span><span class="si">}</span><span class="s2"> not in range&quot;</span>
+                <span class="p">)</span>
+            <span class="n">alg</span><span class="o">.</span><span class="n">SetSelectedComponent</span><span class="p">(</span><span class="n">component</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">component_mode</span> <span class="o">==</span> <span class="s2">&quot;all&quot;</span><span class="p">:</span>
+            <span class="n">alg</span><span class="o">.</span><span class="n">SetComponentModeToUseAll</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">component_mode</span> <span class="o">==</span> <span class="s2">&quot;any&quot;</span><span class="p">:</span>
+            <span class="n">alg</span><span class="o">.</span><span class="n">SetComponentModeToUseAny</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;component_mode must be &#39;component&#39;, &#39;all&#39;, or &#39;any&#39; got: </span><span class="si">{</span><span class="n">component_mode</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="p">)</span>
         <span class="c1"># Run the threshold</span>
         <span class="n">_update_alg</span><span class="p">(</span><span class="n">alg</span><span class="p">,</span> <span class="n">progress_bar</span><span class="p">,</span> <span class="s1">&#39;Thresholding&#39;</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">_get_output</span><span class="p">(</span><span class="n">alg</span><span class="p">)</span></div>
