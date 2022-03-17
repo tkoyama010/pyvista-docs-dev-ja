@@ -49,7 +49,7 @@
     <script src="../../../_static/thebelab-helper.js"></script>
     <script src="../../../_static/translations.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="検索" href="../../../search.html" />
     <link rel="next" title="lighting" href="pyvista.themes.DefaultTheme.lighting.html" />
@@ -591,16 +591,8 @@
 <dd><p>Return or set the jupyter notebook plotting backend.</p>
 <p>プロット時に使用するJupyterバックエンドです．次のいずれかである必要があります．</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">'ipyvtklink'</span></code> : Render remotely and stream the
-resulting VTK images back to the client.  Supports all VTK
-methods, but suffers from lag due to remote rendering.
-Requires that a virtual framebuffer be set up when displaying
-on a headless server.  Must have <code class="docutils literal notranslate"><span class="pre">ipyvtklink</span></code> installed.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'panel'</span></code> : Convert the VTK render window to a vtkjs
-object and then visualize that within jupyterlab. Supports
-most VTK objects.  Requires that a virtual framebuffer be
-set up when displaying on a headless server.  Must have
-<code class="docutils literal notranslate"><span class="pre">panel</span></code> installed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'ipyvtklink'</span></code> : リモートでレンダリングし，結果のVTKイメージをクライアントにストリーミングします．すべてのVTKメソッドをサポートしますが，リモートレンダリングのために遅延が発生します．ヘッドレスサーバーで表示する場合は，仮想フレームバッファをセットアップする必要があります． <code class="docutils literal notranslate"><span class="pre">ipyvtklink</span></code> がインストールされている必要があります．</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'panel'</span></code> : VTKレンダーウィンドウをvtkjsオブジェクトに変換し，それをjupyterlabで視覚化します．ほとんどのVTKオブジェクトをサポートします．ヘッドレスサーバーで表示する場合は，仮想フレームバッファをセットアップする必要があります． <code class="docutils literal notranslate"><span class="pre">panel</span></code> がインストールされている必要があります．</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'ipygany'</span></code> : すべてのメッシュを <code class="docutils literal notranslate"><span class="pre">ipygany</span></code> メッシュに変換し，クライアント側でレンダリングするメッシュをストリーミングします．VTKメッシュをサポートしていますが，他にはほとんどありません． <code class="docutils literal notranslate"><span class="pre">none</span></code> を除き，これは仮想フレームバッファを必要としない唯一の方法です． <code class="docutils literal notranslate"><span class="pre">ipygany</span></code> がインストールされている必要があります．</p></li>
 <li><p>'pythreejs'`` : すべてのメッシュを <code class="docutils literal notranslate"><span class="pre">pythreejs</span></code> のメッシュに変換し，それらをストリームしてクライアント側でレンダリングします． <code class="docutils literal notranslate"><span class="pre">ipygany</span></code> を除けば，この方法は仮想フレームバッファを必要としない唯一の方法です． 必ず <code class="docutils literal notranslate"><span class="pre">pythreejs</span></code> がインストールされている必要があります．</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'static'</span></code> : Display a single static image within the
