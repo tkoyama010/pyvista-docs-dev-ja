@@ -1088,9 +1088,7 @@
 <span class="n">texture</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">hdr</span><span class="o">.</span><span class="n">download_dikhololo_night</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Set up the plotter and enable environment textures.  This works well
-for physically based rendering enabled meshes like the damaged
-helmet example.</p>
+<p>プロッタを設定し，環境テクスチャを有効にします． これは，ダメージを受けたヘルメットの例のように，物理ベースのレンダリングが可能なメッシュに有効です．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pl</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">pl</span><span class="o">.</span><span class="n">import_gltf</span><span class="p">(</span><span class="n">helmet_file</span><span class="p">)</span>
 <span class="n">pl</span><span class="o">.</span><span class="n">set_environment_texture</span><span class="p">(</span><span class="n">texture</span><span class="p">)</span>

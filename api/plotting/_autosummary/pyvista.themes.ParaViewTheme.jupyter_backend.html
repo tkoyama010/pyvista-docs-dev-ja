@@ -595,10 +595,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">'panel'</span></code> : VTKレンダーウィンドウをvtkjsオブジェクトに変換し，それをjupyterlabで視覚化します．ほとんどのVTKオブジェクトをサポートします．ヘッドレスサーバーで表示する場合は，仮想フレームバッファをセットアップする必要があります． <code class="docutils literal notranslate"><span class="pre">panel</span></code> がインストールされている必要があります．</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'ipygany'</span></code> : すべてのメッシュを <code class="docutils literal notranslate"><span class="pre">ipygany</span></code> メッシュに変換し，クライアント側でレンダリングするメッシュをストリーミングします．VTKメッシュをサポートしていますが，他にはほとんどありません． <code class="docutils literal notranslate"><span class="pre">none</span></code> を除き，これは仮想フレームバッファを必要としない唯一の方法です． <code class="docutils literal notranslate"><span class="pre">ipygany</span></code> がインストールされている必要があります．</p></li>
 <li><p>'pythreejs'`` : すべてのメッシュを <code class="docutils literal notranslate"><span class="pre">pythreejs</span></code> のメッシュに変換し，それらをストリームしてクライアント側でレンダリングします． <code class="docutils literal notranslate"><span class="pre">ipygany</span></code> を除けば，この方法は仮想フレームバッファを必要としない唯一の方法です． 必ず <code class="docutils literal notranslate"><span class="pre">pythreejs</span></code> がインストールされている必要があります．</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'static'</span></code> : Display a single static image within the
-JupyterLab environment.  Still requires that a virtual
-framebuffer be set up when displaying on a headless server,
-but does not require any additional modules to be installed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'static'</span></code> : JupyterLab環境内に単一の静的イメージを表示します．ヘッドレスサーバーで表示する場合も仮想フレームバッファをセットアップする必要がありますが，追加のモジュールをインストールする必要はありません．</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'none'</span></code> : jupyterlab内にプロットを表示せず，専用のVTKレンダリングウィンドウを使用して表示します．これは，仮想フレームバッファがあっても，ヘッドレスサーバー上では何も生成しません．</p></li>
 </ul>
 <p class="rubric">例</p>
