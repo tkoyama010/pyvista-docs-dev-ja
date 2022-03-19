@@ -1699,10 +1699,10 @@
         <span class="n">carr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">GetCells</span><span class="p">()</span>
         <span class="k">if</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">VTK9</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtk_to_numpy</span><span class="p">(</span><span class="n">carr</span><span class="o">.</span><span class="n">GetConnectivityArray</span><span class="p">())</span>
-        <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span>
+        <span class="k">raise</span> <span class="n">VTKVersionError</span><span class="p">(</span>
             <span class="s1">&#39;Install vtk&gt;=9.0.0 for `cell_connectivity`</span><span class="se">\n</span><span class="s1">&#39;</span>
             <span class="s1">&#39;Otherwise, use the legacy `cells` method&#39;</span>
-        <span class="p">)</span>
+        <span class="p">)</span>  <span class="c1"># pragma: no cover</span>
 
 <div class="viewcode-block" id="UnstructuredGrid.linear_copy"><a class="viewcode-back" href="../../../api/core/_autosummary/pyvista.UnstructuredGrid.linear_copy.html#pyvista.UnstructuredGrid.linear_copy">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">linear_copy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">deep</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Return a copy of the unstructured grid containing only linear cells.</span>
@@ -1919,7 +1919,7 @@
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">VTK9</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span><span class="s1">&#39;VTK 9 or higher is required&#39;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="n">VTKVersionError</span><span class="p">(</span><span class="s1">&#39;VTK 9 or higher is required&#39;</span><span class="p">)</span>  <span class="c1"># pragma: no cover</span>
         <span class="n">s1</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;BLOCK_I&#39;</span><span class="p">,</span> <span class="s1">&#39;BLOCK_J&#39;</span><span class="p">,</span> <span class="s1">&#39;BLOCK_K&#39;</span><span class="p">}</span>
         <span class="n">s2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cell_data</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">s1</span><span class="o">.</span><span class="n">issubset</span><span class="p">(</span><span class="n">s2</span><span class="p">):</span>
@@ -2292,7 +2292,7 @@
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Initialize the explicit structured grid.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">VTK9</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span><span class="s1">&#39;VTK 9 or higher is required&#39;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="n">VTKVersionError</span><span class="p">(</span><span class="s1">&#39;VTK 9 or higher is required&#39;</span><span class="p">)</span>  <span class="c1"># pragma: no cover</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
