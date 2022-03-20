@@ -132,6 +132,9 @@
       DataSetFilters.sample_over_line
       
       
+      DataSetFilters.sample_over_multiple_lines
+      
+      
       DataSetFilters.select_enclosed_points
       
       

@@ -144,6 +144,9 @@
       UniformGridFilters.sample_over_line
       
       
+      UniformGridFilters.sample_over_multiple_lines
+      
+      
       UniformGridFilters.select_enclosed_points
       
       

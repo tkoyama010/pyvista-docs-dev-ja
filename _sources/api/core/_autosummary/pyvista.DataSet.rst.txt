@@ -255,6 +255,9 @@
       DataSet.sample_over_line
       
       
+      DataSet.sample_over_multiple_lines
+      
+      
       DataSet.save
       
       

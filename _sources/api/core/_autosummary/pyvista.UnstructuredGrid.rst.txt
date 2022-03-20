@@ -279,6 +279,9 @@
       UnstructuredGrid.sample_over_line
       
       
+      UnstructuredGrid.sample_over_multiple_lines
+      
+      
       UnstructuredGrid.save
       
       

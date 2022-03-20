@@ -357,6 +357,9 @@
       PolyData.sample_over_line
       
       
+      PolyData.sample_over_multiple_lines
+      
+      
       PolyData.save
       
       

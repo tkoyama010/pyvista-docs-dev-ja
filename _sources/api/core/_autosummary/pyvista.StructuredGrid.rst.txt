@@ -279,6 +279,9 @@
       StructuredGrid.sample_over_line
       
       
+      StructuredGrid.sample_over_multiple_lines
+      
+      
       StructuredGrid.save
       
       

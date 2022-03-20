@@ -273,6 +273,9 @@
       UniformGrid.sample_over_line
       
       
+      UniformGrid.sample_over_multiple_lines
+      
+      
       UniformGrid.save
       
       

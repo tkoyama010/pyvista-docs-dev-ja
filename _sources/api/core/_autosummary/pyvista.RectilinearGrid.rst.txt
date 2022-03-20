@@ -258,6 +258,9 @@
       RectilinearGrid.sample_over_line
       
       
+      RectilinearGrid.sample_over_multiple_lines
+      
+      
       RectilinearGrid.save
       
       

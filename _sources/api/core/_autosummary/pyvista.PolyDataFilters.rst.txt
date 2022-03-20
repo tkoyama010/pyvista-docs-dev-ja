@@ -225,6 +225,9 @@
       PolyDataFilters.sample_over_line
       
       
+      PolyDataFilters.sample_over_multiple_lines
+      
+      
       PolyDataFilters.select_enclosed_points
       
       

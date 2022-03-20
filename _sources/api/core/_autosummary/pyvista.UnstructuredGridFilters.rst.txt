@@ -138,6 +138,9 @@
       UnstructuredGridFilters.sample_over_line
       
       
+      UnstructuredGridFilters.sample_over_multiple_lines
+      
+      
       UnstructuredGridFilters.select_enclosed_points
       
       

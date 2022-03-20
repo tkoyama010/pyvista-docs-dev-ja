@@ -31,6 +31,7 @@
       download_cad_model
       download_cake_easy
       download_cake_easy_texture
+      download_can
       download_carburator
       download_carotid
       download_cavity

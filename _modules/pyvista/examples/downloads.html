@@ -3769,6 +3769,46 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">_download_and_read</span><span class="p">(</span><span class="s1">&#39;lucy.ply&#39;</span><span class="p">,</span> <span class="n">load</span><span class="o">=</span><span class="n">load</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="download_can"><a class="viewcode-back" href="../../../api/examples/_autosummary/pyvista.examples.downloads.download_can.html#pyvista.examples.downloads.download_can">[ドキュメント]</a><span class="k">def</span> <span class="nf">download_can</span><span class="p">(</span><span class="n">partial</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+    <span class="sd">&quot;&quot;&quot;Download the can dataset mesh.</span>
+
+<span class="sd">    Original downloaded from Testing/Data/FileSeriesat from paraview.org. Used</span>
+<span class="sd">    for testing hdf files.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    partial : bool, optional</span>
+<span class="sd">        Load part of the dataset. Defaults to to ``False`` and</span>
+<span class="sd">        filename will be returned.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    pyvista.PolyData</span>
+<span class="sd">        The example ParaView can DataSet.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    Plot the can dataset.</span>
+
+<span class="sd">    &gt;&gt;&gt; from pyvista import examples</span>
+<span class="sd">    &gt;&gt;&gt; import pyvista</span>
+<span class="sd">    &gt;&gt;&gt; dataset = examples.download_can()</span>
+<span class="sd">    &gt;&gt;&gt; dataset.plot(scalars=&#39;VEL&#39;, smooth_shading=True)</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">can_0</span> <span class="o">=</span> <span class="n">_download_and_read</span><span class="p">(</span><span class="s1">&#39;hdf/can_0.hdf&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">partial</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">can_0</span>
+
+    <span class="k">return</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span>
+        <span class="p">[</span>
+            <span class="n">can_0</span><span class="p">,</span>
+            <span class="n">_download_and_read</span><span class="p">(</span><span class="s1">&#39;hdf/can_1.hdf&#39;</span><span class="p">),</span>
+            <span class="n">_download_and_read</span><span class="p">(</span><span class="s1">&#39;hdf/can_2.hdf&#39;</span><span class="p">),</span>
+        <span class="p">]</span>
+    <span class="p">)</span></div>
 </pre></div>
 
               </div>

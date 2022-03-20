@@ -4,7 +4,8 @@ import pyvista
 profile = pyvista.Polygon(center=[1.25, 0.0, 0.0], radius=0.2,
                           normal=(0, 1, 0), n_sides=30)
 extruded = profile.extrude_rotate(resolution=360, translation=4.0,
-                                  dradius=.5, angle=1500.0)
+                                  dradius=0.5, angle=1500.0,
+                                  capping=True)
 extruded.plot(smooth_shading=True)
 #
 # Create a "wine glass" using the rotational extrusion filter.
@@ -20,5 +21,5 @@ points = np.array([[-0.18, 0, 0],
                    [-0.1, 0, 0.8],
                    [-0.2, 0, 1.0]])
 spline = pyvista.Spline(points, 30)
-extruded = spline.extrude_rotate(resolution=20)
+extruded = spline.extrude_rotate(resolution=20, capping=False)
 extruded.plot(color='tan')

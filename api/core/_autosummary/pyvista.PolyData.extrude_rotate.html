@@ -798,6 +798,11 @@
         </a>
        </li>
        <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.PolyData.sample_over_multiple_lines.html">
+         sample_over_multiple_lines
+        </a>
+       </li>
+       <li class="toctree-l4">
         <a class="reference internal" href="pyvista.PolyData.save.html">
          save
         </a>
@@ -1322,12 +1327,18 @@
 <h1>extrude_rotate<a class="headerlink" href="#extrude-rotate" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.PolyData.extrude_rotate">
-<span class="sig-prename descclassname"><span class="pre">PolyData.</span></span><span class="sig-name descname"><span class="pre">extrude_rotate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inplace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">translation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dradius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">360.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">capping</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.extrude_rotate" title="この定義へのパーマリンク">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">PolyData.</span></span><span class="sig-name descname"><span class="pre">extrude_rotate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inplace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">translation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dradius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">360.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">capping</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.extrude_rotate" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>フリーエッジとフリーラインから &quot;skirt&quot; を作成し，頂点からラインを作成して，ポリゴンデータをスイープします．</p>
 <p>ポリゴンデータを入力として取り，出力時にポリゴンデータを生成します．入力データセットがZ軸を中心にスイープされ，新しいポリゴンプリミティブが作成されます．これらのプリミティブは， &quot;skirt&quot; またはスイープサーフェスを形成します．たとえば，線分をスイープすると円柱シェルが作成され，円をスイープするとトーラスが作成されます．</p>
 <p>このフィルタには多数の制御パラメータがあります．2 Dオブジェクト(多角形または三角形のストリップ)のスイープを生成するジオメトリでキャップするかどうかは， <code class="docutils literal notranslate"><span class="pre">capping</span></code> パラメータでコントロールできます．また，回転角度や，Z軸に沿った移動を回転とともに実行するかどうかも制御できます．( &quot;springs&quot; を作成するには，置き換えが役立ちます．)生成されるジオメトリの半径は， <code class="docutils literal notranslate"><span class="pre">dradius</span></code> パラメータで調整することもできます．</p>
 <p>スカートは，特定のトポロジカルフィーチャーを配置することによって生成されます．フリーエッジ(1つのポリゴンまたは三角形ストリップによってのみ使用されるポリゴンまたは三角形ストリップのエッジ)はサーフェスを生成します．これは，線分またはポリラインにも当てはまります．頂点は線を生成します．</p>
 <p>このフィルタは，円柱，ボトル，ワイングラスなどの軸対称オブジェクトのモデリングに使用できます．または，スプリングやコルク抜きなどの移動回転対称オブジェクトです．</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">バージョン 0.32.0 で変更: </span>The <code class="docutils literal notranslate"><span class="pre">capping</span></code> keyword was added with a default of <code class="docutils literal notranslate"><span class="pre">False</span></code>.
+The previously used VTK default corresponds to <code class="docutils literal notranslate"><span class="pre">capping=True</span></code>.
+In a future version the default will be changed to <code class="docutils literal notranslate"><span class="pre">True</span></code> to
+match the behavior of the underlying VTK filter.</p>
+</div>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
@@ -1341,7 +1352,17 @@
 </dd>
 <dt><strong>angle</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>回転の角度を度数で表します．</p>
 </dd>
-<dt><strong>capping</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>2Dオブジェクトのスイープがキャップされるかどうかを制御します．</p>
+<dt><strong>capping</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Control if the sweep of a 2D object is capped. The default is
+<code class="docutils literal notranslate"><span class="pre">False</span></code>, which differs from VTK's default.</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">capping</span></code> keyword was added in version 0.32.0 with a
+default value of <code class="docutils literal notranslate"><span class="pre">False</span></code>. In a future version this default
+will be changed to <code class="docutils literal notranslate"><span class="pre">True</span></code> to match the behavior of the
+underlying VTK filter. It is recommended to explicitly pass
+a value for this keyword argument to prevent future changes
+in behavior and warnings.</p>
+</div>
 </dd>
 <dt><strong>progress_bar</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>進行状況を示す進行状況バーを表示します．</p>
 </dd>
@@ -1360,7 +1381,8 @@
 <span class="gp">&gt;&gt;&gt; </span><span class="n">profile</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Polygon</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">[</span><span class="mf">1.25</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span> <span class="n">radius</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>
 <span class="gp">... </span>                          <span class="n">normal</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">n_sides</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">extruded</span> <span class="o">=</span> <span class="n">profile</span><span class="o">.</span><span class="n">extrude_rotate</span><span class="p">(</span><span class="n">resolution</span><span class="o">=</span><span class="mi">360</span><span class="p">,</span> <span class="n">translation</span><span class="o">=</span><span class="mf">4.0</span><span class="p">,</span>
-<span class="gp">... </span>                                  <span class="n">dradius</span><span class="o">=</span><span class="mf">.5</span><span class="p">,</span> <span class="n">angle</span><span class="o">=</span><span class="mf">1500.0</span><span class="p">)</span>
+<span class="gp">... </span>                                  <span class="n">dradius</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">angle</span><span class="o">=</span><span class="mf">1500.0</span><span class="p">,</span>
+<span class="gp">... </span>                                  <span class="n">capping</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">extruded</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">smooth_shading</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1379,7 +1401,7 @@
 <span class="gp">... </span>                   <span class="p">[</span><span class="o">-</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">],</span>
 <span class="gp">... </span>                   <span class="p">[</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">spline</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Spline</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">extruded</span> <span class="o">=</span> <span class="n">spline</span><span class="o">.</span><span class="n">extrude_rotate</span><span class="p">(</span><span class="n">resolution</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">extruded</span> <span class="o">=</span> <span class="n">spline</span><span class="o">.</span><span class="n">extrude_rotate</span><span class="p">(</span><span class="n">resolution</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">capping</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">extruded</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;tan&#39;</span><span class="p">)</span>
 </pre></div>
 </div>

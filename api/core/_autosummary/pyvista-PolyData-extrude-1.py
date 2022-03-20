@@ -2,7 +2,7 @@
 #
 import pyvista
 arc = pyvista.CircularArc([-1, 0, 0], [1, 0, 0], [0, 0, 0])
-mesh = arc.extrude([0, 0, 1])
+mesh = arc.extrude([0, 0, 1], capping=False)
 mesh.plot(color='tan')
 #
 # Extrude and cap an 8 sided polygon.

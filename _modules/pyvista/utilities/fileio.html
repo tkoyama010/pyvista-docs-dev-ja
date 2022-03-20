@@ -285,6 +285,13 @@
         <span class="k">pass</span>
 
 
+<span class="k">if</span> <span class="n">VTK_MAJOR</span> <span class="o">&gt;=</span> <span class="mi">9</span> <span class="ow">and</span> <span class="n">VTK_MINOR</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">READERS</span><span class="p">[</span><span class="s1">&#39;.hdf&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">lazy_vtkHDFReader</span>
+    <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>  <span class="c1"># pragma: no cover</span>
+        <span class="k">pass</span>
+
+
 <span class="k">def</span> <span class="nf">_get_ext_force</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">force_ext</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">force_ext</span><span class="p">:</span>
         <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">force_ext</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>

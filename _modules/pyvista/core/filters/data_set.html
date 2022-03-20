@@ -3776,6 +3776,56 @@
         <span class="k">if</span> <span class="n">show</span><span class="p">:</span>  <span class="c1"># pragma: no cover</span>
             <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></div>
 
+<div class="viewcode-block" id="DataSetFilters.sample_over_multiple_lines"><a class="viewcode-back" href="../../../../api/core/_autosummary/pyvista.DataSetFilters.sample_over_multiple_lines.html#pyvista.DataSetFilters.sample_over_multiple_lines">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">sample_over_multiple_lines</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">points</span><span class="p">,</span> <span class="n">tolerance</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">progress_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Sample a dataset onto a multiple lines.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        points : np.ndarray or list</span>
+<span class="sd">            List of points defining multiple lines.</span>
+
+<span class="sd">        tolerance : float, optional</span>
+<span class="sd">            Tolerance used to compute whether a point in the source is in a</span>
+<span class="sd">            cell of the input.  If not given, tolerance is automatically generated.</span>
+
+<span class="sd">        progress_bar : bool, optional</span>
+<span class="sd">            Display a progress bar to indicate progress.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        pyvista.PolyData</span>
+<span class="sd">            Line object with sampled data from dataset.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        Sample over a plane that is interpolating a point cloud.</span>
+
+<span class="sd">        &gt;&gt;&gt; import pyvista</span>
+<span class="sd">        &gt;&gt;&gt; import numpy as np</span>
+<span class="sd">        &gt;&gt;&gt; np.random.seed(12)</span>
+<span class="sd">        &gt;&gt;&gt; point_cloud = np.random.random((5, 3))</span>
+<span class="sd">        &gt;&gt;&gt; point_cloud[:, 2] = 0</span>
+<span class="sd">        &gt;&gt;&gt; point_cloud -= point_cloud.mean(0)</span>
+<span class="sd">        &gt;&gt;&gt; pdata = pyvista.PolyData(point_cloud)</span>
+<span class="sd">        &gt;&gt;&gt; pdata[&#39;values&#39;] = np.random.random(5)</span>
+<span class="sd">        &gt;&gt;&gt; plane = pyvista.Plane()</span>
+<span class="sd">        &gt;&gt;&gt; plane.clear_data()</span>
+<span class="sd">        &gt;&gt;&gt; plane = plane.interpolate(pdata, sharpness=3.5)</span>
+<span class="sd">        &gt;&gt;&gt; sample = plane.sample_over_multiple_lines([[-0.5, -0.5, 0], [0.5, -0.5, 0], [0.5, 0.5, 0]])</span>
+<span class="sd">        &gt;&gt;&gt; pl = pyvista.Plotter()</span>
+<span class="sd">        &gt;&gt;&gt; _ = pl.add_mesh(pdata, render_points_as_spheres=True, point_size=50)</span>
+<span class="sd">        &gt;&gt;&gt; _ = pl.add_mesh(sample, scalars=&#39;values&#39;, line_width=10)</span>
+<span class="sd">        &gt;&gt;&gt; _ = pl.add_mesh(plane, scalars=&#39;values&#39;, style=&#39;wireframe&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; pl.show()</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Make a multiple lines and sample the dataset</span>
+        <span class="n">multiple_lines</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">MultipleLines</span><span class="p">(</span><span class="n">points</span><span class="o">=</span><span class="n">points</span><span class="p">)</span>
+        <span class="n">sampled_multiple_lines</span> <span class="o">=</span> <span class="n">multiple_lines</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">tolerance</span><span class="o">=</span><span class="n">tolerance</span><span class="p">,</span> <span class="n">progress_bar</span><span class="o">=</span><span class="n">progress_bar</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">sampled_multiple_lines</span></div>
+
 <div class="viewcode-block" id="DataSetFilters.sample_over_circular_arc"><a class="viewcode-back" href="../../../../api/core/_autosummary/pyvista.DataSetFilters.sample_over_circular_arc.html#pyvista.DataSetFilters.sample_over_circular_arc">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">sample_over_circular_arc</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">pointa</span><span class="p">,</span> <span class="n">pointb</span><span class="p">,</span> <span class="n">center</span><span class="p">,</span> <span class="n">resolution</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tolerance</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">progress_bar</span><span class="o">=</span><span class="kc">False</span>
     <span class="p">):</span>
@@ -4854,7 +4904,7 @@
         <span class="n">alg</span><span class="o">.</span><span class="n">SetInputData</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
         <span class="n">alg</span><span class="o">.</span><span class="n">SetShrinkFactor</span><span class="p">(</span><span class="n">shrink_factor</span><span class="p">)</span>
         <span class="n">_update_alg</span><span class="p">(</span><span class="n">alg</span><span class="p">,</span> <span class="n">progress_bar</span><span class="p">,</span> <span class="s1">&#39;Shrinking Mesh&#39;</span><span class="p">)</span>
-        <span class="n">output</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">alg</span><span class="o">.</span><span class="n">GetOutput</span><span class="p">())</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="n">_get_output</span><span class="p">(</span><span class="n">alg</span><span class="p">)</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkPolyData</span><span class="p">):</span>
             <span class="k">return</span> <span class="n">output</span><span class="o">.</span><span class="n">extract_surface</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">output</span></div>

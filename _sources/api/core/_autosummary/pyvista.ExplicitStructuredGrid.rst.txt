@@ -285,6 +285,9 @@
       ExplicitStructuredGrid.sample_over_line
       
       
+      ExplicitStructuredGrid.sample_over_multiple_lines
+      
+      
       ExplicitStructuredGrid.save
       
       
