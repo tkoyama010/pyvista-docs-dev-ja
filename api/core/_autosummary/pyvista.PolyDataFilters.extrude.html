@@ -833,26 +833,17 @@
 <p>ポリゴンデータを入力として取り，出力にポリゴンデータを生成します．入力データセットは何らかの押し出し関数に従って間引きされ，新しいポリゴンプリミティブを作成します．これらのプリミティブは &quot;skirt&quot; または間引きサーフェスを形成します．たとえば，線分を間引きすると四角形が作成され，三角形を間引きすると &quot;wedge&quot; が作成されます．</p>
 <p>スカートは，特定のトポロジカルフィーチャーを配置することによって生成されます．フリーエッジ(1つのポリゴンまたは三角形ストリップによってのみ使用されるポリゴンまたは三角形ストリップのエッジ)はサーフェスを生成します．これは，線分またはポリラインにも当てはまります．頂点は線を生成します．</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">バージョン 0.32.0 で変更: </span>The <code class="docutils literal notranslate"><span class="pre">capping</span></code> keyword was added with a default of <code class="docutils literal notranslate"><span class="pre">False</span></code>.
-The previously used VTK default corresponds to <code class="docutils literal notranslate"><span class="pre">capping=True</span></code>.
-In a future version the default will be changed to <code class="docutils literal notranslate"><span class="pre">True</span></code> to
-match the behavior of the underlying VTK filter.</p>
+<p><span class="versionmodified changed">バージョン 0.32.0 で変更: </span>キーワード <code class="docutils literal notranslate"><span class="pre">capping</span></code> が追加され，デフォルトが <code class="docutils literal notranslate"><span class="pre">False</span></code> になりました．これまで使用されていた VTK のデフォルトは <code class="docutils literal notranslate"><span class="pre">capping=True</span></code> に相当します．将来のバージョンでは，デフォルトは <code class="docutils literal notranslate"><span class="pre">True</span></code> に変更され，基盤となる VTK フィルタの動作と一致するようになる予定です．</p>
 </div>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
 <dt><strong>vector</strong> : <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.22)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a> か <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a><span class="classifier">numpy.ndarray か python:sequence</span></dt><dd><p>メッシュを押し出す方向と長さ．</p>
 </dd>
-<dt><strong>capping</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Control if the sweep of a 2D object is capped. The default is
-<code class="docutils literal notranslate"><span class="pre">False</span></code>, which differs from VTK's default.</p>
+<dt><strong>capping</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>2Dオブジェクトのスイープに上限を設けるかどうかを制御します．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> で，VTK のデフォルトとは異なります．</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">capping</span></code> keyword was added in version 0.32.0 with a
-default value of <code class="docutils literal notranslate"><span class="pre">False</span></code>. In a future version this default
-will be changed to <code class="docutils literal notranslate"><span class="pre">True</span></code> to match the behavior of the
-underlying VTK filter. It is recommended to explicitly pass
-a value for this keyword argument to prevent future changes
-in behavior and warnings.</p>
+<p>キーワード <code class="docutils literal notranslate"><span class="pre">capping</span></code> はバージョン 0.32.0 で追加され，デフォルト値は <code class="docutils literal notranslate"><span class="pre">False</span></code> です．将来のバージョンでは，このデフォルトは <code class="docutils literal notranslate"><span class="pre">True</span></code> に変更され，基盤となる VTK フィルタの動作と一致するようになる予定です．将来の挙動や警告の変更を防ぐために，このキーワード引数に明示的に値を渡すことが推奨されます．</p>
 </div>
 </dd>
 <dt><strong>inplace</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>元のメッシュの決まった場所に上書きします．</p>
