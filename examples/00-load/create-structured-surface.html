@@ -8,23 +8,19 @@
 
     <title>構造化サーフェスを作成する &#8212; PyVista 0.34.dev0 ドキュメント</title>
     
-    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
@@ -38,8 +34,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -71,7 +68,7 @@
                     </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -227,6 +224,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="create-point-cloud.html">
    点群を作成
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="create-pointset.html">
+   PointSetの作成
   </a>
  </li>
 </ul>
@@ -1050,7 +1054,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -1097,7 +1101,7 @@
 <p><a class="reference internal" href="#sphx-glr-download-examples-00-load-create-structured-surface-py"><span class="std std-ref">ここ</span></a> をクリックすると完全なサンプルコードをダウンロードできます．</p>
 </div>
 <section class="sphx-glr-example-title" id="creating-a-structured-surface">
-<span id="ref-create-structured"></span><span id="sphx-glr-examples-00-load-create-structured-surface-py"></span><h1>構造化サーフェスを作成する<a class="headerlink" href="#creating-a-structured-surface" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<span id="ref-create-structured"></span><span id="sphx-glr-examples-00-load-create-structured-surface-py"></span><h1>構造化サーフェスを作成する<a class="headerlink" href="#creating-a-structured-surface" title="このヘッドラインへのパーマリンク">#</a></h1>
 <p>NumPy配列からStructuredGrid表面を作成します</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
@@ -1106,7 +1110,7 @@
 </pre></div>
 </div>
 <section id="from-numpy-meshgrid">
-<h2>NumPyメッシュグリッドから<a class="headerlink" href="#from-numpy-meshgrid" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>NumPyメッシュグリッドから<a class="headerlink" href="#from-numpy-meshgrid" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p>NumPyを使用した単純なメッシュグリッドの作成</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make data</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">)</span>
@@ -1142,7 +1146,7 @@
 </div>
 </section>
 <section id="from-xyz-points">
-<h2>XYZ点から<a class="headerlink" href="#from-xyz-points" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>XYZ点から<a class="headerlink" href="#from-xyz-points" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p>多くの場合，単純な表形式で座標(XYZ点)のセットが与えられ，その中には，所有するノード間にグリッドを構築できるような構造が存在します．すばらしい例は， <a class="reference external" href="https://github.com/pyvista/pyvista-support/issues/16">pyvista-support#16</a> にあり，デカルト参照フレームから回転される構造化グリッドは，単にXYZ点として与えられる．このような場合，グリッドを復元するために必要なものは，グリッドの寸法(<cite>nx</cite> x <cite>ny</cite> x <cite>nz</cite>)と，座標が適切に順序付けられていることだけです．</p>
 <p>この例では，小さなデータセットを作成し，デカルト参照フレームに直交しないように座標を回転します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">make_point_set</span><span class="p">():</span>
@@ -1206,7 +1210,7 @@
 </div>
 <img src="../../_images/sphx_glr_create-structured-surface_004.png" srcset="../../_images/sphx_glr_create-structured-surface_004.png" alt="create structured surface" class = "sphx-glr-single-img"/></section>
 <section id="extending-a-2d-structuredgrid-to-3d">
-<h2>2 D構造グリッドを3 Dに拡張します<a class="headerlink" href="#extending-a-2d-structuredgrid-to-3d" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>2 D構造グリッドを3 Dに拡張します<a class="headerlink" href="#extending-a-2d-structuredgrid-to-3d" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p>A 2 D <a class="reference internal" href="../../api/core/_autosummary/pyvista.StructuredGrid.html#pyvista.StructuredGrid" title="pyvista.StructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.StructuredGrid</span></code></a> のメッシュは，3 Dメッシュに拡張できます．これは，地球科学の研究アプリケーションでメッシュに沿った地形を作成する場合に非常に適しています．</p>
 <p>たとえば，地形サーフェスの <a class="reference internal" href="../../api/core/_autosummary/pyvista.StructuredGrid.html#pyvista.StructuredGrid" title="pyvista.StructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.StructuredGrid</span></code></a> を作成し，そのサーフェスをいくつかの異なるレベルまで延長し，各 &quot;レベル&quot; を接続して，メッシュに沿って3 D地形を作成できます．</p>
 <p>まず簡単な例として，ウェーブメッシュを3 Dに拡張します．</p>
@@ -1247,8 +1251,9 @@
       </div>
     </div>
   
-    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

@@ -8,23 +8,19 @@
 
     <title>スライシング &#8212; PyVista 0.34.dev0 ドキュメント</title>
     
-    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
@@ -38,8 +34,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -71,7 +68,7 @@
                     </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -227,6 +224,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../00-load/create-point-cloud.html">
    点群を作成
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00-load/create-pointset.html">
+   PointSetの作成
   </a>
  </li>
 </ul>
@@ -1050,7 +1054,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -1097,7 +1101,7 @@
 <p><a class="reference internal" href="#sphx-glr-download-examples-01-filter-slicing-py"><span class="std std-ref">ここ</span></a> をクリックすると完全なサンプルコードをダウンロードできます．</p>
 </div>
 <section class="sphx-glr-example-title" id="slicing">
-<span id="slice-example"></span><span id="sphx-glr-examples-01-filter-slicing-py"></span><h1>スライシング<a class="headerlink" href="#slicing" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<span id="slice-example"></span><span id="sphx-glr-examples-01-filter-slicing-py"></span><h1>スライシング<a class="headerlink" href="#slicing" title="このヘッドラインへのパーマリンク">#</a></h1>
 <p>ボリュームから薄い平面スライスを抽出します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -1144,7 +1148,7 @@
 </pre></div>
 </div>
 <img src="../../_images/sphx_glr_slicing_005.png" srcset="../../_images/sphx_glr_slicing_005.png" alt="slicing" class = "sphx-glr-single-img"/><section id="slice-along-line">
-<h2>線分に沿ってスライス<a class="headerlink" href="#slice-along-line" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>線分に沿ってスライス<a class="headerlink" href="#slice-along-line" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p><code class="xref py py-func docutils literal notranslate"><span class="pre">DataSetFilters.slice_along_line()</span></code> フィルタを用いて <a class="reference internal" href="../../api/utilities/_autosummary/pyvista.Spline.html#pyvista.Spline" title="pyvista.Spline"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Spline()</span></code></a> または <a class="reference internal" href="../../api/utilities/_autosummary/pyvista.Line.html#pyvista.Line" title="pyvista.Line"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Line()</span></code></a> に沿ってデータセットをスライスすることもできる．</p>
 <p>最初に，対象のデータセットを使用して線のソースを定義します．このタイプのスライスは計算コストが高く，線に多くの点がある場合は時間がかかることに注意してください．線の解像度を低くしてください．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_channels</span><span class="p">()</span>
@@ -1219,7 +1223,7 @@
 </div>
 <img src="../../_images/sphx_glr_slicing_006.png" srcset="../../_images/sphx_glr_slicing_006.png" alt="slicing" class = "sphx-glr-single-img"/></section>
 <section id="multiple-slices-in-vector-direction">
-<h2>ベクトル方向の複数のスライス<a class="headerlink" href="#multiple-slices-in-vector-direction" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>ベクトル方向の複数のスライス<a class="headerlink" href="#multiple-slices-in-vector-direction" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p>ベクトル方向に沿って垂直にメッシュをスライスします．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_brain</span><span class="p">()</span>
 
@@ -1251,7 +1255,7 @@
 </div>
 <img src="../../_images/sphx_glr_slicing_007.png" srcset="../../_images/sphx_glr_slicing_007.png" alt="slicing" class = "sphx-glr-single-img"/></section>
 <section id="slice-at-different-bearings">
-<h2>異なる軸受でスライス<a class="headerlink" href="#slice-at-different-bearings" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>異なる軸受でスライス<a class="headerlink" href="#slice-at-different-bearings" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p><a class="reference external" href="https://github.com/pyvista/pyvista-support/issues/23">pyvista-support#23</a> から</p>
 <p>ユーザーが選択した位置を中心にして，さまざまな方位のスライスを多数作成する方法の例．</p>
 <p>スライスを方向付けるポイントの作成</p>
@@ -1324,8 +1328,9 @@
       </div>
     </div>
   
-    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

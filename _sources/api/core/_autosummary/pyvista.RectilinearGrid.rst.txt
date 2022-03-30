@@ -21,6 +21,9 @@
       RectilinearGrid.add_field_data
       
       
+      RectilinearGrid.cast_to_pointset
+      
+      
       RectilinearGrid.cast_to_structured_grid
       
       

@@ -8,23 +8,19 @@
 
     <title>表面を抽出 &#8212; PyVista 0.34.dev0 ドキュメント</title>
     
-    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
@@ -38,8 +34,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -71,7 +68,7 @@
                     </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -227,6 +224,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../00-load/create-point-cloud.html">
    点群を作成
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00-load/create-pointset.html">
+   PointSetの作成
   </a>
  </li>
 </ul>
@@ -1050,7 +1054,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -1097,7 +1101,7 @@
 <p><a class="reference internal" href="#sphx-glr-download-examples-01-filter-extract-surface-py"><span class="std std-ref">ここ</span></a> をクリックすると完全なサンプルコードをダウンロードできます．</p>
 </div>
 <section class="sphx-glr-example-title" id="extract-surface">
-<span id="extract-surface-example"></span><span id="sphx-glr-examples-01-filter-extract-surface-py"></span><h1>表面を抽出<a class="headerlink" href="#extract-surface" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<span id="extract-surface-example"></span><span id="sphx-glr-examples-01-filter-extract-surface-py"></span><h1>表面を抽出<a class="headerlink" href="#extract-surface" title="このヘッドラインへのパーマリンク">#</a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">extract_surface</span></code> フィルタを使用して， <code class="docutils literal notranslate"><span class="pre">pyvista</span></code> 内のほぼすべてのオブジェクトのサーフェスを抽出できます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">vtk</span> <span class="kn">import</span> <span class="n">VTK_QUADRATIC_HEXAHEDRON</span>
@@ -1107,7 +1111,7 @@
 </div>
 </section>
 <section id="create-a-quadratic-cell-and-extract-its-surface">
-<h1>2次セルを作成し，そのサーフェスを抽出します<a class="headerlink" href="#create-a-quadratic-cell-and-extract-its-surface" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>2次セルを作成し，そのサーフェスを抽出します<a class="headerlink" href="#create-a-quadratic-cell-and-extract-its-surface" title="このヘッドラインへのパーマリンク">#</a></h1>
 <p>ここでは，1つの2次六面体セルを作成し，そのサーフェスを抽出して，UnstructuredGridのサーフェスを抽出する方法を示します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lin_pts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
     <span class="p">[</span>
@@ -1167,7 +1171,7 @@
 </div>
 </section>
 <section id="nonlinear-surface-subdivision">
-<h1>非線形サーフェスサブディビジョン<a class="headerlink" href="#nonlinear-surface-subdivision" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>非線形サーフェスサブディビジョン<a class="headerlink" href="#nonlinear-surface-subdivision" title="このヘッドラインへのパーマリンク">#</a></h1>
 <p>UnstructuredGridに二次セルが含まれている場合， &quot;中間&quot; 節点の位置に基づいて滑らかなサーフェスを生成できます．これにより，曲率を含むセルをプロットできます．詳細については， <a class="reference external" href="https://prod.sandia.gov/techlib-noauth/access-control.cgi/2004/041617.pdf">https://prod.sandia.gov/techlib-noauth/access-control.cgi/2004/041617.pdf</a> を参照してください．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">surf_subdivided</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">extract_surface</span><span class="p">(</span><span class="n">nonlinear_subdivision</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 <span class="n">surf_subdivided</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">show_scalar_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -1195,8 +1199,9 @@
       </div>
     </div>
   
-    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

@@ -8,23 +8,19 @@
 
     <title>押し出し回転 &#8212; PyVista 0.34.dev0 ドキュメント</title>
     
-    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
@@ -38,8 +34,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -71,7 +68,7 @@
                     </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -227,6 +224,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../00-load/create-point-cloud.html">
    点群を作成
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00-load/create-pointset.html">
+   PointSetの作成
   </a>
  </li>
 </ul>
@@ -1050,7 +1054,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -1097,7 +1101,7 @@
 <p><a class="reference internal" href="#sphx-glr-download-examples-01-filter-extrude-rotate-py"><span class="std std-ref">ここ</span></a> をクリックすると完全なサンプルコードをダウンロードできます．</p>
 </div>
 <section class="sphx-glr-example-title" id="extrude-rotation">
-<span id="sphx-glr-examples-01-filter-extrude-rotate-py"></span><h1>押し出し回転<a class="headerlink" href="#extrude-rotation" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<span id="sphx-glr-examples-01-filter-extrude-rotate-py"></span><h1>押し出し回転<a class="headerlink" href="#extrude-rotation" title="このヘッドラインへのパーマリンク">#</a></h1>
 <p>フリーエッジとフリーラインから &quot;skirt&quot; を作成し，頂点からラインを作成して，ポリゴンデータをスイープします．</p>
 <p>ポリゴンデータを入力として取り，出力時にポリゴンデータを生成します．入力データセットがZ軸を中心にスイープされ，新しいポリゴンプリミティブが作成されます．これらのプリミティブは， &quot;skirt&quot; またはスイープサーフェスを形成します．たとえば，線分をスイープすると円柱シェルが作成され，円をスイープするとトーラスが作成されます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -1135,7 +1139,7 @@
 <br />
 <br /></section>
 <section id="plot-the-extruded-line">
-<h1>押し出されたラインをプロットする<a class="headerlink" href="#plot-the-extruded-line" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>押し出されたラインをプロットする<a class="headerlink" href="#plot-the-extruded-line" title="このヘッドラインへのパーマリンク">#</a></h1>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">add_text</span><span class="p">(</span><span class="s2">&quot;Line&quot;</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">24</span><span class="p">)</span>
@@ -1161,7 +1165,7 @@
 </div>
 <img src="../../_images/sphx_glr_extrude-rotate_001.png" srcset="../../_images/sphx_glr_extrude-rotate_001.png" alt="extrude rotate" class = "sphx-glr-single-img"/></section>
 <section id="create-a-spring">
-<h1>ばねを作成する<a class="headerlink" href="#create-a-spring" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>ばねを作成する<a class="headerlink" href="#create-a-spring" title="このヘッドラインへのパーマリンク">#</a></h1>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create the spring profile (a circle).</span>
 <span class="n">plotter</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 
@@ -1210,8 +1214,9 @@
       </div>
     </div>
   
-    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

@@ -8,23 +8,19 @@
 
     <title>2つのサーフェス間の距離 &#8212; PyVista 0.34.dev0 ドキュメント</title>
     
-    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
@@ -38,8 +34,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -71,7 +68,7 @@
                     </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -227,6 +224,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../00-load/create-point-cloud.html">
    点群を作成
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00-load/create-pointset.html">
+   PointSetの作成
   </a>
  </li>
 </ul>
@@ -1050,7 +1054,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -1097,7 +1101,7 @@
 <p><a class="reference internal" href="#sphx-glr-download-examples-01-filter-distance-between-surfaces-py"><span class="std std-ref">ここ</span></a> をクリックすると完全なサンプルコードをダウンロードできます．</p>
 </div>
 <section class="sphx-glr-example-title" id="distance-between-two-surfaces">
-<span id="sphx-glr-examples-01-filter-distance-between-surfaces-py"></span><h1>2つのサーフェス間の距離<a class="headerlink" href="#distance-between-two-surfaces" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<span id="sphx-glr-examples-01-filter-distance-between-surfaces-py"></span><h1>2つのサーフェス間の距離<a class="headerlink" href="#distance-between-two-surfaces" title="このヘッドラインへのパーマリンク">#</a></h1>
 <p>2つのサーフェス間の平均厚みを計算します．</p>
 <p>たとえば，地下地質モデルの岩石層の境界を表す2つのサーフェスがあり，それらの境界間の単位の平均厚さを知りたいとします．</p>
 <p>この例では，用語を明確にすることが重要です． メッシュポイントは，メッシュ上の各セルの頂点に存在します． <a class="reference internal" href="../../user-guide/what-is-a-mesh.html#what-is-a-mesh"><span class="std std-ref">メッシュとは?</span></a> を参照してください．この例の各セルは，無限の空間ポイントを含む2Dの空間領域を包含しています．これらの空間ポイントはメッシュポイントではありません．2つのサーフェス間の距離は，文脈や使用方法によって異なる意味を持ちます． ここでの各例では，下のメッシュの頂点から上のメッシュまでの距離の異なる側面を探っています．</p>
@@ -1132,7 +1136,7 @@
 </pre></div>
 </div>
 <img src="../../_images/sphx_glr_distance-between-surfaces_001.png" srcset="../../_images/sphx_glr_distance-between-surfaces_001.png" alt="distance between surfaces" class = "sphx-glr-single-img"/><section id="ray-tracing-distance">
-<h2>レイトレーシング距離<a class="headerlink" href="#ray-tracing-distance" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>レイトレーシング距離<a class="headerlink" href="#ray-tracing-distance" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p>頂点ポイントでの下部サーフェスの法線を計算</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">h0n</span> <span class="o">=</span> <span class="n">h0</span><span class="o">.</span><span class="n">compute_normals</span><span class="p">(</span><span class="n">point_normals</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cell_normals</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">auto_orient_normals</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
@@ -1166,7 +1170,7 @@
 </div>
 <img src="../../_images/sphx_glr_distance-between-surfaces_002.png" srcset="../../_images/sphx_glr_distance-between-surfaces_002.png" alt="distance between surfaces" class = "sphx-glr-single-img"/></section>
 <section id="nearest-neighbor-distance">
-<h2>最近接距離<a class="headerlink" href="#nearest-neighbor-distance" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>最近接距離<a class="headerlink" href="#nearest-neighbor-distance" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p>KDTreeを使用して，上部サーフェスの各頂点ポイントと下部サーフェスの最も近い隣接頂点ポイント間の距離を比較することもできます．これは特に大きなサーフェスでは，レイトレースよりも著しく高速になります．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.spatial</span> <span class="kn">import</span> <span class="n">KDTree</span>
 
@@ -1188,7 +1192,7 @@
 </div>
 <img src="../../_images/sphx_glr_distance-between-surfaces_003.png" srcset="../../_images/sphx_glr_distance-between-surfaces_003.png" alt="distance between surfaces" class = "sphx-glr-single-img"/></section>
 <section id="using-pyvista-filter">
-<h2>PyVistaフィルタの使い方<a class="headerlink" href="#using-pyvista-filter" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>PyVistaフィルタの使い方<a class="headerlink" href="#using-pyvista-filter" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p><a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSet.find_closest_cell.html#pyvista.DataSet.find_closest_cell" title="pyvista.DataSet.find_closest_cell"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSet.find_closest_cell()</span></code></a> フィルタは，上面のセルの中で，下面の頂点ポイントに最も近い空間ポイントを返します． <code class="docutils literal notranslate"><span class="pre">return_closest_point=True</span></code> を使用すると， <code class="docutils literal notranslate"><span class="pre">closest_points</span></code> が返されます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">closest_cells</span><span class="p">,</span> <span class="n">closest_points</span> <span class="o">=</span> <span class="n">h1</span><span class="o">.</span><span class="n">find_closest_cell</span><span class="p">(</span><span class="n">h0</span><span class="o">.</span><span class="n">points</span><span class="p">,</span> <span class="n">return_closest_point</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">d_exact</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">h0</span><span class="o">.</span><span class="n">points</span> <span class="o">-</span> <span class="n">closest_points</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -1230,8 +1234,9 @@
       </div>
     </div>
   
-    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

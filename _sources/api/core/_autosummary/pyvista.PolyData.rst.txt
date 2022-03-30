@@ -36,6 +36,9 @@
       PolyData.boolean_union
       
       
+      PolyData.cast_to_pointset
+      
+      
       PolyData.cast_to_unstructured_grid
       
       

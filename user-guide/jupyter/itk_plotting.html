@@ -8,23 +8,19 @@
 
     <title>PyVistaで itkwidgets を使う &#8212; PyVista 0.34.dev0 ドキュメント</title>
     
-    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
@@ -38,8 +34,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -71,7 +68,7 @@
                     </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -297,7 +294,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -335,7 +332,7 @@
               <div>
                 
   <section id="using-itkwidgets-with-pyvista">
-<span id="itk-plotting-ref"></span><h1>PyVistaで <code class="docutils literal notranslate"><span class="pre">itkwidgets</span></code> を使う<a class="headerlink" href="#using-itkwidgets-with-pyvista" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<span id="itk-plotting-ref"></span><h1>PyVistaで <code class="docutils literal notranslate"><span class="pre">itkwidgets</span></code> を使う<a class="headerlink" href="#using-itkwidgets-with-pyvista" title="このヘッドラインへのパーマリンク">#</a></h1>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
 <p>バージョン <code class="docutils literal notranslate"><span class="pre">0.32.0</span></code> の時点では， <code class="docutils literal notranslate"><span class="pre">ipyvtk-simple</span></code> はJupyterlab 3をサポートしていません．次のコマンドを実行しようとすると，jupyterlab内で <code class="docutils literal notranslate"><span class="pre">Model</span> <span class="pre">not</span> <span class="pre">found</span></code> エラーが返されます．</p>
@@ -344,12 +341,12 @@
 <p>PyVistaには，Jupyterでプロットを視覚化するためのインターフェースがあります． <code class="docutils literal notranslate"><span class="pre">pyvista.PlotterITK</span></code> クラスを使用すると，jupyterノートブック内でメッシュをインタラクティブに視覚化できます．jupyter内でのプロットを好む人にとって，これは <code class="docutils literal notranslate"><span class="pre">VTK</span></code> と <code class="docutils literal notranslate"><span class="pre">pyvista</span></code> を使用して視覚化する優れた方法です．</p>
 <p><a class="reference external" href="https://github.com/InsightSoftwareConsortium/itkwidgets">itkwidgets</a> ライブラリについては <a class="reference external" href="https://github.com/thewtex">&#64;thewtex</a> に特に感謝します．</p>
 <section id="installation">
-<h2>インストール<a class="headerlink" href="#installation" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>インストール<a class="headerlink" href="#installation" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p><cite>PlotterITK</cite> を使用するには， <code class="docutils literal notranslate"><span class="pre">itkwidgets&gt;=0.25.2</span></code> をインストールする必要があります． <a class="reference external" href="https://github.com/InsightSoftwareConsortium/itkwidgets#installation">ここ</a> のインストール手順に従ってください．</p>
 <p>もしあなたがcondaを使いたくないなら， <cite>pip</cite> で全てをインストールできますが，juptyerlabが最新であることを確認してください．問題が発生した場合は，pipを使用してjupyterlabをアンインストールして再インストールします．</p>
 </section>
 <section id="example-plotting-with-itkwidgets">
-<h2>ITKwidgetsを使用したプロットの例<a class="headerlink" href="#example-plotting-with-itkwidgets" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>ITKwidgetsを使用したプロットの例<a class="headerlink" href="#example-plotting-with-itkwidgets" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p>次の例は，単純な球を表示する単純なプロットを作成する方法を示しています．</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 
@@ -366,7 +363,7 @@
 <figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="../../_images/itk_plotting_sphere.png"><img alt="../../_images/itk_plotting_sphere.png" src="../../_images/itk_plotting_sphere.png" style="width: 600pt;" /></a>
 <figcaption>
-<p><span class="caption-text">pyvistaによるITKwidgets</span><a class="headerlink" href="#id1" title="この画像へのパーマリンク">¶</a></p>
+<p><span class="caption-text">pyvistaによるITKwidgets</span><a class="headerlink" href="#id1" title="この画像へのパーマリンク">#</a></p>
 </figcaption>
 </figure>
 <p>便宜上， <code class="docutils literal notranslate"><span class="pre">plot_itk</span></code> 関数を使用して図をプロットすることもできます．</p>
@@ -415,7 +412,7 @@
 </table>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyvista.PlotterITK">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PlotterITK</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyvista/jupyter/itkplotter.html#PlotterITK"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#pyvista.PlotterITK" title="この定義へのパーマリンク">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PlotterITK</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyvista/jupyter/itkplotter.html#PlotterITK"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#pyvista.PlotterITK" title="この定義へのパーマリンク">#</a></dt>
 <dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/dev/library/functions.html#object" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>ITKウィジェットプロッタ．</p>
 <p>jupyterノートブック内でインタラクティブにプロットするために使用します． <code class="docutils literal notranslate"><span class="pre">itkwidgets&gt;=0.25.2</span></code> が必要です．インストールについては以下を参照してください．</p>
@@ -431,7 +428,7 @@
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.PlotterITK.add_mesh">
-<span class="sig-name descname"><span class="pre">add_mesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scalars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opacity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smooth_shading</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyvista/jupyter/itkplotter.html#PlotterITK.add_mesh"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#pyvista.PlotterITK.add_mesh" title="この定義へのパーマリンク">¶</a></dt>
+<span class="sig-name descname"><span class="pre">add_mesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scalars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opacity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smooth_shading</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyvista/jupyter/itkplotter.html#PlotterITK.add_mesh"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#pyvista.PlotterITK.add_mesh" title="この定義へのパーマリンク">#</a></dt>
 <dd><p>PyVista/VTKメッシュまたはデータセットを追加します．</p>
 <p>itkwidgetsがシーンにラップできるPyVista/VTKメッシュを追加します．</p>
 <dl class="field-list">
@@ -454,7 +451,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.PlotterITK.add_points">
-<span class="sig-name descname"><span class="pre">add_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyvista/jupyter/itkplotter.html#PlotterITK.add_points"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#pyvista.PlotterITK.add_points" title="この定義へのパーマリンク">¶</a></dt>
+<span class="sig-name descname"><span class="pre">add_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyvista/jupyter/itkplotter.html#PlotterITK.add_points"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#pyvista.PlotterITK.add_points" title="この定義へのパーマリンク">#</a></dt>
 <dd><p>プロッタに点を追加します．</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
@@ -483,19 +480,19 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.PlotterITK.background_color">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">background_color</span></span><a class="headerlink" href="#pyvista.PlotterITK.background_color" title="この定義へのパーマリンク">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">background_color</span></span><a class="headerlink" href="#pyvista.PlotterITK.background_color" title="この定義へのパーマリンク">#</a></dt>
 <dd><p>プロッタの背景色を取得します．</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pyvista.PlotterITK.camera_position">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">camera_position</span></span><a class="headerlink" href="#pyvista.PlotterITK.camera_position" title="この定義へのパーマリンク">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">camera_position</span></span><a class="headerlink" href="#pyvista.PlotterITK.camera_position" title="この定義へのパーマリンク">#</a></dt>
 <dd><p>プロッタのカメラ位置をリストとして取得します．</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.PlotterITK.show">
-<span class="sig-name descname"><span class="pre">show</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ui_collapsed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_bounds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyvista/jupyter/itkplotter.html#PlotterITK.show"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#pyvista.PlotterITK.show" title="この定義へのパーマリンク">¶</a></dt>
+<span class="sig-name descname"><span class="pre">show</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ui_collapsed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_bounds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pyvista/jupyter/itkplotter.html#PlotterITK.show"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#pyvista.PlotterITK.show" title="この定義へのパーマリンク">#</a></dt>
 <dd><p>セル出力にitkwidgetsプロッタを表示します．</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
@@ -534,8 +531,9 @@
       </div>
     </div>
   
-    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

@@ -8,23 +8,19 @@
 
     <title>フィルタ &#8212; PyVista 0.34.dev0 ドキュメント</title>
     
-    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
@@ -38,8 +34,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -71,7 +68,7 @@
                     </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -314,7 +311,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -367,9 +364,9 @@
               <div>
                 
   <section id="filters">
-<span id="filters-ref"></span><h1>フィルタ<a class="headerlink" href="#filters" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<span id="filters-ref"></span><h1>フィルタ<a class="headerlink" href="#filters" title="このヘッドラインへのパーマリンク">#</a></h1>
 <section id="dataset-filters">
-<h2>データセットフィルタ<a class="headerlink" href="#dataset-filters" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>データセットフィルタ<a class="headerlink" href="#dataset-filters" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p><a class="reference internal" href="_autosummary/pyvista.DataSetFilters.html#pyvista.DataSetFilters" title="pyvista.DataSetFilters"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.DataSetFilters</span></code></a> は <a class="reference internal" href="_autosummary/pyvista.DataSet.html#pyvista.DataSet" title="pyvista.DataSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.DataSet</span></code></a> によって継承され，以下のすべてのフィルタをPyVistaデータセットから直接呼び出し可能なメソッドとして利用できるようにします．</p>
 <table class="longtable table autosummary">
 <colgroup>
@@ -384,7 +381,7 @@
 </table>
 </section>
 <section id="polydata-filters">
-<h2>PolyDataフィルタ<a class="headerlink" href="#polydata-filters" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>PolyDataフィルタ<a class="headerlink" href="#polydata-filters" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p><a class="reference internal" href="_autosummary/pyvista.PolyDataFilters.html#pyvista.PolyDataFilters" title="pyvista.PolyDataFilters"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters</span></code></a> は <a class="reference internal" href="_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> によって継承され，以下のすべてのフィルタを <code class="docutils literal notranslate"><span class="pre">PolyData</span></code> メッシュから直接呼び出し可能なメソッドとして利用できるようにします．</p>
 <table class="longtable table autosummary">
 <colgroup>
@@ -399,7 +396,7 @@
 </table>
 </section>
 <section id="unstructuredgrid-filters">
-<h2>UnstructuredGrid フィルタ<a class="headerlink" href="#unstructuredgrid-filters" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>UnstructuredGrid フィルタ<a class="headerlink" href="#unstructuredgrid-filters" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p><a class="reference internal" href="_autosummary/pyvista.UnstructuredGridFilters.html#pyvista.UnstructuredGridFilters" title="pyvista.UnstructuredGridFilters"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UnstructuredGridFilters</span></code></a> は <a class="reference internal" href="_autosummary/pyvista.UnstructuredGrid.html#pyvista.UnstructuredGrid" title="pyvista.UnstructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UnstructuredGrid</span></code></a> によって継承され，以下のすべてのフィルタを <code class="docutils literal notranslate"><span class="pre">UnstructuredGrid</span></code> メッシュから直接呼び出し可能なメソッドとして利用できるようにします．</p>
 <table class="longtable table autosummary">
 <colgroup>
@@ -414,7 +411,7 @@
 </table>
 </section>
 <section id="uniformgrid-filters">
-<h2>UniformGridフィルタ<a class="headerlink" href="#uniformgrid-filters" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>UniformGridフィルタ<a class="headerlink" href="#uniformgrid-filters" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p><a class="reference internal" href="_autosummary/pyvista.UniformGridFilters.html#pyvista.UniformGridFilters" title="pyvista.UniformGridFilters"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UniformGridFilters</span></code></a> は <a class="reference internal" href="_autosummary/pyvista.UniformGrid.html#pyvista.UniformGrid" title="pyvista.UniformGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UniformGrid</span></code></a> によって継承され，以下のすべてのフィルタを <code class="docutils literal notranslate"><span class="pre">UniformGrid</span></code> メッシュから直接呼び出し可能なメソッドとして利用できるようにします．</p>
 <table class="longtable table autosummary">
 <colgroup>
@@ -429,7 +426,7 @@
 </table>
 </section>
 <section id="composite-filters">
-<h2>Composite フィルタ<a class="headerlink" href="#composite-filters" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>Composite フィルタ<a class="headerlink" href="#composite-filters" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p>これらは複合データセット，すなわち <a class="reference internal" href="_autosummary/pyvista.MultiBlock.html#pyvista.MultiBlock" title="pyvista.MultiBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.MultiBlock</span></code></a> に適用できるフィルタです． <a class="reference internal" href="_autosummary/pyvista.CompositeFilters.html#pyvista.CompositeFilters" title="pyvista.CompositeFilters"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.CompositeFilters</span></code></a> クラスは， <a class="reference internal" href="_autosummary/pyvista.DataSetFilters.html#pyvista.DataSetFilters" title="pyvista.DataSetFilters"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.DataSetFilters</span></code></a> から多くのフィルタを継承しますが，すべてを継承するわけではありません．</p>
 <table class="longtable table autosummary">
 <colgroup>
@@ -455,8 +452,9 @@
       </div>
     </div>
   
-    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

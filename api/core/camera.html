@@ -8,23 +8,19 @@
 
     <title>カメラ &#8212; PyVista 0.34.dev0 ドキュメント</title>
     
-    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
@@ -38,8 +34,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -71,7 +68,7 @@
                     </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -294,7 +291,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -339,10 +336,10 @@
               <div>
                 
   <section id="cameras">
-<h1>カメラ<a class="headerlink" href="#cameras" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>カメラ<a class="headerlink" href="#cameras" title="このヘッドラインへのパーマリンク">#</a></h1>
 <p><a class="reference internal" href="_autosummary/pyvista.Camera.html#pyvista.Camera" title="pyvista.Camera"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.Camera</span></code></a> クラスは， <code class="docutils literal notranslate"><span class="pre">vtk.vtkCamera</span></code> クラスに追加機能とPython APIを追加します． <code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.vtkCamera</span></code> オブジェクトには，ほとんどの場合に適切に機能するデフォルトのライトセットが付属していますが，多くの場合，より実践的なカメラへのアプローチが必要です．</p>
 <section id="brief-example">
-<h2>簡単な例<a class="headerlink" href="#brief-example" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>簡単な例<a class="headerlink" href="#brief-example" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p>カメラの視錐台を作成してから，視錐台内のシーンを作成します．</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -408,7 +405,7 @@
 </figure>
 </section>
 <section id="controlling-camera-rotation">
-<h2>カメラの回転をコントロールする<a class="headerlink" href="#controlling-camera-rotation" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>カメラの回転をコントロールする<a class="headerlink" href="#controlling-camera-rotation" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p><a class="reference internal" href="_autosummary/pyvista.Camera.position.html#pyvista.Camera.position" title="pyvista.Camera.position"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pyvista.Camera.position</span></code></a> プロパティを介してカメラ位置を直接設定することに加えて，カメラの <a class="reference internal" href="_autosummary/pyvista.Camera.roll.html#pyvista.Camera.roll" title="pyvista.Camera.roll"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pyvista.Camera.roll</span></code></a> ， <a class="reference internal" href="_autosummary/pyvista.Camera.elevation.html#pyvista.Camera.elevation" title="pyvista.Camera.elevation"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pyvista.Camera.elevation</span></code></a> ，および <a class="reference internal" href="_autosummary/pyvista.Camera.azimuth.html#pyvista.Camera.azimuth" title="pyvista.Camera.azimuth"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pyvista.Camera.azimuth</span></code></a> を直接制御することもできます．</p>
 <img alt="../../_images/TestCameraModel1.png" src="../../_images/TestCameraModel1.png" />
 <p>たとえば，回転を修正できます．最初に，カメラ位置を <code class="docutils literal notranslate"><span class="pre">'yz'</span></code> を見るように設定しながら，方向立方体のプロットを生成します．</p>
@@ -459,7 +456,7 @@
 <img alt="../../_images/camera-5_00_00.png" src="../../_images/camera-5_00_00.png" />
 </figure>
 <section id="api-reference">
-<h3>APIリファレンス<a class="headerlink" href="#api-reference" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>APIリファレンス<a class="headerlink" href="#api-reference" title="このヘッドラインへのパーマリンク">#</a></h3>
 <table class="longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
@@ -485,8 +482,9 @@
       </div>
     </div>
   
-    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

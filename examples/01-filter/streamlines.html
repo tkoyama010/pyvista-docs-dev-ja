@@ -8,23 +8,19 @@
 
     <title>流線 &#8212; PyVista 0.34.dev0 ドキュメント</title>
     
-    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
@@ -38,8 +34,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -71,7 +68,7 @@
                     </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -227,6 +224,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../00-load/create-point-cloud.html">
    点群を作成
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00-load/create-pointset.html">
+   PointSetの作成
   </a>
  </li>
 </ul>
@@ -1050,7 +1054,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -1102,7 +1106,7 @@
 <p><a class="reference internal" href="#sphx-glr-download-examples-01-filter-streamlines-py"><span class="std std-ref">ここ</span></a> をクリックすると完全なサンプルコードをダウンロードできます．</p>
 </div>
 <section class="sphx-glr-example-title" id="streamlines">
-<span id="streamlines-example"></span><span id="sphx-glr-examples-01-filter-streamlines-py"></span><h1>流線<a class="headerlink" href="#streamlines" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<span id="streamlines-example"></span><span id="sphx-glr-examples-01-filter-streamlines-py"></span><h1>流線<a class="headerlink" href="#streamlines" title="このヘッドラインへのパーマリンク">#</a></h1>
 <p>ベクトルフィールドを積分して，流線を生成します．</p>
 <p>この例では，血流速度の流線を生成します．速度の等値面がコンテキストを提供します．流管の開始位置はデータを実験して決定しました．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -1112,7 +1116,7 @@
 </pre></div>
 </div>
 <section id="carotid">
-<h2>頸動脈<a class="headerlink" href="#carotid" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>頸動脈<a class="headerlink" href="#carotid" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p>統合可能なベクトルフィールドを含むサンプルデータセットをダウンロードします．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_carotid</span><span class="p">()</span>
 </pre></div>
@@ -1141,7 +1145,7 @@
 </div>
 <img src="../../_images/sphx_glr_streamlines_001.png" srcset="../../_images/sphx_glr_streamlines_001.png" alt="streamlines" class = "sphx-glr-single-img"/></section>
 <section id="blood-vessels">
-<h2>血管<a class="headerlink" href="#blood-vessels" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>血管<a class="headerlink" href="#blood-vessels" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p>血流の別の例を次に示します:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_blood_vessels</span><span class="p">()</span><span class="o">.</span><span class="n">cell_data_to_point_data</span><span class="p">()</span>
 <span class="n">mesh</span><span class="o">.</span><span class="n">set_active_scalars</span><span class="p">(</span><span class="s2">&quot;velocity&quot;</span><span class="p">)</span>
@@ -1194,7 +1198,7 @@
 </div>
 <img src="../../_images/sphx_glr_streamlines_003.png" srcset="../../_images/sphx_glr_streamlines_003.png" alt="streamlines" class = "sphx-glr-single-img"/></section>
 <section id="kitchen">
-<h2>キッチン<a class="headerlink" href="#kitchen" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>キッチン<a class="headerlink" href="#kitchen" title="このヘッドラインへのパーマリンク">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">kpos</span> <span class="o">=</span> <span class="p">[(</span><span class="o">-</span><span class="mf">6.68</span><span class="p">,</span> <span class="mf">11.9</span><span class="p">,</span> <span class="mf">11.6</span><span class="p">),</span> <span class="p">(</span><span class="mf">3.5</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mf">1.26</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.45</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">)]</span>
 
 <span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_kitchen</span><span class="p">()</span>
@@ -1214,7 +1218,7 @@
 </div>
 <img src="../../_images/sphx_glr_streamlines_004.png" srcset="../../_images/sphx_glr_streamlines_004.png" alt="streamlines" class = "sphx-glr-single-img"/></section>
 <section id="custom-3d-vector-field">
-<h2>カスタム3 Dベクトルフィールド<a class="headerlink" href="#custom-3d-vector-field" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>カスタム3 Dベクトルフィールド<a class="headerlink" href="#custom-3d-vector-field" title="このヘッドラインへのパーマリンク">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nx</span> <span class="o">=</span> <span class="mi">20</span>
 <span class="n">ny</span> <span class="o">=</span> <span class="mi">15</span>
 <span class="n">nz</span> <span class="o">=</span> <span class="mi">5</span>
@@ -1264,8 +1268,9 @@
       </div>
     </div>
   
-    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

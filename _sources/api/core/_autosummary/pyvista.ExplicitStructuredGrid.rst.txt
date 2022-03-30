@@ -21,6 +21,9 @@
       ExplicitStructuredGrid.add_field_data
       
       
+      ExplicitStructuredGrid.cast_to_pointset
+      
+      
       ExplicitStructuredGrid.cast_to_unstructured_grid
       
       

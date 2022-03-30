@@ -8,23 +8,19 @@
 
     <title>グローバルおよびローカルプロットテーマの制御 &#8212; PyVista 0.34.dev0 ドキュメント</title>
     
-    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
@@ -38,8 +34,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -71,7 +68,7 @@
                     </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -227,6 +224,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../00-load/create-point-cloud.html">
    点群を作成
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00-load/create-pointset.html">
+   PointSetの作成
   </a>
  </li>
 </ul>
@@ -1050,7 +1054,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -1102,7 +1106,7 @@
 <p><a class="reference internal" href="#sphx-glr-download-examples-02-plot-themes-py"><span class="std std-ref">ここ</span></a> をクリックすると完全なサンプルコードをダウンロードできます．</p>
 </div>
 <section class="sphx-glr-example-title" id="control-global-and-local-plotting-themes">
-<span id="themes-example"></span><span id="sphx-glr-examples-02-plot-themes-py"></span><h1>グローバルおよびローカルプロットテーマの制御<a class="headerlink" href="#control-global-and-local-plotting-themes" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<span id="themes-example"></span><span id="sphx-glr-examples-02-plot-themes-py"></span><h1>グローバルおよびローカルプロットテーマの制御<a class="headerlink" href="#control-global-and-local-plotting-themes" title="このヘッドラインへのパーマリンク">#</a></h1>
 <p>PyVistaでは，グローバルなプロットテーマとローカルなプロットテーマを設定して，デフォルトのプロットパラメータを簡単に設定できます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
@@ -1160,7 +1164,7 @@
 </div>
 <img src="../../_images/sphx_glr_themes_005.png" srcset="../../_images/sphx_glr_themes_005.png" alt="themes" class = "sphx-glr-single-img"/></section>
 <section id="modifying-the-global-theme">
-<h1>グローバル・テーマの変更<a class="headerlink" href="#modifying-the-global-theme" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>グローバル・テーマの変更<a class="headerlink" href="#modifying-the-global-theme" title="このヘッドラインへのパーマリンク">#</a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">mesh.plot(show_edges=True)</span></code> などのプロット時に個々のパラメータを設定するか，グローバルテーマを設定することで，メッシュの表示方法を制御できます． <code class="docutils literal notranslate"><span class="pre">pyvista.global_theme</span></code> を使用して，既定ですべてのメッシュを表示する方法を個々のパラメータでコントロールすることもできます．</p>
 <p>ここでは，すべての <code class="docutils literal notranslate"><span class="pre">pyvista</span></code> メッシュの現在のグローバルデフォルトを出力します．これらの値は，以前の &quot;Document&quot; テーマによって変更されています．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pv</span><span class="o">.</span><span class="n">global_theme</span>
@@ -1263,7 +1267,7 @@ Anti-Aliasing            : False
 </div>
 <img src="../../_images/sphx_glr_themes_007.png" srcset="../../_images/sphx_glr_themes_007.png" alt="themes" class = "sphx-glr-single-img"/></section>
 <section id="creating-a-custom-theme-and-applying-it-globally">
-<h1>カスタム・テーマの作成とグローバルな適用<a class="headerlink" href="#creating-a-custom-theme-and-applying-it-globally" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>カスタム・テーマの作成とグローバルな適用<a class="headerlink" href="#creating-a-custom-theme-and-applying-it-globally" title="このヘッドラインへのパーマリンク">#</a></h1>
 <p>既存のテーマの1つを修正し，それをグローバルプロットのデフォルトにロードすることで，カスタムテーマを作成できます．</p>
 <p>ここでは，エッジを表示しながら既定でメッシュを赤でプロットする暗いテーマを作成します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">themes</span>
@@ -1280,7 +1284,7 @@ Anti-Aliasing            : False
 </div>
 <img src="../../_images/sphx_glr_themes_008.png" srcset="../../_images/sphx_glr_themes_008.png" alt="themes" class = "sphx-glr-single-img"/></section>
 <section id="creating-a-custom-theme-and-applying-it-to-a-single-plotter">
-<h1>カスタムテーマを作成して単一のプロッタに適用する<a class="headerlink" href="#creating-a-custom-theme-and-applying-it-to-a-single-plotter" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>カスタムテーマを作成して単一のプロッタに適用する<a class="headerlink" href="#creating-a-custom-theme-and-applying-it-to-a-single-plotter" title="このヘッドラインへのパーマリンク">#</a></h1>
 <p>この例では，ベースの &quot;default&quot; テーマからカスタムテーマを作成し，それを単一のプロッタに適用します．  これは変更された <code class="docutils literal notranslate"><span class="pre">DarkTheme</span></code> に設定されたままのグローバル &quot;default&quot; の動作を変えないことに注意してください．</p>
 <p>この方法には，複数のテーマを管理し，1つまたは複数のプロッタに適用できるという利点があります．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">themes</span>
@@ -1328,8 +1332,9 @@ Anti-Aliasing            : False
       </div>
     </div>
   
-    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

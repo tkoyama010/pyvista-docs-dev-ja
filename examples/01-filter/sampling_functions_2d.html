@@ -8,23 +8,19 @@
 
     <title>サンプル関数:2DでのPerlinノイズ &#8212; PyVista 0.34.dev0 ドキュメント</title>
     
-    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
@@ -38,8 +34,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -71,7 +68,7 @@
                     </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -227,6 +224,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../00-load/create-point-cloud.html">
    点群を作成
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00-load/create-pointset.html">
+   PointSetの作成
   </a>
  </li>
 </ul>
@@ -1050,7 +1054,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -1097,7 +1101,7 @@
 <p><a class="reference internal" href="#sphx-glr-download-examples-01-filter-sampling-functions-2d-py"><span class="std std-ref">ここ</span></a> をクリックすると完全なサンプルコードをダウンロードできます．</p>
 </div>
 <section class="sphx-glr-example-title" id="sample-function-perlin-noise-in-2d">
-<span id="sphx-glr-examples-01-filter-sampling-functions-2d-py"></span><h1>サンプル関数:2DでのPerlinノイズ<a class="headerlink" href="#sample-function-perlin-noise-in-2d" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<span id="sphx-glr-examples-01-filter-sampling-functions-2d-py"></span><h1>サンプル関数:2DでのPerlinノイズ<a class="headerlink" href="#sample-function-perlin-noise-in-2d" title="このヘッドラインへのパーマリンク">#</a></h1>
 <p>ここでは， <code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.core.imaging.sample_function()</span></code> を使用して領域上のPerlinノイズをサンプリングし，ランダムな地表を生成します．</p>
 <p>Perlinノイズはグラデーションノイズの一種で，コンピュータグラフィックスのリアルな外観を向上させるために，ビジュアルエフェクトアーティストによってよく使用されます．ソース: <a class="reference external" href="https://en.wikipedia.org/wiki/Perlin_noise">https://en.wikipedia.org/wiki/Perlin_noise</a></p>
 <p>Perlin Noiseの開発により，コンピュータグラフィックスアーティストは，映画業界の視覚効果における自然現象の複雑さをよりよく表現できるようになりました．</p>
@@ -1106,7 +1110,7 @@
 </div>
 </section>
 <section id="generate-perlin-noise-over-a-structuredgrid">
-<h1>StructuredGrid上にPerlinノイズを生成する<a class="headerlink" href="#generate-perlin-noise-over-a-structuredgrid" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>StructuredGrid上にPerlinノイズを生成する<a class="headerlink" href="#generate-perlin-noise-over-a-structuredgrid" title="このヘッドラインへのパーマリンク">#</a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">freq</span></code> の値を自由に変更して &quot;山&quot; の形を変えることができます．たとえば，周波数を下げると，地形が山ではなく丘のように見えます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">freq</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.689</span><span class="p">,</span> <span class="mf">0.562</span><span class="p">,</span> <span class="mf">0.683</span><span class="p">]</span>
 <span class="n">noise</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">perlin_noise</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">freq</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
@@ -1115,7 +1119,7 @@
 </div>
 </section>
 <section id="warp-by-scalar">
-<h1>スカラーによるワープ<a class="headerlink" href="#warp-by-scalar" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>スカラーによるワープ<a class="headerlink" href="#warp-by-scalar" title="このヘッドラインへのパーマリンク">#</a></h1>
 <p>ここでは，スカラーによってワープして，Perlinノイズの値に基づいて地表に高さを与えます．これは地表のシェイプに必要です．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">sampled</span><span class="o">.</span><span class="n">warp_by_scalar</span><span class="p">(</span><span class="s1">&#39;scalars&#39;</span><span class="p">)</span>
 <span class="n">mesh</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">extract_surface</span><span class="p">()</span>
@@ -1181,8 +1185,9 @@
       </div>
     </div>
   
-    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

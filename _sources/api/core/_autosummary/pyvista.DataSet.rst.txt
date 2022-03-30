@@ -21,6 +21,9 @@
       DataSet.add_field_data
       
       
+      DataSet.cast_to_pointset
+      
+      
       DataSet.cast_to_unstructured_grid
       
       

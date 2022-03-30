@@ -8,23 +8,19 @@
 
     <title>平面とボックスでクリップします &#8212; PyVista 0.34.dev0 ドキュメント</title>
     
-    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
@@ -38,8 +34,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -71,7 +68,7 @@
                     </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -227,6 +224,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../00-load/create-point-cloud.html">
    点群を作成
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00-load/create-pointset.html">
+   PointSetの作成
   </a>
  </li>
 </ul>
@@ -1050,7 +1054,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -1069,6 +1073,11 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#clip-with-rotated-box">
    回転ボックス付きクリップ
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#crinkled-clipping">
+   しわくちゃなクリッピング
   </a>
  </li>
 </ul>
@@ -1097,14 +1106,14 @@
 <p><a class="reference internal" href="#sphx-glr-download-examples-01-filter-clipping-py"><span class="std std-ref">ここ</span></a> をクリックすると完全なサンプルコードをダウンロードできます．</p>
 </div>
 <section class="sphx-glr-example-title" id="clipping-with-planes-boxes">
-<span id="clip-with-plane-box-example"></span><span id="sphx-glr-examples-01-filter-clipping-py"></span><h1>平面とボックスでクリップします<a class="headerlink" href="#clipping-with-planes-boxes" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<span id="clip-with-plane-box-example"></span><span id="sphx-glr-examples-01-filter-clipping-py"></span><h1>平面とボックスでクリップします<a class="headerlink" href="#clipping-with-planes-boxes" title="このヘッドラインへのパーマリンク">#</a></h1>
 <p>平面またはボックスを使用してデータセットをクリップ/カットします．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 </pre></div>
 </div>
 <section id="clip-with-plane">
-<h2>平面付きクリップ<a class="headerlink" href="#clip-with-plane" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>平面付きクリップ<a class="headerlink" href="#clip-with-plane" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p><a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSetFilters.clip.html#pyvista.DataSetFilters.clip" title="pyvista.DataSetFilters.clip"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.clip()</span></code></a> フィルタを使用したユーザ定義平面によるデータセットのクリップ</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_bunny_coarse</span><span class="p">()</span>
 <span class="n">clipped</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">invert</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -1119,7 +1128,7 @@
 </div>
 <img src="../../_images/sphx_glr_clipping_001.png" srcset="../../_images/sphx_glr_clipping_001.png" alt="clipping" class = "sphx-glr-single-img"/></section>
 <section id="clip-with-bounds">
-<h2>境界付きクリップ<a class="headerlink" href="#clip-with-bounds" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>境界付きクリップ<a class="headerlink" href="#clip-with-bounds" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p><a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSetFilters.clip_box.html#pyvista.DataSetFilters.clip_box" title="pyvista.DataSetFilters.clip_box"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.clip_box()</span></code></a> フィルタを使用して，XYZ境界のセットによってデータセットをクリップします．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_office</span><span class="p">()</span>
 
@@ -1135,7 +1144,7 @@
 </div>
 <img src="../../_images/sphx_glr_clipping_002.png" srcset="../../_images/sphx_glr_clipping_002.png" alt="clipping" class = "sphx-glr-single-img"/></section>
 <section id="clip-with-rotated-box">
-<h2>回転ボックス付きクリップ<a class="headerlink" href="#clip-with-rotated-box" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>回転ボックス付きクリップ<a class="headerlink" href="#clip-with-rotated-box" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p><a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSetFilters.clip_box.html#pyvista.DataSetFilters.clip_box" title="pyvista.DataSetFilters.clip_box"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.clip_box()</span></code></a> フィルタを使用して任意に回転したソリッドボックスでデータセットをクリップします．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_airplane</span><span class="p">()</span>
 
@@ -1163,7 +1172,40 @@
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_clipping_004.png" srcset="../../_images/sphx_glr_clipping_004.png" alt="clipping" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.086 seconds)</p>
+<img src="../../_images/sphx_glr_clipping_004.png" srcset="../../_images/sphx_glr_clipping_004.png" alt="clipping" class = "sphx-glr-single-img"/></section>
+<section id="crinkled-clipping">
+<h2>しわくちゃなクリッピング<a class="headerlink" href="#crinkled-clipping" title="このヘッドラインへのパーマリンク">#</a></h2>
+<p>クリンプクリッピングは、クリップフィルタが境界上のセルを本当にクリップするのではなく、入力セルの構造を保持し、セル全体を境界から通過させたい場合に有効です。</p>
+<p>このオプションは <a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSetFilters.clip.html#pyvista.DataSetFilters.clip" title="pyvista.DataSetFilters.clip"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.clip()</span></code></a>, <a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSetFilters.clip_box.html#pyvista.DataSetFilters.clip_box" title="pyvista.DataSetFilters.clip_box"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.clip_box()</span></code></a>, <code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.clip_sruface()</span></code> で使用できますが、 <a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSetFilters.clip_scalar.html#pyvista.DataSetFilters.clip_scalar" title="pyvista.DataSetFilters.clip_scalar"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.clip_scalar()</span></code></a> でスカラーによるクリッピングを行っても利用することはできません。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Input mesh</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Wavelet</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>クリッピングプレーンの定義</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">normal</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">plane</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plane</span><span class="p">(</span><span class="n">i_size</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">j_size</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">direction</span><span class="o">=</span><span class="n">normal</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>標準クリップを実行します</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">clipped</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">normal</span><span class="o">=</span><span class="n">normal</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>クリンプクリップを行います</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">crinkled</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">normal</span><span class="o">=</span><span class="n">normal</span><span class="p">,</span> <span class="n">crinkle</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>プロット比較</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">clipped</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">plane</span><span class="o">.</span><span class="n">extract_feature_edges</span><span class="p">(),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">crinkled</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">plane</span><span class="o">.</span><span class="n">extract_feature_edges</span><span class="p">(),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">link_views</span><span class="p">()</span>
+<span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<img src="../../_images/sphx_glr_clipping_005.png" srcset="../../_images/sphx_glr_clipping_005.png" alt="clipping" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.563 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-filter-clipping-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/057f9cd7fce54e98d95bd9ae53b60d18/clipping.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">clipping.py</span></code></a></p>
@@ -1186,8 +1228,9 @@
       </div>
     </div>
   
-    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

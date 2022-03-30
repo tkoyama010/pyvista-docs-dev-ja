@@ -8,23 +8,19 @@
 
     <title>PyVistaで ipyvtklink を使う &#8212; PyVista 0.34.dev0 ドキュメント</title>
     
-    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
@@ -38,8 +34,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -71,7 +68,7 @@
                     </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -297,7 +294,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -337,7 +334,7 @@
               <div>
                 
   <section id="using-ipyvtklink-with-pyvista">
-<span id="ipyvtk-plotting"></span><h1>PyVistaで <code class="docutils literal notranslate"><span class="pre">ipyvtklink</span></code> を使う<a class="headerlink" href="#using-ipyvtklink-with-pyvista" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<span id="ipyvtk-plotting"></span><h1>PyVistaで <code class="docutils literal notranslate"><span class="pre">ipyvtklink</span></code> を使う<a class="headerlink" href="#using-ipyvtklink-with-pyvista" title="このヘッドラインへのパーマリンク">#</a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">pyvista</span></code> には， <code class="docutils literal notranslate"><span class="pre">ipyvtklink</span></code> を使用して，JupyterLab環境内にフル機能のプロットを表示する機能があります．この機能は，現在のレンダリングウィンドウをJupyterLab内のキャンバスにストリーミングし，キャンバスからのユーザアクションをすべてVTKレンダリングウィンドウに戻すことで機能します．</p>
 <p>JupyterLabがローカルで実行されている場合，これはエキサイティングな機能ではありませんが，JupyterLabからサブプロットやウィジェットを含む任意のプロットを表示できるため，リモートでプロットする場合には大きな意味があります．</p>
 <p>たとえば，コードの両方のセクションは，JupyterLab内に対話型キャンバスを表示します．</p>
@@ -359,7 +356,7 @@
 </pre></div>
 </div>
 <section id="installation">
-<h2>インストール<a class="headerlink" href="#installation" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>インストール<a class="headerlink" href="#installation" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p>Anaconda環境を使用している場合，インストールは非常に簡単です．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span> <span class="n">pyvista</span> <span class="o">--</span><span class="n">file</span> <span class="n">environment</span><span class="o">.</span><span class="n">yml</span>
 </pre></div>
@@ -381,7 +378,7 @@
 </pre></div>
 </div>
 <section id="other-considerations">
-<h3>その他の考慮事項<a class="headerlink" href="#other-considerations" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>その他の考慮事項<a class="headerlink" href="#other-considerations" title="このヘッドラインへのパーマリンク">#</a></h3>
 <p>GPUアクセラレーションを使用する価値があるかもしれません． <a class="reference internal" href="../../extras/building_vtk.html#gpu-off-screen"><span class="std std-ref">オフスクリーンプロットのGPUサポート</span></a> を参照してください．</p>
 <p>GPUアクセラレーションを使用していない場合は，必ず <code class="docutils literal notranslate"><span class="pre">Xvfb</span></code> を使用して仮想フレームバッファを起動してください．bashを使用して起動するには，次のようにします．</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">DISPLAY</span><span class="o">=</span>:99.0
@@ -412,8 +409,9 @@ sleep <span class="m">3</span>
       </div>
     </div>
   
-    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

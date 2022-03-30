@@ -8,23 +8,19 @@
 
     <title>不透明度を指定してプロット &#8212; PyVista 0.34.dev0 ドキュメント</title>
     
-    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
@@ -38,8 +34,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -71,7 +68,7 @@
                     </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -227,6 +224,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../00-load/create-point-cloud.html">
    点群を作成
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00-load/create-pointset.html">
+   PointSetの作成
   </a>
  </li>
 </ul>
@@ -1050,7 +1054,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -1097,7 +1101,7 @@
 <p><a class="reference internal" href="#sphx-glr-download-examples-02-plot-opacity-py"><span class="std std-ref">ここ</span></a> をクリックすると完全なサンプルコードをダウンロードできます．</p>
 </div>
 <section class="sphx-glr-example-title" id="plot-with-opacity">
-<span id="plot-opacity-example"></span><span id="sphx-glr-examples-02-plot-opacity-py"></span><h1>不透明度を指定してプロット<a class="headerlink" href="#plot-with-opacity" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<span id="plot-opacity-example"></span><span id="sphx-glr-examples-02-plot-opacity-py"></span><h1>不透明度を指定してプロット<a class="headerlink" href="#plot-with-opacity" title="このヘッドラインへのパーマリンク">#</a></h1>
 <p>不透明度伝達関数またはスカラー配列に基づく不透明度マッピングを使用して，メッシュのスカラー配列をプロットします．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
@@ -1108,7 +1112,7 @@
 </pre></div>
 </div>
 <section id="global-value">
-<h2>グローバル値<a class="headerlink" href="#global-value" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>グローバル値<a class="headerlink" href="#global-value" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p>また，0から1の範囲で1つのfloat値を渡すことにより，グローバル不透明度値をメッシュに適用し，メッシュの背後にあるオブジェクトを表示することもできます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span>
@@ -1122,7 +1126,7 @@
 <img src="../../_images/sphx_glr_opacity_001.png" srcset="../../_images/sphx_glr_opacity_001.png" alt="opacity" class = "sphx-glr-single-img"/><p>次の例では， <code class="docutils literal notranslate"><span class="pre">use_transparency=True</span></code> を指定して不透明度を透明度に変換できます．</p>
 </section>
 <section id="transfer-functions">
-<h2>転送機能<a class="headerlink" href="#transfer-functions" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>転送機能<a class="headerlink" href="#transfer-functions" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p>プロットされた任意のスカラー配列に不透明度マッピングを適用することができます．単一の静的な値を指定してすべてのセルでメッシュを透明にするか，またはプロットされたスカラー配列が不透明度にマップされる伝達関数を使用できます．いくつかの伝達関数があらかじめ定義されています．</p>
 <p>不透明度転送関数は次のとおりです．</p>
 <ul class="simple">
@@ -1189,7 +1193,7 @@
 </div>
 <img src="../../_images/sphx_glr_opacity_006.png" srcset="../../_images/sphx_glr_opacity_006.png" alt="opacity" class = "sphx-glr-single-img"/></section>
 <section id="opacity-by-array">
-<h2>配列による不透明度<a class="headerlink" href="#opacity-by-array" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>配列による不透明度<a class="headerlink" href="#opacity-by-array" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p>メッシュに関連付けられたスカラー配列を使用して，スカラーフィールドから得られた独自の不透明度/透明度値を各セルに与えることもできます．たとえば，モデリング結果の不確実性配列を使用して，不確実性のあるメッシュ領域を非表示にし，適切に解決された領域をハイライト表示することができます．</p>
 <p>次に，カラー値を使用してメッシュをプロットし，2番目の配列を使用してメッシュの透明度を制御する例を示します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_model_with_variance</span><span class="p">()</span>
@@ -1248,8 +1252,9 @@ variance will be completely transparent.</p>
       </div>
     </div>
   
-    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

@@ -8,23 +8,19 @@
 
     <title>ボリュームレンダリング &#8212; PyVista 0.34.dev0 ドキュメント</title>
     
-    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
@@ -38,8 +34,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -71,7 +68,7 @@
                     </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -227,6 +224,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../00-load/create-point-cloud.html">
    点群を作成
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00-load/create-pointset.html">
+   PointSetの作成
   </a>
  </li>
 </ul>
@@ -1050,7 +1054,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -1102,7 +1106,7 @@
 <p><a class="reference internal" href="#sphx-glr-download-examples-02-plot-volume-py"><span class="std std-ref">ここ</span></a> をクリックすると完全なサンプルコードをダウンロードできます．</p>
 </div>
 <section class="sphx-glr-example-title" id="volume-rendering">
-<span id="volume-rendering-example"></span><span id="sphx-glr-examples-02-plot-volume-py"></span><h1>ボリュームレンダリング<a class="headerlink" href="#volume-rendering" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<span id="volume-rendering-example"></span><span id="sphx-glr-examples-02-plot-volume-py"></span><h1>ボリュームレンダリング<a class="headerlink" href="#volume-rendering" title="このヘッドラインへのパーマリンク">#</a></h1>
 <p><a class="reference internal" href="../../api/core/_autosummary/pyvista.UniformGrid.html#pyvista.UniformGrid" title="pyvista.UniformGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UniformGrid</span></code></a> または3 D NumPy配列のようなボリュームレンダリングの均一メッシュタイプ．</p>
 <p>これはまた <a class="reference internal" href="../../api/core/_autosummary/pyvista.UniformGridFilters.extract_subset.html#pyvista.UniformGridFilters.extract_subset" title="pyvista.UniformGridFilters.extract_subset"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.UniformGridFilters.extract_subset()</span></code></a> フィルタを使用して <a class="reference internal" href="../../api/core/_autosummary/pyvista.UniformGrid.html#pyvista.UniformGrid" title="pyvista.UniformGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UniformGrid</span></code></a> から関心領域 (VOI) を抽出する方法を探求する．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
@@ -1137,7 +1141,7 @@
 </div>
 <br />
 <br /><section id="simple-volume-render">
-<h2>シンプルボリュームレンダー<a class="headerlink" href="#simple-volume-render" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>シンプルボリュームレンダー<a class="headerlink" href="#simple-volume-render" title="このヘッドラインへのパーマリンク">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># A nice camera position</span>
 <span class="n">cpos</span> <span class="o">=</span> <span class="p">[(</span><span class="o">-</span><span class="mf">381.74</span><span class="p">,</span> <span class="o">-</span><span class="mf">46.02</span><span class="p">,</span> <span class="mf">216.54</span><span class="p">),</span> <span class="p">(</span><span class="mf">74.8305</span><span class="p">,</span> <span class="mf">89.2905</span><span class="p">,</span> <span class="mf">100.0</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.23</span><span class="p">,</span> <span class="mf">0.072</span><span class="p">,</span> <span class="mf">0.97</span><span class="p">)]</span>
 
@@ -1146,7 +1150,7 @@
 </div>
 <img src="../../_images/sphx_glr_volume_001.png" srcset="../../_images/sphx_glr_volume_001.png" alt="volume" class = "sphx-glr-single-img"/></section>
 <section id="opacity-mappings">
-<h2>不透明度マッピング<a class="headerlink" href="#opacity-mappings" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>不透明度マッピング<a class="headerlink" href="#opacity-mappings" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p>または，以下のように <code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.BasePlotter.add_volume()</span></code> メソッドを使用します．ここでは，シグモイドへのデフォルト以外の不透明度マッピングを使用することに注意してください．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_volume</span><span class="p">(</span><span class="n">vol</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;bone&quot;</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="s2">&quot;sigmoid&quot;</span><span class="p">)</span>
@@ -1177,7 +1181,7 @@
 </div>
 <img src="../../_images/sphx_glr_volume_004.png" srcset="../../_images/sphx_glr_volume_004.png" alt="volume" class = "sphx-glr-single-img"/></section>
 <section id="cool-volume-examples">
-<h2>かっこいい体積の例<a class="headerlink" href="#cool-volume-examples" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>かっこいい体積の例<a class="headerlink" href="#cool-volume-examples" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p>ここでは，クールなボリュームレンダリングの例をいくつか紹介します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">head</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_head</span><span class="p">()</span>
 
@@ -1204,7 +1208,7 @@
 </div>
 <img src="../../_images/sphx_glr_volume_007.png" srcset="../../_images/sphx_glr_volume_007.png" alt="volume" class = "sphx-glr-single-img"/></section>
 <section id="extracting-a-voi">
-<h2>VOIの抽出<a class="headerlink" href="#extracting-a-voi" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>VOIの抽出<a class="headerlink" href="#extracting-a-voi" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p><a class="reference internal" href="../../api/core/_autosummary/pyvista.UniformGridFilters.extract_subset.html#pyvista.UniformGridFilters.extract_subset" title="pyvista.UniformGridFilters.extract_subset"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.UniformGridFilters.extract_subset()</span></code></a> フィルタを使用して，ボリュームレンダリングの対象となるボリューム/サブセットボリュームを抽出します．これは，特に大きなボリュームを処理し，特定の領域のみをボリュームレンダーする場合に理想的です．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load a particularly large volume</span>
 <span class="n">large_vol</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_damavand_volcano</span><span class="p">()</span>
@@ -1292,8 +1296,9 @@
       </div>
     </div>
   
-    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

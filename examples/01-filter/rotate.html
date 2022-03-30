@@ -8,23 +8,19 @@
 
     <title>回転 &#8212; PyVista 0.34.dev0 ドキュメント</title>
     
-    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
@@ -38,8 +34,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -71,7 +68,7 @@
                     </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -227,6 +224,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../00-load/create-point-cloud.html">
    点群を作成
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00-load/create-pointset.html">
+   PointSetの作成
   </a>
  </li>
 </ul>
@@ -1050,7 +1054,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -1112,14 +1116,14 @@
 <p><a class="reference internal" href="#sphx-glr-download-examples-01-filter-rotate-py"><span class="std std-ref">ここ</span></a> をクリックすると完全なサンプルコードをダウンロードできます．</p>
 </div>
 <section class="sphx-glr-example-title" id="rotations">
-<span id="rotate-example"></span><span id="sphx-glr-examples-01-filter-rotate-py"></span><h1>回転<a class="headerlink" href="#rotations" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<span id="rotate-example"></span><span id="sphx-glr-examples-01-filter-rotate-py"></span><h1>回転<a class="headerlink" href="#rotations" title="このヘッドラインへのパーマリンク">#</a></h1>
 <p>軸を中心としたメッシュの回転．このモデルでは，x軸は左から右になります; y軸は下から上に，z軸はイメージから出てきます．カメラの位置は4つのイメージすべてで同じです．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 </pre></div>
 </div>
 <section id="define-camera-and-axes">
-<h2>カメラと軸を定義する<a class="headerlink" href="#define-camera-and-axes" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>カメラと軸を定義する<a class="headerlink" href="#define-camera-and-axes" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p>カメラと軸を定義します．軸原点を <code class="docutils literal notranslate"><span class="pre">(3.0,</span> <span class="pre">3.0,</span> <span class="pre">3.0)</span></code> に設定します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_cow</span><span class="p">()</span>
 <span class="n">mesh</span><span class="o">.</span><span class="n">points</span> <span class="o">/=</span> <span class="mf">1.5</span>  <span class="c1"># scale the mesh</span>
@@ -1134,7 +1138,7 @@
 </div>
 </section>
 <section id="original-mesh">
-<h2>元のメッシュ<a class="headerlink" href="#original-mesh" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>元のメッシュ<a class="headerlink" href="#original-mesh" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p>元のメッシュをプロットします．プロッタに軸アクターを追加します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 
@@ -1148,7 +1152,7 @@
 </div>
 <img src="../../_images/sphx_glr_rotate_001.png" srcset="../../_images/sphx_glr_rotate_001.png" alt="rotate" class = "sphx-glr-single-img"/></section>
 <section id="rotation-about-the-x-axis">
-<h2>x軸を中心の回転．<a class="headerlink" href="#rotation-about-the-x-axis" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>x軸を中心の回転．<a class="headerlink" href="#rotation-about-the-x-axis" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p>x軸を中心に60度ごとに回転したメッシュをプロットします．プロッタに軸アクターを追加し，軸の原点を回転点に設定します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 
@@ -1165,7 +1169,7 @@
 </div>
 <img src="../../_images/sphx_glr_rotate_002.png" srcset="../../_images/sphx_glr_rotate_002.png" alt="rotate" class = "sphx-glr-single-img"/></section>
 <section id="rotation-about-the-y-axis">
-<h2>y軸を中心の回転．<a class="headerlink" href="#rotation-about-the-y-axis" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>y軸を中心の回転．<a class="headerlink" href="#rotation-about-the-y-axis" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p>y軸を中心に60度ごとに回転したメッシュをプロットします．プロッタに軸アクターを追加し，軸の原点を回転点に設定します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 
@@ -1182,7 +1186,7 @@
 </div>
 <img src="../../_images/sphx_glr_rotate_003.png" srcset="../../_images/sphx_glr_rotate_003.png" alt="rotate" class = "sphx-glr-single-img"/></section>
 <section id="rotation-about-the-z-axis">
-<h2>z軸を中心の回転．<a class="headerlink" href="#rotation-about-the-z-axis" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>z軸を中心の回転．<a class="headerlink" href="#rotation-about-the-z-axis" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p>z軸を中心に60度ごとに回転したメッシュをプロットします．プロッタに軸アクターを追加し，軸の原点を回転点に設定します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 
@@ -1199,7 +1203,7 @@
 </div>
 <img src="../../_images/sphx_glr_rotate_004.png" srcset="../../_images/sphx_glr_rotate_004.png" alt="rotate" class = "sphx-glr-single-img"/></section>
 <section id="rotation-about-a-custom-vector">
-<h2>ベクトル中心の回転．<a class="headerlink" href="#rotation-about-a-custom-vector" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>ベクトル中心の回転．<a class="headerlink" href="#rotation-about-a-custom-vector" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p>カスタムベクトルを中心に60度ごとに回転させたメッシュをプロットします．プロッタに軸アクターを追加し，軸の原点を回転点に設定します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 
@@ -1242,8 +1246,9 @@
       </div>
     </div>
   
-    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

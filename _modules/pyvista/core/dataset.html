@@ -7,23 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>pyvista.core.dataset &#8212; PyVista 0.34.dev0 ドキュメント</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
@@ -37,8 +33,9 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -68,7 +65,7 @@
                     </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -214,7 +211,7 @@
 
 <span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span> <span class="o">&gt;=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">):</span>
     <span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Literal</span>
-<span class="k">else</span><span class="p">:</span>
+<span class="k">else</span><span class="p">:</span>  <span class="c1"># pragma: no cover</span>
     <span class="kn">from</span> <span class="nn">typing_extensions</span> <span class="kn">import</span> <span class="n">Literal</span>
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -600,7 +597,7 @@
         <span class="k">return</span> <span class="n">pyvista_ndarray</span><span class="p">(</span><span class="n">_points</span><span class="p">,</span> <span class="n">dataset</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
 
     <span class="nd">@points</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">points</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">points</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">VectorArray</span><span class="p">,</span> <span class="n">NumericArray</span><span class="p">]):</span>
+    <span class="k">def</span> <span class="nf">points</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">points</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">VectorArray</span><span class="p">,</span> <span class="n">NumericArray</span><span class="p">,</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkPoints</span><span class="p">]):</span>
         <span class="n">pdata</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">GetPoints</span><span class="p">()</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">pyvista_ndarray</span><span class="p">):</span>
             <span class="c1"># simply set the underlying data</span>
@@ -609,6 +606,13 @@
                 <span class="n">pdata</span><span class="o">.</span><span class="n">Modified</span><span class="p">()</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">Modified</span><span class="p">()</span>
                 <span class="k">return</span>
+        <span class="c1"># directly set the data if vtk object</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkPoints</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">SetPoints</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">pdata</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">pdata</span><span class="o">.</span><span class="n">Modified</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">Modified</span><span class="p">()</span>
+            <span class="k">return</span>
         <span class="c1"># otherwise, wrap and use the array</span>
         <span class="n">points</span> <span class="o">=</span> <span class="n">_coerce_pointslike_arg</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
         <span class="n">vtk_points</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">vtk_points</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
@@ -653,7 +657,7 @@
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Active vectors are not vectors.&#39;</span><span class="p">)</span>
 
         <span class="n">scale_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">vectors_name</span><span class="si">}</span><span class="s1"> Magnitude&#39;</span>
-        <span class="n">scale</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">active_vectors</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">scale</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">active_vectors</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># type: ignore</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">point_data</span><span class="o">.</span><span class="n">set_array</span><span class="p">(</span><span class="n">scale</span><span class="p">,</span> <span class="n">scale_name</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">glyph</span><span class="p">(</span><span class="n">orient</span><span class="o">=</span><span class="n">vectors_name</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">scale_name</span><span class="p">)</span>
 
@@ -2249,6 +2253,37 @@
         <span class="n">alg</span><span class="o">.</span><span class="n">Update</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">_get_output</span><span class="p">(</span><span class="n">alg</span><span class="p">)</span></div>
 
+<div class="viewcode-block" id="DataSet.cast_to_pointset"><a class="viewcode-back" href="../../../api/core/_autosummary/pyvista.DataSet.cast_to_pointset.html#pyvista.DataSet.cast_to_pointset">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">cast_to_pointset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">deep</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;pyvista.PointSet&#39;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Get a new representation of this object as a :class:`pyvista.PointSet`.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        deep : bool, optional</span>
+<span class="sd">            When ``True`` makes a full copy of the object.  When ``False``,</span>
+<span class="sd">            performs a shallow copy where the points and data arrays are</span>
+<span class="sd">            references to the original object.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        pyvista.PointSet</span>
+<span class="sd">            Dataset cast into a :class:`pyvista.PointSet`.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        &gt;&gt;&gt; import pyvista</span>
+<span class="sd">        &gt;&gt;&gt; mesh = pyvista.Sphere()</span>
+<span class="sd">        &gt;&gt;&gt; pointset = mesh.cast_to_pointset()</span>
+<span class="sd">        &gt;&gt;&gt; type(pointset)</span>
+<span class="sd">        &lt;class &#39;pyvista.core.pointset.PointSet&#39;&gt;</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">pset</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">PointSet</span><span class="p">()</span>
+        <span class="n">pset</span><span class="o">.</span><span class="n">SetPoints</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">GetPoints</span><span class="p">())</span>
+        <span class="n">pset</span><span class="o">.</span><span class="n">GetPointData</span><span class="p">()</span><span class="o">.</span><span class="n">ShallowCopy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">GetPointData</span><span class="p">())</span>
+        <span class="k">if</span> <span class="n">deep</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">pset</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">deep</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">pset</span></div>
+
 <div class="viewcode-block" id="DataSet.find_closest_point"><a class="viewcode-back" href="../../../api/core/_autosummary/pyvista.DataSet.find_closest_point.html#pyvista.DataSet.find_closest_point">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">find_closest_point</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">point</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Find index of closest point in this mesh to the given point.</span>
 
@@ -2696,8 +2731,9 @@
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

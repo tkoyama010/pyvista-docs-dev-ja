@@ -7,23 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>pyvista.plotting.plotting &#8212; PyVista 0.34.dev0 ドキュメント</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
@@ -37,8 +33,9 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -68,7 +65,7 @@
                     </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -638,7 +635,7 @@
 <span class="sd">            Rotate scene to be compatible with the glTF specifications.</span>
 
 <span class="sd">        save_normals : bool, optional</span>
-<span class="sd">            Saves the point array ``&#39;Normals&#39;`` as ``&#39;NORMALS&#39;`` in</span>
+<span class="sd">            Saves the point array ``&#39;Normals&#39;`` as ``&#39;NORMAL&#39;`` in</span>
 <span class="sd">            the outputted scene.</span>
 
 <span class="sd">        Examples</span>
@@ -677,6 +674,7 @@
         <span class="kn">from</span> <span class="nn">vtkmodules.vtkIOExport</span> <span class="kn">import</span> <span class="n">vtkGLTFExporter</span>
 
         <span class="c1"># rotate scene to gltf compatible view</span>
+        <span class="n">renamed_arrays</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># any renamed normal arrays</span>
         <span class="k">if</span> <span class="n">rotate_scene</span><span class="p">:</span>
             <span class="k">for</span> <span class="n">renderer</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">renderers</span><span class="p">:</span>
                 <span class="k">for</span> <span class="n">actor</span> <span class="ow">in</span> <span class="n">renderer</span><span class="o">.</span><span class="n">actors</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
@@ -691,9 +689,13 @@
                                 <span class="k">continue</span>
                             <span class="n">dataset</span> <span class="o">=</span> <span class="n">mapper</span><span class="o">.</span><span class="n">GetInputAsDataSet</span><span class="p">()</span>
                             <span class="k">if</span> <span class="s1">&#39;Normals&#39;</span> <span class="ow">in</span> <span class="n">dataset</span><span class="o">.</span><span class="n">point_data</span><span class="p">:</span>
-                                <span class="c1"># ensure normals are active</span>
-                                <span class="n">normals</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">point_data</span><span class="p">[</span><span class="s1">&#39;Normals&#39;</span><span class="p">]</span>
-                                <span class="n">dataset</span><span class="o">.</span><span class="n">point_data</span><span class="o">.</span><span class="n">active_normals</span> <span class="o">=</span> <span class="n">normals</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+                                <span class="c1"># By default VTK uses the &#39;Normals&#39; point data for normals</span>
+                                <span class="c1"># but gLTF uses NORMAL.</span>
+                                <span class="n">point_data</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">GetPointData</span><span class="p">()</span>
+                                <span class="n">array</span> <span class="o">=</span> <span class="n">point_data</span><span class="o">.</span><span class="n">GetArray</span><span class="p">(</span><span class="s1">&#39;Normals&#39;</span><span class="p">)</span>
+                                <span class="n">array</span><span class="o">.</span><span class="n">SetName</span><span class="p">(</span><span class="s1">&#39;NORMAL&#39;</span><span class="p">)</span>
+                                <span class="n">renamed_arrays</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">array</span><span class="p">)</span>
+
                         <span class="k">except</span><span class="p">:</span>  <span class="c1"># noqa: E722</span>
                             <span class="k">pass</span>
 
@@ -711,6 +713,10 @@
                     <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">actor</span><span class="p">,</span> <span class="s1">&#39;RotateX&#39;</span><span class="p">):</span>
                         <span class="n">actor</span><span class="o">.</span><span class="n">RotateZ</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
                         <span class="n">actor</span><span class="o">.</span><span class="n">RotateX</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+
+        <span class="c1"># revert any renamed arrays</span>
+        <span class="k">for</span> <span class="n">array</span> <span class="ow">in</span> <span class="n">renamed_arrays</span><span class="p">:</span>
+            <span class="n">array</span><span class="o">.</span><span class="n">SetName</span><span class="p">(</span><span class="s1">&#39;Normals&#39;</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">enable_hidden_line_removal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">all_renderers</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Enable hidden line removal.</span>
@@ -2166,6 +2172,11 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span>
                     <span class="sa">f</span><span class="s1">&#39;Object type (</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">mesh</span><span class="p">)</span><span class="si">}</span><span class="s1">) not supported for plotting in PyVista.&#39;</span>
                 <span class="p">)</span>
+
+        <span class="c1"># cast to PointSet to PolyData</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">PointSet</span><span class="p">):</span>
+            <span class="n">mesh</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">cast_to_polydata</span><span class="p">(</span><span class="n">deep</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
         <span class="c1">##### Parse arguments to be used for all meshes #####</span>
 
         <span class="c1"># Avoid mutating input</span>
@@ -5413,8 +5424,9 @@
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

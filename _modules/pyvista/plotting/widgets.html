@@ -7,23 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>pyvista.plotting.widgets &#8212; PyVista 0.34.dev0 ドキュメント</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
@@ -37,8 +33,9 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -68,7 +65,7 @@
                     </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -346,6 +343,7 @@
         <span class="n">widget_color</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
         <span class="n">outline_translation</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
         <span class="n">merge_points</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">crinkle</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
         <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
     <span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Clip a mesh using a box widget.</span>
@@ -385,6 +383,9 @@
 <span class="sd">            If ``True`` (default), coinciding points of independently</span>
 <span class="sd">            defined mesh elements will be merged.</span>
 
+<span class="sd">        crinkle : bool, optional</span>
+<span class="sd">            Crinkle the clip by extracting the entire cells along the clip.</span>
+
 <span class="sd">        **kwargs : dict, optional</span>
 <span class="sd">            All additional keyword arguments are passed to</span>
 <span class="sd">            :func:`BasePlotter.add_mesh` to control how the mesh is</span>
@@ -404,6 +405,9 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="o">.</span><span class="n">outline</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;outline&quot;</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.0</span><span class="p">)</span>
 
         <span class="n">port</span> <span class="o">=</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">invert</span> <span class="k">else</span> <span class="mi">0</span>
+
+        <span class="k">if</span> <span class="n">crinkle</span><span class="p">:</span>
+            <span class="n">mesh</span><span class="o">.</span><span class="n">cell_data</span><span class="p">[</span><span class="s1">&#39;cell_ids&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">mesh</span><span class="o">.</span><span class="n">n_cells</span><span class="p">)</span>
 
         <span class="n">alg</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkBoxClipDataSet</span><span class="p">()</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">merge_points</span><span class="p">:</span>
@@ -426,7 +430,10 @@
 
             <span class="n">alg</span><span class="o">.</span><span class="n">SetBoxClip</span><span class="p">(</span><span class="o">*</span><span class="n">bounds</span><span class="p">)</span>
             <span class="n">alg</span><span class="o">.</span><span class="n">Update</span><span class="p">()</span>
-            <span class="n">box_clipped_mesh</span><span class="o">.</span><span class="n">shallow_copy</span><span class="p">(</span><span class="n">alg</span><span class="o">.</span><span class="n">GetOutput</span><span class="p">(</span><span class="n">port</span><span class="p">))</span>
+            <span class="n">clipped</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">alg</span><span class="o">.</span><span class="n">GetOutput</span><span class="p">(</span><span class="n">port</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">crinkle</span><span class="p">:</span>
+                <span class="n">clipped</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">extract_cells</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">clipped</span><span class="o">.</span><span class="n">cell_data</span><span class="p">[</span><span class="s1">&#39;cell_ids&#39;</span><span class="p">]))</span>
+            <span class="n">box_clipped_mesh</span><span class="o">.</span><span class="n">shallow_copy</span><span class="p">(</span><span class="n">clipped</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">add_box_widget</span><span class="p">(</span>
             <span class="n">callback</span><span class="o">=</span><span class="n">callback</span><span class="p">,</span>
@@ -659,6 +666,7 @@
         <span class="n">outline_translation</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
         <span class="n">implicit</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
         <span class="n">normal_rotation</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">crinkle</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
         <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
     <span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Clip a mesh using a plane widget.</span>
@@ -715,6 +723,9 @@
 <span class="sd">            rotating the normal. This is forced to ``False`` when</span>
 <span class="sd">            ``assign_to_axis`` is set.</span>
 
+<span class="sd">        crinkle : bool, optional</span>
+<span class="sd">            Crinkle the clip by extracting the entire cells along the clip.</span>
+
 <span class="sd">        **kwargs : dict, optional</span>
 <span class="sd">            All additional keyword arguments are passed to</span>
 <span class="sd">            :func:`BasePlotter.add_mesh` to control how the mesh is</span>
@@ -734,6 +745,9 @@
         <span class="n">mesh</span><span class="o">.</span><span class="n">set_active_scalars</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;scalars&#39;</span><span class="p">,</span> <span class="n">mesh</span><span class="o">.</span><span class="n">active_scalars_name</span><span class="p">))</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="o">.</span><span class="n">outline</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;outline&quot;</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.0</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">crinkle</span><span class="p">:</span>
+            <span class="n">mesh</span><span class="o">.</span><span class="n">cell_data</span><span class="p">[</span><span class="s1">&#39;cell_ids&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">mesh</span><span class="o">.</span><span class="n">n_cells</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkPolyData</span><span class="p">):</span>
             <span class="n">alg</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkClipPolyData</span><span class="p">()</span>
@@ -755,7 +769,10 @@
             <span class="n">function</span> <span class="o">=</span> <span class="n">generate_plane</span><span class="p">(</span><span class="n">normal</span><span class="p">,</span> <span class="n">origin</span><span class="p">)</span>
             <span class="n">alg</span><span class="o">.</span><span class="n">SetClipFunction</span><span class="p">(</span><span class="n">function</span><span class="p">)</span>  <span class="c1"># the implicit function</span>
             <span class="n">alg</span><span class="o">.</span><span class="n">Update</span><span class="p">()</span>  <span class="c1"># Perform the Cut</span>
-            <span class="n">plane_clipped_mesh</span><span class="o">.</span><span class="n">shallow_copy</span><span class="p">(</span><span class="n">alg</span><span class="o">.</span><span class="n">GetOutput</span><span class="p">())</span>
+            <span class="n">clipped</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">alg</span><span class="o">.</span><span class="n">GetOutput</span><span class="p">())</span>
+            <span class="k">if</span> <span class="n">crinkle</span><span class="p">:</span>
+                <span class="n">clipped</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">extract_cells</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">clipped</span><span class="o">.</span><span class="n">cell_data</span><span class="p">[</span><span class="s1">&#39;cell_ids&#39;</span><span class="p">]))</span>
+            <span class="n">plane_clipped_mesh</span><span class="o">.</span><span class="n">shallow_copy</span><span class="p">(</span><span class="n">clipped</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">add_plane_widget</span><span class="p">(</span>
             <span class="n">callback</span><span class="o">=</span><span class="n">callback</span><span class="p">,</span>
@@ -2193,8 +2210,9 @@
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

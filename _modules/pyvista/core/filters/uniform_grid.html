@@ -7,23 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>pyvista.core.filters.uniform_grid &#8212; PyVista 0.34.dev0 ドキュメント</title>
     
-    <link href="../../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/thebelab.css" />
@@ -37,8 +33,9 @@
     <link rel="stylesheet" type="text/css" href="../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-    <link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
     <script src="../../../../_static/jquery.js"></script>
     <script src="../../../../_static/underscore.js"></script>
@@ -68,7 +65,7 @@
                     </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -371,6 +368,89 @@
         <span class="n">fixed</span><span class="o">.</span><span class="n">copy_meta_from</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">fixed</span></div>
 
+<div class="viewcode-block" id="UniformGridFilters.image_dilate_erode"><a class="viewcode-back" href="../../../../api/core/_autosummary/pyvista.UniformGridFilters.image_dilate_erode.html#pyvista.UniformGridFilters.image_dilate_erode">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">image_dilate_erode</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">dilate_value</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">erode_value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">kernel_size</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+        <span class="n">scalars</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">preference</span><span class="o">=</span><span class="s1">&#39;points&#39;</span><span class="p">,</span>
+        <span class="n">progress_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Dilates one value and erodes another.</span>
+
+<span class="sd">        ``image_dilate_erode`` will dilate one value and erode another. It uses</span>
+<span class="sd">        an elliptical footprint, and only erodes/dilates on the boundary of the</span>
+<span class="sd">        two values. The filter is restricted to the X, Y, and Z axes for now.</span>
+<span class="sd">        It can degenerate to a 2 or 1-dimensional filter by setting the kernel</span>
+<span class="sd">        size to 1 for a specific axis.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        dilate_value : int or float, optional</span>
+<span class="sd">            Dilate value in the dataset. Default: ``1``.</span>
+
+<span class="sd">        erode_value : int or float, optional</span>
+<span class="sd">            Erode value in the dataset. Default: ``0``.</span>
+
+<span class="sd">        kernel_size : list(int) or tuple(int), optional</span>
+<span class="sd">            Length 3 iterable of ints: ``(xsize, ysize, zsize)``.</span>
+<span class="sd">            Determines the size (and center) of the kernel.</span>
+<span class="sd">            Default: ``(3, 3, 3)``.</span>
+
+<span class="sd">        scalars : str, optional</span>
+<span class="sd">            Name of scalars to process. Defaults to currently active scalars.</span>
+
+<span class="sd">        preference : str, optional</span>
+<span class="sd">            When scalars are specified, this is the preferred array</span>
+<span class="sd">            type to search for in the dataset.  Must be either</span>
+<span class="sd">            ``&#39;point&#39;`` or ``&#39;cell&#39;``.</span>
+
+<span class="sd">        progress_bar : bool, optional</span>
+<span class="sd">            Display a progress bar to indicate progress. Default ``False``.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        pyvista.UniformGrid</span>
+<span class="sd">            Dataset that has been dilated/eroded on the boundary of the specified scalars.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        Demonstrate image dilate/erode on an example dataset. First, plot</span>
+<span class="sd">        the example dataset with the active scalars.</span>
+
+<span class="sd">        &gt;&gt;&gt; from pyvista import examples</span>
+<span class="sd">        &gt;&gt;&gt; uni = examples.load_uniform()</span>
+<span class="sd">        &gt;&gt;&gt; uni.plot()</span>
+
+<span class="sd">        Now, plot the image threshold with ``threshold=[400, 600]``. Note how</span>
+<span class="sd">        values within the threshold are 1 and outside are 0.</span>
+
+<span class="sd">        &gt;&gt;&gt; ithresh = uni.image_threshold([400, 600])</span>
+<span class="sd">        &gt;&gt;&gt; ithresh.plot()</span>
+
+<span class="sd">        Note how there is a hole in the thresholded image. Apply a dilation/</span>
+<span class="sd">        erosion filter with a large kernel to fill that hole in.</span>
+
+<span class="sd">        &gt;&gt;&gt; idilate = ithresh.image_dilate_erode(kernel_size=[5, 5, 5])</span>
+<span class="sd">        &gt;&gt;&gt; idilate.plot()</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">alg</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkImageDilateErode3D</span><span class="p">()</span>
+        <span class="n">alg</span><span class="o">.</span><span class="n">SetInputDataObject</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">scalars</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">field</span><span class="p">,</span> <span class="n">scalars</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">active_scalars_info</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">field</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_array_association</span><span class="p">(</span><span class="n">scalars</span><span class="p">,</span> <span class="n">preference</span><span class="o">=</span><span class="n">preference</span><span class="p">)</span>
+        <span class="n">alg</span><span class="o">.</span><span class="n">SetInputArrayToProcess</span><span class="p">(</span>
+            <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">field</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">scalars</span>
+        <span class="p">)</span>  <span class="c1"># args: (idx, port, connection, field, name)</span>
+        <span class="n">alg</span><span class="o">.</span><span class="n">SetKernelSize</span><span class="p">(</span><span class="o">*</span><span class="n">kernel_size</span><span class="p">)</span>
+        <span class="n">alg</span><span class="o">.</span><span class="n">SetDilateValue</span><span class="p">(</span><span class="n">dilate_value</span><span class="p">)</span>
+        <span class="n">alg</span><span class="o">.</span><span class="n">SetErodeValue</span><span class="p">(</span><span class="n">erode_value</span><span class="p">)</span>
+        <span class="n">_update_alg</span><span class="p">(</span><span class="n">alg</span><span class="p">,</span> <span class="n">progress_bar</span><span class="p">,</span> <span class="s1">&#39;Performing Dilation and Erosion&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">_get_output</span><span class="p">(</span><span class="n">alg</span><span class="p">)</span></div>
+
 <div class="viewcode-block" id="UniformGridFilters.image_threshold"><a class="viewcode-back" href="../../../../api/core/_autosummary/pyvista.UniformGridFilters.image_threshold.html#pyvista.UniformGridFilters.image_threshold">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">image_threshold</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">threshold</span><span class="p">,</span>
@@ -482,8 +562,9 @@
       </div>
     </div>
   
-    <script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

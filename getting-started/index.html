@@ -8,23 +8,19 @@
 
     <title>はじめに &#8212; PyVista 0.34.dev0 ドキュメント</title>
     
-    <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
@@ -38,8 +34,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-    <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
@@ -71,7 +68,7 @@
                     </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -197,6 +194,11 @@
    インストール
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="connections.html">
+   接続
+  </a>
+ </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="external_examples.html">
    外部の例
@@ -312,7 +314,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -326,11 +328,6 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#support">
    サポート
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#connections">
-   接続
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -360,7 +357,7 @@
               <div>
                 
   <section id="getting-started">
-<h1>はじめに<a class="headerlink" href="#getting-started" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>はじめに<a class="headerlink" href="#getting-started" title="このヘッドラインへのパーマリンク">#</a></h1>
 <div class="toctree-wrapper compound">
 </div>
 <div class="sphinx-bs container pb-4 docutils">
@@ -401,7 +398,7 @@
 </div>
 </div>
 <section id="installation">
-<h2>インストール<a class="headerlink" href="#installation" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>インストール<a class="headerlink" href="#installation" title="このヘッドラインへのパーマリンク">#</a></h2>
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
 <div class="d-flex col-lg-6 col-md-6 col-sm-12 col-xs-12 p-3 docutils">
@@ -449,29 +446,11 @@
 </div>
 </section>
 <section id="support">
-<h2>サポート<a class="headerlink" href="#support" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>サポート<a class="headerlink" href="#support" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p>プロジェクト，そのアプリケーション，またはソフトウェアの使用に関する一般的な質問については，コミュニティが共同であなたの質問に対処できる <a class="reference external" href="https://github.com/pyvista/pyvista/discussions">pyvista/discussions</a> にdiscussionを作成してください．Slackに参加したり，開発者にメールを送ったりすることもできます．プロジェクト・サポート・チームは <a class="reference external" href="mailto:info&#37;&#52;&#48;pyvista&#46;org">info<span>&#64;</span>pyvista<span>&#46;</span>org</a> で連絡できます．</p>
 </section>
-<section id="connections">
-<h2>接続<a class="headerlink" href="#connections" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>PyVistaは強力なツールであり，研究者はこれを利用して，大規模なデータセットを直感的かつPython的な方法で，説得力のある統合された可視化を作成することができます．PyVistaを活用したオープンソースプロジェクトをいくつか紹介します．</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://github.com/OpenGeoVis/PVGeo">PVGeo</a>: 地球科学データとモデルを分析するためのVTKベースのアルゴリズムのPythonパッケージです．PyVistaは，PVGeoのアルゴリズムの入出力をよりアクセスしやすくするために使用されます．</p></li>
-<li><p><a class="reference external" href="https://discretize.simpeg.xyz/en/main/">discretize</a>: 有限体積および逆問題の離散化ツール． <code class="docutils literal notranslate"><span class="pre">discretize</span></code> には， <a class="reference external" href="https://discretize.simpeg.xyz/en/main/api/generated/discretize.mixins.vtk_mod.InterfaceVTK.html">creating compelling visualizations</a> のデータ型のPyVistaバージョンを返す <code class="docutils literal notranslate"><span class="pre">toVTK</span></code> メソッドが用意されています．</p></li>
-<li><p><a class="reference external" href="https://github.com/cgre-aachen/gemgis">gemgis</a>: ジオモデリングのための空間データ処理．</p></li>
-<li><p><a class="reference external" href="https://github.com/gimli-org/gimli">gimly</a>: 地球物理学のインバージョンとモデリングのためのライブラリです．</p></li>
-<li><p><a class="reference external" href="https://github.com/InsightSoftwareConsortium/itkwidgets">itkwidgets</a>: イメージ，点セット，メッシュを2 Dおよび3 Dで視覚化するインタラクティブなJupyterウィジェット．すべてのPyVistaメッシュタイプをサポートします．</p></li>
-<li><p><a class="reference external" href="https://github.com/mne-tools/mne-python">mne-python</a>: MNE: 脳磁図(MEG)と脳波(EEG)をPythonで．</p></li>
-<li><p><a class="reference external" href="https://github.com/OpenGeoVis/omfvista">omfvista</a>: Open Mining Format (omf) の3 D可視化．PyVistaは，このライブラリーの視覚化の基礎を提供します．</p></li>
-<li><p><a class="reference external" href="https://github.com/Eomys/pyleecan">pyleecan</a>: 電気機械や駆動装置の設計や最適化のための，ユーザーフレンドリーで統一された柔軟なシミュレーションフレームワークを提供する電気工学オープンソースソフトウェア</p></li>
-<li><p><a class="reference external" href="https://github.com/pyansys/pymapdl">pymapdl</a>: Ansys MAPDLへのPythonicインターフェース．</p></li>
-<li><p><a class="reference external" href="https://github.com/pyvista/pymeshfix">pymeshfix</a>: 受賞歴のあるMarco Atteneの素晴らしい <a class="reference external" href="https://github.com/MarcoAttene/MeshFix-V2.1">MeshFix</a> ソフトウェアのPython/Cythonラッパーです．</p></li>
-<li><p><a class="reference external" href="https://github.com/romerogroup/pyprocar">pyprocar</a>: 電子構造の前処理・後処理のためのPythonライブラリです．</p></li>
-<li><p><a class="reference external" href="https://github.com/pyvista/tetgen">tetgen</a>: Hang SiのC++TetGenライブラリへのPythonインタフェース</p></li>
-</ul>
-</section>
 <section id="citing-pyvista">
-<h2>PyVistaを引用する<a class="headerlink" href="#citing-pyvista" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>PyVistaを引用する<a class="headerlink" href="#citing-pyvista" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p><a class="reference external" href="https://doi.org/10.21105/joss.01450">PyVistaに関する論文</a> があります!</p>
 <p>あなたの科学研究にPyVistaを使っているなら，私たちの仕事を引用して，私たちの科学的視界を助けてください!PyVistaを引用することの詳細については， <a class="reference internal" href="authors.html#citation-ref"><span class="std std-ref">PyVistaを引用する</span></a> をご覧ください．</p>
 </section>
@@ -487,8 +466,9 @@
       </div>
     </div>
   
-    <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

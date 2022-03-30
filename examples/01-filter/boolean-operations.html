@@ -8,23 +8,19 @@
 
     <title>ブール演算 &#8212; PyVista 0.34.dev0 ドキュメント</title>
     
-    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
@@ -38,8 +34,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -71,7 +68,7 @@
                     </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -227,6 +224,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../00-load/create-point-cloud.html">
    点群を作成
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00-load/create-pointset.html">
+   PointSetの作成
   </a>
  </li>
 </ul>
@@ -1050,7 +1054,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -1109,7 +1113,7 @@
 <p><a class="reference internal" href="#sphx-glr-download-examples-01-filter-boolean-operations-py"><span class="std std-ref">ここ</span></a> をクリックすると完全なサンプルコードをダウンロードできます．</p>
 </div>
 <section class="sphx-glr-example-title" id="boolean-operations">
-<span id="boolean-example"></span><span id="sphx-glr-examples-01-filter-boolean-operations-py"></span><h1>ブール演算<a class="headerlink" href="#boolean-operations" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<span id="boolean-example"></span><span id="sphx-glr-examples-01-filter-boolean-operations-py"></span><h1>ブール演算<a class="headerlink" href="#boolean-operations" title="このヘッドラインへのパーマリンク">#</a></h1>
 <p>閉じた（多様な）曲面でブーリアン演算を行う．</p>
 <p>ブール/位相演算(交差，結合，切断)法は，  <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> メッシュタイプに対してのみ実装され，任意の <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> メッシュから直接アクセス可能である． <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyDataFilters.html#pyvista.PolyDataFilters" title="pyvista.PolyDataFilters"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters</span></code></a> をチェックして，次のフィルタを確認してください．</p>
 <ul class="simple">
@@ -1134,7 +1138,7 @@
 </pre></div>
 </div>
 <section id="boolean-union">
-<h2>ブール演算和<a class="headerlink" href="#boolean-union" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>ブール演算和<a class="headerlink" href="#boolean-union" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p><a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyDataFilters.boolean_union.html#pyvista.PolyDataFilters.boolean_union" title="pyvista.PolyDataFilters.boolean_union"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.boolean_union()</span></code></a> フィルタを使用して， <code class="docutils literal notranslate"><span class="pre">A</span></code> と <code class="docutils literal notranslate"><span class="pre">B</span></code> のブール結合を行います．</p>
 <p>2つの多様体メッシュ　<code class="docutils literal notranslate"><span class="pre">A</span></code> と <code class="docutils literal notranslate"><span class="pre">B</span></code> の結合は， <code class="docutils literal notranslate"><span class="pre">A</span></code> にあるメッシュ， <code class="docutils literal notranslate"><span class="pre">B</span></code> にあるメッシュ，または <code class="docutils literal notranslate"><span class="pre">A</span></code> と <code class="docutils literal notranslate"><span class="pre">B</span></code> の両方にあるメッシュとなります．</p>
 <p>論理和にはオペランドの順序は関係ありません（演算は可換です）．</p>
@@ -1149,7 +1153,7 @@
 </div>
 <img src="../../_images/sphx_glr_boolean-operations_001.png" srcset="../../_images/sphx_glr_boolean-operations_001.png" alt="boolean operations" class = "sphx-glr-single-img"/></section>
 <section id="boolean-difference">
-<h2>論理差<a class="headerlink" href="#boolean-difference" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>論理差<a class="headerlink" href="#boolean-difference" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p>両方のメッシュが <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> であるため， <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyDataFilters.boolean_difference.html#pyvista.PolyDataFilters.boolean_difference" title="pyvista.PolyDataFilters.boolean_difference"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.boolean_difference()</span></code></a> フィルタまたは <code class="docutils literal notranslate"><span class="pre">-</span></code> 演算子を使用して <code class="docutils literal notranslate"><span class="pre">A</span></code> と <code class="docutils literal notranslate"><span class="pre">B</span></code> のブーリアン値の差を実行します．</p>
 <p>2つのマニフォールドメッシュ <code class="docutils literal notranslate"><span class="pre">A</span></code> と <code class="docutils literal notranslate"><span class="pre">B</span></code> の差は， <code class="docutils literal notranslate"><span class="pre">A</span></code> のメッシュのうち <code class="docutils literal notranslate"><span class="pre">B</span></code> に属さない部分の体積である．</p>
 <p>真偽判定にはオペランドの順序が重要です．</p>
@@ -1164,7 +1168,7 @@
 </div>
 <img src="../../_images/sphx_glr_boolean-operations_002.png" srcset="../../_images/sphx_glr_boolean-operations_002.png" alt="boolean operations" class = "sphx-glr-single-img"/></section>
 <section id="boolean-intersection">
-<h2>ブール交差<a class="headerlink" href="#boolean-intersection" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>ブール交差<a class="headerlink" href="#boolean-intersection" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p><a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyDataFilters.boolean_intersection.html#pyvista.PolyDataFilters.boolean_intersection" title="pyvista.PolyDataFilters.boolean_intersection"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyDataFilters.boolean_intersection()</span></code></a> フィルタを使用して， <code class="docutils literal notranslate"><span class="pre">A</span></code> と <code class="docutils literal notranslate"><span class="pre">B</span></code> のブール交差を行います．</p>
 <p>2つの多様体メッシュ``A``と``B```の交点は，<a href="#id1"><span class="problematic" id="id2">``</span></a>A``の体積が``B``の中にもあるメッシュである．</p>
 <p>論理交差にはオペランドの順序は関係ありません（演算は可換です）．</p>
@@ -1180,7 +1184,7 @@
 <img src="../../_images/sphx_glr_boolean-operations_003.png" srcset="../../_images/sphx_glr_boolean-operations_003.png" alt="boolean operations" class = "sphx-glr-single-img"/></section>
 </section>
 <section id="behavior-due-to-flipped-normals">
-<h1>法線の反転による挙動<a class="headerlink" href="#behavior-due-to-flipped-normals" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>法線の反転による挙動<a class="headerlink" href="#behavior-due-to-flipped-normals" title="このヘッドラインへのパーマリンク">#</a></h1>
 <p>これらのブーリアンフィルターは，法線の向きによって動作が異なることに注意してください．</p>
 <p>立方体と球体の両方の法線が外側に向いている状態でのブール型の差分です． これが &quot;normal&quot; の動作です．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cube</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Cube</span><span class="p">()</span><span class="o">.</span><span class="n">triangulate</span><span class="p">()</span><span class="o">.</span><span class="n">subdivide</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -1236,8 +1240,9 @@
       </div>
     </div>
   
-    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

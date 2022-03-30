@@ -21,6 +21,9 @@
       UniformGrid.add_field_data
       
       
+      UniformGrid.cast_to_pointset
+      
+      
       UniformGrid.cast_to_rectilinear_grid
       
       
@@ -199,6 +202,9 @@
       
       
       UniformGrid.head
+      
+      
+      UniformGrid.image_dilate_erode
       
       
       UniformGrid.image_threshold

@@ -8,23 +8,19 @@
 
     <title>warp_by_vector を用いた振動固有モードの表示 &#8212; PyVista 0.34.dev0 ドキュメント</title>
     
-    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
@@ -38,8 +34,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -71,7 +68,7 @@
                     </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -227,6 +224,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../00-load/create-point-cloud.html">
    点群を作成
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00-load/create-pointset.html">
+   PointSetの作成
   </a>
  </li>
 </ul>
@@ -1077,7 +1081,7 @@
 <p><a class="reference internal" href="#sphx-glr-download-examples-99-advanced-warp-by-vector-eigenmodes-py"><span class="std std-ref">ここ</span></a> をクリックすると完全なサンプルコードをダウンロードできます．</p>
 </div>
 <section class="sphx-glr-example-title" id="displaying-eigenmodes-of-vibration-using-warp-by-vector">
-<span id="sphx-glr-examples-99-advanced-warp-by-vector-eigenmodes-py"></span><h1><code class="docutils literal notranslate"><span class="pre">warp_by_vector</span></code> を用いた振動固有モードの表示<a class="headerlink" href="#displaying-eigenmodes-of-vibration-using-warp-by-vector" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<span id="sphx-glr-examples-99-advanced-warp-by-vector-eigenmodes-py"></span><h1><code class="docutils literal notranslate"><span class="pre">warp_by_vector</span></code> を用いた振動固有モードの表示<a class="headerlink" href="#displaying-eigenmodes-of-vibration-using-warp-by-vector" title="このヘッドラインへのパーマリンク">#</a></h1>
 <p>この例は，Visscher, William M., Albert Migliori, Thomas M.Bell, et Robert A.Reinertで概説されているように，固有モードがRitz法を使用して計算された立方体に <code class="docutils literal notranslate"><span class="pre">warp_by_vector</span></code> フィルタを適用します. &quot;On the normal modes of free vibration of inhomogeneous and anisotropic elastic objects&quot;. The Journal of the Acoustical Society of America 90, n.4 (october 1991): 2154-62. <a class="reference external" href="https://asa.scitation.org/doi/10.1121/1.401643">https://asa.scitation.org/doi/10.1121/1.401643</a></p>
 <p>まず，振動する立方体の固有値問題を解く．高速計算を得るために(低い最大多項式次数を選択した)粗近似を用いました．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -1340,8 +1344,9 @@ freq. 8:   1361.8 kHz, expected:   1360.9 kHz, error: 0.07 %
       </div>
     </div>
   
-    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

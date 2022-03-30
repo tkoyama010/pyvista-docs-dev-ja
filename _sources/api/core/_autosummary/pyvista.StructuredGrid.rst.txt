@@ -21,6 +21,9 @@
       StructuredGrid.add_field_data
       
       
+      StructuredGrid.cast_to_pointset
+      
+      
       StructuredGrid.cast_to_unstructured_grid
       
       

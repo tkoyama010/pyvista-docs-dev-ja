@@ -8,23 +8,19 @@
 
     <title>コアAPI &#8212; PyVista 0.34.dev0 ドキュメント</title>
     
-    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
@@ -38,8 +34,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -71,7 +68,7 @@
                     </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -305,10 +302,11 @@
               <div>
                 
   <section id="core-api">
-<h1>コアAPI<a class="headerlink" href="#core-api" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>コアAPI<a class="headerlink" href="#core-api" title="このヘッドラインへのパーマリンク">#</a></h1>
 <p><a class="reference external" href="https://www.kitware.com">Kitware</a> によって開発された <a class="reference external" href="https://vtk.org">Visualization Toolkit</a> (VTK) には，PyVistaがラップする多くのメッシュデータ型があります．この章では，これらの異なるメッシュタイプと，VTKでこれらのメッシュタイプをラップして実装する方法について説明します．また，すべてのPyVistaタイプが共通のVTKフィルタ( <a class="reference internal" href="filters.html#filters-ref"><span class="std std-ref">フィルタ</span></a> を参照)に直接アクセスする方法についても説明します．</p>
 <p>すべてのPyVistaメッシュは，DataSet型( <span class="xref std std-ref">ref_common</span> を参照)から継承されます．PyVistaには次のメッシュタイプがあります．</p>
 <ul class="simple">
+<li><p><a class="reference internal" href="_autosummary/pyvista.PointSet.html#pyvista.PointSet" title="pyvista.PointSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PointSet</span></code></a> は、点の集合を表現するために使用されます。これは、ジオメトリを表現するために &quot;point&quot; 配列を明示的に使用するデータセットのためのインタフェースを提供するためのものです。class:<cite>pyvista.PointSet</cite> クラスは、 <a class="reference external" href="https://www.vtk.org/doc/nightly/html/classvtkPointSet.html">vtk.vtkPointSet</a> を拡張したものです。</p></li>
 <li><p><a class="reference internal" href="_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> は，頂点，線，ポリゴン，および三角形を構築する1 Dまたは2 Dジオメトリで構成されます．一般的に <a class="reference internal" href="_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> を使用して，散乱点と閉じた/開いたサーフェス(非体積データセット)を構築します． <a class="reference internal" href="_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> クラスは <a class="reference external" href="https://vtk.org/doc/nightly/html/classvtkPolyData.html">vtk.vtkPolyData</a> の拡張です．</p></li>
 <li><p><a class="reference internal" href="_autosummary/pyvista.UnstructuredGrid.html#pyvista.UnstructuredGrid" title="pyvista.UnstructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UnstructuredGrid</span></code></a> は，1 D，2 D，または3 Dセル形状を保持できる最も一般的なデータセットタイプです．これは，容積測定セルの存在を可能にする <a class="reference internal" href="_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> の3 D拡張と考えることができます．構造化されていないグリッドを明示的に作成することはあまりありませんが，多くの場合，大きなデータセットのサブセットを抽出する可能性のあるさまざまな処理ルーチンの結果です． <a class="reference internal" href="_autosummary/pyvista.UnstructuredGrid.html#pyvista.UnstructuredGrid" title="pyvista.UnstructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UnstructuredGrid</span></code></a> クラスは <code class="docutils literal notranslate"><span class="pre">vtk.vtkUnstructuredGrid</span></code> の拡張です．</p></li>
 <li><p><a class="reference internal" href="_autosummary/pyvista.StructuredGrid.html#pyvista.StructuredGrid" title="pyvista.StructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.StructuredGrid</span></code></a> は内部座標軸と整列した点の規則的な格子であり，連結性は格子の順序付けによって定義できます．これらは一般に <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.meshgrid.html#numpy.meshgrid" title="(in NumPy v1.22)"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.meshgrid()</span></code></a> から作成されます．構造化グリッドのセルタイプは2 D四角形または3 D六面体である必要があります． <a class="reference internal" href="_autosummary/pyvista.StructuredGrid.html#pyvista.StructuredGrid" title="pyvista.StructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.StructuredGrid</span></code></a> クラスは <a class="reference external" href="https://vtk.org/doc/nightly/html/classvtkStructuredGrid.html">vtk.vtkStructuredGrid</a> の拡張です．</p></li>
@@ -328,6 +326,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="pointsets.html">ポイントセット</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/pyvista.PointSet.html">pyvista.PointSet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_autosummary/pyvista.PolyData.html">pyvista.PolyData</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_autosummary/pyvista.UnstructuredGrid.html">pyvista.UnstructuredGrid</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_autosummary/pyvista.StructuredGrid.html">pyvista.StructuredGrid</a></li>
@@ -391,8 +390,9 @@
       </div>
     </div>
   
-    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

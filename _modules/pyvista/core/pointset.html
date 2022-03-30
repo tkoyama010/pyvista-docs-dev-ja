@@ -7,23 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>pyvista.core.pointset &#8212; PyVista 0.34.dev0 ドキュメント</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
@@ -37,8 +33,9 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -68,7 +65,7 @@
                     </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -243,7 +240,7 @@
 <span class="p">)</span>
 
 
-<span class="k">class</span> <span class="nc">PointSet</span><span class="p">(</span><span class="n">DataSet</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">_PointSet</span><span class="p">(</span><span class="n">DataSet</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;PyVista&#39;s equivalent of vtk.vtkPointSet.</span>
 
 <span class="sd">    This holds methods common to PolyData and UnstructuredGrid.</span>
@@ -545,7 +542,108 @@
         <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">rotate_vector</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="PolyData"><a class="viewcode-back" href="../../../api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData">[ドキュメント]</a><span class="k">class</span> <span class="nc">PolyData</span><span class="p">(</span><span class="n">_vtk</span><span class="o">.</span><span class="n">vtkPolyData</span><span class="p">,</span> <span class="n">PointSet</span><span class="p">,</span> <span class="n">PolyDataFilters</span><span class="p">):</span>
+<div class="viewcode-block" id="PointSet"><a class="viewcode-back" href="../../../api/core/_autosummary/pyvista.PointSet.html#pyvista.PointSet">[ドキュメント]</a><span class="k">class</span> <span class="nc">PointSet</span><span class="p">(</span><span class="n">_vtk</span><span class="o">.</span><span class="n">vtkPointSet</span><span class="p">,</span> <span class="n">_PointSet</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Concrete class for storing a set of points.</span>
+
+<span class="sd">    This is a concrete class representing a set of points that specifies the</span>
+<span class="sd">    interface for datasets that explicitly use &quot;point&quot; arrays to represent</span>
+<span class="sd">    geometry. This class is useful for improving the performance of filters on</span>
+<span class="sd">    point clouds, but not plotting.</span>
+
+<span class="sd">    For further details see `VTK: vtkPointSet Details</span>
+<span class="sd">    &lt;https://vtk.org/doc/nightly/html/classvtkPointSet.html#details&gt;`_.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    points : Sequence, optional</span>
+<span class="sd">        List, numpy array, or sequence containing point locations. Must be an</span>
+<span class="sd">        ``(N, 3)`` array of points.</span>
+
+<span class="sd">    deep : bool, optional</span>
+<span class="sd">        Whether to copy the input ``points``, or to create a PointSet from them</span>
+<span class="sd">        without copying them.  Setting ``deep=True`` ensures that the original</span>
+<span class="sd">        arrays can be modified outside the mesh without affecting the</span>
+<span class="sd">        mesh. Default is ``False``.</span>
+
+<span class="sd">    force_float : bool, optional</span>
+<span class="sd">        Casts the datatype to ``float32`` if points datatype is non-float.</span>
+<span class="sd">        Default ``True``. Set this to ``False`` to allow non-float types,</span>
+<span class="sd">        though this may lead to truncation of intermediate floats when</span>
+<span class="sd">        transforming datasets.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    This class requires ``vtk&gt;=9.1.0``. This is an abstract class in</span>
+<span class="sd">    ``vtk&lt;9.1.0`` and cannot be instantiated.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    Create a simple point cloud of 10 points from a numpy array.</span>
+
+<span class="sd">    &gt;&gt;&gt; import numpy as np</span>
+<span class="sd">    &gt;&gt;&gt; import pyvista</span>
+<span class="sd">    &gt;&gt;&gt; rng = np.random.default_rng()</span>
+<span class="sd">    &gt;&gt;&gt; points = rng.random((10, 3))</span>
+<span class="sd">    &gt;&gt;&gt; pset = pyvista.PointSet(points)</span>
+
+<span class="sd">    Plot the pointset. Note: this casts to a :class:`pyvista.PolyData`</span>
+<span class="sd">    internally when plotting.</span>
+
+<span class="sd">    &gt;&gt;&gt; pset.plot(point_size=10)</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">points</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">deep</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">force_float</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Initialize the pointset.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">vtk_version_info</span> <span class="o">&lt;</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+            <span class="k">raise</span> <span class="n">VTKVersionError</span><span class="p">(</span><span class="s2">&quot;pyvista.PointSet requires VTK &gt;= 9.1.0&quot;</span><span class="p">)</span>
+
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">points</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">SetPoints</span><span class="p">(</span><span class="n">pyvista</span><span class="o">.</span><span class="n">vtk_points</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">deep</span><span class="o">=</span><span class="n">deep</span><span class="p">,</span> <span class="n">force_float</span><span class="o">=</span><span class="n">force_float</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return the standard representation.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">DataSet</span><span class="o">.</span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return the standard str representation.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">DataSet</span><span class="o">.</span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+<div class="viewcode-block" id="PointSet.cast_to_polydata"><a class="viewcode-back" href="../../../api/core/_autosummary/pyvista.PointSet.cast_to_polydata.html#pyvista.PointSet.cast_to_polydata">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">cast_to_polydata</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">deep</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Cast this dataset to polydata.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        deep : bool, optional</span>
+<span class="sd">            Whether to copy the pointset points, or to create a PolyData</span>
+<span class="sd">            without copying them.  Setting ``deep=True`` ensures that the</span>
+<span class="sd">            original arrays can be modified outside the PolyData without</span>
+<span class="sd">            affecting the PolyData. Default is ``True``.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        pyvista.PolyData</span>
+<span class="sd">            PointSet cast to a ``pyvista.PolyData``.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">pdata</span> <span class="o">=</span> <span class="n">PolyData</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">points</span><span class="p">,</span> <span class="n">deep</span><span class="o">=</span><span class="n">deep</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">deep</span><span class="p">:</span>
+            <span class="n">pdata</span><span class="o">.</span><span class="n">point_data</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">point_data</span><span class="p">)</span>  <span class="c1"># update performs deep copy</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">point_data</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="n">pdata</span><span class="o">.</span><span class="n">point_data</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="k">return</span> <span class="n">pdata</span></div>
+
+    <span class="nd">@wraps</span><span class="p">(</span><span class="n">DataSet</span><span class="o">.</span><span class="n">plot</span><span class="p">)</span>  <span class="c1"># type: ignore</span>
+    <span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Cast to PolyData and plot.&quot;&quot;&quot;</span>
+        <span class="n">pdata</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cast_to_polydata</span><span class="p">(</span><span class="n">deep</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">kwargs</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s1">&#39;style&#39;</span><span class="p">,</span> <span class="s1">&#39;points&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">pdata</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="PolyData"><a class="viewcode-back" href="../../../api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData">[ドキュメント]</a><span class="k">class</span> <span class="nc">PolyData</span><span class="p">(</span><span class="n">_vtk</span><span class="o">.</span><span class="n">vtkPolyData</span><span class="p">,</span> <span class="n">_PointSet</span><span class="p">,</span> <span class="n">PolyDataFilters</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Dataset consisting of surface geometry (e.g. vertices, lines, and polygons).</span>
 
 <span class="sd">    Can be initialized in several ways:</span>
@@ -1326,7 +1424,7 @@
 
 
 <span class="nd">@abstract_class</span>
-<span class="k">class</span> <span class="nc">PointGrid</span><span class="p">(</span><span class="n">PointSet</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">PointGrid</span><span class="p">(</span><span class="n">_PointSet</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Class in common with structured and unstructured grids.&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
@@ -2158,8 +2256,8 @@
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
-<span class="sd">        pyvista.PointSet</span>
-<span class="sd">            Point set with hidden cells.</span>
+<span class="sd">        pyvista.StructuredGrid</span>
+<span class="sd">            Structured grid with hidden cells.</span>
 
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
@@ -2350,7 +2448,7 @@
         <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ncells</span><span class="p">):</span>
             <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unravel_index</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">shape0</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="s1">&#39;F&#39;</span><span class="p">)</span>
             <span class="n">coord</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">i</span> <span class="o">+</span> <span class="n">connectivity</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">j</span> <span class="o">+</span> <span class="n">connectivity</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">k</span> <span class="o">+</span> <span class="n">connectivity</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
-            <span class="n">cinds</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ravel_multi_index</span><span class="p">(</span><span class="n">coord</span><span class="p">,</span> <span class="n">shape1</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="s1">&#39;F&#39;</span><span class="p">)</span>
+            <span class="n">cinds</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ravel_multi_index</span><span class="p">(</span><span class="n">coord</span><span class="p">,</span> <span class="n">shape1</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="s1">&#39;F&#39;</span><span class="p">)</span>  <span class="c1"># type: ignore</span>
             <span class="n">cells</span><span class="p">[</span><span class="n">c</span><span class="p">,</span> <span class="mi">1</span><span class="p">:]</span> <span class="o">=</span> <span class="n">indices</span><span class="p">[</span><span class="n">cinds</span><span class="p">]</span>
         <span class="n">cells</span> <span class="o">=</span> <span class="n">cells</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
         <span class="n">points</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">vtk_points</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
@@ -2637,7 +2735,7 @@
             <span class="n">coords</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">coords</span><span class="p">)</span>
         <span class="n">dims</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dimensions</span><span class="p">()</span>
         <span class="k">try</span><span class="p">:</span>
-            <span class="n">ind</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ravel_multi_index</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">dims</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="s1">&#39;F&#39;</span><span class="p">)</span>
+            <span class="n">ind</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ravel_multi_index</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">dims</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="s1">&#39;F&#39;</span><span class="p">)</span>  <span class="c1"># type: ignore</span>
         <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
             <span class="k">return</span> <span class="kc">None</span>
         <span class="k">else</span><span class="p">:</span>
@@ -2917,8 +3015,9 @@
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

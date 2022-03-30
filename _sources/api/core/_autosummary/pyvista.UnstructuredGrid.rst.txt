@@ -24,6 +24,9 @@
       UnstructuredGrid.cast_to_explicit_structured_grid
       
       
+      UnstructuredGrid.cast_to_pointset
+      
+      
       UnstructuredGrid.cast_to_unstructured_grid
       
       

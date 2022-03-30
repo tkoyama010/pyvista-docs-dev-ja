@@ -8,23 +8,19 @@
 
     <title>ライト &#8212; PyVista 0.34.dev0 ドキュメント</title>
     
-    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
@@ -38,8 +34,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -71,7 +68,7 @@
                     </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -294,7 +291,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -344,10 +341,10 @@
               <div>
                 
   <section id="lights">
-<h1>ライト<a class="headerlink" href="#lights" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>ライト<a class="headerlink" href="#lights" title="このヘッドラインへのパーマリンク">#</a></h1>
 <p><a class="reference internal" href="_autosummary/pyvista.Light.html#pyvista.Light" title="pyvista.Light"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.Light</span></code></a> クラスは， <code class="docutils literal notranslate"><span class="pre">vtk.vtkLight</span></code> クラスに追加機能とPython APIを追加します． <a class="reference internal" href="../plotting/_autosummary/pyvista.Plotter.html#pyvista.Plotter" title="pyvista.Plotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.Plotter</span></code></a> オブジェクトには，ほとんどの場合に適切に機能するデフォルトのライトセットが付属していますが，多くの場合，より実践的なライトへのアクセスが必要です．</p>
 <section id="brief-example">
-<h2>簡単な例<a class="headerlink" href="#brief-example" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>簡単な例<a class="headerlink" href="#brief-example" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p>原点を照らす赤いスポットライトを作成し，ライティングなしのシーンを作成して，ライトを手動で追加します．</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
@@ -372,14 +369,14 @@
 <p>詳細な例は <a class="reference internal" href="../../examples/index.html#ref-light-examples"><span class="std std-ref">照明</span></a> を参照してください．</p>
 </section>
 <section id="light-api">
-<h2>ライト API<a class="headerlink" href="#light-api" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>ライト API<a class="headerlink" href="#light-api" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">pyvista.Light</span></code> インスタンスには，ヘッドライト，カメラライト，シーンライトの3つのタイプがあります．ヘッドライトは常にカメラの軸に沿って輝き，カメラライトはカメラに対して固定位置を持ち，シーンライトはシーンに対して配置されるため，カメラの周りを移動してもシーンのライティングには影響しません．</p>
 <p>ライトには，ライトの軸を定義する <code class="xref py py-attr docutils literal notranslate"><span class="pre">position</span></code> と <code class="xref py py-attr docutils literal notranslate"><span class="pre">focal_point</span></code> があります．これらの意味は，ライトのタイプによって異なります．ライトのカラーは，アンビエント，拡散，スペキュラの各コンポーネントに応じて設定できます．明るさは <code class="xref py py-attr docutils literal notranslate"><span class="pre">intensity</span></code> プロパティで設定でき，書き込み可能な <code class="xref py py-attr docutils literal notranslate"><span class="pre">on</span></code> プロパティはライトをオンにするかどうかを指定します．</p>
 <p>ライトはディレクショナル (無限に離れた点源を意味します) または <code class="xref py py-attr docutils literal notranslate"><span class="pre">positional</span></code> のいずれかです．ポジションライトには，ライトのジオメトリと空間分布を記述する追加のプロパティがあります． <code class="xref py py-attr docutils literal notranslate"><span class="pre">cone_angle</span></code> プロパティと <code class="xref py py-attr docutils literal notranslate"><span class="pre">exponent</span></code> プロパティは，ライトビームの形状とそのビーム内のライト強度の角度分布を定義します．距離による光のフェードは， <code class="xref py py-attr docutils literal notranslate"><span class="pre">attenuation_values</span></code> プロパティを使用してカスタマイズできます．ポジションライトでは，ワイヤフレームを使用してライトのシェイプとカラーを表すアクターを使用することもできます． <code class="xref py py-func docutils literal notranslate"><span class="pre">show_actor()</span></code> を参照してください ．</p>
 <p><code class="xref py py-attr docutils literal notranslate"><span class="pre">cone_angle</span></code> が90度未満の位置ライトはスポットライトと呼ばれます．スポットライトは一方向性であり，ビーム成形特性，すなわち <code class="xref py py-attr docutils literal notranslate"><span class="pre">exponent</span></code> と減衰を完全に利用します．ただし，スポットライト以外の位置ライトは，実際のライトの位置にあるポイントソースのように機能し，空間のすべての方向を照らします．光源からの距離に応じた減衰が表示されますが，ビームは空間内で等方性です．対照的に，ディレクショナルライトは無限に離れたポイントソースとして機能するため，単一方向ですが減衰しません．</p>
 </section>
 <section id="shadows">
-<h2>シャドウ<a class="headerlink" href="#shadows" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>シャドウ<a class="headerlink" href="#shadows" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p>指向性ライトを使用すると，複雑なライティングシナリオを作成できます．たとえば，ライトをアクター(この場合は球体)の真上に配置して，その真下にシャドウを作成できます．</p>
 <p>次の例では，位置ライトを使用して，ライトの円錐角度と指数値を制御し，球体の下に日食のようなシャドウを作成します．</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
@@ -415,7 +412,7 @@
 <p>特定のウィンドウサイズでシャドウをレンダリングする場合，VTKに既知の問題があります． <code class="docutils literal notranslate"><span class="pre">window_size</span></code> パラメータを試してみることをお勧めします．</p>
 </div>
 <section id="api-reference">
-<h3>APIリファレンス<a class="headerlink" href="#api-reference" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>APIリファレンス<a class="headerlink" href="#api-reference" title="このヘッドラインへのパーマリンク">#</a></h3>
 <table class="longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
@@ -441,8 +438,9 @@
       </div>
     </div>
   
-    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

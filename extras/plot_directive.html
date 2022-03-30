@@ -8,23 +8,19 @@
 
     <title>Sphinx PyVista Plot ディレクティブ &#8212; PyVista 0.34.dev0 ドキュメント</title>
     
-    <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
@@ -38,8 +34,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-    <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
@@ -71,7 +68,7 @@
                     </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -240,7 +237,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -285,7 +282,7 @@
               <div>
                 
   <section id="sphinx-pyvista-plot-directive">
-<span id="ref-plot-directive-docs"></span><h1>Sphinx PyVista Plot ディレクティブ<a class="headerlink" href="#sphinx-pyvista-plot-directive" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<span id="ref-plot-directive-docs"></span><h1>Sphinx PyVista Plot ディレクティブ<a class="headerlink" href="#sphinx-pyvista-plot-directive" title="このヘッドラインへのパーマリンク">#</a></h1>
 <p>Sphinxを使ってドキュメントを作成する際に，以下の内容を <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> に追加することで， <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">pyvista-plot</span></code> ディレクティブを使用して，pyvistaのプロットの静的なイメージを生成することができます．</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
     <span class="s2">&quot;sphinx.ext.napoleon&quot;</span><span class="p">,</span>
@@ -303,7 +300,7 @@
 <figure class="align-default" id="id1">
 <img alt="../_images/plot_directive-1_00_00.png" src="../_images/plot_directive-1_00_00.png" />
 <figcaption>
-<p><span class="caption-text">球体</span><a class="headerlink" href="#id1" title="この画像へのパーマリンク">¶</a></p>
+<p><span class="caption-text">球体</span><a class="headerlink" href="#id1" title="この画像へのパーマリンク">#</a></p>
 </figcaption>
 </figure>
 </div></blockquote>
@@ -316,12 +313,12 @@
 <figure class="align-default" id="id2">
 <img alt="../_images/plot_directive-2_00_00.png" src="../_images/plot_directive-2_00_00.png" />
 <figcaption>
-<p><span class="caption-text">これはデフォルトの球体</span><a class="headerlink" href="#id2" title="この画像へのパーマリンク">¶</a></p>
+<p><span class="caption-text">これはデフォルトの球体</span><a class="headerlink" href="#id2" title="この画像へのパーマリンク">#</a></p>
 </figcaption>
 </figure>
 <span class="target" id="module-pyvista.ext.plot_directive"></span><p>プロットディレクティブモジュール．</p>
 <section id="a-directive-for-including-a-pyvista-plot-in-a-sphinx-document">
-<h2>SphinxドキュメントにPyVistaプロットを含めるためのディレクティブ<a class="headerlink" href="#a-directive-for-including-a-pyvista-plot-in-a-sphinx-document" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>SphinxドキュメントにPyVistaプロットを含めるためのディレクティブ<a class="headerlink" href="#a-directive-for-including-a-pyvista-plot-in-a-sphinx-document" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p><cite>.. pyvista-plot::</cite> sphinxディレクティブは，インラインの <code class="docutils literal notranslate"><span class="pre">.png</span></code> イメージを含みます．</p>
 <p>プロットのソースコードは，次の2つの方法のいずれかで含まれます．</p>
 <ol class="arabic">
@@ -359,7 +356,7 @@
 <p>アニメーションは保存されず，最後のフレームのみが表示されます．</p>
 </div>
 <section id="options">
-<h3>オプション<a class="headerlink" href="#options" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>オプション<a class="headerlink" href="#options" title="このヘッドラインへのパーマリンク">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">`pyvista-plot</span></code> ディレクティブは，以下のオプションをサポートしています．</p>
 <blockquote>
 <div><dl class="simple">
@@ -378,7 +375,7 @@
 <p>さらに，このディレクティブは， <em>target</em> を除いて， <cite>image</cite> ディレクティブのすべてのオプションをサポートしています (plot が独自のターゲットを追加するため)． これらのオプションには <em>alt</em>, <em>height</em>, <em>width</em>, <em>scale</em>, <em>align</em> があります．</p>
 </section>
 <section id="configuration-options">
-<h3>設定オプション<a class="headerlink" href="#configuration-options" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>設定オプション<a class="headerlink" href="#configuration-options" title="このヘッドラインへのパーマリンク">#</a></h3>
 <p>plotディレクティブには，以下の設定項目があります．</p>
 <blockquote>
 <div><dl class="simple">
@@ -406,8 +403,9 @@
       </div>
     </div>
   
-    <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

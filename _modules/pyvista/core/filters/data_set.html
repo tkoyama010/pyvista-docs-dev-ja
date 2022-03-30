@@ -7,23 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>pyvista.core.filters.data_set &#8212; PyVista 0.34.dev0 ドキュメント</title>
     
-    <link href="../../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/thebelab.css" />
@@ -37,8 +33,9 @@
     <link rel="stylesheet" type="text/css" href="../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-    <link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
     <script src="../../../../_static/jquery.js"></script>
     <script src="../../../../_static/underscore.js"></script>
@@ -68,7 +65,7 @@
                     </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -233,9 +230,19 @@
     <span class="sd">&quot;&quot;&quot;A set of common filters that can be applied to any vtkDataSet.&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="nf">_clip_with_function</span><span class="p">(</span>
-        <span class="bp">self</span><span class="p">,</span> <span class="n">function</span><span class="p">,</span> <span class="n">invert</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">return_clipped</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">progress_bar</span><span class="o">=</span><span class="kc">False</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">function</span><span class="p">,</span>
+        <span class="n">invert</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">value</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
+        <span class="n">return_clipped</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">progress_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">crinkle</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Clip using an implicit function (internal helper).&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">crinkle</span><span class="p">:</span>
+            <span class="c1"># Add Cell IDs</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">cell_data</span><span class="p">[</span><span class="s1">&#39;cell_ids&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n_cells</span><span class="p">)</span>
+
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkPolyData</span><span class="p">):</span>
             <span class="n">alg</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkClipPolyData</span><span class="p">()</span>
         <span class="c1"># elif isinstance(self, vtk.vtkImageData):</span>
@@ -254,9 +261,14 @@
         <span class="k">if</span> <span class="n">return_clipped</span><span class="p">:</span>
             <span class="n">a</span> <span class="o">=</span> <span class="n">_get_output</span><span class="p">(</span><span class="n">alg</span><span class="p">,</span> <span class="n">oport</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
             <span class="n">b</span> <span class="o">=</span> <span class="n">_get_output</span><span class="p">(</span><span class="n">alg</span><span class="p">,</span> <span class="n">oport</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">crinkle</span><span class="p">:</span>
+                <span class="n">a</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">extract_cells</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">cell_data</span><span class="p">[</span><span class="s1">&#39;cell_ids&#39;</span><span class="p">]))</span>
+                <span class="n">b</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">extract_cells</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">cell_data</span><span class="p">[</span><span class="s1">&#39;cell_ids&#39;</span><span class="p">]))</span>
             <span class="k">return</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">_get_output</span><span class="p">(</span><span class="n">alg</span><span class="p">)</span>
+        <span class="n">clipped</span> <span class="o">=</span> <span class="n">_get_output</span><span class="p">(</span><span class="n">alg</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">crinkle</span><span class="p">:</span>
+            <span class="n">clipped</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">extract_cells</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">clipped</span><span class="o">.</span><span class="n">cell_data</span><span class="p">[</span><span class="s1">&#39;cell_ids&#39;</span><span class="p">]))</span>
+        <span class="k">return</span> <span class="n">clipped</span>
 
 <div class="viewcode-block" id="DataSetFilters.clip"><a class="viewcode-back" href="../../../../api/core/_autosummary/pyvista.DataSetFilters.clip.html#pyvista.DataSetFilters.clip">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">clip</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
@@ -267,6 +279,7 @@
         <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
         <span class="n">return_clipped</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
         <span class="n">progress_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">crinkle</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Clip a dataset by a plane by specifying the origin and normal.</span>
 
@@ -299,6 +312,12 @@
 
 <span class="sd">        progress_bar : bool, optional</span>
 <span class="sd">            Display a progress bar to indicate progress.</span>
+
+<span class="sd">        crinkle : bool, optional</span>
+<span class="sd">            Crinkle the clip by extracting the entire cells along the</span>
+<span class="sd">            clip. This adds the ``&quot;cell_ids&quot;`` array to the ``cell_data``</span>
+<span class="sd">            attribute that tracks the original cell IDs of the original</span>
+<span class="sd">            dataset.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
@@ -343,6 +362,7 @@
             <span class="n">value</span><span class="o">=</span><span class="n">value</span><span class="p">,</span>
             <span class="n">return_clipped</span><span class="o">=</span><span class="n">return_clipped</span><span class="p">,</span>
             <span class="n">progress_bar</span><span class="o">=</span><span class="n">progress_bar</span><span class="p">,</span>
+            <span class="n">crinkle</span><span class="o">=</span><span class="n">crinkle</span><span class="p">,</span>
         <span class="p">)</span>
         <span class="k">if</span> <span class="n">inplace</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">return_clipped</span><span class="p">:</span>
@@ -354,7 +374,13 @@
         <span class="k">return</span> <span class="n">result</span></div>
 
 <div class="viewcode-block" id="DataSetFilters.clip_box"><a class="viewcode-back" href="../../../../api/core/_autosummary/pyvista.DataSetFilters.clip_box.html#pyvista.DataSetFilters.clip_box">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">clip_box</span><span class="p">(</span>
-        <span class="bp">self</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">invert</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">factor</span><span class="o">=</span><span class="mf">0.35</span><span class="p">,</span> <span class="n">progress_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">merge_points</span><span class="o">=</span><span class="kc">True</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">bounds</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">invert</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">factor</span><span class="o">=</span><span class="mf">0.35</span><span class="p">,</span>
+        <span class="n">progress_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">merge_points</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">crinkle</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Clip a dataset by a bounding box defined by the bounds.</span>
 
@@ -385,6 +411,12 @@
 <span class="sd">        merge_points : bool, optional</span>
 <span class="sd">            If ``True`` (default), coinciding points of independently</span>
 <span class="sd">            defined mesh elements will be merged.</span>
+
+<span class="sd">        crinkle : bool, optional</span>
+<span class="sd">            Crinkle the clip by extracting the entire cells along the</span>
+<span class="sd">            clip. This adds the ``&quot;cell_ids&quot;`` array to the ``cell_data``</span>
+<span class="sd">            attribute that tracks the original cell IDs of the original</span>
+<span class="sd">            dataset.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
@@ -436,6 +468,8 @@
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">bounds</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
             <span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span><span class="p">,</span> <span class="n">ymin</span><span class="p">,</span> <span class="n">ymax</span><span class="p">,</span> <span class="n">zmin</span><span class="p">,</span> <span class="n">zmax</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bounds</span>
             <span class="n">bounds</span> <span class="o">=</span> <span class="p">(</span><span class="n">xmin</span><span class="p">,</span> <span class="n">xmin</span> <span class="o">+</span> <span class="n">bounds</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">ymin</span><span class="p">,</span> <span class="n">ymin</span> <span class="o">+</span> <span class="n">bounds</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">zmin</span><span class="p">,</span> <span class="n">zmin</span> <span class="o">+</span> <span class="n">bounds</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">crinkle</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">cell_data</span><span class="p">[</span><span class="s1">&#39;cell_ids&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n_cells</span><span class="p">)</span>
         <span class="n">alg</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkBoxClipDataSet</span><span class="p">()</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">merge_points</span><span class="p">:</span>
             <span class="c1"># vtkBoxClipDataSet uses vtkMergePoints by default</span>
@@ -448,7 +482,10 @@
             <span class="n">port</span> <span class="o">=</span> <span class="mi">1</span>
             <span class="n">alg</span><span class="o">.</span><span class="n">GenerateClippedOutputOn</span><span class="p">()</span>
         <span class="n">_update_alg</span><span class="p">(</span><span class="n">alg</span><span class="p">,</span> <span class="n">progress_bar</span><span class="p">,</span> <span class="s1">&#39;Clipping a Dataset by a Bounding Box&#39;</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">_get_output</span><span class="p">(</span><span class="n">alg</span><span class="p">,</span> <span class="n">oport</span><span class="o">=</span><span class="n">port</span><span class="p">)</span></div>
+        <span class="n">clipped</span> <span class="o">=</span> <span class="n">_get_output</span><span class="p">(</span><span class="n">alg</span><span class="p">,</span> <span class="n">oport</span><span class="o">=</span><span class="n">port</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">crinkle</span><span class="p">:</span>
+            <span class="n">clipped</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">extract_cells</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">clipped</span><span class="o">.</span><span class="n">cell_data</span><span class="p">[</span><span class="s1">&#39;cell_ids&#39;</span><span class="p">]))</span>
+        <span class="k">return</span> <span class="n">clipped</span></div>
 
 <div class="viewcode-block" id="DataSetFilters.compute_implicit_distance"><a class="viewcode-back" href="../../../../api/core/_autosummary/pyvista.DataSetFilters.compute_implicit_distance.html#pyvista.DataSetFilters.compute_implicit_distance">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">compute_implicit_distance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">surface</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Compute the implicit distance from the points to a surface.</span>
@@ -599,7 +636,13 @@
         <span class="k">return</span> <span class="n">result0</span></div>
 
 <div class="viewcode-block" id="DataSetFilters.clip_surface"><a class="viewcode-back" href="../../../../api/core/_autosummary/pyvista.DataSetFilters.clip_surface.html#pyvista.DataSetFilters.clip_surface">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">clip_surface</span><span class="p">(</span>
-        <span class="bp">self</span><span class="p">,</span> <span class="n">surface</span><span class="p">,</span> <span class="n">invert</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">compute_distance</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">progress_bar</span><span class="o">=</span><span class="kc">False</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">surface</span><span class="p">,</span>
+        <span class="n">invert</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">value</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
+        <span class="n">compute_distance</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">progress_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">crinkle</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Clip any mesh type using a :class:`pyvista.PolyData` surface mesh.</span>
 
@@ -629,6 +672,12 @@
 
 <span class="sd">        progress_bar : bool, optional</span>
 <span class="sd">            Display a progress bar to indicate progress.</span>
+
+<span class="sd">        crinkle : bool, optional</span>
+<span class="sd">            Crinkle the clip by extracting the entire cells along the</span>
+<span class="sd">            clip. This adds the ``&quot;cell_ids&quot;`` array to the ``cell_data``</span>
+<span class="sd">            attribute that tracks the original cell IDs of the original</span>
+<span class="sd">            dataset.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
@@ -660,7 +709,12 @@
             <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;implicit_distance&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">convert_array</span><span class="p">(</span><span class="n">dists</span><span class="p">)</span>
         <span class="c1"># run the clip</span>
         <span class="n">result</span> <span class="o">=</span> <span class="n">DataSetFilters</span><span class="o">.</span><span class="n">_clip_with_function</span><span class="p">(</span>
-            <span class="bp">self</span><span class="p">,</span> <span class="n">function</span><span class="p">,</span> <span class="n">invert</span><span class="o">=</span><span class="n">invert</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">value</span><span class="p">,</span> <span class="n">progress_bar</span><span class="o">=</span><span class="n">progress_bar</span>
+            <span class="bp">self</span><span class="p">,</span>
+            <span class="n">function</span><span class="p">,</span>
+            <span class="n">invert</span><span class="o">=</span><span class="n">invert</span><span class="p">,</span>
+            <span class="n">value</span><span class="o">=</span><span class="n">value</span><span class="p">,</span>
+            <span class="n">progress_bar</span><span class="o">=</span><span class="n">progress_bar</span><span class="p">,</span>
+            <span class="n">crinkle</span><span class="o">=</span><span class="n">crinkle</span><span class="p">,</span>
         <span class="p">)</span>
         <span class="k">return</span> <span class="n">result</span></div>
 
@@ -5230,8 +5284,9 @@
       </div>
     </div>
   
-    <script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

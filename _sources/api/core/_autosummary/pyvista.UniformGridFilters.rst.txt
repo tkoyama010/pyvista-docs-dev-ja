@@ -93,6 +93,9 @@
       UniformGridFilters.glyph
       
       
+      UniformGridFilters.image_dilate_erode
+      
+      
       UniformGridFilters.image_threshold
       
       
