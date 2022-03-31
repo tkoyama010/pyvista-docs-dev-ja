@@ -4318,7 +4318,7 @@
 
         <span class="c1"># extracts only in float32</span>
         <span class="k">if</span> <span class="n">subgrid</span><span class="o">.</span><span class="n">n_points</span><span class="p">:</span>
-            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">points</span><span class="o">.</span><span class="n">dtype</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="s1">&#39;float32&#39;</span><span class="p">):</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">points</span><span class="o">.</span><span class="n">dtype</span> <span class="o">!=</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="s1">&#39;float32&#39;</span><span class="p">):</span>
                 <span class="n">ind</span> <span class="o">=</span> <span class="n">subgrid</span><span class="o">.</span><span class="n">point_data</span><span class="p">[</span><span class="s1">&#39;vtkOriginalPointIds&#39;</span><span class="p">]</span>
                 <span class="n">subgrid</span><span class="o">.</span><span class="n">points</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">points</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span>
 
