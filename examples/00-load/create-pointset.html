@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>PointSetの作成 &#8212; PyVista 0.34.dev0 ドキュメント</title>
+    <title>PointSetの作成 &#8212; PyVista 0.35.dev0 ドキュメント</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -740,6 +740,13 @@
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="../02-plot/mesh-picking.html">
+   メッシュのピッキング
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
   <a class="reference internal" href="../02-plot/movie.html">
    MP 4ムービーを作成する
   </a>
@@ -840,6 +847,13 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../02-plot/spherical.html">
    球座標でデータをプロットする
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-plot/surface-picking.html">
+   メッシュの表面上の点をピックします
   </a>
  </li>
 </ul>
@@ -1083,8 +1097,8 @@ to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="create-a-pointset">
 <span id="create-pointset-example"></span><span id="sphx-glr-examples-00-load-create-pointset-py"></span><h1>PointSetの作成<a class="headerlink" href="#create-a-pointset" title="このヘッドラインへのパーマリンク">#</a></h1>
-<p>クラス :<cite>pyvista.PointSet</cite> は、点の集合を表す具象クラスで、ジオメトリを表現するために &quot;点&quot; の配列を明示的に使用するデータセットのためのインターフェイスを指定します。このクラスは、点群に対するフィルタのパフォーマンスを向上させるために役立ちます。</p>
-<p>この例では、 <a class="reference internal" href="../../api/core/_autosummary/pyvista.PointSet.html#pyvista.PointSet" title="pyvista.PointSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PointSet</span></code></a> の <a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSet.clip.html#pyvista.DataSet.clip" title="pyvista.DataSet.clip"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSet.clip()</span></code></a> フィルターを使用してクリッピングした場合のパフォーマンスの向上を示しています。</p>
+<p>クラス :<cite>pyvista.PointSet</cite> は，点の集合を表す具象クラスで，ジオメトリを表現するために &quot;点&quot; の配列を明示的に使用するデータセットのためのインターフェイスを指定します．このクラスは，点群に対するフィルタのパフォーマンスを向上させるために役立ちます．</p>
+<p>この例では， <a class="reference internal" href="../../api/core/_autosummary/pyvista.PointSet.html#pyvista.PointSet" title="pyvista.PointSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PointSet</span></code></a> の <a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSet.clip.html#pyvista.DataSet.clip" title="pyvista.DataSet.clip"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSet.clip()</span></code></a> フィルターを使用してクリッピングした場合のパフォーマンスの向上を示しています．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
 
 <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
@@ -1106,7 +1120,7 @@ to download the full example code</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">clipped</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">show_scalar_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_create-pointset_001.png" srcset="../../_images/sphx_glr_create-pointset_001.png" alt="create pointset" class = "sphx-glr-single-img"/><p>PointSetを使用したときのパフォーマンスの向上を表示します。 VTK &gt;= 9.1.0 でのみ利用可能です。</p>
+<img src="../../_images/sphx_glr_create-pointset_001.png" srcset="../../_images/sphx_glr_create-pointset_001.png" alt="create pointset" class = "sphx-glr-single-img"/><p>PointSetを使用したときのパフォーマンスの向上を表示します． VTK &gt;= 9.1.0 でのみ利用可能です．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># pset = lidar.cast_to_pointset(deep=False)</span>
 
 <span class="k">if</span> <span class="n">pv</span><span class="o">.</span><span class="n">vtk_version_info</span> <span class="o">&gt;=</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
@@ -1121,10 +1135,10 @@ to download the full example code</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Time to clip with a PointSet 0.16 seconds.
 </pre></div>
 </div>
-<p>同じデータセットをプロットします。</p>
+<p>同じデータセットをプロットします．</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p>PyVistaは、プロットできるようにするために、中間的なPolyDataを作成しなければならないので、 <a class="reference internal" href="../../api/core/_autosummary/pyvista.PointSet.html#pyvista.PointSet" title="pyvista.PointSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PointSet</span></code></a> を使用してもパフォーマンスが向上することはありません。</p>
+<p>PyVistaは，プロットできるようにするために，中間的なPolyDataを作成しなければならないので， <a class="reference internal" href="../../api/core/_autosummary/pyvista.PointSet.html#pyvista.PointSet" title="pyvista.PointSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PointSet</span></code></a> を使用してもパフォーマンスが向上することはありません．</p>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">pv</span><span class="o">.</span><span class="n">vtk_version_info</span> <span class="o">&gt;=</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
     <span class="n">clipped_pset</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">show_scalar_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>

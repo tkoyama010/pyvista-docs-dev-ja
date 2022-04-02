@@ -15,7 +15,13 @@
    
       
       
+      PLYReader.hide_progress
+      
+      
       PLYReader.read
+      
+      
+      PLYReader.show_progress
       
    
    

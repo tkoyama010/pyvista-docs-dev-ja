@@ -54,6 +54,9 @@
       OpenFOAMReader.enable_point_array
       
       
+      OpenFOAMReader.hide_progress
+      
+      
       OpenFOAMReader.patch_array_status
       
       
@@ -67,6 +70,9 @@
       
       
       OpenFOAMReader.set_active_time_value
+      
+      
+      OpenFOAMReader.show_progress
       
       
       OpenFOAMReader.time_point_value

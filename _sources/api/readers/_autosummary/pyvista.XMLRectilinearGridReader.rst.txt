@@ -42,10 +42,16 @@
       XMLRectilinearGridReader.enable_point_array
       
       
+      XMLRectilinearGridReader.hide_progress
+      
+      
       XMLRectilinearGridReader.point_array_status
       
       
       XMLRectilinearGridReader.read
+      
+      
+      XMLRectilinearGridReader.show_progress
       
    
    

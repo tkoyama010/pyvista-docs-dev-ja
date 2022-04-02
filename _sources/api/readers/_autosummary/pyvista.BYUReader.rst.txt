@@ -15,7 +15,13 @@
    
       
       
+      BYUReader.hide_progress
+      
+      
       BYUReader.read
+      
+      
+      BYUReader.show_progress
       
    
    

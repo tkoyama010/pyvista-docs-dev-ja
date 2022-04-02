@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>pyvista.PointSet &#8212; PyVista 0.34.dev0 ドキュメント</title>
+    <title>pyvista.PointSet &#8212; PyVista 0.35.dev0 ドキュメント</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -1085,13 +1085,13 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="pyvista.PointSet">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PointSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_float</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/pyvista/core/pointset.html#PointSet"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#pyvista.PointSet" title="この定義へのパーマリンク">#</a></dt>
-<dd><p>点の集合を格納するための具体的なクラスです。</p>
-<p>これは、点の集合を表す具象クラスで、ジオメトリを表現するために &quot;点&quot; の配列を明示的に使用するデータセットのためのインターフェイスを指定します。このクラスは、点群に対するフィルタの性能を向上させるのに有効ですが、プロットには使えません。</p>
-<p>詳細は <a class="reference external" href="https://vtk.org/doc/nightly/html/classvtkPointSet.html#details">VTK: vtkPointSet Details</a> を参照してください。</p>
+<dd><p>点の集合を格納するための具体的なクラスです．</p>
+<p>これは，点の集合を表す具象クラスで，ジオメトリを表現するために &quot;点&quot; の配列を明示的に使用するデータセットのためのインターフェイスを指定します．このクラスは，点群に対するフィルタの性能を向上させるのに有効ですが，プロットには使えません．</p>
+<p>詳細は <a class="reference external" href="https://vtk.org/doc/nightly/html/classvtkPointSet.html#details">VTK: vtkPointSet Details</a> を参照してください．</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>points</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Sequence</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>点の位置を含むリスト、numpy配列、またはシーケンス。点の <code class="docutils literal notranslate"><span class="pre">(N,</span> <span class="pre">3)</span></code> 配列である必要があります。</p>
+<dt><strong>points</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Sequence</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>点の位置を含むリスト，numpy配列，またはシーケンス．点の <code class="docutils literal notranslate"><span class="pre">(N,</span> <span class="pre">3)</span></code> 配列である必要があります．</p>
 </dd>
 <dt><strong>deep</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>入力 <code class="docutils literal notranslate"><span class="pre">points</span></code> をコピーするか，コピーせずに入力から PointSet を作成するかを指定します． <code class="docutils literal notranslate"><span class="pre">deep=True</span></code> を設定すると，メッシュに影響を与えずにメッシュの外部でオリジナルの配列を修正できます．デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です．</p>
 </dd>
@@ -1101,9 +1101,9 @@
 </dd>
 </dl>
 <p class="rubric">備考</p>
-<p>このクラスは <code class="docutils literal notranslate"><span class="pre">vtk&gt;=9.1.0</span></code> が必要です。 <code class="docutils literal notranslate"><span class="pre">vtk&lt;9.1.0</span></code> では、このクラスは抽象クラスであり、インスタンス化できません。</p>
+<p>このクラスは <code class="docutils literal notranslate"><span class="pre">vtk&gt;=9.1.0</span></code> が必要です． <code class="docutils literal notranslate"><span class="pre">vtk&lt;9.1.0</span></code> では，このクラスは抽象クラスであり，インスタンス化できません．</p>
 <p class="rubric">例</p>
-<p>numpyの配列から10点の単純な点群を作成します。</p>
+<p>numpyの配列から10点の単純な点群を作成します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">()</span>
@@ -1111,7 +1111,7 @@
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pset</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">PointSet</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>点セットをプロットします。注意：プロットする際には、内部的に <a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> にキャストされます。</p>
+<p>点セットをプロットします．注意：プロットする際には，内部的に <a class="reference internal" href="pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> にキャストされます．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pset</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">point_size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1135,7 +1135,7 @@
 <td><p>このオブジェクトの新しい表現を <a class="reference internal" href="#pyvista.PointSet" title="pyvista.PointSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PointSet</span></code></a> として取得します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.PointSet.cast_to_polydata.html#pyvista.PointSet.cast_to_polydata" title="pyvista.PointSet.cast_to_polydata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PointSet.cast_to_polydata</span></code></a>([deep])</p></td>
-<td><p>このデータセットをpolydataにキャストします。</p></td>
+<td><p>このデータセットをpolydataにキャストします．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PointSet.cast_to_unstructured_grid.html#pyvista.PointSet.cast_to_unstructured_grid" title="pyvista.PointSet.cast_to_unstructured_grid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PointSet.cast_to_unstructured_grid</span></code></a>()</p></td>
 <td><p>このオブジェクトの新しい表現を <a class="reference internal" href="pyvista.UnstructuredGrid.html#pyvista.UnstructuredGrid" title="pyvista.UnstructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UnstructuredGrid</span></code></a> として取得します．</p></td>

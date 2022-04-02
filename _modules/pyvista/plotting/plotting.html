@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pyvista.plotting.plotting &#8212; PyVista 0.34.dev0 ドキュメント</title>
+    <title>pyvista.plotting.plotting &#8212; PyVista 0.35.dev0 ドキュメント</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -638,6 +638,12 @@
 <span class="sd">            Saves the point array ``&#39;Normals&#39;`` as ``&#39;NORMAL&#39;`` in</span>
 <span class="sd">            the outputted scene.</span>
 
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        The VTK exporter only supports :class:`pyvista.PolyData` datasets. If</span>
+<span class="sd">        the plotter contains any non-PolyData datasets, these will be converted</span>
+<span class="sd">        in the plotter, leading to a copy of the data internally.</span>
+
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        Output a simple point cloud represented as balls.</span>
@@ -688,6 +694,23 @@
                             <span class="k">if</span> <span class="n">mapper</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
                                 <span class="k">continue</span>
                             <span class="n">dataset</span> <span class="o">=</span> <span class="n">mapper</span><span class="o">.</span><span class="n">GetInputAsDataSet</span><span class="p">()</span>
+                            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">PolyData</span><span class="p">):</span>
+                                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+                                    <span class="s1">&#39;Plotter contains non-PolyData datasets. These have been &#39;</span>
+                                    <span class="s1">&#39;overwritten with PolyData surfaces and are internally &#39;</span>
+                                    <span class="s1">&#39;copies of the original datasets.&#39;</span>
+                                <span class="p">)</span>
+
+                                <span class="k">try</span><span class="p">:</span>
+                                    <span class="n">dataset</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">extract_surface</span><span class="p">()</span>
+                                    <span class="n">mapper</span><span class="o">.</span><span class="n">SetInputData</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+                                <span class="k">except</span><span class="p">:</span>  <span class="c1"># pragma: no cover</span>
+                                    <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+                                        <span class="s1">&#39;During gLTF export, failed to convert some &#39;</span>
+                                        <span class="s1">&#39;datasets to PolyData. Exported scene will not have &#39;</span>
+                                        <span class="s1">&#39;all datasets.&#39;</span>
+                                    <span class="p">)</span>
+
                             <span class="k">if</span> <span class="s1">&#39;Normals&#39;</span> <span class="ow">in</span> <span class="n">dataset</span><span class="o">.</span><span class="n">point_data</span><span class="p">:</span>
                                 <span class="c1"># By default VTK uses the &#39;Normals&#39; point data for normals</span>
                                 <span class="c1"># but gLTF uses NORMAL.</span>

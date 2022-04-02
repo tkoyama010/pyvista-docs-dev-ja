@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>貢献 &#8212; PyVista 0.34.dev0 ドキュメント</title>
+    <title>貢献 &#8212; PyVista 0.35.dev0 ドキュメント</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -312,17 +312,17 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#unit-testing">
-     Unit Testing
+     ユニットテスト
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#documentation-testing">
-     Documentation Testing
+     ドキュメンテーションテスト
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#style-checking">
-     Style Checking
+     スタイルチェック
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -454,9 +454,7 @@ python -m pip install -e .
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">this</span>
 </pre></div>
 </div>
-<p>PyVista uses <a class="reference external" href="https://pre-commit.com/">pre-commit</a> to enforce PEP8 and other styles
-automatically. Please see the <a class="reference external" href="#style-checking">Style Checking section</a> for
-further details.</p>
+<p>PyVistaは <a class="reference external" href="https://pre-commit.com/">pre-commit</a> を使用して，PEP8やその他のスタイルを自動的に強制します．詳しくは <a class="reference external" href="#style-checking">スタイルチェックのセクション</a> を参照してください．</p>
 </section>
 <section id="branch-naming-conventions">
 <h4>ブランチの命名規則<a class="headerlink" href="#branch-naming-conventions" title="このヘッドラインへのパーマリンク">#</a></h4>
@@ -475,9 +473,7 @@ further details.</p>
 <section id="testing">
 <h4>テスト<a class="headerlink" href="#testing" title="このヘッドラインへのパーマリンク">#</a></h4>
 <p>変更を行った後，プル要求を作成する前にローカルで変更をテストしてください．コミットまたはプル要求の後に次のテストが実行されます．変更から新しい問題を追跡するには，ローカルで次の手順を実行してください．</p>
-<p>To run our comprehensive suite of unit tests, install all the
-dependencies listed in <code class="docutils literal notranslate"><span class="pre">requirements_test.txt</span></code>,
-<code class="docutils literal notranslate"><span class="pre">requirements_docs.txt</span></code></p>
+<p>総合的な単体テストを実行するには， <code class="docutils literal notranslate"><span class="pre">requirements_test.txt</span></code> ， <code class="docutils literal notranslate"><span class="pre">requirements_docs.txt</span></code> にリストされているすべての依存関係をインストールします．</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -r requirements_test.txt
 pip install -r requirements_docs.txt
 </pre></div>
@@ -486,7 +482,7 @@ pip install -r requirements_docs.txt
 </section>
 </section>
 <section id="unit-testing">
-<h3>Unit Testing<a class="headerlink" href="#unit-testing" title="このヘッドラインへのパーマリンク">#</a></h3>
+<h3>ユニットテスト<a class="headerlink" href="#unit-testing" title="このヘッドラインへのパーマリンク">#</a></h3>
 <p>プライマリテストスイートを実行し，カバレッジレポートを生成します．</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m pytest -v --cov pyvista
 </pre></div>
@@ -497,38 +493,35 @@ pip install -r requirements_docs.txt
 </div>
 </section>
 <section id="documentation-testing">
-<h3>Documentation Testing<a class="headerlink" href="#documentation-testing" title="このヘッドラインへのパーマリンク">#</a></h3>
-<p>Run all code examples in the docstrings with:</p>
+<h3>ドキュメンテーションテスト<a class="headerlink" href="#documentation-testing" title="このヘッドラインへのパーマリンク">#</a></h3>
+<p>docstring内のすべてのコード例を実行します．</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m pytest -v --doctest-modules pyvista
 </pre></div>
 </div>
-<p>Build the documentation on Linux or Mac OS with:</p>
+<p>LinuxまたはMac OSでドキュメントをビルドします．</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make -C doc html
 </pre></div>
 </div>
-<p>Build the documentation on Windows with:</p>
+<p>Windows でドキュメントをビルドします．</p>
 <blockquote>
 <div><p>cd doc
 python -msphinx -M html . _build</p>
 </div></blockquote>
-<p>The generated documentation can be found in the <code class="docutils literal notranslate"><span class="pre">doc/_build/html</span></code>
-directory.</p>
+<p>生成されたドキュメントは <code class="docutils literal notranslate"><span class="pre">doc/_build/html</span></code> ディレクトリにあります．</p>
 </section>
 <section id="style-checking">
-<h3>Style Checking<a class="headerlink" href="#style-checking" title="このヘッドラインへのパーマリンク">#</a></h3>
-<p>PyVista follows PEP8 standard as outlined in the <a class="reference external" href="#coding-style">Coding Style section</a> and implements style checking using <a class="reference external" href="https://pre-commit.com/">pre-commit</a>.</p>
-<p>To ensure your code meets minimum code styling standards, run:</p>
+<h3>スタイルチェック<a class="headerlink" href="#style-checking" title="このヘッドラインへのパーマリンク">#</a></h3>
+<p>PyVistaは， <a class="reference external" href="#coding-style">コーディングスタイルのセクション</a> で説明されているようにPEP8標準に従っており， <a class="reference external" href="https://pre-commit.com/">pre-commit</a> を使ってスタイルチェックを実装しています．</p>
+<p>コードが最小限のコードスタイリング基準に適合していることを確認するために，以下を実行してください．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">pre</span><span class="o">-</span><span class="n">commit</span>
 <span class="n">pre</span><span class="o">-</span><span class="n">commit</span> <span class="n">run</span> <span class="o">--</span><span class="nb">all</span><span class="o">-</span><span class="n">files</span>
 </pre></div>
 </div>
-<p>You can also install this as a pre-commit hook by running:</p>
+<p>また，pre-commit hookとして次のように実行することでインストールすることもできます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pre</span><span class="o">-</span><span class="n">commit</span> <span class="n">install</span>
 </pre></div>
 </div>
-<p>This way, it's not possible for you to push code that fails the style
-checks. For example, each commit automatically checks that you meet the style
-requirements:</p>
+<p>こうすれば，スタイルチェックに失敗したコードをプッシュすることは不可能になります．例えば，各コミットでスタイル要件を満たしているかどうかが自動的にチェックされます:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pre-commit install
 $ git commit -m &quot;added my cool feature&quot;
 black....................................................................Passed
@@ -537,9 +530,7 @@ flake8...................................................................Passed
 codespell................................................................Passed
 </pre></div>
 </div>
-<p>The actual installation of the environment happens before the first commit
-following <code class="docutils literal notranslate"><span class="pre">pre-commit</span> <span class="pre">install</span></code>. This will take a bit longer, but subsequent
-commits will only trigger the actual style checks.</p>
+<p>実際の環境のインストールは， <code class="docutils literal notranslate"><span class="pre">pre-commit</span> <span class="pre">install</span></code> に続く最初のコミットの前に行われます．これは少し時間がかかりますが，それ以降のコミットでは実際のスタイルチェックが行われるだけです．</p>
 </section>
 <section id="notes-regarding-image-regression-testing">
 <h3>イメージ回帰テストに関する注意事項<a class="headerlink" href="#notes-regarding-image-regression-testing" title="このヘッドラインへのパーマリンク">#</a></h3>

@@ -42,10 +42,16 @@
       XMLPolyDataReader.enable_point_array
       
       
+      XMLPolyDataReader.hide_progress
+      
+      
       XMLPolyDataReader.point_array_status
       
       
       XMLPolyDataReader.read
+      
+      
+      XMLPolyDataReader.show_progress
       
    
    

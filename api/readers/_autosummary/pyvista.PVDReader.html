@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>pyvista.PVDReader &#8212; PyVista 0.34.dev0 ドキュメント</title>
+    <title>pyvista.PVDReader &#8212; PyVista 0.35.dev0 ドキュメント</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -49,7 +49,7 @@
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="検索" href="../../../search.html" />
-    <link rel="next" title="read" href="pyvista.PVDReader.read.html" />
+    <link rel="next" title="hide_progress" href="pyvista.PVDReader.hide_progress.html" />
     <link rel="prev" title="reader" href="pyvista.XMLMultiBlockDataReader.reader.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="ja">
@@ -270,6 +270,11 @@
     </label>
     <ul>
      <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.PVDReader.hide_progress.html">
+       hide_progress
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="pyvista.PVDReader.read.html">
        read
       </a>
@@ -282,6 +287,11 @@
      <li class="toctree-l3">
       <a class="reference internal" href="pyvista.PVDReader.set_active_time_value.html">
        set_active_time_value
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.PVDReader.show_progress.html">
+       show_progress
       </a>
      </li>
      <li class="toctree-l3">
@@ -475,14 +485,20 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PVDReader.read.html#pyvista.PVDReader.read" title="pyvista.PVDReader.read"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PVDReader.read</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PVDReader.hide_progress.html#pyvista.PVDReader.hide_progress" title="pyvista.PVDReader.hide_progress"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PVDReader.hide_progress</span></code></a>()</p></td>
+<td><p>プログレスバーを非表示にします．</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.PVDReader.read.html#pyvista.PVDReader.read" title="pyvista.PVDReader.read"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PVDReader.read</span></code></a>()</p></td>
 <td><p>PVDの時刻点からデータを読み込みます．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.PVDReader.set_active_time_point.html#pyvista.PVDReader.set_active_time_point" title="pyvista.PVDReader.set_active_time_point"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PVDReader.set_active_time_point</span></code></a>(time_point)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PVDReader.set_active_time_point.html#pyvista.PVDReader.set_active_time_point" title="pyvista.PVDReader.set_active_time_point"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PVDReader.set_active_time_point</span></code></a>(time_point)</p></td>
 <td><p>アクティブ時間やイテレーションをインデックスで設定します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PVDReader.set_active_time_value.html#pyvista.PVDReader.set_active_time_value" title="pyvista.PVDReader.set_active_time_value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PVDReader.set_active_time_value</span></code></a>(time_value)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.PVDReader.set_active_time_value.html#pyvista.PVDReader.set_active_time_value" title="pyvista.PVDReader.set_active_time_value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PVDReader.set_active_time_value</span></code></a>(time_value)</p></td>
 <td><p>アクティブ時刻またはイテレーション値を設定します．</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.PVDReader.show_progress.html#pyvista.PVDReader.show_progress" title="pyvista.PVDReader.show_progress"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PVDReader.show_progress</span></code></a>([msg])</p></td>
+<td><p>プログレスバーを表示します．</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.PVDReader.time_point_value.html#pyvista.PVDReader.time_point_value" title="pyvista.PVDReader.time_point_value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PVDReader.time_point_value</span></code></a>(time_point)</p></td>
 <td><p>インデックスによるタイムポイントまたはイテレーションの値．</p></td>

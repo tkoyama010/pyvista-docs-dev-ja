@@ -15,6 +15,9 @@
    
       
       
+      PVDReader.hide_progress
+      
+      
       PVDReader.read
       
       
@@ -22,6 +25,9 @@
       
       
       PVDReader.set_active_time_value
+      
+      
+      PVDReader.show_progress
       
       
       PVDReader.time_point_value

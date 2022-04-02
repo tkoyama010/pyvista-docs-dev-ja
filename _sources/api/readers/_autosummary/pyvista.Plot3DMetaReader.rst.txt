@@ -15,7 +15,13 @@
    
       
       
+      Plot3DMetaReader.hide_progress
+      
+      
       Plot3DMetaReader.read
+      
+      
+      Plot3DMetaReader.show_progress
       
    
    

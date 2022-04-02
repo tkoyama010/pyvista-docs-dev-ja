@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pyvista.examples.downloads &#8212; PyVista 0.34.dev0 ドキュメント</title>
+    <title>pyvista.examples.downloads &#8212; PyVista 0.35.dev0 ドキュメント</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -1674,6 +1674,33 @@
     <span class="c1"># TODO: there are other files with this</span>
     <span class="n">_download_file</span><span class="p">(</span><span class="s1">&#39;froggy/frog.zraw&#39;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">_download_and_read</span><span class="p">(</span><span class="s1">&#39;froggy/frog.mhd&#39;</span><span class="p">,</span> <span class="n">load</span><span class="o">=</span><span class="n">load</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="download_chest"><a class="viewcode-back" href="../../../api/examples/_autosummary/pyvista.examples.downloads.download_chest.html#pyvista.examples.downloads.download_chest">[ドキュメント]</a><span class="k">def</span> <span class="nf">download_chest</span><span class="p">(</span><span class="n">load</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+    <span class="sd">&quot;&quot;&quot;Download chest dataset.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    load : bool, optional</span>
+<span class="sd">        Load the dataset after downloading it when ``True``.  Set this</span>
+<span class="sd">        to ``False`` and only the filename will be returned.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    pyvista.UniformGrid or str</span>
+<span class="sd">        DataSet or filename depending on ``load``.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; from pyvista import examples</span>
+<span class="sd">    &gt;&gt;&gt; dataset = examples.download_chest()</span>
+<span class="sd">    &gt;&gt;&gt; dataset.plot(cpos=&quot;xy&quot;)</span>
+
+<span class="sd">    See :ref:`volume_rendering_example` for an example using</span>
+<span class="sd">    this dataset.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">_download_and_read</span><span class="p">(</span><span class="s1">&#39;MetaIO/ChestCT-SHORT.mha&#39;</span><span class="p">,</span> <span class="n">load</span><span class="o">=</span><span class="n">load</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="download_prostate"><a class="viewcode-back" href="../../../api/examples/_autosummary/pyvista.examples.downloads.download_prostate.html#pyvista.examples.downloads.download_prostate">[ドキュメント]</a><span class="k">def</span> <span class="nf">download_prostate</span><span class="p">(</span><span class="n">load</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
@@ -3806,6 +3833,82 @@
             <span class="n">_download_and_read</span><span class="p">(</span><span class="s1">&#39;hdf/can_2.hdf&#39;</span><span class="p">),</span>
         <span class="p">]</span>
     <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="download_cgns_structured"><a class="viewcode-back" href="../../../api/examples/_autosummary/pyvista.examples.downloads.download_cgns_structured.html#pyvista.examples.downloads.download_cgns_structured">[ドキュメント]</a><span class="k">def</span> <span class="nf">download_cgns_structured</span><span class="p">(</span><span class="n">load</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+    <span class="sd">&quot;&quot;&quot;Download the structured CGNS dataset mesh.</span>
+
+<span class="sd">    Originally downloaded from `CFD General Notation System Example Files</span>
+<span class="sd">    &lt;https://cgns.github.io/CGNSFiles.html&gt;`_</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    load : bool, optional</span>
+<span class="sd">        Load the dataset after downloading it when ``True``.  Set this</span>
+<span class="sd">        to ``False`` and only the filename will be returned.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    pyvista.MultiBlock or str</span>
+<span class="sd">        Structured, 12 block, 3-D constricting channel, with example use of</span>
+<span class="sd">        Family_t for BCs (ADF type). If ``load`` is ``False``, then the path of the</span>
+<span class="sd">        example CGNS file is returned.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    Plot the example CGNS dataset.</span>
+
+<span class="sd">    &gt;&gt;&gt; from pyvista import examples</span>
+<span class="sd">    &gt;&gt;&gt; import pyvista</span>
+<span class="sd">    &gt;&gt;&gt; dataset = examples.download_cgns_structured()</span>
+<span class="sd">    &gt;&gt;&gt; dataset[0].plot(scalars=&#39;Density&#39;)</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">filename</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">_download_file</span><span class="p">(</span><span class="s1">&#39;cgns/sqnz_s.adf.cgns&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">load</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">filename</span>
+    <span class="k">return</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">get_reader</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="download_cgns_multi"><a class="viewcode-back" href="../../../api/examples/_autosummary/pyvista.examples.downloads.download_cgns_multi.html#pyvista.examples.downloads.download_cgns_multi">[ドキュメント]</a><span class="k">def</span> <span class="nf">download_cgns_multi</span><span class="p">(</span><span class="n">load</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+    <span class="sd">&quot;&quot;&quot;Download a multielement airfoil with a cell centered solution.</span>
+
+<span class="sd">    Originally downloaded from `CFD General Notation System Example Files</span>
+<span class="sd">    &lt;https://cgns.github.io/CGNSFiles.html&gt;`_</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    load : bool, optional</span>
+<span class="sd">        Load the dataset after downloading it when ``True``.  Set this</span>
+<span class="sd">        to ``False`` and only the filename will be returned.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    pyvista.MultiBlock or str</span>
+<span class="sd">        Structured, 4 blocks, 2D (2 planes in third dimension) multielement</span>
+<span class="sd">        airfoil, with cell centered solution. If ``load`` is ``False``, then the path of the</span>
+<span class="sd">        example CGNS file is returned.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    Plot the airfoil dataset. Merge the multi-block and then plot the airfoil&#39;s</span>
+<span class="sd">    ``&quot;ViscosityEddy&quot;``. Convert the cell data to point data as in this</span>
+<span class="sd">    dataset, the solution is stored within the cells.</span>
+
+<span class="sd">    &gt;&gt;&gt; from pyvista import examples</span>
+<span class="sd">    &gt;&gt;&gt; import pyvista</span>
+<span class="sd">    &gt;&gt;&gt; dataset = examples.download_cgns_multi()</span>
+<span class="sd">    &gt;&gt;&gt; ugrid = dataset.combine()</span>
+<span class="sd">    &gt;&gt;&gt; ugrid = ugrid = ugrid.cell_data_to_point_data()</span>
+<span class="sd">    &gt;&gt;&gt; ugrid.plot(</span>
+<span class="sd">    ...     cmap=&#39;bwr&#39;, scalars=&#39;ViscosityEddy&#39;, zoom=4, cpos=&#39;xz&#39;, show_scalar_bar=False,</span>
+<span class="sd">    ... )</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">filename</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">_download_file</span><span class="p">(</span><span class="s1">&#39;cgns/multi.cgns&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">load</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">filename</span>
+    <span class="k">return</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">get_reader</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span></div>
 </pre></div>
 
               </div>

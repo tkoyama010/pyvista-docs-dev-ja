@@ -42,10 +42,16 @@
       XMLMultiBlockDataReader.enable_point_array
       
       
+      XMLMultiBlockDataReader.hide_progress
+      
+      
       XMLMultiBlockDataReader.point_array_status
       
       
       XMLMultiBlockDataReader.read
+      
+      
+      XMLMultiBlockDataReader.show_progress
       
    
    

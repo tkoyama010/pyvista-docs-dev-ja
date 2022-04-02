@@ -237,6 +237,9 @@
       Plotter.enable_lightkit
       
       
+      Plotter.enable_mesh_picking
+      
+      
       Plotter.enable_parallel_projection
       
       
@@ -256,6 +259,9 @@
       
       
       Plotter.enable_stereo_render
+      
+      
+      Plotter.enable_surface_picking
       
       
       Plotter.enable_terrain_style
@@ -557,6 +563,9 @@
       
       
       Plotter.picked_horizon
+      
+      
+      Plotter.picked_mesh
       
       
       Plotter.picked_path

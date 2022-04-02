@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pyvista.utilities.fileio &#8212; PyVista 0.34.dev0 ドキュメント</title>
+    <title>pyvista.utilities.fileio &#8212; PyVista 0.35.dev0 ドキュメント</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -237,6 +237,7 @@
     <span class="s1">&#39;.img&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkDICOMImageReader</span><span class="p">,</span>
     <span class="s1">&#39;.jpeg&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkJPEGReader</span><span class="p">,</span>
     <span class="s1">&#39;.jpg&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkJPEGReader</span><span class="p">,</span>
+    <span class="s1">&#39;.mha&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkMetaImageReader</span><span class="p">,</span>
     <span class="s1">&#39;.mhd&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkMetaImageReader</span><span class="p">,</span>
     <span class="s1">&#39;.nrrd&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkNrrdReader</span><span class="p">,</span>
     <span class="s1">&#39;.nhdr&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkNrrdReader</span><span class="p">,</span>
@@ -288,6 +289,12 @@
     <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>  <span class="c1"># pragma: no cover</span>
         <span class="k">pass</span>
 
+<span class="k">if</span> <span class="n">VTK_MAJOR</span> <span class="o">&gt;=</span> <span class="mi">9</span> <span class="ow">and</span> <span class="n">VTK_MINOR</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">READERS</span><span class="p">[</span><span class="s1">&#39;.cgns&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">lazy_vtkCGNSReader</span>
+    <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>  <span class="c1"># pragma: no cover</span>
+        <span class="k">pass</span>
+
 
 <span class="k">def</span> <span class="nf">_get_ext_force</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">force_ext</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">force_ext</span><span class="p">:</span>
@@ -323,7 +330,7 @@
     <span class="k">return</span> <span class="n">vtk_writer</span>
 
 
-<span class="k">def</span> <span class="nf">standard_reader_routine</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">attrs</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">standard_reader_routine</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">attrs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">progress_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Use a given reader in the common VTK reading pipeline routine.</span>
 
 <span class="sd">    The reader must come from the ``READERS`` mapping.</span>
@@ -342,7 +349,12 @@
 <span class="sd">        arguments passed to those calls. If you do not have any</span>
 <span class="sd">        attributes to call, pass ``None`` as the value.</span>
 
+<span class="sd">    progress_bar : bool, optional</span>
+<span class="sd">        Optionally show a progress bar.</span>
+
 <span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">from</span> <span class="nn">pyvista.core.filters</span> <span class="kn">import</span> <span class="n">_update_alg</span>  <span class="c1"># avoid circular import</span>
+
     <span class="n">observer</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">utilities</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">Observer</span><span class="p">()</span>
     <span class="n">observer</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">reader</span><span class="p">)</span>
 
@@ -364,8 +376,18 @@
             <span class="n">attr</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">attr</span><span class="p">()</span>
+
     <span class="c1"># Perform the read</span>
-    <span class="n">reader</span><span class="o">.</span><span class="n">Update</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">filename</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Reading </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Reading file&quot;</span>
+
+    <span class="n">_update_alg</span><span class="p">(</span>
+        <span class="n">reader</span><span class="p">,</span>
+        <span class="n">progress_bar</span><span class="o">=</span><span class="n">progress_bar</span><span class="p">,</span>
+        <span class="n">message</span><span class="o">=</span><span class="n">msg</span><span class="p">,</span>
+    <span class="p">)</span>
 
     <span class="c1"># Check reader for errors</span>
     <span class="k">if</span> <span class="n">observer</span><span class="o">.</span><span class="n">has_event_occurred</span><span class="p">():</span>
@@ -379,7 +401,7 @@
     <span class="k">return</span> <span class="n">data</span>
 
 
-<div class="viewcode-block" id="read_legacy"><a class="viewcode-back" href="../../../api/utilities/_autosummary/pyvista.read_legacy.html#pyvista.read_legacy">[ドキュメント]</a><span class="k">def</span> <span class="nf">read_legacy</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+<div class="viewcode-block" id="read_legacy"><a class="viewcode-back" href="../../../api/utilities/_autosummary/pyvista.read_legacy.html#pyvista.read_legacy">[ドキュメント]</a><span class="k">def</span> <span class="nf">read_legacy</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">progress_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Use VTK&#39;s legacy reader to read a file.</span>
 
 <span class="sd">    This uses ``vtk.vtkDataSetReader`` to read the data.</span>
@@ -388,6 +410,9 @@
 <span class="sd">    ----------</span>
 <span class="sd">    filename : str</span>
 <span class="sd">        The string path to the file to read.</span>
+
+<span class="sd">    progress_bar : bool, optional</span>
+<span class="sd">        Optionally show a progress bar. Default ``False``.</span>
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
@@ -422,13 +447,13 @@
     <span class="n">reader</span><span class="o">.</span><span class="n">ReadAllTensorsOn</span><span class="p">()</span>
 
     <span class="c1"># Perform the read</span>
-    <span class="n">output</span> <span class="o">=</span> <span class="n">standard_reader_routine</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="n">standard_reader_routine</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">progress_bar</span><span class="o">=</span><span class="n">progress_bar</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">output</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s1">&#39;No output when using VTKs legacy reader&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s1">&#39;No output when using VTKs legacy reader.&#39;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">output</span></div>
 
 
-<div class="viewcode-block" id="read"><a class="viewcode-back" href="../../../api/utilities/_autosummary/pyvista.read.html#pyvista.read">[ドキュメント]</a><span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">attrs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">force_ext</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">file_format</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="read"><a class="viewcode-back" href="../../../api/utilities/_autosummary/pyvista.read.html#pyvista.read">[ドキュメント]</a><span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">attrs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">force_ext</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">file_format</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">progress_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Read any file type supported by ``vtk`` or ``meshio``.</span>
 
 <span class="sd">    Automatically determines the correct reader to use then wraps the</span>
@@ -464,6 +489,7 @@
 <span class="sd">    * ``&#39;.img&#39;``</span>
 <span class="sd">    * ``&#39;.jpeg&#39;``</span>
 <span class="sd">    * ``&#39;.jpg&#39;``</span>
+<span class="sd">    * ``&#39;.mha&#39;``</span>
 <span class="sd">    * ``&#39;.mhd&#39;``</span>
 <span class="sd">    * ``&#39;.nrrd&#39;``</span>
 <span class="sd">    * ``&#39;.nhdr&#39;``</span>
@@ -519,6 +545,10 @@
 <span class="sd">    file_format : str, optional</span>
 <span class="sd">        Format of file to read with meshio.</span>
 
+<span class="sd">    progress_bar : bool, optional</span>
+<span class="sd">        Optionally show a progress bar. Default ``False``. Ignored when using</span>
+<span class="sd">        ``meshio``.</span>
+
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
 <span class="sd">    pyvista.DataSet</span>
@@ -566,17 +596,17 @@
     <span class="c1"># From the extension, decide which reader to use</span>
     <span class="k">if</span> <span class="n">attrs</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">reader</span> <span class="o">=</span> <span class="n">get_vtk_reader</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">force_ext</span><span class="o">=</span><span class="n">ext</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">standard_reader_routine</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">attrs</span><span class="o">=</span><span class="n">attrs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">standard_reader_routine</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">attrs</span><span class="o">=</span><span class="n">attrs</span><span class="p">,</span> <span class="n">progress_bar</span><span class="o">=</span><span class="n">progress_bar</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">ext</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;.e&#39;</span><span class="p">,</span> <span class="s1">&#39;.exo&#39;</span><span class="p">]:</span>
         <span class="k">return</span> <span class="n">read_exodus</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">ext</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;.vtk&#39;</span><span class="p">]:</span>
         <span class="c1"># Attempt to use the legacy reader...</span>
-        <span class="k">return</span> <span class="n">read_legacy</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">read_legacy</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">progress_bar</span><span class="o">=</span><span class="n">progress_bar</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="c1"># Attempt find a reader in the readers mapping</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="n">reader</span> <span class="o">=</span> <span class="n">get_vtk_reader</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">force_ext</span><span class="o">=</span><span class="n">ext</span><span class="p">)</span>
-            <span class="k">return</span> <span class="n">standard_reader_routine</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">standard_reader_routine</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">progress_bar</span><span class="o">=</span><span class="n">progress_bar</span><span class="p">)</span>
         <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
             <span class="c1"># Don&#39;t fall back to meshio if using `force_ext`, which is really</span>
             <span class="c1"># just intended to be used with the native PyVista readers</span>
@@ -599,7 +629,7 @@
     <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span><span class="s2">&quot;This file was not able to be automatically read by pyvista.&quot;</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="read_texture"><a class="viewcode-back" href="../../../api/utilities/_autosummary/pyvista.read_texture.html#pyvista.read_texture">[ドキュメント]</a><span class="k">def</span> <span class="nf">read_texture</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">attrs</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="read_texture"><a class="viewcode-back" href="../../../api/utilities/_autosummary/pyvista.read_texture.html#pyvista.read_texture">[ドキュメント]</a><span class="k">def</span> <span class="nf">read_texture</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">attrs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">progress_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Load a texture from an image file.</span>
 
 <span class="sd">    Parameters</span>
@@ -612,6 +642,9 @@
 <span class="sd">        dictionary are the attribute/method names and values are the</span>
 <span class="sd">        arguments passed to those calls. If you do not have any</span>
 <span class="sd">        attributes to call, pass ``None`` as the value.</span>
+
+<span class="sd">    progress_bar : bool, optional</span>
+<span class="sd">        Optionally show a progress bar.</span>
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
@@ -636,7 +669,7 @@
     <span class="k">try</span><span class="p">:</span>
         <span class="c1"># initialize the reader using the extension to find it</span>
         <span class="n">reader</span> <span class="o">=</span> <span class="n">get_vtk_reader</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
-        <span class="n">image</span> <span class="o">=</span> <span class="n">standard_reader_routine</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">attrs</span><span class="o">=</span><span class="n">attrs</span><span class="p">)</span>
+        <span class="n">image</span> <span class="o">=</span> <span class="n">standard_reader_routine</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">attrs</span><span class="o">=</span><span class="n">attrs</span><span class="p">,</span> <span class="n">progress_bar</span><span class="o">=</span><span class="n">progress_bar</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">image</span><span class="o">.</span><span class="n">n_points</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Problem reading the image with VTK.&quot;</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Texture</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
@@ -737,7 +770,7 @@
     <span class="k">return</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">reader</span><span class="o">.</span><span class="n">GetOutput</span><span class="p">())</span></div>
 
 
-<span class="k">def</span> <span class="nf">read_plot3d</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">q_filenames</span><span class="o">=</span><span class="p">(),</span> <span class="n">auto_detect</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">attrs</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">read_plot3d</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">q_filenames</span><span class="o">=</span><span class="p">(),</span> <span class="n">auto_detect</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">attrs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">progress_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Read a Plot3D grid file (e.g., grid.in) and optional q file(s).</span>
 
 <span class="sd">    Parameters</span>
@@ -759,6 +792,9 @@
 <span class="sd">        dictionary are the attribute/method names and values are the</span>
 <span class="sd">        arguments passed to those calls. If you do not have any</span>
 <span class="sd">        attributes to call, pass ``None`` as the value.</span>
+
+<span class="sd">    progress_bar : bool, optional</span>
+<span class="sd">        Optionally show a progress bar.</span>
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
@@ -795,7 +831,7 @@
     <span class="n">attrs</span> <span class="o">=</span> <span class="p">{}</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">attrs</span> <span class="k">else</span> <span class="n">attrs</span>
     <span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;SetAutoDetectFormat&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">auto_detect</span>
 
-    <span class="k">return</span> <span class="n">standard_reader_routine</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">attrs</span><span class="o">=</span><span class="n">attrs</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">standard_reader_routine</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">attrs</span><span class="o">=</span><span class="n">attrs</span><span class="p">,</span> <span class="n">progress_bar</span><span class="o">=</span><span class="n">progress_bar</span><span class="p">)</span>
 
 
 <span class="k">def</span> <span class="nf">from_meshio</span><span class="p">(</span><span class="n">mesh</span><span class="p">):</span>

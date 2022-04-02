@@ -15,7 +15,13 @@
    
       
       
+      VTKDataSetReader.hide_progress
+      
+      
       VTKDataSetReader.read
+      
+      
+      VTKDataSetReader.show_progress
       
    
    

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>image_dilate_erode &#8212; PyVista 0.34.dev0 ドキュメント</title>
+    <title>image_dilate_erode &#8212; PyVista 0.35.dev0 ドキュメント</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -670,14 +670,14 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.UniformGridFilters.image_dilate_erode">
 <span class="sig-prename descclassname"><span class="pre">UniformGridFilters.</span></span><span class="sig-name descname"><span class="pre">image_dilate_erode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dilate_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">erode_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kernel_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(3,</span> <span class="pre">3,</span> <span class="pre">3)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scalars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preference</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'points'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/pyvista/core/filters/uniform_grid.html#UniformGridFilters.image_dilate_erode"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#pyvista.UniformGridFilters.image_dilate_erode" title="この定義へのパーマリンク">#</a></dt>
-<dd><p>ある値を希釈し、別の値を侵食します。</p>
-<p><code class="docutils literal notranslate"><span class="pre">image_dilate_erode</span></code> は、ある値を拡張し、別の値を侵食します。楕円形のフットプリントを使用し、2つの値の境界でのみ膨張/収縮します。このフィルターは、今のところ X, Y, Z 軸に制限されています。特定の軸のカーネルサイズを 1 に設定することにより、2 次元または 1 次元のフィルタに退化させることができます。</p>
+<dd><p>ある値を希釈し，別の値を侵食します．</p>
+<p><code class="docutils literal notranslate"><span class="pre">image_dilate_erode</span></code> は，ある値を拡張し，別の値を侵食します．楕円形のフットプリントを使用し，2つの値の境界でのみ膨張/収縮します．このフィルターは，今のところ X, Y, Z 軸に制限されています．特定の軸のカーネルサイズを 1 に設定することにより，2 次元または 1 次元のフィルタに退化させることができます．</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>dilate_value</strong><span class="classifier">python:int または python:float, optional</span></dt><dd><p>データセットのDilate値。デフォルト: <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
+<dt><strong>dilate_value</strong><span class="classifier">python:int または python:float, optional</span></dt><dd><p>データセットのDilate値．デフォルト: <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
 </dd>
-<dt><strong>erode_value</strong><span class="classifier">python:int または python:float, optional</span></dt><dd><p>データセット内の値を消去します。デフォルト: <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+<dt><strong>erode_value</strong><span class="classifier">python:int または python:float, optional</span></dt><dd><p>データセット内の値を消去します．デフォルト: <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
 </dd>
 <dt><strong>kernel_size</strong><span class="classifier">python:list(python:int) または python:tuple(python:int), optional</span></dt><dd><p>長さ3のint型反復処理可能: <code class="docutils literal notranslate"><span class="pre">(xsize,</span> <span class="pre">ysize,</span> <span class="pre">zsize)</span></code> ．カーネルのサイズ（と中心）を決定します．デフォルト: <code class="docutils literal notranslate"><span class="pre">(3,</span> <span class="pre">3,</span> <span class="pre">3)</span></code>．</p>
 </dd>
@@ -691,7 +691,7 @@
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference internal" href="pyvista.UniformGrid.html#pyvista.UniformGrid" title="pyvista.UniformGrid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.UniformGrid</span></code></a></dt><dd><p>指定したスカラーの境界で膨張/収縮されたDataset。</p>
+<dt><a class="reference internal" href="pyvista.UniformGrid.html#pyvista.UniformGrid" title="pyvista.UniformGrid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.UniformGrid</span></code></a></dt><dd><p>指定したスカラーの境界で膨張/収縮されたDataset．</p>
 </dd>
 </dl>
 </dd>
@@ -706,7 +706,7 @@
 <figure class="align-default">
 <img alt="../../../_images/pyvista-UniformGridFilters-image_dilate_erode-1_00_00.png" src="../../../_images/pyvista-UniformGridFilters-image_dilate_erode-1_00_00.png" />
 </figure>
-<p>ここで、画像の閾値を <code class="docutils literal notranslate"><span class="pre">threshold=[400,</span> <span class="pre">600]</span></code> としてプロットしてみましょう。閾値内の値は1、閾値外の値は0であることに注意してください。</p>
+<p>ここで，画像の閾値を <code class="docutils literal notranslate"><span class="pre">threshold=[400,</span> <span class="pre">600]</span></code> としてプロットしてみましょう．閾値内の値は1，閾値外の値は0であることに注意してください．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ithresh</span> <span class="o">=</span> <span class="n">uni</span><span class="o">.</span><span class="n">image_threshold</span><span class="p">([</span><span class="mi">400</span><span class="p">,</span> <span class="mi">600</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ithresh</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
@@ -714,7 +714,7 @@
 <figure class="align-default">
 <img alt="../../../_images/pyvista-UniformGridFilters-image_dilate_erode-1_01_00.png" src="../../../_images/pyvista-UniformGridFilters-image_dilate_erode-1_01_00.png" />
 </figure>
-<p>閾値処理された画像に穴が開いていることに注目してください。この穴を埋めるために、大きなカーネルを持つ膨張/収縮フィルターを適用します。</p>
+<p>閾値処理された画像に穴が開いていることに注目してください．この穴を埋めるために，大きなカーネルを持つ膨張/収縮フィルターを適用します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">idilate</span> <span class="o">=</span> <span class="n">ithresh</span><span class="o">.</span><span class="n">image_dilate_erode</span><span class="p">(</span><span class="n">kernel_size</span><span class="o">=</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">idilate</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>

@@ -15,7 +15,13 @@
    
       
       
+      OBJReader.hide_progress
+      
+      
       OBJReader.read
+      
+      
+      OBJReader.show_progress
       
    
    

@@ -15,7 +15,13 @@
    
       
       
+      STLReader.hide_progress
+      
+      
       STLReader.read
+      
+      
+      STLReader.show_progress
       
    
    

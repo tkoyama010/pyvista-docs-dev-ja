@@ -42,6 +42,9 @@
       EnSightReader.enable_point_array
       
       
+      EnSightReader.hide_progress
+      
+      
       EnSightReader.point_array_status
       
       
@@ -52,6 +55,9 @@
       
       
       EnSightReader.set_active_time_value
+      
+      
+      EnSightReader.show_progress
       
       
       EnSightReader.time_point_value

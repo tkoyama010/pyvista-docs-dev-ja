@@ -42,10 +42,16 @@
       XMLPRectilinearGridReader.enable_point_array
       
       
+      XMLPRectilinearGridReader.hide_progress
+      
+      
       XMLPRectilinearGridReader.point_array_status
       
       
       XMLPRectilinearGridReader.read
+      
+      
+      XMLPRectilinearGridReader.show_progress
       
    
    

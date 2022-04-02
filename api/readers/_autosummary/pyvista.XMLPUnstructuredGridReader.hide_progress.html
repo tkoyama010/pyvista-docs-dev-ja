@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>parse_color &#8212; PyVista 0.34.dev0 ドキュメント</title>
+    <title>hide_progress &#8212; PyVista 0.35.dev0 ドキュメント</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -49,8 +49,8 @@
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="検索" href="../../../search.html" />
-    <link rel="next" title="start_xvfb" href="pyvista.start_xvfb.html" />
-    <link rel="prev" title="color_like" href="pyvista.color_like.html" />
+    <link rel="next" title="point_array_status" href="pyvista.XMLPUnstructuredGridReader.point_array_status.html" />
+    <link rel="prev" title="enable_point_array" href="pyvista.XMLPUnstructuredGridReader.enable_point_array.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="ja">
     
@@ -194,9 +194,14 @@
    プロット
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../utilities/index.html">
+   ユーティリティ
+  </a>
+ </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../index.html">
-   ユーティリティ
+   Readers
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -205,18 +210,38 @@
   </label>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="../geometric.html">
-     ジオメトリオブジェクト
+    <a class="reference internal" href="pyvista.get_reader.html">
+     get_reader
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../parametric.html">
-     パラメトリックオブジェクト
+    <a class="reference internal" href="pyvista.XMLImageDataReader.html">
+     pyvista.XMLImageDataReader
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyvista.XMLPImageDataReader.html">
+     pyvista.XMLPImageDataReader
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyvista.XMLRectilinearGridReader.html">
+     pyvista.XMLRectilinearGridReader
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyvista.XMLPRectilinearGridReader.html">
+     pyvista.XMLPRectilinearGridReader
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyvista.XMLUnstructuredGridReader.html">
+     pyvista.XMLUnstructuredGridReader
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
-    <a class="reference internal" href="../utilities.html">
-     一般ユーティリティ
+    <a class="reference internal" href="pyvista.XMLPUnstructuredGridReader.html">
+     pyvista.XMLPUnstructuredGridReader
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -225,163 +250,198 @@
     </label>
     <ul class="current">
      <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.utilities.VtkErrorCatcher.html">
-       pyvista.utilities.VtkErrorCatcher
+      <a class="reference internal" href="pyvista.XMLPUnstructuredGridReader.cell_array_status.html">
+       cell_array_status
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.utilities.set_error_output_file.html">
-       set_error_output_file
+      <a class="reference internal" href="pyvista.XMLPUnstructuredGridReader.disable_all_cell_arrays.html">
+       disable_all_cell_arrays
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.utilities.is_inside_bounds.html">
-       is_inside_bounds
+      <a class="reference internal" href="pyvista.XMLPUnstructuredGridReader.disable_all_point_arrays.html">
+       disable_all_point_arrays
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.utilities.axis_rotation.html">
-       axis_rotation
+      <a class="reference internal" href="pyvista.XMLPUnstructuredGridReader.disable_cell_array.html">
+       disable_cell_array
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.wrap.html">
-       wrap
+      <a class="reference internal" href="pyvista.XMLPUnstructuredGridReader.disable_point_array.html">
+       disable_point_array
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.is_pyvista_dataset.html">
-       is_pyvista_dataset
+      <a class="reference internal" href="pyvista.XMLPUnstructuredGridReader.enable_all_cell_arrays.html">
+       enable_all_cell_arrays
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.image_to_texture.html">
-       image_to_texture
+      <a class="reference internal" href="pyvista.XMLPUnstructuredGridReader.enable_all_point_arrays.html">
+       enable_all_point_arrays
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.numpy_to_texture.html">
-       numpy_to_texture
+      <a class="reference internal" href="pyvista.XMLPUnstructuredGridReader.enable_cell_array.html">
+       enable_cell_array
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.array_from_vtkmatrix.html">
-       array_from_vtkmatrix
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.vtkmatrix_from_array.html">
-       vtkmatrix_from_array
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.cubemap.html">
-       cubemap
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.read.html">
-       read
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.read_exodus.html">
-       read_exodus
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.read_texture.html">
-       read_texture
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.read_legacy.html">
-       read_legacy
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.save_meshio.html">
-       save_meshio
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.lines_from_points.html">
-       lines_from_points
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.vtk_points.html">
-       vtk_points
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.vector_poly_data.html">
-       vector_poly_data
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.fit_plane_to_points.html">
-       fit_plane_to_points
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.get_array.html">
-       get_array
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.convert_array.html">
-       convert_array
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.point_array.html">
-       point_array
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.cell_array.html">
-       cell_array
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.field_array.html">
-       field_array
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.compare_images.html">
-       compare_images
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.Color.html">
-       pyvista.Color
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.color_like.html">
-       color_like
+      <a class="reference internal" href="pyvista.XMLPUnstructuredGridReader.enable_point_array.html">
+       enable_point_array
       </a>
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       parse_color
+       hide_progress
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.start_xvfb.html">
-       start_xvfb
+      <a class="reference internal" href="pyvista.XMLPUnstructuredGridReader.point_array_status.html">
+       point_array_status
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.XMLPUnstructuredGridReader.read.html">
+       read
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.XMLPUnstructuredGridReader.show_progress.html">
+       show_progress
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.XMLPUnstructuredGridReader.all_cell_arrays_status.html">
+       all_cell_arrays_status
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.XMLPUnstructuredGridReader.all_point_arrays_status.html">
+       all_point_arrays_status
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.XMLPUnstructuredGridReader.cell_array_names.html">
+       cell_array_names
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.XMLPUnstructuredGridReader.number_cell_arrays.html">
+       number_cell_arrays
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.XMLPUnstructuredGridReader.number_point_arrays.html">
+       number_point_arrays
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.XMLPUnstructuredGridReader.point_array_names.html">
+       point_array_names
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.XMLPUnstructuredGridReader.reader.html">
+       reader
       </a>
      </li>
     </ul>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyvista.XMLPolyDataReader.html">
+     pyvista.XMLPolyDataReader
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyvista.XMLStructuredGridReader.html">
+     pyvista.XMLStructuredGridReader
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyvista.XMLMultiBlockDataReader.html">
+     pyvista.XMLMultiBlockDataReader
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyvista.PVDReader.html">
+     pyvista.PVDReader
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyvista.EnSightReader.html">
+     pyvista.EnSightReader
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyvista.OpenFOAMReader.html">
+     pyvista.OpenFOAMReader
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyvista.PLYReader.html">
+     pyvista.PLYReader
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyvista.OBJReader.html">
+     pyvista.OBJReader
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyvista.STLReader.html">
+     pyvista.STLReader
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyvista.VTKDataSetReader.html">
+     pyvista.VTKDataSetReader
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyvista.VTKPDataSetReader.html">
+     pyvista.VTKPDataSetReader
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyvista.BYUReader.html">
+     pyvista.BYUReader
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyvista.FacetReader.html">
+     pyvista.FacetReader
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyvista.Plot3DMetaReader.html">
+     pyvista.Plot3DMetaReader
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyvista.BinaryMarchingCubesReader.html">
+     pyvista.BinaryMarchingCubesReader
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyvista.BaseReader.html">
+     pyvista.BaseReader
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyvista.PointCellDataSelection.html">
+     pyvista.PointCellDataSelection
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyvista.TimeReader.html">
+     pyvista.TimeReader
+    </a>
+   </li>
   </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../readers/index.html">
-   Readers
-  </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../examples/index.html">
@@ -428,60 +488,12 @@
               
               <div>
                 
-  <section id="parse-color">
-<h1>parse_color<a class="headerlink" href="#parse-color" title="このヘッドラインへのパーマリンク">#</a></h1>
-<dl class="py function">
-<dt class="sig sig-object py" id="pyvista.parse_color">
-<span class="sig-name descname"><span class="pre">parse_color</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">color</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opacity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/pyvista/plotting/tools.html#parse_color"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#pyvista.parse_color" title="この定義へのパーマリンク">#</a></dt>
-<dd><p>色をVTKフレンドリーなRGB(A)タプルに解析します．</p>
-<div class="deprecated">
-<p><span class="versionmodified deprecated">バージョン 0.34.0 で非推奨: </span>代わりに <a class="reference internal" href="pyvista.Color.html#pyvista.Color" title="pyvista.Color"><code class="xref py py-class docutils literal notranslate"><span class="pre">Color</span></code></a> を使用して，色をパースして変換します．</p>
-</div>
-<p><code class="docutils literal notranslate"><span class="pre">color</span></code> が RGBA の浮動小数点数のシーケンスである場合，<code class="docutils literal notranslate"><span class="pre">opacity</span></code> パラメータは無視されます．</p>
-<p>返される値は0から1の間です．</p>
-<dl class="field-list">
-<dt class="field-odd">パラメータ</dt>
-<dd class="field-odd"><dl>
-<dt><strong>color</strong><span class="classifier"><a class="reference internal" href="pyvista.color_like.html#pyvista.color_like" title="pyvista.color_like"><code class="xref py py-obj docutils literal notranslate"><span class="pre">color_like</span></code></a></span></dt><dd><p>文字列，RGB配列，RGBA配列，または16進数の色文字列のいずれかです．RGB(A)配列は，0から1の値のみを含みます．例えば:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">'white'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'w'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">[1.0,</span> <span class="pre">1.0,</span> <span class="pre">1.0]</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">[0.5,</span> <span class="pre">1.0,</span> <span class="pre">0.7,</span> <span class="pre">1.0]</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'#FFFFFF'</span></code></p></li>
-</ul>
-</dd>
-<dt><strong>opacity</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>返される色のデフォルトの不透明度です． <code class="docutils literal notranslate"><span class="pre">color</span></code> が長さ 4 の RGBA シーケンスでない場合に使用します．0 から 1 の間の不透明度のみが許可されます．</p>
-</dd>
-<dt><strong>default_color</strong><span class="classifier"><a class="reference internal" href="pyvista.color_like.html#pyvista.color_like" title="pyvista.color_like"><code class="xref py py-obj docutils literal notranslate"><span class="pre">color_like</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">color</span></code> が None の場合に使用されるデフォルトの色です． もしこの値が <code class="docutils literal notranslate"><span class="pre">None</span></code> であれば，デフォルトではグローバルテーマカラーを使用します． フォーマットは <code class="docutils literal notranslate"><span class="pre">color</span></code> と同じです．</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">戻り値</dt>
-<dd class="field-even"><dl class="simple">
-<dt><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">opacity</span></code> が設定されていない場合は長さ3のRGBシーケンス， <code class="docutils literal notranslate"><span class="pre">opacity</span></code> が設定されているか，入力の <code class="docutils literal notranslate"><span class="pre">color</span></code> がRGBAシーケンスの場合はRGBAシーケンスとなります．</p>
-</dd>
-</dl>
-</dd>
-</dl>
-<p class="rubric">例</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">parse_color</span><span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
-<span class="go">(0.0, 0.0, 1.0)</span>
-</pre></div>
-</div>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">parse_color</span><span class="p">(</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
-<span class="go">(0.0, 0.0, 0.0)</span>
-</pre></div>
-</div>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">parse_color</span><span class="p">(</span><span class="s1">&#39;#FFFFFF&#39;</span><span class="p">)</span>
-<span class="go">(1.0, 1.0, 1.0)</span>
-</pre></div>
-</div>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">parse_color</span><span class="p">((</span><span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-<span class="go">(0.4, 0.3, 0.4, 1.0)</span>
-</pre></div>
-</div>
+  <section id="hide-progress">
+<h1>hide_progress<a class="headerlink" href="#hide-progress" title="このヘッドラインへのパーマリンク">#</a></h1>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyvista.XMLPUnstructuredGridReader.hide_progress">
+<span class="sig-prename descclassname"><span class="pre">XMLPUnstructuredGridReader.</span></span><span class="sig-name descname"><span class="pre">hide_progress</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.XMLPUnstructuredGridReader.hide_progress" title="この定義へのパーマリンク">#</a></dt>
+<dd><p>プログレスバーを非表示にします．</p>
 </dd></dl>
 
 </section>

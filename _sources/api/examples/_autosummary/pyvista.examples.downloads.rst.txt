@@ -35,6 +35,9 @@
       download_carburator
       download_carotid
       download_cavity
+      download_cgns_multi
+      download_cgns_structured
+      download_chest
       download_clown
       download_coastlines
       download_cow

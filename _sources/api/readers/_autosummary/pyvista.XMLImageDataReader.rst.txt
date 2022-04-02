@@ -42,10 +42,16 @@
       XMLImageDataReader.enable_point_array
       
       
+      XMLImageDataReader.hide_progress
+      
+      
       XMLImageDataReader.point_array_status
       
       
       XMLImageDataReader.read
+      
+      
+      XMLImageDataReader.show_progress
       
    
    

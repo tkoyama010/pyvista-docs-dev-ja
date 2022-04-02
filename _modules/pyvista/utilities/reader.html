@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pyvista.utilities.reader &#8212; PyVista 0.34.dev0 ドキュメント</title>
+    <title>pyvista.utilities.reader &#8212; PyVista 0.35.dev0 ドキュメント</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -205,7 +205,7 @@
 <span class="kn">from</span> <span class="nn">abc</span> <span class="kn">import</span> <span class="n">ABC</span><span class="p">,</span> <span class="n">abstractmethod</span>
 <span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span>
 <span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">List</span>
 <span class="kn">from</span> <span class="nn">xml.etree</span> <span class="kn">import</span> <span class="n">ElementTree</span>
 
 <span class="kn">import</span> <span class="nn">pyvista</span>
@@ -221,6 +221,8 @@
 <span class="sd">    +----------------+---------------------------------------------+</span>
 <span class="sd">    | File Extension | Class                                       |</span>
 <span class="sd">    +================+=============================================+</span>
+<span class="sd">    | ``.cgns``      | :class:`pyvista.CGNSReader`                 |</span>
+<span class="sd">    +----------------+---------------------------------------------+</span>
 <span class="sd">    | ``.case``      | :class:`pyvista.EnSightReader`              |</span>
 <span class="sd">    +----------------+---------------------------------------------+</span>
 <span class="sd">    | ``.facet``     | :class:`pyvista.FacetReader`                |</span>
@@ -297,7 +299,7 @@
     <span class="k">try</span><span class="p">:</span>
         <span class="n">Reader</span> <span class="o">=</span> <span class="n">CLASS_READERS</span><span class="p">[</span><span class="n">ext</span><span class="p">]</span>
     <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ext</span><span class="si">}</span><span class="s2"> not supported&quot;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;`pyvista.get_reader` does not support a file with the </span><span class="si">{</span><span class="n">ext</span><span class="si">}</span><span class="s2"> extension&quot;</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">Reader</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span></div>
 
@@ -323,10 +325,29 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_class_reader</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="o">=</span> <span class="n">filename</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_set_filename</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_progress_bar</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_progress_msg</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Representation of a Reader object.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">(&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="si">}</span><span class="s2">&#39;)&quot;</span>
+
+<div class="viewcode-block" id="BaseReader.show_progress"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.BaseReader.show_progress.html#pyvista.BaseReader.show_progress">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">show_progress</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Show a progress bar.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        msg : str, optional</span>
+<span class="sd">            Progress bar message. Defaults to &quot;Reading &lt;file base name&gt;&quot;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_progress_bar</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">if</span> <span class="n">msg</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Reading </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_progress_msg</span> <span class="o">=</span> <span class="n">msg</span></div>
+
+<div class="viewcode-block" id="BaseReader.hide_progress"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.BaseReader.hide_progress.html#pyvista.BaseReader.hide_progress">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">hide_progress</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Hide the progress bar.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_progress_bar</span> <span class="o">=</span> <span class="kc">False</span></div>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">reader</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -334,10 +355,11 @@
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
-<span class="sd">        A vtk Reader object</span>
+<span class="sd">        pyvista.BaseReader</span>
+<span class="sd">            An instance of the Reader object.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># pragma: no cover</span>
             <span class="k">raise</span> <span class="ne">NotImplementedError</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span>
 
@@ -357,14 +379,12 @@
 <span class="sd">        pyvista.DataSet</span>
 <span class="sd">            PyVista Dataset.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_update</span><span class="p">()</span>
+        <span class="kn">from</span> <span class="nn">pyvista.core.filters</span> <span class="kn">import</span> <span class="n">_update_alg</span>  <span class="c1"># avoid circular import</span>
+
+        <span class="n">_update_alg</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="p">,</span> <span class="n">progress_bar</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_progress_bar</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_progress_msg</span><span class="p">)</span>
         <span class="n">data</span> <span class="o">=</span> <span class="n">wrap</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">GetOutputDataObject</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
         <span class="n">data</span><span class="o">.</span><span class="n">_post_file_load_processing</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">data</span></div>
-
-    <span class="k">def</span> <span class="nf">_update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Update reader.&quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">Update</span><span class="p">()</span>
 
     <span class="k">def</span> <span class="nf">_update_information</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">UpdateInformation</span><span class="p">()</span></div>
@@ -414,7 +434,7 @@
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
-<span class="sd">        list[int]</span>
+<span class="sd">        list[str]</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">GetPointArrayName</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">number_point_arrays</span><span class="p">)]</span>
@@ -538,9 +558,7 @@
 <span class="sd">            Whether reading the cell array is enabled.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">GetCellArrayStatus</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
-            <span class="k">return</span> <span class="kc">True</span>
-        <span class="k">return</span> <span class="kc">False</span></div>
+        <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">GetCellArrayStatus</span><span class="p">(</span><span class="n">name</span><span class="p">))</span></div>
 
 <div class="viewcode-block" id="PointCellDataSelection.enable_all_cell_arrays"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.PointCellDataSelection.enable_all_cell_arrays.html#pyvista.PointCellDataSelection.enable_all_cell_arrays">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">enable_all_cell_arrays</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Enable all cell arrays.&quot;&quot;&quot;</span>
@@ -1183,6 +1201,305 @@
     <span class="n">_class_reader</span> <span class="o">=</span> <span class="nb">staticmethod</span><span class="p">(</span><span class="n">_vtk</span><span class="o">.</span><span class="n">lazy_vtkPlot3DMetaReader</span><span class="p">)</span></div>
 
 
+<span class="k">class</span> <span class="nc">CGNSReader</span><span class="p">(</span><span class="n">BaseReader</span><span class="p">,</span> <span class="n">PointCellDataSelection</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;CGNS Reader for .cgns files.</span>
+
+<span class="sd">    Creates a multi-block dataset and reads unstructured grids and structured</span>
+<span class="sd">    meshes from binary files stored in CGNS file format, with data stored at</span>
+<span class="sd">    the nodes, cells or faces.</span>
+
+<span class="sd">    By default, all point and cell arrays are loaded as well as the boundary</span>
+<span class="sd">    patch. This varies from VTK&#39;s defaults. For more details, see</span>
+<span class="sd">    `vtkCGNSReader &lt;https://vtk.org/doc/nightly/html/classvtkCGNSReader.html&gt;`_</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    Load a CGNS file.  All arrays are loaded by default.</span>
+
+<span class="sd">    &gt;&gt;&gt; import pyvista</span>
+<span class="sd">    &gt;&gt;&gt; from pyvista import examples</span>
+<span class="sd">    &gt;&gt;&gt; filename = examples.download_cgns_multi(load=False)</span>
+<span class="sd">    &gt;&gt;&gt; reader = pyvista.get_reader(filename)</span>
+<span class="sd">    &gt;&gt;&gt; reader.load_boundary_patch = False</span>
+<span class="sd">    &gt;&gt;&gt; ds = reader.read()</span>
+<span class="sd">    &gt;&gt;&gt; ds[0][0].cell_data</span>
+<span class="sd">    pyvista DataSetAttributes</span>
+<span class="sd">    Association     : CELL</span>
+<span class="sd">    Active Scalars  : None</span>
+<span class="sd">    Active Vectors  : Momentum</span>
+<span class="sd">    Active Texture  : None</span>
+<span class="sd">    Active Normals  : None</span>
+<span class="sd">    Contains arrays :</span>
+<span class="sd">        Density                 float64  (2928,)</span>
+<span class="sd">        Momentum                float64  (2928, 3)            VECTORS</span>
+<span class="sd">        EnergyStagnationDensity float64  (2928,)</span>
+<span class="sd">        ViscosityEddy           float64  (2928,)</span>
+<span class="sd">        TurbulentDistance       float64  (2928,)</span>
+<span class="sd">        TurbulentSANuTilde      float64  (2928,)</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_class_reader</span> <span class="o">=</span> <span class="nb">staticmethod</span><span class="p">(</span><span class="n">_vtk</span><span class="o">.</span><span class="n">lazy_vtkCGNSReader</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Initialize CGNSReader with filename.&quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">enable_all_point_arrays</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">enable_all_cell_arrays</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">load_boundary_patch</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">distribute_blocks</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Distribute each block in each zone across ranks.</span>
+
+<span class="sd">        To make the reader disregard the piece request and read all blocks in the</span>
+<span class="sd">        zone, set this to ``False``. The default is ``True``.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        bool</span>
+<span class="sd">            If ``True``, distribute each block in each zone across ranks.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        Disable distributing blocks.</span>
+
+<span class="sd">        &gt;&gt;&gt; import pyvista</span>
+<span class="sd">        &gt;&gt;&gt; from pyvista import examples</span>
+<span class="sd">        &gt;&gt;&gt; filename = examples.download_cgns_multi(load=False)</span>
+<span class="sd">        &gt;&gt;&gt; reader = pyvista.get_reader(filename)</span>
+<span class="sd">        &gt;&gt;&gt; reader.distribute_blocks = False</span>
+<span class="sd">        &gt;&gt;&gt; reader.distribute_blocks</span>
+<span class="sd">        False</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_reader</span><span class="o">.</span><span class="n">GetDistributeBlocks</span><span class="p">())</span>
+
+    <span class="nd">@distribute_blocks</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">distribute_blocks</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span><span class="o">.</span><span class="n">SetDistributeBlocks</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">base_array_status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Get status of base array with name.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        name : str</span>
+<span class="sd">            Base array name.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        bool</span>
+<span class="sd">            Whether reading the base array is enabled.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">GetBaseArrayStatus</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">base_array_names</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return the list of all base array names.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        list[int]</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">GetBaseArrayName</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">number_base_arrays</span><span class="p">)]</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">number_base_arrays</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Return the number of base arrays.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        int</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">GetNumberOfBaseArrays</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">enable_all_bases</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Enable reading all bases.</span>
+
+<span class="sd">        By default only the 0th base is read.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        Read all bases.</span>
+
+<span class="sd">        &gt;&gt;&gt; import pyvista</span>
+<span class="sd">        &gt;&gt;&gt; from pyvista import examples</span>
+<span class="sd">        &gt;&gt;&gt; filename = examples.download_cgns_multi(load=False)</span>
+<span class="sd">        &gt;&gt;&gt; reader = pyvista.get_reader(filename)</span>
+<span class="sd">        &gt;&gt;&gt; reader.enable_all_bases()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span><span class="o">.</span><span class="n">EnableAllBases</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">disable_all_bases</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Disable reading all bases.</span>
+
+<span class="sd">        By default only the 0th base is read.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        Disable reading all bases.</span>
+
+<span class="sd">        &gt;&gt;&gt; import pyvista</span>
+<span class="sd">        &gt;&gt;&gt; from pyvista import examples</span>
+<span class="sd">        &gt;&gt;&gt; filename = examples.download_cgns_multi(load=False)</span>
+<span class="sd">        &gt;&gt;&gt; reader = pyvista.get_reader(filename)</span>
+<span class="sd">        &gt;&gt;&gt; reader.disable_all_bases()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span><span class="o">.</span><span class="n">DisableAllBases</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">family_array_status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Get status of family array with name.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        name : str</span>
+<span class="sd">            Family array name.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        bool</span>
+<span class="sd">            Whether reading the family array is enabled.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">GetFamilyArrayStatus</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">family_array_names</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;Return the list of all family array names.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        list[str]</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">GetFamilyArrayName</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">number_family_arrays</span><span class="p">)]</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">number_family_arrays</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Return the number of face arrays.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        int</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">GetNumberOfFamilyArrays</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">enable_all_families</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Enable reading all families.</span>
+
+<span class="sd">        By default only the 0th family is read.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        Read all bases.</span>
+
+<span class="sd">        &gt;&gt;&gt; import pyvista</span>
+<span class="sd">        &gt;&gt;&gt; from pyvista import examples</span>
+<span class="sd">        &gt;&gt;&gt; filename = examples.download_cgns_multi(load=False)</span>
+<span class="sd">        &gt;&gt;&gt; reader = pyvista.get_reader(filename)</span>
+<span class="sd">        &gt;&gt;&gt; reader.enable_all_families()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span><span class="o">.</span><span class="n">EnableAllFamilies</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">disable_all_families</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Disable reading all families.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        Disable reading all bases.</span>
+
+<span class="sd">        &gt;&gt;&gt; import pyvista</span>
+<span class="sd">        &gt;&gt;&gt; from pyvista import examples</span>
+<span class="sd">        &gt;&gt;&gt; filename = examples.download_cgns_multi(load=False)</span>
+<span class="sd">        &gt;&gt;&gt; reader = pyvista.get_reader(filename)</span>
+<span class="sd">        &gt;&gt;&gt; reader.disable_all_families()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span><span class="o">.</span><span class="n">DisableAllFamilies</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">unsteady_pattern</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Return or set using an unsteady pattern.</span>
+
+<span class="sd">        When set to ``True`` (default is ``False``), the reader will try to</span>
+<span class="sd">        determine to determine FlowSolution_t nodes to read with a pattern</span>
+<span class="sd">        matching This can be useful for unsteady solutions when</span>
+<span class="sd">        FlowSolutionPointers are not reliable.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        Set reading the unsteady pattern to ``True``.</span>
+
+<span class="sd">        &gt;&gt;&gt; import pyvista</span>
+<span class="sd">        &gt;&gt;&gt; from pyvista import examples</span>
+<span class="sd">        &gt;&gt;&gt; filename = examples.download_cgns_multi(load=False)</span>
+<span class="sd">        &gt;&gt;&gt; reader = pyvista.get_reader(filename)</span>
+<span class="sd">        &gt;&gt;&gt; reader.unsteady_pattern = True</span>
+<span class="sd">        &gt;&gt;&gt; reader.unsteady_pattern</span>
+<span class="sd">        True</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span><span class="o">.</span><span class="n">GetUseUnsteadyPattern</span><span class="p">()</span>
+
+    <span class="nd">@unsteady_pattern</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">unsteady_pattern</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enabled</span><span class="p">:</span> <span class="nb">bool</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span><span class="o">.</span><span class="n">SetUseUnsteadyPattern</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="n">enabled</span><span class="p">))</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">vector_3d</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Return or set adding an empty dimension to vectors in case of 2D solutions.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        Set adding an empty physical dimension to vectors to ``True``.</span>
+
+<span class="sd">        &gt;&gt;&gt; import pyvista</span>
+<span class="sd">        &gt;&gt;&gt; from pyvista import examples</span>
+<span class="sd">        &gt;&gt;&gt; filename = examples.download_cgns_multi(load=False)</span>
+<span class="sd">        &gt;&gt;&gt; reader = pyvista.get_reader(filename)</span>
+<span class="sd">        &gt;&gt;&gt; reader.vector_3d = True</span>
+<span class="sd">        &gt;&gt;&gt; reader.vector_3d</span>
+<span class="sd">        True</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span><span class="o">.</span><span class="n">GetUse3DVector</span><span class="p">()</span>
+
+    <span class="nd">@vector_3d</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">vector_3d</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enabled</span><span class="p">:</span> <span class="nb">bool</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span><span class="o">.</span><span class="n">SetUse3DVector</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="n">enabled</span><span class="p">))</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">load_boundary_patch</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Return or set loading boundary patches.</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        VTK default is ``False``, but PyVista uses ``True``.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        Enable loading boundary patches .</span>
+
+<span class="sd">        &gt;&gt;&gt; import pyvista</span>
+<span class="sd">        &gt;&gt;&gt; from pyvista import examples</span>
+<span class="sd">        &gt;&gt;&gt; filename = examples.download_cgns_multi(load=False)</span>
+<span class="sd">        &gt;&gt;&gt; reader = pyvista.get_reader(filename)</span>
+<span class="sd">        &gt;&gt;&gt; reader.load_boundary_patch = True</span>
+<span class="sd">        &gt;&gt;&gt; reader.load_boundary_patch</span>
+<span class="sd">        True</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span><span class="o">.</span><span class="n">GetLoadBndPatch</span><span class="p">()</span>
+
+    <span class="nd">@load_boundary_patch</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">load_boundary_patch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enabled</span><span class="p">:</span> <span class="nb">bool</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span><span class="o">.</span><span class="n">SetLoadBndPatch</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="n">enabled</span><span class="p">))</span>
+
+
 <div class="viewcode-block" id="BinaryMarchingCubesReader"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.BinaryMarchingCubesReader.html#pyvista.BinaryMarchingCubesReader">[ドキュメント]</a><span class="k">class</span> <span class="nc">BinaryMarchingCubesReader</span><span class="p">(</span><span class="n">BaseReader</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;BinaryMarchingCubes Reader for .tri files.</span>
 
@@ -1251,7 +1568,7 @@
         <span class="sd">&quot;&quot;&quot;Return the PVDReader.</span>
 
 <span class="sd">        .. note::</span>
-<span class="sd">            This Reader does not have an uderlying vtk Reader.</span>
+<span class="sd">            This Reader does not have an underlying vtk Reader.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span>
@@ -1314,10 +1631,6 @@
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">datasets</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_parse_file</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="nf">_update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
-        <span class="sd">&quot;&quot;&quot;Unused in PVDReader.&quot;&quot;&quot;</span>
-        <span class="k">pass</span>
-
     <span class="k">def</span> <span class="nf">_parse_file</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Parse PVD file.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
@@ -1370,6 +1683,7 @@
 
 <span class="n">CLASS_READERS</span> <span class="o">=</span> <span class="p">{</span>
     <span class="c1"># Standard dataset readers:</span>
+    <span class="s1">&#39;.cgns&#39;</span><span class="p">:</span> <span class="n">CGNSReader</span><span class="p">,</span>
     <span class="s1">&#39;.vti&#39;</span><span class="p">:</span> <span class="n">XMLImageDataReader</span><span class="p">,</span>
     <span class="s1">&#39;.pvti&#39;</span><span class="p">:</span> <span class="n">XMLPImageDataReader</span><span class="p">,</span>
     <span class="s1">&#39;.vtr&#39;</span><span class="p">:</span> <span class="n">XMLRectilinearGridReader</span><span class="p">,</span>

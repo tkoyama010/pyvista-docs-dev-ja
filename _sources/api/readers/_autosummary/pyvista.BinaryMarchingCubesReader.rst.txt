@@ -15,7 +15,13 @@
    
       
       
+      BinaryMarchingCubesReader.hide_progress
+      
+      
       BinaryMarchingCubesReader.read
+      
+      
+      BinaryMarchingCubesReader.show_progress
       
    
    

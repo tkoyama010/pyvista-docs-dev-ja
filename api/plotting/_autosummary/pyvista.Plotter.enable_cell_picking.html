@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>enable_cell_picking &#8212; PyVista 0.34.dev0 ドキュメント</title>
+    <title>enable_cell_picking &#8212; PyVista 0.35.dev0 ドキュメント</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -595,6 +595,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.Plotter.enable_mesh_picking.html">
+       enable_mesh_picking
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="pyvista.Plotter.enable_parallel_projection.html">
        enable_parallel_projection
       </a>
@@ -627,6 +632,11 @@
      <li class="toctree-l3">
       <a class="reference internal" href="pyvista.Plotter.enable_stereo_render.html">
        enable_stereo_render
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.Plotter.enable_surface_picking.html">
+       enable_surface_picking
       </a>
      </li>
      <li class="toctree-l3">
@@ -1115,6 +1125,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.Plotter.picked_mesh.html">
+       picked_mesh
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="pyvista.Plotter.picked_path.html">
        picked_path
       </a>
@@ -1255,7 +1270,7 @@
 <span class="sig-prename descclassname"><span class="pre">Plotter.</span></span><span class="sig-name descname"><span class="pre">enable_cell_picking</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">through</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_message</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">style</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'wireframe'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line_width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'pink'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">18</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Plotter.enable_cell_picking" title="この定義へのパーマリンク">#</a></dt>
 <dd><p>セルの選択を有効にします．</p>
 <p><code class="docutils literal notranslate"><span class="pre">&quot;r&quot;</span></code> キーを押して，リタングルベースの選択を有効にします．もう一度 <code class="docutils literal notranslate"><span class="pre">&quot;r&quot;</span></code> を押してオフにします．選択内容は <code class="docutils literal notranslate"><span class="pre">self.picked_cells</span></code> に保存されます．また， <code class="docutils literal notranslate"><span class="pre">&quot;p&quot;</span></code> キーを押して，マウスの下のセルを1つ選択します．</p>
-<p><code class="docutils literal notranslate"><span class="pre">through=False</span></code> を使用していて，複数のメッシュが選択されている場合， <code class="docutils literal notranslate"><span class="pre">``self.picked_cells</span></code> で選択されたセルは，各メッシュの選択の <a class="reference internal" href="../../core/_autosummary/pyvista.MultiBlock.html#pyvista.MultiBlock" title="pyvista.MultiBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">MultiBlock</span></code></a> データセットになります．</p>
+<p><code class="docutils literal notranslate"><span class="pre">through=False</span></code> を使用していて，複数のセルが選択されている場合， <code class="docutils literal notranslate"><span class="pre">``self.picked_cells</span></code> で選択されたセルは，各メッシュの選択の <a class="reference internal" href="../../core/_autosummary/pyvista.MultiBlock.html#pyvista.MultiBlock" title="pyvista.MultiBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">MultiBlock</span></code></a> データセットになります．</p>
 <p>既定では，最後の入力メッシュを入力に使用します．</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
@@ -1270,15 +1285,15 @@
 </dd>
 <dt><strong>through</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> (デフォルト) の場合，ピッカーはメッシュ内のすべてのセルを選択します． <code class="docutils literal notranslate"><span class="pre">False</span></code> の場合，ピッカーはメッシュのサーフェス上の可視セルのみを選択します．</p>
 </dd>
-<dt><strong>show</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a></span></dt><dd><p>選択をインタラクティブに表示する．</p>
+<dt><strong>show</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>選択をインタラクティブに表示する．</p>
 </dd>
 <dt><strong>show_message</strong><span class="classifier">bool か python:str, optional</span></dt><dd><p>セル選択ツールの使用方法に関するメッセージを表示します．これが文字列の場合は，メッセージが表示されます．</p>
 </dd>
-<dt><strong>style</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>選択の表示スタイル． <code class="docutils literal notranslate"><span class="pre">style='surface'</span></code> ，<code class="docutils literal notranslate"><span class="pre">style='wireframe'</span></code> ，または <code class="docutils literal notranslate"><span class="pre">style='points'</span></code> のいずれかです．デフォルトは <code class="docutils literal notranslate"><span class="pre">'wireframe'</span></code> です．</p>
+<dt><strong>style</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>選択の表示スタイル． <code class="docutils literal notranslate"><span class="pre">style='surface'</span></code> ，<code class="docutils literal notranslate"><span class="pre">style='wireframe'</span></code> ，または <code class="docutils literal notranslate"><span class="pre">style='points'</span></code> のいずれかです．デフォルトは <code class="docutils literal notranslate"><span class="pre">'wireframe'</span></code> です．</p>
 </dd>
 <dt><strong>line_width</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>選択したメッシュエッジの厚さ．デフォルトは5です．</p>
 </dd>
-<dt><strong>color</strong><span class="classifier"><a class="reference internal" href="../../utilities/_autosummary/pyvista.color_like.html#pyvista.color_like" title="pyvista.color_like"><code class="xref py py-obj docutils literal notranslate"><span class="pre">color_like</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>選択したメッシュの色が表示されます．</p>
+<dt><strong>color</strong><span class="classifier"><a class="reference internal" href="../../utilities/_autosummary/pyvista.color_like.html#pyvista.color_like" title="pyvista.color_like"><code class="xref py py-obj docutils literal notranslate"><span class="pre">color_like</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>選択されたメッシュを表示したときの色．</p>
 </dd>
 <dt><strong>font_size</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>メッセージのフォントサイズを設定します．</p>
 </dd>
@@ -1289,6 +1304,20 @@
 </dl>
 </dd>
 </dl>
+<p class="rubric">例</p>
+<p>プロットにメッシュとキューブを追加し，セルピッキングを有効にします．</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cube</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Cube</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">cube</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">enable_cell_picking</span><span class="p">(</span><span class="n">left_clicking</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<figure class="align-default">
+<img alt="../../../_images/pyvista-Plotter-enable_cell_picking-1_00_00.png" src="../../../_images/pyvista-Plotter-enable_cell_picking-1_00_00.png" />
+</figure>
 </dd></dl>
 
 </section>

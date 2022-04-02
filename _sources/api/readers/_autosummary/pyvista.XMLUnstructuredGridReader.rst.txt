@@ -42,10 +42,16 @@
       XMLUnstructuredGridReader.enable_point_array
       
       
+      XMLUnstructuredGridReader.hide_progress
+      
+      
       XMLUnstructuredGridReader.point_array_status
       
       
       XMLUnstructuredGridReader.read
+      
+      
+      XMLUnstructuredGridReader.show_progress
       
    
    

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>picked_point &#8212; PyVista 0.34.dev0 ドキュメント</title>
+    <title>picked_point &#8212; PyVista 0.35.dev0 ドキュメント</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -595,6 +595,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.Plotter.enable_mesh_picking.html">
+       enable_mesh_picking
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="pyvista.Plotter.enable_parallel_projection.html">
        enable_parallel_projection
       </a>
@@ -627,6 +632,11 @@
      <li class="toctree-l3">
       <a class="reference internal" href="pyvista.Plotter.enable_stereo_render.html">
        enable_stereo_render
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.Plotter.enable_surface_picking.html">
+       enable_surface_picking
       </a>
      </li>
      <li class="toctree-l3">
@@ -1115,6 +1125,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.Plotter.picked_mesh.html">
+       picked_mesh
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="pyvista.Plotter.picked_path.html">
        picked_path
       </a>
@@ -1250,10 +1265,20 @@
                 
   <section id="picked-point">
 <h1>picked_point<a class="headerlink" href="#picked-point" title="このヘッドラインへのパーマリンク">#</a></h1>
-<dl class="py attribute">
+<dl class="py property">
 <dt class="sig sig-object py" id="pyvista.Plotter.picked_point">
-<span class="sig-prename descclassname"><span class="pre">Plotter.</span></span><span class="sig-name descname"><span class="pre">picked_point</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pyvista.Plotter.picked_point" title="この定義へのパーマリンク">#</a></dt>
-<dd></dd></dl>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Plotter.</span></span><span class="sig-name descname"><span class="pre">picked_point</span></span><a class="headerlink" href="#pyvista.Plotter.picked_point" title="この定義へのパーマリンク">#</a></dt>
+<dd><p>ピックした点を返します．</p>
+<p>ポイント選択後，ピックしたポイントを返します．</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.22)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a> or <a class="reference external" href="https://docs.python.org/dev/library/constants.html#None" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a></dt><dd><p>利用可能な場合は，選んだポイント．</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
 
 </section>
 

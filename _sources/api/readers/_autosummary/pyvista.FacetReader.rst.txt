@@ -15,7 +15,13 @@
    
       
       
+      FacetReader.hide_progress
+      
+      
       FacetReader.read
+      
+      
+      FacetReader.show_progress
       
    
    

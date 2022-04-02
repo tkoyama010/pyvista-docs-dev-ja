@@ -42,10 +42,16 @@
       XMLStructuredGridReader.enable_point_array
       
       
+      XMLStructuredGridReader.hide_progress
+      
+      
       XMLStructuredGridReader.point_array_status
       
       
       XMLStructuredGridReader.read
+      
+      
+      XMLStructuredGridReader.show_progress
       
    
    

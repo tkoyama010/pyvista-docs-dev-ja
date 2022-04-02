@@ -15,7 +15,13 @@
    
       
       
+      BaseReader.hide_progress
+      
+      
       BaseReader.read
+      
+      
+      BaseReader.show_progress
       
    
    

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>export_gltf &#8212; PyVista 0.34.dev0 ドキュメント</title>
+    <title>export_gltf &#8212; PyVista 0.35.dev0 ドキュメント</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -595,6 +595,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.Plotter.enable_mesh_picking.html">
+       enable_mesh_picking
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="pyvista.Plotter.enable_parallel_projection.html">
        enable_parallel_projection
       </a>
@@ -627,6 +632,11 @@
      <li class="toctree-l3">
       <a class="reference internal" href="pyvista.Plotter.enable_stereo_render.html">
        enable_stereo_render
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.Plotter.enable_surface_picking.html">
+       enable_surface_picking
       </a>
      </li>
      <li class="toctree-l3">
@@ -1115,6 +1125,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.Plotter.picked_mesh.html">
+       picked_mesh
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="pyvista.Plotter.picked_path.html">
        picked_path
       </a>
@@ -1270,6 +1285,8 @@
 </dl>
 </dd>
 </dl>
+<p class="rubric">備考</p>
+<p>VTK エクスポーターは <a class="reference internal" href="../../core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> データセットのみをサポートします．もし，プロッターにPolyData以外のデータセットが含まれていた場合，プロッターの中で変換され，内部でデータのコピーが行われます．</p>
 <p class="rubric">例</p>
 <p>ボールで表現された単純な点群を出力します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>

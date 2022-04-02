@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>pyvista.OpenFOAMReader &#8212; PyVista 0.34.dev0 ドキュメント</title>
+    <title>pyvista.OpenFOAMReader &#8212; PyVista 0.35.dev0 ドキュメント</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -345,6 +345,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.OpenFOAMReader.hide_progress.html">
+       hide_progress
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="pyvista.OpenFOAMReader.patch_array_status.html">
        patch_array_status
       </a>
@@ -367,6 +372,11 @@
      <li class="toctree-l3">
       <a class="reference internal" href="pyvista.OpenFOAMReader.set_active_time_value.html">
        set_active_time_value
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.OpenFOAMReader.show_progress.html">
+       show_progress
       </a>
      </li>
      <li class="toctree-l3">
@@ -605,20 +615,26 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.enable_point_array.html#pyvista.OpenFOAMReader.enable_point_array" title="pyvista.OpenFOAMReader.enable_point_array"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.enable_point_array</span></code></a>(name)</p></td>
 <td><p>名前付きの点状配列を有効にします．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.patch_array_status.html#pyvista.OpenFOAMReader.patch_array_status" title="pyvista.OpenFOAMReader.patch_array_status"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.patch_array_status</span></code></a>(name)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.hide_progress.html#pyvista.OpenFOAMReader.hide_progress" title="pyvista.OpenFOAMReader.hide_progress"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.hide_progress</span></code></a>()</p></td>
+<td><p>プログレスバーを非表示にします．</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.patch_array_status.html#pyvista.OpenFOAMReader.patch_array_status" title="pyvista.OpenFOAMReader.patch_array_status"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.patch_array_status</span></code></a>(name)</p></td>
 <td><p>パッチ配列の読み込み状況を返します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.point_array_status.html#pyvista.OpenFOAMReader.point_array_status" title="pyvista.OpenFOAMReader.point_array_status"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.point_array_status</span></code></a>(name)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.point_array_status.html#pyvista.OpenFOAMReader.point_array_status" title="pyvista.OpenFOAMReader.point_array_status"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.point_array_status</span></code></a>(name)</p></td>
 <td><p>名前付きのポイント配列の状態を取得します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.read.html#pyvista.OpenFOAMReader.read" title="pyvista.OpenFOAMReader.read"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.read</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.read.html#pyvista.OpenFOAMReader.read" title="pyvista.OpenFOAMReader.read"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.read</span></code></a>()</p></td>
 <td><p>ファイルのデータを読み込む．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.set_active_time_point.html#pyvista.OpenFOAMReader.set_active_time_point" title="pyvista.OpenFOAMReader.set_active_time_point"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.set_active_time_point</span></code></a>(time_point)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.set_active_time_point.html#pyvista.OpenFOAMReader.set_active_time_point" title="pyvista.OpenFOAMReader.set_active_time_point"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.set_active_time_point</span></code></a>(time_point)</p></td>
 <td><p>アクティブ時間やイテレーションをインデックスで設定します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.set_active_time_value.html#pyvista.OpenFOAMReader.set_active_time_value" title="pyvista.OpenFOAMReader.set_active_time_value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.set_active_time_value</span></code></a>(time_value)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.set_active_time_value.html#pyvista.OpenFOAMReader.set_active_time_value" title="pyvista.OpenFOAMReader.set_active_time_value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.set_active_time_value</span></code></a>(time_value)</p></td>
 <td><p>アクティブ時刻またはイテレーション値を設定します．</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.show_progress.html#pyvista.OpenFOAMReader.show_progress" title="pyvista.OpenFOAMReader.show_progress"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.show_progress</span></code></a>([msg])</p></td>
+<td><p>プログレスバーを表示します．</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.OpenFOAMReader.time_point_value.html#pyvista.OpenFOAMReader.time_point_value" title="pyvista.OpenFOAMReader.time_point_value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenFOAMReader.time_point_value</span></code></a>(time_point)</p></td>
 <td><p>インデックスによるタイムポイントまたはイテレーションの値．</p></td>
