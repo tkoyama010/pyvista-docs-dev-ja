@@ -441,7 +441,7 @@ python -m pip install -e .
 <section id="contributing-to-pyvista-through-github">
 <h3>GitHub経由でpyvistaにコントリビュートする<a class="headerlink" href="#contributing-to-pyvista-through-github" title="このヘッドラインへのパーマリンク">#</a></h3>
 <p>新しいコードをpyvistaに送信するには，まず <a class="reference external" href="https://github.com/pyvista/pyvista">pyvista GitHub リポジトリ</a> をフォークし，フォークしたリポジトリをあなたのコンピュータにクローンします．次に，ローカルリポジトリの <a class="reference external" href="#branch-naming-conventions">Branch Naming Conventions Section</a> に基づいて新しいブランチを作成します．</p>
-<p>次に，新しい機能を追加し，ローカルでコミットします．特に変更が複雑な場合は，過去のコミットに戻すことが役立つことが多いので，頻繁にコミットするようにしてください．また，頻繁に検査をしてください．テストの自動化については，以下の <a class="reference external" href="#testing">Testing Section</a> を参照してください．</p>
+<p>次に，新しい機能を追加し，ローカルでコミットします．特に変更が複雑な場合は，過去のコミットに戻すことが役立つことが多いので，頻繁にコミットするようにしてください．また，頻繁に検査をしてください．テストの自動化については，以下の <a class="reference external" href="#testing">テストのセクション</a> を参照してください．</p>
 <p>コードをサブミットする準備ができたら， <a class="reference external" href="#creating-a-new-pull-request">Creating a New Pull Request section</a> の手順に従ってプル要求を作成します．</p>
 <section id="coding-style">
 <h4>コーディングスタイル<a class="headerlink" href="#coding-style" title="このヘッドラインへのパーマリンク">#</a></h4>
@@ -582,7 +582,7 @@ codespell................................................................Passed
 <p>マイナーリリースは， <code class="docutils literal notranslate"><span class="pre">pyvista</span></code> の機能と安定性を改善する機能およびバグリリースです．マイナーリリースが作成される前に，次のことが発生します．</p>
 <ol class="arabic">
 <li><p><code class="docutils literal notranslate"><span class="pre">main</span></code> ブランチから <code class="docutils literal notranslate"><span class="pre">release/MAJOR.MINOR</span></code> という名前の新しいブランチを作成します(例: <code class="docutils literal notranslate"><span class="pre">release/0.25</span></code> )．</p></li>
-<li><p><a class="reference external" href="#testing">Testing Section</a> で概説されているように，すべてのテストをローカルで実行し，すべてが合格していることを確認します．</p></li>
+<li><p><a class="reference external" href="#testing">テストのセクション</a> で概説されているように，すべてのテストをローカルで実行し，すべてが合格していることを確認します．</p></li>
 <li><p>リンクが古くなっていないことを確認するために，リンクチェックを行いながらドキュメントをローカルにテストしてビルドします．また， <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">clean</span></code> を実行して，結果がキャッシュされていないことを確認してください．</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> doc
 make clean  <span class="c1"># deletes the sphinx-gallery cache</span>
