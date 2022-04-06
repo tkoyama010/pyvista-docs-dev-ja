@@ -43,6 +43,7 @@
       :toctree:
    
       
+      
       Color.float_rgb
       
       

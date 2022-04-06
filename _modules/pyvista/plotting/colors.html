@@ -654,6 +654,14 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
+    <span class="c1"># Supported names for each color channel.</span>
+    <span class="n">CHANNEL_NAMES</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="p">{</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">},</span>  <span class="c1"># 0</span>
+        <span class="p">{</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">},</span>  <span class="c1"># 1</span>
+        <span class="p">{</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">},</span>  <span class="c1"># 2</span>
+        <span class="p">{</span><span class="s1">&#39;alpha&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;opacity&#39;</span><span class="p">},</span>  <span class="c1"># 3</span>
+    <span class="p">)</span>
+
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">color</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">color_like</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -791,11 +799,10 @@
     <span class="k">def</span> <span class="nf">_from_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dct</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Construct color from an RGB(A) dictionary.&quot;&quot;&quot;</span>
         <span class="c1"># Get any of the keys associated with each color channel (or None).</span>
-        <span class="n">r</span> <span class="o">=</span> <span class="nb">next</span><span class="p">((</span><span class="n">dct</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">{</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">}</span> <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">dct</span><span class="p">),</span> <span class="kc">None</span><span class="p">)</span>
-        <span class="n">g</span> <span class="o">=</span> <span class="nb">next</span><span class="p">((</span><span class="n">dct</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">{</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">}</span> <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">dct</span><span class="p">),</span> <span class="kc">None</span><span class="p">)</span>
-        <span class="n">b</span> <span class="o">=</span> <span class="nb">next</span><span class="p">((</span><span class="n">dct</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">{</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">}</span> <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">dct</span><span class="p">),</span> <span class="kc">None</span><span class="p">)</span>
-        <span class="n">a</span> <span class="o">=</span> <span class="nb">next</span><span class="p">((</span><span class="n">dct</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;alpha&#39;</span><span class="p">,</span> <span class="s1">&#39;opacity&#39;</span><span class="p">}</span> <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">dct</span><span class="p">),</span> <span class="kc">None</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_from_rgba</span><span class="p">([</span><span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">])</span>
+        <span class="n">rgba</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="nb">next</span><span class="p">((</span><span class="n">dct</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">cnames</span> <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">dct</span><span class="p">),</span> <span class="kc">None</span><span class="p">)</span> <span class="k">for</span> <span class="n">cnames</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">CHANNEL_NAMES</span>
+        <span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_from_rgba</span><span class="p">(</span><span class="n">rgba</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">_from_hex</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">h</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Construct color from a hex string.&quot;&quot;&quot;</span>
@@ -1077,6 +1084,23 @@
     <span class="k">def</span> <span class="fm">__hash__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
         <span class="sd">&quot;&quot;&quot;Hash calculation.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="nb">hash</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">_red</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_green</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_blue</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_opacity</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Support indexing the float RGBA representation for backward compatibility.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">slice</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">integer</span><span class="p">)):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid index specified, only strings and integers are supported.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">cnames</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">CHANNEL_NAMES</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">cnames</span><span class="p">:</span>
+                    <span class="n">item</span> <span class="o">=</span> <span class="n">i</span>
+                    <span class="k">break</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Invalid string index </span><span class="si">{</span><span class="n">item</span><span class="si">!r}</span><span class="s2">.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">float_rgba</span><span class="p">[</span><span class="n">item</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Support iteration over the float RGBA representation for backward compatibility.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">float_rgba</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
         <span class="sd">&quot;&quot;&quot;Human readable representation.&quot;&quot;&quot;</span>

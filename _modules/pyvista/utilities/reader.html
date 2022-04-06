@@ -1201,7 +1201,7 @@
     <span class="n">_class_reader</span> <span class="o">=</span> <span class="nb">staticmethod</span><span class="p">(</span><span class="n">_vtk</span><span class="o">.</span><span class="n">lazy_vtkPlot3DMetaReader</span><span class="p">)</span></div>
 
 
-<span class="k">class</span> <span class="nc">CGNSReader</span><span class="p">(</span><span class="n">BaseReader</span><span class="p">,</span> <span class="n">PointCellDataSelection</span><span class="p">):</span>
+<div class="viewcode-block" id="CGNSReader"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.CGNSReader.html#pyvista.CGNSReader">[ドキュメント]</a><span class="k">class</span> <span class="nc">CGNSReader</span><span class="p">(</span><span class="n">BaseReader</span><span class="p">,</span> <span class="n">PointCellDataSelection</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;CGNS Reader for .cgns files.</span>
 
 <span class="sd">    Creates a multi-block dataset and reads unstructured grids and structured</span>
@@ -1219,7 +1219,7 @@
 <span class="sd">    &gt;&gt;&gt; import pyvista</span>
 <span class="sd">    &gt;&gt;&gt; from pyvista import examples</span>
 <span class="sd">    &gt;&gt;&gt; filename = examples.download_cgns_multi(load=False)</span>
-<span class="sd">    &gt;&gt;&gt; reader = pyvista.get_reader(filename)</span>
+<span class="sd">    &gt;&gt;&gt; reader = pyvista.CGNSReader(filename)</span>
 <span class="sd">    &gt;&gt;&gt; reader.load_boundary_patch = False</span>
 <span class="sd">    &gt;&gt;&gt; ds = reader.read()</span>
 <span class="sd">    &gt;&gt;&gt; ds[0][0].cell_data</span>
@@ -1267,7 +1267,7 @@
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
 <span class="sd">        &gt;&gt;&gt; from pyvista import examples</span>
 <span class="sd">        &gt;&gt;&gt; filename = examples.download_cgns_multi(load=False)</span>
-<span class="sd">        &gt;&gt;&gt; reader = pyvista.get_reader(filename)</span>
+<span class="sd">        &gt;&gt;&gt; reader = pyvista.CGNSReader(filename)</span>
 <span class="sd">        &gt;&gt;&gt; reader.distribute_blocks = False</span>
 <span class="sd">        &gt;&gt;&gt; reader.distribute_blocks</span>
 <span class="sd">        False</span>
@@ -1279,7 +1279,7 @@
     <span class="k">def</span> <span class="nf">distribute_blocks</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span><span class="o">.</span><span class="n">SetDistributeBlocks</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">base_array_status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<div class="viewcode-block" id="CGNSReader.base_array_status"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.CGNSReader.base_array_status.html#pyvista.CGNSReader.base_array_status">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">base_array_status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Get status of base array with name.</span>
 
 <span class="sd">        Parameters</span>
@@ -1293,7 +1293,7 @@
 <span class="sd">            Whether reading the base array is enabled.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">GetBaseArrayStatus</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+        <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">GetBaseArrayStatus</span><span class="p">(</span><span class="n">name</span><span class="p">))</span></div>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">base_array_names</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -1317,7 +1317,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">GetNumberOfBaseArrays</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="nf">enable_all_bases</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CGNSReader.enable_all_bases"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.CGNSReader.enable_all_bases.html#pyvista.CGNSReader.enable_all_bases">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">enable_all_bases</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Enable reading all bases.</span>
 
 <span class="sd">        By default only the 0th base is read.</span>
@@ -1329,12 +1329,12 @@
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
 <span class="sd">        &gt;&gt;&gt; from pyvista import examples</span>
 <span class="sd">        &gt;&gt;&gt; filename = examples.download_cgns_multi(load=False)</span>
-<span class="sd">        &gt;&gt;&gt; reader = pyvista.get_reader(filename)</span>
+<span class="sd">        &gt;&gt;&gt; reader = pyvista.CGNSReader(filename)</span>
 <span class="sd">        &gt;&gt;&gt; reader.enable_all_bases()</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span><span class="o">.</span><span class="n">EnableAllBases</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span><span class="o">.</span><span class="n">EnableAllBases</span><span class="p">()</span></div>
 
-    <span class="k">def</span> <span class="nf">disable_all_bases</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CGNSReader.disable_all_bases"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.CGNSReader.disable_all_bases.html#pyvista.CGNSReader.disable_all_bases">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">disable_all_bases</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Disable reading all bases.</span>
 
 <span class="sd">        By default only the 0th base is read.</span>
@@ -1346,12 +1346,12 @@
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
 <span class="sd">        &gt;&gt;&gt; from pyvista import examples</span>
 <span class="sd">        &gt;&gt;&gt; filename = examples.download_cgns_multi(load=False)</span>
-<span class="sd">        &gt;&gt;&gt; reader = pyvista.get_reader(filename)</span>
+<span class="sd">        &gt;&gt;&gt; reader = pyvista.CGNSReader(filename)</span>
 <span class="sd">        &gt;&gt;&gt; reader.disable_all_bases()</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span><span class="o">.</span><span class="n">DisableAllBases</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span><span class="o">.</span><span class="n">DisableAllBases</span><span class="p">()</span></div>
 
-    <span class="k">def</span> <span class="nf">family_array_status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<div class="viewcode-block" id="CGNSReader.family_array_status"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.CGNSReader.family_array_status.html#pyvista.CGNSReader.family_array_status">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">family_array_status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Get status of family array with name.</span>
 
 <span class="sd">        Parameters</span>
@@ -1365,7 +1365,7 @@
 <span class="sd">            Whether reading the family array is enabled.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">GetFamilyArrayStatus</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+        <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">GetFamilyArrayStatus</span><span class="p">(</span><span class="n">name</span><span class="p">))</span></div>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">family_array_names</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
@@ -1389,7 +1389,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">GetNumberOfFamilyArrays</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="nf">enable_all_families</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CGNSReader.enable_all_families"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.CGNSReader.enable_all_families.html#pyvista.CGNSReader.enable_all_families">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">enable_all_families</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Enable reading all families.</span>
 
 <span class="sd">        By default only the 0th family is read.</span>
@@ -1401,12 +1401,12 @@
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
 <span class="sd">        &gt;&gt;&gt; from pyvista import examples</span>
 <span class="sd">        &gt;&gt;&gt; filename = examples.download_cgns_multi(load=False)</span>
-<span class="sd">        &gt;&gt;&gt; reader = pyvista.get_reader(filename)</span>
+<span class="sd">        &gt;&gt;&gt; reader = pyvista.CGNSReader(filename)</span>
 <span class="sd">        &gt;&gt;&gt; reader.enable_all_families()</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span><span class="o">.</span><span class="n">EnableAllFamilies</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span><span class="o">.</span><span class="n">EnableAllFamilies</span><span class="p">()</span></div>
 
-    <span class="k">def</span> <span class="nf">disable_all_families</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CGNSReader.disable_all_families"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.CGNSReader.disable_all_families.html#pyvista.CGNSReader.disable_all_families">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">disable_all_families</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Disable reading all families.</span>
 
 <span class="sd">        Examples</span>
@@ -1416,17 +1416,17 @@
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
 <span class="sd">        &gt;&gt;&gt; from pyvista import examples</span>
 <span class="sd">        &gt;&gt;&gt; filename = examples.download_cgns_multi(load=False)</span>
-<span class="sd">        &gt;&gt;&gt; reader = pyvista.get_reader(filename)</span>
+<span class="sd">        &gt;&gt;&gt; reader = pyvista.CGNSReader(filename)</span>
 <span class="sd">        &gt;&gt;&gt; reader.disable_all_families()</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span><span class="o">.</span><span class="n">DisableAllFamilies</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span><span class="o">.</span><span class="n">DisableAllFamilies</span><span class="p">()</span></div>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">unsteady_pattern</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Return or set using an unsteady pattern.</span>
 
 <span class="sd">        When set to ``True`` (default is ``False``), the reader will try to</span>
-<span class="sd">        determine to determine FlowSolution_t nodes to read with a pattern</span>
+<span class="sd">        determine FlowSolution_t nodes to read with a pattern</span>
 <span class="sd">        matching This can be useful for unsteady solutions when</span>
 <span class="sd">        FlowSolutionPointers are not reliable.</span>
 
@@ -1437,7 +1437,7 @@
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
 <span class="sd">        &gt;&gt;&gt; from pyvista import examples</span>
 <span class="sd">        &gt;&gt;&gt; filename = examples.download_cgns_multi(load=False)</span>
-<span class="sd">        &gt;&gt;&gt; reader = pyvista.get_reader(filename)</span>
+<span class="sd">        &gt;&gt;&gt; reader = pyvista.CGNSReader(filename)</span>
 <span class="sd">        &gt;&gt;&gt; reader.unsteady_pattern = True</span>
 <span class="sd">        &gt;&gt;&gt; reader.unsteady_pattern</span>
 <span class="sd">        True</span>
@@ -1460,7 +1460,7 @@
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
 <span class="sd">        &gt;&gt;&gt; from pyvista import examples</span>
 <span class="sd">        &gt;&gt;&gt; filename = examples.download_cgns_multi(load=False)</span>
-<span class="sd">        &gt;&gt;&gt; reader = pyvista.get_reader(filename)</span>
+<span class="sd">        &gt;&gt;&gt; reader = pyvista.CGNSReader(filename)</span>
 <span class="sd">        &gt;&gt;&gt; reader.vector_3d = True</span>
 <span class="sd">        &gt;&gt;&gt; reader.vector_3d</span>
 <span class="sd">        True</span>
@@ -1487,7 +1487,7 @@
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
 <span class="sd">        &gt;&gt;&gt; from pyvista import examples</span>
 <span class="sd">        &gt;&gt;&gt; filename = examples.download_cgns_multi(load=False)</span>
-<span class="sd">        &gt;&gt;&gt; reader = pyvista.get_reader(filename)</span>
+<span class="sd">        &gt;&gt;&gt; reader = pyvista.CGNSReader(filename)</span>
 <span class="sd">        &gt;&gt;&gt; reader.load_boundary_patch = True</span>
 <span class="sd">        &gt;&gt;&gt; reader.load_boundary_patch</span>
 <span class="sd">        True</span>
@@ -1497,7 +1497,7 @@
 
     <span class="nd">@load_boundary_patch</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">load_boundary_patch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enabled</span><span class="p">:</span> <span class="nb">bool</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span><span class="o">.</span><span class="n">SetLoadBndPatch</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="n">enabled</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span><span class="o">.</span><span class="n">SetLoadBndPatch</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="n">enabled</span><span class="p">))</span></div>
 
 
 <div class="viewcode-block" id="BinaryMarchingCubesReader"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.BinaryMarchingCubesReader.html#pyvista.BinaryMarchingCubesReader">[ドキュメント]</a><span class="k">class</span> <span class="nc">BinaryMarchingCubesReader</span><span class="p">(</span><span class="n">BaseReader</span><span class="p">):</span>
