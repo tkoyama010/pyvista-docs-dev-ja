@@ -483,7 +483,8 @@
 <dd><p>ポジショナルライトのコーンアングルを取得します．</p>
 <p>角度は度単位で，円錐の軸と円錐の極値光線の間で測定されます．値が90より小さい場合はスポットライト効果があり，90以上の値は単なる位置ライト，つまり球状のポイントソースになります．</p>
 <p>光の角度分布に関しては，円錐角は単にビームを打ち切るだけであり，その形状は <a class="reference internal" href="pyvista.Light.exponent.html#pyvista.Light.exponent" title="pyvista.Light.exponent"><code class="xref py py-attr docutils literal notranslate"><span class="pre">exponent</span></code></a> によって定義される．円錐角が少なくとも90度であれば，角度依存性はない．</p>
-<p>ライトの円錐角度を90度以上にすると，そのアクター(以前に表示された場合)が自動的に非表示になります．</p>
+<p>If the light's cone angle is increased to 90 degrees or above,
+its actor (if previously shown) is automatically hidden.</p>
 <p class="rubric">例</p>
 <p>3つのスポットライトで照らされた3つの平面を，さまざまな円錐角度でプロットします．大きな指数を使用すると，ビーム強度の角度変化が目に見えるようになります．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
