@@ -299,19 +299,25 @@
 <p>ソースからVTKを構築するのはかなりストレートです．デフォルトのビルド設定を使用し，次のスクリプトを使用して <code class="docutils literal notranslate"><span class="pre">ninja</span></code> を使用し，VTKのPythonホイールをビルドします．このスクリプトはpython 3を使用していますが，最新のPythonバージョンを使用することができます．その他の便利なオプションについては， <a class="reference external" href="https://github.com/conda-forge/vtk-feedstock/blob/master/recipe/build.sh">conda-forge recipe</a> を参照してください．以下のほとんどのオプションは，構築時間を短縮し，ホイールサイズを小さくするように設計されています．</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
-<span class="c1"># install build dependencies (Linux/Debian)</span>
-sudo apt-get install ninja-build cmake libgl1-mesa-dev python3-dev
+<span class="c1"># Install build dependencies</span>
+
+<span class="c1"># Linux/Debian</span>
+sudo add-apt-repository -y ppa:deadsnakes/ppa  <span class="c1"># if on Ubuntu 20.04 or 18.04, building 3.10 for example</span>
+sudo apt update
+sudo apt install -y ninja-build cmake libgl1-mesa-dev python3-dev git
+sudo apt install -y python3.10-dev python3.10-distutils  <span class="c1"># if using deadsnakes + Python 3.10</span>
+<span class="c1"># If on 18.04, you&#39;ll need a newer cmake. You can follow VTK&#39;s instructions @ https://apt.kitware.com</span>
 
 <span class="c1"># Linux/CentOS</span>
 sudo yum install epel-release
 sudo yum install ninja-build cmake mesa-libGL-devel mesa-libGLU-devel
 
-git clone https://github.com/Kitware/VTK
-mkdir VTK/build
-<span class="nb">cd</span> VTK/build
+git clone https://gitlab.kitware.com/vtk/vtk.git
+mkdir vtk/build
+<span class="nb">cd</span> vtk/build
 git checkout v9.1.0  <span class="c1"># optional to select a version, but recommended</span>
 
-<span class="nv">PYBIN</span><span class="o">=</span>/usr/bin/python3
+<span class="nb">export</span> <span class="nv">PYBIN</span><span class="o">=</span>/usr/bin/python3.10  <span class="c1"># select your version of choice</span>
 cmake -GNinja <span class="se">\</span>
       -DCMAKE_BUILD_TYPE<span class="o">=</span>Release <span class="se">\</span>
       -DVTK_BUILD_TESTING<span class="o">=</span>OFF <span class="se">\</span>
@@ -329,7 +335,7 @@ ninja
 <span class="c1"># build wheel in dist</span>
 <span class="nv">$PYBIN</span> -m pip install wheel
 <span class="nv">$PYBIN</span> setup.py bdist_wheel
-pip install dist/vtk-*.whl  <span class="c1"># optionally install it</span>
+<span class="nv">$PYBIN</span> -m pip install dist/vtk-*.whl  <span class="c1"># optionally install it</span>
 </pre></div>
 </div>
 </section>
@@ -409,6 +415,9 @@ $PYBIN setup.py bdist_wheel
 <section id="building-manylinux-wheels">
 <h2>ManyLinux wheel の構築<a class="headerlink" href="#building-manylinux-wheels" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p>上記の方向性はVTKのローカルビルドを構築するのに適していますが，これらのwheelは，それらが構築されたLinuxのバージョンによるABI互換性の問題を考えると，ローカルインストールの外部で共有することは困難です．これを回避するには， <a class="reference external" href="https://github.com/pypa/manylinux">manylinux</a> のdockerイメージを使ってwheelをビルドします．</p>
+<p>To do this, create a <code class="docutils literal notranslate"><span class="pre">build_wheels.sh</span></code> with the following contents in the
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone``d</span> <span class="pre">``vtk</span></code> directory, and give it executable permissions
+(<code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">+x</span> <span class="pre">build_wheels.sh</span></code>):</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1"># builds python wheels on docker container and tests installation</span>
 
@@ -431,7 +440,7 @@ $PYBIN setup.py bdist_wheel
   <span class="p">;;</span>
 <span class="k">esac</span>
 
-yum install ninja-build cmake mesa-libGL-devel mesa-libGLU-devel
+yum install -y ninja-build cmake mesa-libGL-devel mesa-libGLU-devel
 
 rm -rf /io/build
 mkdir /io/build -p
@@ -459,16 +468,16 @@ rm -rf dist
 <span class="c1"># cleanup wheel</span>
 rm -rf wheelhouse
 auditwheel repair dist/*.whl
-cp wheelhouse/vtk*.whl /io/wheels
 </pre></div>
 </div>
-<p>このスクリプトは，次のコマンドで呼び出すことができます:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">PYTHON_VERSION</span><span class="o">=</span><span class="m">3</span>.8
-docker run -e <span class="se">\</span>
+<p>This script can then be called with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PYTHON_VERSION</span><span class="o">=</span><span class="m">3</span>.10
+docker run --cpus <span class="m">4</span>.5 -e <span class="se">\</span>
        --rm -v <span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>:/io quay.io/pypa/manylinux2014_x86_64 <span class="se">\</span>
        /io/build_wheels.sh <span class="nv">$PYTHON_VERSION</span>
 </pre></div>
 </div>
+<p>You should end up with a <code class="docutils literal notranslate"><span class="pre">build/wheelhouse/vtk-*.whl</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
 <p>EGLバージョンのwheelを作成するには，前のセクションの指示に従ってください．インストール依存関係にAAAAAを追加します．</p>
