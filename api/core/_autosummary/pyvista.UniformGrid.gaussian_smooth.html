@@ -1048,6 +1048,11 @@
      ヘルパー
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../misc.html">
+     その他
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
@@ -1114,7 +1119,7 @@
 <h1>gaussian_smooth<a class="headerlink" href="#gaussian-smooth" title="このヘッドラインへのパーマリンク">#</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.UniformGrid.gaussian_smooth">
-<span class="sig-prename descclassname"><span class="pre">UniformGrid.</span></span><span class="sig-name descname"><span class="pre">gaussian_smooth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">radius_factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">std_dev</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scalars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preference</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'points'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UniformGrid.gaussian_smooth" title="この定義へのパーマリンク">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">UniformGrid.</span></span><span class="sig-name descname"><span class="pre">gaussian_smooth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">radius_factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">std_dev</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scalars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UniformGrid.gaussian_smooth" title="この定義へのパーマリンク">#</a></dt>
 <dd><p>Gaussカーネルでデータを平滑化します．</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
@@ -1124,8 +1129,6 @@
 <dt><strong>std_dev</strong><span class="classifier">python:float または python:iterable, optional</span></dt><dd><p>ピクセル単位でのカーネルの標準偏差．</p>
 </dd>
 <dt><strong>scalars</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>処理に使用するスカラーの名前．デフォルトは現在アクティブなスカラーです．</p>
-</dd>
-<dt><strong>preference</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>スカラーが指定されている場合，これはデータセット内で検索するために推奨される配列型です． <code class="docutils literal notranslate"><span class="pre">'point'</span></code> または <code class="docutils literal notranslate"><span class="pre">'cell'</span></code> のいずれかでなければなりません．</p>
 </dd>
 <dt><strong>progress_bar</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>進行状況を示す進行状況バーを表示します．</p>
 </dd>
@@ -1138,6 +1141,33 @@
 </dl>
 </dd>
 </dl>
+<p class="rubric">備考</p>
+<p>This filter only supports point data. Consider converting any cell
+data to point data using the <a class="reference internal" href="pyvista.DataSet.cell_data_to_point_data.html#pyvista.DataSet.cell_data_to_point_data" title="pyvista.DataSet.cell_data_to_point_data"><code class="xref py py-func docutils literal notranslate"><span class="pre">DataSet.cell_data_to_point_data()</span></code></a>
+filter to convert ny cell data to point data.</p>
+<p class="rubric">例</p>
+<p>First, create sample data to smooth. Here, we use
+<a class="reference internal" href="pyvista.core.common_data.perlin_noise.html#pyvista.core.common_data.perlin_noise" title="pyvista.core.common_data.perlin_noise"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.perlin_noise()</span></code></a>
+to create meaningful data.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">noise</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">perlin_noise</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">sample_function</span><span class="p">(</span><span class="n">noise</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">show_scalar_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<figure class="align-default">
+<img alt="../../../_images/pyvista-UniformGrid-gaussian_smooth-1_00_00.png" src="../../../_images/pyvista-UniformGrid-gaussian_smooth-1_00_00.png" />
+</figure>
+<p>Next, smooth the sample data.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">smoothed</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">gaussian_smooth</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">smoothed</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">show_scalar_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<figure class="align-default">
+<img alt="../../../_images/pyvista-UniformGrid-gaussian_smooth-1_01_00.png" src="../../../_images/pyvista-UniformGrid-gaussian_smooth-1_01_00.png" />
+</figure>
+<p>See <a class="reference internal" href="../../../examples/01-filter/gaussian-smoothing.html#gaussian-smoothing-example"><span class="std std-ref">Gaussianスムージング</span></a> for a full example using this filter.</p>
 </dd></dl>
 
 </section>

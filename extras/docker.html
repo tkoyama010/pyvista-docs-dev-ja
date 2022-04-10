@@ -274,9 +274,10 @@
                 
   <section id="pyvista-within-a-docker-container">
 <h1>Dockerコンテナ内のPyVista<a class="headerlink" href="#pyvista-within-a-docker-container" title="このヘッドラインへのパーマリンク">#</a></h1>
-<p>jupyterlabを使用すると，Dockerコンテナ内から <code class="docutils literal notranslate"><span class="pre">pyvista</span></code> を使用できます．ローカルのdockerイメージを作成するには <code class="docutils literal notranslate"><span class="pre">docker</span></code> をインストールし， <a class="reference external" href="https://docs.github.com/en/enterprise-server&#64;3.0/packages/working-with-a-github-packages-registry/working-with-the-docker-registry">Working with Docker registry</a>) の指示に従ってdockerにログインしていることを確認してください．</p>
-<p>次に，次のようにイメージをプルして実行します．</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -p <span class="m">8888</span>:8888 docker.pkg.github.com/pyvista/pyvista/pyvista-jupyterlab:v0.27.0
+<p>You can use <code class="docutils literal notranslate"><span class="pre">pyvista</span></code> from within a docker container with
+jupyterlab.  To launch a local docker container, install <code class="docutils literal notranslate"><span class="pre">docker</span></code>, then
+pull and run the image with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -p <span class="m">8888</span>:8888 ghcr.io/pyvista/pyvista:latest
 </pre></div>
 </div>
 <p>最後に，端末出力から表示されるリンクを開き，jupyterlabのpyvistaを試してみましょう．たとえば，次のようになります．</p>
@@ -286,6 +287,17 @@ Or copy and paste one of these URLs:
     http://861c873f6352:8888/?token=b3ac1f6397188944fb21e1f58b673b5b4e6f1ede1a84787b
  or http://127.0.0.1:8888/?token=b3ac1f6397188944fb21e1f58b673b5b4e6f1ede1a84787b
 </pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>You can see the latest tags of <a class="reference external" href="https://github.com/pyvista/pyvista/pkgs/container/pyvista">our Docker containers here</a>. <code class="docutils literal notranslate"><span class="pre">ghcr.io/pyvista/pyvista:latest</span></code> has
+JupyterLab set up while <code class="docutils literal notranslate"><span class="pre">ghcr.io/pyvista/pyvista:latest-slim</span></code> is a
+lightweight Python environment without Jupyter</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>You may need to log into the GitHub container registry by following the directions at
+<a class="reference external" href="https://docs.github.com/en/enterprise-server&#64;3.0/packages/working-with-a-github-packages-registry/working-with-the-docker-registry">Working with the Docker registry</a>)</p>
 </div>
 <section id="create-your-own-docker-container-with-pyvista">
 <h2><cite>pyvista</cite> で独自のDockerコンテナを作成します<a class="headerlink" href="#create-your-own-docker-container-with-pyvista" title="このヘッドラインへのパーマリンク">#</a></h2>
