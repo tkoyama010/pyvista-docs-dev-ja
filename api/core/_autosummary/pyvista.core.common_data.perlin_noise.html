@@ -328,52 +328,37 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="pyvista.core.common_data.perlin_noise">
 <span class="sig-name descname"><span class="pre">perlin_noise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amplitude</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/dev/library/typing.html#typing.Sequence" title="(in Python v3.11)"><span class="pre">Sequence</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phase</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/dev/library/typing.html#typing.Sequence" title="(in Python v3.11)"><span class="pre">Sequence</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/pyvista/core/common_data.html#perlin_noise"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#pyvista.core.common_data.perlin_noise" title="この定義へのパーマリンク">#</a></dt>
-<dd><p>Return the implicit function that implements Perlin noise.</p>
-<p>Uses <code class="docutils literal notranslate"><span class="pre">vtk.vtkPerlinNoise</span></code> and computes a Perlin noise field as
-an implicit function. <code class="docutils literal notranslate"><span class="pre">vtk.vtkPerlinNoise</span></code> is a concrete
-implementation of <code class="docutils literal notranslate"><span class="pre">vtk.vtkImplicitFunction</span></code>. Perlin noise,
-originally described by Ken Perlin, is a non-periodic and
-continuous noise function useful for modeling real-world objects.</p>
-<p>The amplitude and frequency of the noise pattern are
-adjustable. This implementation of Perlin noise is derived closely
-from Greg Ward's version in Graphics Gems II.</p>
+<dd><p>Perlin ノイズを実装する暗黙の関数を返します。</p>
+<p><code class="docutils literal notranslate"><span class="pre">vtk.vtkPerlinNoise</span></code> を用いて、Perlin noise field を陰関数として計算します。 <code class="docutils literal notranslate"><span class="pre">vtk.vtkPerlinNoise</span></code> は <code class="docutils literal notranslate"><span class="pre">vtk.vtkImplicitFunction</span></code> の具象実装である。Perlin noise は Ken Perlin によって開発された非周期的で連続的なノイズ関数で、実世界のオブジェクトのモデリングに有用です。</p>
+<p>ノイズパターンの振幅と周波数は調整可能です。このPerlinノイズの実装は、Graphics Gems IIのGreg Wardのバージョンから密接に派生したものです。</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>amplitude</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Amplitude of the noise function.</p>
-<p><code class="docutils literal notranslate"><span class="pre">amplitude</span></code> can be negative. The noise function varies
-randomly between <code class="docutils literal notranslate"><span class="pre">-|Amplitude|</span></code> and
-<code class="docutils literal notranslate"><span class="pre">|Amplitude|</span></code>. Therefore the range of values is
-<code class="docutils literal notranslate"><span class="pre">2*|Amplitude|</span></code> large. The initial amplitude is 1.</p>
+<dt><strong>amplitude</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>ノイズ関数の振幅。</p>
+<p>振幅 <code class="docutils literal notranslate"><span class="pre">amplitude</span></code> は負になることがある。ノイズ関数は <code class="docutils literal notranslate"><span class="pre">-|Amplitude|</span></code> と <code class="docutils literal notranslate"><span class="pre">|Amplitude|</span></code> の間でランダムに変化します。したがって、値の範囲は <code class="docutils literal notranslate"><span class="pre">2*|Amplitude|</span></code> と大きくなっています。初期振幅は1です。</p>
 </dd>
-<dt><strong>freq</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Sequence</span></code>[<a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>]</span></dt><dd><p>The frequency, or physical scale, of the noise function
-(higher is finer scale).</p>
-<p>The frequency can be adjusted per axis, or the same for all axes.</p>
+<dt><strong>freq</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Sequence</span></code>[<a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>]</span></dt><dd><p>ノイズ関数の周波数、または物理的なスケール（高いほど細かいスケール）。</p>
+<p>周波数は、軸ごとに調整することも、全軸で同じにすることも可能です。</p>
 </dd>
-<dt><strong>phase</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Sequence</span></code>[<a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>]</span></dt><dd><p>Set/get the phase of the noise function.</p>
-<p>This parameter can be used to shift the noise function within
-space (perhaps to avoid a beat with a noise pattern at another
-scale). Phase tends to repeat about every unit, so a phase of
-0.5 is a half-cycle shift.</p>
+<dt><strong>phase</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Sequence</span></code>[<a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>]</span></dt><dd><p>ノイズ関数の位相を設定／取得します。</p>
+<p>このパラメータは、空間内でノイズ関数をシフトさせるために使用することができます（おそらく、別のスケールのノイズパターンとのビートを避けるため）。位相は約単位ごとに繰り返す傾向があるので、0.5の位相は半周期のシフトとなります。</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">戻り値</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">vtk.vtkPerlinNoise</span></code></dt><dd><p>Instance of <code class="docutils literal notranslate"><span class="pre">vtk.vtkPerlinNoise</span></code> to a Perlin noise field as an
-implicit function. Use with <a class="reference internal" href="pyvista.core.imaging.sample_function.html#pyvista.core.imaging.sample_function" title="pyvista.core.imaging.sample_function"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.sample_function()</span></code></a>.</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">vtk.vtkPerlinNoise</span></code></dt><dd><p><code class="docutils literal notranslate"><span class="pre">vtk.vtkPerlinNoise</span></code> のインスタンスを暗黙の関数として、Perlin ノイズフィールドに変換します。 <a class="reference internal" href="pyvista.core.imaging.sample_function.html#pyvista.core.imaging.sample_function" title="pyvista.core.imaging.sample_function"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.sample_function()</span></code></a> と共に使用します。</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>Create a Perlin noise function with an amplitude of 0.1, frequency
-for all axes of 1, and a phase of 0 for all axes.</p>
+<p>振幅0.1、全軸の周波数1、全軸の位相0、Perlinノイズ関数を作成します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">noise</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">perlin_noise</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>Sample Perlin noise over a structured grid and plot it.</p>
+<p>構造化されたグリッド上でPerlinノイズをサンプリングし、それをプロットする。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">sample_function</span><span class="p">(</span><span class="n">noise</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>

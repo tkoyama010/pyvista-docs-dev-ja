@@ -415,9 +415,7 @@ $PYBIN setup.py bdist_wheel
 <section id="building-manylinux-wheels">
 <h2>ManyLinux wheel の構築<a class="headerlink" href="#building-manylinux-wheels" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p>上記の方向性はVTKのローカルビルドを構築するのに適していますが，これらのwheelは，それらが構築されたLinuxのバージョンによるABI互換性の問題を考えると，ローカルインストールの外部で共有することは困難です．これを回避するには， <a class="reference external" href="https://github.com/pypa/manylinux">manylinux</a> のdockerイメージを使ってwheelをビルドします．</p>
-<p>To do this, create a <code class="docutils literal notranslate"><span class="pre">build_wheels.sh</span></code> with the following contents in the
-<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone``d</span> <span class="pre">``vtk</span></code> directory, and give it executable permissions
-(<code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">+x</span> <span class="pre">build_wheels.sh</span></code>):</p>
+<p>そのためには、 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone``d</span> <span class="pre">``vtk</span></code> ディレクトリに以下の内容の <code class="docutils literal notranslate"><span class="pre">build_wheels.sh</span></code> を作成し、実行権限を与えます (<code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">+x</span> <span class="pre">build_wheels.sh</span></code>):</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1"># builds python wheels on docker container and tests installation</span>
 
@@ -470,14 +468,14 @@ rm -rf wheelhouse
 auditwheel repair dist/*.whl
 </pre></div>
 </div>
-<p>This script can then be called with:</p>
+<p>このスクリプトは，次のコマンドで呼び出すことができます:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PYTHON_VERSION</span><span class="o">=</span><span class="m">3</span>.10
 docker run --cpus <span class="m">4</span>.5 -e <span class="se">\</span>
        --rm -v <span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>:/io quay.io/pypa/manylinux2014_x86_64 <span class="se">\</span>
        /io/build_wheels.sh <span class="nv">$PYTHON_VERSION</span>
 </pre></div>
 </div>
-<p>You should end up with a <code class="docutils literal notranslate"><span class="pre">build/wheelhouse/vtk-*.whl</span></code>.</p>
+<p>最終的に <code class="docutils literal notranslate"><span class="pre">build/wheelhouse/vtk-*.whl</span></code> ができあがるはずです。</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
 <p>EGLバージョンのwheelを作成するには，前のセクションの指示に従ってください．インストール依存関係にAAAAAを追加します．</p>

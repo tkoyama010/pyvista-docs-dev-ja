@@ -274,9 +274,7 @@
                 
   <section id="pyvista-within-a-docker-container">
 <h1>Dockerコンテナ内のPyVista<a class="headerlink" href="#pyvista-within-a-docker-container" title="このヘッドラインへのパーマリンク">#</a></h1>
-<p>You can use <code class="docutils literal notranslate"><span class="pre">pyvista</span></code> from within a docker container with
-jupyterlab.  To launch a local docker container, install <code class="docutils literal notranslate"><span class="pre">docker</span></code>, then
-pull and run the image with:</p>
+<p>jupyterlabでは、Dockerコンテナから <code class="docutils literal notranslate"><span class="pre">pyvista</span></code> を使用することができます。 ローカルのDockerコンテナを起動するには、 <code class="docutils literal notranslate"><span class="pre">docker</span></code> をインストールし、イメージをpullして実行する。</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -p <span class="m">8888</span>:8888 ghcr.io/pyvista/pyvista:latest
 </pre></div>
 </div>
@@ -290,14 +288,11 @@ Or copy and paste one of these URLs:
 </div>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p>You can see the latest tags of <a class="reference external" href="https://github.com/pyvista/pyvista/pkgs/container/pyvista">our Docker containers here</a>. <code class="docutils literal notranslate"><span class="pre">ghcr.io/pyvista/pyvista:latest</span></code> has
-JupyterLab set up while <code class="docutils literal notranslate"><span class="pre">ghcr.io/pyvista/pyvista:latest-slim</span></code> is a
-lightweight Python environment without Jupyter</p>
+<p><a href="#id1"><span class="problematic" id="id2">`私たちのDockerコンテナの最新のタグは、こちら&lt;https://github.com/pyvista/pyvista/pkgs/container/pyvista&gt;`_</span></a> で見ることができます。 <code class="docutils literal notranslate"><span class="pre">ghcr.io/pyvista/pyvista:latest</span></code> には JupyterLab がセットアップされており、 <code class="docutils literal notranslate"><span class="pre">ghcr.io/pyvista/pyvista:latest-slim</span></code> は Jupyter を含まない軽量の Python 環境です。</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p>You may need to log into the GitHub container registry by following the directions at
-<a class="reference external" href="https://docs.github.com/en/enterprise-server&#64;3.0/packages/working-with-a-github-packages-registry/working-with-the-docker-registry">Working with the Docker registry</a>)</p>
+<p><a class="reference external" href="https://docs.github.com/en/enterprise-server&#64;3.0/packages/working-with-a-github-packages-registry/working-with-the-docker-registry">Dockerレジストリを利用した作業</a> にある指示に従って、GitHubのコンテナレジストリにログインする必要があるかもしれません)</p>
 </div>
 <section id="create-your-own-docker-container-with-pyvista">
 <h2><cite>pyvista</cite> で独自のDockerコンテナを作成します<a class="headerlink" href="#create-your-own-docker-container-with-pyvista" title="このヘッドラインへのパーマリンク">#</a></h2>

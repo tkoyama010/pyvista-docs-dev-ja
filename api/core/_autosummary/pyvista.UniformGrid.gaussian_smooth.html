@@ -1144,11 +1144,9 @@
 <p class="rubric">備考</p>
 <p>This filter only supports point data. Consider converting any cell
 data to point data using the <a class="reference internal" href="pyvista.DataSet.cell_data_to_point_data.html#pyvista.DataSet.cell_data_to_point_data" title="pyvista.DataSet.cell_data_to_point_data"><code class="xref py py-func docutils literal notranslate"><span class="pre">DataSet.cell_data_to_point_data()</span></code></a>
-filter to convert ny cell data to point data.</p>
+filter to convert any cell data to point data.</p>
 <p class="rubric">例</p>
-<p>First, create sample data to smooth. Here, we use
-<a class="reference internal" href="pyvista.core.common_data.perlin_noise.html#pyvista.core.common_data.perlin_noise" title="pyvista.core.common_data.perlin_noise"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.perlin_noise()</span></code></a>
-to create meaningful data.</p>
+<p>まず、スムージングするためのサンプルデータを作成します。ここでは <a class="reference internal" href="pyvista.core.common_data.perlin_noise.html#pyvista.core.common_data.perlin_noise" title="pyvista.core.common_data.perlin_noise"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.perlin_noise()</span></code></a> を用いて、意味のあるデータを作成します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">noise</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">perlin_noise</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
@@ -1159,7 +1157,7 @@ to create meaningful data.</p>
 <figure class="align-default">
 <img alt="../../../_images/pyvista-UniformGrid-gaussian_smooth-1_00_00.png" src="../../../_images/pyvista-UniformGrid-gaussian_smooth-1_00_00.png" />
 </figure>
-<p>Next, smooth the sample data.</p>
+<p>次に、サンプルデータを平滑化します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">smoothed</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">gaussian_smooth</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">smoothed</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">show_scalar_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
@@ -1167,7 +1165,7 @@ to create meaningful data.</p>
 <figure class="align-default">
 <img alt="../../../_images/pyvista-UniformGrid-gaussian_smooth-1_01_00.png" src="../../../_images/pyvista-UniformGrid-gaussian_smooth-1_01_00.png" />
 </figure>
-<p>See <a class="reference internal" href="../../../examples/01-filter/gaussian-smoothing.html#gaussian-smoothing-example"><span class="std std-ref">Gaussianスムージング</span></a> for a full example using this filter.</p>
+<p>このフィルタを使用した完全な例については、 <a class="reference internal" href="../../../examples/01-filter/gaussian-smoothing.html#gaussian-smoothing-example"><span class="std std-ref">Gaussianスムージング</span></a> を参照してください。</p>
 </dd></dl>
 
 </section>
