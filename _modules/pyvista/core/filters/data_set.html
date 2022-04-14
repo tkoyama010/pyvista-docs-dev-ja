@@ -212,6 +212,7 @@
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">FieldAssociation</span><span class="p">,</span> <span class="n">_vtk</span>
 <span class="kn">from</span> <span class="nn">pyvista.core.errors</span> <span class="kn">import</span> <span class="n">VTKVersionError</span>
 <span class="kn">from</span> <span class="nn">pyvista.core.filters</span> <span class="kn">import</span> <span class="n">_get_output</span><span class="p">,</span> <span class="n">_update_alg</span>
+<span class="kn">from</span> <span class="nn">pyvista.errors</span> <span class="kn">import</span> <span class="n">AmbiguousDataError</span><span class="p">,</span> <span class="n">MissingDataError</span>
 <span class="kn">from</span> <span class="nn">pyvista.utilities</span> <span class="kn">import</span> <span class="p">(</span>
     <span class="n">NORMALS</span><span class="p">,</span>
     <span class="n">abstract_class</span><span class="p">,</span>
@@ -2194,6 +2195,17 @@
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">orient</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
             <span class="n">dataset</span><span class="o">.</span><span class="n">active_vectors_name</span> <span class="o">=</span> <span class="n">orient</span>
             <span class="n">orient</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">orient</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)</span> <span class="ow">and</span> <span class="n">orient</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">pyvista</span><span class="o">.</span><span class="n">set_default_active_vectors</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+            <span class="k">except</span> <span class="n">MissingDataError</span><span class="p">:</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;No vector-like data to use for orient. orient will be set to False.&quot;</span><span class="p">)</span>
+                <span class="n">orient</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="k">except</span> <span class="n">AmbiguousDataError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">err</span><span class="si">}</span><span class="se">\n</span><span class="s2">It is unclear which one to use. orient will be set to False.&quot;</span>
+                <span class="p">)</span>
+                <span class="n">orient</span> <span class="o">=</span> <span class="kc">False</span>
 
         <span class="k">if</span> <span class="n">scale</span> <span class="ow">and</span> <span class="n">orient</span><span class="p">:</span>
             <span class="k">if</span> <span class="p">(</span>
@@ -2491,6 +2503,7 @@
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">vectors</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">pyvista</span><span class="o">.</span><span class="n">set_default_active_vectors</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
             <span class="n">field</span><span class="p">,</span> <span class="n">vectors</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">active_vectors_info</span>
         <span class="n">arr</span> <span class="o">=</span> <span class="n">get_array</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vectors</span><span class="p">,</span> <span class="n">preference</span><span class="o">=</span><span class="s1">&#39;point&#39;</span><span class="p">)</span>
         <span class="n">field</span> <span class="o">=</span> <span class="n">get_array_association</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vectors</span><span class="p">,</span> <span class="n">preference</span><span class="o">=</span><span class="s1">&#39;point&#39;</span><span class="p">)</span>
@@ -3405,6 +3418,9 @@
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">vectors</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">set_active_scalars</span><span class="p">(</span><span class="n">vectors</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">set_active_vectors</span><span class="p">(</span><span class="n">vectors</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">vectors</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">pyvista</span><span class="o">.</span><span class="n">set_default_active_vectors</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
         <span class="k">if</span> <span class="n">max_time</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">max_velocity</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_data_range</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
             <span class="n">max_time</span> <span class="o">=</span> <span class="mf">4.0</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">GetLength</span><span class="p">()</span> <span class="o">/</span> <span class="n">max_velocity</span>
@@ -3589,6 +3605,8 @@
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">vectors</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">set_active_scalars</span><span class="p">(</span><span class="n">vectors</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">set_active_vectors</span><span class="p">(</span><span class="n">vectors</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">vectors</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">pyvista</span><span class="o">.</span><span class="n">set_default_active_vectors</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 
         <span class="n">loop_angle</span> <span class="o">=</span> <span class="n">loop_angle</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">180</span>
 
