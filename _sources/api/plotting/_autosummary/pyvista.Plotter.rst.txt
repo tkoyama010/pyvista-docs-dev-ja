@@ -189,6 +189,9 @@
       Plotter.disable_parallel_projection
       
       
+      Plotter.disable_picking
+      
+      
       Plotter.disable_shadows
       
       
