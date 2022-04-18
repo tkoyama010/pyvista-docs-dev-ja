@@ -1273,7 +1273,7 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.Plotter.enable_surface_picking">
 <span class="sig-prename descclassname"><span class="pre">Plotter.</span></span><span class="sig-name descname"><span class="pre">enable_surface_picking</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_message</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">18</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'pink'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_point</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.025</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pickable_window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">left_clicking</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Plotter.enable_surface_picking" title="この定義へのパーマリンク">#</a></dt>
-<dd><p>Enable picking of a point on the surface of a mesh.</p>
+<dd><p>メッシュの表面上の点をピッキングできるようにする．</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
@@ -1311,7 +1311,7 @@
 </dd>
 </dl>
 <p class="rubric">備考</p>
-<p>Picked point can be accessed from <code class="xref py py-attr docutils literal notranslate"><span class="pre">picked_point</span></code> attribute.</p>
+<p>ピックされたポイントは <code class="xref py py-attr docutils literal notranslate"><span class="pre">picked_point</span></code> 属性からアクセスすることができます．</p>
 <p class="rubric">例</p>
 <p>立方体をプロットに追加し，セルピッキングを可能にします．左クリックですぐにピッキングを開始するように <code class="docutils literal notranslate"><span class="pre">left_clicking</span></code> を有効にし，ボックスを表示しないようにします． <code class="docutils literal notranslate"><span class="pre">p</span></code> キーを押してメッシュを選択することはできます．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>

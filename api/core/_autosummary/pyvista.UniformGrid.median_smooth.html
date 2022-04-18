@@ -1121,8 +1121,8 @@
 <dt class="sig sig-object py" id="pyvista.UniformGrid.median_smooth">
 <span class="sig-prename descclassname"><span class="pre">UniformGrid.</span></span><span class="sig-name descname"><span class="pre">median_smooth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kernel_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(3,</span> <span class="pre">3,</span> <span class="pre">3)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scalars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preference</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'points'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UniformGrid.median_smooth" title="この定義へのパーマリンク">#</a></dt>
 <dd><p>medianフィルターでデータを平滑化します．</p>
-<p>各画素を、その画素を中心とした矩形近傍領域の中央値で置き換える中央値フィルタ。近傍領域は 3 次元以下でなければなりません。近傍領域の kernelSize の軸を 1 に設定すると、フィルターは 2 次元の中央値になります。</p>
-<p>詳しくは <a class="reference external" href="https://vtk.org/doc/nightly/html/classvtkImageMedian3D.html#details">vtkImageMedian3D</a> を参照してください。</p>
+<p>各画素を、その画素を中心とした矩形近傍領域の中央値で置き換える中央値フィルタ．近傍領域は 3 次元以下でなければなりません．近傍領域の kernelSize の軸を 1 に設定すると、フィルターは 2 次元の中央値になります．</p>
+<p>詳しくは <a class="reference external" href="https://vtk.org/doc/nightly/html/classvtkImageMedian3D.html#details">vtkImageMedian3D</a> を参照してください．</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
@@ -1145,10 +1145,10 @@
 </dl>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>このフィルタをセルデータに適用すると、出力は同じ名前の新しいポイント配列に送られ、既存の同じ名前のポイントデータ配列は上書きされます。</p>
+<p>このフィルタをセルデータに適用すると、出力は同じ名前の新しいポイント配列に送られ、既存の同じ名前のポイントデータ配列は上書きされます．</p>
 </div>
 <p class="rubric">例</p>
-<p>まず、スムージングするためのサンプルデータを作成します。ここでは <a class="reference internal" href="pyvista.core.common_data.perlin_noise.html#pyvista.core.common_data.perlin_noise" title="pyvista.core.common_data.perlin_noise"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.perlin_noise()</span></code></a> を用いて、意味のあるデータを作成します。</p>
+<p>まず、スムージングするためのサンプルデータを作成します．ここでは <a class="reference internal" href="pyvista.core.common_data.perlin_noise.html#pyvista.core.common_data.perlin_noise" title="pyvista.core.common_data.perlin_noise"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.perlin_noise()</span></code></a> を用いて、意味のあるデータを作成します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">noise</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">perlin_noise</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
@@ -1159,7 +1159,7 @@
 <figure class="align-default">
 <img alt="../../../_images/pyvista-UniformGrid-median_smooth-1_00_00.png" src="../../../_images/pyvista-UniformGrid-median_smooth-1_00_00.png" />
 </figure>
-<p>次に、サンプルデータを平滑化します。</p>
+<p>次に、サンプルデータを平滑化します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">smoothed</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">median_smooth</span><span class="p">(</span><span class="n">kernel_size</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">smoothed</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">show_scalar_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
