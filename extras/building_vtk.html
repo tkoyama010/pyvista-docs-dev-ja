@@ -415,7 +415,7 @@ $PYBIN setup.py bdist_wheel
 <section id="building-manylinux-wheels">
 <h2>ManyLinux wheel の構築<a class="headerlink" href="#building-manylinux-wheels" title="このヘッドラインへのパーマリンク">#</a></h2>
 <p>上記の方向性はVTKのローカルビルドを構築するのに適していますが，これらのwheelは，それらが構築されたLinuxのバージョンによるABI互換性の問題を考えると，ローカルインストールの外部で共有することは困難です．これを回避するには， <a class="reference external" href="https://github.com/pypa/manylinux">manylinux</a> のdockerイメージを使ってwheelをビルドします．</p>
-<p>そのためには、 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone``d</span> <span class="pre">``vtk</span></code> ディレクトリに以下の内容の <code class="docutils literal notranslate"><span class="pre">build_wheels.sh</span></code> を作成し、実行権限を与えます (<code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">+x</span> <span class="pre">build_wheels.sh</span></code>):</p>
+<p>そのためには， <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone``d</span> <span class="pre">``vtk</span></code> ディレクトリに以下の内容の <code class="docutils literal notranslate"><span class="pre">build_wheels.sh</span></code> を作成し，実行権限を与えます (<code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">+x</span> <span class="pre">build_wheels.sh</span></code>):</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1"># builds python wheels on docker container and tests installation</span>
 

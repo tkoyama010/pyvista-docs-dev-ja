@@ -331,11 +331,11 @@
 <dd><p>構造化された点セット上の陰関数をサンプルします．</p>
 <p><code class="docutils literal notranslate"><span class="pre">vtk.vtkSampleFunction</span></code> を使用します．</p>
 <p>このメソッドは， <code class="docutils literal notranslate"><span class="pre">vtk.vtkStructuredPoints</span></code> 内の各点で陰関数と法線を評価します．ユーザは，サンプリングの次元と空間上の位置を指定することができます．</p>
-<p>閉曲面を作成するために（vtkContourFilterと組み合わせて）、キャッピングをオンにしてサンプル空間の境界に特定の値を設定することができます．</p>
+<p>閉曲面を作成するために（vtkContourFilterと組み合わせて），キャッピングをオンにしてサンプル空間の境界に特定の値を設定することができます．</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>function</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vtk.vtkImplicitFunction</span></code></span></dt><dd><p>評価する暗黙の関数． 例えば、 <code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.perlin_noise()</span></code> から生成される関数がこれにあたります．</p>
+<dt><strong>function</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vtk.vtkImplicitFunction</span></code></span></dt><dd><p>評価する暗黙の関数． 例えば， <code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.perlin_noise()</span></code> から生成される関数がこれにあたります．</p>
 </dd>
 <dt><strong>bounds</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">length</span></code> 6 <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a></span></dt><dd><p>以下の形式で境界を指定します．</p>
 <ul class="simple">
@@ -343,7 +343,7 @@
 </ul>
 <p>デフォルトは <code class="docutils literal notranslate"><span class="pre">(-1.0,</span> <span class="pre">1.0,</span> <span class="pre">-1.0,</span> <span class="pre">1.0,</span> <span class="pre">-1.0,</span> <span class="pre">1.0)</span></code> です．</p>
 </dd>
-<dt><strong>dim</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">length</span></code> 3 <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">(xdim,</span> <span class="pre">ydim,</span> <span class="pre">zdim)</span></code> のフォーマットで表される、サンプリングするデータの次元． デフォルトは <code class="docutils literal notranslate"><span class="pre">(50,</span> <span class="pre">50,</span> <span class="pre">50)</span></code> です．</p>
+<dt><strong>dim</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">length</span></code> 3 <a class="reference external" href="https://docs.python.org/dev/glossary.html#term-sequence" title="(in Python v3.11)"><span>sequence</span></a></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">(xdim,</span> <span class="pre">ydim,</span> <span class="pre">zdim)</span></code> のフォーマットで表される，サンプリングするデータの次元． デフォルトは <code class="docutils literal notranslate"><span class="pre">(50,</span> <span class="pre">50,</span> <span class="pre">50)</span></code> です．</p>
 </dd>
 <dt><strong>compute_normals</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>法線の計算を有効または無効にします． デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です．</p>
 </dd>
@@ -361,7 +361,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">np.uint8</span></code></p></li>
 </ul>
 </dd>
-<dt><strong>capping</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>キャッピングの有効・無効を設定します． デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です． キャッピングが有効な場合、構造化ポイントセットの外側の境界はキャップ値に設定されます．これは、サーフェスが閉じていることを確認するために使用することができます．</p>
+<dt><strong>capping</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>キャッピングの有効・無効を設定します． デフォルトは <code class="docutils literal notranslate"><span class="pre">False</span></code> です． キャッピングが有効な場合，構造化ポイントセットの外側の境界はキャップ値に設定されます．これは，サーフェスが閉じていることを確認するために使用することができます．</p>
 </dd>
 <dt><strong>cap_value</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">capping</span></code> パラメータで使用されるキャッピング値．</p>
 </dd>
@@ -392,7 +392,7 @@
 <figure class="align-default">
 <img alt="../../../_images/pyvista-core-imaging-sample_function-1_00_00.png" src="../../../_images/pyvista-core-imaging-sample_function-1_00_00.png" />
 </figure>
-<p>パーリンノイズを2Dでサンプリングし、プロットします．</p>
+<p>パーリンノイズを2Dでサンプリングし，プロットします．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">noise</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">perlin_noise</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">surf</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">sample_function</span><span class="p">(</span><span class="n">noise</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">surf</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
