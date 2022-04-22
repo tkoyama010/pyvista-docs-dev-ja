@@ -395,6 +395,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.examples.downloads.download_dicom_stack.html">
+       download_dicom_stack
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="pyvista.examples.downloads.download_disc_quads.html">
        download_disc_quads
       </a>
@@ -913,6 +918,27 @@
 </dl>
 </dd>
 </dl>
+<p class="rubric">例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">filename</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_dual_sphere_animation</span><span class="p">(</span><span class="n">load</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">reader</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">PVDReader</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plotter</span><span class="o">.</span><span class="n">open_gif</span><span class="p">(</span><span class="s2">&quot;sphere_pvd.gif&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">time_value</span> <span class="ow">in</span> <span class="n">reader</span><span class="o">.</span><span class="n">time_values</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">reader</span><span class="o">.</span><span class="n">set_active_time_value</span><span class="p">(</span><span class="n">time_value</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">mesh</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="gp">... </span>    <span class="n">_</span> <span class="o">=</span> <span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">smooth_shading</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">_</span> <span class="o">=</span> <span class="n">plotter</span><span class="o">.</span><span class="n">add_text</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Time: </span><span class="si">{</span><span class="n">time_value</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">plotter</span><span class="o">.</span><span class="n">write_frame</span><span class="p">()</span>
+<span class="gp">... </span>    <span class="n">plotter</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="gp">... </span>    <span class="n">plotter</span><span class="o">.</span><span class="n">enable_lightkit</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plotter</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<figure class="align-default">
+<img alt="../../../_images/pyvista-examples-downloads-download_dual_sphere_animation-1_00_00.gif" src="../../../_images/pyvista-examples-downloads-download_dual_sphere_animation-1_00_00.gif" />
+</figure>
 </dd></dl>
 
 </section>

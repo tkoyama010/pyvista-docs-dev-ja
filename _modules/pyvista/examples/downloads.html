@@ -217,6 +217,7 @@
 <span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">shutil</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Union</span>
 <span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">urlretrieve</span>
 <span class="kn">import</span> <span class="nn">zipfile</span>
 
@@ -290,6 +291,7 @@
 <span class="sd">        the path to the file to use.</span>
 <span class="sd">    filename : str</span>
 <span class="sd">        The name of the file.</span>
+
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">_check_examples_path</span><span class="p">()</span>
     <span class="c1"># First check if file has already been downloaded</span>
@@ -3643,9 +3645,27 @@
 <span class="sd">    pyvista.MultiBlock or str</span>
 <span class="sd">        DataSet or filename depending on ``load``.</span>
 
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import pyvista</span>
+<span class="sd">    &gt;&gt;&gt; from pyvista import examples</span>
+<span class="sd">    &gt;&gt;&gt; filename = examples.download_single_sphere_animation(load=False)</span>
+<span class="sd">    &gt;&gt;&gt; reader = pyvista.PVDReader(filename)</span>
+<span class="sd">    &gt;&gt;&gt; plotter = pyvista.Plotter()</span>
+<span class="sd">    &gt;&gt;&gt; plotter.open_gif(&quot;single_sphere_pvd.gif&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; for time_value in reader.time_values:</span>
+<span class="sd">    ...     reader.set_active_time_value(time_value)</span>
+<span class="sd">    ...     mesh = reader.read()</span>
+<span class="sd">    ...     _ = plotter.add_mesh(mesh, smooth_shading=True)</span>
+<span class="sd">    ...     _ = plotter.add_text(f&quot;Time: {time_value:.0f}&quot;, color=&quot;black&quot;)</span>
+<span class="sd">    ...     plotter.write_frame()</span>
+<span class="sd">    ...     plotter.clear()</span>
+<span class="sd">    ...     plotter.enable_lightkit()</span>
+<span class="sd">    &gt;&gt;&gt; plotter.close()</span>
+
 <span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_download_file</span><span class="p">(</span><span class="s1">&#39;PVD/paraview/singleSphereAnimation.zip&#39;</span><span class="p">)</span>
     <span class="n">filename</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">_download_file</span><span class="p">(</span><span class="s1">&#39;PVD/paraview/singleSphereAnimation.pvd&#39;</span><span class="p">)</span>
-    <span class="n">folder</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">_download_file</span><span class="p">(</span><span class="s1">&#39;PVD/paraview/singleSphereAnimation&#39;</span><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">load</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">filename</span>
     <span class="k">return</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">PVDReader</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span></div>
@@ -3665,9 +3685,27 @@
 <span class="sd">    pyvista.MultiBlock or str</span>
 <span class="sd">        DataSet or filename depending on ``load``.</span>
 
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import pyvista</span>
+<span class="sd">    &gt;&gt;&gt; from pyvista import examples</span>
+<span class="sd">    &gt;&gt;&gt; filename = examples.download_dual_sphere_animation(load=False)</span>
+<span class="sd">    &gt;&gt;&gt; reader = pyvista.PVDReader(filename)</span>
+<span class="sd">    &gt;&gt;&gt; plotter = pyvista.Plotter()</span>
+<span class="sd">    &gt;&gt;&gt; plotter.open_gif(&quot;sphere_pvd.gif&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; for time_value in reader.time_values:</span>
+<span class="sd">    ...     reader.set_active_time_value(time_value)</span>
+<span class="sd">    ...     mesh = reader.read()</span>
+<span class="sd">    ...     _ = plotter.add_mesh(mesh, smooth_shading=True)</span>
+<span class="sd">    ...     _ = plotter.add_text(f&quot;Time: {time_value:.0f}&quot;, color=&quot;black&quot;)</span>
+<span class="sd">    ...     plotter.write_frame()</span>
+<span class="sd">    ...     plotter.clear()</span>
+<span class="sd">    ...     plotter.enable_lightkit()</span>
+<span class="sd">    &gt;&gt;&gt; plotter.close()</span>
+
 <span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_download_file</span><span class="p">(</span><span class="s1">&#39;PVD/paraview/dualSphereAnimation.zip&#39;</span><span class="p">)</span>
     <span class="n">filename</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">_download_file</span><span class="p">(</span><span class="s1">&#39;PVD/paraview/dualSphereAnimation.pvd&#39;</span><span class="p">)</span>
-    <span class="n">folder</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">_download_file</span><span class="p">(</span><span class="s1">&#39;PVD/paraview/dualSphereAnimation&#39;</span><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">load</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">filename</span>
     <span class="k">return</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">PVDReader</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span></div>
@@ -3909,6 +3947,60 @@
     <span class="k">if</span> <span class="ow">not</span> <span class="n">load</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">filename</span>
     <span class="k">return</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">get_reader</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="download_dicom_stack"><a class="viewcode-back" href="../../../api/examples/_autosummary/pyvista.examples.downloads.download_dicom_stack.html#pyvista.examples.downloads.download_dicom_stack">[ドキュメント]</a><span class="k">def</span> <span class="nf">download_dicom_stack</span><span class="p">(</span><span class="n">load</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">pyvista</span><span class="o">.</span><span class="n">UniformGrid</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>  <span class="c1"># pragma: no cover</span>
+    <span class="sd">&quot;&quot;&quot;Download TCIA DICOM stack volume.</span>
+
+<span class="sd">    Original download from the `The Cancer Imaging Archive (TCIA)</span>
+<span class="sd">    &lt;https://www.cancerimagingarchive.net/&gt;`_. This is part of the</span>
+<span class="sd">    Clinical Proteomic Tumor Analysis Consortium Sarcomas (CPTAC-SAR)</span>
+<span class="sd">    collection.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    load : bool, optional</span>
+<span class="sd">        Load the dataset after downloading it when ``True``.  Set this</span>
+<span class="sd">        to ``False`` and only the filename will be returned.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    pyvista.UniformGrid or str</span>
+<span class="sd">        DataSet or filename depending on ``load``.</span>
+
+<span class="sd">    References</span>
+<span class="sd">    ----------</span>
+<span class="sd">    * **Data Citation**</span>
+
+<span class="sd">        National Cancer Institute Clinical Proteomic Tumor Analysis Consortium</span>
+<span class="sd">        (CPTAC). (2018).  Radiology Data from the Clinical Proteomic Tumor</span>
+<span class="sd">        Analysis Consortium Sarcomas [CPTAC-SAR] collection [Data set]. The</span>
+<span class="sd">        Cancer Imaging Archive.  DOI: 10.7937/TCIA.2019.9bt23r95</span>
+
+<span class="sd">    * **Acknowledgement**</span>
+
+<span class="sd">        Data used in this publication were generated by the National Cancer Institute Clinical</span>
+<span class="sd">        Proteomic Tumor Analysis Consortium (CPTAC).</span>
+
+<span class="sd">    * **TCIA Citation**</span>
+
+<span class="sd">        Clark K, Vendt B, Smith K, Freymann J, Kirby J, Koppel P, Moore S, Phillips S,</span>
+<span class="sd">        Maffitt D, Pringle M, Tarbox L, Prior F. The Cancer Imaging Archive (TCIA):</span>
+<span class="sd">        Maintaining and Operating a Public Information Repository, Journal of Digital Imaging,</span>
+<span class="sd">        Volume 26, Number 6, December, 2013, pp 1045-1057. doi: 10.1007/s10278-013-9622-7</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; from pyvista import examples</span>
+<span class="sd">    &gt;&gt;&gt; dataset = examples.download_dicom_stack()</span>
+<span class="sd">    &gt;&gt;&gt; dataset.plot(volume=True, zoom=3, show_scalar_bar=False)</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">path</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">_download_file</span><span class="p">(</span><span class="s1">&#39;DICOM_Stack/data.zip&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">load</span><span class="p">:</span>
+        <span class="n">reader</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">DICOMReader</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">reader</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">path</span></div>
 </pre></div>
 
               </div>

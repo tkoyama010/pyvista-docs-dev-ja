@@ -34,6 +34,9 @@
       :toctree:
    
       
+      VTKPDataSetReader.path
+      
+      
       VTKPDataSetReader.reader
       
    

@@ -654,7 +654,7 @@
 <span class="sd">        &gt;&gt;&gt; pdata = pyvista.PolyData(point_cloud)</span>
 <span class="sd">        &gt;&gt;&gt; pdata[&#39;orig_sphere&#39;] = np.arange(100)</span>
 <span class="sd">        &gt;&gt;&gt; sphere = pyvista.Sphere(radius=0.02)</span>
-<span class="sd">        &gt;&gt;&gt; pc = pdata.glyph(scale=False, geom=sphere)</span>
+<span class="sd">        &gt;&gt;&gt; pc = pdata.glyph(scale=False, geom=sphere, orient=False)</span>
 <span class="sd">        &gt;&gt;&gt; pl = pyvista.Plotter()</span>
 <span class="sd">        &gt;&gt;&gt; _ = pl.add_mesh(pc, cmap=&#39;reds&#39;, smooth_shading=True,</span>
 <span class="sd">        ...                 show_scalar_bar=False)</span>
@@ -3586,7 +3586,7 @@
             <span class="n">filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">pyvista</span><span class="o">.</span><span class="n">FIGURE_PATH</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">mwriter</span> <span class="o">=</span> <span class="n">get_writer</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">fps</span><span class="o">=</span><span class="n">framerate</span><span class="p">,</span> <span class="n">quality</span><span class="o">=</span><span class="n">quality</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">open_gif</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">open_gif</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">loop</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">fps</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">palettesize</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span> <span class="n">subrectangles</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Open a gif file.</span>
 
 <span class="sd">        Parameters</span>
@@ -3594,13 +3594,45 @@
 <span class="sd">        filename : str</span>
 <span class="sd">            Filename of the gif to open.  Filename must end in ``&quot;gif&quot;``.</span>
 
+<span class="sd">        loop : int, optional</span>
+<span class="sd">            The number of iterations. Default 0 (meaning loop indefinitely).</span>
+
+<span class="sd">        fps : float, optional</span>
+<span class="sd">            The number of frames per second. If duration is not given, the</span>
+<span class="sd">            duration for each frame is set to 1/fps. Default 10.</span>
+
+<span class="sd">        palettesize : int, optional</span>
+<span class="sd">            The number of colors to quantize the image to. Is rounded to the</span>
+<span class="sd">            nearest power of two. Must be between 2 and 256. Default 256.</span>
+
+<span class="sd">        subrectangles : bool, optional</span>
+<span class="sd">            If ``True``, will try and optimize the GIF by storing only the rectangular</span>
+<span class="sd">            parts of each frame that change with respect to the previous. Default</span>
+<span class="sd">            ``False``.</span>
+
+<span class="sd">            .. note::</span>
+<span class="sd">               Setting this to ``True`` may help reduce jitter in colorbars.</span>
+
+<span class="sd">        **kwargs : dict, optional</span>
+<span class="sd">            See the documentation for ``imageio.get_writer`` for additional kwargs.</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        Consider using `pygifsicle</span>
+<span class="sd">        &lt;https://github.com/LucaCappelletti94/pygifsicle&gt;`_ to reduce the final</span>
+<span class="sd">        size of the gif. See `Optimizing a GIF using pygifsicle</span>
+<span class="sd">        &lt;https://imageio.readthedocs.io/en/stable/examples.html#optimizing-a-gif-using-pygifsicle&gt;`_</span>
+
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
-<span class="sd">        Open a gif file.</span>
+<span class="sd">        Open a gif file, setting the framerate to 8 frames per second and</span>
+<span class="sd">        reducing the colorspace to 64.</span>
 
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pl = pyvista.Plotter</span>
-<span class="sd">        &gt;&gt;&gt; pl.open_gif(&#39;movie.gif&#39;)  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pl = pyvista.Plotter()</span>
+<span class="sd">        &gt;&gt;&gt; pl.open_gif(&#39;movie.gif&#39;, fps=8, palettesize=64)  # doctest:+SKIP</span>
+
+<span class="sd">        See :ref:`gif_movie_example` for a full example using this method.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="kn">from</span> <span class="nn">imageio</span> <span class="kn">import</span> <span class="n">get_writer</span>
@@ -3610,7 +3642,15 @@
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">pyvista</span><span class="o">.</span><span class="n">FIGURE_PATH</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isabs</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
             <span class="n">filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">pyvista</span><span class="o">.</span><span class="n">FIGURE_PATH</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_gif_filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">mwriter</span> <span class="o">=</span> <span class="n">get_writer</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;I&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mwriter</span> <span class="o">=</span> <span class="n">get_writer</span><span class="p">(</span>
+            <span class="n">filename</span><span class="p">,</span>
+            <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;I&#39;</span><span class="p">,</span>
+            <span class="n">loop</span><span class="o">=</span><span class="n">loop</span><span class="p">,</span>
+            <span class="n">fps</span><span class="o">=</span><span class="n">fps</span><span class="p">,</span>
+            <span class="n">palettesize</span><span class="o">=</span><span class="n">palettesize</span><span class="p">,</span>
+            <span class="n">subrectangles</span><span class="o">=</span><span class="n">subrectangles</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+        <span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">write_frame</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Write a single frame to the movie file.</span>

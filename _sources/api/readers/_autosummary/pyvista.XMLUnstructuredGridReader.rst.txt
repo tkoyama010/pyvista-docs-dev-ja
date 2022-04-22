@@ -79,6 +79,9 @@
       XMLUnstructuredGridReader.number_point_arrays
       
       
+      XMLUnstructuredGridReader.path
+      
+      
       XMLUnstructuredGridReader.point_array_names
       
       

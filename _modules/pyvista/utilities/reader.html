@@ -210,7 +210,7 @@
 
 <span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">_vtk</span>
-<span class="kn">from</span> <span class="nn">pyvista.utilities</span> <span class="kn">import</span> <span class="n">get_ext</span><span class="p">,</span> <span class="n">wrap</span>
+<span class="kn">from</span> <span class="nn">pyvista.utilities</span> <span class="kn">import</span> <span class="n">abstract_class</span><span class="p">,</span> <span class="n">get_ext</span><span class="p">,</span> <span class="n">wrap</span>
 
 
 <div class="viewcode-block" id="get_reader"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.get_reader.html#pyvista.get_reader">[ドキュメント]</a><span class="k">def</span> <span class="nf">get_reader</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
@@ -221,9 +221,11 @@
 <span class="sd">    +----------------+---------------------------------------------+</span>
 <span class="sd">    | File Extension | Class                                       |</span>
 <span class="sd">    +================+=============================================+</span>
+<span class="sd">    | ``.case``      | :class:`pyvista.EnSightReader`              |</span>
+<span class="sd">    +----------------+---------------------------------------------+</span>
 <span class="sd">    | ``.cgns``      | :class:`pyvista.CGNSReader`                 |</span>
 <span class="sd">    +----------------+---------------------------------------------+</span>
-<span class="sd">    | ``.case``      | :class:`pyvista.EnSightReader`              |</span>
+<span class="sd">    | ``.dcm``       | :class:`pyvista.DICOMReader`                |</span>
 <span class="sd">    +----------------+---------------------------------------------+</span>
 <span class="sd">    | ``.facet``     | :class:`pyvista.FacetReader`                |</span>
 <span class="sd">    +----------------+---------------------------------------------+</span>
@@ -304,7 +306,8 @@
     <span class="k">return</span> <span class="n">Reader</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="BaseReader"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.BaseReader.html#pyvista.BaseReader">[ドキュメント]</a><span class="k">class</span> <span class="nc">BaseReader</span><span class="p">:</span>
+<div class="viewcode-block" id="BaseReader"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.BaseReader.html#pyvista.BaseReader">[ドキュメント]</a><span class="nd">@abstract_class</span>
+<span class="k">class</span> <span class="nc">BaseReader</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;The Base Reader class.</span>
 
 <span class="sd">    The base functionality includes reading data from a file,</span>
@@ -314,39 +317,59 @@
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
-<span class="sd">    filename : str</span>
+<span class="sd">    path : str</span>
 <span class="sd">        Path of the file to read.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">_class_reader</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="kc">None</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Initialize Reader by setting filename.&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Initialize Reader by setting path.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_class_reader</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="o">=</span> <span class="n">filename</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_set_filename</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_filename</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_progress_bar</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_progress_msg</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__directory</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="n">path</span>
 
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Representation of a Reader object.&quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">(&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="si">}</span><span class="s2">&#39;)&quot;</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">(&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="si">}</span><span class="s2">&#39;)&quot;</span>
 
 <div class="viewcode-block" id="BaseReader.show_progress"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.BaseReader.show_progress.html#pyvista.BaseReader.show_progress">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">show_progress</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Show a progress bar.</span>
+        <span class="sd">&quot;&quot;&quot;Show a progress bar when loading the file.</span>
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        msg : str, optional</span>
-<span class="sd">            Progress bar message. Defaults to &quot;Reading &lt;file base name&gt;&quot;</span>
+<span class="sd">            Progress bar message. Defaults to ``&quot;Reading &lt;file base name&gt;&quot;``.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        &gt;&gt;&gt; import pyvista</span>
+<span class="sd">        &gt;&gt;&gt; from pyvista import examples</span>
+<span class="sd">        &gt;&gt;&gt; filename = examples.download_cavity(load=False)</span>
+<span class="sd">        &gt;&gt;&gt; reader = pyvista.OpenFOAMReader(filename)</span>
+<span class="sd">        &gt;&gt;&gt; reader.show_progress()</span>
+
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_progress_bar</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">if</span> <span class="n">msg</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Reading </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Reading </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_progress_msg</span> <span class="o">=</span> <span class="n">msg</span></div>
 
 <div class="viewcode-block" id="BaseReader.hide_progress"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.BaseReader.hide_progress.html#pyvista.BaseReader.hide_progress">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">hide_progress</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Hide the progress bar.&quot;&quot;&quot;</span>
+        <span class="sd">&quot;&quot;&quot;Hide the progress bar when loading the file.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        &gt;&gt;&gt; import pyvista</span>
+<span class="sd">        &gt;&gt;&gt; from pyvista import examples</span>
+<span class="sd">        &gt;&gt;&gt; filename = examples.download_cavity(load=False)</span>
+<span class="sd">        &gt;&gt;&gt; reader = pyvista.OpenFOAMReader(filename)</span>
+<span class="sd">        &gt;&gt;&gt; reader.hide_progress()</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_progress_bar</span> <span class="o">=</span> <span class="kc">False</span></div>
 
     <span class="nd">@property</span>
@@ -363,11 +386,46 @@
             <span class="k">raise</span> <span class="ne">NotImplementedError</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span>
 
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">path</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Return or set the filename or directory of the reader.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        &gt;&gt;&gt; import pyvista</span>
+<span class="sd">        &gt;&gt;&gt; from pyvista import examples</span>
+<span class="sd">        &gt;&gt;&gt; filename = examples.download_human(load=False)</span>
+<span class="sd">        &gt;&gt;&gt; reader = pyvista.XMLPolyDataReader(filename)</span>
+<span class="sd">        &gt;&gt;&gt; reader.path  # doctest:+SKIP</span>
+<span class="sd">        &#39;/home/user/.local/share/pyvista/examples/Human.vtp&#39;</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_filename</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_filename</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__directory</span>
+
+    <span class="nd">@path</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_set_directory</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_set_filename</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Path &#39;</span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2">&#39; is invalid or does not exist.&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_set_directory</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">directory</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set directory and update reader.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_filename</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__directory</span> <span class="o">=</span> <span class="n">directory</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">SetDirectoryName</span><span class="p">(</span><span class="n">directory</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_update_information</span><span class="p">()</span>
+
     <span class="k">def</span> <span class="nf">_set_filename</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Set filename and update reader.&quot;&quot;&quot;</span>
         <span class="c1"># Private method since changing file type requires a</span>
         <span class="c1"># different subclass.</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="o">=</span> <span class="n">filename</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__directory</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_filename</span> <span class="o">=</span> <span class="n">filename</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">SetFileName</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_update_information</span><span class="p">()</span>
 
@@ -768,6 +826,8 @@
 
 
 <span class="c1"># skip pydocstyle D102 check since docstring is taken from TimeReader</span>
+
+
 <div class="viewcode-block" id="EnSightReader"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.EnSightReader.html#pyvista.EnSightReader">[ドキュメント]</a><span class="k">class</span> <span class="nc">EnSightReader</span><span class="p">(</span><span class="n">BaseReader</span><span class="p">,</span> <span class="n">PointCellDataSelection</span><span class="p">,</span> <span class="n">TimeReader</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;EnSight Reader for .case files.</span>
 
@@ -791,7 +851,7 @@
         <span class="sd">&quot;&quot;&quot;Set filename and update reader.&quot;&quot;&quot;</span>
         <span class="c1"># Private method since changing file type requires a</span>
         <span class="c1"># different subclass.</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="o">=</span> <span class="n">filename</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_filename</span> <span class="o">=</span> <span class="n">filename</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">SetCaseFileName</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_update_information</span><span class="p">()</span>
 
@@ -823,14 +883,14 @@
 
     <span class="n">_class_reader</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkOpenFOAMReader</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Initialize OpenFOAMReader.</span>
 
 <span class="sd">        By default, pyvista enables all patch arrays.  This is a deviation</span>
 <span class="sd">        from the vtk default.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">enable_all_patch_arrays</span><span class="p">()</span>
 
     <span class="nd">@property</span>
@@ -855,10 +915,10 @@
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
                 <span class="sa">f</span><span class="s2">&quot;Not a valid time </span><span class="si">{</span><span class="n">time_value</span><span class="si">}</span><span class="s2"> from available time values: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">reader_time_values</span><span class="si">}</span><span class="s2">&quot;</span>
             <span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">SetTimeValue</span><span class="p">(</span><span class="n">time_value</span><span class="p">)</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">UpdateTimeStep</span><span class="p">(</span><span class="n">time_value</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="OpenFOAMReader.set_active_time_point"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.OpenFOAMReader.set_active_time_point.html#pyvista.OpenFOAMReader.set_active_time_point">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">set_active_time_point</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">time_point</span><span class="p">):</span>  <span class="c1"># noqa: D102</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">SetTimeValue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">time_point_value</span><span class="p">(</span><span class="n">time_point</span><span class="p">))</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">UpdateTimeStep</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">time_point_value</span><span class="p">(</span><span class="n">time_point</span><span class="p">))</span></div>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">cell_to_point_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -1118,9 +1178,9 @@
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
-<span class="sd">    This reader calls `ReadAllScalarsOn`, `ReadAllColorScalarsOn`,</span>
-<span class="sd">    `ReadAllNormalsOn`, `ReadAllTCoordsOn`, `ReadAllVectorsOn`,</span>
-<span class="sd">    and `ReadAllFieldsOn` on the underlying `vtkDataSetReader`.</span>
+<span class="sd">    This reader calls ``ReadAllScalarsOn``, ``ReadAllColorScalarsOn``,</span>
+<span class="sd">    ``ReadAllNormalsOn``, ``ReadAllTCoordsOn``, ``ReadAllVectorsOn``,</span>
+<span class="sd">    and ``ReadAllFieldsOn`` on the underlying ``vtkDataSetReader``.</span>
 
 <span class="sd">    Examples</span>
 <span class="sd">    --------</span>
@@ -1138,9 +1198,9 @@
 
     <span class="n">_class_reader</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkDataSetReader</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Initialize VTKDataSetReader with filename.&quot;&quot;&quot;</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
         <span class="c1"># Provide consistency with defaults in pyvista.read</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">ReadAllScalarsOn</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">ReadAllColorScalarsOn</span><span class="p">()</span>
@@ -1525,7 +1585,7 @@
 
     <span class="n">time</span><span class="p">:</span> <span class="nb">float</span>
     <span class="n">part</span><span class="p">:</span> <span class="nb">int</span>
-    <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">path</span><span class="p">:</span> <span class="nb">str</span>
     <span class="n">group</span><span class="p">:</span> <span class="nb">str</span>
 
 
@@ -1554,8 +1614,7 @@
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Initialize PVD file reader.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="o">=</span> <span class="n">filename</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_directory</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__directory</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_datasets</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_active_datasets</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_active_readers</span> <span class="o">=</span> <span class="p">[]</span>
@@ -1608,8 +1667,8 @@
 
     <span class="k">def</span> <span class="nf">_set_filename</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Set filename and update reader.&quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="o">=</span> <span class="n">filename</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_directory</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_filename</span> <span class="o">=</span> <span class="n">filename</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__directory</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">filename</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_datasets</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_active_datasets</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_update_information</span><span class="p">()</span>
@@ -1633,9 +1692,9 @@
 
     <span class="k">def</span> <span class="nf">_parse_file</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Parse PVD file.&quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">path</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Filename must be set&quot;</span><span class="p">)</span>
-        <span class="n">tree</span> <span class="o">=</span> <span class="n">ElementTree</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+        <span class="n">tree</span> <span class="o">=</span> <span class="n">ElementTree</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
         <span class="n">root</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">getroot</span><span class="p">()</span>
         <span class="n">dataset_elements</span> <span class="o">=</span> <span class="n">root</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s2">&quot;DataSet&quot;</span><span class="p">)</span>
         <span class="n">datasets</span> <span class="o">=</span> <span class="p">[]</span>
@@ -1673,7 +1732,7 @@
 <div class="viewcode-block" id="PVDReader.set_active_time_value"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.PVDReader.set_active_time_value.html#pyvista.PVDReader.set_active_time_value">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">set_active_time_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">time_value</span><span class="p">):</span>  <span class="c1"># noqa: D102</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_active_datasets</span> <span class="o">=</span> <span class="p">[</span><span class="n">dataset</span> <span class="k">for</span> <span class="n">dataset</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">datasets</span> <span class="k">if</span> <span class="n">dataset</span><span class="o">.</span><span class="n">time</span> <span class="o">==</span> <span class="n">time_value</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_active_readers</span> <span class="o">=</span> <span class="p">[</span>
-            <span class="n">get_reader</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_directory</span><span class="p">,</span> <span class="n">dataset</span><span class="o">.</span><span class="n">filename</span><span class="p">))</span>
+            <span class="n">get_reader</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__directory</span><span class="p">,</span> <span class="n">dataset</span><span class="o">.</span><span class="n">path</span><span class="p">))</span>
             <span class="k">for</span> <span class="n">dataset</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">active_datasets</span>
         <span class="p">]</span></div>
 
@@ -1681,31 +1740,60 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">set_active_time_value</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">time_values</span><span class="p">[</span><span class="n">time_point</span><span class="p">])</span></div></div>
 
 
+<div class="viewcode-block" id="DICOMReader"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.DICOMReader.html#pyvista.DICOMReader">[ドキュメント]</a><span class="k">class</span> <span class="nc">DICOMReader</span><span class="p">(</span><span class="n">BaseReader</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;DICOM Reader for reading ``.dcm`` files.</span>
+
+<span class="sd">    This reader reads a single file or a path containing a several ``.dcm``</span>
+<span class="sd">    files (DICOM stack).</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    path : str</span>
+<span class="sd">        Path to the single DICOM (``.dcm``) file to be opened or the directory</span>
+<span class="sd">        containing a stack of DICOM files.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    Read a DICOM stack.</span>
+
+<span class="sd">    &gt;&gt;&gt; import pyvista</span>
+<span class="sd">    &gt;&gt;&gt; from pyvista import examples</span>
+<span class="sd">    &gt;&gt;&gt; path = examples.download_dicom_stack(load=False)</span>
+<span class="sd">    &gt;&gt;&gt; reader = pyvista.DICOMReader(path)</span>
+<span class="sd">    &gt;&gt;&gt; dataset = reader.read()</span>
+<span class="sd">    &gt;&gt;&gt; dataset.plot(volume=True, zoom=3, show_scalar_bar=False)</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_class_reader</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkDICOMImageReader</span></div>
+
+
 <span class="n">CLASS_READERS</span> <span class="o">=</span> <span class="p">{</span>
     <span class="c1"># Standard dataset readers:</span>
+    <span class="s1">&#39;.case&#39;</span><span class="p">:</span> <span class="n">EnSightReader</span><span class="p">,</span>
     <span class="s1">&#39;.cgns&#39;</span><span class="p">:</span> <span class="n">CGNSReader</span><span class="p">,</span>
-    <span class="s1">&#39;.vti&#39;</span><span class="p">:</span> <span class="n">XMLImageDataReader</span><span class="p">,</span>
+    <span class="s1">&#39;.dcm&#39;</span><span class="p">:</span> <span class="n">DICOMReader</span><span class="p">,</span>
+    <span class="s1">&#39;.facet&#39;</span><span class="p">:</span> <span class="n">FacetReader</span><span class="p">,</span>
+    <span class="s1">&#39;.foam&#39;</span><span class="p">:</span> <span class="n">OpenFOAMReader</span><span class="p">,</span>
+    <span class="s1">&#39;.g&#39;</span><span class="p">:</span> <span class="n">BYUReader</span><span class="p">,</span>
+    <span class="s1">&#39;.obj&#39;</span><span class="p">:</span> <span class="n">OBJReader</span><span class="p">,</span>
+    <span class="s1">&#39;.p3d&#39;</span><span class="p">:</span> <span class="n">Plot3DMetaReader</span><span class="p">,</span>
+    <span class="s1">&#39;.ply&#39;</span><span class="p">:</span> <span class="n">PLYReader</span><span class="p">,</span>
+    <span class="s1">&#39;.pvd&#39;</span><span class="p">:</span> <span class="n">PVDReader</span><span class="p">,</span>
     <span class="s1">&#39;.pvti&#39;</span><span class="p">:</span> <span class="n">XMLPImageDataReader</span><span class="p">,</span>
-    <span class="s1">&#39;.vtr&#39;</span><span class="p">:</span> <span class="n">XMLRectilinearGridReader</span><span class="p">,</span>
+    <span class="s1">&#39;.pvtk&#39;</span><span class="p">:</span> <span class="n">VTKPDataSetReader</span><span class="p">,</span>
     <span class="s1">&#39;.pvtr&#39;</span><span class="p">:</span> <span class="n">XMLPRectilinearGridReader</span><span class="p">,</span>
-    <span class="s1">&#39;.vtu&#39;</span><span class="p">:</span> <span class="n">XMLUnstructuredGridReader</span><span class="p">,</span>
     <span class="s1">&#39;.pvtu&#39;</span><span class="p">:</span> <span class="n">XMLPUnstructuredGridReader</span><span class="p">,</span>
-    <span class="s1">&#39;.vtp&#39;</span><span class="p">:</span> <span class="n">XMLPolyDataReader</span><span class="p">,</span>
-    <span class="s1">&#39;.vts&#39;</span><span class="p">:</span> <span class="n">XMLStructuredGridReader</span><span class="p">,</span>
+    <span class="s1">&#39;.stl&#39;</span><span class="p">:</span> <span class="n">STLReader</span><span class="p">,</span>
+    <span class="s1">&#39;.tri&#39;</span><span class="p">:</span> <span class="n">BinaryMarchingCubesReader</span><span class="p">,</span>
+    <span class="s1">&#39;.vti&#39;</span><span class="p">:</span> <span class="n">XMLImageDataReader</span><span class="p">,</span>
+    <span class="s1">&#39;.vtk&#39;</span><span class="p">:</span> <span class="n">VTKDataSetReader</span><span class="p">,</span>
     <span class="s1">&#39;.vtm&#39;</span><span class="p">:</span> <span class="n">XMLMultiBlockDataReader</span><span class="p">,</span>
     <span class="s1">&#39;.vtmb&#39;</span><span class="p">:</span> <span class="n">XMLMultiBlockDataReader</span><span class="p">,</span>
-    <span class="s1">&#39;.case&#39;</span><span class="p">:</span> <span class="n">EnSightReader</span><span class="p">,</span>
-    <span class="s1">&#39;.foam&#39;</span><span class="p">:</span> <span class="n">OpenFOAMReader</span><span class="p">,</span>
-    <span class="s1">&#39;.ply&#39;</span><span class="p">:</span> <span class="n">PLYReader</span><span class="p">,</span>
-    <span class="s1">&#39;.obj&#39;</span><span class="p">:</span> <span class="n">OBJReader</span><span class="p">,</span>
-    <span class="s1">&#39;.stl&#39;</span><span class="p">:</span> <span class="n">STLReader</span><span class="p">,</span>
-    <span class="s1">&#39;.vtk&#39;</span><span class="p">:</span> <span class="n">VTKDataSetReader</span><span class="p">,</span>
-    <span class="s1">&#39;.pvtk&#39;</span><span class="p">:</span> <span class="n">VTKPDataSetReader</span><span class="p">,</span>
-    <span class="s1">&#39;.g&#39;</span><span class="p">:</span> <span class="n">BYUReader</span><span class="p">,</span>
-    <span class="s1">&#39;.facet&#39;</span><span class="p">:</span> <span class="n">FacetReader</span><span class="p">,</span>
-    <span class="s1">&#39;.p3d&#39;</span><span class="p">:</span> <span class="n">Plot3DMetaReader</span><span class="p">,</span>
-    <span class="s1">&#39;.tri&#39;</span><span class="p">:</span> <span class="n">BinaryMarchingCubesReader</span><span class="p">,</span>
-    <span class="s1">&#39;.pvd&#39;</span><span class="p">:</span> <span class="n">PVDReader</span><span class="p">,</span>
+    <span class="s1">&#39;.vtp&#39;</span><span class="p">:</span> <span class="n">XMLPolyDataReader</span><span class="p">,</span>
+    <span class="s1">&#39;.vtr&#39;</span><span class="p">:</span> <span class="n">XMLRectilinearGridReader</span><span class="p">,</span>
+    <span class="s1">&#39;.vts&#39;</span><span class="p">:</span> <span class="n">XMLStructuredGridReader</span><span class="p">,</span>
+    <span class="s1">&#39;.vtu&#39;</span><span class="p">:</span> <span class="n">XMLUnstructuredGridReader</span><span class="p">,</span>
 <span class="p">}</span>
 </pre></div>
 

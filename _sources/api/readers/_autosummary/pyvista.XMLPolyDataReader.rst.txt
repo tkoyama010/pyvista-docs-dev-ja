@@ -79,6 +79,9 @@
       XMLPolyDataReader.number_point_arrays
       
       
+      XMLPolyDataReader.path
+      
+      
       XMLPolyDataReader.point_array_names
       
       

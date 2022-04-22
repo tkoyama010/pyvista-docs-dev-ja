@@ -1272,23 +1272,40 @@
 <h1>open_gif<a class="headerlink" href="#open-gif" title="このヘッドラインへのパーマリンク">#</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyvista.Plotter.open_gif">
-<span class="sig-prename descclassname"><span class="pre">Plotter.</span></span><span class="sig-name descname"><span class="pre">open_gif</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Plotter.open_gif" title="この定義へのパーマリンク">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">Plotter.</span></span><span class="sig-name descname"><span class="pre">open_gif</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">palettesize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">256</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subrectangles</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Plotter.open_gif" title="この定義へのパーマリンク">#</a></dt>
 <dd><p>gifファイルを開きます．</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
 <dt><strong>filename</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>開くgifのファイル名．ファイル名は <code class="docutils literal notranslate"><span class="pre">&quot;gif&quot;</span></code> で終わる必要があります．</p>
 </dd>
+<dt><strong>loop</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>反復回数。 デフォルト0（無期限にループすることを意味します）。</p>
+</dd>
+<dt><strong>fps</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>1秒あたりのフレーム数。 継続時間が指定されていない場合、各フレームの継続時間は1/fpsに設定されます。 デフォルト10。</p>
+</dd>
+<dt><strong>palettesize</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>画像を量子化する色の数。  2の最も近い累乗に丸められます。  2〜256である必要があります。デフォルトは256です。</p>
+</dd>
+<dt><strong>subrectangles</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> の場合、前のフレームと比較して変化する各フレームの長方形の部分のみを保存することにより、GIFを最適化しようとします。 デフォルトの <code class="docutils literal notranslate"><span class="pre">False</span></code> 。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>これを <code class="docutils literal notranslate"><span class="pre">True</span></code> に設定すると、カラーバーのジッターを減らすのに役立つ場合があります。</p>
+</div>
+</dd>
+<dt><strong>**kwargs</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>その他のkwargsについては， <code class="docutils literal notranslate"><span class="pre">imageio.get_writer</span></code> のドキュメントを参照してください．</p>
+</dd>
 </dl>
 </dd>
 </dl>
+<p class="rubric">備考</p>
+<p><a class="reference external" href="https://github.com/LucaCappelletti94/pygifsicle">pygifsicle</a> を使って、GIFの最終的なサイズを小さくすることを検討してみてください。 <a class="reference external" href="https://imageio.readthedocs.io/en/stable/examples.html#optimizing-a-gif-using-pygifsicle">Optimizing a GIF using pygifsicle</a> を参照してください。</p>
 <p class="rubric">例</p>
-<p>gifファイルを開きます．</p>
+<p>gifファイルを開き、フレームレートを8フレーム/秒に設定し、色空間を64に縮小します。</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span><span class="o">.</span><span class="n">open_gif</span><span class="p">(</span><span class="s1">&#39;movie.gif&#39;</span><span class="p">)</span>  
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span><span class="o">.</span><span class="n">open_gif</span><span class="p">(</span><span class="s1">&#39;movie.gif&#39;</span><span class="p">,</span> <span class="n">fps</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">palettesize</span><span class="o">=</span><span class="mi">64</span><span class="p">)</span>  
 </pre></div>
 </div>
+<p>このメソッドを使用した完全な例については、 <a class="reference internal" href="../../../examples/02-plot/gif.html#gif-movie-example"><span class="std std-ref">GIFムービーの作成</span></a> を参照してください。</p>
 </dd></dl>
 
 </section>

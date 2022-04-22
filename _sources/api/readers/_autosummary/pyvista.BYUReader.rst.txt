@@ -34,6 +34,9 @@
       :toctree:
    
       
+      BYUReader.path
+      
+      
       BYUReader.reader
       
    

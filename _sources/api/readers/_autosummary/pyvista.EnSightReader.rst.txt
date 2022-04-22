@@ -94,6 +94,9 @@
       EnSightReader.number_time_points
       
       
+      EnSightReader.path
+      
+      
       EnSightReader.point_array_names
       
       

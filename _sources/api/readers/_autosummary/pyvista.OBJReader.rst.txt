@@ -34,6 +34,9 @@
       :toctree:
    
       
+      OBJReader.path
+      
+      
       OBJReader.reader
       
    

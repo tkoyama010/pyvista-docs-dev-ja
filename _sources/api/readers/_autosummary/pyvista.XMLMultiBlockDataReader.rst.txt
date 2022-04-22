@@ -79,6 +79,9 @@
       XMLMultiBlockDataReader.number_point_arrays
       
       
+      XMLMultiBlockDataReader.path
+      
+      
       XMLMultiBlockDataReader.point_array_names
       
       

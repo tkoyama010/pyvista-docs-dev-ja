@@ -79,6 +79,9 @@
       XMLStructuredGridReader.number_point_arrays
       
       
+      XMLStructuredGridReader.path
+      
+      
       XMLStructuredGridReader.point_array_names
       
       

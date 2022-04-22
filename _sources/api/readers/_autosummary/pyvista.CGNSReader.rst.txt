@@ -115,6 +115,9 @@
       CGNSReader.number_point_arrays
       
       
+      CGNSReader.path
+      
+      
       CGNSReader.point_array_names
       
       

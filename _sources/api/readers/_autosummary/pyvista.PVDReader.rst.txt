@@ -58,6 +58,9 @@
       PVDReader.number_time_points
       
       
+      PVDReader.path
+      
+      
       PVDReader.reader
       
       

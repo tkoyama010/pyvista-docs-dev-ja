@@ -34,6 +34,9 @@
       :toctree:
    
       
+      BaseReader.path
+      
+      
       BaseReader.reader
       
    

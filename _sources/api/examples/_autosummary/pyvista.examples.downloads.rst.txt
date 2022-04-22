@@ -47,6 +47,7 @@
       download_cylinder_crossflow
       download_damavand_volcano
       download_delaunay_example
+      download_dicom_stack
       download_disc_quads
       download_dolfin
       download_doorman

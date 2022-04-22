@@ -34,6 +34,9 @@
       :toctree:
    
       
+      FacetReader.path
+      
+      
       FacetReader.reader
       
    

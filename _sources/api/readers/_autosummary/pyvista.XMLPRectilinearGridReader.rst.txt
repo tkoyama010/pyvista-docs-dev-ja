@@ -79,6 +79,9 @@
       XMLPRectilinearGridReader.number_point_arrays
       
       
+      XMLPRectilinearGridReader.path
+      
+      
       XMLPRectilinearGridReader.point_array_names
       
       

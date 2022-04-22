@@ -121,6 +121,9 @@
       OpenFOAMReader.patch_array_names
       
       
+      OpenFOAMReader.path
+      
+      
       OpenFOAMReader.point_array_names
       
       

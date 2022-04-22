@@ -79,6 +79,9 @@
       XMLImageDataReader.number_point_arrays
       
       
+      XMLImageDataReader.path
+      
+      
       XMLImageDataReader.point_array_names
       
       
