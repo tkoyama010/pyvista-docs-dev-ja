@@ -1068,9 +1068,24 @@
               
               <div class="toc-item">
                 
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
-    
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   PolyDataを作成
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#polygonal-polydata">
+   Polygonal PolyData
+  </a>
+ </li>
+</ul>
+
 </nav>
               </div>
               
@@ -1096,7 +1111,7 @@
 </div>
 <section class="sphx-glr-example-title" id="create-polydata">
 <span id="ref-create-poly"></span><span id="sphx-glr-examples-00-load-create-poly-py"></span><h1>PolyDataを作成<a class="headerlink" href="#create-polydata" title="このヘッドラインへのパーマリンク">#</a></h1>
-<p>頂点と面のNumPy配列からPolyData (三角面)オブジェクトを作成する．</p>
+<p>Creating a <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> (surface mesh) from vertices and faces.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
@@ -1107,15 +1122,65 @@
 <span class="n">vertices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
 
 <span class="c1"># mesh faces</span>
-<span class="n">faces</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>  <span class="c1"># [square, triangle, triangle]</span>
+<span class="n">faces</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">(</span>
+    <span class="p">[</span>
+        <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>  <span class="c1"># square</span>
+        <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>  <span class="c1"># triangle</span>
+        <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>  <span class="c1"># triangle</span>
+    <span class="p">]</span>
+<span class="p">)</span>
 
 <span class="n">surf</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">vertices</span><span class="p">,</span> <span class="n">faces</span><span class="p">)</span>
 
 <span class="c1"># plot each face with a different color</span>
-<span class="n">surf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">scalars</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">cpos</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">])</span>
+<span class="n">surf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">scalars</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span>
+    <span class="n">cpos</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span>
+    <span class="n">show_scalar_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">line_width</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+<span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_create-poly_001.png" srcset="../../_images/sphx_glr_create-poly_001.png" alt="create poly" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.680 seconds)</p>
+<img src="../../_images/sphx_glr_create-poly_001.png" srcset="../../_images/sphx_glr_create-poly_001.png" alt="create poly" class = "sphx-glr-single-img"/></section>
+<section id="polygonal-polydata">
+<h1>Polygonal PolyData<a class="headerlink" href="#polygonal-polydata" title="このヘッドラインへのパーマリンク">#</a></h1>
+<p>Create a three face polygonal mesh directly from points and faces.</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>It is generally more efficient to use a numpy array rather than stacking
+lists for large meshes.</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+    <span class="p">[</span>
+        <span class="p">[</span><span class="mf">0.0480</span><span class="p">,</span> <span class="mf">0.0349</span><span class="p">,</span> <span class="mf">0.9982</span><span class="p">],</span>
+        <span class="p">[</span><span class="mf">0.0305</span><span class="p">,</span> <span class="mf">0.0411</span><span class="p">,</span> <span class="mf">0.9987</span><span class="p">],</span>
+        <span class="p">[</span><span class="mf">0.0207</span><span class="p">,</span> <span class="mf">0.0329</span><span class="p">,</span> <span class="mf">0.9992</span><span class="p">],</span>
+        <span class="p">[</span><span class="mf">0.0218</span><span class="p">,</span> <span class="mf">0.0158</span><span class="p">,</span> <span class="mf">0.9996</span><span class="p">],</span>
+        <span class="p">[</span><span class="mf">0.0377</span><span class="p">,</span> <span class="mf">0.0095</span><span class="p">,</span> <span class="mf">0.9992</span><span class="p">],</span>
+        <span class="p">[</span><span class="mf">0.0485</span><span class="p">,</span> <span class="mf">0.0163</span><span class="p">,</span> <span class="mf">0.9987</span><span class="p">],</span>
+        <span class="p">[</span><span class="mf">0.0572</span><span class="p">,</span> <span class="mf">0.0603</span><span class="p">,</span> <span class="mf">0.9965</span><span class="p">],</span>
+        <span class="p">[</span><span class="mf">0.0390</span><span class="p">,</span> <span class="mf">0.0666</span><span class="p">,</span> <span class="mf">0.9970</span><span class="p">],</span>
+        <span class="p">[</span><span class="mf">0.0289</span><span class="p">,</span> <span class="mf">0.0576</span><span class="p">,</span> <span class="mf">0.9979</span><span class="p">],</span>
+        <span class="p">[</span><span class="mf">0.0582</span><span class="p">,</span> <span class="mf">0.0423</span><span class="p">,</span> <span class="mf">0.9974</span><span class="p">],</span>
+        <span class="p">[</span><span class="mf">0.0661</span><span class="p">,</span> <span class="mf">0.0859</span><span class="p">,</span> <span class="mf">0.9941</span><span class="p">],</span>
+        <span class="p">[</span><span class="mf">0.0476</span><span class="p">,</span> <span class="mf">0.0922</span><span class="p">,</span> <span class="mf">0.9946</span><span class="p">],</span>
+        <span class="p">[</span><span class="mf">0.0372</span><span class="p">,</span> <span class="mf">0.0827</span><span class="p">,</span> <span class="mf">0.9959</span><span class="p">],</span>
+        <span class="p">[</span><span class="mf">0.0674</span><span class="p">,</span> <span class="mf">0.0683</span><span class="p">,</span> <span class="mf">0.9954</span><span class="p">],</span>
+    <span class="p">],</span>
+<span class="p">)</span>
+
+
+<span class="n">face_a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">face_b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="n">face_c</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span>
+<span class="n">faces</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">face_a</span><span class="p">,</span> <span class="n">face_b</span><span class="p">,</span> <span class="n">face_c</span><span class="p">))</span>
+
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">faces</span><span class="p">)</span>
+<span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+<img src="../../_images/sphx_glr_create-poly_002.png" srcset="../../_images/sphx_glr_create-poly_002.png" alt="create poly" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.279 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-load-create-poly-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/a9f467bdb77ddfaee139b379ab04234c/create-poly.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">create-poly.py</span></code></a></p>
