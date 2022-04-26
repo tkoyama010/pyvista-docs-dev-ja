@@ -1081,7 +1081,7 @@
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#polygonal-polydata">
-   Polygonal PolyData
+   多角形 PolyData
   </a>
  </li>
 </ul>
@@ -1111,7 +1111,7 @@
 </div>
 <section class="sphx-glr-example-title" id="create-polydata">
 <span id="ref-create-poly"></span><span id="sphx-glr-examples-00-load-create-poly-py"></span><h1>PolyDataを作成<a class="headerlink" href="#create-polydata" title="このヘッドラインへのパーマリンク">#</a></h1>
-<p>Creating a <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> (surface mesh) from vertices and faces.</p>
+<p>頂点と面から <a class="reference internal" href="../../api/core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> (表面メッシュ)を作成します．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
@@ -1144,12 +1144,11 @@
 </div>
 <img src="../../_images/sphx_glr_create-poly_001.png" srcset="../../_images/sphx_glr_create-poly_001.png" alt="create poly" class = "sphx-glr-single-img"/></section>
 <section id="polygonal-polydata">
-<h1>Polygonal PolyData<a class="headerlink" href="#polygonal-polydata" title="このヘッドラインへのパーマリンク">#</a></h1>
-<p>Create a three face polygonal mesh directly from points and faces.</p>
+<h1>多角形 PolyData<a class="headerlink" href="#polygonal-polydata" title="このヘッドラインへのパーマリンク">#</a></h1>
+<p>点と面から直接3面ポリゴンメッシュを作成します．</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p>It is generally more efficient to use a numpy array rather than stacking
-lists for large meshes.</p>
+<p>一般に，大きなメッシュではリストを積み重ねるよりもnumpyの配列を使う方が効率的です．</p>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
     <span class="p">[</span>
