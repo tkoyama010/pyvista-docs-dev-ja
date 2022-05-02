@@ -593,11 +593,22 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
+    <span class="k">def</span> <span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Construct a new PointSet object.</span>
+
+<span class="sd">        Wrapping this is necessary for us to show an informative error</span>
+<span class="sd">        message when the VTK version is too old, causing PointSet to be</span>
+<span class="sd">        an abstract class. Since we inherit the ``__new__()`` method of</span>
+<span class="sd">        ``vtk.vtkPointSet``, we would otherwise see a generic error about</span>
+<span class="sd">        the class being abstract.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">vtk_version_info</span> <span class="o">&lt;</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="n">VTKVersionError</span><span class="p">(</span><span class="s2">&quot;pyvista.PointSet requires VTK &gt;= 9.1.0&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">points</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">deep</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">force_float</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Initialize the pointset.&quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">vtk_version_info</span> <span class="o">&lt;</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
-            <span class="k">raise</span> <span class="n">VTKVersionError</span><span class="p">(</span><span class="s2">&quot;pyvista.PointSet requires VTK &gt;= 9.1.0&quot;</span><span class="p">)</span>
-
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="k">if</span> <span class="n">points</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">SetPoints</span><span class="p">(</span><span class="n">pyvista</span><span class="o">.</span><span class="n">vtk_points</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">deep</span><span class="o">=</span><span class="n">deep</span><span class="p">,</span> <span class="n">force_float</span><span class="o">=</span><span class="n">force_float</span><span class="p">))</span>

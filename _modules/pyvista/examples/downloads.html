@@ -1518,6 +1518,30 @@
     <span class="k">return</span> <span class="n">_download_and_read</span><span class="p">(</span><span class="s1">&#39;Gourds2.jpg&#39;</span><span class="p">,</span> <span class="n">texture</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">load</span><span class="o">=</span><span class="n">load</span><span class="p">)</span></div>
 
 
+<div class="viewcode-block" id="download_gourds_pnm"><a class="viewcode-back" href="../../../api/examples/_autosummary/pyvista.examples.downloads.download_gourds_pnm.html#pyvista.examples.downloads.download_gourds_pnm">[ドキュメント]</a><span class="k">def</span> <span class="nf">download_gourds_pnm</span><span class="p">(</span><span class="n">load</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+    <span class="sd">&quot;&quot;&quot;Download gourds dataset from pnm file.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    load : bool, optional</span>
+<span class="sd">        Load the dataset after downloading it when ``True``.  Set this</span>
+<span class="sd">        to ``False`` and only the filename will be returned.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    pyvista.UniformGrid or str</span>
+<span class="sd">        DataSet or filename depending on ``load``.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; from pyvista import examples</span>
+<span class="sd">    &gt;&gt;&gt; dataset = examples.download_gourds_pnm()</span>
+<span class="sd">    &gt;&gt;&gt; dataset.plot(rgba=True, cpos=&quot;xy&quot;)</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">_download_and_read</span><span class="p">(</span><span class="s1">&#39;Gourds.pnm&#39;</span><span class="p">,</span> <span class="n">load</span><span class="o">=</span><span class="n">load</span><span class="p">)</span></div>
+
+
 <div class="viewcode-block" id="download_unstructured_grid"><a class="viewcode-back" href="../../../api/examples/_autosummary/pyvista.examples.downloads.download_unstructured_grid.html#pyvista.examples.downloads.download_unstructured_grid">[ドキュメント]</a><span class="k">def</span> <span class="nf">download_unstructured_grid</span><span class="p">(</span><span class="n">load</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
     <span class="sd">&quot;&quot;&quot;Download unstructured grid dataset.</span>
 
@@ -3833,22 +3857,25 @@
     <span class="k">return</span> <span class="n">_download_and_read</span><span class="p">(</span><span class="s1">&#39;lucy.ply&#39;</span><span class="p">,</span> <span class="n">load</span><span class="o">=</span><span class="n">load</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="download_can"><a class="viewcode-back" href="../../../api/examples/_autosummary/pyvista.examples.downloads.download_can.html#pyvista.examples.downloads.download_can">[ドキュメント]</a><span class="k">def</span> <span class="nf">download_can</span><span class="p">(</span><span class="n">partial</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+<div class="viewcode-block" id="download_can"><a class="viewcode-back" href="../../../api/examples/_autosummary/pyvista.examples.downloads.download_can.html#pyvista.examples.downloads.download_can">[ドキュメント]</a><span class="k">def</span> <span class="nf">download_can</span><span class="p">(</span><span class="n">partial</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">load</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
     <span class="sd">&quot;&quot;&quot;Download the can dataset mesh.</span>
 
-<span class="sd">    Original downloaded from Testing/Data/FileSeriesat from paraview.org. Used</span>
+<span class="sd">    File obtained from `Kitware &lt;https://www.kitware.com/&gt;`_. Used</span>
 <span class="sd">    for testing hdf files.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
 <span class="sd">    partial : bool, optional</span>
-<span class="sd">        Load part of the dataset. Defaults to to ``False`` and</span>
-<span class="sd">        filename will be returned.</span>
+<span class="sd">        Load part of the dataset. Defaults to ``False``.</span>
+
+<span class="sd">    load : bool, optional</span>
+<span class="sd">        Load the dataset after downloading it when ``True``.  Set this</span>
+<span class="sd">        to ``False`` and only the filename will be returned.</span>
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
-<span class="sd">    pyvista.PolyData</span>
-<span class="sd">        The example ParaView can DataSet.</span>
+<span class="sd">    pyvista.PolyData, str, or List[str]</span>
+<span class="sd">        The example ParaView can DataSet or file path(s).</span>
 
 <span class="sd">    Examples</span>
 <span class="sd">    --------</span>
@@ -3860,17 +3887,19 @@
 <span class="sd">    &gt;&gt;&gt; dataset.plot(scalars=&#39;VEL&#39;, smooth_shading=True)</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">can_0</span> <span class="o">=</span> <span class="n">_download_and_read</span><span class="p">(</span><span class="s1">&#39;hdf/can_0.hdf&#39;</span><span class="p">)</span>
+    <span class="n">can_0</span> <span class="o">=</span> <span class="n">_download_and_read</span><span class="p">(</span><span class="s1">&#39;hdf/can_0.hdf&#39;</span><span class="p">,</span> <span class="n">load</span><span class="o">=</span><span class="n">load</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">partial</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">can_0</span>
 
-    <span class="k">return</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span>
-        <span class="p">[</span>
-            <span class="n">can_0</span><span class="p">,</span>
-            <span class="n">_download_and_read</span><span class="p">(</span><span class="s1">&#39;hdf/can_1.hdf&#39;</span><span class="p">),</span>
-            <span class="n">_download_and_read</span><span class="p">(</span><span class="s1">&#39;hdf/can_2.hdf&#39;</span><span class="p">),</span>
-        <span class="p">]</span>
-    <span class="p">)</span></div>
+    <span class="n">cans</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">can_0</span><span class="p">,</span>
+        <span class="n">_download_and_read</span><span class="p">(</span><span class="s1">&#39;hdf/can_1.hdf&#39;</span><span class="p">,</span> <span class="n">load</span><span class="o">=</span><span class="n">load</span><span class="p">),</span>
+        <span class="n">_download_and_read</span><span class="p">(</span><span class="s1">&#39;hdf/can_2.hdf&#39;</span><span class="p">,</span> <span class="n">load</span><span class="o">=</span><span class="n">load</span><span class="p">),</span>
+    <span class="p">]</span>
+
+    <span class="k">if</span> <span class="n">load</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">cans</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">cans</span></div>
 
 
 <div class="viewcode-block" id="download_cgns_structured"><a class="viewcode-back" href="../../../api/examples/_autosummary/pyvista.examples.downloads.download_cgns_structured.html#pyvista.examples.downloads.download_cgns_structured">[ドキュメント]</a><span class="k">def</span> <span class="nf">download_cgns_structured</span><span class="p">(</span><span class="n">load</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
@@ -4001,6 +4030,54 @@
         <span class="n">reader</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">DICOMReader</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">reader</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">path</span></div>
+
+
+<div class="viewcode-block" id="download_parched_canal_4k"><a class="viewcode-back" href="../../../api/examples/_autosummary/pyvista.examples.downloads.download_parched_canal_4k.html#pyvista.examples.downloads.download_parched_canal_4k">[ドキュメント]</a><span class="k">def</span> <span class="nf">download_parched_canal_4k</span><span class="p">(</span><span class="n">load</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+    <span class="sd">&quot;&quot;&quot;Download parched canal 4k dataset.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    load : bool, optional</span>
+<span class="sd">        Load the dataset after downloading it when ``True``.  Set this</span>
+<span class="sd">        to ``False`` and only the filename will be returned.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    pyvista.Texture or str</span>
+<span class="sd">        DataSet or filename depending on ``load``.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; from pyvista import examples</span>
+<span class="sd">    &gt;&gt;&gt; dataset = examples.download_parched_canal_4k()</span>
+<span class="sd">    &gt;&gt;&gt; dataset.plot(cpos=&quot;xy&quot;)</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">_download_and_read</span><span class="p">(</span><span class="s2">&quot;parched_canal_4k.hdr&quot;</span><span class="p">,</span> <span class="n">texture</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">load</span><span class="o">=</span><span class="n">load</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="download_cells_nd"><a class="viewcode-back" href="../../../api/examples/_autosummary/pyvista.examples.downloads.download_cells_nd.html#pyvista.examples.downloads.download_cells_nd">[ドキュメント]</a><span class="k">def</span> <span class="nf">download_cells_nd</span><span class="p">(</span><span class="n">load</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+    <span class="sd">&quot;&quot;&quot;Download example AVS UCD dataset.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    load : bool, optional</span>
+<span class="sd">        Load the dataset after downloading it when ``True``.  Set this</span>
+<span class="sd">        to ``False`` and only the filename will be returned.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    pyvista.DataSet or str</span>
+<span class="sd">        DataSet or filename depending on ``load``.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; from pyvista import examples</span>
+<span class="sd">    &gt;&gt;&gt; dataset = examples.download_cells_nd()</span>
+<span class="sd">    &gt;&gt;&gt; dataset.plot(cpos=&quot;xy&quot;)</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">_download_and_read</span><span class="p">(</span><span class="s2">&quot;cellsnd.ascii.inp&quot;</span><span class="p">,</span> <span class="n">load</span><span class="o">=</span><span class="n">load</span><span class="p">)</span></div>
 </pre></div>
 
               </div>

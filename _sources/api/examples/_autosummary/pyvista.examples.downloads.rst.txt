@@ -35,6 +35,7 @@
       download_carburator
       download_carotid
       download_cavity
+      download_cells_nd
       download_cgns_multi
       download_cgns_structured
       download_chest
@@ -66,6 +67,7 @@
       download_frog
       download_gears
       download_gourds
+      download_gourds_pnm
       download_gourds_texture
       download_gpr_data_array
       download_gpr_path
@@ -97,6 +99,7 @@
       download_oblique_cone
       download_office
       download_osmnx_graph
+      download_parched_canal_4k
       download_pepper
       download_pine_roots
       download_poly_line

@@ -221,11 +221,17 @@
 <span class="sd">    +----------------+---------------------------------------------+</span>
 <span class="sd">    | File Extension | Class                                       |</span>
 <span class="sd">    +================+=============================================+</span>
+<span class="sd">    | ``.bmp``       | :class:`pyvista.BMPReader`                  |</span>
+<span class="sd">    +----------------+---------------------------------------------+</span>
+<span class="sd">    | ``.cas``       | :class:`pyvista.FluentReader`               |</span>
+<span class="sd">    +----------------+---------------------------------------------+</span>
 <span class="sd">    | ``.case``      | :class:`pyvista.EnSightReader`              |</span>
 <span class="sd">    +----------------+---------------------------------------------+</span>
 <span class="sd">    | ``.cgns``      | :class:`pyvista.CGNSReader`                 |</span>
 <span class="sd">    +----------------+---------------------------------------------+</span>
 <span class="sd">    | ``.dcm``       | :class:`pyvista.DICOMReader`                |</span>
+<span class="sd">    +----------------+---------------------------------------------+</span>
+<span class="sd">    | ``.dem``       | :class:`pyvista.DEMReader`                  |</span>
 <span class="sd">    +----------------+---------------------------------------------+</span>
 <span class="sd">    | ``.facet``     | :class:`pyvista.FacetReader`                |</span>
 <span class="sd">    +----------------+---------------------------------------------+</span>
@@ -233,11 +239,39 @@
 <span class="sd">    +----------------+---------------------------------------------+</span>
 <span class="sd">    | ``.g``         | :class:`pyvista.BYUReader`                  |</span>
 <span class="sd">    +----------------+---------------------------------------------+</span>
+<span class="sd">    | ``.glb``       | :class:`pyvista.GLTFReader`                 |</span>
+<span class="sd">    +----------------+---------------------------------------------+</span>
+<span class="sd">    | ``.gltf``      | :class:`pyvista.GLTFReader`                 |</span>
+<span class="sd">    +----------------+---------------------------------------------+</span>
+<span class="sd">    | ``.hdf``       | :class:`pyvista.HDFReader`                  |</span>
+<span class="sd">    +----------------+---------------------------------------------+</span>
+<span class="sd">    | ``.inp``       | :class:`pyvista.AVSucdReader`               |</span>
+<span class="sd">    +----------------+---------------------------------------------+</span>
+<span class="sd">    | ``.jpg``       | :class:`pyvista.JPEGReader`                 |</span>
+<span class="sd">    +----------------+---------------------------------------------+</span>
+<span class="sd">    | ``.jpeg``      | :class:`pyvista.JPEGReader`                 |</span>
+<span class="sd">    +----------------+---------------------------------------------+</span>
+<span class="sd">    | ``.hdr``       | :class:`pyvista.HDRReader`                  |</span>
+<span class="sd">    +----------------+---------------------------------------------+</span>
+<span class="sd">    | ``.mha``       | :class:`pyvista.MetaImageReader`            |</span>
+<span class="sd">    +----------------+---------------------------------------------+</span>
+<span class="sd">    | ``.mhd``       | :class:`pyvista.MetaImageReader`            |</span>
+<span class="sd">    +----------------+---------------------------------------------+</span>
+<span class="sd">    | ``.nhdr``      | :class:`pyvista.NRRDReader`                 |</span>
+<span class="sd">    +----------------+---------------------------------------------+</span>
+<span class="sd">    | ``.nrrd``      | :class:`pyvista.NRRDReader`                 |</span>
+<span class="sd">    +----------------+---------------------------------------------+</span>
 <span class="sd">    | ``.obj``       | :class:`pyvista.OBJReader`                  |</span>
 <span class="sd">    +----------------+---------------------------------------------+</span>
 <span class="sd">    | ``.p3d``       | :class:`pyvista.Plot3DMetaReader`           |</span>
 <span class="sd">    +----------------+---------------------------------------------+</span>
 <span class="sd">    | ``.ply``       | :class:`pyvista.PLYReader`                  |</span>
+<span class="sd">    +----------------+---------------------------------------------+</span>
+<span class="sd">    | ``.png``       | :class:`pyvista.PNGReader`                  |</span>
+<span class="sd">    +----------------+---------------------------------------------+</span>
+<span class="sd">    | ``.pnm``       | :class:`pyvista.PNMReader`                  |</span>
+<span class="sd">    +----------------+---------------------------------------------+</span>
+<span class="sd">    | ``.pts``       | :class:`pyvista.PTSReader`                  |</span>
 <span class="sd">    +----------------+---------------------------------------------+</span>
 <span class="sd">    | ``.pvd``       | :class:`pyvista.PVDReader`                  |</span>
 <span class="sd">    +----------------+---------------------------------------------+</span>
@@ -249,7 +283,19 @@
 <span class="sd">    +----------------+---------------------------------------------+</span>
 <span class="sd">    | ``.pvtu``      | :class:`pyvista.XMLPUnstructuredGridReader` |</span>
 <span class="sd">    +----------------+---------------------------------------------+</span>
+<span class="sd">    | ``.res``       | :class:`pyvista.MFIXReader`                 |</span>
+<span class="sd">    +----------------+---------------------------------------------+</span>
+<span class="sd">    | ``.segy``      | :class:`pyvista.SegYReader`                 |</span>
+<span class="sd">    +----------------+---------------------------------------------+</span>
+<span class="sd">    | ``.sgy``       | :class:`pyvista.SegYReader`                 |</span>
+<span class="sd">    +----------------+---------------------------------------------+</span>
+<span class="sd">    | ``.slc``       | :class:`pyvista.SLCReader`                  |</span>
+<span class="sd">    +----------------+---------------------------------------------+</span>
 <span class="sd">    | ``.stl``       | :class:`pyvista.STLReader`                  |</span>
+<span class="sd">    +----------------+---------------------------------------------+</span>
+<span class="sd">    | ``.tif``       | :class:`pyvista.TIFFReader`                 |</span>
+<span class="sd">    +----------------+---------------------------------------------+</span>
+<span class="sd">    | ``.tiff``      | :class:`pyvista.TIFFReader`                 |</span>
 <span class="sd">    +----------------+---------------------------------------------+</span>
 <span class="sd">    | ``.tri``       | :class:`pyvista.BinaryMarchingCubesReader`  |</span>
 <span class="sd">    +----------------+---------------------------------------------+</span>
@@ -1768,23 +1814,304 @@
     <span class="n">_class_reader</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkDICOMImageReader</span></div>
 
 
+<div class="viewcode-block" id="BMPReader"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.BMPReader.html#pyvista.BMPReader">[ドキュメント]</a><span class="k">class</span> <span class="nc">BMPReader</span><span class="p">(</span><span class="n">BaseReader</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;BMP Reader for .bmp files.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import pyvista</span>
+<span class="sd">    &gt;&gt;&gt; from pyvista import examples</span>
+<span class="sd">    &gt;&gt;&gt; filename = examples.download_masonry_texture(load=False)</span>
+<span class="sd">    &gt;&gt;&gt; filename.split(&quot;/&quot;)[-1]  # omit the path</span>
+<span class="sd">    &#39;masonry.bmp&#39;</span>
+<span class="sd">    &gt;&gt;&gt; reader = pyvista.get_reader(filename)</span>
+<span class="sd">    &gt;&gt;&gt; mesh = reader.read()</span>
+<span class="sd">    &gt;&gt;&gt; mesh.plot()</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_class_reader</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkBMPReader</span></div>
+
+
+<div class="viewcode-block" id="DEMReader"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.DEMReader.html#pyvista.DEMReader">[ドキュメント]</a><span class="k">class</span> <span class="nc">DEMReader</span><span class="p">(</span><span class="n">BaseReader</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;DEM Reader for .dem files.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import pyvista</span>
+<span class="sd">    &gt;&gt;&gt; from pyvista import examples</span>
+<span class="sd">    &gt;&gt;&gt; filename = examples.download_st_helens(load=False)</span>
+<span class="sd">    &gt;&gt;&gt; filename.split(&quot;/&quot;)[-1]  # omit the path</span>
+<span class="sd">    &#39;SainteHelens.dem&#39;</span>
+<span class="sd">    &gt;&gt;&gt; reader = pyvista.get_reader(filename)</span>
+<span class="sd">    &gt;&gt;&gt; mesh = reader.read()</span>
+<span class="sd">    &gt;&gt;&gt; mesh.plot()</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_class_reader</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkDEMReader</span></div>
+
+
+<div class="viewcode-block" id="JPEGReader"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.JPEGReader.html#pyvista.JPEGReader">[ドキュメント]</a><span class="k">class</span> <span class="nc">JPEGReader</span><span class="p">(</span><span class="n">BaseReader</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;JPEG Reader for .jpeg and .jpg files.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import pyvista</span>
+<span class="sd">    &gt;&gt;&gt; from pyvista import examples</span>
+<span class="sd">    &gt;&gt;&gt; filename = examples.download_mars_jpg()</span>
+<span class="sd">    &gt;&gt;&gt; filename.split(&quot;/&quot;)[-1]  # omit the path</span>
+<span class="sd">    &#39;mars.jpg&#39;</span>
+<span class="sd">    &gt;&gt;&gt; reader = pyvista.get_reader(filename)</span>
+<span class="sd">    &gt;&gt;&gt; mesh = reader.read()</span>
+<span class="sd">    &gt;&gt;&gt; mesh.plot()</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_class_reader</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkJPEGReader</span></div>
+
+
+<div class="viewcode-block" id="MetaImageReader"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.MetaImageReader.html#pyvista.MetaImageReader">[ドキュメント]</a><span class="k">class</span> <span class="nc">MetaImageReader</span><span class="p">(</span><span class="n">BaseReader</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Meta Image Reader for .mha and .mhd files.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import pyvista</span>
+<span class="sd">    &gt;&gt;&gt; from pyvista import examples</span>
+<span class="sd">    &gt;&gt;&gt; filename = examples.download_chest(load=False)</span>
+<span class="sd">    &gt;&gt;&gt; filename.split(&quot;/&quot;)[-1]  # omit the path</span>
+<span class="sd">    &#39;ChestCT-SHORT.mha&#39;</span>
+<span class="sd">    &gt;&gt;&gt; reader = pyvista.get_reader(filename)</span>
+<span class="sd">    &gt;&gt;&gt; mesh = reader.read()</span>
+<span class="sd">    &gt;&gt;&gt; mesh.plot()</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_class_reader</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkMetaImageReader</span></div>
+
+
+<div class="viewcode-block" id="NRRDReader"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.NRRDReader.html#pyvista.NRRDReader">[ドキュメント]</a><span class="k">class</span> <span class="nc">NRRDReader</span><span class="p">(</span><span class="n">BaseReader</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;NRRDReader for .nrrd and .nhdr files.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import pyvista</span>
+<span class="sd">    &gt;&gt;&gt; from pyvista import examples</span>
+<span class="sd">    &gt;&gt;&gt; filename = examples.download_beach(load=False)</span>
+<span class="sd">    &gt;&gt;&gt; filename.split(&quot;/&quot;)[-1]  # omit the path</span>
+<span class="sd">    &#39;beach.nrrd&#39;</span>
+<span class="sd">    &gt;&gt;&gt; reader = pyvista.get_reader(filename)</span>
+<span class="sd">    &gt;&gt;&gt; mesh = reader.read()</span>
+<span class="sd">    &gt;&gt;&gt; mesh.plot()</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_class_reader</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkNrrdReader</span></div>
+
+
+<div class="viewcode-block" id="PNGReader"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.PNGReader.html#pyvista.PNGReader">[ドキュメント]</a><span class="k">class</span> <span class="nc">PNGReader</span><span class="p">(</span><span class="n">BaseReader</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;PNGReader for .png files.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import pyvista</span>
+<span class="sd">    &gt;&gt;&gt; from pyvista import examples</span>
+<span class="sd">    &gt;&gt;&gt; filename = examples.download_vtk_logo(load=False)</span>
+<span class="sd">    &gt;&gt;&gt; filename.split(&quot;/&quot;)[-1]  # omit the path</span>
+<span class="sd">    &#39;vtk.png&#39;</span>
+<span class="sd">    &gt;&gt;&gt; reader = pyvista.get_reader(filename)</span>
+<span class="sd">    &gt;&gt;&gt; mesh = reader.read()</span>
+<span class="sd">    &gt;&gt;&gt; mesh.plot()</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_class_reader</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkPNGReader</span></div>
+
+
+<div class="viewcode-block" id="PNMReader"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.PNMReader.html#pyvista.PNMReader">[ドキュメント]</a><span class="k">class</span> <span class="nc">PNMReader</span><span class="p">(</span><span class="n">BaseReader</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;PNMReader for .pnm files.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import pyvista</span>
+<span class="sd">    &gt;&gt;&gt; from pyvista import examples</span>
+<span class="sd">    &gt;&gt;&gt; filename = examples.download_gourds_pnm(load=False)</span>
+<span class="sd">    &gt;&gt;&gt; filename.split(&quot;/&quot;)[-1]  # omit the path</span>
+<span class="sd">    &#39;Gourds.pnm&#39;</span>
+<span class="sd">    &gt;&gt;&gt; reader = pyvista.get_reader(filename)</span>
+<span class="sd">    &gt;&gt;&gt; mesh = reader.read()</span>
+<span class="sd">    &gt;&gt;&gt; mesh.plot()</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_class_reader</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkPNMReader</span></div>
+
+
+<div class="viewcode-block" id="SLCReader"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.SLCReader.html#pyvista.SLCReader">[ドキュメント]</a><span class="k">class</span> <span class="nc">SLCReader</span><span class="p">(</span><span class="n">BaseReader</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;SLCReader for .slc files.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import pyvista</span>
+<span class="sd">    &gt;&gt;&gt; from pyvista import examples</span>
+<span class="sd">    &gt;&gt;&gt; filename = examples.download_knee_full(load=False)</span>
+<span class="sd">    &gt;&gt;&gt; filename.split(&quot;/&quot;)[-1]  # omit the path</span>
+<span class="sd">    &#39;vw_knee.slc&#39;</span>
+<span class="sd">    &gt;&gt;&gt; reader = pyvista.get_reader(filename)</span>
+<span class="sd">    &gt;&gt;&gt; mesh = reader.read()</span>
+<span class="sd">    &gt;&gt;&gt; mesh.plot()</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_class_reader</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkSLCReader</span></div>
+
+
+<div class="viewcode-block" id="TIFFReader"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.TIFFReader.html#pyvista.TIFFReader">[ドキュメント]</a><span class="k">class</span> <span class="nc">TIFFReader</span><span class="p">(</span><span class="n">BaseReader</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;TIFFReader for .tif and .tiff files.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import pyvista</span>
+<span class="sd">    &gt;&gt;&gt; from pyvista import examples</span>
+<span class="sd">    &gt;&gt;&gt; filename = examples.download_crater_imagery(load=False)</span>
+<span class="sd">    &gt;&gt;&gt; filename.split(&quot;/&quot;)[-1]  # omit the path</span>
+<span class="sd">    &#39;BJ34_GeoTifv1-04_crater_clip.tif&#39;</span>
+<span class="sd">    &gt;&gt;&gt; reader = pyvista.get_reader(filename)</span>
+<span class="sd">    &gt;&gt;&gt; mesh = reader.read()</span>
+<span class="sd">    &gt;&gt;&gt; mesh.plot()</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_class_reader</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkTIFFReader</span></div>
+
+
+<div class="viewcode-block" id="HDRReader"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.HDRReader.html#pyvista.HDRReader">[ドキュメント]</a><span class="k">class</span> <span class="nc">HDRReader</span><span class="p">(</span><span class="n">BaseReader</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;HDRReader for .hdr files.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import pyvista</span>
+<span class="sd">    &gt;&gt;&gt; from pyvista import examples</span>
+<span class="sd">    &gt;&gt;&gt; filename = examples.download_parched_canal_4k(load=False)</span>
+<span class="sd">    &gt;&gt;&gt; filename.split(&quot;/&quot;)[-1]  # omit the path</span>
+<span class="sd">    &#39;parched_canal_4k.hdr&#39;</span>
+<span class="sd">    &gt;&gt;&gt; reader = pyvista.get_reader(filename)</span>
+<span class="sd">    &gt;&gt;&gt; mesh = reader.read()</span>
+<span class="sd">    &gt;&gt;&gt; mesh.plot()</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_class_reader</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkHDRReader</span></div>
+
+
+<div class="viewcode-block" id="PTSReader"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.PTSReader.html#pyvista.PTSReader">[ドキュメント]</a><span class="k">class</span> <span class="nc">PTSReader</span><span class="p">(</span><span class="n">BaseReader</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;PTSReader for .pts files.&quot;&quot;&quot;</span>
+
+    <span class="n">_class_reader</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkPTSReader</span></div>
+
+
+<div class="viewcode-block" id="AVSucdReader"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.AVSucdReader.html#pyvista.AVSucdReader">[ドキュメント]</a><span class="k">class</span> <span class="nc">AVSucdReader</span><span class="p">(</span><span class="n">BaseReader</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;AVSucdReader for .inp files.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import pyvista</span>
+<span class="sd">    &gt;&gt;&gt; from pyvista import examples</span>
+<span class="sd">    &gt;&gt;&gt; filename = examples.download_cells_nd(load=False)</span>
+<span class="sd">    &gt;&gt;&gt; filename.split(&quot;/&quot;)[-1]  # omit the path</span>
+<span class="sd">    &#39;cellsnd.ascii.inp&#39;</span>
+<span class="sd">    &gt;&gt;&gt; reader = pyvista.get_reader(filename)</span>
+<span class="sd">    &gt;&gt;&gt; mesh = reader.read()</span>
+<span class="sd">    &gt;&gt;&gt; mesh.plot(cpos=&quot;xy&quot;)</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_class_reader</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkAVSucdReader</span></div>
+
+
+<div class="viewcode-block" id="HDFReader"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.HDFReader.html#pyvista.HDFReader">[ドキュメント]</a><span class="k">class</span> <span class="nc">HDFReader</span><span class="p">(</span><span class="n">BaseReader</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;HDFReader for .hdf files.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import pyvista</span>
+<span class="sd">    &gt;&gt;&gt; from pyvista import examples</span>
+<span class="sd">    &gt;&gt;&gt; filename = examples.download_can(partial=True, load=False)</span>
+<span class="sd">    &gt;&gt;&gt; filename.split(&quot;/&quot;)[-1]  # omit the path</span>
+<span class="sd">    &#39;can_0.hdf&#39;</span>
+<span class="sd">    &gt;&gt;&gt; reader = pyvista.get_reader(filename)</span>
+<span class="sd">    &gt;&gt;&gt; mesh = reader.read()</span>
+<span class="sd">    &gt;&gt;&gt; mesh.plot()</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_class_reader</span> <span class="o">=</span> <span class="nb">staticmethod</span><span class="p">(</span><span class="n">_vtk</span><span class="o">.</span><span class="n">lazy_vtkHDFReader</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="GLTFReader"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.GLTFReader.html#pyvista.GLTFReader">[ドキュメント]</a><span class="k">class</span> <span class="nc">GLTFReader</span><span class="p">(</span><span class="n">BaseReader</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;GLTFeader for .gltf and .glb files.&quot;&quot;&quot;</span>
+
+    <span class="n">_class_reader</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkGLTFReader</span></div>
+
+
+<div class="viewcode-block" id="FluentReader"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.FluentReader.html#pyvista.FluentReader">[ドキュメント]</a><span class="k">class</span> <span class="nc">FluentReader</span><span class="p">(</span><span class="n">BaseReader</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;FluentReader for .cas files.&quot;&quot;&quot;</span>
+
+    <span class="n">_class_reader</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkFLUENTReader</span></div>
+
+
+<div class="viewcode-block" id="MFIXReader"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.MFIXReader.html#pyvista.MFIXReader">[ドキュメント]</a><span class="k">class</span> <span class="nc">MFIXReader</span><span class="p">(</span><span class="n">BaseReader</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;MFIXReader for .res files.&quot;&quot;&quot;</span>
+
+    <span class="n">_class_reader</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkMFIXReader</span></div>
+
+
+<div class="viewcode-block" id="SegYReader"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.SegYReader.html#pyvista.SegYReader">[ドキュメント]</a><span class="k">class</span> <span class="nc">SegYReader</span><span class="p">(</span><span class="n">BaseReader</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;SegYReader for .sgy and .segy files.&quot;&quot;&quot;</span>
+
+    <span class="n">_class_reader</span> <span class="o">=</span> <span class="nb">staticmethod</span><span class="p">(</span><span class="n">_vtk</span><span class="o">.</span><span class="n">lazy_vtkSegYReader</span><span class="p">)</span></div>
+
+
 <span class="n">CLASS_READERS</span> <span class="o">=</span> <span class="p">{</span>
     <span class="c1"># Standard dataset readers:</span>
+    <span class="s1">&#39;.bmp&#39;</span><span class="p">:</span> <span class="n">BMPReader</span><span class="p">,</span>
+    <span class="s1">&#39;.cas&#39;</span><span class="p">:</span> <span class="n">FluentReader</span><span class="p">,</span>
     <span class="s1">&#39;.case&#39;</span><span class="p">:</span> <span class="n">EnSightReader</span><span class="p">,</span>
     <span class="s1">&#39;.cgns&#39;</span><span class="p">:</span> <span class="n">CGNSReader</span><span class="p">,</span>
     <span class="s1">&#39;.dcm&#39;</span><span class="p">:</span> <span class="n">DICOMReader</span><span class="p">,</span>
+    <span class="s1">&#39;.dem&#39;</span><span class="p">:</span> <span class="n">DEMReader</span><span class="p">,</span>
     <span class="s1">&#39;.facet&#39;</span><span class="p">:</span> <span class="n">FacetReader</span><span class="p">,</span>
     <span class="s1">&#39;.foam&#39;</span><span class="p">:</span> <span class="n">OpenFOAMReader</span><span class="p">,</span>
     <span class="s1">&#39;.g&#39;</span><span class="p">:</span> <span class="n">BYUReader</span><span class="p">,</span>
+    <span class="s1">&#39;.glb&#39;</span><span class="p">:</span> <span class="n">GLTFReader</span><span class="p">,</span>
+    <span class="s1">&#39;.gltf&#39;</span><span class="p">:</span> <span class="n">GLTFReader</span><span class="p">,</span>
+    <span class="s1">&#39;.inp&#39;</span><span class="p">:</span> <span class="n">AVSucdReader</span><span class="p">,</span>
+    <span class="s1">&#39;.jpg&#39;</span><span class="p">:</span> <span class="n">JPEGReader</span><span class="p">,</span>
+    <span class="s1">&#39;.jpeg&#39;</span><span class="p">:</span> <span class="n">JPEGReader</span><span class="p">,</span>
+    <span class="s1">&#39;.hdf&#39;</span><span class="p">:</span> <span class="n">HDFReader</span><span class="p">,</span>
+    <span class="s1">&#39;.hdr&#39;</span><span class="p">:</span> <span class="n">HDRReader</span><span class="p">,</span>
+    <span class="s1">&#39;.mha&#39;</span><span class="p">:</span> <span class="n">MetaImageReader</span><span class="p">,</span>
+    <span class="s1">&#39;.mhd&#39;</span><span class="p">:</span> <span class="n">MetaImageReader</span><span class="p">,</span>
+    <span class="s1">&#39;.nhdr&#39;</span><span class="p">:</span> <span class="n">NRRDReader</span><span class="p">,</span>
+    <span class="s1">&#39;.nrrd&#39;</span><span class="p">:</span> <span class="n">NRRDReader</span><span class="p">,</span>
     <span class="s1">&#39;.obj&#39;</span><span class="p">:</span> <span class="n">OBJReader</span><span class="p">,</span>
     <span class="s1">&#39;.p3d&#39;</span><span class="p">:</span> <span class="n">Plot3DMetaReader</span><span class="p">,</span>
     <span class="s1">&#39;.ply&#39;</span><span class="p">:</span> <span class="n">PLYReader</span><span class="p">,</span>
+    <span class="s1">&#39;.png&#39;</span><span class="p">:</span> <span class="n">PNGReader</span><span class="p">,</span>
+    <span class="s1">&#39;.pnm&#39;</span><span class="p">:</span> <span class="n">PNMReader</span><span class="p">,</span>
+    <span class="s1">&#39;.pts&#39;</span><span class="p">:</span> <span class="n">PTSReader</span><span class="p">,</span>
     <span class="s1">&#39;.pvd&#39;</span><span class="p">:</span> <span class="n">PVDReader</span><span class="p">,</span>
     <span class="s1">&#39;.pvti&#39;</span><span class="p">:</span> <span class="n">XMLPImageDataReader</span><span class="p">,</span>
     <span class="s1">&#39;.pvtk&#39;</span><span class="p">:</span> <span class="n">VTKPDataSetReader</span><span class="p">,</span>
     <span class="s1">&#39;.pvtr&#39;</span><span class="p">:</span> <span class="n">XMLPRectilinearGridReader</span><span class="p">,</span>
     <span class="s1">&#39;.pvtu&#39;</span><span class="p">:</span> <span class="n">XMLPUnstructuredGridReader</span><span class="p">,</span>
+    <span class="s1">&#39;.res&#39;</span><span class="p">:</span> <span class="n">MFIXReader</span><span class="p">,</span>
+    <span class="s1">&#39;.segy&#39;</span><span class="p">:</span> <span class="n">SegYReader</span><span class="p">,</span>
+    <span class="s1">&#39;.sgy&#39;</span><span class="p">:</span> <span class="n">SegYReader</span><span class="p">,</span>
+    <span class="s1">&#39;.slc&#39;</span><span class="p">:</span> <span class="n">SLCReader</span><span class="p">,</span>
     <span class="s1">&#39;.stl&#39;</span><span class="p">:</span> <span class="n">STLReader</span><span class="p">,</span>
+    <span class="s1">&#39;.tif&#39;</span><span class="p">:</span> <span class="n">TIFFReader</span><span class="p">,</span>
+    <span class="s1">&#39;.tiff&#39;</span><span class="p">:</span> <span class="n">TIFFReader</span><span class="p">,</span>
     <span class="s1">&#39;.tri&#39;</span><span class="p">:</span> <span class="n">BinaryMarchingCubesReader</span><span class="p">,</span>
     <span class="s1">&#39;.vti&#39;</span><span class="p">:</span> <span class="n">XMLImageDataReader</span><span class="p">,</span>
     <span class="s1">&#39;.vtk&#39;</span><span class="p">:</span> <span class="n">VTKDataSetReader</span><span class="p">,</span>

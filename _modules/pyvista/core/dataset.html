@@ -848,17 +848,19 @@
             <span class="k">return</span>
         <span class="n">field</span> <span class="o">=</span> <span class="n">get_array_association</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">preference</span><span class="o">=</span><span class="n">preference</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">field</span> <span class="o">==</span> <span class="n">FieldAssociation</span><span class="o">.</span><span class="n">NONE</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Data named &quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">&quot; is a field array which cannot be active.&#39;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Data named (</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">) is a field array which cannot be active.&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_last_active_scalars_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">active_scalars_info</span><span class="o">.</span><span class="n">name</span>
         <span class="k">if</span> <span class="n">field</span> <span class="o">==</span> <span class="n">FieldAssociation</span><span class="o">.</span><span class="n">POINT</span><span class="p">:</span>
             <span class="n">ret</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">GetPointData</span><span class="p">()</span><span class="o">.</span><span class="n">SetActiveScalars</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
         <span class="k">elif</span> <span class="n">field</span> <span class="o">==</span> <span class="n">FieldAssociation</span><span class="o">.</span><span class="n">CELL</span><span class="p">:</span>
             <span class="n">ret</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">GetCellData</span><span class="p">()</span><span class="o">.</span><span class="n">SetActiveScalars</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Data field (</span><span class="si">{</span><span class="n">field</span><span class="si">}</span><span class="s1">) not usable&#39;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Data field (</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">) with type (</span><span class="si">{</span><span class="n">field</span><span class="si">}</span><span class="s1">) not usable&#39;</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">ret</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Data field (</span><span class="si">{</span><span class="n">field</span><span class="si">}</span><span class="s1">) could not be set as the active scalars&#39;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s1">&#39;Data field (</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">) with type (</span><span class="si">{</span><span class="n">field</span><span class="si">}</span><span class="s1">) could not be set as the active scalars&#39;</span>
+            <span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_active_scalars_info</span> <span class="o">=</span> <span class="n">ActiveArrayInfo</span><span class="p">(</span><span class="n">field</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span></div>
 
@@ -890,10 +892,12 @@
             <span class="k">elif</span> <span class="n">field</span> <span class="o">==</span> <span class="n">FieldAssociation</span><span class="o">.</span><span class="n">CELL</span><span class="p">:</span>
                 <span class="n">ret</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">GetCellData</span><span class="p">()</span><span class="o">.</span><span class="n">SetActiveVectors</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Data field (</span><span class="si">{</span><span class="n">field</span><span class="si">}</span><span class="s1">) not usable&#39;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Data field (</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">) with type (</span><span class="si">{</span><span class="n">field</span><span class="si">}</span><span class="s1">) not usable&#39;</span><span class="p">)</span>
 
             <span class="k">if</span> <span class="n">ret</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Data field (</span><span class="si">{</span><span class="n">field</span><span class="si">}</span><span class="s1">) could not be set as the active vectors&#39;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s1">&#39;Data field (</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">) with type (</span><span class="si">{</span><span class="n">field</span><span class="si">}</span><span class="s1">) could not be set as the active vectors&#39;</span>
+                <span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_active_vectors_info</span> <span class="o">=</span> <span class="n">ActiveArrayInfo</span><span class="p">(</span><span class="n">field</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span></div>
 
@@ -925,10 +929,12 @@
             <span class="k">elif</span> <span class="n">field</span> <span class="o">==</span> <span class="n">FieldAssociation</span><span class="o">.</span><span class="n">CELL</span><span class="p">:</span>
                 <span class="n">ret</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">GetCellData</span><span class="p">()</span><span class="o">.</span><span class="n">SetActiveTensors</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Data field (</span><span class="si">{</span><span class="n">field</span><span class="si">}</span><span class="s1">) not usable&#39;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Data field (</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">) with type (</span><span class="si">{</span><span class="n">field</span><span class="si">}</span><span class="s1">) not usable&#39;</span><span class="p">)</span>
 
             <span class="k">if</span> <span class="n">ret</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Data field (</span><span class="si">{</span><span class="n">field</span><span class="si">}</span><span class="s1">) could not be set as the active tensors&#39;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s1">&#39;Data field (</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">) with type (</span><span class="si">{</span><span class="n">field</span><span class="si">}</span><span class="s1">) could not be set as the active tensors&#39;</span>
+                <span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_active_tensors_info</span> <span class="o">=</span> <span class="n">ActiveArrayInfo</span><span class="p">(</span><span class="n">field</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span></div>
 
