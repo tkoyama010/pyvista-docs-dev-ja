@@ -1767,7 +1767,31 @@
             <span class="n">renderer</span><span class="o">.</span><span class="n">hide_axes</span><span class="p">()</span>
 
     <span class="k">def</span> <span class="nf">show_axes_all</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Show the axes orientation widget in all renderers.&quot;&quot;&quot;</span>
+        <span class="sd">&quot;&quot;&quot;Show the axes orientation widget in all renderers.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        &gt;&gt;&gt; import pyvista</span>
+<span class="sd">        &gt;&gt;&gt; from pyvista import examples</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; # create multi-window plot (1 row, 2 columns)</span>
+<span class="sd">        &gt;&gt;&gt; pl = pyvista.Plotter(shape=(1, 2))</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; # activate subplot 1 and add a mesh</span>
+<span class="sd">        &gt;&gt;&gt; pl.subplot(0, 0)</span>
+<span class="sd">        &gt;&gt;&gt; _ = pl.add_mesh(examples.load_globe())</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; # activate subplot 2 and add a mesh</span>
+<span class="sd">        &gt;&gt;&gt; pl.subplot(0, 1)</span>
+<span class="sd">        &gt;&gt;&gt; _ = pl.add_mesh(examples.load_airplane())</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; # show the axes orientation widget in all subplots</span>
+<span class="sd">        &gt;&gt;&gt; pl.show_axes_all()</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; # display the window</span>
+<span class="sd">        &gt;&gt;&gt; pl.show()</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">for</span> <span class="n">renderer</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">renderers</span><span class="p">:</span>
             <span class="n">renderer</span><span class="o">.</span><span class="n">show_axes</span><span class="p">()</span>
 

@@ -371,6 +371,23 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#running-on-wsl">
+   Running on WSL
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vtk-link-to-jupyter">
+     VTK Link to Jupyter
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pythreejs-rendering-in-jupyter">
+     PyThreeJS Rendering in Jupyter
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#running-with-sphinx-gallery">
    Sphinx-Galleryでの実行
   </a>
@@ -557,7 +574,7 @@ sleep <span class="m">3</span>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
 bash miniconda.sh -b -p miniconda
 <span class="nb">echo</span> <span class="s1">&#39;. $HOME/miniconda/etc/profile.d/conda.sh&#39;</span> &gt;&gt; ~/.bashrc <span class="o">&amp;&amp;</span> <span class="nb">source</span> ~/.bashrc
-conda create --name vtk_env <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.7
+conda create --name vtk_env <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.9
 conda activate vtk_env
 conda install nodejs  <span class="c1"># required when importing pyvista in Jupyter</span>
 pip install jupyter pyvista ipyvtklink
@@ -580,10 +597,86 @@ sleep <span class="m">3</span>
 <p>ポート転送を使用してサーバーに再接続し，Jupyterを起動します:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh -i <span class="s2">&quot;your-ssh-key&quot;</span> your-user-name@your-server-ip -L <span class="m">8888</span>:localhost:8888
 conda activate vtk_env
-jupyter notebook --NotebookApp.token<span class="o">=</span><span class="s1">&#39;&#39;</span> --no-browser --port<span class="o">=</span><span class="m">8888</span>
+jupyter lab --NotebookApp.token<span class="o">=</span><span class="s1">&#39;&#39;</span> --no-browser --port<span class="o">=</span><span class="m">8888</span>
 </pre></div>
 </div>
 <p>Webブラウザで <code class="docutils literal notranslate"><span class="pre">localhost:8888</span></code> にアクセスします．</p>
+</section>
+<section id="running-on-wsl">
+<h2>Running on WSL<a class="headerlink" href="#running-on-wsl" title="このヘッドラインへのパーマリンク">#</a></h2>
+<p>Similar to the example of the remote server above, the windows subsystem for Linux does
+not provide an x-server for visualization. Instead, the fastest way to get up and
+running on WSL is through <a class="reference external" href="https://jupyter.org/">JupyterLab</a>.</p>
+<p>First, make sure you have installed the correct environment through Miniconda and
+related packages:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
+bash miniconda.sh -b -p miniconda
+<span class="nb">echo</span> <span class="s1">&#39;. $HOME/miniconda/etc/profile.d/conda.sh&#39;</span> &gt;&gt; ~/.bashrc <span class="o">&amp;&amp;</span> <span class="nb">source</span> ~/.bashrc
+conda create --name vtk_env <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.9
+conda activate vtk_env
+conda install nodejs  <span class="c1"># required when importing pyvista in Jupyter</span>
+pip install jupyter pyvista ipyvtklink
+
+<span class="c1"># To avoid &quot;ModuleNotFoundError: No module named &#39;vtkOpenGLKitPython&#39; &quot; when importing vtk</span>
+<span class="c1"># https://stackoverflow.com/q/32389599</span>
+<span class="c1"># https://askubuntu.com/q/629692</span>
+sudo apt update <span class="o">&amp;&amp;</span> sudo apt install python-qt4 libgl1-mesa-glx
+</pre></div>
+</div>
+<section id="vtk-link-to-jupyter">
+<h3>VTK Link to Jupyter<a class="headerlink" href="#vtk-link-to-jupyter" title="このヘッドラインへのパーマリンク">#</a></h3>
+<p>There are two ways to get vtk rendering 3D objects in JupyterLab. First you
+can follow the example above for remote servers, skipping over the <code class="docutils literal notranslate"><span class="pre">ssh</span></code>
+instructions.</p>
+<p>Configure the headless display:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install xvfb
+<span class="nb">export</span> <span class="nv">DISPLAY</span><span class="o">=</span>:99.0
+<span class="nb">export</span> <span class="nv">PYVISTA_OFF_SCREEN</span><span class="o">=</span><span class="nb">true</span>
+<span class="nb">export</span> <span class="nv">PYVISTA_USE_IPYVTK</span><span class="o">=</span><span class="nb">true</span>
+Xvfb :99 -screen <span class="m">0</span> 1024x768x24 &gt; /dev/null <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">&amp;</span>
+sleep <span class="m">3</span>
+</pre></div>
+</div>
+<p>Start Jupyter:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter lab --NotebookApp.token<span class="o">=</span><span class="s1">&#39;&#39;</span> --no-browser --port<span class="o">=</span><span class="m">8888</span>
+</pre></div>
+</div>
+<p>Webブラウザで <code class="docutils literal notranslate"><span class="pre">localhost:8888</span></code> にアクセスします．</p>
+<p>Finally add this example code and your interactive visualizations
+should be displayed in JupyterLab.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="n">pl</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="n">actor</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">pyvista</span><span class="o">.</span><span class="n">Cube</span><span class="p">())</span>
+<span class="n">pl</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">actor</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">())</span>
+<span class="n">pl</span><span class="o">.</span><span class="n">set_background</span><span class="p">(</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">all_renderers</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">pl</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Your visualizations should now be showing directly in the Jupyter frontend.</p>
+</section>
+<section id="pythreejs-rendering-in-jupyter">
+<h3>PyThreeJS Rendering in Jupyter<a class="headerlink" href="#pythreejs-rendering-in-jupyter" title="このヘッドラインへのパーマリンク">#</a></h3>
+<p>The second option is to change the <code class="docutils literal notranslate"><span class="pre">PyVista</span></code> backend to use
+<code class="docutils literal notranslate"><span class="pre">pythreejs</span></code>.</p>
+<p>To do this, first launch the Jupyter server:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter lab --NotebookApp.token<span class="o">=</span><span class="s1">&#39;&#39;</span> --no-browser --port<span class="o">=</span><span class="m">8888</span>
+</pre></div>
+</div>
+<p>Webブラウザで <code class="docutils literal notranslate"><span class="pre">localhost:8888</span></code> にアクセスします．</p>
+<p>Finally change the PyVista backend to a web visualization library: <code class="docutils literal notranslate"><span class="pre">pythreejs</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">jupyter_backend</span><span class="o">=</span><span class="s1">&#39;pythreejs&#39;</span>
+<span class="n">pl</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="n">actor</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">pyvista</span><span class="o">.</span><span class="n">Cube</span><span class="p">())</span>
+<span class="n">pl</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">actor</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">())</span>
+<span class="n">pl</span><span class="o">.</span><span class="n">set_background</span><span class="p">(</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">all_renderers</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">pl</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Your visualizations should now be showing directly in the Jupyter frontend.</p>
+</section>
 </section>
 <section id="running-with-sphinx-gallery">
 <h2>Sphinx-Galleryでの実行<a class="headerlink" href="#running-with-sphinx-gallery" title="このヘッドラインへのパーマリンク">#</a></h2>
