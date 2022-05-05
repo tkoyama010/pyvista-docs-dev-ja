@@ -372,17 +372,17 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#running-on-wsl">
-   Running on WSL
+   WSLでの動作
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#vtk-link-to-jupyter">
-     VTK Link to Jupyter
+     JupyterへのVTKリンク
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#pythreejs-rendering-in-jupyter">
-     PyThreeJS Rendering in Jupyter
+     JupyterでのPyThreeJSレンダリング
     </a>
    </li>
   </ul>
@@ -603,12 +603,9 @@ jupyter lab --NotebookApp.token<span class="o">=</span><span class="s1">&#39;&#3
 <p>Webブラウザで <code class="docutils literal notranslate"><span class="pre">localhost:8888</span></code> にアクセスします．</p>
 </section>
 <section id="running-on-wsl">
-<h2>Running on WSL<a class="headerlink" href="#running-on-wsl" title="このヘッドラインへのパーマリンク">#</a></h2>
-<p>Similar to the example of the remote server above, the windows subsystem for Linux does
-not provide an x-server for visualization. Instead, the fastest way to get up and
-running on WSL is through <a class="reference external" href="https://jupyter.org/">JupyterLab</a>.</p>
-<p>First, make sure you have installed the correct environment through Miniconda and
-related packages:</p>
+<h2>WSLでの動作<a class="headerlink" href="#running-on-wsl" title="このヘッドラインへのパーマリンク">#</a></h2>
+<p>上記のリモートサーバの例と同様に，LinuxのWindowsサブシステムは可視化のためのXサーバを提供しません．その代わりに，WSLを立ち上げる最も早い方法は， <a class="reference external" href="https://jupyter.org/">JupyterLab</a> を利用することです．</p>
+<p>まず，Minicondaと関連パッケージによって，正しい環境がインストールされていることを確認します．</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
 bash miniconda.sh -b -p miniconda
 <span class="nb">echo</span> <span class="s1">&#39;. $HOME/miniconda/etc/profile.d/conda.sh&#39;</span> &gt;&gt; ~/.bashrc <span class="o">&amp;&amp;</span> <span class="nb">source</span> ~/.bashrc
@@ -624,11 +621,9 @@ sudo apt update <span class="o">&amp;&amp;</span> sudo apt install python-qt4 li
 </pre></div>
 </div>
 <section id="vtk-link-to-jupyter">
-<h3>VTK Link to Jupyter<a class="headerlink" href="#vtk-link-to-jupyter" title="このヘッドラインへのパーマリンク">#</a></h3>
-<p>There are two ways to get vtk rendering 3D objects in JupyterLab. First you
-can follow the example above for remote servers, skipping over the <code class="docutils literal notranslate"><span class="pre">ssh</span></code>
-instructions.</p>
-<p>Configure the headless display:</p>
+<h3>JupyterへのVTKリンク<a class="headerlink" href="#vtk-link-to-jupyter" title="このヘッドラインへのパーマリンク">#</a></h3>
+<p>JupyterLabでvtkレンダリングの3Dオブジェクトを取得する方法は2つあります．まず，上記のリモートサーバ用の例に従って， <code class="docutils literal notranslate"><span class="pre">ssh</span></code> の説明を省くことができます．</p>
+<p>ヘッドレスディスプレイを設定します:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install xvfb
 <span class="nb">export</span> <span class="nv">DISPLAY</span><span class="o">=</span>:99.0
 <span class="nb">export</span> <span class="nv">PYVISTA_OFF_SCREEN</span><span class="o">=</span><span class="nb">true</span>
@@ -637,13 +632,12 @@ Xvfb :99 -screen <span class="m">0</span> 1024x768x24 &gt; /dev/null <span class
 sleep <span class="m">3</span>
 </pre></div>
 </div>
-<p>Start Jupyter:</p>
+<p>Jupyterを起動します:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter lab --NotebookApp.token<span class="o">=</span><span class="s1">&#39;&#39;</span> --no-browser --port<span class="o">=</span><span class="m">8888</span>
 </pre></div>
 </div>
 <p>Webブラウザで <code class="docutils literal notranslate"><span class="pre">localhost:8888</span></code> にアクセスします．</p>
-<p>Finally add this example code and your interactive visualizations
-should be displayed in JupyterLab.</p>
+<p>最後にこのサンプルコードを追加すると，JupyterLabでインタラクティブな可視化が表示されるはずです．</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="n">pl</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
 <span class="n">actor</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">pyvista</span><span class="o">.</span><span class="n">Cube</span><span class="p">())</span>
@@ -653,18 +647,17 @@ should be displayed in JupyterLab.</p>
 <span class="n">pl</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Your visualizations should now be showing directly in the Jupyter frontend.</p>
+<p>これでJupyterフロントエンドに直接ビジュアライゼーションが表示されるようになったはずです．</p>
 </section>
 <section id="pythreejs-rendering-in-jupyter">
-<h3>PyThreeJS Rendering in Jupyter<a class="headerlink" href="#pythreejs-rendering-in-jupyter" title="このヘッドラインへのパーマリンク">#</a></h3>
-<p>The second option is to change the <code class="docutils literal notranslate"><span class="pre">PyVista</span></code> backend to use
-<code class="docutils literal notranslate"><span class="pre">pythreejs</span></code>.</p>
-<p>To do this, first launch the Jupyter server:</p>
+<h3>JupyterでのPyThreeJSレンダリング<a class="headerlink" href="#pythreejs-rendering-in-jupyter" title="このヘッドラインへのパーマリンク">#</a></h3>
+<p>2つ目のオプションは，<code class="docutils literal notranslate"><span class="pre">PyVista</span></code> のバックエンドを <code class="docutils literal notranslate"><span class="pre">pythreejs</span></code> に変更することです．</p>
+<p>そのために，まずJupyterサーバーを立ち上げます:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter lab --NotebookApp.token<span class="o">=</span><span class="s1">&#39;&#39;</span> --no-browser --port<span class="o">=</span><span class="m">8888</span>
 </pre></div>
 </div>
 <p>Webブラウザで <code class="docutils literal notranslate"><span class="pre">localhost:8888</span></code> にアクセスします．</p>
-<p>Finally change the PyVista backend to a web visualization library: <code class="docutils literal notranslate"><span class="pre">pythreejs</span></code>.</p>
+<p>最後にPyVistaのバックエンドをWeb可視化ライブラリに変更します: <code class="docutils literal notranslate"><span class="pre">pythreejs</span></code> ．</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">jupyter_backend</span><span class="o">=</span><span class="s1">&#39;pythreejs&#39;</span>
 <span class="n">pl</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
@@ -675,7 +668,7 @@ should be displayed in JupyterLab.</p>
 <span class="n">pl</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Your visualizations should now be showing directly in the Jupyter frontend.</p>
+<p>これでJupyterフロントエンドに直接ビジュアライゼーションが表示されるようになったはずです．</p>
 </section>
 </section>
 <section id="running-with-sphinx-gallery">
