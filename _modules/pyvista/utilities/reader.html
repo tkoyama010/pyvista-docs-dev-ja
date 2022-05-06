@@ -967,6 +967,35 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">UpdateTimeStep</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">time_point_value</span><span class="p">(</span><span class="n">time_point</span><span class="p">))</span></div>
 
     <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">decompose_polyhedra</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Whether polyhedra are to be decomposed when read.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        bool</span>
+<span class="sd">            If ``True``, decompose polyhedra into tetrahedra and pyramids.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        &gt;&gt;&gt; import pyvista</span>
+<span class="sd">        &gt;&gt;&gt; from pyvista import examples</span>
+<span class="sd">        &gt;&gt;&gt; filename = examples.download_cavity(load=False)</span>
+<span class="sd">        &gt;&gt;&gt; reader = pyvista.OpenFOAMReader(filename)</span>
+<span class="sd">        &gt;&gt;&gt; reader.decompose_polyhedra = False</span>
+<span class="sd">        &gt;&gt;&gt; reader.decompose_polyhedra</span>
+<span class="sd">        False</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">GetDecomposePolyhedra</span><span class="p">())</span>
+
+    <span class="nd">@decompose_polyhedra</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">decompose_polyhedra</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">DecomposePolyhedraOn</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">DecomposePolyhedraOff</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">cell_to_point_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Whether cell data is translated to point data when read.</span>
 

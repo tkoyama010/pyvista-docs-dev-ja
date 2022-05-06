@@ -106,6 +106,9 @@
       OpenFOAMReader.cell_to_point_creation
       
       
+      OpenFOAMReader.decompose_polyhedra
+      
+      
       OpenFOAMReader.number_cell_arrays
       
       

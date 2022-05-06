@@ -105,6 +105,9 @@
       Plotter.add_points
       
       
+      Plotter.add_ruler
+      
+      
       Plotter.add_scalar_bar
       
       

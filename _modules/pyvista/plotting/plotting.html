@@ -4858,6 +4858,147 @@
                 <span class="n">places</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">renderers</span><span class="o">.</span><span class="n">index_to_loc</span><span class="p">(</span><span class="n">index</span><span class="p">)))</span>
         <span class="k">return</span> <span class="n">places</span>
 
+    <span class="k">def</span> <span class="nf">add_ruler</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">pointa</span><span class="p">,</span>
+        <span class="n">pointb</span><span class="p">,</span>
+        <span class="n">flip_range</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">number_labels</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+        <span class="n">show_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">font_size_factor</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span>
+        <span class="n">label_size_factor</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
+        <span class="n">label_format</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Distance&quot;</span><span class="p">,</span>
+        <span class="n">number_minor_ticks</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">tick_length</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+        <span class="n">minor_tick_length</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+        <span class="n">show_ticks</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">tick_label_offset</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Add ruler.</span>
+
+<span class="sd">        The ruler is a 2D object that is not occluded by 3D objects.</span>
+<span class="sd">        To avoid issues with perspective, it is recommended to use</span>
+<span class="sd">        parallel projection, i.e. :func:`Plotter.enable_parallel_projection`,</span>
+<span class="sd">        and place the ruler orthogonal to the viewing direction.</span>
+
+<span class="sd">        The title and labels are placed to the right of ruler moving from</span>
+<span class="sd">        ``pointa`` to ``pointb``. Use ``flip_range`` to flip the ``0`` location,</span>
+<span class="sd">        if needed.</span>
+
+<span class="sd">        Since the ruler is placed in an overlay on the viewing scene, the camera</span>
+<span class="sd">        does not automatically reset to include the ruler in the view.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        pointa : Sequence</span>
+<span class="sd">            Starting point for ruler.</span>
+
+<span class="sd">        pointb : Sequence</span>
+<span class="sd">            Ending point for ruler.</span>
+
+<span class="sd">        flip_range : bool</span>
+<span class="sd">            If ``True``, the distance range goes from ``pointb`` to ``pointa``.</span>
+
+<span class="sd">        number_labels : int</span>
+<span class="sd">            Number of labels to place on ruler.</span>
+
+<span class="sd">        show_labels : bool, optional</span>
+<span class="sd">            Whether to show labels.</span>
+
+<span class="sd">        font_size_factor : float</span>
+<span class="sd">            Factor to scale font size overall.</span>
+
+<span class="sd">        label_size_factor : float</span>
+<span class="sd">            Factor to scale label size relative to title size.</span>
+
+<span class="sd">        label_format : str, optional</span>
+<span class="sd">            A printf style format for labels, e.g. &#39;%E&#39;.</span>
+
+<span class="sd">        title : str, optional</span>
+<span class="sd">            The title to display.</span>
+
+<span class="sd">        number_minor_ticks : int, optional</span>
+<span class="sd">            Number of minor ticks between major ticks.</span>
+
+<span class="sd">        tick_length : int</span>
+<span class="sd">            Length of ticks in pixels.</span>
+
+<span class="sd">        minor_tick_length : int</span>
+<span class="sd">            Length of minor ticks in pixels.</span>
+
+<span class="sd">        show_ticks : bool, optional</span>
+<span class="sd">            Whether to show the ticks.</span>
+
+<span class="sd">        tick_label_offset : int</span>
+<span class="sd">            Offset between tick and label in pixels.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        vtk.vtkActor</span>
+<span class="sd">            VTK actor of the ruler.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        &gt;&gt;&gt; import pyvista</span>
+<span class="sd">        &gt;&gt;&gt; cone = pyvista.Cone(height=2.0, radius=0.5)</span>
+<span class="sd">        &gt;&gt;&gt; plotter = pyvista.Plotter()</span>
+<span class="sd">        &gt;&gt;&gt; _ = plotter.add_mesh(cone)</span>
+
+<span class="sd">        Measure x direction of cone and place ruler slightly below.</span>
+
+<span class="sd">        &gt;&gt;&gt; _ = plotter.add_ruler(</span>
+<span class="sd">        ...     pointa=[cone.bounds[0], cone.bounds[2] - 0.1, 0.0],</span>
+<span class="sd">        ...     pointb=[cone.bounds[1], cone.bounds[2] - 0.1, 0.0],</span>
+<span class="sd">        ...     title=&quot;X Distance&quot;</span>
+<span class="sd">        ... )</span>
+
+<span class="sd">        Measure y direction of cone and place ruler slightly to left.</span>
+<span class="sd">        The title and labels are placed to the right of the ruler when</span>
+<span class="sd">        traveling from ``pointa`` to ``pointb``.</span>
+
+<span class="sd">        &gt;&gt;&gt; _ = plotter.add_ruler(</span>
+<span class="sd">        ...     pointa=[cone.bounds[0] - 0.1, cone.bounds[3], 0.0],</span>
+<span class="sd">        ...     pointb=[cone.bounds[0] - 0.1, cone.bounds[2], 0.0],</span>
+<span class="sd">        ...     flip_range=True,</span>
+<span class="sd">        ...     title=&quot;Y Distance&quot;</span>
+<span class="sd">        ... )</span>
+<span class="sd">        &gt;&gt;&gt; plotter.enable_parallel_projection()</span>
+<span class="sd">        &gt;&gt;&gt; plotter.view_xy()</span>
+<span class="sd">        &gt;&gt;&gt; plotter.show()</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">ruler</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkAxisActor2D</span><span class="p">()</span>
+
+        <span class="n">ruler</span><span class="o">.</span><span class="n">GetPositionCoordinate</span><span class="p">()</span><span class="o">.</span><span class="n">SetCoordinateSystemToWorld</span><span class="p">()</span>
+        <span class="n">ruler</span><span class="o">.</span><span class="n">GetPosition2Coordinate</span><span class="p">()</span><span class="o">.</span><span class="n">SetCoordinateSystemToWorld</span><span class="p">()</span>
+        <span class="n">ruler</span><span class="o">.</span><span class="n">GetPositionCoordinate</span><span class="p">()</span><span class="o">.</span><span class="n">SetReferenceCoordinate</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+        <span class="n">ruler</span><span class="o">.</span><span class="n">GetPositionCoordinate</span><span class="p">()</span><span class="o">.</span><span class="n">SetValue</span><span class="p">(</span><span class="n">pointa</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pointa</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">pointa</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+        <span class="n">ruler</span><span class="o">.</span><span class="n">GetPosition2Coordinate</span><span class="p">()</span><span class="o">.</span><span class="n">SetValue</span><span class="p">(</span><span class="n">pointb</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pointb</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">pointb</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+
+        <span class="n">distance</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">pointa</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">pointb</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">flip_range</span><span class="p">:</span>
+            <span class="n">ruler</span><span class="o">.</span><span class="n">SetRange</span><span class="p">(</span><span class="n">distance</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ruler</span><span class="o">.</span><span class="n">SetRange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">distance</span><span class="p">)</span>
+
+        <span class="n">ruler</span><span class="o">.</span><span class="n">SetTitle</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+        <span class="n">ruler</span><span class="o">.</span><span class="n">SetFontFactor</span><span class="p">(</span><span class="n">font_size_factor</span><span class="p">)</span>
+        <span class="n">ruler</span><span class="o">.</span><span class="n">SetLabelFactor</span><span class="p">(</span><span class="n">label_size_factor</span><span class="p">)</span>
+        <span class="n">ruler</span><span class="o">.</span><span class="n">SetNumberOfLabels</span><span class="p">(</span><span class="n">number_labels</span><span class="p">)</span>
+        <span class="n">ruler</span><span class="o">.</span><span class="n">SetLabelVisibility</span><span class="p">(</span><span class="n">show_labels</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">label_format</span><span class="p">:</span>
+            <span class="n">ruler</span><span class="o">.</span><span class="n">SetLabelFormat</span><span class="p">(</span><span class="n">label_format</span><span class="p">)</span>
+
+        <span class="n">ruler</span><span class="o">.</span><span class="n">SetNumberOfMinorTicks</span><span class="p">(</span><span class="n">number_minor_ticks</span><span class="p">)</span>
+        <span class="n">ruler</span><span class="o">.</span><span class="n">SetTickVisibility</span><span class="p">(</span><span class="n">show_ticks</span><span class="p">)</span>
+        <span class="n">ruler</span><span class="o">.</span><span class="n">SetTickLength</span><span class="p">(</span><span class="n">tick_length</span><span class="p">)</span>
+        <span class="n">ruler</span><span class="o">.</span><span class="n">SetMinorTickLength</span><span class="p">(</span><span class="n">minor_tick_length</span><span class="p">)</span>
+        <span class="n">ruler</span><span class="o">.</span><span class="n">SetTickOffset</span><span class="p">(</span><span class="n">tick_label_offset</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_actor</span><span class="p">(</span><span class="n">ruler</span><span class="p">,</span> <span class="n">reset_camera</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">pickable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">ruler</span>
+
 
 <div class="viewcode-block" id="Plotter"><a class="viewcode-back" href="../../../api/plotting/_autosummary/pyvista.Plotter.html#pyvista.Plotter">[ドキュメント]</a><span class="k">class</span> <span class="nc">Plotter</span><span class="p">(</span><span class="n">BasePlotter</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Plotting object to display vtk meshes or numpy arrays.</span>
