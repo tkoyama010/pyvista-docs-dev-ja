@@ -398,8 +398,10 @@
         <span class="n">col_weights</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
         <span class="n">lighting</span><span class="o">=</span><span class="s1">&#39;light kit&#39;</span><span class="p">,</span>
         <span class="n">theme</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
     <span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Initialize base plotter.&quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>  <span class="c1"># cooperative multiple inheritance</span>
         <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;BasePlotter init start&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_theme</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">themes</span><span class="o">.</span><span class="n">DefaultTheme</span><span class="p">()</span>
         <span class="k">if</span> <span class="n">theme</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>

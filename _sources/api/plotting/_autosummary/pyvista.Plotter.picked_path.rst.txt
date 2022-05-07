@@ -1,6 +1,0 @@
-picked\_path
-============
-
-.. currentmodule:: pyvista
-
-.. autoattribute:: Plotter.picked_path

@@ -562,19 +562,7 @@
       Plotter.pickable_actors
       
       
-      Plotter.picked_cells
-      
-      
-      Plotter.picked_geodesic
-      
-      
-      Plotter.picked_horizon
-      
-      
       Plotter.picked_mesh
-      
-      
-      Plotter.picked_path
       
       
       Plotter.picked_point

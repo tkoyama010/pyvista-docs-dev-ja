@@ -203,8 +203,6 @@
   <h1>pyvista.plotting.widgets のソースコード</h1><div class="highlight"><pre>
 <span></span><span class="sd">&quot;&quot;&quot;Module dedicated to widgets.&quot;&quot;&quot;</span>
 
-<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
-
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="kn">import</span> <span class="nn">pyvista</span>
@@ -227,7 +225,23 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="n">_camera_widgets</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">object</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Initialize widget helper.&quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">camera_widgets</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">box_widgets</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">box_clipped_meshes</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">plane_widgets</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">plane_clipped_meshes</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">plane_sliced_meshes</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">line_widgets</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">slider_widgets</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">threshold_meshes</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">isovalue_meshes</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spline_widgets</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spline_sliced_meshes</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sphere_widgets</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">button_widgets</span> <span class="o">=</span> <span class="p">[]</span>
 
 <div class="viewcode-block" id="WidgetHelper.add_box_widget"><a class="viewcode-back" href="../../../api/plotting/_autosummary/pyvista.WidgetHelper.add_box_widget.html#pyvista.WidgetHelper.add_box_widget">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">add_box_widget</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
@@ -303,9 +317,6 @@
 <span class="sd">        Download the interactive example at :ref:`box_widget_example`.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;box_widgets&quot;</span><span class="p">):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">box_widgets</span> <span class="o">=</span> <span class="p">[]</span>
-
         <span class="k">if</span> <span class="n">bounds</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">bounds</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bounds</span>
 
@@ -342,11 +353,8 @@
         <span class="k">return</span> <span class="n">box_widget</span></div>
 
 <div class="viewcode-block" id="WidgetHelper.clear_box_widgets"><a class="viewcode-back" href="../../../api/plotting/_autosummary/pyvista.WidgetHelper.clear_box_widgets.html#pyvista.WidgetHelper.clear_box_widgets">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">clear_box_widgets</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Disable all of the box widgets.&quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;box_widgets&#39;</span><span class="p">):</span>
-            <span class="k">for</span> <span class="n">widget</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">box_widgets</span><span class="p">:</span>
-                <span class="n">widget</span><span class="o">.</span><span class="n">Off</span><span class="p">()</span>
-            <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">box_widgets</span></div>
+        <span class="sd">&quot;&quot;&quot;Remove all of the box widgets.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">box_widgets</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="WidgetHelper.add_mesh_clip_box"><a class="viewcode-back" href="../../../api/plotting/_autosummary/pyvista.WidgetHelper.add_mesh_clip_box.html#pyvista.WidgetHelper.add_mesh_clip_box">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">add_mesh_clip_box</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
@@ -429,8 +437,6 @@
         <span class="n">alg</span><span class="o">.</span><span class="n">SetInputDataObject</span><span class="p">(</span><span class="n">mesh</span><span class="p">)</span>
         <span class="n">alg</span><span class="o">.</span><span class="n">GenerateClippedOutputOn</span><span class="p">()</span>
 
-        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;box_clipped_meshes&quot;</span><span class="p">):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">box_clipped_meshes</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">box_clipped_mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">alg</span><span class="o">.</span><span class="n">GetOutput</span><span class="p">(</span><span class="n">port</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">box_clipped_meshes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">box_clipped_mesh</span><span class="p">)</span>
 
@@ -549,9 +555,6 @@
 <span class="sd">            Plane widget.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;plane_widgets&quot;</span><span class="p">):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">plane_widgets</span> <span class="o">=</span> <span class="p">[]</span>
-
         <span class="k">if</span> <span class="n">origin</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">origin</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">center</span>
         <span class="k">if</span> <span class="n">bounds</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
@@ -660,11 +663,8 @@
         <span class="k">return</span> <span class="n">plane_widget</span></div>
 
 <div class="viewcode-block" id="WidgetHelper.clear_plane_widgets"><a class="viewcode-back" href="../../../api/plotting/_autosummary/pyvista.WidgetHelper.clear_plane_widgets.html#pyvista.WidgetHelper.clear_plane_widgets">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">clear_plane_widgets</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Disable all of the plane widgets.&quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;plane_widgets&#39;</span><span class="p">):</span>
-            <span class="k">for</span> <span class="n">widget</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">plane_widgets</span><span class="p">:</span>
-                <span class="n">widget</span><span class="o">.</span><span class="n">Off</span><span class="p">()</span>
-            <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">plane_widgets</span></div>
+        <span class="sd">&quot;&quot;&quot;Remove all of the plane widgets.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">plane_widgets</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="WidgetHelper.add_mesh_clip_plane"><a class="viewcode-back" href="../../../api/plotting/_autosummary/pyvista.WidgetHelper.add_mesh_clip_plane.html#pyvista.WidgetHelper.add_mesh_clip_plane">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">add_mesh_clip_plane</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
@@ -773,8 +773,6 @@
         <span class="n">alg</span><span class="o">.</span><span class="n">SetValue</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
         <span class="n">alg</span><span class="o">.</span><span class="n">SetInsideOut</span><span class="p">(</span><span class="n">invert</span><span class="p">)</span>  <span class="c1"># invert the clip if needed</span>
 
-        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;plane_clipped_meshes&quot;</span><span class="p">):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">plane_clipped_meshes</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">plane_clipped_mesh</span> <span class="o">=</span> <span class="n">_get_output</span><span class="p">(</span><span class="n">alg</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">plane_clipped_meshes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">plane_clipped_mesh</span><span class="p">)</span>
 
@@ -891,8 +889,6 @@
         <span class="k">if</span> <span class="ow">not</span> <span class="n">generate_triangles</span><span class="p">:</span>
             <span class="n">alg</span><span class="o">.</span><span class="n">GenerateTrianglesOff</span><span class="p">()</span>
 
-        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;plane_sliced_meshes&quot;</span><span class="p">):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">plane_sliced_meshes</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">plane_sliced_mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">alg</span><span class="o">.</span><span class="n">GetOutput</span><span class="p">())</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">plane_sliced_meshes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">plane_sliced_mesh</span><span class="p">)</span>
 
@@ -1029,9 +1025,6 @@
 <span class="sd">            Created line widget.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;line_widgets&quot;</span><span class="p">):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">line_widgets</span> <span class="o">=</span> <span class="p">[]</span>
-
         <span class="k">if</span> <span class="n">bounds</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">bounds</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bounds</span>
 
@@ -1066,11 +1059,8 @@
         <span class="k">return</span> <span class="n">line_widget</span></div>
 
 <div class="viewcode-block" id="WidgetHelper.clear_line_widgets"><a class="viewcode-back" href="../../../api/plotting/_autosummary/pyvista.WidgetHelper.clear_line_widgets.html#pyvista.WidgetHelper.clear_line_widgets">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">clear_line_widgets</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Disable all of the line widgets.&quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;line_widgets&#39;</span><span class="p">):</span>
-            <span class="k">for</span> <span class="n">widget</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">line_widgets</span><span class="p">:</span>
-                <span class="n">widget</span><span class="o">.</span><span class="n">Off</span><span class="p">()</span>
-            <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">line_widgets</span></div>
+        <span class="sd">&quot;&quot;&quot;Remove all of the line widgets.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">line_widgets</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="WidgetHelper.add_text_slider_widget"><a class="viewcode-back" href="../../../api/plotting/_autosummary/pyvista.WidgetHelper.add_text_slider_widget.html#pyvista.WidgetHelper.add_text_slider_widget">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">add_text_slider_widget</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
@@ -1290,9 +1280,6 @@
 <span class="sd">        ... )</span>
 <span class="sd">        &gt;&gt;&gt; pl.show()</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;slider_widgets&quot;</span><span class="p">):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">slider_widgets</span> <span class="o">=</span> <span class="p">[]</span>
-
         <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">value</span> <span class="o">=</span> <span class="p">((</span><span class="n">rng</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">rng</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">rng</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
@@ -1380,11 +1367,8 @@
         <span class="k">return</span> <span class="n">slider_widget</span></div>
 
 <div class="viewcode-block" id="WidgetHelper.clear_slider_widgets"><a class="viewcode-back" href="../../../api/plotting/_autosummary/pyvista.WidgetHelper.clear_slider_widgets.html#pyvista.WidgetHelper.clear_slider_widgets">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">clear_slider_widgets</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Disable all of the slider widgets.&quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;slider_widgets&#39;</span><span class="p">):</span>
-            <span class="k">for</span> <span class="n">widget</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">slider_widgets</span><span class="p">:</span>
-                <span class="n">widget</span><span class="o">.</span><span class="n">Off</span><span class="p">()</span>
-            <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">slider_widgets</span></div>
+        <span class="sd">&quot;&quot;&quot;Remove all of the slider widgets.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">slider_widgets</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="WidgetHelper.add_mesh_threshold"><a class="viewcode-back" href="../../../api/plotting/_autosummary/pyvista.WidgetHelper.add_mesh_threshold.html#pyvista.WidgetHelper.add_mesh_threshold">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">add_mesh_threshold</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
@@ -1486,8 +1470,6 @@
         <span class="p">)</span>  <span class="c1"># args: (idx, port, connection, field, name)</span>
         <span class="n">alg</span><span class="o">.</span><span class="n">SetUseContinuousCellRange</span><span class="p">(</span><span class="n">continuous</span><span class="p">)</span>
 
-        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;threshold_meshes&quot;</span><span class="p">):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">threshold_meshes</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">threshold_mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">alg</span><span class="o">.</span><span class="n">GetOutput</span><span class="p">())</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">threshold_meshes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">threshold_mesh</span><span class="p">)</span>
 
@@ -1627,8 +1609,6 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="o">.</span><span class="n">outline</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;outline&quot;</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.0</span><span class="p">)</span>
 
-        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;isovalue_meshes&quot;</span><span class="p">):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">isovalue_meshes</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">isovalue_mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">alg</span><span class="o">.</span><span class="n">GetOutput</span><span class="p">())</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">isovalue_meshes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">isovalue_mesh</span><span class="p">)</span>
 
@@ -1731,9 +1711,6 @@
         <span class="k">if</span> <span class="n">initial_points</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">initial_points</span><span class="p">)</span> <span class="o">!=</span> <span class="n">n_handles</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;`initial_points` must be length `n_handles`.&quot;</span><span class="p">)</span>
 
-        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;spline_widgets&quot;</span><span class="p">):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">spline_widgets</span> <span class="o">=</span> <span class="p">[]</span>
-
         <span class="n">color</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="n">default_color</span><span class="o">=</span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">color</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">bounds</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
@@ -1778,11 +1755,8 @@
         <span class="k">return</span> <span class="n">spline_widget</span></div>
 
 <div class="viewcode-block" id="WidgetHelper.clear_spline_widgets"><a class="viewcode-back" href="../../../api/plotting/_autosummary/pyvista.WidgetHelper.clear_spline_widgets.html#pyvista.WidgetHelper.clear_spline_widgets">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">clear_spline_widgets</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Disable all of the spline widgets.&quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;spline_widgets&#39;</span><span class="p">):</span>
-            <span class="k">for</span> <span class="n">widget</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">spline_widgets</span><span class="p">:</span>
-                <span class="n">widget</span><span class="o">.</span><span class="n">Off</span><span class="p">()</span>
-            <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">spline_widgets</span></div>
+        <span class="sd">&quot;&quot;&quot;Remove all of the spline widgets.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spline_widgets</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="WidgetHelper.add_mesh_slice_spline"><a class="viewcode-back" href="../../../api/plotting/_autosummary/pyvista.WidgetHelper.add_mesh_slice_spline.html#pyvista.WidgetHelper.add_mesh_slice_spline">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">add_mesh_slice_spline</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
@@ -1873,8 +1847,6 @@
         <span class="k">if</span> <span class="ow">not</span> <span class="n">generate_triangles</span><span class="p">:</span>
             <span class="n">alg</span><span class="o">.</span><span class="n">GenerateTrianglesOff</span><span class="p">()</span>
 
-        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;spline_sliced_meshes&quot;</span><span class="p">):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">spline_sliced_meshes</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">spline_sliced_mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">alg</span><span class="o">.</span><span class="n">GetOutput</span><span class="p">())</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">spline_sliced_meshes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">spline_sliced_mesh</span><span class="p">)</span>
 
@@ -1980,9 +1952,6 @@
 <span class="sd">            The sphere widget.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;sphere_widgets&quot;</span><span class="p">):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">sphere_widgets</span> <span class="o">=</span> <span class="p">[]</span>
-
         <span class="k">if</span> <span class="n">color</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">color</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">color</span><span class="o">.</span><span class="n">float_rgb</span>
         <span class="n">selected_color</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="n">selected_color</span><span class="p">)</span>
@@ -2049,11 +2018,8 @@
         <span class="k">return</span> <span class="n">sphere_widget</span></div>
 
 <div class="viewcode-block" id="WidgetHelper.clear_sphere_widgets"><a class="viewcode-back" href="../../../api/plotting/_autosummary/pyvista.WidgetHelper.clear_sphere_widgets.html#pyvista.WidgetHelper.clear_sphere_widgets">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">clear_sphere_widgets</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Disable all of the sphere widgets.&quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;sphere_widgets&#39;</span><span class="p">):</span>
-            <span class="k">for</span> <span class="n">widget</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">sphere_widgets</span><span class="p">:</span>
-                <span class="n">widget</span><span class="o">.</span><span class="n">Off</span><span class="p">()</span>
-            <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">sphere_widgets</span></div>
+        <span class="sd">&quot;&quot;&quot;Remove all of the sphere widgets.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sphere_widgets</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="WidgetHelper.add_checkbox_button_widget"><a class="viewcode-back" href="../../../api/plotting/_autosummary/pyvista.WidgetHelper.add_checkbox_button_widget.html#pyvista.WidgetHelper.add_checkbox_button_widget">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">add_checkbox_button_widget</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
@@ -2120,8 +2086,6 @@
 <span class="sd">        Download the interactive example at :ref:`checkbox_widget_example`.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;button_widgets&quot;</span><span class="p">):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">button_widgets</span> <span class="o">=</span> <span class="p">[]</span>
 
         <span class="k">def</span> <span class="nf">create_button</span><span class="p">(</span><span class="n">color1</span><span class="p">,</span> <span class="n">color2</span><span class="p">,</span> <span class="n">color3</span><span class="p">,</span> <span class="n">dims</span><span class="o">=</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="mi">1</span><span class="p">)):</span>
             <span class="n">color1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">Color</span><span class="p">(</span><span class="n">color1</span><span class="p">)</span><span class="o">.</span><span class="n">int_rgb</span><span class="p">)</span>
@@ -2201,21 +2165,16 @@
         <span class="n">widget</span><span class="o">.</span><span class="n">SetAnimate</span><span class="p">(</span><span class="n">animate</span><span class="p">)</span>
         <span class="n">widget</span><span class="o">.</span><span class="n">SetAnimatorTotalFrames</span><span class="p">(</span><span class="n">n_frames</span><span class="p">)</span>
         <span class="n">widget</span><span class="o">.</span><span class="n">On</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_camera_widgets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">widget</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">camera_widgets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">widget</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">widget</span></div>
 
 <div class="viewcode-block" id="WidgetHelper.clear_camera_widgets"><a class="viewcode-back" href="../../../api/plotting/_autosummary/pyvista.WidgetHelper.clear_camera_widgets.html#pyvista.WidgetHelper.clear_camera_widgets">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">clear_camera_widgets</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Disable all of the camera widgets.&quot;&quot;&quot;</span>
-        <span class="k">for</span> <span class="n">widget</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_camera_widgets</span><span class="p">:</span>
-            <span class="n">widget</span><span class="o">.</span><span class="n">Off</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_camera_widgets</span> <span class="o">=</span> <span class="p">[]</span></div>
+        <span class="sd">&quot;&quot;&quot;Remove all of the camera widgets.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">camera_widgets</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="WidgetHelper.clear_button_widgets"><a class="viewcode-back" href="../../../api/plotting/_autosummary/pyvista.WidgetHelper.clear_button_widgets.html#pyvista.WidgetHelper.clear_button_widgets">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">clear_button_widgets</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Disable all of the button widgets.&quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;button_widgets&#39;</span><span class="p">):</span>
-            <span class="k">for</span> <span class="n">widget</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">button_widgets</span><span class="p">:</span>
-                <span class="n">widget</span><span class="o">.</span><span class="n">Off</span><span class="p">()</span>
-            <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">button_widgets</span></div>
+        <span class="sd">&quot;&quot;&quot;Remove all of the button widgets.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">button_widgets</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="WidgetHelper.close"><a class="viewcode-back" href="../../../api/plotting/_autosummary/pyvista.WidgetHelper.close.html#pyvista.WidgetHelper.close">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Close the widgets.&quot;&quot;&quot;</span>

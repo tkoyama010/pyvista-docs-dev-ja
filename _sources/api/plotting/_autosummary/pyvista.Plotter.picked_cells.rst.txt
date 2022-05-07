@@ -1,6 +1,0 @@
-picked\_cells
-=============
-
-.. currentmodule:: pyvista
-
-.. autoattribute:: Plotter.picked_cells
