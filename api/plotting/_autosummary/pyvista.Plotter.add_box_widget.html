@@ -1263,21 +1263,21 @@
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>
-<dt><strong>callback</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#callable" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">callable()</span></code></a></span></dt><dd><p>ボックスが更新されるたびに呼び出されるメソッドです．これには2つのオプションがあります:1つの引数， <code class="docutils literal notranslate"><span class="pre">PolyData</span></code> ボックス (デフォルト) を取るか， <code class="docutils literal notranslate"><span class="pre">use_planes=True</span></code> の場合， <code class="docutils literal notranslate"><span class="pre">vtkPlanes</span></code> オブジェクトとしてプレーンコレクションの1つの引数を取ります．</p>
+<dt><strong>callback</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#callable" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">callable()</span></code></a></span></dt><dd><p>ボックスが更新されるたびに呼び出されるメソッドです．これには2つのオプションがあります:1つの引数， <code class="docutils literal notranslate"><span class="pre">PolyData</span></code> ボックス (デフォルト) を取るか， <code class="docutils literal notranslate"><span class="pre">use_planes=True</span></code> の場合， <code class="docutils literal notranslate"><span class="pre">vtkPlanes</span></code> オブジェクトとしてプレーンコレクションの1つの引数を取ります．</p>
 </dd>
-<dt><strong>bounds</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a>(<a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>)</span></dt><dd><p>ウィジェットが配置されるバウンディングボックスの長さ6のタプル．</p>
+<dt><strong>bounds</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a>(<a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>)</span></dt><dd><p>ウィジェットが配置されるバウンディングボックスの長さ6のタプル．</p>
 </dd>
-<dt><strong>factor</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>配置時に境界を拡張するための膨張係数．</p>
+<dt><strong>factor</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>配置時に境界を拡張するための膨張係数．</p>
 </dd>
-<dt><strong>rotation_enabled</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">False</span></code> の場合，ボックスウィジェットは回転できず，直交軸に厳密に直交します．</p>
+<dt><strong>rotation_enabled</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">False</span></code> の場合，ボックスウィジェットは回転できず，直交軸に厳密に直交します．</p>
 </dd>
 <dt><strong>color</strong><span class="classifier"><a class="reference internal" href="../../utilities/_autosummary/pyvista.color_like.html#pyvista.color_like" title="pyvista.color_like"><code class="xref py py-obj docutils literal notranslate"><span class="pre">color_like</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>文字列，RGB配列，または16進数の色文字列のいずれかです．デフォルトは <a class="reference internal" href="pyvista.themes._Font.color.html#pyvista.themes._Font.color" title="pyvista.themes._Font.color"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pyvista.global_theme.font.color</span></code></a> です．</p>
 </dd>
-<dt><strong>use_planes</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>コールバックに渡される引数をボックスを構成する平面に変更します．</p>
+<dt><strong>use_planes</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>コールバックに渡される引数をボックスを構成する平面に変更します．</p>
 </dd>
-<dt><strong>outline_translation</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">False</span></code> の場合，ボックスウィジェットは変換できず，与えられた境界に厳密に配置されます．</p>
+<dt><strong>outline_translation</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">False</span></code> の場合，ボックスウィジェットは変換できず，与えられた境界に厳密に配置されます．</p>
 </dd>
-<dt><strong>pass_widget</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，ウィジェットはコールバックの最後の引数として渡されます．</p>
+<dt><strong>pass_widget</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> の場合，ウィジェットはコールバックの最後の引数として渡されます．</p>
 </dd>
 </dl>
 </dd>
@@ -1289,19 +1289,18 @@
 </dd>
 </dl>
 <p class="rubric">例</p>
-<p>次の例では，ウィジェットの静止画像を生成しています．</p>
+<p>Shows an interactive clip box.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_nefertiti</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">add_mesh_clip_box</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">ParametricConicSpiral</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh_clip_box</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 <figure class="align-default">
 <img alt="../../../_images/pyvista-Plotter-add_box_widget-1_00_00.png" src="../../../_images/pyvista-Plotter-add_box_widget-1_00_00.png" />
 </figure>
-<p>インタラクティブなサンプルを <a class="reference internal" href="../../../examples/03-widgets/box-widget.html#box-widget-example"><span class="std std-ref">ボックスウィジェット</span></a> でダウンロードできます．</p>
+<p>For a full example see <a class="reference internal" href="../../../examples/03-widgets/box-widget.html#box-widget-example"><span class="std std-ref">ボックスウィジェット</span></a>.</p>
 </dd></dl>
 
 </section>

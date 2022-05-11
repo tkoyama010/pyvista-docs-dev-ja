@@ -244,24 +244,58 @@
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#python-application-app-py">
-   Pythonアプリケーション
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     app.py
-    </span>
-   </code>
+  <a class="reference internal nav-link" href="#dynamic-example">
+   Dynamic Example
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#python-application-app-py">
+     Pythonアプリケーション
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       app.py
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ajax-template-index-html">
+     Ajaxテンプレート
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       index.html
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ajax-template-index-html">
-   Ajaxテンプレート
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     index.html
-    </span>
-   </code>
+  <a class="reference internal nav-link" href="#static-example">
+   Static Example
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Pythonアプリケーション
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       app.py
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Ajaxテンプレート
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       index.html
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -286,22 +320,233 @@
                 
   <section id="flask-application">
 <span id="ref-flask"></span><h1>Flaskアプリケーション<a class="headerlink" href="#flask-application" title="このヘッドラインへのパーマリンク">#</a></h1>
-<p><code class="docutils literal notranslate"><span class="pre">pyvista</span></code> を使用して，スタティックプロットを表示するflaskアプリケーションを作成できます．以下の例と <a class="reference external" href="https://github.com/pyvista/pyvista/tree/main/examples_flask">Flask Example</a> のデモを参照してください．</p>
-<p>動的な例については， <a class="reference external" href="https://jupyter.org/">Jupyter Notebooks</a> を使用することを推奨します．これについては <a class="reference internal" href="../user-guide/jupyter/index.html#jupyter-plotting"><span class="std std-ref">Jupyterノートブックプロット</span></a> のドキュメントを参照してください．</p>
-<figure class="align-default" id="id1">
-<a class="reference internal image-reference" href="../_images/flask_example.png"><img alt="../_images/flask_example.png" src="../_images/flask_example.png" style="width: 500pt;" /></a>
+<p>You can use <code class="docutils literal notranslate"><span class="pre">pyvista</span></code> in to make a flask application to display both static
+and dynamic plots.  See the following examples as well as the source at <a class="reference external" href="https://github.com/pyvista/pyvista/tree/main/examples_flask">Flask
+Example</a>.</p>
+<section id="dynamic-example">
+<h2>Dynamic Example<a class="headerlink" href="#dynamic-example" title="このヘッドラインへのパーマリンク">#</a></h2>
+<figure class="align-default" id="id3">
+<img alt="../_images/dynamic_flask.gif" src="../_images/dynamic_flask.gif" />
 <figcaption>
-<p><span class="caption-text">FlaskのWebページの例</span><a class="headerlink" href="#id1" title="この画像へのパーマリンク">#</a></p>
+<p><span class="caption-text">Example Dynamic Flask Webpage</span><a class="headerlink" href="#id3" title="この画像へのパーマリンク">#</a></p>
 </figcaption>
 </figure>
 <section id="python-application-app-py">
-<h2>Pythonアプリケーション <code class="docutils literal notranslate"><span class="pre">app.py</span></code><a class="headerlink" href="#python-application-app-py" title="このヘッドラインへのパーマリンク">#</a></h2>
+<h3>Pythonアプリケーション <code class="docutils literal notranslate"><span class="pre">app.py</span></code><a class="headerlink" href="#python-application-app-py" title="このヘッドラインへのパーマリンク">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;Simple flask app to display dynamic threejs generated from pyvista.</span>
+
+<span class="sd">Expected paths:</span>
+<span class="sd">dynamic_ex/</span>
+<span class="sd">└── app.py</span>
+<span class="sd">    templates/</span>
+<span class="sd">    └── index.html</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span><span class="p">,</span> <span class="n">request</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
+
+<span class="n">static_image_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;static&#39;</span><span class="p">,</span> <span class="s1">&#39;images&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">static_image_path</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">static_image_path</span><span class="p">)</span>
+
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;index.html&#39;</span><span class="p">)</span>
+
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/getimage&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">get_img</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Generate a screenshot of a simple pyvista mesh.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    str</span>
+<span class="sd">        Local path within the static directory of the image.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># get the user selected mesh option</span>
+    <span class="n">meshtype</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;meshtype&#39;</span><span class="p">)</span>
+    <span class="n">color</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;color&#39;</span><span class="p">)</span>
+    <span class="n">style</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;style&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&#39;</span><span class="si">{</span><span class="n">style</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+
+    <span class="c1"># bool types</span>
+    <span class="n">show_edges</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;show_edges&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;true&#39;</span>
+    <span class="n">lighting</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;lighting&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;true&#39;</span>
+    <span class="n">pbr</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;pbr&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;true&#39;</span>
+    <span class="n">anti_aliasing</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;anti_aliasing&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;true&#39;</span>
+
+    <span class="k">if</span> <span class="n">meshtype</span> <span class="o">==</span> <span class="s1">&#39;Sphere&#39;</span><span class="p">:</span>
+        <span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">meshtype</span> <span class="o">==</span> <span class="s1">&#39;Cube&#39;</span><span class="p">:</span>
+        <span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Cube</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">meshtype</span> <span class="o">==</span> <span class="s1">&#39;Bohemian Dome&#39;</span><span class="p">:</span>
+        <span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">ParametricBohemianDome</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">meshtype</span> <span class="o">==</span> <span class="s1">&#39;Cylinder&#39;</span><span class="p">:</span>
+        <span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Cylinder</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">meshtype</span> <span class="o">==</span> <span class="s1">&#39;Vectors&#39;</span><span class="p">:</span>
+        <span class="n">n_points</span> <span class="o">=</span> <span class="mi">20</span>
+        <span class="n">points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">n_points</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+        <span class="n">poly</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
+        <span class="n">poly</span><span class="p">[</span><span class="s1">&#39;direction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">n_points</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+        <span class="n">poly</span><span class="p">[</span><span class="s1">&#39;direction&#39;</span><span class="p">]</span> <span class="o">-=</span> <span class="n">poly</span><span class="p">[</span><span class="s1">&#39;direction&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># normalize</span>
+        <span class="n">mesh</span> <span class="o">=</span> <span class="n">poly</span><span class="o">.</span><span class="n">glyph</span><span class="p">(</span><span class="n">geom</span><span class="o">=</span><span class="n">pyvista</span><span class="o">.</span><span class="n">Arrow</span><span class="p">(),</span> <span class="n">orient</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">factor</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+        <span class="c1"># reset color as we will want to see the colors of the arrows</span>
+        <span class="n">color</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">elif</span> <span class="n">meshtype</span> <span class="o">==</span> <span class="s1">&#39;Queen Nefertiti&#39;</span><span class="p">:</span>
+        <span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_nefertiti</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">meshtype</span> <span class="o">==</span> <span class="s1">&#39;Lidar&#39;</span><span class="p">:</span>
+        <span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_lidar</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># invalid entry</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Invalid Option&#39;</span><span class="p">)</span>
+
+    <span class="c1"># generate screenshot</span>
+    <span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;mesh.html&#39;</span>
+    <span class="n">filepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">static_image_path</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+
+    <span class="c1"># create a plotter and add the mesh to it</span>
+    <span class="n">pl</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">window_size</span><span class="o">=</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="mi">600</span><span class="p">))</span>
+    <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span>
+        <span class="n">mesh</span><span class="p">,</span>
+        <span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">,</span>
+        <span class="n">lighting</span><span class="o">=</span><span class="n">lighting</span><span class="p">,</span>
+        <span class="n">pbr</span><span class="o">=</span><span class="n">pbr</span><span class="p">,</span>
+        <span class="n">metallic</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span>
+        <span class="n">split_sharp_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">show_edges</span><span class="o">=</span><span class="n">show_edges</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="n">anti_aliasing</span><span class="p">:</span>
+        <span class="n">pl</span><span class="o">.</span><span class="n">enable_anti_aliasing</span><span class="p">()</span>
+    <span class="n">pl</span><span class="o">.</span><span class="n">background_color</span> <span class="o">=</span> <span class="s1">&#39;white&#39;</span>
+    <span class="n">pl</span><span class="o">.</span><span class="n">export_html</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;images&#39;</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="ajax-template-index-html">
+<h3>Ajaxテンプレート <code class="docutils literal notranslate"><span class="pre">index.html</span></code><a class="headerlink" href="#ajax-template-index-html" title="このヘッドラインへのパーマリンク">#</a></h3>
+<p>このテンプレートは， <code class="docutils literal notranslate"><span class="pre">app.py</span></code> と同じパスの <code class="docutils literal notranslate"><span class="pre">templates</span></code> ディレクトリ内にある必要があります．</p>
+<p>このテンプレートは， <code class="docutils literal notranslate"><span class="pre">meshtype</span></code> パラメータをflaskアプリケーションの <code class="docutils literal notranslate"><span class="pre">get_img</span></code> メソッドに取得します． <code class="docutils literal notranslate"><span class="pre">get_img</span></code> メソッドは，プロットするメッシュのタイプを選択するために使用されます．</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;html&gt;
+  &lt;head&gt;
+    &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+  &lt;/head&gt;
+   &lt;body&gt;
+
+     &lt;fieldset&gt;
+
+       &lt;select style=&quot;background-color: #ffffa0&quot; name=&quot;meshtype&quot;, id=&quot;meshtype&quot; onchange=&quot;getState(this.value)&quot;&gt;
+         &lt;option&gt;Select Mesh Type&lt;/option&gt;
+         &lt;option&gt;Sphere&lt;/option&gt;
+         &lt;option&gt;Cube&lt;/option&gt;
+         &lt;option&gt;Bohemian Dome&lt;/option&gt;
+         &lt;option&gt;Cylinder&lt;/option&gt;
+         &lt;option&gt;Vectors&lt;/option&gt;
+         &lt;option disabled=&quot;true&quot; value=&quot;divider&quot;&gt;-------------&lt;/option&gt;
+         &lt;option&gt;Queen Nefertiti&lt;/option&gt;
+         
+       &lt;/select&gt;
+
+       &lt;div class=&quot;item&quot;&gt;
+         &lt;input type=&quot;checkbox&quot; id=&quot;show_edges&quot;&gt;
+         &lt;label for=&quot;show_edges&quot;&gt;Show Edges&lt;/label&gt;
+       &lt;/div&gt;
+       &lt;div class=&quot;item&quot;&gt;
+         &lt;input type=&quot;checkbox&quot; id=&quot;lighting&quot; checked&gt;
+         &lt;label for=&quot;lighting&quot;&gt;Lighting&lt;/label&gt;
+       &lt;/div&gt;
+       &lt;div class=&quot;item&quot;&gt;
+         &lt;input type=&quot;checkbox&quot; id=&quot;pbr&quot; checked&gt;
+         &lt;label for=&quot;pbr&quot;&gt;Physically Based Rendering&lt;/label&gt;
+       &lt;/div&gt;
+       &lt;div class=&quot;item&quot;&gt;
+         &lt;input type=&quot;checkbox&quot; id=&quot;anti_aliasing&quot; checked&gt;
+         &lt;label for=&quot;anti_aliasing&quot;&gt;Anti-Aliasing&lt;/label&gt;
+       &lt;/div&gt;
+       &lt;label for=&quot;colorpicker&quot;&gt;Color Picker:&lt;/label&gt;
+       &lt;input type=&quot;color&quot; id=&quot;colorpicker&quot; value=&quot;#a4b2ba&quot;&gt;
+
+       &lt;div&gt;
+         Style:
+         &lt;input type=&quot;radio&quot; class=&quot;style&quot; name=&quot;style&quot; value=&quot;points&quot; /&gt; Points
+         &lt;input type=&quot;radio&quot; class=&quot;style&quot; name=&quot;style&quot; value=&quot;wireframe&quot; /&gt; Wireframe
+         &lt;input type=&quot;radio&quot; class=&quot;style&quot; name=&quot;style&quot; value=&quot;surface&quot; checked/&gt; Surface
+
+       &lt;/div&gt;
+
+       &lt;br&gt;
+       &lt;button type=&#39;button&#39; id =&#39;retrieve&#39;&gt;Plot&lt;/button&gt;
+
+     &lt;/fieldset&gt;
+
+     &lt;iframe src=&quot;&quot; height=&quot;600&quot; width=&quot;600&quot; title=&quot;PyVista&quot; id=&quot;myimg&quot; frameBorder=&quot;0&quot; allowtransparency=yes scrolling=no&gt;
+       &lt;p&gt;Your browser does not support iframes.&lt;/p&gt;
+     &lt;/iframe&gt;
+     
+   &lt;/body&gt;
+  &lt;script&gt;
+    $(document).ready(function() {
+       $(&#39;#retrieve&#39;).click(function(){
+           $.ajax({
+           url: &quot;{{ url_for (&#39;get_img&#39;) }}&quot;,
+           type: &quot;GET&quot;,
+           data: { 
+               meshtype:       $(&#39;#meshtype option:selected&#39;).val(),
+               show_edges:    ($(&quot;#show_edges&quot;).is(&quot;:checked&quot;)),
+               lighting:      ($(&quot;#lighting&quot;).is(&quot;:checked&quot;)),
+               pbr:           ($(&quot;#pbr&quot;).is(&quot;:checked&quot;)),
+               color:          $(&#39;#colorpicker&#39;).val(),
+               style:          $(&quot;.style:checked&quot;).val(),
+               anti_aliasing: ($(&quot;#anti_aliasing&quot;).is(&quot;:checked&quot;)),
+
+           },
+           success: function(response) {
+               $(&quot;#myimg&quot;).attr(&#39;src&#39;, &#39;/static/&#39; + response);
+          },
+          error: function(xhr) {
+              alert(&quot;Please select a mesh type from the drop down menu.&quot;);
+         }
+         });
+       });
+    });
+  &lt;/script&gt;
+&lt;/html&gt;
+</pre></div>
+</div>
+</section>
+</section>
+<section id="static-example">
+<h2>Static Example<a class="headerlink" href="#static-example" title="このヘッドラインへのパーマリンク">#</a></h2>
+<figure class="align-default" id="id4">
+<img alt="../_images/flask_example.png" src="../_images/flask_example.png" />
+<figcaption>
+<p><span class="caption-text">Example Static Flask Webpage</span><a class="headerlink" href="#id4" title="この画像へのパーマリンク">#</a></p>
+</figcaption>
+</figure>
+<section id="id1">
+<h3>Pythonアプリケーション <code class="docutils literal notranslate"><span class="pre">app.py</span></code><a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;Simple flask app to display static images generated from pyvista.</span>
 
 <span class="sd">Expected paths:</span>
-<span class="sd">flask_example</span>
+<span class="sd">static_ex/</span>
 <span class="sd">└── app.py</span>
-<span class="sd">    templates</span>
+<span class="sd">    templates/</span>
 <span class="sd">    └── index.html</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
@@ -360,8 +605,8 @@
 </pre></div>
 </div>
 </section>
-<section id="ajax-template-index-html">
-<h2>Ajaxテンプレート <code class="docutils literal notranslate"><span class="pre">index.html</span></code><a class="headerlink" href="#ajax-template-index-html" title="このヘッドラインへのパーマリンク">#</a></h2>
+<section id="id2">
+<h3>Ajaxテンプレート <code class="docutils literal notranslate"><span class="pre">index.html</span></code><a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">#</a></h3>
 <p>このテンプレートは， <code class="docutils literal notranslate"><span class="pre">app.py</span></code> と同じパスの <code class="docutils literal notranslate"><span class="pre">templates</span></code> ディレクトリ内にある必要があります．</p>
 <p>このテンプレートは， <code class="docutils literal notranslate"><span class="pre">meshtype</span></code> パラメータをflaskアプリケーションの <code class="docutils literal notranslate"><span class="pre">get_img</span></code> メソッドに取得します． <code class="docutils literal notranslate"><span class="pre">get_img</span></code> メソッドは，プロットするメッシュのタイプを選択するために使用されます．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;html&gt;
@@ -403,6 +648,7 @@
 &lt;/html&gt;
 </pre></div>
 </div>
+</section>
 </section>
 </section>
 

@@ -246,6 +246,8 @@
 <span class="sd">    This holds methods common to PolyData and UnstructuredGrid.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
+    <span class="n">_WRITERS</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;.xyz&quot;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkSimplePointsWriter</span><span class="p">}</span>
+
     <span class="k">def</span> <span class="nf">center_of_mass</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scalars_weight</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Return the coordinates for the center of mass of the mesh.</span>
 
