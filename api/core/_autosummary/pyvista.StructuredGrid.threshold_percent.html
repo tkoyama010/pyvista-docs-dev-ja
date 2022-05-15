@@ -1136,6 +1136,14 @@
 <dt class="sig sig-object py" id="pyvista.StructuredGrid.threshold_percent">
 <span class="sig-prename descclassname"><span class="pre">StructuredGrid.</span></span><span class="sig-name descname"><span class="pre">threshold_percent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">percent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scalars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">invert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">continuous</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preference</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cell'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.StructuredGrid.threshold_percent" title="この定義へのパーマリンク">#</a></dt>
 <dd><p>データセットを，アクティブなスカラー配列上の範囲のパーセンテージでしきい値化します．</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>Thresholding is inherently a cell operation, even though it can use
+associated point data for determining whether to keep a cell. In
+other words, whether or not a given point is included after
+thresholding depends on whether that point is part of a cell that
+is kept after thresholding.</p>
+</div>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><dl>

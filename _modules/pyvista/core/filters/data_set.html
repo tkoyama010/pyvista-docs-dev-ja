@@ -1087,6 +1087,13 @@
 <span class="sd">        criterion.  If ``scalars`` is ``None``, the input&#39;s active</span>
 <span class="sd">        scalars array is used.</span>
 
+<span class="sd">        .. warning::</span>
+<span class="sd">           Thresholding is inherently a cell operation, even though it can use</span>
+<span class="sd">           associated point data for determining whether to keep a cell. In</span>
+<span class="sd">           other words, whether or not a given point is included after</span>
+<span class="sd">           thresholding depends on whether that point is part of a cell that</span>
+<span class="sd">           is kept after thresholding.</span>
+
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        value : float or sequence, optional</span>
@@ -1278,6 +1285,13 @@
         <span class="n">progress_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Threshold the dataset by a percentage of its range on the active scalars array.</span>
+
+<span class="sd">        .. warning::</span>
+<span class="sd">           Thresholding is inherently a cell operation, even though it can use</span>
+<span class="sd">           associated point data for determining whether to keep a cell. In</span>
+<span class="sd">           other words, whether or not a given point is included after</span>
+<span class="sd">           thresholding depends on whether that point is part of a cell that</span>
+<span class="sd">           is kept after thresholding.</span>
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
