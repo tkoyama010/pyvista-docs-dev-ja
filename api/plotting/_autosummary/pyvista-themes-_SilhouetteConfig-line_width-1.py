@@ -1,2 +1,2 @@
 import pyvista
-pyvista.global_theme.silhouette.line_width = 2.0  # doctest:+SKIP
+pyvista.global_theme.silhouette.line_width = 2.0

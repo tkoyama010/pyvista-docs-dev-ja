@@ -1,4 +1,4 @@
 # Make all plots non-interactive globally.
 #
 import pyvista
-pyvista.global_theme.interactive = False  # doctest:+SKIP
+pyvista.global_theme.interactive = False

@@ -2,8 +2,8 @@
 #
 import pyvista
 from pyvista import themes
-pyvista.set_plot_theme(themes.DocumentTheme())  # doctest:+SKIP
+pyvista.set_plot_theme(themes.DocumentTheme())
 #
 # Alternatively, set via a string.
 #
-pyvista.set_plot_theme('document')  # doctest:+SKIP
+pyvista.set_plot_theme('document')

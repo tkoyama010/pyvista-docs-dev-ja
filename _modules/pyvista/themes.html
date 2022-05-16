@@ -208,16 +208,16 @@
 <span class="sd">Apply a built-in theme</span>
 
 <span class="sd">&gt;&gt;&gt; import pyvista</span>
-<span class="sd">&gt;&gt;&gt; pyvista.set_plot_theme(&#39;default&#39;)  # doctest:+SKIP</span>
-<span class="sd">&gt;&gt;&gt; pyvista.set_plot_theme(&#39;document&#39;)  # doctest:+SKIP</span>
-<span class="sd">&gt;&gt;&gt; pyvista.set_plot_theme(&#39;dark&#39;)  # doctest:+SKIP</span>
-<span class="sd">&gt;&gt;&gt; pyvista.set_plot_theme(&#39;paraview&#39;)  # doctest:+SKIP</span>
+<span class="sd">&gt;&gt;&gt; pyvista.set_plot_theme(&#39;default&#39;)</span>
+<span class="sd">&gt;&gt;&gt; pyvista.set_plot_theme(&#39;document&#39;)</span>
+<span class="sd">&gt;&gt;&gt; pyvista.set_plot_theme(&#39;dark&#39;)</span>
+<span class="sd">&gt;&gt;&gt; pyvista.set_plot_theme(&#39;paraview&#39;)</span>
 
 <span class="sd">Load a theme into pyvista</span>
 
 <span class="sd">&gt;&gt;&gt; theme = pyvista.themes.DefaultTheme()</span>
-<span class="sd">&gt;&gt;&gt; theme.save(&#39;my_theme.json&#39;)  # doctest:+SKIP</span>
-<span class="sd">&gt;&gt;&gt; loaded_theme = pyvista.load_theme(&#39;my_theme.json&#39;)  # doctest:+SKIP</span>
+<span class="sd">&gt;&gt;&gt; theme.save(&#39;my_theme.json&#39;)</span>
+<span class="sd">&gt;&gt;&gt; loaded_theme = pyvista.load_theme(&#39;my_theme.json&#39;)</span>
 
 <span class="sd">Create a custom theme from the default theme and load it into</span>
 <span class="sd">pyvista.</span>
@@ -227,8 +227,8 @@
 <span class="sd">&gt;&gt;&gt; my_theme.font.title_size = 40</span>
 <span class="sd">&gt;&gt;&gt; my_theme.cmap = &#39;jet&#39;</span>
 <span class="sd">...</span>
-<span class="sd">&gt;&gt;&gt; pyvista.global_theme.load_theme(my_theme)  # doctest:+SKIP</span>
-<span class="sd">&gt;&gt;&gt; pyvista.global_theme.font.size  # doctest:+SKIP</span>
+<span class="sd">&gt;&gt;&gt; pyvista.global_theme.load_theme(my_theme)</span>
+<span class="sd">&gt;&gt;&gt; pyvista.global_theme.font.size</span>
 <span class="sd">20</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
@@ -287,8 +287,8 @@
 <span class="sd">    --------</span>
 <span class="sd">    &gt;&gt;&gt; import pyvista</span>
 <span class="sd">    &gt;&gt;&gt; theme = pyvista.themes.DefaultTheme()</span>
-<span class="sd">    &gt;&gt;&gt; theme.save(&#39;my_theme.json&#39;)  # doctest:+SKIP</span>
-<span class="sd">    &gt;&gt;&gt; loaded_theme = pyvista.load_theme(&#39;my_theme.json&#39;)  # doctest:+SKIP</span>
+<span class="sd">    &gt;&gt;&gt; theme.save(&#39;my_theme.json&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; loaded_theme = pyvista.load_theme(&#39;my_theme.json&#39;)</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
@@ -310,19 +310,19 @@
 <span class="sd">    Set to the default theme.</span>
 
 <span class="sd">    &gt;&gt;&gt; import pyvista</span>
-<span class="sd">    &gt;&gt;&gt; pyvista.set_plot_theme(&#39;default&#39;)  # doctest:+SKIP</span>
+<span class="sd">    &gt;&gt;&gt; pyvista.set_plot_theme(&#39;default&#39;)</span>
 
 <span class="sd">    Set to the document theme.</span>
 
-<span class="sd">    &gt;&gt;&gt; pyvista.set_plot_theme(&#39;document&#39;)  # doctest:+SKIP</span>
+<span class="sd">    &gt;&gt;&gt; pyvista.set_plot_theme(&#39;document&#39;)</span>
 
 <span class="sd">    Set to the dark theme.</span>
 
-<span class="sd">    &gt;&gt;&gt; pyvista.set_plot_theme(&#39;dark&#39;)  # doctest:+SKIP</span>
+<span class="sd">    &gt;&gt;&gt; pyvista.set_plot_theme(&#39;dark&#39;)</span>
 
 <span class="sd">    Set to the ParaView theme.</span>
 
-<span class="sd">    &gt;&gt;&gt; pyvista.set_plot_theme(&#39;paraview&#39;)  # doctest:+SKIP</span>
+<span class="sd">    &gt;&gt;&gt; pyvista.set_plot_theme(&#39;paraview&#39;)</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="kn">import</span> <span class="nn">pyvista</span>
@@ -419,9 +419,9 @@
 <span class="sd">    Set global depth peeling parameters.</span>
 
 <span class="sd">    &gt;&gt;&gt; import pyvista</span>
-<span class="sd">    &gt;&gt;&gt; pyvista.global_theme.depth_peeling.number_of_peels = 1  # doctest:+SKIP</span>
-<span class="sd">    &gt;&gt;&gt; pyvista.global_theme.depth_peeling.occlusion_ratio = 0.0  # doctest:+SKIP</span>
-<span class="sd">    &gt;&gt;&gt; pyvista.global_theme.depth_peeling.enabled = True  # doctest:+SKIP</span>
+<span class="sd">    &gt;&gt;&gt; pyvista.global_theme.depth_peeling.number_of_peels = 1</span>
+<span class="sd">    &gt;&gt;&gt; pyvista.global_theme.depth_peeling.occlusion_ratio = 0.0</span>
+<span class="sd">    &gt;&gt;&gt; pyvista.global_theme.depth_peeling.enabled = True</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -439,7 +439,7 @@
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.depth_peeling.number_of_peels = 1  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.depth_peeling.number_of_peels = 1</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_number_of_peels</span>
@@ -455,7 +455,7 @@
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.depth_peeling.occlusion_ratio = 0.0  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.depth_peeling.occlusion_ratio = 0.0</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_occlusion_ratio</span>
@@ -471,7 +471,7 @@
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.depth_peeling.enabled = True  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.depth_peeling.enabled = True</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_enabled</span>
@@ -501,9 +501,9 @@
 <span class="sd">    Set global silhouette parameters.</span>
 
 <span class="sd">    &gt;&gt;&gt; import pyvista</span>
-<span class="sd">    &gt;&gt;&gt; pyvista.global_theme.silhouette.color = &#39;grey&#39;  # doctest:+SKIP</span>
-<span class="sd">    &gt;&gt;&gt; pyvista.global_theme.silhouette.line_width = 2  # doctest:+SKIP</span>
-<span class="sd">    &gt;&gt;&gt; pyvista.global_theme.silhouette.feature_angle = 20  # doctest:+SKIP</span>
+<span class="sd">    &gt;&gt;&gt; pyvista.global_theme.silhouette.color = &#39;grey&#39;</span>
+<span class="sd">    &gt;&gt;&gt; pyvista.global_theme.silhouette.line_width = 2</span>
+<span class="sd">    &gt;&gt;&gt; pyvista.global_theme.silhouette.feature_angle = 20</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -523,7 +523,7 @@
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.silhouette.color = &#39;red&#39;  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.silhouette.color = &#39;red&#39;</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_color</span>
@@ -539,7 +539,7 @@
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.silhouette.line_width = 2.0  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.silhouette.line_width = 2.0</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_line_width</span>
@@ -555,7 +555,7 @@
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.silhouette.opacity = 1.0  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.silhouette.opacity = 1.0</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_opacity</span>
@@ -572,7 +572,7 @@
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.silhouette.feature_angle = 20.0  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.silhouette.feature_angle = 20.0</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_feature_angle</span>
@@ -590,7 +590,7 @@
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.silhouette.decimate = 0.9  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.silhouette.decimate = 0.9</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_decimate</span>
@@ -623,7 +623,7 @@
 <span class="sd">    Set the colorbar width.</span>
 
 <span class="sd">    &gt;&gt;&gt; import pyvista</span>
-<span class="sd">    &gt;&gt;&gt; pyvista.global_theme.colorbar_horizontal.width = 0.2  # doctest:+SKIP</span>
+<span class="sd">    &gt;&gt;&gt; pyvista.global_theme.colorbar_horizontal.width = 0.2</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -642,7 +642,7 @@
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.colorbar_horizontal.width = 0.2  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.colorbar_horizontal.width = 0.2</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_width</span>
@@ -658,7 +658,7 @@
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.colorbar_horizontal.height = 0.2  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.colorbar_horizontal.height = 0.2</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_height</span>
@@ -674,7 +674,7 @@
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.colorbar_horizontal.position_x = 0.2  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.colorbar_horizontal.position_x = 0.2</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_position_x</span>
@@ -690,7 +690,7 @@
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.colorbar_horizontal.position_y = 0.2  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.colorbar_horizontal.position_y = 0.2</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_position_y</span>
@@ -722,15 +722,15 @@
 <span class="sd">    Set the x axis color to black.</span>
 
 <span class="sd">    &gt;&gt;&gt; import pyvista</span>
-<span class="sd">    &gt;&gt;&gt; pyvista.global_theme.axes.x_color = &#39;black&#39;  # doctest:+SKIP</span>
+<span class="sd">    &gt;&gt;&gt; pyvista.global_theme.axes.x_color = &#39;black&#39;</span>
 
 <span class="sd">    Show axes by default.</span>
 
-<span class="sd">    &gt;&gt;&gt; pyvista.global_theme.axes.show = True  # doctest:+SKIP</span>
+<span class="sd">    &gt;&gt;&gt; pyvista.global_theme.axes.show = True</span>
 
 <span class="sd">    Use the ``vtk.vtkCubeAxesActor``.</span>
 
-<span class="sd">    &gt;&gt;&gt; pyvista.global_theme.axes.box = True  # doctest:+SKIP</span>
+<span class="sd">    &gt;&gt;&gt; pyvista.global_theme.axes.box = True</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -765,7 +765,7 @@
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.axes.x_color = &#39;red&#39;  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.axes.x_color = &#39;red&#39;</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_x_color</span>
 
@@ -780,7 +780,7 @@
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.axes.y_color = &#39;red&#39;  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.axes.y_color = &#39;red&#39;</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_y_color</span>
 
@@ -795,7 +795,7 @@
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.axes.z_color = &#39;red&#39;  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.axes.z_color = &#39;red&#39;</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_z_color</span>
 
@@ -810,7 +810,7 @@
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.axes.box = True  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.axes.box = True</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_box</span>
@@ -828,7 +828,7 @@
 <span class="sd">        Hide the axes by default.</span>
 
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.axes.show = False  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.axes.show = False</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_show</span>
@@ -847,27 +847,27 @@
 <span class="sd">    &#39;arial&#39;, &#39;courier&#39;, or &#39;times&#39;.</span>
 
 <span class="sd">    &gt;&gt;&gt; import pyvista</span>
-<span class="sd">    &gt;&gt;&gt; pyvista.global_theme.font.family = &#39;arial&#39;  # doctest:+SKIP</span>
+<span class="sd">    &gt;&gt;&gt; pyvista.global_theme.font.family = &#39;arial&#39;</span>
 
 <span class="sd">    Set the default font size to 20.</span>
 
-<span class="sd">    &gt;&gt;&gt; pyvista.global_theme.font.size = 20  # doctest:+SKIP</span>
+<span class="sd">    &gt;&gt;&gt; pyvista.global_theme.font.size = 20</span>
 
 <span class="sd">    Set the default title size to 40</span>
 
-<span class="sd">    &gt;&gt;&gt; pyvista.global_theme.font.title_size = 40  # doctest:+SKIP</span>
+<span class="sd">    &gt;&gt;&gt; pyvista.global_theme.font.title_size = 40</span>
 
 <span class="sd">    Set the default label size to 10</span>
 
-<span class="sd">    &gt;&gt;&gt; pyvista.global_theme.font.label_size = 10  # doctest:+SKIP</span>
+<span class="sd">    &gt;&gt;&gt; pyvista.global_theme.font.label_size = 10</span>
 
 <span class="sd">    Set the default text color to &#39;grey&#39;</span>
 
-<span class="sd">    &gt;&gt;&gt; pyvista.global_theme.font.color = &#39;grey&#39;  # doctest:+SKIP</span>
+<span class="sd">    &gt;&gt;&gt; pyvista.global_theme.font.color = &#39;grey&#39;</span>
 
 <span class="sd">    Set the string formatter used to format numerical data to &#39;%.6e&#39;</span>
 
-<span class="sd">    &gt;&gt;&gt; pyvista.global_theme.font.fmt = &#39;%.6e&#39;  # doctest:+SKIP</span>
+<span class="sd">    &gt;&gt;&gt; pyvista.global_theme.font.fmt = &#39;%.6e&#39;</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -912,7 +912,7 @@
 <span class="sd">        Set the default global font family to &#39;courier&#39;.</span>
 
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.font.family = &#39;courier&#39;  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.font.family = &#39;courier&#39;</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_family</span>
@@ -929,7 +929,7 @@
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.font.size = 20  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.font.size = 20</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_size</span>
@@ -947,7 +947,7 @@
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.font.title_size = 20  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.font.title_size = 20</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_title_size</span>
 
@@ -967,7 +967,7 @@
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.font.label_size = 20  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.font.label_size = 20</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_label_size</span>
 
@@ -985,7 +985,7 @@
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.font.color = &#39;black&#39;  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.font.color = &#39;black&#39;</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_color</span>
 
@@ -1002,7 +1002,7 @@
 <span class="sd">        Set the string formatter used to format numerical data to &#39;%.6e&#39;.</span>
 
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.font.fmt = &#39;%.6e&#39;  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.font.fmt = &#39;%.6e&#39;</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fmt</span>
@@ -1055,7 +1055,7 @@
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.slider_styles.modern.cap_width = 0.02  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.slider_styles.modern.cap_width = 0.02</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cap_width</span>
@@ -1071,7 +1071,7 @@
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.slider_styles.modern.cap_length = 0.01  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.slider_styles.modern.cap_length = 0.01</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cap_length</span>
@@ -1087,7 +1087,7 @@
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.slider_styles.modern.cap_opacity = 1.0  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.slider_styles.modern.cap_opacity = 1.0</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cap_opacity</span>
@@ -1103,7 +1103,7 @@
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.slider_styles.modern.tube_color = &#39;black&#39;  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.slider_styles.modern.tube_color = &#39;black&#39;</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tube_color</span>
 
@@ -1118,7 +1118,7 @@
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.slider_styles.modern.tube_width = 0.005  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.slider_styles.modern.tube_width = 0.005</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tube_width</span>
@@ -1134,7 +1134,7 @@
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.slider_styles.modern.slider_color = &#39;grey&#39;  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.slider_styles.modern.slider_color = &#39;grey&#39;</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_slider_color</span>
@@ -1150,7 +1150,7 @@
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.slider_styles.modern.slider_width = 0.04  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.slider_styles.modern.slider_width = 0.04</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_slider_width</span>
@@ -1166,7 +1166,7 @@
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.slider_styles.modern.slider_length = 0.02  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.slider_styles.modern.slider_length = 0.02</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_slider_length</span>
@@ -1295,18 +1295,18 @@
 <span class="sd">    Change the global default background color to white.</span>
 
 <span class="sd">    &gt;&gt;&gt; import pyvista</span>
-<span class="sd">    &gt;&gt;&gt; pyvista.global_theme.color = &#39;white&#39;  # doctest:+SKIP</span>
+<span class="sd">    &gt;&gt;&gt; pyvista.global_theme.color = &#39;white&#39;</span>
 
 <span class="sd">    Show edges by default.</span>
 
-<span class="sd">    &gt;&gt;&gt; pyvista.global_theme.show_edges = True  # doctest:+SKIP</span>
+<span class="sd">    &gt;&gt;&gt; pyvista.global_theme.show_edges = True</span>
 
 <span class="sd">    Create a new theme from the default theme and apply it globally.</span>
 
 <span class="sd">    &gt;&gt;&gt; my_theme = pyvista.themes.DefaultTheme()</span>
 <span class="sd">    &gt;&gt;&gt; my_theme.color = &#39;red&#39;</span>
 <span class="sd">    &gt;&gt;&gt; my_theme.background = &#39;white&#39;</span>
-<span class="sd">    &gt;&gt;&gt; pyvista.global_theme.load_theme(my_theme)  # doctest:+SKIP</span>
+<span class="sd">    &gt;&gt;&gt; pyvista.global_theme.load_theme(my_theme)</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -1348,6 +1348,8 @@
         <span class="s1">&#39;_hidden_line_removal&#39;</span><span class="p">,</span>
         <span class="s1">&#39;_antialiasing&#39;</span><span class="p">,</span>
         <span class="s1">&#39;_enable_camera_orientation_widget&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;_split_sharp_edges&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;_sharp_edges_feature_angle&#39;</span><span class="p">,</span>
     <span class="p">]</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -1391,6 +1393,8 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_transparent_background</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_title</span> <span class="o">=</span> <span class="s1">&#39;PyVista&#39;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_axes</span> <span class="o">=</span> <span class="n">_AxesConfig</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_split_sharp_edges</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_sharp_edges_feature_angle</span> <span class="o">=</span> <span class="mf">30.0</span>
 
         <span class="c1"># Grab system flag for anti-aliasing</span>
         <span class="k">try</span><span class="p">:</span>
@@ -1430,8 +1434,8 @@
 <span class="sd">        Enable hidden line removal.</span>
 
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.hidden_line_removal = True  # doctest:+SKIP</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.hidden_line_removal  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.hidden_line_removal = True</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.hidden_line_removal</span>
 <span class="sd">        True</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -1450,7 +1454,7 @@
 <span class="sd">        Disable returning camera position by ``show`` and ``plot`` methods.</span>
 
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.return_cpos = False  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.return_cpos = False</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
     <span class="nd">@return_cpos</span><span class="o">.</span><span class="n">setter</span>
@@ -1466,7 +1470,7 @@
 <span class="sd">        Set the default global background of all plots to white.</span>
 
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.background = &#39;white&#39;  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.background = &#39;white&#39;</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_background</span>
 
@@ -1520,24 +1524,24 @@
 <span class="sd">        Enable the pythreejs backend.</span>
 
 <span class="sd">        &gt;&gt;&gt; import pyvista as pv</span>
-<span class="sd">        &gt;&gt;&gt; pv.set_jupyter_backend(&#39;pythreejs&#39;)  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pv.set_jupyter_backend(&#39;pythreejs&#39;)</span>
 
 <span class="sd">        Enable the ipygany backend.</span>
 
 <span class="sd">        &gt;&gt;&gt; import pyvista as pv</span>
-<span class="sd">        &gt;&gt;&gt; pv.set_jupyter_backend(&#39;ipygany&#39;)  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pv.set_jupyter_backend(&#39;ipygany&#39;)</span>
 
 <span class="sd">        Enable the panel backend.</span>
 
-<span class="sd">        &gt;&gt;&gt; pv.set_jupyter_backend(&#39;panel&#39;)  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pv.set_jupyter_backend(&#39;panel&#39;)</span>
 
 <span class="sd">        Enable the ipyvtklink backend.</span>
 
-<span class="sd">        &gt;&gt;&gt; pv.set_jupyter_backend(&#39;ipyvtklink&#39;)  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pv.set_jupyter_backend(&#39;ipyvtklink&#39;)</span>
 
 <span class="sd">        Just show static images.</span>
 
-<span class="sd">        &gt;&gt;&gt; pv.set_jupyter_backend(&#39;static&#39;)  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pv.set_jupyter_backend(&#39;static&#39;)</span>
 
 <span class="sd">        Disable all plotting within JupyterLab and display using a</span>
 <span class="sd">        standard desktop VTK render window.</span>
@@ -1563,7 +1567,7 @@
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.auto_close = False  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.auto_close = False</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_auto_close</span>
@@ -1581,7 +1585,7 @@
 <span class="sd">        Set windows to be full screen by default.</span>
 
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.full_screen = True  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.full_screen = True</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_full_screen</span>
 
@@ -1596,8 +1600,8 @@
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.enable_camera_orientation_widget = True  # doctest:+SKIP</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.enable_camera_orientation_widget  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.enable_camera_orientation_widget = True</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.enable_camera_orientation_widget</span>
 <span class="sd">        True</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -1616,16 +1620,16 @@
 <span class="sd">        Set both the position and view of the camera.</span>
 
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.camera = {&#39;position&#39;: [1, 1, 1],  # doctest:+SKIP</span>
-<span class="sd">        ...                                &#39;viewup&#39;: [0, 0, 1]}  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.camera = {&#39;position&#39;: [1, 1, 1],</span>
+<span class="sd">        ...                                &#39;viewup&#39;: [0, 0, 1]}</span>
 
 <span class="sd">        Set the default position of the camera.</span>
 
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.camera[&#39;position&#39;] = [1, 1, 1]  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.camera[&#39;position&#39;] = [1, 1, 1]</span>
 
 <span class="sd">        Set the default view of the camera.</span>
 
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.camera[&#39;viewup&#39;] = [0, 0, 1]  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.camera[&#39;viewup&#39;] = [0, 0, 1]</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_camera</span>
@@ -1655,7 +1659,7 @@
 <span class="sd">        Disable all jupyter notebook plotting.</span>
 
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.notebook = False  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.notebook = False</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_notebook</span>
@@ -1673,7 +1677,7 @@
 <span class="sd">        Set window size to ``[400, 400]``.</span>
 
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.window_size = [400, 400]  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.window_size = [400, 400]</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_window_size</span>
@@ -1699,27 +1703,27 @@
 <span class="sd">        &#39;arial&#39;, &#39;courier&#39;, or &#39;times&#39;.</span>
 
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.font.family = &#39;arial&#39;  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.font.family = &#39;arial&#39;</span>
 
 <span class="sd">        Set the default font size to 20.</span>
 
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.font.size = 20  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.font.size = 20</span>
 
 <span class="sd">        Set the default title size to 40.</span>
 
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.font.title_size = 40  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.font.title_size = 40</span>
 
 <span class="sd">        Set the default label size to 10.</span>
 
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.font.label_size = 10  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.font.label_size = 10</span>
 
 <span class="sd">        Set the default text color to &#39;grey&#39;.</span>
 
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.font.color = &#39;grey&#39;  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.font.color = &#39;grey&#39;</span>
 
 <span class="sd">        String formatter used to format numerical data to &#39;%.6e&#39;.</span>
 
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.font.fmt = &#39;%.6e&#39;  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.font.fmt = &#39;%.6e&#39;</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_font</span>
@@ -1748,7 +1752,7 @@
 <span class="sd">        Set the default global colormap to &#39;jet&#39;.</span>
 
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.cmap = &#39;jet&#39;  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.cmap = &#39;jet&#39;</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cmap</span>
@@ -1777,7 +1781,7 @@
 <span class="sd">        Set the default mesh color to &#39;red&#39;.</span>
 
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.color = &#39;red&#39;  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.color = &#39;red&#39;</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_color</span>
@@ -1795,7 +1799,7 @@
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.nan_color = &#39;darkgray&#39;  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.nan_color = &#39;darkgray&#39;</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_nan_color</span>
@@ -1813,7 +1817,7 @@
 <span class="sd">        Set the global edge color to &#39;blue&#39;.</span>
 
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.edge_color = &#39;blue&#39;  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.edge_color = &#39;blue&#39;</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edge_color</span>
@@ -1829,7 +1833,7 @@
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.outline_color = &#39;white&#39;  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.outline_color = &#39;white&#39;</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_outline_color</span>
@@ -1845,7 +1849,7 @@
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.floor_color = &#39;black&#39;  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.floor_color = &#39;black&#39;</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_floor_color</span>
@@ -1863,7 +1867,7 @@
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.colorbar_orientation = &#39;horizontal&#39;  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.colorbar_orientation = &#39;horizontal&#39;</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_orientation</span>
@@ -1883,11 +1887,11 @@
 <span class="sd">        Set the default horizontal colorbar width to 0.6.</span>
 
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.colorbar_horizontal.width = 0.6  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.colorbar_horizontal.width = 0.6</span>
 
 <span class="sd">        Set the default horizontal colorbar height to 0.2.</span>
 
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.colorbar_horizontal.height = 0.2  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.colorbar_horizontal.height = 0.2</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_horizontal</span>
@@ -1907,12 +1911,12 @@
 <span class="sd">        Set the default colorbar width to 0.45.</span>
 
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.colorbar_vertical.width = 0.45  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.colorbar_vertical.width = 0.45</span>
 
 <span class="sd">        Set the default colorbar height to 0.8.</span>
 
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.colorbar_vertical.height = 0.8  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.colorbar_vertical.height = 0.8</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_vertical</span>
@@ -1932,7 +1936,7 @@
 <span class="sd">        Show the scalar bar by default when scalars are available.</span>
 
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.show_scalar_bar = True  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.show_scalar_bar = True</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_show_scalar_bar</span>
@@ -1950,7 +1954,7 @@
 <span class="sd">        Show edges globally by default.</span>
 
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.show_edges = True  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.show_edges = True</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_show_edges</span>
@@ -1968,7 +1972,7 @@
 <span class="sd">        Disable lighting globally.</span>
 
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.lighting = False  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.lighting = False</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lighting</span>
 
@@ -1985,7 +1989,7 @@
 <span class="sd">        Make all plots non-interactive globally.</span>
 
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.interactive = False  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.interactive = False</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interactive</span>
 
@@ -2002,7 +2006,7 @@
 <span class="sd">        Render points as spheres by default globally.</span>
 
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.render_points_as_spheres = True  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.render_points_as_spheres = True</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_render_points_as_spheres</span>
 
@@ -2019,7 +2023,7 @@
 <span class="sd">        Set transparent_background globally to ``True``.</span>
 
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.transparent_background = True  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.transparent_background = True</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_transparent_background</span>
@@ -2039,7 +2043,7 @@
 <span class="sd">        Set title globally to &#39;plot&#39;.</span>
 
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.title = &#39;plot&#39;  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.title = &#39;plot&#39;</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_title</span>
@@ -2057,8 +2061,8 @@
 <span class="sd">        Enable anti-aliasing in the global theme.</span>
 
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.antialiasing = True  # doctest:+SKIP</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.antialiasing  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.antialiasing = True</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.antialiasing</span>
 <span class="sd">        True</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -2079,7 +2083,7 @@
 <span class="sd">        Set the default number of multisamples to 2.</span>
 
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.multi_samples = 2  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.multi_samples = 2</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_multi_samples</span>
@@ -2098,7 +2102,7 @@
 <span class="sd">        middle of the window).</span>
 
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.multi_rendering_splitting_position = 0.5  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.multi_rendering_splitting_position = 0.5</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_multi_rendering_splitting_position</span>
@@ -2124,7 +2128,7 @@
 <span class="sd">        Set default volume mapper globally to &#39;gpu&#39;.</span>
 
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.volume_mapper = &#39;gpu&#39;  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.volume_mapper = &#39;gpu&#39;</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_volume_mapper</span>
@@ -2149,7 +2153,7 @@
 <span class="sd">        Set the global smooth_shading parameter default to ``True``.</span>
 
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.smooth_shading = True  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.smooth_shading = True</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_smooth_shading</span>
@@ -2168,9 +2172,9 @@
 <span class="sd">        with 8 peels.</span>
 
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.depth_peeling.number_of_peels = 8  # doctest:+SKIP</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.depth_peeling.occlusion_ratio = 0.0  # doctest:+SKIP</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.depth_peeling.enabled = True  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.depth_peeling.number_of_peels = 8</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.depth_peeling.occlusion_ratio = 0.0</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.depth_peeling.enabled = True</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_depth_peeling</span>
@@ -2190,9 +2194,9 @@
 <span class="sd">        Set parameters of the silhouette.</span>
 
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.silhouette.color = &#39;grey&#39;  # doctest:+SKIP</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.silhouette.line_width = 2.0  # doctest:+SKIP</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.silhouette.feature_angle = 20  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.silhouette.color = &#39;grey&#39;</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.silhouette.line_width = 2.0</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.silhouette.feature_angle = 20</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_silhouette</span>
@@ -2223,15 +2227,15 @@
 <span class="sd">        Set the x axis color to black.</span>
 
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.axes.x_color = &#39;black&#39;  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.axes.x_color = &#39;black&#39;</span>
 
 <span class="sd">        Show axes by default.</span>
 
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.axes.show = True  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.axes.show = True</span>
 
 <span class="sd">        Use the ``vtk.vtkCubeAxesActor``.</span>
 
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.axes.box = True  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.axes.box = True</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_axes</span>
@@ -2248,7 +2252,7 @@
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.restore_defaults()  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.restore_defaults()</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span></div>
@@ -2293,6 +2297,8 @@
             <span class="s1">&#39;Return Camera Position&#39;</span><span class="p">:</span> <span class="s1">&#39;return_cpos&#39;</span><span class="p">,</span>
             <span class="s1">&#39;Hidden Line Removal&#39;</span><span class="p">:</span> <span class="s1">&#39;hidden_line_removal&#39;</span><span class="p">,</span>
             <span class="s1">&#39;Anti-Aliasing&#39;</span><span class="p">:</span> <span class="s1">&#39;_antialiasing&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;Split sharp edges&#39;</span><span class="p">:</span> <span class="s1">&#39;_split_sharp_edges&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;Sharp edges feat. angle&#39;</span><span class="p">:</span> <span class="s1">&#39;_sharp_edges_feature_angle&#39;</span><span class="p">,</span>
         <span class="p">}</span>
         <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">attr</span> <span class="ow">in</span> <span class="n">parm</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
             <span class="n">setting</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attr</span><span class="p">)</span>
@@ -2329,8 +2335,8 @@
 <span class="sd">        &gt;&gt;&gt; my_theme.font.title_size = 40</span>
 <span class="sd">        &gt;&gt;&gt; my_theme.cmap = &#39;jet&#39;</span>
 <span class="sd">        ...</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.load_theme(my_theme)  # doctest:+SKIP</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.font.size  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.load_theme(my_theme)</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.font.size</span>
 <span class="sd">        20</span>
 
 <span class="sd">        Create a custom theme from the dark theme and load it into</span>
@@ -2339,8 +2345,8 @@
 <span class="sd">        &gt;&gt;&gt; from pyvista.themes import DarkTheme</span>
 <span class="sd">        &gt;&gt;&gt; my_theme = DarkTheme()</span>
 <span class="sd">        &gt;&gt;&gt; my_theme.show_edges = True</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.load_theme(my_theme)  # doctest:+SKIP</span>
-<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.show_edges  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.load_theme(my_theme)</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.show_edges</span>
 <span class="sd">        True</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -2370,8 +2376,8 @@
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
 <span class="sd">        &gt;&gt;&gt; theme = pyvista.themes.DefaultTheme()</span>
 <span class="sd">        &gt;&gt;&gt; theme.background = &#39;white&#39;</span>
-<span class="sd">        &gt;&gt;&gt; theme.save(&#39;my_theme.json&#39;)  # doctest:+SKIP</span>
-<span class="sd">        &gt;&gt;&gt; loaded_theme = pyvista.load_theme(&#39;my_theme.json&#39;)  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; theme.save(&#39;my_theme.json&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; loaded_theme = pyvista.load_theme(&#39;my_theme.json&#39;)</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
@@ -2399,7 +2405,51 @@
         <span class="k">if</span> <span class="n">value</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">jupyter_backend</span> <span class="o">=</span> <span class="s1">&#39;ipyvtklink&#39;</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">jupyter_backend</span> <span class="o">=</span> <span class="s1">&#39;static&#39;</span></div>
+            <span class="bp">self</span><span class="o">.</span><span class="n">jupyter_backend</span> <span class="o">=</span> <span class="s1">&#39;static&#39;</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">split_sharp_edges</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Set or return splitting sharp edges.</span>
+
+<span class="sd">        See :ref:`shading_example` for an example showing split sharp edges.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        Enable the splitting of sharp edges globally.</span>
+
+<span class="sd">        &gt;&gt;&gt; import pyvista</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.split_sharp_edges = True</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.split_sharp_edges</span>
+<span class="sd">        True</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_split_sharp_edges</span>
+
+    <span class="nd">@split_sharp_edges</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">split_sharp_edges</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="nb">bool</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_split_sharp_edges</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">sharp_edges_feature_angle</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Set or return the angle of the sharp edges feature angle.</span>
+
+<span class="sd">        See :ref:`shading_example` for an example showing split sharp edges.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        Change the sharp edges feature angle to 45 degrees.</span>
+
+<span class="sd">        &gt;&gt;&gt; import pyvista</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.sharp_edges_feature_angle = 45.0</span>
+<span class="sd">        &gt;&gt;&gt; pyvista.global_theme.sharp_edges_feature_angle</span>
+<span class="sd">        45.0</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sharp_edges_feature_angle</span>
+
+    <span class="nd">@sharp_edges_feature_angle</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">sharp_edges_feature_angle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_sharp_edges_feature_angle</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="DarkTheme"><a class="viewcode-back" href="../../api/plotting/_autosummary/pyvista.themes.DarkTheme.html#pyvista.DarkTheme">[ドキュメント]</a><span class="k">class</span> <span class="nc">DarkTheme</span><span class="p">(</span><span class="n">DefaultTheme</span><span class="p">):</span>
@@ -2413,11 +2463,11 @@
 
 <span class="sd">    &gt;&gt;&gt; import pyvista</span>
 <span class="sd">    &gt;&gt;&gt; from pyvista import themes</span>
-<span class="sd">    &gt;&gt;&gt; pyvista.set_plot_theme(themes.DarkTheme())  # doctest:+SKIP</span>
+<span class="sd">    &gt;&gt;&gt; pyvista.set_plot_theme(themes.DarkTheme())</span>
 
 <span class="sd">    Alternatively, set via a string.</span>
 
-<span class="sd">    &gt;&gt;&gt; pyvista.set_plot_theme(&#39;dark&#39;)  # doctest:+SKIP</span>
+<span class="sd">    &gt;&gt;&gt; pyvista.set_plot_theme(&#39;dark&#39;)</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -2446,11 +2496,11 @@
 
 <span class="sd">    &gt;&gt;&gt; import pyvista</span>
 <span class="sd">    &gt;&gt;&gt; from pyvista import themes</span>
-<span class="sd">    &gt;&gt;&gt; pyvista.set_plot_theme(themes.ParaViewTheme())  # doctest:+SKIP</span>
+<span class="sd">    &gt;&gt;&gt; pyvista.set_plot_theme(themes.ParaViewTheme())</span>
 
 <span class="sd">    Alternatively, set via a string.</span>
 
-<span class="sd">    &gt;&gt;&gt; pyvista.set_plot_theme(&#39;paraview&#39;)  # doctest:+SKIP</span>
+<span class="sd">    &gt;&gt;&gt; pyvista.set_plot_theme(&#39;paraview&#39;)</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -2491,11 +2541,11 @@
 
 <span class="sd">    &gt;&gt;&gt; import pyvista</span>
 <span class="sd">    &gt;&gt;&gt; from pyvista import themes</span>
-<span class="sd">    &gt;&gt;&gt; pyvista.set_plot_theme(themes.DocumentTheme())  # doctest:+SKIP</span>
+<span class="sd">    &gt;&gt;&gt; pyvista.set_plot_theme(themes.DocumentTheme())</span>
 
 <span class="sd">    Alternatively, set via a string.</span>
 
-<span class="sd">    &gt;&gt;&gt; pyvista.set_plot_theme(&#39;document&#39;)  # doctest:+SKIP</span>
+<span class="sd">    &gt;&gt;&gt; pyvista.set_plot_theme(&#39;document&#39;)</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 

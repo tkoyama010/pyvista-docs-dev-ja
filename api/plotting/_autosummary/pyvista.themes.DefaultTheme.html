@@ -395,6 +395,11 @@
         </a>
        </li>
        <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.themes.DefaultTheme.sharp_edges_feature_angle.html">
+         sharp_edges_feature_angle
+        </a>
+       </li>
+       <li class="toctree-l4">
         <a class="reference internal" href="pyvista.themes.DefaultTheme.show_edges.html">
          show_edges
         </a>
@@ -417,6 +422,11 @@
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.themes.DefaultTheme.smooth_shading.html">
          smooth_shading
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.themes.DefaultTheme.split_sharp_edges.html">
+         split_sharp_edges
         </a>
        </li>
        <li class="toctree-l4">
@@ -589,18 +599,18 @@
 <p class="rubric">例</p>
 <p>グローバルな既定の背景色を白に変更します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;white&#39;</span>  
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;white&#39;</span>
 </pre></div>
 </div>
 <p>デフォルトでエッジを表示します．</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">show_edges</span> <span class="o">=</span> <span class="kc">True</span>  
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">show_edges</span> <span class="o">=</span> <span class="kc">True</span>
 </pre></div>
 </div>
 <p>デフォルトのテーマから新しいテーマを作成し，グローバルに適用します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_theme</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">themes</span><span class="o">.</span><span class="n">DefaultTheme</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">my_theme</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">my_theme</span><span class="o">.</span><span class="n">background</span> <span class="o">=</span> <span class="s1">&#39;white&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">load_theme</span><span class="p">(</span><span class="n">my_theme</span><span class="p">)</span>  
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">load_theme</span><span class="p">(</span><span class="n">my_theme</span><span class="p">)</span>
 </pre></div>
 </div>
 <p class="rubric">メソッド</p>
@@ -718,20 +728,26 @@
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.themes.DefaultTheme.return_cpos.html#pyvista.themes.DefaultTheme.return_cpos" title="pyvista.themes.DefaultTheme.return_cpos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DefaultTheme.return_cpos</span></code></a></p></td>
 <td><p>カメラの位置を返すデフォルトの動作を返すか設定します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.themes.DefaultTheme.show_edges.html#pyvista.themes.DefaultTheme.show_edges" title="pyvista.themes.DefaultTheme.show_edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DefaultTheme.show_edges</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.themes.DefaultTheme.sharp_edges_feature_angle.html#pyvista.themes.DefaultTheme.sharp_edges_feature_angle" title="pyvista.themes.DefaultTheme.sharp_edges_feature_angle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DefaultTheme.sharp_edges_feature_angle</span></code></a></p></td>
+<td><p>Set or return the angle of the sharp edges feature angle.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.themes.DefaultTheme.show_edges.html#pyvista.themes.DefaultTheme.show_edges" title="pyvista.themes.DefaultTheme.show_edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DefaultTheme.show_edges</span></code></a></p></td>
 <td><p>既定のエッジの表示を設定します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.themes.DefaultTheme.show_scalar_bar.html#pyvista.themes.DefaultTheme.show_scalar_bar" title="pyvista.themes.DefaultTheme.show_scalar_bar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DefaultTheme.show_scalar_bar</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.themes.DefaultTheme.show_scalar_bar.html#pyvista.themes.DefaultTheme.show_scalar_bar" title="pyvista.themes.DefaultTheme.show_scalar_bar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DefaultTheme.show_scalar_bar</span></code></a></p></td>
 <td><p>既定のカラーバーの表示を設定します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.themes.DefaultTheme.silhouette.html#pyvista.themes.DefaultTheme.silhouette" title="pyvista.themes.DefaultTheme.silhouette"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DefaultTheme.silhouette</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.themes.DefaultTheme.silhouette.html#pyvista.themes.DefaultTheme.silhouette" title="pyvista.themes.DefaultTheme.silhouette"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DefaultTheme.silhouette</span></code></a></p></td>
 <td><p>デフォルトの <code class="docutils literal notranslate"><span class="pre">silhouette</span></code> の設定を返すか，設定します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.themes.DefaultTheme.slider_styles.html#pyvista.themes.DefaultTheme.slider_styles" title="pyvista.themes.DefaultTheme.slider_styles"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DefaultTheme.slider_styles</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.themes.DefaultTheme.slider_styles.html#pyvista.themes.DefaultTheme.slider_styles" title="pyvista.themes.DefaultTheme.slider_styles"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DefaultTheme.slider_styles</span></code></a></p></td>
 <td><p>デフォルトのスライダスタイル設定を取得します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.themes.DefaultTheme.smooth_shading.html#pyvista.themes.DefaultTheme.smooth_shading" title="pyvista.themes.DefaultTheme.smooth_shading"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DefaultTheme.smooth_shading</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.themes.DefaultTheme.smooth_shading.html#pyvista.themes.DefaultTheme.smooth_shading" title="pyvista.themes.DefaultTheme.smooth_shading"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DefaultTheme.smooth_shading</span></code></a></p></td>
 <td><p>デフォルトの <code class="docutils literal notranslate"><span class="pre">smooth_shading</span></code> のパラメーターを返すか，設定します．</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.themes.DefaultTheme.split_sharp_edges.html#pyvista.themes.DefaultTheme.split_sharp_edges" title="pyvista.themes.DefaultTheme.split_sharp_edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DefaultTheme.split_sharp_edges</span></code></a></p></td>
+<td><p>Set or return splitting sharp edges.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.themes.DefaultTheme.title.html#pyvista.themes.DefaultTheme.title" title="pyvista.themes.DefaultTheme.title"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DefaultTheme.title</span></code></a></p></td>
 <td><p>デフォルトの <code class="docutils literal notranslate"><span class="pre">title</span></code> のパラメーターを返すか，設定します．</p></td>

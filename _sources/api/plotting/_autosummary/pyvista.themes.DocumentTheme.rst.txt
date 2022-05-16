@@ -124,6 +124,9 @@
       DocumentTheme.return_cpos
       
       
+      DocumentTheme.sharp_edges_feature_angle
+      
+      
       DocumentTheme.show_edges
       
       
@@ -137,6 +140,9 @@
       
       
       DocumentTheme.smooth_shading
+      
+      
+      DocumentTheme.split_sharp_edges
       
       
       DocumentTheme.title

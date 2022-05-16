@@ -1,2 +1,2 @@
 import pyvista
-pyvista.global_theme.axes.box = True  # doctest:+SKIP
+pyvista.global_theme.axes.box = True

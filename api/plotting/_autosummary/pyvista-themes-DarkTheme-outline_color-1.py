@@ -1,2 +1,2 @@
 import pyvista
-pyvista.global_theme.outline_color = 'white'  # doctest:+SKIP
+pyvista.global_theme.outline_color = 'white'

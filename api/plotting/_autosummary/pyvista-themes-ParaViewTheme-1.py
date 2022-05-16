@@ -2,8 +2,8 @@
 #
 import pyvista
 from pyvista import themes
-pyvista.set_plot_theme(themes.ParaViewTheme())  # doctest:+SKIP
+pyvista.set_plot_theme(themes.ParaViewTheme())
 #
 # Alternatively, set via a string.
 #
-pyvista.set_plot_theme('paraview')  # doctest:+SKIP
+pyvista.set_plot_theme('paraview')

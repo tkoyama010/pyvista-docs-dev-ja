@@ -124,6 +124,9 @@
       DarkTheme.return_cpos
       
       
+      DarkTheme.sharp_edges_feature_angle
+      
+      
       DarkTheme.show_edges
       
       
@@ -137,6 +140,9 @@
       
       
       DarkTheme.smooth_shading
+      
+      
+      DarkTheme.split_sharp_edges
       
       
       DarkTheme.title

@@ -1344,11 +1344,7 @@
 <p>このフィルタは <code class="docutils literal notranslate"><span class="pre">vtkThreshold</span></code> フィルタを入力データセットに適用し，結果のオブジェクトを取得します．各セルのスカラー値が閾値の基準を満たすセルを抽出します． <code class="docutils literal notranslate"><span class="pre">scalars</span></code> が <code class="docutils literal notranslate"><span class="pre">None</span></code> の場合，アクティブスカラ配列が使用されます．</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>Thresholding is inherently a cell operation, even though it can use
-associated point data for determining whether to keep a cell. In
-other words, whether or not a given point is included after
-thresholding depends on whether that point is part of a cell that
-is kept after thresholding.</p>
+<p>閾値処理は，セルを維持するかどうかを決定するために関連する点データを使用できるにもかかわらず，本質的にセル操作です．つまり，ある点が閾値処理後に含まれるかどうかは，その点が閾値処理後に保持されるセルの一部であるかどうかに依存します．</p>
 </div>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>

@@ -440,6 +440,11 @@
         </a>
        </li>
        <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.themes.ParaViewTheme.sharp_edges_feature_angle.html">
+         sharp_edges_feature_angle
+        </a>
+       </li>
+       <li class="toctree-l4">
         <a class="reference internal" href="pyvista.themes.ParaViewTheme.show_edges.html">
          show_edges
         </a>
@@ -462,6 +467,11 @@
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.themes.ParaViewTheme.smooth_shading.html">
          smooth_shading
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.themes.ParaViewTheme.split_sharp_edges.html">
+         split_sharp_edges
         </a>
        </li>
        <li class="toctree-l4">
@@ -603,8 +613,8 @@
 <span class="gp">&gt;&gt;&gt; </span><span class="n">my_theme</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">title_size</span> <span class="o">=</span> <span class="mi">40</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">my_theme</span><span class="o">.</span><span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;jet&#39;</span>
 <span class="gp">...</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">load_theme</span><span class="p">(</span><span class="n">my_theme</span><span class="p">)</span>  
-<span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">size</span>  
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">load_theme</span><span class="p">(</span><span class="n">my_theme</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">size</span>
 <span class="go">20</span>
 </pre></div>
 </div>
@@ -612,8 +622,8 @@
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista.themes</span> <span class="kn">import</span> <span class="n">DarkTheme</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">my_theme</span> <span class="o">=</span> <span class="n">DarkTheme</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">my_theme</span><span class="o">.</span><span class="n">show_edges</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">load_theme</span><span class="p">(</span><span class="n">my_theme</span><span class="p">)</span>  
-<span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">show_edges</span>  
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">load_theme</span><span class="p">(</span><span class="n">my_theme</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">show_edges</span>
 <span class="go">True</span>
 </pre></div>
 </div>

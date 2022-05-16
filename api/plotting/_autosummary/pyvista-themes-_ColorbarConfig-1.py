@@ -1,4 +1,4 @@
 # Set the colorbar width.
 #
 import pyvista
-pyvista.global_theme.colorbar_horizontal.width = 0.2  # doctest:+SKIP
+pyvista.global_theme.colorbar_horizontal.width = 0.2

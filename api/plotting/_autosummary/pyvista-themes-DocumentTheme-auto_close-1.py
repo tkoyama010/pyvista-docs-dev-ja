@@ -1,2 +1,2 @@
 import pyvista
-pyvista.global_theme.auto_close = False  # doctest:+SKIP
+pyvista.global_theme.auto_close = False

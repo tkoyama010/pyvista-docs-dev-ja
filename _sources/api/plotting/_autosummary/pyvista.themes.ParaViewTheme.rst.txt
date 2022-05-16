@@ -124,6 +124,9 @@
       ParaViewTheme.return_cpos
       
       
+      ParaViewTheme.sharp_edges_feature_angle
+      
+      
       ParaViewTheme.show_edges
       
       
@@ -137,6 +140,9 @@
       
       
       ParaViewTheme.smooth_shading
+      
+      
+      ParaViewTheme.split_sharp_edges
       
       
       ParaViewTheme.title

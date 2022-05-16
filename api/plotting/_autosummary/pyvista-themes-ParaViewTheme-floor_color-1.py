@@ -1,2 +1,2 @@
 import pyvista
-pyvista.global_theme.floor_color = 'black'  # doctest:+SKIP
+pyvista.global_theme.floor_color = 'black'

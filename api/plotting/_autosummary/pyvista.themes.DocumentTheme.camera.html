@@ -445,6 +445,11 @@
         </a>
        </li>
        <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.themes.DocumentTheme.sharp_edges_feature_angle.html">
+         sharp_edges_feature_angle
+        </a>
+       </li>
+       <li class="toctree-l4">
         <a class="reference internal" href="pyvista.themes.DocumentTheme.show_edges.html">
          show_edges
         </a>
@@ -467,6 +472,11 @@
        <li class="toctree-l4">
         <a class="reference internal" href="pyvista.themes.DocumentTheme.smooth_shading.html">
          smooth_shading
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pyvista.themes.DocumentTheme.split_sharp_edges.html">
+         split_sharp_edges
         </a>
        </li>
        <li class="toctree-l4">
@@ -589,16 +599,16 @@
 <p class="rubric">例</p>
 <p>カメラの位置とビューの両方を設定します．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">camera</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;position&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>  
-<span class="gp">... </span>                               <span class="s1">&#39;viewup&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]}</span>  
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">camera</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;position&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+<span class="gp">... </span>                               <span class="s1">&#39;viewup&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]}</span>
 </pre></div>
 </div>
 <p>カメラのデフォルト位置を設定します．</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">camera</span><span class="p">[</span><span class="s1">&#39;position&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>  
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">camera</span><span class="p">[</span><span class="s1">&#39;position&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>カメラのデフォルトビューを設定します．</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">camera</span><span class="p">[</span><span class="s1">&#39;viewup&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>  
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyvista</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">camera</span><span class="p">[</span><span class="s1">&#39;viewup&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
 </dd></dl>
