@@ -1122,11 +1122,11 @@
 <span class="sd">            ``&#39;point&#39;`` or ``&#39;cell&#39;``.</span>
 
 <span class="sd">        all_scalars : bool, optional</span>
-<span class="sd">            If using scalars from point data, all scalars for all</span>
+<span class="sd">            If using scalars from point data, all</span>
 <span class="sd">            points in a cell must satisfy the threshold when this</span>
 <span class="sd">            value is ``True``.  When ``False``, any point of the cell</span>
 <span class="sd">            with a scalar value satisfying the threshold criterion</span>
-<span class="sd">            will extract the cell.</span>
+<span class="sd">            will extract the cell. Has no effect when using cell data.</span>
 
 <span class="sd">        progress_bar : bool, optional</span>
 <span class="sd">            Display a progress bar to indicate progress.</span>
@@ -1185,12 +1185,6 @@
 <span class="sd">        See :ref:`common_filter_example` for more examples using this filter.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="n">all_scalars</span> <span class="ow">and</span> <span class="n">scalars</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-                <span class="s1">&#39;Setting `all_scalars=True` and designating `scalars` &#39;</span>
-                <span class="s1">&#39;is incompatible.  Set one or the other but not both.&#39;</span>
-            <span class="p">)</span>
-
         <span class="c1"># set the scalars to threshold on</span>
         <span class="k">if</span> <span class="n">scalars</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">pyvista</span><span class="o">.</span><span class="n">set_default_active_scalars</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>

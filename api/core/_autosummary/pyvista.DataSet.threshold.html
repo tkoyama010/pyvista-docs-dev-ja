@@ -1074,7 +1074,11 @@
 </dd>
 <dt><strong>preference</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">scalars</span></code> が指定されている場合，これはデータセット内で検索するために推奨される配列型です． <code class="docutils literal notranslate"><span class="pre">'point'</span></code> または <code class="docutils literal notranslate"><span class="pre">'cell'</span></code> のいずれかでなければなりません．</p>
 </dd>
-<dt><strong>all_scalars</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>点データからスカラーを使用する場合，この値が <code class="docutils literal notranslate"><span class="pre">True</span></code> のときは，セル内のすべての点のすべてのスカラーが閾値を満たす必要があります． <code class="docutils literal notranslate"><span class="pre">False</span></code> のときは，閾値の基準を満たすスカラー値を持つセルの任意の点がセルを抽出します．</p>
+<dt><strong>all_scalars</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>If using scalars from point data, all
+points in a cell must satisfy the threshold when this
+value is <code class="docutils literal notranslate"><span class="pre">True</span></code>.  When <code class="docutils literal notranslate"><span class="pre">False</span></code>, any point of the cell
+with a scalar value satisfying the threshold criterion
+will extract the cell. Has no effect when using cell data.</p>
 </dd>
 <dt><strong>progress_bar</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>進行状況を示す進行状況バーを表示します．</p>
 </dd>
