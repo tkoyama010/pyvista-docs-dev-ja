@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>clear_camera_widgets &#8212; PyVista 0.35.dev0 ドキュメント</title>
+    <title>MultipleLines &#8212; PyVista 0.35.dev0 ドキュメント</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -49,8 +49,8 @@
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="検索" href="../../../search.html" />
-    <link rel="next" title="clear_line_widgets" href="pyvista.WidgetHelper.clear_line_widgets.html" />
-    <link rel="prev" title="clear_button_widgets" href="pyvista.WidgetHelper.clear_button_widgets.html" />
+    <link rel="next" title="Tube" href="pyvista.Tube.html" />
+    <link rel="prev" title="Line" href="pyvista.Line.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="ja">
     
@@ -189,9 +189,14 @@
    コアAPI
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../plotting/index.html">
+   プロット
+  </a>
+ </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../index.html">
-   プロット
+   ユーティリティ
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -199,39 +204,9 @@
    </i>
   </label>
   <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../plotting.html">
-     プロット
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../qt_plotting.html">
-     PyvistaとPyQt
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../theme.html">
-     テーマ
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="pyvista.Plotter.html">
-     pyvista.Plotter
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="pyvista.Renderer.html">
-     pyvista.Renderer
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../charts/index.html">
-     チャート
-    </a>
-   </li>
    <li class="toctree-l2 current active has-children">
-    <a class="reference internal" href="pyvista.WidgetHelper.html">
-     pyvista.WidgetHelper
+    <a class="reference internal" href="../geometric.html">
+     ジオメトリオブジェクト
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -240,143 +215,158 @@
     </label>
     <ul class="current">
      <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.WidgetHelper.add_box_widget.html">
-       add_box_widget
+      <a class="reference internal" href="pyvista.Arrow.html">
+       Arrow
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.WidgetHelper.add_camera_orientation_widget.html">
-       add_camera_orientation_widget
+      <a class="reference internal" href="pyvista.Box.html">
+       Box
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.WidgetHelper.add_checkbox_button_widget.html">
-       add_checkbox_button_widget
+      <a class="reference internal" href="pyvista.Circle.html">
+       Circle
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.WidgetHelper.add_line_widget.html">
-       add_line_widget
+      <a class="reference internal" href="pyvista.CircularArc.html">
+       CircularArc
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.WidgetHelper.add_mesh_clip_box.html">
-       add_mesh_clip_box
+      <a class="reference internal" href="pyvista.CircularArcFromNormal.html">
+       CircularArcFromNormal
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.WidgetHelper.add_mesh_clip_plane.html">
-       add_mesh_clip_plane
+      <a class="reference internal" href="pyvista.Cone.html">
+       Cone
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.WidgetHelper.add_mesh_isovalue.html">
-       add_mesh_isovalue
+      <a class="reference internal" href="pyvista.Cube.html">
+       Cube
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.WidgetHelper.add_mesh_slice.html">
-       add_mesh_slice
+      <a class="reference internal" href="pyvista.Cylinder.html">
+       Cylinder
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.WidgetHelper.add_mesh_slice_orthogonal.html">
-       add_mesh_slice_orthogonal
+      <a class="reference internal" href="pyvista.CylinderStructured.html">
+       CylinderStructured
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.WidgetHelper.add_mesh_slice_spline.html">
-       add_mesh_slice_spline
+      <a class="reference internal" href="pyvista.Disc.html">
+       Disc
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.WidgetHelper.add_mesh_threshold.html">
-       add_mesh_threshold
+      <a class="reference internal" href="pyvista.Dodecahedron.html">
+       Dodecahedron
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.WidgetHelper.add_plane_widget.html">
-       add_plane_widget
+      <a class="reference internal" href="pyvista.Icosahedron.html">
+       Icosahedron
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.WidgetHelper.add_slider_widget.html">
-       add_slider_widget
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.WidgetHelper.add_sphere_widget.html">
-       add_sphere_widget
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.WidgetHelper.add_spline_widget.html">
-       add_spline_widget
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.WidgetHelper.add_text_slider_widget.html">
-       add_text_slider_widget
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.WidgetHelper.clear_box_widgets.html">
-       clear_box_widgets
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.WidgetHelper.clear_button_widgets.html">
-       clear_button_widgets
+      <a class="reference internal" href="pyvista.Line.html">
+       Line
       </a>
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       clear_camera_widgets
+       MultipleLines
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.WidgetHelper.clear_line_widgets.html">
-       clear_line_widgets
+      <a class="reference internal" href="pyvista.Tube.html">
+       Tube
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.WidgetHelper.clear_plane_widgets.html">
-       clear_plane_widgets
+      <a class="reference internal" href="pyvista.Octahedron.html">
+       Octahedron
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.WidgetHelper.clear_slider_widgets.html">
-       clear_slider_widgets
+      <a class="reference internal" href="pyvista.Plane.html">
+       Plane
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.WidgetHelper.clear_sphere_widgets.html">
-       clear_sphere_widgets
+      <a class="reference internal" href="pyvista.PlatonicSolid.html">
+       PlatonicSolid
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.WidgetHelper.clear_spline_widgets.html">
-       clear_spline_widgets
+      <a class="reference internal" href="pyvista.Polygon.html">
+       Polygon
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="pyvista.WidgetHelper.close.html">
-       close
+      <a class="reference internal" href="pyvista.Pyramid.html">
+       Pyramid
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.Rectangle.html">
+       Rectangle
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.Sphere.html">
+       Sphere
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.Spline.html">
+       Spline
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.Superquadric.html">
+       Superquadric
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.Tetrahedron.html">
+       Tetrahedron
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.Text3D.html">
+       Text3D
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.Triangle.html">
+       Triangle
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.Wavelet.html">
+       Wavelet
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../conv_func.html">
-     便利な機能
+    <a class="reference internal" href="../parametric.html">
+     パラメトリックオブジェクト
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../utilities.html">
+     一般ユーティリティ
     </a>
    </li>
   </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../utilities/index.html">
-   ユーティリティ
-  </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../readers/index.html">
@@ -428,12 +418,36 @@
               
               <div>
                 
-  <section id="clear-camera-widgets">
-<h1>clear_camera_widgets<a class="headerlink" href="#clear-camera-widgets" title="このヘッドラインへのパーマリンク">#</a></h1>
-<dl class="py method">
-<dt class="sig sig-object py" id="pyvista.WidgetHelper.clear_camera_widgets">
-<span class="sig-prename descclassname"><span class="pre">WidgetHelper.</span></span><span class="sig-name descname"><span class="pre">clear_camera_widgets</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/pyvista/plotting/widgets.html#WidgetHelper.clear_camera_widgets"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#pyvista.WidgetHelper.clear_camera_widgets" title="この定義へのパーマリンク">#</a></dt>
-<dd><p>カメラウィジェットをすべて削除にします．</p>
+  <section id="multiplelines">
+<h1>MultipleLines<a class="headerlink" href="#multiplelines" title="このヘッドラインへのパーマリンク">#</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyvista.MultipleLines">
+<span class="sig-name descname"><span class="pre">MultipleLines</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[[-</span> <span class="pre">0.5,</span> <span class="pre">0.0,</span> <span class="pre">0.0],</span> <span class="pre">[0.5,</span> <span class="pre">0.0,</span> <span class="pre">0.0]]</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/pyvista/utilities/geometric_objects.html#MultipleLines"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#pyvista.MultipleLines" title="この定義へのパーマリンク">#</a></dt>
+<dd><p>複数の線を作成します．</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>points</strong><span class="classifier">np.ndarray または python:list, optional</span></dt><dd><p>折れ線を定義する点のリスト，デフォルトは <code class="docutils literal notranslate"><span class="pre">[[-0.5,</span> <span class="pre">0.0,</span> <span class="pre">0.0],</span> <span class="pre">[0.5,</span> <span class="pre">0.0,</span> <span class="pre">0.0]]</span></code> ．</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><dl class="simple">
+<dt><a class="reference internal" href="../../core/_autosummary/pyvista.PolyData.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a></dt><dd><p>ラインメッシュです．</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">例</p>
+<p><code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">0,</span> <span class="pre">0)</span></code> ， <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">0,</span> <span class="pre">1)</span></code> と  <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">0,</span> <span class="pre">1)</span></code> の間に複数の線を引きます．</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">MultipleLines</span><span class="p">(</span><span class="n">points</span><span class="o">=</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+<figure class="align-default">
+<img alt="../../../_images/pyvista-MultipleLines-1_00_00.png" src="../../../_images/pyvista-MultipleLines-1_00_00.png" />
+</figure>
 </dd></dl>
 
 </section>

@@ -1106,11 +1106,17 @@
 </div>
 <section class="sphx-glr-example-title" id="slider-bar-widget">
 <span id="slider-bar-widget-example"></span><span id="sphx-glr-examples-03-widgets-slider-bar-widget-py"></span><h1>スライダバーウィジェット<a class="headerlink" href="#slider-bar-widget" title="このヘッドラインへのパーマリンク">#</a></h1>
-<p>スライダウィジェットは， <a class="reference internal" href="../../api/plotting/_autosummary/pyvista.WidgetHelper.add_slider_widget.html#pyvista.WidgetHelper.add_slider_widget" title="pyvista.WidgetHelper.add_slider_widget"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.WidgetHelper.add_slider_widget()</span></code></a> メソッドおよび <a class="reference internal" href="../../api/plotting/_autosummary/pyvista.WidgetHelper.clear_slider_widgets.html#pyvista.WidgetHelper.clear_slider_widgets" title="pyvista.WidgetHelper.clear_slider_widgets"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.WidgetHelper.clear_slider_widgets()</span></code></a> メソッドによって，それぞれ有効および無効にすることができます．これは，ほぼすべてのものに使用できる値を制御できるため，最も用途の広いウィジェットの1つです．</p>
+<p>The slider widget can be enabled and disabled by the
+<a class="reference internal" href="../../api/plotting/_autosummary/pyvista.Plotter.add_slider_widget.html#pyvista.Plotter.add_slider_widget" title="pyvista.Plotter.add_slider_widget"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Plotter.add_slider_widget()</span></code></a> and
+<a class="reference internal" href="../../api/plotting/_autosummary/pyvista.Plotter.clear_slider_widgets.html#pyvista.Plotter.clear_slider_widgets" title="pyvista.Plotter.clear_slider_widgets"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Plotter.clear_slider_widgets()</span></code></a> methods respectively.
+This is one of the most versatile widgets as it can control a value that can
+be used for just about anything.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
-<p>追加したヘルパーメソッドの1つに <a class="reference internal" href="../../api/plotting/_autosummary/pyvista.WidgetHelper.add_mesh_threshold.html#pyvista.WidgetHelper.add_mesh_threshold" title="pyvista.WidgetHelper.add_mesh_threshold"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.WidgetHelper.add_mesh_threshold()</span></code></a> メソッドがあります．これは，スライダウィジェットを利用して閾値を制御します．</p>
+<p>One helper method we've added is the
+<a class="reference internal" href="../../api/plotting/_autosummary/pyvista.Plotter.add_mesh_threshold.html#pyvista.Plotter.add_mesh_threshold" title="pyvista.Plotter.add_mesh_threshold"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Plotter.add_mesh_threshold()</span></code></a> method which leverages the
+slider widget to control a thresholding value.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 
@@ -1126,7 +1132,7 @@
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">出力:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[UnstructuredGrid (0x7f5296b620a0)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[UnstructuredGrid (0x7fcb43388940)
   N Cells:  115425
   N Points: 179772
   X Bounds: 3.760e+01, 1.171e+02
@@ -1157,7 +1163,7 @@
 </div>
 <img src="../../_images/sphx_glr_slider-bar-widget_002.png" srcset="../../_images/sphx_glr_slider-bar-widget_002.png" alt="slider bar widget" class = "sphx-glr-single-img"/><p>以下はユーザ対話型のスクリーンショットです</p>
 <img alt="../../_images/slider-widget-resolution.gif" src="../../_images/slider-widget-resolution.gif" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.204 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.400 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-03-widgets-slider-bar-widget-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/aa2c7dd4e54a5469da7c8e70ad16c422/slider-bar-widget.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">slider-bar-widget.py</span></code></a></p>

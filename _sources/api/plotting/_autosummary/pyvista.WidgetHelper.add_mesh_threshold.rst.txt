@@ -1,6 +1,0 @@
-add\_mesh\_threshold
-====================
-
-.. currentmodule:: pyvista
-
-.. automethod:: WidgetHelper.add_mesh_threshold

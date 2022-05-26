@@ -1,6 +1,0 @@
-add\_camera\_orientation\_widget
-================================
-
-.. currentmodule:: pyvista
-
-.. automethod:: WidgetHelper.add_camera_orientation_widget

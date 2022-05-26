@@ -1096,8 +1096,15 @@
 </div>
 <section class="sphx-glr-example-title" id="spline-widget">
 <span id="sphx-glr-examples-03-widgets-spline-widget-py"></span><h1>スプラインウィジェット<a class="headerlink" href="#spline-widget" title="このヘッドラインへのパーマリンク">#</a></h1>
-<p>スプラインウィジェットは， <a class="reference internal" href="../../api/plotting/_autosummary/pyvista.WidgetHelper.add_spline_widget.html#pyvista.WidgetHelper.add_spline_widget" title="pyvista.WidgetHelper.add_spline_widget"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.WidgetHelper.add_spline_widget()</span></code></a> メソッドと <a class="reference internal" href="../../api/plotting/_autosummary/pyvista.WidgetHelper.clear_spline_widgets.html#pyvista.WidgetHelper.clear_spline_widgets" title="pyvista.WidgetHelper.clear_spline_widgets"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.WidgetHelper.clear_spline_widgets()</span></code></a> メソッドでそれぞれ有効または無効にできます．このウィジェットを使用すると，ユーザはシーンを通してポリゴンライン (スプライン) をインタラクティブに作成し，そのスプラインを使用できます．</p>
-<p>スプラインを使用する一般的なタスクは，不規則なパスを使用してボリュームデータセットをスライスすることです．これを行うために，我々は <a class="reference internal" href="../../api/plotting/_autosummary/pyvista.WidgetHelper.add_mesh_slice_spline.html#pyvista.WidgetHelper.add_mesh_slice_spline" title="pyvista.WidgetHelper.add_mesh_slice_spline"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.WidgetHelper.add_mesh_slice_spline()</span></code></a> という名前の <a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSetFilters.slice_along_line.html#pyvista.DataSetFilters.slice_along_line" title="pyvista.DataSetFilters.slice_along_line"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.slice_along_line()</span></code></a> フィルタを活用する便利なヘルパーメソッドを追加しました．</p>
+<p>A spline widget can be enabled and disabled by the
+<a class="reference internal" href="../../api/plotting/_autosummary/pyvista.Plotter.add_spline_widget.html#pyvista.Plotter.add_spline_widget" title="pyvista.Plotter.add_spline_widget"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Plotter.add_spline_widget()</span></code></a> and
+<a class="reference internal" href="../../api/plotting/_autosummary/pyvista.Plotter.clear_spline_widgets.html#pyvista.Plotter.clear_spline_widgets" title="pyvista.Plotter.clear_spline_widgets"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Plotter.clear_spline_widgets()</span></code></a> methods respectively.
+This widget allows users to interactively create a poly line (spline) through
+a scene and use that spline.</p>
+<p>A common task with splines is to slice a volumetric dataset using an irregular
+path. To do this, we have added a convenient helper method which leverages the
+<a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSetFilters.slice_along_line.html#pyvista.DataSetFilters.slice_along_line" title="pyvista.DataSetFilters.slice_along_line"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.slice_along_line()</span></code></a> filter named
+<a class="reference internal" href="../../api/plotting/_autosummary/pyvista.Plotter.add_mesh_slice_spline.html#pyvista.Plotter.add_mesh_slice_spline" title="pyvista.Plotter.add_mesh_slice_spline"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Plotter.add_mesh_slice_spline()</span></code></a>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
@@ -1123,7 +1130,7 @@
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_spline-widget_001.png" srcset="../../_images/sphx_glr_spline-widget_001.png" alt="spline widget" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.738 seconds)</p>
+<img src="../../_images/sphx_glr_spline-widget_001.png" srcset="../../_images/sphx_glr_spline-widget_001.png" alt="spline widget" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.476 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-03-widgets-spline-widget-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/2534693d7452c4344c796349216cb104/spline-widget.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">spline-widget.py</span></code></a></p>

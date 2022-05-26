@@ -1096,7 +1096,12 @@
 </div>
 <section class="sphx-glr-example-title" id="plane-widget">
 <span id="plane-widget-example"></span><span id="sphx-glr-examples-03-widgets-plane-widget-py"></span><h1>平面ウィジェット<a class="headerlink" href="#plane-widget" title="このヘッドラインへのパーマリンク">#</a></h1>
-<p>プレーンウィジェットは，それぞれ <a class="reference internal" href="../../api/plotting/_autosummary/pyvista.WidgetHelper.add_plane_widget.html#pyvista.WidgetHelper.add_plane_widget" title="pyvista.WidgetHelper.add_plane_widget"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.WidgetHelper.add_plane_widget()</span></code></a> と <a class="reference internal" href="../../api/plotting/_autosummary/pyvista.WidgetHelper.clear_plane_widgets.html#pyvista.WidgetHelper.clear_plane_widgets" title="pyvista.WidgetHelper.clear_plane_widgets"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.WidgetHelper.clear_plane_widgets()</span></code></a> メソッドによって有効と無効にすることができます．すべてのウィジェットと同様に，このプレーンを利用するにはカスタム・コールバック・メソッドを提供する必要があります．メッシュのクリッピングとスライスに平面が最も一般的に使用されることを考慮して，これらのタスクを実行する2つのヘルパーメソッドを用意しました．</p>
+<p>The plane widget can be enabled and disabled by the
+<a class="reference internal" href="../../api/plotting/_autosummary/pyvista.Plotter.add_plane_widget.html#pyvista.Plotter.add_plane_widget" title="pyvista.Plotter.add_plane_widget"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Plotter.add_plane_widget()</span></code></a> and
+<a class="reference internal" href="../../api/plotting/_autosummary/pyvista.Plotter.clear_plane_widgets.html#pyvista.Plotter.clear_plane_widgets" title="pyvista.Plotter.clear_plane_widgets"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Plotter.clear_plane_widgets()</span></code></a> methods respectively.
+As with all widgets, you must provide a custom callback method to utilize that
+plane. Considering that planes are most commonly used for clipping and slicing
+meshes, we have included two helper methods for doing those tasks!</p>
 <p>平面を使用してメッシュをクリップしましょう:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
@@ -1113,7 +1118,7 @@
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">出力:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[UnstructuredGrid (0x7f5296b620a0)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[UnstructuredGrid (0x7fcb43388fa0)
   N Cells:  3538080
   N Points: 3613484
   X Bounds: 9.000e+01, 1.800e+02
@@ -1136,7 +1141,7 @@
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">出力:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[PolyData (0x7f528f1ea820)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[PolyData (0x7fcb43388460)
   N Cells:  38880
   N Points: 39277
   X Bounds: 9.000e+01, 9.000e+01
@@ -1184,7 +1189,7 @@
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_plane-widget_005.png" srcset="../../_images/sphx_glr_plane-widget_005.png" alt="plane widget" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  8.111 seconds)</p>
+<img src="../../_images/sphx_glr_plane-widget_005.png" srcset="../../_images/sphx_glr_plane-widget_005.png" alt="plane widget" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  8.208 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-03-widgets-plane-widget-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/ccc181afa61cc70f112f6b4cac71ff47/plane-widget.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plane-widget.py</span></code></a></p>
