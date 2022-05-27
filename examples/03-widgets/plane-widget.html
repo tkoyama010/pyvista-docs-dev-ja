@@ -1096,12 +1096,7 @@
 </div>
 <section class="sphx-glr-example-title" id="plane-widget">
 <span id="plane-widget-example"></span><span id="sphx-glr-examples-03-widgets-plane-widget-py"></span><h1>平面ウィジェット<a class="headerlink" href="#plane-widget" title="このヘッドラインへのパーマリンク">#</a></h1>
-<p>The plane widget can be enabled and disabled by the
-<a class="reference internal" href="../../api/plotting/_autosummary/pyvista.Plotter.add_plane_widget.html#pyvista.Plotter.add_plane_widget" title="pyvista.Plotter.add_plane_widget"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Plotter.add_plane_widget()</span></code></a> and
-<a class="reference internal" href="../../api/plotting/_autosummary/pyvista.Plotter.clear_plane_widgets.html#pyvista.Plotter.clear_plane_widgets" title="pyvista.Plotter.clear_plane_widgets"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Plotter.clear_plane_widgets()</span></code></a> methods respectively.
-As with all widgets, you must provide a custom callback method to utilize that
-plane. Considering that planes are most commonly used for clipping and slicing
-meshes, we have included two helper methods for doing those tasks!</p>
+<p>プレーンウィジェットは，それぞれ <a class="reference internal" href="../../api/plotting/_autosummary/pyvista.Plotter.add_plane_widget.html#pyvista.Plotter.add_plane_widget" title="pyvista.Plotter.add_plane_widget"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Plotter.add_plane_widget()</span></code></a> と <a class="reference internal" href="../../api/plotting/_autosummary/pyvista.Plotter.clear_plane_widgets.html#pyvista.Plotter.clear_plane_widgets" title="pyvista.Plotter.clear_plane_widgets"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Plotter.clear_plane_widgets()</span></code></a> メソッドによって有効と無効にすることができます．すべてのウィジェットと同様に，このプレーンを利用するにはカスタム・コールバック・メソッドを提供する必要があります．メッシュのクリッピングとスライスに平面が最も一般的に使用されることを考慮して，これらのタスクを実行する2つのヘルパーメソッドを用意しました．</p>
 <p>平面を使用してメッシュをクリップしましょう:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>

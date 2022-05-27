@@ -1096,11 +1096,7 @@
 </div>
 <section class="sphx-glr-example-title" id="line-widget">
 <span id="line-widget-example"></span><span id="sphx-glr-examples-03-widgets-line-widget-py"></span><h1>線ウィジェット<a class="headerlink" href="#line-widget" title="このヘッドラインへのパーマリンク">#</a></h1>
-<p>The line widget can be enabled and disabled by the
-<a class="reference internal" href="../../api/plotting/_autosummary/pyvista.Plotter.add_line_widget.html#pyvista.Plotter.add_line_widget" title="pyvista.Plotter.add_line_widget"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Plotter.add_line_widget()</span></code></a> and
-<a class="reference internal" href="../../api/plotting/_autosummary/pyvista.Plotter.clear_line_widgets.html#pyvista.Plotter.clear_line_widgets" title="pyvista.Plotter.clear_line_widgets"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Plotter.clear_line_widgets()</span></code></a> methods respectively.
-Unfortunately, PyVista does not have any helper methods to utilize this
-widget, so it is necessary to pass a custom callback method.</p>
+<p>行ウィジェットは， <code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.WidgetHelper.add_line_widget()</span></code> および <code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.WidgetHelper.clear_line_widgets()</span></code> メソッドによって，それぞれ有効および無効にすることができます．残念ながら，PyVistaにはこのウィジェットを利用するヘルパー・メソッドがないため，カスタムのコールバック・メソッドを渡す必要があります．</p>
 <p>特に面白い例は，行ウィジェットを使って <a class="reference internal" href="../../api/core/_autosummary/pyvista.DataSetFilters.streamlines.html#pyvista.DataSetFilters.streamlines" title="pyvista.DataSetFilters.streamlines"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.streamlines()</span></code></a> フィルタのソースを作成することです． <code class="docutils literal notranslate"><span class="pre">add_mesh</span></code> で <code class="docutils literal notranslate"><span class="pre">name</span></code> 引数を使用していることに再度注意してください．</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
