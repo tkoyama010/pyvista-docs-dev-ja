@@ -429,64 +429,11 @@
 <dt class="sig sig-object py" id="pyvista.read">
 <span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_ext</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/pyvista/utilities/fileio.html#read"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#pyvista.read" title="この定義へのパーマリンク">#</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">vtk</span></code> や <code class="docutils literal notranslate"><span class="pre">meshio</span></code> でサポートされている任意のファイルタイプを読み込みます．</p>
-<p>使用するリーダーを自動的に判断し，対応するメッシュを pyvista オブジェクトとしてラップします． 最初にネイティブの <code class="docutils literal notranslate"><span class="pre">vtk</span></code> リーダーを試し，次に <code class="docutils literal notranslate"><span class="pre">meshio</span></code> を使用しようとします．</p>
-<p>以下のフォーマットに対応しています．</p>
-<p>標準的なデータセットリーダーです．</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">'.vtk'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'.pvtk'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'.vti'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'.pvti'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'.vtr'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'.pvtr'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'.vtu'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'.pvtu'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'.ply'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'.obj'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'.stl'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'.vtp'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'.vts'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'.vtm'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'.vtmb'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'.case'</span></code></p></li>
-</ul>
-<p>画像フォーマット</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">'.bmp'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'.dem'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'.dcm'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'.img'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'.jpeg'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'.jpg'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'.mha'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'.mhd'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'.nrrd'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'.nhdr'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'.png'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'.pnm'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'.slc'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'.tiff'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'.tif'</span></code></p></li>
-</ul>
-<p>その他のフォーマット</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">'.byu'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'.g'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'.p3d'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'.pts'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'.tri'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'.inp'</span></code></p></li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">注釈</p>
-<p>OpenFoam形式のファイルへの対応は限られています． <code class="docutils literal notranslate"><span class="pre">pyvista.read</span></code> は，単一要素の <a class="reference internal" href="../../core/_autosummary/pyvista.MultiBlock.html#pyvista.MultiBlock" title="pyvista.MultiBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.MultiBlock</span></code></a> に含まれる最初のデータセットのみを自動的に返します． これらのファイルは以下の通りです．</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">'.facet'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'.cas'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'.res'</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'.foam'</span></code></p></li>
-</ul>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">バージョン 0.35.0 で非推奨: </span><cite>attrs</cite> の使用は非推奨です． <a class="reference internal" href="../../readers/_autosummary/pyvista.get_reader.html#pyvista.get_reader" title="pyvista.get_reader"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.get_reader()</span></code></a> を使用して、リーダークラスを使用します．</p>
 </div>
+<p>使用するリーダーを自動的に判断し，対応するメッシュを pyvista オブジェクトとしてラップします． 最初にネイティブの <code class="docutils literal notranslate"><span class="pre">vtk</span></code> リーダーを試し，次に <code class="docutils literal notranslate"><span class="pre">meshio</span></code> を使用しようとします．</p>
+<p>サポートするフォーマットの一覧は <a class="reference internal" href="../../readers/_autosummary/pyvista.get_reader.html#pyvista.get_reader" title="pyvista.get_reader"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.get_reader()</span></code></a> を参照してください．</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
 <p><code class="docutils literal notranslate"><span class="pre">meshio</span></code> がサポートするフォーマットについては <a class="reference external" href="https://github.com/nschloe/meshio">https://github.com/nschloe/meshio</a> をご覧ください． <code class="docutils literal notranslate"><span class="pre">meshio</span></code> を使用したい場合は，必ず <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">meshio</span></code> でインストールしてください．</p>
@@ -496,7 +443,7 @@
 <dd class="field-odd"><dl>
 <dt><strong>filename</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>読み込むファイルへの文字列パス．ファイルのリストが与えられた場合， <a class="reference internal" href="../../core/_autosummary/pyvista.MultiBlock.html#pyvista.MultiBlock" title="pyvista.MultiBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.MultiBlock</span></code></a> データセットが返され，各ファイルはデータセット内の個別のブロックです．</p>
 </dd>
-<dt><strong>attrs</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#dict" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>リーダーで呼び出すアトリビュートのディクショナリ．ディクショナリのキーはアトリビュート/メソッド名で，値はこれらの呼び出しに渡される引数です．呼び出すアトリビュートがない場合は， <code class="docutils literal notranslate"><span class="pre">None</span></code> を値として渡します．</p>
+<dt><strong>attrs</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#dict" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>非推奨． <a class="reference internal" href="../../readers/_autosummary/pyvista.get_reader.html#pyvista.get_reader" title="pyvista.get_reader"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.get_reader()</span></code></a> を使用して，Reader クラスを使用します．リーダーで呼び出すアトリビュートのディクショナリ．ディクショナリのキーはアトリビュート/メソッド名で，値はこれらの呼び出しに渡される引数です．呼び出すアトリビュートがない場合は， <code class="docutils literal notranslate"><span class="pre">None</span></code> を値として渡します．</p>
 </dd>
 <dt><strong>force_ext</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>指定した場合，リーダーは実際の拡張とは異なる拡張によって選択されます．たとえば， <code class="docutils literal notranslate"><span class="pre">'.vts'</span></code> ， <code class="docutils literal notranslate"><span class="pre">'.vtu'</span></code> などです．</p>
 </dd>

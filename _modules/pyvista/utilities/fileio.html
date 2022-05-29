@@ -211,89 +211,7 @@
 
 <span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">_vtk</span>
-
-<span class="n">READERS</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="c1"># Standard dataset readers:</span>
-    <span class="s1">&#39;.vtk&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkDataSetReader</span><span class="p">,</span>
-    <span class="s1">&#39;.pvtk&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">lazy_vtkPDataSetReader</span><span class="p">,</span>
-    <span class="s1">&#39;.vti&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkXMLImageDataReader</span><span class="p">,</span>
-    <span class="s1">&#39;.pvti&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkXMLPImageDataReader</span><span class="p">,</span>
-    <span class="s1">&#39;.vtr&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkXMLRectilinearGridReader</span><span class="p">,</span>
-    <span class="s1">&#39;.pvtr&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkXMLPRectilinearGridReader</span><span class="p">,</span>
-    <span class="s1">&#39;.vtu&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkXMLUnstructuredGridReader</span><span class="p">,</span>
-    <span class="s1">&#39;.pvtu&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkXMLPUnstructuredGridReader</span><span class="p">,</span>
-    <span class="s1">&#39;.ply&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkPLYReader</span><span class="p">,</span>
-    <span class="s1">&#39;.obj&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkOBJReader</span><span class="p">,</span>
-    <span class="s1">&#39;.stl&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkSTLReader</span><span class="p">,</span>
-    <span class="s1">&#39;.vtp&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkXMLPolyDataReader</span><span class="p">,</span>
-    <span class="s1">&#39;.vts&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkXMLStructuredGridReader</span><span class="p">,</span>
-    <span class="s1">&#39;.vtm&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkXMLMultiBlockDataReader</span><span class="p">,</span>
-    <span class="s1">&#39;.vtmb&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkXMLMultiBlockDataReader</span><span class="p">,</span>
-    <span class="s1">&#39;.case&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkGenericEnSightReader</span><span class="p">,</span>
-    <span class="c1"># Image formats:</span>
-    <span class="s1">&#39;.bmp&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkBMPReader</span><span class="p">,</span>
-    <span class="s1">&#39;.dem&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkDEMReader</span><span class="p">,</span>
-    <span class="s1">&#39;.dcm&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkDICOMImageReader</span><span class="p">,</span>
-    <span class="s1">&#39;.img&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkDICOMImageReader</span><span class="p">,</span>
-    <span class="s1">&#39;.jpeg&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkJPEGReader</span><span class="p">,</span>
-    <span class="s1">&#39;.jpg&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkJPEGReader</span><span class="p">,</span>
-    <span class="s1">&#39;.mha&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkMetaImageReader</span><span class="p">,</span>
-    <span class="s1">&#39;.mhd&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkMetaImageReader</span><span class="p">,</span>
-    <span class="s1">&#39;.nrrd&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkNrrdReader</span><span class="p">,</span>
-    <span class="s1">&#39;.nhdr&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkNrrdReader</span><span class="p">,</span>
-    <span class="s1">&#39;.png&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkPNGReader</span><span class="p">,</span>
-    <span class="s1">&#39;.pnm&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkPNMReader</span><span class="p">,</span>  <span class="c1"># TODO: not tested</span>
-    <span class="s1">&#39;.slc&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkSLCReader</span><span class="p">,</span>
-    <span class="s1">&#39;.tiff&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkTIFFReader</span><span class="p">,</span>
-    <span class="s1">&#39;.tif&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkTIFFReader</span><span class="p">,</span>
-    <span class="s1">&#39;.gltf&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkGLTFReader</span><span class="p">,</span>
-    <span class="s1">&#39;.glb&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkGLTFReader</span><span class="p">,</span>
-    <span class="s1">&#39;.hdr&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkHDRReader</span><span class="p">,</span>
-    <span class="c1"># Other formats:</span>
-    <span class="s1">&#39;.byu&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkBYUReader</span><span class="p">,</span>  <span class="c1"># TODO: not tested with this extension</span>
-    <span class="s1">&#39;.g&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkBYUReader</span><span class="p">,</span>
-    <span class="c1"># &#39;.chemml&#39;: _vtk.vtkCMLMoleculeReader, # TODO: not tested</span>
-    <span class="c1"># &#39;.cml&#39;: _vtk.vtkCMLMoleculeReader, # vtkMolecule is not supported by pyvista</span>
-    <span class="c1"># TODO: &#39;.csv&#39;: _vtk.vtkCSVReader, # vtkTables are currently not supported</span>
-    <span class="s1">&#39;.facet&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">lazy_vtkFacetReader</span><span class="p">,</span>
-    <span class="s1">&#39;.cas&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkFLUENTReader</span><span class="p">,</span>  <span class="c1"># TODO: not tested</span>
-    <span class="c1"># &#39;.dat&#39;: _vtk.vtkFLUENTReader, # TODO: not working</span>
-    <span class="c1"># &#39;.cube&#39;: _vtk.vtkGaussianCubeReader, # Contains `atom_types` which are note supported?</span>
-    <span class="s1">&#39;.res&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkMFIXReader</span><span class="p">,</span>  <span class="c1"># TODO: not tested</span>
-    <span class="s1">&#39;.foam&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkOpenFOAMReader</span><span class="p">,</span>
-    <span class="c1"># &#39;.pdb&#39;: _vtk.vtkPDBReader, # Contains `atom_types` which are note supported?</span>
-    <span class="s1">&#39;.p3d&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">lazy_vtkPlot3DMetaReader</span><span class="p">,</span>
-    <span class="s1">&#39;.pts&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkPTSReader</span><span class="p">,</span>
-    <span class="c1"># &#39;.particles&#39;: _vtk.vtkParticleReader, # TODO: not tested</span>
-    <span class="c1"># TODO: &#39;.pht&#39;: _vtk.vtkPhasta??????,</span>
-    <span class="c1"># TODO: &#39;.vpc&#39;: _vtk.vtkVPIC?????,</span>
-    <span class="c1"># &#39;.bin&#39;: _vtk.lazy_vtkMultiBlockPLOT3DReader,# TODO: non-default routine</span>
-    <span class="s1">&#39;.tri&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkMCubesReader</span><span class="p">,</span>
-    <span class="s1">&#39;.inp&#39;</span><span class="p">:</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkAVSucdReader</span><span class="p">,</span>
-<span class="p">}</span>
-
-<span class="n">VTK_MAJOR</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkVersion</span><span class="p">()</span><span class="o">.</span><span class="n">GetVTKMajorVersion</span><span class="p">()</span>
-<span class="n">VTK_MINOR</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkVersion</span><span class="p">()</span><span class="o">.</span><span class="n">GetVTKMinorVersion</span><span class="p">()</span>
-
-<span class="k">if</span> <span class="n">VTK_MAJOR</span> <span class="o">&gt;=</span> <span class="mi">8</span> <span class="ow">and</span> <span class="n">VTK_MINOR</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">READERS</span><span class="p">[</span><span class="s1">&#39;.sgy&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">lazy_vtkSegYReader</span>
-        <span class="n">READERS</span><span class="p">[</span><span class="s1">&#39;.segy&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">lazy_vtkSegYReader</span>
-    <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
-        <span class="k">pass</span>
-
-
-<span class="k">if</span> <span class="n">VTK_MAJOR</span> <span class="o">&gt;=</span> <span class="mi">9</span> <span class="ow">and</span> <span class="n">VTK_MINOR</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">READERS</span><span class="p">[</span><span class="s1">&#39;.hdf&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">lazy_vtkHDFReader</span>
-    <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>  <span class="c1"># pragma: no cover</span>
-        <span class="k">pass</span>
-
-<span class="k">if</span> <span class="n">VTK_MAJOR</span> <span class="o">&gt;=</span> <span class="mi">9</span> <span class="ow">and</span> <span class="n">VTK_MINOR</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">:</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">READERS</span><span class="p">[</span><span class="s1">&#39;.cgns&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">lazy_vtkCGNSReader</span>
-    <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>  <span class="c1"># pragma: no cover</span>
-        <span class="k">pass</span>
+<span class="kn">from</span> <span class="nn">pyvista.utilities.misc</span> <span class="kn">import</span> <span class="n">PyvistaDeprecationWarning</span>
 
 
 <span class="k">def</span> <span class="nf">_get_ext_force</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">force_ext</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
@@ -307,12 +225,6 @@
     <span class="sd">&quot;&quot;&quot;Extract the extension of the filename.&quot;&quot;&quot;</span>
     <span class="n">ext</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">filename</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">ext</span>
-
-
-<span class="k">def</span> <span class="nf">get_vtk_reader</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">force_ext</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Get the corresponding reader based on file extension and instantiates it.&quot;&quot;&quot;</span>
-    <span class="n">ext</span> <span class="o">=</span> <span class="n">_get_ext_force</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">force_ext</span><span class="o">=</span><span class="n">force_ext</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">READERS</span><span class="p">[</span><span class="n">ext</span><span class="p">]()</span>  <span class="c1"># Get and instantiate the reader</span>
 
 
 <span class="k">def</span> <span class="nf">set_vtkwriter_mode</span><span class="p">(</span><span class="n">vtk_writer</span><span class="p">,</span> <span class="n">use_binary</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
@@ -330,79 +242,11 @@
     <span class="k">return</span> <span class="n">vtk_writer</span>
 
 
-<span class="k">def</span> <span class="nf">standard_reader_routine</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">attrs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">progress_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Use a given reader in the common VTK reading pipeline routine.</span>
-
-<span class="sd">    The reader must come from the ``READERS`` mapping.</span>
-
-<span class="sd">    Parameters</span>
-<span class="sd">    ----------</span>
-<span class="sd">    reader : vtkReader</span>
-<span class="sd">        Any instantiated VTK reader class</span>
-
-<span class="sd">    filename : str</span>
-<span class="sd">        The string filename to the data file to read.</span>
-
-<span class="sd">    attrs : dict, optional</span>
-<span class="sd">        A dictionary of attributes to call on the reader. Keys of</span>
-<span class="sd">        dictionary are the attribute/method names and values are the</span>
-<span class="sd">        arguments passed to those calls. If you do not have any</span>
-<span class="sd">        attributes to call, pass ``None`` as the value.</span>
-
-<span class="sd">    progress_bar : bool, optional</span>
-<span class="sd">        Optionally show a progress bar.</span>
-
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span> <span class="nn">pyvista.core.filters</span> <span class="kn">import</span> <span class="n">_update_alg</span>  <span class="c1"># avoid circular import</span>
-
-    <span class="n">observer</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">utilities</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">Observer</span><span class="p">()</span>
-    <span class="n">observer</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">reader</span><span class="p">)</span>
-
-    <span class="k">if</span> <span class="n">attrs</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">attrs</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">attrs</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
-        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;Attributes must be a dictionary of name and arguments.&#39;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">filename</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="n">reader</span><span class="o">.</span><span class="n">SetCaseFileName</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
-        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
-            <span class="n">reader</span><span class="o">.</span><span class="n">SetFileName</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
-    <span class="c1"># Apply any attributes listed</span>
-    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">args</span> <span class="ow">in</span> <span class="n">attrs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-        <span class="n">attr</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">args</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">)):</span>
-                <span class="n">args</span> <span class="o">=</span> <span class="p">[</span><span class="n">args</span><span class="p">]</span>
-            <span class="n">attr</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">attr</span><span class="p">()</span>
-
-    <span class="c1"># Perform the read</span>
-    <span class="k">if</span> <span class="n">filename</span><span class="p">:</span>
-        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Reading </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Reading file&quot;</span>
-
-    <span class="n">_update_alg</span><span class="p">(</span>
-        <span class="n">reader</span><span class="p">,</span>
-        <span class="n">progress_bar</span><span class="o">=</span><span class="n">progress_bar</span><span class="p">,</span>
-        <span class="n">message</span><span class="o">=</span><span class="n">msg</span><span class="p">,</span>
-    <span class="p">)</span>
-
-    <span class="c1"># Check reader for errors</span>
-    <span class="k">if</span> <span class="n">observer</span><span class="o">.</span><span class="n">has_event_occurred</span><span class="p">():</span>
-        <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
-            <span class="sa">f</span><span class="s1">&#39;The VTK reader `</span><span class="si">{</span><span class="n">reader</span><span class="o">.</span><span class="n">GetClassName</span><span class="p">()</span><span class="si">}</span><span class="s1">` raised an error while reading the file.</span><span class="se">\n</span><span class="s1">&#39;</span>
-            <span class="sa">f</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&quot;</span><span class="si">{</span><span class="n">observer</span><span class="o">.</span><span class="n">get_message</span><span class="p">()</span><span class="si">}</span><span class="s1">&quot;&#39;</span>
-        <span class="p">)</span>
-
-    <span class="n">data</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">reader</span><span class="o">.</span><span class="n">GetOutputDataObject</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
-    <span class="n">data</span><span class="o">.</span><span class="n">_post_file_load_processing</span><span class="p">()</span>
-    <span class="k">return</span> <span class="n">data</span>
-
-
 <div class="viewcode-block" id="read_legacy"><a class="viewcode-back" href="../../../api/utilities/_autosummary/pyvista.read_legacy.html#pyvista.read_legacy">[ドキュメント]</a><span class="k">def</span> <span class="nf">read_legacy</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">progress_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Use VTK&#39;s legacy reader to read a file.</span>
+
+<span class="sd">    .. deprecated:: 0.35.0</span>
+<span class="sd">        This function is deprecated. Use :func:`pyvsista.read` instead.</span>
 
 <span class="sd">    This uses ``vtk.vtkDataSetReader`` to read the data.</span>
 
@@ -419,12 +263,6 @@
 <span class="sd">    pyvista.DataSet</span>
 <span class="sd">        Wrapped pyvista mesh.</span>
 
-<span class="sd">    Notes</span>
-<span class="sd">    -----</span>
-<span class="sd">    Normally, you should use :func:`pyvista.read` to read in meshes</span>
-<span class="sd">    from file, and this reader will automatically used for ``&#39;.vtk&#39;``</span>
-<span class="sd">    and ``&#39;.pvtk&#39;`` files.</span>
-
 <span class="sd">    Examples</span>
 <span class="sd">    --------</span>
 <span class="sd">    Load an example mesh using the legacy reader.</span>
@@ -434,90 +272,25 @@
 <span class="sd">    &gt;&gt;&gt; mesh = pyvista.read_legacy(examples.uniformfile)</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+        <span class="s2">&quot;Using read_legacy is deprecated. Use pyvista.read instead&quot;</span><span class="p">,</span> <span class="n">PyvistaDeprecationWarning</span>
+    <span class="p">)</span>
     <span class="n">filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">filename</span><span class="p">)))</span>
-    <span class="n">reader</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkDataSetReader</span><span class="p">()</span>
-    <span class="n">reader</span><span class="o">.</span><span class="n">SetFileName</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
-    <span class="c1"># Ensure all data is fetched with poorly formatted legacy files</span>
-    <span class="n">reader</span><span class="o">.</span><span class="n">ReadAllScalarsOn</span><span class="p">()</span>
-    <span class="n">reader</span><span class="o">.</span><span class="n">ReadAllColorScalarsOn</span><span class="p">()</span>
-    <span class="n">reader</span><span class="o">.</span><span class="n">ReadAllNormalsOn</span><span class="p">()</span>
-    <span class="n">reader</span><span class="o">.</span><span class="n">ReadAllTCoordsOn</span><span class="p">()</span>
-    <span class="n">reader</span><span class="o">.</span><span class="n">ReadAllVectorsOn</span><span class="p">()</span>
-    <span class="n">reader</span><span class="o">.</span><span class="n">ReadAllFieldsOn</span><span class="p">()</span>
-    <span class="n">reader</span><span class="o">.</span><span class="n">ReadAllTensorsOn</span><span class="p">()</span>
-
-    <span class="c1"># Perform the read</span>
-    <span class="n">output</span> <span class="o">=</span> <span class="n">standard_reader_routine</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">progress_bar</span><span class="o">=</span><span class="n">progress_bar</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">output</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s1">&#39;No output when using VTKs legacy reader.&#39;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">output</span></div>
+    <span class="k">return</span> <span class="n">read</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">progress_bar</span><span class="o">=</span><span class="n">progress_bar</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="read"><a class="viewcode-back" href="../../../api/utilities/_autosummary/pyvista.read.html#pyvista.read">[ドキュメント]</a><span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">attrs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">force_ext</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">file_format</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">progress_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Read any file type supported by ``vtk`` or ``meshio``.</span>
 
+<span class="sd">    .. deprecated:: 0.35.0</span>
+<span class="sd">        Use of `attrs` is deprecated.</span>
+<span class="sd">        Use a reader class using :func:`pyvista.get_reader`</span>
+
 <span class="sd">    Automatically determines the correct reader to use then wraps the</span>
 <span class="sd">    corresponding mesh as a pyvista object.  Attempts native ``vtk``</span>
 <span class="sd">    readers first then tries to use ``meshio``.</span>
 
-<span class="sd">    Supports the following formats:</span>
-
-<span class="sd">    Standard dataset readers:</span>
-
-<span class="sd">    * ``&#39;.vtk&#39;``</span>
-<span class="sd">    * ``&#39;.pvtk&#39;``</span>
-<span class="sd">    * ``&#39;.vti&#39;``</span>
-<span class="sd">    * ``&#39;.pvti&#39;``</span>
-<span class="sd">    * ``&#39;.vtr&#39;``</span>
-<span class="sd">    * ``&#39;.pvtr&#39;``</span>
-<span class="sd">    * ``&#39;.vtu&#39;``</span>
-<span class="sd">    * ``&#39;.pvtu&#39;``</span>
-<span class="sd">    * ``&#39;.ply&#39;``</span>
-<span class="sd">    * ``&#39;.obj&#39;``</span>
-<span class="sd">    * ``&#39;.stl&#39;``</span>
-<span class="sd">    * ``&#39;.vtp&#39;``</span>
-<span class="sd">    * ``&#39;.vts&#39;``</span>
-<span class="sd">    * ``&#39;.vtm&#39;``</span>
-<span class="sd">    * ``&#39;.vtmb&#39;``</span>
-<span class="sd">    * ``&#39;.case&#39;``</span>
-
-<span class="sd">    Image formats:</span>
-
-<span class="sd">    * ``&#39;.bmp&#39;``</span>
-<span class="sd">    * ``&#39;.dem&#39;``</span>
-<span class="sd">    * ``&#39;.dcm&#39;``</span>
-<span class="sd">    * ``&#39;.img&#39;``</span>
-<span class="sd">    * ``&#39;.jpeg&#39;``</span>
-<span class="sd">    * ``&#39;.jpg&#39;``</span>
-<span class="sd">    * ``&#39;.mha&#39;``</span>
-<span class="sd">    * ``&#39;.mhd&#39;``</span>
-<span class="sd">    * ``&#39;.nrrd&#39;``</span>
-<span class="sd">    * ``&#39;.nhdr&#39;``</span>
-<span class="sd">    * ``&#39;.png&#39;``</span>
-<span class="sd">    * ``&#39;.pnm&#39;``</span>
-<span class="sd">    * ``&#39;.slc&#39;``</span>
-<span class="sd">    * ``&#39;.tiff&#39;``</span>
-<span class="sd">    * ``&#39;.tif&#39;``</span>
-
-<span class="sd">    Other formats:</span>
-
-<span class="sd">    * ``&#39;.byu&#39;``</span>
-<span class="sd">    * ``&#39;.g&#39;``</span>
-<span class="sd">    * ``&#39;.p3d&#39;``</span>
-<span class="sd">    * ``&#39;.pts&#39;``</span>
-<span class="sd">    * ``&#39;.tri&#39;``</span>
-<span class="sd">    * ``&#39;.inp&#39;``</span>
-
-<span class="sd">    .. note::</span>
-<span class="sd">       There is limited support for OpenFoam format files.</span>
-<span class="sd">       ``pyvista.read`` will automatically return only the first</span>
-<span class="sd">       dataset in a single-element :class:`pyvista.MultiBlock`.  These</span>
-<span class="sd">       files include:</span>
-
-<span class="sd">       * ``&#39;.facet&#39;``</span>
-<span class="sd">       * ``&#39;.cas&#39;``</span>
-<span class="sd">       * ``&#39;.res&#39;``</span>
-<span class="sd">       * ``&#39;.foam&#39;``</span>
+<span class="sd">    See :func:`pyvista.get_reader` for list of formats supported.</span>
 
 <span class="sd">    .. note::</span>
 <span class="sd">       See https://github.com/nschloe/meshio for formats supported by</span>
@@ -532,6 +305,7 @@
 <span class="sd">        each file being a separate block in the dataset.</span>
 
 <span class="sd">    attrs : dict, optional</span>
+<span class="sd">        Deprecated. Use a Reader class using :func:`pyvista.get_reader`.</span>
 <span class="sd">        A dictionary of attributes to call on the reader. Keys of</span>
 <span class="sd">        dictionary are the attribute/method names and values are the</span>
 <span class="sd">        arguments passed to those calls. If you do not have any</span>
@@ -587,46 +361,67 @@
     <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
         <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;File (</span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s1">) not found&#39;</span><span class="p">)</span>
 
-    <span class="n">ext</span> <span class="o">=</span> <span class="n">_get_ext_force</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">force_ext</span><span class="p">)</span>
-
     <span class="c1"># Read file using meshio.read if file_format is present</span>
     <span class="k">if</span> <span class="n">file_format</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">read_meshio</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">file_format</span><span class="p">)</span>
 
-    <span class="c1"># From the extension, decide which reader to use</span>
-    <span class="k">if</span> <span class="n">attrs</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">reader</span> <span class="o">=</span> <span class="n">get_vtk_reader</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">force_ext</span><span class="o">=</span><span class="n">ext</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">standard_reader_routine</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">attrs</span><span class="o">=</span><span class="n">attrs</span><span class="p">,</span> <span class="n">progress_bar</span><span class="o">=</span><span class="n">progress_bar</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">ext</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;.e&#39;</span><span class="p">,</span> <span class="s1">&#39;.exo&#39;</span><span class="p">]:</span>
+    <span class="n">ext</span> <span class="o">=</span> <span class="n">_get_ext_force</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">force_ext</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">ext</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;.e&#39;</span><span class="p">,</span> <span class="s1">&#39;.exo&#39;</span><span class="p">]:</span>
         <span class="k">return</span> <span class="n">read_exodus</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">ext</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;.vtk&#39;</span><span class="p">]:</span>
-        <span class="c1"># Attempt to use the legacy reader...</span>
-        <span class="k">return</span> <span class="n">read_legacy</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">progress_bar</span><span class="o">=</span><span class="n">progress_bar</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="c1"># Attempt find a reader in the readers mapping</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">reader</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">get_reader</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">force_ext</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="c1"># if using force_ext, we are explicitly only using vtk readers</span>
+        <span class="k">if</span> <span class="n">force_ext</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span><span class="s2">&quot;This file was not able to be automatically read by pvista.&quot;</span><span class="p">)</span>
+        <span class="kn">from</span> <span class="nn">meshio._exceptions</span> <span class="kn">import</span> <span class="n">ReadError</span>
+
         <span class="k">try</span><span class="p">:</span>
-            <span class="n">reader</span> <span class="o">=</span> <span class="n">get_vtk_reader</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">force_ext</span><span class="o">=</span><span class="n">ext</span><span class="p">)</span>
-            <span class="k">return</span> <span class="n">standard_reader_routine</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">progress_bar</span><span class="o">=</span><span class="n">progress_bar</span><span class="p">)</span>
-        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
-            <span class="c1"># Don&#39;t fall back to meshio if using `force_ext`, which is really</span>
-            <span class="c1"># just intended to be used with the native PyVista readers</span>
-            <span class="k">if</span> <span class="n">force_ext</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-                <span class="kn">from</span> <span class="nn">meshio._exceptions</span> <span class="kn">import</span> <span class="n">ReadError</span>
+            <span class="k">return</span> <span class="n">read_meshio</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">ReadError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span><span class="s2">&quot;This file was not able to be automatically read by pyvista.&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">observer</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">utilities</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">Observer</span><span class="p">()</span>
+        <span class="n">observer</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">reader</span><span class="o">.</span><span class="n">reader</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">attrs</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">_apply_attrs_to_reader</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="n">attrs</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">progress_bar</span><span class="p">:</span>
+            <span class="n">reader</span><span class="o">.</span><span class="n">show_progress</span><span class="p">()</span>
+        <span class="n">mesh</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">observer</span><span class="o">.</span><span class="n">has_event_occurred</span><span class="p">():</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;The VTK reader `</span><span class="si">{</span><span class="n">reader</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">GetClassName</span><span class="p">()</span><span class="si">}</span><span class="s2">` in pyvista reader `</span><span class="si">{</span><span class="n">reader</span><span class="si">}</span><span class="s2">` raised an error&quot;</span>
+                <span class="s2">&quot;while reading the file.</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="sa">f</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&quot;</span><span class="si">{</span><span class="n">observer</span><span class="o">.</span><span class="n">get_message</span><span class="p">()</span><span class="si">}</span><span class="s1">&quot;&#39;</span>
+            <span class="p">)</span>
+        <span class="k">return</span> <span class="n">mesh</span></div>
 
-                <span class="k">raise</span> <span class="n">ReadError</span>
-            <span class="c1"># Attempt read with meshio</span>
-            <span class="k">try</span><span class="p">:</span>
-                <span class="kn">from</span> <span class="nn">meshio._exceptions</span> <span class="kn">import</span> <span class="n">ReadError</span>
 
-                <span class="k">try</span><span class="p">:</span>
-                    <span class="k">return</span> <span class="n">read_meshio</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
-                <span class="k">except</span> <span class="n">ReadError</span><span class="p">:</span>
-                    <span class="k">pass</span>
-            <span class="k">except</span> <span class="ne">SyntaxError</span><span class="p">:</span>
-                <span class="c1"># https://github.com/pyvista/pyvista/pull/495</span>
-                <span class="k">pass</span>
+<span class="k">def</span> <span class="nf">_apply_attrs_to_reader</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="n">attrs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;For a given pyvista reader, call methods according to attrs.</span>
 
-    <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span><span class="s2">&quot;This file was not able to be automatically read by pyvista.&quot;</span><span class="p">)</span></div>
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    reader : pyvista.BaseReader</span>
+<span class="sd">        Reader to call methods on.</span>
+
+<span class="sd">    attrs : dict</span>
+<span class="sd">        Mapping of methods to call on reader.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+        <span class="s2">&quot;attrs use is deprecated.  Use a Reader class for more flexible control&quot;</span><span class="p">,</span>
+        <span class="n">PyvistaDeprecationWarning</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">args</span> <span class="ow">in</span> <span class="n">attrs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">attr</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">reader</span><span class="o">.</span><span class="n">reader</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">args</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">)):</span>
+                <span class="n">args</span> <span class="o">=</span> <span class="p">[</span><span class="n">args</span><span class="p">]</span>
+            <span class="n">attr</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">attr</span><span class="p">()</span>
 
 
 <div class="viewcode-block" id="read_texture"><a class="viewcode-back" href="../../../api/utilities/_autosummary/pyvista.read_texture.html#pyvista.read_texture">[ドキュメント]</a><span class="k">def</span> <span class="nf">read_texture</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">attrs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">progress_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
@@ -668,8 +463,8 @@
     <span class="n">filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">filename</span><span class="p">))</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="c1"># initialize the reader using the extension to find it</span>
-        <span class="n">reader</span> <span class="o">=</span> <span class="n">get_vtk_reader</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
-        <span class="n">image</span> <span class="o">=</span> <span class="n">standard_reader_routine</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">attrs</span><span class="o">=</span><span class="n">attrs</span><span class="p">,</span> <span class="n">progress_bar</span><span class="o">=</span><span class="n">progress_bar</span><span class="p">)</span>
+
+        <span class="n">image</span> <span class="o">=</span> <span class="n">read</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">attrs</span><span class="o">=</span><span class="n">attrs</span><span class="p">,</span> <span class="n">progress_bar</span><span class="o">=</span><span class="n">progress_bar</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">image</span><span class="o">.</span><span class="n">n_points</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Problem reading the image with VTK.&quot;</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Texture</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
@@ -772,6 +567,10 @@
 <span class="k">def</span> <span class="nf">read_plot3d</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">q_filenames</span><span class="o">=</span><span class="p">(),</span> <span class="n">auto_detect</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">attrs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">progress_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Read a Plot3D grid file (e.g., grid.in) and optional q file(s).</span>
 
+<span class="sd">    .. deprecated:: 0.35.0</span>
+<span class="sd">        This function is deprecated and will be removed in a future version.</span>
+<span class="sd">        Use :class:`pyvista.MultiBlockPlot3DReader`.</span>
+
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
 <span class="sd">    filename : str</span>
@@ -801,36 +600,20 @@
 <span class="sd">        Data read from the file.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+        <span class="s2">&quot;Using read_plot3d is deprecated.  Use :class:`pyvista.MultiBlockPlot3DReader`&quot;</span><span class="p">,</span>
+        <span class="n">PyvistaDeprecationWarning</span><span class="p">,</span>
+    <span class="p">)</span>
+
     <span class="n">filename</span> <span class="o">=</span> <span class="n">_process_filename</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
-
-    <span class="n">reader</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">lazy_vtkMultiBlockPLOT3DReader</span><span class="p">()</span>
-    <span class="n">reader</span><span class="o">.</span><span class="n">SetFileName</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
-
-    <span class="c1"># q_filenames may be a list or a single filename</span>
-    <span class="k">if</span> <span class="n">q_filenames</span><span class="p">:</span>
-        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">q_filenames</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">)):</span>
-            <span class="n">q_filenames</span> <span class="o">=</span> <span class="p">[</span><span class="n">q_filenames</span><span class="p">]</span>
-    <span class="n">q_filenames</span> <span class="o">=</span> <span class="p">[</span><span class="n">_process_filename</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">q_filenames</span><span class="p">]</span>
-
-    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="s1">&#39;AddFileName&#39;</span><span class="p">):</span>
-        <span class="c1"># AddFileName was added to vtkMultiBlockPLOT3DReader sometime around</span>
-        <span class="c1"># VTK 8.2. This method supports reading multiple q files.</span>
-        <span class="k">for</span> <span class="n">q_filename</span> <span class="ow">in</span> <span class="n">q_filenames</span><span class="p">:</span>
-            <span class="n">reader</span><span class="o">.</span><span class="n">AddFileName</span><span class="p">(</span><span class="n">q_filename</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="c1"># SetQFileName is used to add a single q file to be read, and is still</span>
-        <span class="c1"># supported in VTK9.</span>
-        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">q_filenames</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">q_filenames</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
-                <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span>
-                    <span class="s1">&#39;Reading of multiple q files is not supported with this version of VTK.&#39;</span>
-                <span class="p">)</span>
-            <span class="n">reader</span><span class="o">.</span><span class="n">SetQFileName</span><span class="p">(</span><span class="n">q_filenames</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-
-    <span class="n">attrs</span> <span class="o">=</span> <span class="p">{}</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">attrs</span> <span class="k">else</span> <span class="n">attrs</span>
-    <span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;SetAutoDetectFormat&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">auto_detect</span>
-
-    <span class="k">return</span> <span class="n">standard_reader_routine</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">attrs</span><span class="o">=</span><span class="n">attrs</span><span class="p">,</span> <span class="n">progress_bar</span><span class="o">=</span><span class="n">progress_bar</span><span class="p">)</span>
+    <span class="n">reader</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">MultiBlockPlot3DReader</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    <span class="n">reader</span><span class="o">.</span><span class="n">add_q_files</span><span class="p">(</span><span class="n">q_filenames</span><span class="p">)</span>
+    <span class="n">reader</span><span class="o">.</span><span class="n">auto_detect_format</span> <span class="o">=</span> <span class="n">auto_detect</span>
+    <span class="k">if</span> <span class="n">attrs</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">_apply_attrs_to_reader</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="n">attrs</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">progress_bar</span><span class="p">:</span>
+        <span class="n">reader</span><span class="o">.</span><span class="n">show_progress</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">reader</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
 
 <span class="k">def</span> <span class="nf">from_meshio</span><span class="p">(</span><span class="n">mesh</span><span class="p">):</span>

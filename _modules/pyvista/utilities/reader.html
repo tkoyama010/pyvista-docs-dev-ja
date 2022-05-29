@@ -205,15 +205,18 @@
 <span class="kn">from</span> <span class="nn">abc</span> <span class="kn">import</span> <span class="n">ABC</span><span class="p">,</span> <span class="n">abstractmethod</span>
 <span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span>
 <span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">pathlib</span>
 <span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">List</span>
 <span class="kn">from</span> <span class="nn">xml.etree</span> <span class="kn">import</span> <span class="n">ElementTree</span>
 
 <span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">_vtk</span>
-<span class="kn">from</span> <span class="nn">pyvista.utilities</span> <span class="kn">import</span> <span class="n">abstract_class</span><span class="p">,</span> <span class="n">get_ext</span><span class="p">,</span> <span class="n">wrap</span>
+<span class="kn">from</span> <span class="nn">pyvista.utilities</span> <span class="kn">import</span> <span class="n">abstract_class</span><span class="p">,</span> <span class="n">wrap</span>
+
+<span class="kn">from</span> <span class="nn">.fileio</span> <span class="kn">import</span> <span class="n">_get_ext_force</span><span class="p">,</span> <span class="n">_process_filename</span>
 
 
-<div class="viewcode-block" id="get_reader"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.get_reader.html#pyvista.get_reader">[ドキュメント]</a><span class="k">def</span> <span class="nf">get_reader</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+<div class="viewcode-block" id="get_reader"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.get_reader.html#pyvista.get_reader">[ドキュメント]</a><span class="k">def</span> <span class="nf">get_reader</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">force_ext</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Get a reader for fine-grained control of reading data files.</span>
 
 <span class="sd">    Supported file types and Readers:</span>
@@ -244,6 +247,8 @@
 <span class="sd">    | ``.gltf``      | :class:`pyvista.GLTFReader`                 |</span>
 <span class="sd">    +----------------+---------------------------------------------+</span>
 <span class="sd">    | ``.hdf``       | :class:`pyvista.HDFReader`                  |</span>
+<span class="sd">    +----------------+---------------------------------------------+</span>
+<span class="sd">    | ``.img``       | :class:`pyvista.DICOMReader`                |</span>
 <span class="sd">    +----------------+---------------------------------------------+</span>
 <span class="sd">    | ``.inp``       | :class:`pyvista.AVSucdReader`               |</span>
 <span class="sd">    +----------------+---------------------------------------------+</span>
@@ -321,6 +326,9 @@
 <span class="sd">    filename : str</span>
 <span class="sd">        The string path to the file to read.</span>
 
+<span class="sd">    force_ext : str, optional</span>
+<span class="sd">        An extension to force a specific reader to be chosen.</span>
+
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
 <span class="sd">    pyvista.BaseReader</span>
@@ -342,7 +350,7 @@
 <span class="sd">    &gt;&gt;&gt; mesh.plot(color=&#39;tan&#39;)</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">ext</span> <span class="o">=</span> <span class="n">get_ext</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    <span class="n">ext</span> <span class="o">=</span> <span class="n">_get_ext_force</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">force_ext</span><span class="p">)</span>
 
     <span class="k">try</span><span class="p">:</span>
         <span class="n">Reader</span> <span class="o">=</span> <span class="n">CLASS_READERS</span><span class="p">[</span><span class="n">ext</span><span class="p">]</span>
@@ -376,7 +384,9 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_progress_bar</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_progress_msg</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__directory</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_set_defaults</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="n">path</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_set_defaults_post</span><span class="p">()</span>
 
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Representation of a Reader object.&quot;&quot;&quot;</span>
@@ -491,7 +501,15 @@
         <span class="k">return</span> <span class="n">data</span></div>
 
     <span class="k">def</span> <span class="nf">_update_information</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">UpdateInformation</span><span class="p">()</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">UpdateInformation</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_set_defaults</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set defaults on reader, if needed.&quot;&quot;&quot;</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">_set_defaults_post</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set defaults on reader post setting file, if needed.&quot;&quot;&quot;</span>
+        <span class="k">pass</span></div>
 
 
 <div class="viewcode-block" id="PointCellDataSelection"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.PointCellDataSelection.html#pyvista.PointCellDataSelection">[ドキュメント]</a><span class="k">class</span> <span class="nc">PointCellDataSelection</span><span class="p">:</span>
@@ -925,18 +943,16 @@
 
 <span class="c1"># skip pydocstyle D102 check since docstring is taken from TimeReader</span>
 <div class="viewcode-block" id="OpenFOAMReader"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.OpenFOAMReader.html#pyvista.OpenFOAMReader">[ドキュメント]</a><span class="k">class</span> <span class="nc">OpenFOAMReader</span><span class="p">(</span><span class="n">BaseReader</span><span class="p">,</span> <span class="n">PointCellDataSelection</span><span class="p">,</span> <span class="n">TimeReader</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;OpenFOAM Reader for .foam files.&quot;&quot;&quot;</span>
+    <span class="sd">&quot;&quot;&quot;OpenFOAM Reader for .foam files.</span>
+
+<span class="sd">    By default, pyvista enables all patch arrays.  This is a deviation</span>
+<span class="sd">    from the vtk default.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">_class_reader</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkOpenFOAMReader</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Initialize OpenFOAMReader.</span>
-
-<span class="sd">        By default, pyvista enables all patch arrays.  This is a deviation</span>
-<span class="sd">        from the vtk default.</span>
-
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">_set_defaults_post</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">enable_all_patch_arrays</span><span class="p">()</span>
 
     <span class="nd">@property</span>
@@ -1273,10 +1289,7 @@
 
     <span class="n">_class_reader</span> <span class="o">=</span> <span class="n">_vtk</span><span class="o">.</span><span class="n">vtkDataSetReader</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Initialize VTKDataSetReader with filename.&quot;&quot;&quot;</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-        <span class="c1"># Provide consistency with defaults in pyvista.read</span>
+    <span class="k">def</span> <span class="nf">_set_defaults_post</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">ReadAllScalarsOn</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">ReadAllColorScalarsOn</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">ReadAllNormalsOn</span><span class="p">()</span>
@@ -1336,6 +1349,54 @@
     <span class="n">_class_reader</span> <span class="o">=</span> <span class="nb">staticmethod</span><span class="p">(</span><span class="n">_vtk</span><span class="o">.</span><span class="n">lazy_vtkPlot3DMetaReader</span><span class="p">)</span></div>
 
 
+<div class="viewcode-block" id="MultiBlockPlot3DReader"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.MultiBlockPlot3DReader.html#pyvista.MultiBlockPlot3DReader">[ドキュメント]</a><span class="k">class</span> <span class="nc">MultiBlockPlot3DReader</span><span class="p">(</span><span class="n">BaseReader</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;MultiBlock Plot3D Reader.&quot;&quot;&quot;</span>
+
+    <span class="n">_class_reader</span> <span class="o">=</span> <span class="nb">staticmethod</span><span class="p">(</span><span class="n">_vtk</span><span class="o">.</span><span class="n">lazy_vtkMultiBlockPLOT3DReader</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_set_defaults</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">auto_detect_format</span> <span class="o">=</span> <span class="kc">True</span>
+
+<div class="viewcode-block" id="MultiBlockPlot3DReader.add_q_files"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.MultiBlockPlot3DReader.add_q_files.html#pyvista.MultiBlockPlot3DReader.add_q_files">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">add_q_files</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">files</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Add q file(s).</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        files : str or Iterable(str)</span>
+<span class="sd">            Solution file or files to add.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># files may be a list or a single filename</span>
+        <span class="k">if</span> <span class="n">files</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">files</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">)):</span>
+                <span class="n">files</span> <span class="o">=</span> <span class="p">[</span><span class="n">files</span><span class="p">]</span>
+        <span class="n">files</span> <span class="o">=</span> <span class="p">[</span><span class="n">_process_filename</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">files</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="p">,</span> <span class="s1">&#39;AddFileName&#39;</span><span class="p">):</span>
+            <span class="c1"># AddFileName was added to vtkMultiBlockPLOT3DReader sometime around</span>
+            <span class="c1"># VTK 8.2. This method supports reading multiple q files.</span>
+            <span class="k">for</span> <span class="n">q_filename</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">AddFileName</span><span class="p">(</span><span class="n">q_filename</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># SetQFileName is used to add a single q file to be read, and is still</span>
+            <span class="c1"># supported in VTK9.</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">files</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">files</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span>
+                        <span class="s1">&#39;Reading of multiple q files is not supported with this version of VTK.&#39;</span>
+                    <span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">SetQFileName</span><span class="p">(</span><span class="n">files</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">auto_detect_format</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Whether to try to automatically detect format such as byte order, etc.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">GetAutoDetectFormat</span><span class="p">())</span>
+
+    <span class="nd">@auto_detect_format</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">auto_detect_format</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">SetAutoDetectFormat</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></div>
+
+
 <div class="viewcode-block" id="CGNSReader"><a class="viewcode-back" href="../../../api/readers/_autosummary/pyvista.CGNSReader.html#pyvista.CGNSReader">[ドキュメント]</a><span class="k">class</span> <span class="nc">CGNSReader</span><span class="p">(</span><span class="n">BaseReader</span><span class="p">,</span> <span class="n">PointCellDataSelection</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;CGNS Reader for .cgns files.</span>
 
@@ -1376,9 +1437,7 @@
 
     <span class="n">_class_reader</span> <span class="o">=</span> <span class="nb">staticmethod</span><span class="p">(</span><span class="n">_vtk</span><span class="o">.</span><span class="n">lazy_vtkCGNSReader</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Initialize CGNSReader with filename.&quot;&quot;&quot;</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">_set_defaults_post</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">enable_all_point_arrays</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">enable_all_cell_arrays</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">load_boundary_patch</span> <span class="o">=</span> <span class="kc">True</span>
@@ -2114,6 +2173,7 @@
     <span class="s1">&#39;.g&#39;</span><span class="p">:</span> <span class="n">BYUReader</span><span class="p">,</span>
     <span class="s1">&#39;.glb&#39;</span><span class="p">:</span> <span class="n">GLTFReader</span><span class="p">,</span>
     <span class="s1">&#39;.gltf&#39;</span><span class="p">:</span> <span class="n">GLTFReader</span><span class="p">,</span>
+    <span class="s1">&#39;.img&#39;</span><span class="p">:</span> <span class="n">DICOMReader</span><span class="p">,</span>
     <span class="s1">&#39;.inp&#39;</span><span class="p">:</span> <span class="n">AVSucdReader</span><span class="p">,</span>
     <span class="s1">&#39;.jpg&#39;</span><span class="p">:</span> <span class="n">JPEGReader</span><span class="p">,</span>
     <span class="s1">&#39;.jpeg&#39;</span><span class="p">:</span> <span class="n">JPEGReader</span><span class="p">,</span>

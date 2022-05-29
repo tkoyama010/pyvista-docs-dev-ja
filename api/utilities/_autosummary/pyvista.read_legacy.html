@@ -429,6 +429,9 @@
 <dt class="sig sig-object py" id="pyvista.read_legacy">
 <span class="sig-name descname"><span class="pre">read_legacy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/pyvista/utilities/fileio.html#read_legacy"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#pyvista.read_legacy" title="この定義へのパーマリンク">#</a></dt>
 <dd><p>ファイルを読み取るには，VTKの従来のリーダーを使用します．</p>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">バージョン 0.35.0 で非推奨: </span>この関数は非推奨です．代わりに <code class="xref py py-func docutils literal notranslate"><span class="pre">pyvsista.read()</span></code> を使用してください．</p>
+</div>
 <p>データの読み込みには <code class="docutils literal notranslate"><span class="pre">vtk.vtkDataSetReader</span></code> を使用します．</p>
 <dl class="field-list">
 <dt class="field-odd">パラメータ</dt>
@@ -446,8 +449,6 @@
 </dl>
 </dd>
 </dl>
-<p class="rubric">備考</p>
-<p>通常，ファイルからメッシュを読み込むには <a class="reference internal" href="pyvista.read.html#pyvista.read" title="pyvista.read"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.read()</span></code></a> を使うべきで，このリーダーは <code class="docutils literal notranslate"><span class="pre">'.vtk'</span></code> と <code class="docutils literal notranslate"><span class="pre">'.pvtk'</span></code> ファイルに対して自動的に使用されます．</p>
 <p class="rubric">例</p>
 <p>レガシーリーダーを使ってサンプルメッシュを読み込みます．</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
