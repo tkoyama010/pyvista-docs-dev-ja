@@ -685,6 +685,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.Plotter.export_vrml.html">
+       export_vrml
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="pyvista.Plotter.export_vtkjs.html">
        export_vtkjs
       </a>
@@ -732,6 +737,11 @@
      <li class="toctree-l3">
       <a class="reference internal" href="pyvista.Plotter.import_gltf.html">
        import_gltf
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pyvista.Plotter.import_vrml.html">
+       import_vrml
       </a>
      </li>
      <li class="toctree-l3">
@@ -1599,35 +1609,41 @@
 <tr class="row-even"><td><p><a class="reference internal" href="pyvista.Plotter.export_obj.html#pyvista.Plotter.export_obj" title="pyvista.Plotter.export_obj"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.export_obj</span></code></a>(filename)</p></td>
 <td><p>シーンをOBJフォーマットにエクスポートします．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Plotter.export_vtkjs.html#pyvista.Plotter.export_vtkjs" title="pyvista.Plotter.export_vtkjs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.export_vtkjs</span></code></a>(filename[, compress_arrays])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Plotter.export_vrml.html#pyvista.Plotter.export_vrml" title="pyvista.Plotter.export_vrml"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.export_vrml</span></code></a>(filename)</p></td>
+<td><p>Export the current rendering scene as a VRML file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Plotter.export_vtkjs.html#pyvista.Plotter.export_vtkjs" title="pyvista.Plotter.export_vtkjs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.export_vtkjs</span></code></a>(filename[, compress_arrays])</p></td>
 <td><p>現在のレンダリングシーンをVTKjsシーンとして書き出します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Plotter.fly_to.html#pyvista.Plotter.fly_to" title="pyvista.Plotter.fly_to"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.fly_to</span></code></a>(point)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Plotter.fly_to.html#pyvista.Plotter.fly_to" title="pyvista.Plotter.fly_to"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.fly_to</span></code></a>(point)</p></td>
 <td><p>カレントカメラの焦点をある位置に移動します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Plotter.fly_to_mouse_position.html#pyvista.Plotter.fly_to_mouse_position" title="pyvista.Plotter.fly_to_mouse_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.fly_to_mouse_position</span></code></a>([focus])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Plotter.fly_to_mouse_position.html#pyvista.Plotter.fly_to_mouse_position" title="pyvista.Plotter.fly_to_mouse_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.fly_to_mouse_position</span></code></a>([focus])</p></td>
 <td><p>最後に保存されたマウス位置にフォーカスします．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Plotter.generate_orbital_path.html#pyvista.Plotter.generate_orbital_path" title="pyvista.Plotter.generate_orbital_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.generate_orbital_path</span></code></a>([factor, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Plotter.generate_orbital_path.html#pyvista.Plotter.generate_orbital_path" title="pyvista.Plotter.generate_orbital_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.generate_orbital_path</span></code></a>([factor, ...])</p></td>
 <td><p>データシーンの周囲に軌道パスを生成します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Plotter.get_default_cam_pos.html#pyvista.Plotter.get_default_cam_pos" title="pyvista.Plotter.get_default_cam_pos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.get_default_cam_pos</span></code></a>([negative])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Plotter.get_default_cam_pos.html#pyvista.Plotter.get_default_cam_pos" title="pyvista.Plotter.get_default_cam_pos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.get_default_cam_pos</span></code></a>([negative])</p></td>
 <td><p>デフォルトの焦点とビューアップを取得します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Plotter.get_image_depth.html#pyvista.Plotter.get_image_depth" title="pyvista.Plotter.get_image_depth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.get_image_depth</span></code></a>([fill_value, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Plotter.get_image_depth.html#pyvista.Plotter.get_image_depth" title="pyvista.Plotter.get_image_depth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.get_image_depth</span></code></a>([fill_value, ...])</p></td>
 <td><p>現在のレンダーウィンドウを表すDepth画像を取得します．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Plotter.get_pick_position.html#pyvista.Plotter.get_pick_position" title="pyvista.Plotter.get_pick_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.get_pick_position</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Plotter.get_pick_position.html#pyvista.Plotter.get_pick_position" title="pyvista.Plotter.get_pick_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.get_pick_position</span></code></a>()</p></td>
 <td><p>ピックの位置やエリアを取得します．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Plotter.hide_axes.html#pyvista.Plotter.hide_axes" title="pyvista.Plotter.hide_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.hide_axes</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Plotter.hide_axes.html#pyvista.Plotter.hide_axes" title="pyvista.Plotter.hide_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.hide_axes</span></code></a>()</p></td>
 <td><p>軸方向ウィジェットを非表示にします．</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Plotter.hide_axes_all.html#pyvista.Plotter.hide_axes_all" title="pyvista.Plotter.hide_axes_all"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.hide_axes_all</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Plotter.hide_axes_all.html#pyvista.Plotter.hide_axes_all" title="pyvista.Plotter.hide_axes_all"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.hide_axes_all</span></code></a>()</p></td>
 <td><p>全てのレンダラーで軸方向ウィジェットを非表示にします．</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Plotter.import_gltf.html#pyvista.Plotter.import_gltf" title="pyvista.Plotter.import_gltf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.import_gltf</span></code></a>(filename[, set_camera])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Plotter.import_gltf.html#pyvista.Plotter.import_gltf" title="pyvista.Plotter.import_gltf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.import_gltf</span></code></a>(filename[, set_camera])</p></td>
 <td><p>glTFファイルをプロッターに取り込みます．</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pyvista.Plotter.import_vrml.html#pyvista.Plotter.import_vrml" title="pyvista.Plotter.import_vrml"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.import_vrml</span></code></a>(filename)</p></td>
+<td><p>Import a VRML file into the plotter.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="pyvista.Plotter.increment_point_size_and_line_width.html#pyvista.Plotter.increment_point_size_and_line_width" title="pyvista.Plotter.increment_point_size_and_line_width"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Plotter.increment_point_size_and_line_width</span></code></a>(...)</p></td>
 <td><p>すべてのアクターのポイントサイズと線幅の増分．</p></td>

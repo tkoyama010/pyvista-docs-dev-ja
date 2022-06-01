@@ -566,6 +566,38 @@
         <span class="k">if</span> <span class="n">set_camera</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">camera_position</span> <span class="o">=</span> <span class="s1">&#39;xy&#39;</span>
 
+    <span class="k">def</span> <span class="nf">import_vrml</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Import a VRML file into the plotter.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        filename : str</span>
+<span class="sd">            Path to the VRML file.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        &gt;&gt;&gt; import pyvista</span>
+<span class="sd">        &gt;&gt;&gt; from pyvista import examples</span>
+<span class="sd">        &gt;&gt;&gt; sextant_file = examples.vrml.download_sextant()  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pl = pyvista.Plotter()  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pl.import_vrml(sextant_file)  # doctest:+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; pl.show()  # doctest:+SKIP</span>
+
+<span class="sd">        See :ref:`load_vrml` for a full example using this method.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">filename</span><span class="p">)))</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Unable to locate </span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+        <span class="c1"># lazy import here to avoid importing unused modules</span>
+        <span class="kn">from</span> <span class="nn">vtkmodules.vtkIOImport</span> <span class="kn">import</span> <span class="n">vtkVRMLImporter</span>
+
+        <span class="n">importer</span> <span class="o">=</span> <span class="n">vtkVRMLImporter</span><span class="p">()</span>
+        <span class="n">importer</span><span class="o">.</span><span class="n">SetFileName</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+        <span class="n">importer</span><span class="o">.</span><span class="n">SetRenderWindow</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ren_win</span><span class="p">)</span>
+        <span class="n">importer</span><span class="o">.</span><span class="n">Update</span><span class="p">()</span>
+
     <span class="k">def</span> <span class="nf">export_html</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Export this plotter as an interactive scene to a HTML file.</span>
 
@@ -746,6 +778,36 @@
         <span class="c1"># revert any renamed arrays</span>
         <span class="k">for</span> <span class="n">array</span> <span class="ow">in</span> <span class="n">renamed_arrays</span><span class="p">:</span>
             <span class="n">array</span><span class="o">.</span><span class="n">SetName</span><span class="p">(</span><span class="s1">&#39;Normals&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">export_vrml</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Export the current rendering scene as a VRML file.</span>
+
+<span class="sd">        See `vtk.VRMLExporter &lt;https://vtk.org/doc/nightly/html/classvtkVRMLExporter.html&gt;`_</span>
+<span class="sd">        for limitations regarding the exporter.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        filename : str</span>
+<span class="sd">            Filename to export the scene to.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        &gt;&gt;&gt; import pyvista</span>
+<span class="sd">        &gt;&gt;&gt; from pyvista import examples</span>
+<span class="sd">        &gt;&gt;&gt; pl = pyvista.Plotter()</span>
+<span class="sd">        &gt;&gt;&gt; _ = pl.add_mesh(examples.load_hexbeam())</span>
+<span class="sd">        &gt;&gt;&gt; pl.export_vrml(&quot;sample&quot;)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;ren_win&quot;</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;This plotter has been closed and cannot be shown.&quot;</span><span class="p">)</span>
+
+        <span class="c1"># lazy import here to avoid importing unused modules</span>
+        <span class="kn">from</span> <span class="nn">vtkmodules.vtkIOExport</span> <span class="kn">import</span> <span class="n">vtkVRMLExporter</span>
+
+        <span class="n">exporter</span> <span class="o">=</span> <span class="n">vtkVRMLExporter</span><span class="p">()</span>
+        <span class="n">exporter</span><span class="o">.</span><span class="n">SetFileName</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+        <span class="n">exporter</span><span class="o">.</span><span class="n">SetRenderWindow</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ren_win</span><span class="p">)</span>
+        <span class="n">exporter</span><span class="o">.</span><span class="n">Write</span><span class="p">()</span>
 
     <span class="k">def</span> <span class="nf">enable_hidden_line_removal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">all_renderers</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Enable hidden line removal.</span>

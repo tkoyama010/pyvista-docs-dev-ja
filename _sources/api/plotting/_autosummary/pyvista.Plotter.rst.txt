@@ -291,6 +291,9 @@
       Plotter.export_obj
       
       
+      Plotter.export_vrml
+      
+      
       Plotter.export_vtkjs
       
       
@@ -319,6 +322,9 @@
       
       
       Plotter.import_gltf
+      
+      
+      Plotter.import_vrml
       
       
       Plotter.increment_point_size_and_line_width
