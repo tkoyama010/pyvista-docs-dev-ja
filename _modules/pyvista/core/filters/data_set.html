@@ -2313,7 +2313,14 @@
             <span class="n">alg</span><span class="o">.</span><span class="n">SetExtractionModeToAllRegions</span><span class="p">()</span>
         <span class="n">alg</span><span class="o">.</span><span class="n">SetColorRegions</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
         <span class="n">_update_alg</span><span class="p">(</span><span class="n">alg</span><span class="p">,</span> <span class="n">progress_bar</span><span class="p">,</span> <span class="s1">&#39;Finding and Labeling Connected Bodies/Volumes.&#39;</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">_get_output</span><span class="p">(</span><span class="n">alg</span><span class="p">)</span></div>
+        <span class="n">output</span> <span class="o">=</span> <span class="n">_get_output</span><span class="p">(</span><span class="n">alg</span><span class="p">)</span>
+
+        <span class="c1"># remove regionID from the output when extraction mode is set to the</span>
+        <span class="c1"># largest to avoid the VTK warning:</span>
+        <span class="c1"># the Cell array RegionId ... has X tuples but there are only Y cells</span>
+        <span class="k">if</span> <span class="n">largest</span><span class="p">:</span>
+            <span class="n">output</span><span class="o">.</span><span class="n">cell_data</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;RegionId&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">output</span></div>
 
 <div class="viewcode-block" id="DataSetFilters.extract_largest"><a class="viewcode-back" href="../../../../api/core/_autosummary/pyvista.DataSetFilters.extract_largest.html#pyvista.DataSetFilters.extract_largest">[ドキュメント]</a>    <span class="k">def</span> <span class="nf">extract_largest</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">progress_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Extract largest connected set in mesh.</span>

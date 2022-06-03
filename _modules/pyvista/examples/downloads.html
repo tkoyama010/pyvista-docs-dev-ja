@@ -3975,7 +3975,13 @@
     <span class="n">filename</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">_download_file</span><span class="p">(</span><span class="s1">&#39;cgns/multi.cgns&#39;</span><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">load</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">filename</span>
-    <span class="k">return</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">get_reader</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span></div>
+    <span class="n">reader</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">get_reader</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+
+    <span class="c1"># disable reading the boundary patch. As of VTK 9.1.0 this generates</span>
+    <span class="c1"># messages like &quot;Skipping BC_t node: BC_t type &#39;BCFarfield&#39; not supported</span>
+    <span class="c1"># yet.&quot;</span>
+    <span class="n">reader</span><span class="o">.</span><span class="n">load_boundary_patch</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="n">reader</span><span class="o">.</span><span class="n">read</span><span class="p">()</span></div>
 
 
 <div class="viewcode-block" id="download_dicom_stack"><a class="viewcode-back" href="../../../api/examples/_autosummary/pyvista.examples.downloads.download_dicom_stack.html#pyvista.examples.downloads.download_dicom_stack">[ドキュメント]</a><span class="k">def</span> <span class="nf">download_dicom_stack</span><span class="p">(</span><span class="n">load</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">pyvista</span><span class="o">.</span><span class="n">UniformGrid</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>  <span class="c1"># pragma: no cover</span>

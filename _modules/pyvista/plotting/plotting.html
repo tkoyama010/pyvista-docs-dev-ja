@@ -598,21 +598,37 @@
         <span class="n">importer</span><span class="o">.</span><span class="n">SetRenderWindow</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ren_win</span><span class="p">)</span>
         <span class="n">importer</span><span class="o">.</span><span class="n">Update</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="nf">export_html</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">export_html</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">backend</span><span class="o">=</span><span class="s1">&#39;pythreejs&#39;</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Export this plotter as an interactive scene to a HTML file.</span>
+
+<span class="sd">        You have the option of exposing the scene using either vtk.js (using ``panel``) or</span>
+<span class="sd">        three.js (using ``pythreejs``), both of which are excellent JavaScript libraries to visualize</span>
+<span class="sd">        small to moderately complex scenes for scientific visualization.</span>
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        filename : str</span>
 <span class="sd">            Path to export the html file to.</span>
 
+<span class="sd">        backend : str, optional</span>
+<span class="sd">            One of the following:</span>
+
+<span class="sd">            - ``&#39;pythreejs&#39;``</span>
+<span class="sd">            - ``&#39;panel&#39;``</span>
+
+<span class="sd">            For more details about the advantages and disadvantages of each</span>
+<span class="sd">            backend, see :ref:`jupyter_plotting`.</span>
+
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
-<span class="sd">        You will need ``ipywidgets`` and ``pythreejs`` installed for</span>
-<span class="sd">        this feature.</span>
+<span class="sd">        You will need ``ipywidgets`` and ``pythreejs`` installed if you</span>
+<span class="sd">        wish to export using the ``&#39;pythreejs&#39;`` backend, or ``&#39;panel&#39;``</span>
+<span class="sd">        installed to export using ``&#39;panel&#39;``.</span>
 
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
+<span class="sd">        Export as a three.js scene using the pythreejs backend.</span>
+
 <span class="sd">        &gt;&gt;&gt; import pyvista</span>
 <span class="sd">        &gt;&gt;&gt; from pyvista import examples</span>
 <span class="sd">        &gt;&gt;&gt; mesh = examples.load_uniform()</span>
@@ -622,7 +638,18 @@
 <span class="sd">        &gt;&gt;&gt; _ = pl.add_mesh(mesh, scalars=&#39;Spatial Cell Data&#39;, show_edges=True)</span>
 <span class="sd">        &gt;&gt;&gt; pl.export_html(&#39;pyvista.html&#39;)  # doctest:+SKIP</span>
 
+<span class="sd">        Export as a vtk.js scene using the panel backend.</span>
+
+<span class="sd">        &gt;&gt;&gt; pl.export_html(&#39;pyvista_panel.html&#39;, backend=&#39;panel&#39;)  # doctest:+SKIP</span>
+
 <span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">backend</span> <span class="o">==</span> <span class="s1">&#39;pythreejs&#39;</span><span class="p">:</span>
+            <span class="n">widget</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_pythreejs</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">backend</span> <span class="o">==</span> <span class="s1">&#39;panel&#39;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_save_panel</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+            <span class="k">return</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Invalid backend </span><span class="si">{</span><span class="n">backend</span><span class="si">}</span><span class="s2">. Should be either &#39;panel&#39; or &#39;pythreejs&#39;&quot;</span><span class="p">)</span>
         <span class="n">widget</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_pythreejs</span><span class="p">()</span>
 
         <span class="c1"># import after converting as we check for pythreejs import first</span>
@@ -638,8 +665,24 @@
         <span class="c1"># convert and write to file</span>
         <span class="n">embed_minimal_html</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">title</span><span class="p">,</span> <span class="n">state</span><span class="o">=</span><span class="n">state</span><span class="p">)</span>
 
+    <span class="k">def</span> <span class="nf">_save_panel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Save the render window as a ``panel.pane.vtk`` html file.</span>
+
+<span class="sd">        See https://panel.holoviz.org/api/panel.pane.vtk.html</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        filename : str</span>
+<span class="sd">            Path to export the plotter as a panel scene to.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="kn">from</span> <span class="nn">..jupyter.notebook</span> <span class="kn">import</span> <span class="n">handle_plotter</span>
+
+        <span class="n">pane</span> <span class="o">=</span> <span class="n">handle_plotter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">backend</span><span class="o">=</span><span class="s1">&#39;panel&#39;</span><span class="p">,</span> <span class="n">return_viewer</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
+        <span class="n">pane</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+
     <span class="k">def</span> <span class="nf">to_pythreejs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Convert this plotting scene to a pythreejs renderer.</span>
+        <span class="sd">&quot;&quot;&quot;Convert this plotting scene to a pythreejs widget.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>

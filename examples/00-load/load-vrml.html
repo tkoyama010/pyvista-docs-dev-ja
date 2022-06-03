@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Working with VRML Files &#8212; PyVista 0.35.dev0 ドキュメント</title>
+    <title>VRMLファイルの取り扱いについて &#8212; PyVista 0.35.dev0 ドキュメント</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -300,7 +300,7 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Working with VRML Files
+   VRMLファイルの取り扱いについて
   </a>
  </li>
 </ul>
@@ -1099,21 +1099,18 @@
                 
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">注釈</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-examples-00-load-load-vrml-py"><span class="std std-ref">here</span></a>
-to download the full example code</p>
+<p><a class="reference internal" href="#sphx-glr-download-examples-00-load-load-vrml-py"><span class="std std-ref">ここ</span></a> をクリックすると完全なサンプルコードをダウンロードできます．</p>
 </div>
 <section class="sphx-glr-example-title" id="working-with-vrml-files">
-<span id="load-vrml"></span><span id="sphx-glr-examples-00-load-load-vrml-py"></span><h1>Working with VRML Files<a class="headerlink" href="#working-with-vrml-files" title="このヘッドラインへのパーマリンク">#</a></h1>
-<p>Import a VRML file directly into a PyVista plotting scene.
-For more details regarding the VRML format, see:
-<a class="reference external" href="https://en.wikipedia.org/wiki/VRML">https://en.wikipedia.org/wiki/VRML</a></p>
+<span id="load-vrml"></span><span id="sphx-glr-examples-00-load-load-vrml-py"></span><h1>VRMLファイルの取り扱いについて<a class="headerlink" href="#working-with-vrml-files" title="このヘッドラインへのパーマリンク">#</a></h1>
+<p>VRML ファイルを PyVista の作図シーンに直接インポートします。VRMLフォーマットに関する詳細については、 <a class="reference external" href="https://en.wikipedia.org/wiki/VRML">https://en.wikipedia.org/wiki/VRML</a> を参照してください。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 
 <span class="n">sextant_file</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">vrml</span><span class="o">.</span><span class="n">download_sextant</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Set up the plotter and import VRML file.</p>
+<p>プロッタをセットアップし、VRMLファイルをインポートします。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pl</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">pl</span><span class="o">.</span><span class="n">import_vrml</span><span class="p">(</span><span class="n">sextant_file</span><span class="p">)</span>
 <span class="n">pl</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
