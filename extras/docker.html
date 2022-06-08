@@ -1,0 +1,385 @@
+
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Dockerコンテナ内のPyVista &#8212; PyVista 0.35.dev0 ドキュメント</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/no_search_highlight.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/summary.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/thebelab-helper.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="pyinstallerを使用したPyVistaのフリーズ" href="pyinstaller.html" />
+    <link rel="prev" title="VTKの構築" href="building_vtk.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="ja">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-140243896-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../index.html">
+  <img src="../_static/pyvista_logo_sm.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../getting-started/index.html">
+  はじめに
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../user-guide/index.html">
+  ユーザーガイド
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../examples/index.html">
+  例
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../api/index.html">
+  APIリファレンス
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="index.html">
+  その他
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/pyvista/pyvista" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://slack.pyvista.org" rel="noopener" target="_blank" title="Slack Community"><span><i class="fab fa-slack"></i></span>
+            <label class="sr-only">Slack Community</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/pyvista/pyvista/discussions" rel="noopener" target="_blank" title="Support"><span><i class="fa fa-comment fa-fw"></i></span>
+            <label class="sr-only">Support</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/pyvista/pyvista/blob/main/CONTRIBUTING.rst" rel="noopener" target="_blank" title="Contributing"><span><i class="fa fa-gavel fa-fw"></i></span>
+            <label class="sr-only">Contributing</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://doi.org/10.21105/joss.01450" rel="noopener" target="_blank" title="The Paper"><span><i class="fa fa-file-text fa-fw"></i></span>
+            <label class="sr-only">The Paper</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="building_vtk.html">
+   VTKの構築
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Dockerコンテナ内のPyVista
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pyinstaller.html">
+   pyinstallerを使用したPyVistaのフリーズ
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="flask.html">
+   Flaskアプリケーション
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="developer_notes.html">
+   貢献
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="plot_directive.html">
+   Sphinx PyVista Plot ディレクティブ
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vtk_data.html">
+   ローカルVTKデータの使用
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="extending_pyvista.html">
+   PyVistaの拡張
+  </a>
+ </li>
+</ul>
+
+    
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-your-own-docker-container-with-pyvista">
+   <cite>
+    pyvista
+   </cite>
+   で独自のDockerコンテナを作成します
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <section id="pyvista-within-a-docker-container">
+<h1>Dockerコンテナ内のPyVista<a class="headerlink" href="#pyvista-within-a-docker-container" title="このヘッドラインへのパーマリンク">#</a></h1>
+<p>jupyterlabでは，Dockerコンテナから <code class="docutils literal notranslate"><span class="pre">pyvista</span></code> を使用することができます． ローカルのDockerコンテナを起動するには， <code class="docutils literal notranslate"><span class="pre">docker</span></code> をインストールし，イメージをpullして実行する．</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -p <span class="m">8888</span>:8888 ghcr.io/pyvista/pyvista:latest
+</pre></div>
+</div>
+<p>最後に，端末出力から表示されるリンクを開き，jupyterlabのpyvistaを試してみましょう．たとえば，次のようになります．</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>To access the notebook, open this file in a browser:
+    file:///home/jovyan/.local/share/jupyter/runtime/nbserver-6-open.html
+Or copy and paste one of these URLs:
+    http://861c873f6352:8888/?token=b3ac1f6397188944fb21e1f58b673b5b4e6f1ede1a84787b
+ or http://127.0.0.1:8888/?token=b3ac1f6397188944fb21e1f58b673b5b4e6f1ede1a84787b
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p><a href="#id1"><span class="problematic" id="id2">`私たちのDockerコンテナの最新のタグは，こちら&lt;https://github.com/pyvista/pyvista/pkgs/container/pyvista&gt;`_</span></a> で見ることができます． <code class="docutils literal notranslate"><span class="pre">ghcr.io/pyvista/pyvista:latest</span></code> には JupyterLab がセットアップされており， <code class="docutils literal notranslate"><span class="pre">ghcr.io/pyvista/pyvista:latest-slim</span></code> は Jupyter を含まない軽量の Python 環境です．</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p><a class="reference external" href="https://docs.github.com/en/enterprise-server&#64;3.0/packages/working-with-a-github-packages-registry/working-with-the-docker-registry">Dockerレジストリを利用した作業</a> にある指示に従って，GitHubのコンテナレジストリにログインする必要があるかもしれません)</p>
+</div>
+<section id="create-your-own-docker-container-with-pyvista">
+<h2><cite>pyvista</cite> で独自のDockerコンテナを作成します<a class="headerlink" href="#create-your-own-docker-container-with-pyvista" title="このヘッドラインへのパーマリンク">#</a></h2>
+<p>pyvistaとcdをこのディレクトリにクローンし，独自のカスタマイズされたDockerイメージを作成します．</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/pyvista/pyvista
+<span class="nb">cd</span> pyvista/docker
+<span class="nv">IMAGE</span><span class="o">=</span>my-pyvista-jupyterlab:v0.1.0
+docker build -t <span class="nv">$IMAGE</span> .
+docker push <span class="nv">$IMAGE</span>
+</pre></div>
+</div>
+<p>jupyterlabでレンタルする際にオフスクリーンGPUをサポートさせたい場合は， <a class="reference internal" href="building_vtk.html#ref-building-vtk"><span class="std std-ref">VTKの構築</span></a> のEGLでのビルドに関する注意を参照するか， <a class="reference external" href="https://github.com/pyvista/pyvista/releases/tag/0.27.0">Release 0.27.0</a> のカスタムのプリビルドwheelを使用してください． <code class="docutils literal notranslate"><span class="pre">pyvista/docker/jupyter.Dockerfile</span></code> のDockerイメージを次のように変更して，カスタマイズしたvtk wheelをdockerイメージにインストールします．</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">COPY</span> <span class="n">vtk</span><span class="o">-</span><span class="mf">9.0.20201105</span><span class="o">-</span><span class="n">cp38</span><span class="o">-</span><span class="n">cp38</span><span class="o">-</span><span class="n">linux_x86_64</span><span class="o">.</span><span class="n">whl</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span>
+<span class="n">RUN</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">vtk</span><span class="o">-</span><span class="mf">9.0.20201105</span><span class="o">-</span><span class="n">cp38</span><span class="o">-</span><span class="n">cp38</span><span class="o">-</span><span class="n">linux_x86_64</span><span class="o">.</span><span class="n">whl</span>
+</pre></div>
+</div>
+<p>さらに，ホストマシンで実行されている同じバージョンのDockerイメージにGPUドライバをインストールする必要があります．例えば，Azure Kubernetes Serviceを実行していて，Kubernetesクラスタ上のGPUノードが <code class="docutils literal notranslate"><span class="pre">450.51.06</span></code> を実行している場合，同じバージョンをイメージにインストールする必要があります．基礎となるカーネル・モジュールを使用することになるので，コンテナー上にビルドする理由はありません(試行してもエラーになるだけです．)．</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">COPY</span> <span class="n">NVIDIA</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">x86_64</span><span class="o">-</span><span class="mf">450.51.06</span><span class="o">.</span><span class="n">run</span> <span class="n">nvidia_drivers</span><span class="o">.</span><span class="n">run</span>
+<span class="n">RUN</span> <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">kmod</span> <span class="n">libglvnd</span><span class="o">-</span><span class="n">dev</span> <span class="n">pkg</span><span class="o">-</span><span class="n">config</span> <span class="o">-</span><span class="n">yq</span>
+<span class="n">RUN</span> <span class="o">./</span><span class="n">NVIDIA</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">x86_64</span><span class="o">-</span><span class="mf">450.51.06</span><span class="o">.</span><span class="n">run</span> <span class="o">-</span><span class="n">s</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">kernel</span><span class="o">-</span><span class="n">module</span>
+</pre></div>
+</div>
+<p>GPUでレンダリングしているかどうかを確認するには，まず <code class="docutils literal notranslate"><span class="pre">nvidia-smi</span></code> の出力をチェックします．</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ nvidia-smi
+Sun Nov  8 05:48:46 2020
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 450.51.06    Driver Version: 450.51.06    CUDA Version: 11.0     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla K80           Off  | 00000001:00:00.0 Off |                    0 |
+| N/A   34C    P8    32W / 149W |   1297MiB / 11441MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+</pre></div>
+</div>
+<p>ドライバのバージョン(これは実際にはカーネルドライバのバージョンです．)をメモし，それがdockerイメージにインストールしたバージョンと一致することを確認します．</p>
+<p>最後に， <code class="docutils literal notranslate"><span class="pre">ReportCapabilities</span></code> を実行して，レンダーウィンドウがNVIDIAを使用していることを確認します．</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">pl</span><span class="o">.</span><span class="n">ren_win</span><span class="o">.</span><span class="n">ReportCapabilities</span><span class="p">())</span>
+
+<span class="go">OpenGL vendor string:  NVIDIA Corporation</span>
+<span class="go">OpenGL renderer string:  Tesla K80/PCIe/SSE2</span>
+<span class="go">OpenGL version string:  4.6.0 NVIDIA 450.51.06</span>
+<span class="go">OpenGL extensions:</span>
+<span class="go">  GL_AMD_multi_draw_indirect</span>
+<span class="go">  GL_AMD_seamless_cubemap_per_texture</span>
+<span class="go">  GL_ARB_arrays_of_arrays</span>
+<span class="go">  GL_ARB_base_instance</span>
+<span class="go">  GL_ARB_bindless_texture</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">display</span> <span class="pre">id</span> <span class="pre">not</span> <span class="pre">set</span></code> を受信した場合，環境が正しく設定されていない可能性があります．</p>
+</section>
+</section>
+
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2017-2022, The PyVista Developers.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,584 @@
+
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>VTKの構築 &#8212; PyVista 0.35.dev0 ドキュメント</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/no_search_highlight.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/summary.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/thebelab-helper.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="Dockerコンテナ内のPyVista" href="docker.html" />
+    <link rel="prev" title="その他" href="index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="ja">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-140243896-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../index.html">
+  <img src="../_static/pyvista_logo_sm.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../getting-started/index.html">
+  はじめに
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../user-guide/index.html">
+  ユーザーガイド
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../examples/index.html">
+  例
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../api/index.html">
+  APIリファレンス
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="index.html">
+  その他
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/pyvista/pyvista" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://slack.pyvista.org" rel="noopener" target="_blank" title="Slack Community"><span><i class="fab fa-slack"></i></span>
+            <label class="sr-only">Slack Community</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/pyvista/pyvista/discussions" rel="noopener" target="_blank" title="Support"><span><i class="fa fa-comment fa-fw"></i></span>
+            <label class="sr-only">Support</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/pyvista/pyvista/blob/main/CONTRIBUTING.rst" rel="noopener" target="_blank" title="Contributing"><span><i class="fa fa-gavel fa-fw"></i></span>
+            <label class="sr-only">Contributing</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://doi.org/10.21105/joss.01450" rel="noopener" target="_blank" title="The Paper"><span><i class="fa fa-file-text fa-fw"></i></span>
+            <label class="sr-only">The Paper</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   VTKの構築
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="docker.html">
+   Dockerコンテナ内のPyVista
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pyinstaller.html">
+   pyinstallerを使用したPyVistaのフリーズ
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="flask.html">
+   Flaskアプリケーション
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="developer_notes.html">
+   貢献
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="plot_directive.html">
+   Sphinx PyVista Plot ディレクティブ
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vtk_data.html">
+   ローカルVTKデータの使用
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="extending_pyvista.html">
+   PyVistaの拡張
+  </a>
+ </li>
+</ul>
+
+    
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#building-wheels">
+   ホイールを作る
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#off-screen-plotting-gpu-support">
+   オフスクリーンプロットのGPUサポート
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#building-osmesa">
+   OSMesaの構築
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#building-manylinux-wheels">
+   ManyLinux wheel の構築
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#building-python-vtk-wheel-on-raspberry-pi-64-bit">
+   Raspberry Pi上のPython VTK Wheel(64ビット)構築
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <section id="building-vtk">
+<span id="ref-building-vtk"></span><h1>VTKの構築<a class="headerlink" href="#building-vtk" title="このヘッドラインへのパーマリンク">#</a></h1>
+<p>Kitwareは <a class="reference external" href="https://pypi.org/project/vtk/">PyPI VTK</a> でVTK用のPythonホイールを提供していますが，場合によってはソースからVTKをビルドする必要があります(たとえば，Pythonの新リリース，EGLレンダリング，追加機能など)． <code class="docutils literal notranslate"><span class="pre">pyvista</span></code> は <code class="docutils literal notranslate"><span class="pre">vtk</span></code> を提供しないため，手動で構築する必要があります．</p>
+<p>既成のホイールが必要な場合は，<a class="reference external" href="https://github.com/pyvista/pyvista-wheels">pyvista-wheels</a> にさまざまな既成のホイールがありますが，自分で作った方がよいかもしれません．</p>
+<p><a class="reference external" href="https://gitlab.kitware.com/vtk/vtk/-/blob/master/Documentation/dev/build.md">VTKのビルド方法</a> を参照してください．以下の説明は，EGLのような非標準的な状況でPythonホイールをビルドしたい場合を想定しています．</p>
+<section id="building-wheels">
+<h2>ホイールを作る<a class="headerlink" href="#building-wheels" title="このヘッドラインへのパーマリンク">#</a></h2>
+<p>ソースからVTKを構築するのはかなりストレートです．デフォルトのビルド設定を使用し，次のスクリプトを使用して <code class="docutils literal notranslate"><span class="pre">ninja</span></code> を使用し，VTKのPythonホイールをビルドします．このスクリプトはpython 3を使用していますが，最新のPythonバージョンを使用することができます．その他の便利なオプションについては， <a class="reference external" href="https://github.com/conda-forge/vtk-feedstock/blob/master/recipe/build.sh">conda-forge recipe</a> を参照してください．以下のほとんどのオプションは，構築時間を短縮し，ホイールサイズを小さくするように設計されています．</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Install build dependencies</span>
+
+<span class="c1"># Linux/Debian</span>
+sudo add-apt-repository -y ppa:deadsnakes/ppa  <span class="c1"># if on Ubuntu 20.04 or 18.04, building 3.10 for example</span>
+sudo apt update
+sudo apt install -y ninja-build cmake libgl1-mesa-dev python3-dev git
+sudo apt install -y python3.10-dev python3.10-distutils  <span class="c1"># if using deadsnakes + Python 3.10</span>
+<span class="c1"># If on 18.04, you&#39;ll need a newer cmake. You can follow VTK&#39;s instructions @ https://apt.kitware.com</span>
+
+<span class="c1"># Linux/CentOS</span>
+sudo yum install epel-release
+sudo yum install ninja-build cmake mesa-libGL-devel mesa-libGLU-devel
+
+git clone https://gitlab.kitware.com/vtk/vtk.git
+mkdir vtk/build
+<span class="nb">cd</span> vtk/build
+git checkout v9.1.0  <span class="c1"># optional to select a version, but recommended</span>
+
+<span class="nb">export</span> <span class="nv">PYBIN</span><span class="o">=</span>/usr/bin/python3.10  <span class="c1"># select your version of choice</span>
+cmake -GNinja <span class="se">\</span>
+      -DCMAKE_BUILD_TYPE<span class="o">=</span>Release <span class="se">\</span>
+      -DVTK_BUILD_TESTING<span class="o">=</span>OFF <span class="se">\</span>
+      -DVTK_BUILD_DOCUMENTATION<span class="o">=</span>OFF <span class="se">\</span>
+      -DVTK_BUILD_EXAMPLES<span class="o">=</span>OFF <span class="se">\</span>
+      -DVTK_DATA_EXCLUDE_FROM_ALL:BOOL<span class="o">=</span>ON <span class="se">\</span>
+      -DVTK_MODULE_ENABLE_VTK_PythonInterpreter:STRING<span class="o">=</span>NO <span class="se">\</span>
+      -DVTK_WHEEL_BUILD<span class="o">=</span>ON <span class="se">\</span>
+      -DVTK_PYTHON_VERSION<span class="o">=</span><span class="m">3</span> <span class="se">\</span>
+      -DVTK_WRAP_PYTHON<span class="o">=</span>ON <span class="se">\</span>
+      -DVTK_OPENGL_HAS_EGL<span class="o">=</span>False <span class="se">\</span>
+      -DPython3_EXECUTABLE<span class="o">=</span><span class="nv">$PYBIN</span> ../
+ninja
+
+<span class="c1"># build wheel in dist</span>
+<span class="nv">$PYBIN</span> -m pip install wheel
+<span class="nv">$PYBIN</span> setup.py bdist_wheel
+<span class="nv">$PYBIN</span> -m pip install dist/vtk-*.whl  <span class="c1"># optionally install it</span>
+</pre></div>
+</div>
+</section>
+<section id="off-screen-plotting-gpu-support">
+<span id="gpu-off-screen"></span><h2>オフスクリーンプロットのGPUサポート<a class="headerlink" href="#off-screen-plotting-gpu-support" title="このヘッドラインへのパーマリンク">#</a></h2>
+<p>VTKはEGLを使用したレンダリングをサポートしており，仮想フレームバッファをインストールせずにGPUハードウェアアクセラレーションを使用して迅速なオフスクリーンレンダリングを可能にします．デフォルトのVTKホイールにはこの機能はありませんが，上記の <code class="docutils literal notranslate"><span class="pre">cmake</span></code> コマンドを次のように変更することで，GPUサポートを使用したオフスクリーンVTKを作成できます．</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># install build dependencies (Linux/Debian)</span>
+<span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">ninja</span><span class="o">-</span><span class="n">build</span> <span class="n">cmake</span> <span class="n">libegl1</span><span class="o">-</span><span class="n">mesa</span><span class="o">-</span><span class="n">dev</span> <span class="n">python3</span><span class="o">-</span><span class="n">dev</span>
+
+<span class="c1"># build using EGL</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">Kitware</span><span class="o">/</span><span class="n">VTK</span>
+<span class="n">mkdir</span> <span class="n">VTK</span><span class="o">/</span><span class="n">build</span>
+<span class="n">cd</span> <span class="n">VTK</span><span class="o">/</span><span class="n">build</span> \
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">v9</span><span class="mf">.1.0</span>
+<span class="n">cd</span> <span class="o">/</span><span class="n">VTK</span><span class="o">/</span><span class="n">build</span>
+<span class="n">cmake</span> <span class="o">-</span><span class="n">GNinja</span> \
+  <span class="o">-</span><span class="n">DCMAKE_BUILD_TYPE</span><span class="o">=</span><span class="n">Release</span> \
+  <span class="o">-</span><span class="n">DVTK_BUILD_TESTING</span><span class="o">=</span><span class="n">OFF</span> \
+  <span class="o">-</span><span class="n">DVTK_BUILD_DOCUMENTATION</span><span class="o">=</span><span class="n">OFF</span> \
+  <span class="o">-</span><span class="n">DVTK_BUILD_EXAMPLES</span><span class="o">=</span><span class="n">OFF</span> \
+  <span class="o">-</span><span class="n">DVTK_MODULE_ENABLE_VTK_PythonInterpreter</span><span class="p">:</span><span class="n">STRING</span><span class="o">=</span><span class="n">NO</span> \
+  <span class="o">-</span><span class="n">DVTK_WHEEL_BUILD</span><span class="o">=</span><span class="n">ON</span> \
+  <span class="o">-</span><span class="n">DVTK_PYTHON_VERSION</span><span class="o">=</span><span class="mi">3</span> \
+  <span class="o">-</span><span class="n">DVTK_WRAP_PYTHON</span><span class="o">=</span><span class="n">ON</span> \
+  <span class="o">-</span><span class="n">DVTK_OPENGL_HAS_EGL</span><span class="p">:</span><span class="n">BOOL</span><span class="o">=</span><span class="n">ON</span> \
+  <span class="o">-</span><span class="n">DVTK_USE_X</span><span class="p">:</span><span class="n">BOOL</span><span class="o">=</span><span class="n">OFF</span> \
+  <span class="o">-</span><span class="n">DVTK_USE_COCOA</span><span class="p">:</span><span class="n">BOOL</span><span class="o">=</span><span class="n">OFF</span> \
+  <span class="o">-</span><span class="n">DVTK_DEFAULT_RENDER_WINDOW_HEADLESS</span><span class="p">:</span><span class="n">BOOL</span><span class="o">=</span><span class="n">ON</span> \
+  <span class="o">-</span><span class="n">DPython3_EXECUTABLE</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">python3</span> <span class="o">../</span>
+<span class="n">ninja</span>
+
+<span class="c1"># build the python wheel</span>
+<span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">wheel</span> \
+<span class="n">python3</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">bdist_wheel</span> \
+<span class="n">pip</span> <span class="n">install</span> <span class="n">dist</span><span class="o">/</span><span class="n">vtk</span><span class="o">-*.</span><span class="n">whl</span>
+</pre></div>
+</div>
+<p>これにより，Xサーバを使用したすべてのプロットが無効になるため，このモジュールは，静止イメージを保存するか，またはレンダーウィンドウをディスプレイ(例: <code class="docutils literal notranslate"><span class="pre">pyvista.set_jupyter_backend('ipyvtklink')</span></code> とjupyterlab)とともに別のコンピュータにストリーミングする予定のあるヘッドレスディスプレイでのみ使用するようにしてください．言い換えれば，このホイールはVTKをスクリーン外の環境では使えなくするので，Xサーバのないヘッドレスシステムにインストールすることだけを計画してください．</p>
+</section>
+<section id="building-osmesa">
+<h2>OSMesaの構築<a class="headerlink" href="#building-osmesa" title="このヘッドラインへのパーマリンク">#</a></h2>
+<p>OSMesaはCPUベースのホストでより高い可視化性能を提供します．xvfb`` の代わりに，これを使用してください．</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sudo apt-get install libosmesa6-dev cmake ninja-build
+
+git clone https://github.com/Kitware/VTK.git
+cd VTK
+git checkout v9.1.0
+mkdir build
+cd build
+
+PYBIN=/usr/bin/python
+cmake -GNinja \
+      -DCMAKE_BUILD_TYPE=Release \
+      -DVTK_BUILD_TESTING=OFF \
+      -DVTK_BUILD_DOCUMENTATION=OFF \
+      -DVTK_BUILD_EXAMPLES=OFF \
+      -DVTK_DATA_EXCLUDE_FROM_ALL:BOOL=ON \
+      -DVTK_MODULE_ENABLE_VTK_PythonInterpreter:STRING=NO \
+      -DVTK_WHEEL_BUILD=ON \
+      -DVTK_PYTHON_VERSION=3 \
+      -DVTK_WRAP_PYTHON=ON \
+      -DVTK_OPENGL_HAS_EGL=False \
+      -DVTK_OPENGL_HAS_OSMESA=True \
+      -DVTK_USE_COCOA=FALSE \
+      -DVTK_USE_X=FALSE \
+      -DVTK_DEFAULT_RENDER_WINDOW_HEADLESS=True \
+      -DPython3_EXECUTABLE=$PYBIN ../
+ninja
+$PYBIN setup.py bdist_wheel
+</pre></div>
+</div>
+<p>Wheels は <code class="docutils literal notranslate"><span class="pre">dist</span></code> ディレクトリに生成されます．</p>
+</section>
+<section id="building-manylinux-wheels">
+<h2>ManyLinux wheel の構築<a class="headerlink" href="#building-manylinux-wheels" title="このヘッドラインへのパーマリンク">#</a></h2>
+<p>上記の方向性はVTKのローカルビルドを構築するのに適していますが，これらのwheelは，それらが構築されたLinuxのバージョンによるABI互換性の問題を考えると，ローカルインストールの外部で共有することは困難です．これを回避するには， <a class="reference external" href="https://github.com/pypa/manylinux">manylinux</a> のdockerイメージを使ってwheelをビルドします．</p>
+<p>そのためには， <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone``d</span> <span class="pre">``vtk</span></code> ディレクトリに以下の内容の <code class="docutils literal notranslate"><span class="pre">build_wheels.sh</span></code> を作成し，実行権限を与えます (<code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">+x</span> <span class="pre">build_wheels.sh</span></code>):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1"># builds python wheels on docker container and tests installation</span>
+
+<span class="nb">set</span> -e -x
+
+<span class="c1"># build based on python version from args</span>
+<span class="nv">PYTHON_VERSION</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span>
+<span class="k">case</span> <span class="nv">$PYTHON_VERSION</span> <span class="k">in</span>
+<span class="m">3</span>.7<span class="o">)</span>
+  <span class="nv">PYBIN</span><span class="o">=</span><span class="s2">&quot;/opt/python/cp37-cp37m/bin/python&quot;</span>
+  <span class="p">;;</span>
+<span class="m">3</span>.8<span class="o">)</span>
+  <span class="nv">PYBIN</span><span class="o">=</span><span class="s2">&quot;/opt/python/cp38-cp38/bin/python&quot;</span>
+  <span class="p">;;</span>
+<span class="m">3</span>.9<span class="o">)</span>
+  <span class="nv">PYBIN</span><span class="o">=</span><span class="s2">&quot;/opt/python/cp39-cp39/bin/python&quot;</span>
+  <span class="p">;;</span>
+<span class="m">3</span>.10<span class="o">)</span>
+  <span class="nv">PYBIN</span><span class="o">=</span><span class="s2">&quot;/opt/python/cp310-cp310/bin/python&quot;</span>
+  <span class="p">;;</span>
+<span class="k">esac</span>
+
+yum install -y ninja-build cmake mesa-libGL-devel mesa-libGLU-devel
+
+rm -rf /io/build
+mkdir /io/build -p
+<span class="nb">cd</span> /io/build
+
+cmake -GNinja <span class="se">\</span>
+      -DCMAKE_BUILD_TYPE<span class="o">=</span>Release <span class="se">\</span>
+      -DVTK_BUILD_TESTING<span class="o">=</span>OFF <span class="se">\</span>
+      -DVTK_BUILD_DOCUMENTATION<span class="o">=</span>OFF <span class="se">\</span>
+      -DVTK_BUILD_EXAMPLES<span class="o">=</span>OFF <span class="se">\</span>
+      -DVTK_DATA_EXCLUDE_FROM_ALL:BOOL<span class="o">=</span>ON <span class="se">\</span>
+      -DVTK_MODULE_ENABLE_VTK_PythonInterpreter:STRING<span class="o">=</span>NO <span class="se">\</span>
+      -DVTK_WHEEL_BUILD<span class="o">=</span>ON <span class="se">\</span>
+      -DVTK_PYTHON_VERSION<span class="o">=</span><span class="m">3</span> <span class="se">\</span>
+      -DVTK_WRAP_PYTHON<span class="o">=</span>ON <span class="se">\</span>
+      -DVTK_OPENGL_HAS_EGL<span class="o">=</span>False <span class="se">\</span>
+      -DPython3_EXECUTABLE<span class="o">=</span><span class="nv">$PYBIN</span> ../
+ninja-build
+
+<span class="c1"># build wheel in dist</span>
+rm -rf dist
+<span class="nv">$PYBIN</span> -m pip install wheel
+<span class="nv">$PYBIN</span> setup.py bdist_wheel
+
+<span class="c1"># cleanup wheel</span>
+rm -rf wheelhouse
+auditwheel repair dist/*.whl
+</pre></div>
+</div>
+<p>このスクリプトは，次のコマンドで呼び出すことができます:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PYTHON_VERSION</span><span class="o">=</span><span class="m">3</span>.10
+docker run --cpus <span class="m">4</span>.5 -e <span class="se">\</span>
+       --rm -v <span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>:/io quay.io/pypa/manylinux2014_x86_64 <span class="se">\</span>
+       /io/build_wheels.sh <span class="nv">$PYTHON_VERSION</span>
+</pre></div>
+</div>
+<p>最終的に <code class="docutils literal notranslate"><span class="pre">build/wheelhouse/vtk-*.whl</span></code> ができあがるはずです．</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>EGLバージョンのwheelを作成するには，前のセクションの指示に従ってください．インストール依存関係にAAAAAを追加します．</p>
+</div>
+</section>
+<section id="building-python-vtk-wheel-on-raspberry-pi-64-bit">
+<h2>Raspberry Pi上のPython VTK Wheel(64ビット)構築<a class="headerlink" href="#building-python-vtk-wheel-on-raspberry-pi-64-bit" title="このヘッドラインへのパーマリンク">#</a></h2>
+<p>32ビット版Raspberry Pi(ARMv7)で構築することは可能だが，32ビット版のホイールを構築する際にはいくつかの問題が生じます( <a class="reference external" href="https://github.com/pypa/manylinux/issues/84">manylinux issue 84</a> を参照)．32ビットで構築しようとする場合は， <a class="reference external" href="https://github.com/dockcross/dockcross">dockcross</a> を使ってwheelを構築してみてください．そうしないとメモリの制限が生じる可能性があります(特に1GBのRAMしかない場合)．</p>
+<p><code class="docutils literal notranslate"><span class="pre">aarch64</span></code>  manylinux wheel のビルドは， <code class="docutils literal notranslate"><span class="pre">quay.io/pypa/manylinux2014_aarch64</span></code> イメージを使ったDockerで行うことができます．以下を実行します:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">PYTHON_VERSION</span><span class="o">=</span><span class="m">3</span>.7
+rm -rf build
+docker run -e <span class="se">\</span>
+       --rm -v <span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>:/io quay.io/pypa/manylinux2014_aarch64 <span class="se">\</span>
+       /io/build_wheels.sh <span class="nv">$PYTHON_VERSION</span>
+</pre></div>
+</div>
+<p>ここで， <code class="docutils literal notranslate"><span class="pre">build_wheels.sh</span></code> は次のようになります:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1"># builds python wheels on docker container and tests installation</span>
+
+<span class="nb">set</span> -e -x
+
+<span class="c1"># build based on python version from args</span>
+<span class="nv">PYTHON_VERSION</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span>
+<span class="k">case</span> <span class="nv">$PYTHON_VERSION</span> <span class="k">in</span>
+<span class="m">3</span>.7<span class="o">)</span>
+  <span class="nv">PYBIN</span><span class="o">=</span><span class="s2">&quot;/opt/python/cp37-cp37m/bin/python&quot;</span>
+  <span class="p">;;</span>
+<span class="m">3</span>.8<span class="o">)</span>
+  <span class="nv">PYBIN</span><span class="o">=</span><span class="s2">&quot;/opt/python/cp38-cp38/bin/python&quot;</span>
+  <span class="p">;;</span>
+<span class="m">3</span>.9<span class="o">)</span>
+  <span class="nv">PYBIN</span><span class="o">=</span><span class="s2">&quot;/opt/python/cp39-cp39/bin/python&quot;</span>
+  <span class="p">;;</span>
+<span class="m">3</span>.10<span class="o">)</span>
+  <span class="nv">PYBIN</span><span class="o">=</span><span class="s2">&quot;/opt/python/cp310-cp310/bin/python&quot;</span>
+  <span class="p">;;</span>
+<span class="k">esac</span>
+
+/bin/bash
+yum install epel-release
+yum install ninja-build
+yum install mesa-libEGL-devel  <span class="c1"># only needed when building EGL</span>
+
+mkdir /io/build -p
+<span class="nb">cd</span> /io/build
+
+cmake -GNinja <span class="se">\</span>
+      -DCMAKE_BUILD_TYPE<span class="o">=</span>Release <span class="se">\</span>
+      -DVTK_BUILD_TESTING<span class="o">=</span>OFF <span class="se">\</span>
+      -DVTK_BUILD_DOCUMENTATION<span class="o">=</span>OFF <span class="se">\</span>
+      -DVTK_BUILD_EXAMPLES<span class="o">=</span>OFF <span class="se">\</span>
+      -DVTK_DATA_EXCLUDE_FROM_ALL:BOOL<span class="o">=</span>ON <span class="se">\</span>
+      -DVTK_MODULE_ENABLE_VTK_PythonInterpreter:STRING<span class="o">=</span>NO <span class="se">\</span>
+      -DVTK_WHEEL_BUILD<span class="o">=</span>ON <span class="se">\</span>
+      -DVTK_PYTHON_VERSION<span class="o">=</span><span class="m">3</span> <span class="se">\</span>
+      -DVTK_WRAP_PYTHON<span class="o">=</span>ON <span class="se">\</span>
+      -DVTK_OPENGL_HAS_EGL<span class="o">=</span>False <span class="se">\</span>
+      -DPython3_EXECUTABLE<span class="o">=</span><span class="nv">$PYBIN</span> ../
+ninja-build
+
+<span class="c1"># build wheel</span>
+rm -rf dist
+<span class="nv">$PYBIN</span> setup.py bdist_wheel
+
+<span class="c1"># cleanup wheel</span>
+rm -rf wheelhouse
+auditwheel repair dist/*.whl
+cp wheelhouse/vtk*.whl /io/wheels
+</pre></div>
+</div>
+<p>wheelで <code class="docutils literal notranslate"><span class="pre">EGL</span></code> を有効にするかどうかに応じて， <code class="docutils literal notranslate"><span class="pre">DVTK_OPENGL_HAS_EGL</span></code> を有効または無効にしてください．</p>
+</section>
+</section>
+
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2017-2022, The PyVista Developers.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>
