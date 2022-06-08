@@ -1,6 +1,0 @@
-﻿ParametricPluckerConoid
-=======================
-
-.. currentmodule:: pyvista
-
-.. autofunction:: ParametricPluckerConoid

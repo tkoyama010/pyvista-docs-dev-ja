@@ -1,6 +1,0 @@
-cell\_array\_status
-===================
-
-.. currentmodule:: pyvista
-
-.. automethod:: XMLStructuredGridReader.cell_array_status

@@ -1,6 +1,0 @@
-line\_width
-===========
-
-.. currentmodule:: pyvista.plotting.charts
-
-.. autoproperty:: AreaPlot.line_width

@@ -1,6 +1,0 @@
-set\_active\_tensors
-====================
-
-.. currentmodule:: pyvista
-
-.. automethod:: StructuredGrid.set_active_tensors

@@ -1,6 +1,0 @@
-cell\_arrays
-============
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: DataSet.cell_arrays

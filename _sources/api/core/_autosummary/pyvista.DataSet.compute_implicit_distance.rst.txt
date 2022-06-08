@@ -1,6 +1,0 @@
-compute\_implicit\_distance
-===========================
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSet.compute_implicit_distance

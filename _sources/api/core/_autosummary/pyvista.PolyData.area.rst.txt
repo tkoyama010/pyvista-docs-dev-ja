@@ -1,6 +1,0 @@
-area
-====
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: PolyData.area

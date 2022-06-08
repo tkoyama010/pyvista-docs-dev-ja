@@ -1,6 +1,0 @@
-point\_array\_status
-====================
-
-.. currentmodule:: pyvista
-
-.. automethod:: XMLUnstructuredGridReader.point_array_status

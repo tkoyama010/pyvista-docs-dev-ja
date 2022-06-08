@@ -1,6 +1,0 @@
-enable\_trackball\_actor\_style
-===============================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Plotter.enable_trackball_actor_style

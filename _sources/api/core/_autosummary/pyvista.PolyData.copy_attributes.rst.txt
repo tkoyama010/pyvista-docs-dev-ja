@@ -1,6 +1,0 @@
-copy\_attributes
-================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyData.copy_attributes

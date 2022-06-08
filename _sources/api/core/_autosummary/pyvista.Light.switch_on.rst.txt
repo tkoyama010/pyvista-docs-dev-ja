@@ -1,6 +1,0 @@
-switch\_on
-==========
-
-.. currentmodule:: pyvista
-
-.. automethod:: Light.switch_on

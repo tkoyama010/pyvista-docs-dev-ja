@@ -1,6 +1,0 @@
-shallow\_copy
-=============
-
-.. currentmodule:: pyvista
-
-.. automethod:: Table.shallow_copy

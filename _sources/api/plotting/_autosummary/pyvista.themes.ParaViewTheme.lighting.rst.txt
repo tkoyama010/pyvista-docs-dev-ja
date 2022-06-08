@@ -1,6 +1,0 @@
-lighting
-========
-
-.. currentmodule:: pyvista.themes
-
-.. autoproperty:: ParaViewTheme.lighting

@@ -1,6 +1,0 @@
-sample\_over\_line
-==================
-
-.. currentmodule:: pyvista
-
-.. automethod:: UnstructuredGrid.sample_over_line

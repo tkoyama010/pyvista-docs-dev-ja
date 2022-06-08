@@ -1,6 +1,0 @@
-download\_notch\_displacement
-=============================
-
-.. currentmodule:: pyvista.examples.downloads
-
-.. autofunction:: download_notch_displacement

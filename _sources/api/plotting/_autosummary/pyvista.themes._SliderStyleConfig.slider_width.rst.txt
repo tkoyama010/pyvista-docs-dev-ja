@@ -1,6 +1,0 @@
-slider\_width
-=============
-
-.. currentmodule:: pyvista.themes
-
-.. autoproperty:: _SliderStyleConfig.slider_width

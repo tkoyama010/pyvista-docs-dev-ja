@@ -1,6 +1,0 @@
-enable\_surface\_picking
-========================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Plotter.enable_surface_picking

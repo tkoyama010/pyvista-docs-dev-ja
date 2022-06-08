@@ -1,6 +1,0 @@
-load\_ant
-=========
-
-.. currentmodule:: pyvista.examples.examples
-
-.. autofunction:: load_ant

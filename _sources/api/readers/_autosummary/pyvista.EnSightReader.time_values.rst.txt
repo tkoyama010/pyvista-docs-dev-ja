@@ -1,6 +1,0 @@
-time\_values
-============
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: EnSightReader.time_values

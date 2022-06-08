@@ -1,6 +1,0 @@
-number\_time\_points
-====================
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: EnSightReader.number_time_points

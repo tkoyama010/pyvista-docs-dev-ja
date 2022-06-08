@@ -1,6 +1,0 @@
-memory\_address
-===============
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: PolyData.memory_address

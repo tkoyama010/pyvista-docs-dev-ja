@@ -1,6 +1,0 @@
-update
-======
-
-.. currentmodule:: pyvista.plotting.charts
-
-.. automethod:: BarPlot.update

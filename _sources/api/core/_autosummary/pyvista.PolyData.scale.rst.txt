@@ -1,6 +1,0 @@
-scale
-=====
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyData.scale

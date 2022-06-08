@@ -1,6 +1,0 @@
-orientation\_plotter
-====================
-
-.. currentmodule:: pyvista.demos.demos
-
-.. autofunction:: orientation_plotter

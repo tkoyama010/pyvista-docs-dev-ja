@@ -1,6 +1,0 @@
-elevation
-=========
-
-.. currentmodule:: pyvista
-
-.. automethod:: UniformGrid.elevation

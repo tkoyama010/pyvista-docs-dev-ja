@@ -1,6 +1,0 @@
-face\_normals
-=============
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: PolyData.face_normals

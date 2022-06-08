@@ -1,6 +1,0 @@
-enable\_all\_bases
-==================
-
-.. currentmodule:: pyvista
-
-.. automethod:: CGNSReader.enable_all_bases

@@ -1,6 +1,0 @@
-length
-======
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: StructuredGrid.length

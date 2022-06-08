@@ -1,6 +1,0 @@
-clear\_data
-===========
-
-.. currentmodule:: pyvista
-
-.. automethod:: UniformGrid.clear_data

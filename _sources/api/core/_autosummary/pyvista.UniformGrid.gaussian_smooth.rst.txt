@@ -1,6 +1,0 @@
-gaussian\_smooth
-================
-
-.. currentmodule:: pyvista
-
-.. automethod:: UniformGrid.gaussian_smooth

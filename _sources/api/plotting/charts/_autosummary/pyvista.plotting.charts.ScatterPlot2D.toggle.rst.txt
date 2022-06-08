@@ -1,6 +1,0 @@
-toggle
-======
-
-.. currentmodule:: pyvista.plotting.charts
-
-.. automethod:: ScatterPlot2D.toggle

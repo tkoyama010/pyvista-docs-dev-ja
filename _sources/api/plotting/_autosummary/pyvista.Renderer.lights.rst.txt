@@ -1,6 +1,0 @@
-lights
-======
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: Renderer.lights

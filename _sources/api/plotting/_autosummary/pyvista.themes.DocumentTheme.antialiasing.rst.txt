@@ -1,6 +1,0 @@
-antialiasing
-============
-
-.. currentmodule:: pyvista.themes
-
-.. autoproperty:: DocumentTheme.antialiasing

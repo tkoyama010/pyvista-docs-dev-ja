@@ -1,6 +1,0 @@
-n\_cells
-========
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: ExplicitStructuredGrid.n_cells

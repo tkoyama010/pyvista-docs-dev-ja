@@ -1,6 +1,0 @@
-n\_points
-=========
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: DataSet.n_points

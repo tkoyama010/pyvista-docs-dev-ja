@@ -1,6 +1,0 @@
-outline\_corners
-================
-
-.. currentmodule:: pyvista
-
-.. automethod:: RectilinearGrid.outline_corners

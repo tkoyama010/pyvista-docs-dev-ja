@@ -1,6 +1,0 @@
-enable\_zoom\_style
-===================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Plotter.enable_zoom_style

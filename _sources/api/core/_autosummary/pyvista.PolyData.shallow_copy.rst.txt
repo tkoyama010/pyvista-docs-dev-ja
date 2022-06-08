@@ -1,6 +1,0 @@
-shallow\_copy
-=============
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyData.shallow_copy

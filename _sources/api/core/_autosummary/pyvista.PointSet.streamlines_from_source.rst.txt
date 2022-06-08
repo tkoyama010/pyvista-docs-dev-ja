@@ -1,6 +1,0 @@
-streamlines\_from\_source
-=========================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PointSet.streamlines_from_source

@@ -1,6 +1,0 @@
-point\_array\_names
-===================
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: XMLPImageDataReader.point_array_names

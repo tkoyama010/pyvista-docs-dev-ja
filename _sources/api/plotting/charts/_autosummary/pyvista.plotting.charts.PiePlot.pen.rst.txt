@@ -1,6 +1,0 @@
-pen
-===
-
-.. currentmodule:: pyvista.plotting.charts
-
-.. autoproperty:: PiePlot.pen

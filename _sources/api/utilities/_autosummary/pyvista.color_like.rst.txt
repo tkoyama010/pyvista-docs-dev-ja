@@ -1,6 +1,0 @@
-﻿color\_like
-===========
-
-.. currentmodule:: pyvista
-
-.. autodata:: color_like

@@ -1,6 +1,0 @@
-remove\_all\_lights
-===================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Renderer.remove_all_lights

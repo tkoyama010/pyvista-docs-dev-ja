@@ -1,6 +1,0 @@
-﻿Spline
-======
-
-.. currentmodule:: pyvista
-
-.. autofunction:: Spline

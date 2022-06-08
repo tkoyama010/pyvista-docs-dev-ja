@@ -1,6 +1,0 @@
-rotate\_z
-=========
-
-.. currentmodule:: pyvista
-
-.. automethod:: StructuredGrid.rotate_z

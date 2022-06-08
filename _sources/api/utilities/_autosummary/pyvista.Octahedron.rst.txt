@@ -1,6 +1,0 @@
-﻿Octahedron
-==========
-
-.. currentmodule:: pyvista
-
-.. autofunction:: Octahedron

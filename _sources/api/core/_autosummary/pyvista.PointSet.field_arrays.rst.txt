@@ -1,6 +1,0 @@
-field\_arrays
-=============
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: PointSet.field_arrays

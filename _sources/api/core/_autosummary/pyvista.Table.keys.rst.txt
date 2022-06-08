@@ -1,6 +1,0 @@
-keys
-====
-
-.. currentmodule:: pyvista
-
-.. automethod:: Table.keys

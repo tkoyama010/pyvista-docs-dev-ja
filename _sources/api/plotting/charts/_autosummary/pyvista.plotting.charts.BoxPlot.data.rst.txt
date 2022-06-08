@@ -1,6 +1,0 @@
-data
-====
-
-.. currentmodule:: pyvista.plotting.charts
-
-.. autoproperty:: BoxPlot.data

@@ -1,6 +1,0 @@
-memory\_address
-===============
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: UniformGrid.memory_address

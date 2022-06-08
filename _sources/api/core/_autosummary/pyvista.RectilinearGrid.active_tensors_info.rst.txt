@@ -1,6 +1,0 @@
-active\_tensors\_info
-=====================
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: RectilinearGrid.active_tensors_info

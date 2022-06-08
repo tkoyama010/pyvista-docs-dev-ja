@@ -1,6 +1,0 @@
-﻿save\_meshio
-============
-
-.. currentmodule:: pyvista
-
-.. autofunction:: save_meshio

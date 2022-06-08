@@ -1,6 +1,0 @@
-update\_coordinates
-===================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Plotter.update_coordinates

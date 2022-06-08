@@ -1,6 +1,0 @@
-download\_lobster
-=================
-
-.. currentmodule:: pyvista.examples.downloads
-
-.. autofunction:: download_lobster

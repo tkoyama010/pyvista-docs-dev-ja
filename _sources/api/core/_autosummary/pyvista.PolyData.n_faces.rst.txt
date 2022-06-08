@@ -1,6 +1,0 @@
-n\_faces
-========
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: PolyData.n_faces

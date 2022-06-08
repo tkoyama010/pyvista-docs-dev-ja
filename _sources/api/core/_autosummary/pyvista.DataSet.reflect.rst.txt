@@ -1,6 +1,0 @@
-reflect
-=======
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSet.reflect

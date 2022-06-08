@@ -1,6 +1,0 @@
-tube
-====
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.tube

@@ -1,6 +1,0 @@
-clip\_box
-=========
-
-.. currentmodule:: pyvista
-
-.. automethod:: RectilinearGrid.clip_box

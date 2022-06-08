@@ -1,6 +1,0 @@
-dimensions
-==========
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: StructuredGrid.dimensions

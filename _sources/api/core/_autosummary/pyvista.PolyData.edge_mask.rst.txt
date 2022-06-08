@@ -1,6 +1,0 @@
-edge\_mask
-==========
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyData.edge_mask

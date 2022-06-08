@@ -1,6 +1,0 @@
-image
-=====
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: Plotter.image

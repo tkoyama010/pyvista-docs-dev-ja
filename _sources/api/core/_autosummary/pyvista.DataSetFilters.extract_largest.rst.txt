@@ -1,6 +1,0 @@
-extract\_largest
-================
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSetFilters.extract_largest

@@ -1,6 +1,0 @@
-viewport
-========
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: Renderer.viewport

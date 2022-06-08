@@ -1,6 +1,0 @@
-remove\_floors
-==============
-
-.. currentmodule:: pyvista
-
-.. automethod:: Renderer.remove_floors

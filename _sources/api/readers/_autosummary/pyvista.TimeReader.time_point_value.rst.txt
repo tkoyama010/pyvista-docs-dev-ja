@@ -1,6 +1,0 @@
-time\_point\_value
-==================
-
-.. currentmodule:: pyvista
-
-.. automethod:: TimeReader.time_point_value

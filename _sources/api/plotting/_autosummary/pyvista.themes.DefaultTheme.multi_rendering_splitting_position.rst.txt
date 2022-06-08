@@ -1,6 +1,0 @@
-multi\_rendering\_splitting\_position
-=====================================
-
-.. currentmodule:: pyvista.themes
-
-.. autoproperty:: DefaultTheme.multi_rendering_splitting_position

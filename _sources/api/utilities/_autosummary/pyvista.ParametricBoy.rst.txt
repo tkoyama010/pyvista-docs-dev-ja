@@ -1,6 +1,0 @@
-﻿ParametricBoy
-=============
-
-.. currentmodule:: pyvista
-
-.. autofunction:: ParametricBoy

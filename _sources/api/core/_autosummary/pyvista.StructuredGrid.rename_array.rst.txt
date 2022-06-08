@@ -1,6 +1,0 @@
-rename\_array
-=============
-
-.. currentmodule:: pyvista
-
-.. automethod:: StructuredGrid.rename_array

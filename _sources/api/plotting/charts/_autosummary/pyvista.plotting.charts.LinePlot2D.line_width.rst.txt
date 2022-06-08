@@ -1,6 +1,0 @@
-line\_width
-===========
-
-.. currentmodule:: pyvista.plotting.charts
-
-.. autoproperty:: LinePlot2D.line_width

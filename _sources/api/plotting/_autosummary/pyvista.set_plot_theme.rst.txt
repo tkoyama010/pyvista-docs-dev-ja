@@ -1,6 +1,0 @@
-﻿set\_plot\_theme
-================
-
-.. currentmodule:: pyvista
-
-.. autofunction:: set_plot_theme

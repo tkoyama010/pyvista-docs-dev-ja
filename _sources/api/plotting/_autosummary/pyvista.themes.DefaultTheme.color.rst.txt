@@ -1,6 +1,0 @@
-color
-=====
-
-.. currentmodule:: pyvista.themes
-
-.. autoproperty:: DefaultTheme.color

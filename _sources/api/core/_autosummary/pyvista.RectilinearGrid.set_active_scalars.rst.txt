@@ -1,6 +1,0 @@
-set\_active\_scalars
-====================
-
-.. currentmodule:: pyvista
-
-.. automethod:: RectilinearGrid.set_active_scalars

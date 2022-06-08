@@ -1,6 +1,0 @@
-cell\_normals
-=============
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: PolyData.cell_normals

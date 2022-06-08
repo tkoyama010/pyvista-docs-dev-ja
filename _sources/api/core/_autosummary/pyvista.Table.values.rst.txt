@@ -1,6 +1,0 @@
-values
-======
-
-.. currentmodule:: pyvista
-
-.. automethod:: Table.values

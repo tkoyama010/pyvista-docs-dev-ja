@@ -1,6 +1,0 @@
-load\_random\_hills
-===================
-
-.. currentmodule:: pyvista.examples.examples
-
-.. autofunction:: load_random_hills

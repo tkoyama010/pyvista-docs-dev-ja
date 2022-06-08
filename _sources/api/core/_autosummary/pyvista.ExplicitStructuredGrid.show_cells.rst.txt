@@ -1,6 +1,0 @@
-show\_cells
-===========
-
-.. currentmodule:: pyvista
-
-.. automethod:: ExplicitStructuredGrid.show_cells

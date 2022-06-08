@@ -1,6 +1,0 @@
-visible
-=======
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: Chart2D.visible

@@ -1,6 +1,0 @@
-﻿get\_reader
-===========
-
-.. currentmodule:: pyvista
-
-.. autofunction:: get_reader

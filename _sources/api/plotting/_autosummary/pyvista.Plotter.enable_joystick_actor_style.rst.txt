@@ -1,6 +1,0 @@
-enable\_joystick\_actor\_style
-==============================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Plotter.enable_joystick_actor_style

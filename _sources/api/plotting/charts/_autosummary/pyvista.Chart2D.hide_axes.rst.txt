@@ -1,6 +1,0 @@
-hide\_axes
-==========
-
-.. currentmodule:: pyvista
-
-.. automethod:: Chart2D.hide_axes

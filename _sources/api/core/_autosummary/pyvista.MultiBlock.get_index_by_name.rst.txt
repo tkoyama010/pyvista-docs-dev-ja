@@ -1,6 +1,0 @@
-get\_index\_by\_name
-====================
-
-.. currentmodule:: pyvista
-
-.. automethod:: MultiBlock.get_index_by_name

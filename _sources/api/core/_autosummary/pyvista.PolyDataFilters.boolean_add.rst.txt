@@ -1,6 +1,0 @@
-boolean\_add
-============
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.boolean_add

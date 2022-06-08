@@ -1,6 +1,0 @@
-load\_sphere
-============
-
-.. currentmodule:: pyvista.examples.examples
-
-.. autofunction:: load_sphere

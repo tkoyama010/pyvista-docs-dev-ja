@@ -1,6 +1,0 @@
-compute\_implicit\_distance
-===========================
-
-.. currentmodule:: pyvista
-
-.. automethod:: StructuredGrid.compute_implicit_distance

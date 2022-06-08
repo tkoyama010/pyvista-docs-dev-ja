@@ -1,6 +1,0 @@
-rename\_array
-=============
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSet.rename_array

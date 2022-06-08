@@ -1,6 +1,0 @@
-toggle
-======
-
-.. currentmodule:: pyvista
-
-.. automethod:: Chart2D.toggle

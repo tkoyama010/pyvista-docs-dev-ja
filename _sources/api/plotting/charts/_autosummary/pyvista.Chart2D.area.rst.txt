@@ -1,6 +1,0 @@
-area
-====
-
-.. currentmodule:: pyvista
-
-.. automethod:: Chart2D.area

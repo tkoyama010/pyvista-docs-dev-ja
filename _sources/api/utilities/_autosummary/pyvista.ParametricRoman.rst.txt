@@ -1,6 +1,0 @@
-﻿ParametricRoman
-===============
-
-.. currentmodule:: pyvista
-
-.. autofunction:: ParametricRoman

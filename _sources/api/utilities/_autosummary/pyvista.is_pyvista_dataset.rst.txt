@@ -1,6 +1,0 @@
-﻿is\_pyvista\_dataset
-====================
-
-.. currentmodule:: pyvista
-
-.. autofunction:: is_pyvista_dataset

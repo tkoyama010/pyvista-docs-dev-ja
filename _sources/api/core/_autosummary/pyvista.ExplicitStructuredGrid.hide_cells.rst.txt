@@ -1,6 +1,0 @@
-hide\_cells
-===========
-
-.. currentmodule:: pyvista
-
-.. automethod:: ExplicitStructuredGrid.hide_cells

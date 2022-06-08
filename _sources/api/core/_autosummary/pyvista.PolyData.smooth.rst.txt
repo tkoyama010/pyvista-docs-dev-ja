@@ -1,6 +1,0 @@
-smooth
-======
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyData.smooth

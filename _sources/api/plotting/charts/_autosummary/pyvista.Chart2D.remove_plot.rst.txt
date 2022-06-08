@@ -1,6 +1,0 @@
-remove\_plot
-============
-
-.. currentmodule:: pyvista
-
-.. automethod:: Chart2D.remove_plot

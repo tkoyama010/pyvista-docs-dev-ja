@@ -1,6 +1,0 @@
-download\_cad\_model
-====================
-
-.. currentmodule:: pyvista.examples.downloads
-
-.. autofunction:: download_cad_model

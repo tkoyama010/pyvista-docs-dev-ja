@@ -1,6 +1,0 @@
-ctp
-===
-
-.. currentmodule:: pyvista
-
-.. automethod:: StructuredGrid.ctp

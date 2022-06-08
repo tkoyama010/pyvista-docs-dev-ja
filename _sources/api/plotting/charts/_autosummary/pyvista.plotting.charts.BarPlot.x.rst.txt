@@ -1,6 +1,0 @@
-x
-=
-
-.. currentmodule:: pyvista.plotting.charts
-
-.. autoproperty:: BarPlot.x

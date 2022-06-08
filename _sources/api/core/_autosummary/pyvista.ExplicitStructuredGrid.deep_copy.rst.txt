@@ -1,6 +1,0 @@
-deep\_copy
-==========
-
-.. currentmodule:: pyvista
-
-.. automethod:: ExplicitStructuredGrid.deep_copy

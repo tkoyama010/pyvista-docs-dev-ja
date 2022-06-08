@@ -1,6 +1,0 @@
-﻿Tetrahedron
-===========
-
-.. currentmodule:: pyvista
-
-.. autofunction:: Tetrahedron

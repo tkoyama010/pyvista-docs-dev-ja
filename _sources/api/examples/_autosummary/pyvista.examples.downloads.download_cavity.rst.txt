@@ -1,6 +1,0 @@
-download\_cavity
-================
-
-.. currentmodule:: pyvista.examples.downloads
-
-.. autofunction:: download_cavity

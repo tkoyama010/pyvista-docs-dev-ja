@@ -1,6 +1,0 @@
-center
-======
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: MultiBlock.center
