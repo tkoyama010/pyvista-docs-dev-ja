@@ -1,0 +1,93 @@
+﻿pyvista.plotting.charts.Pen
+===========================
+
+.. currentmodule:: pyvista.plotting.charts
+
+.. autoclass:: Pen
+
+   
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :toctree:
+   
+      
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      Pen.color
+      
+      
+      Pen.style
+      
+      
+      Pen.width
+      
+   
+   
