@@ -1,6 +1,0 @@
-multi\_samples
-==============
-
-.. currentmodule:: pyvista.themes
-
-.. autoproperty:: ParaViewTheme.multi_samples

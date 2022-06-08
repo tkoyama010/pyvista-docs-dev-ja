@@ -1,6 +1,0 @@
-style
-=====
-
-.. currentmodule:: pyvista.plotting.charts
-
-.. autoproperty:: Pen.style

@@ -1,6 +1,0 @@
-silhouette
-==========
-
-.. currentmodule:: pyvista.themes
-
-.. autoproperty:: ParaViewTheme.silhouette

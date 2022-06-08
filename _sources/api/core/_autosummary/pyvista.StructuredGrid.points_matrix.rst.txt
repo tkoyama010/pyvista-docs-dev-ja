@@ -1,6 +1,0 @@
-points\_matrix
-==============
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: StructuredGrid.points_matrix

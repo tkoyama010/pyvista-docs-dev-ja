@@ -1,6 +1,0 @@
-all\_point\_arrays\_status
-==========================
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: XMLRectilinearGridReader.all_point_arrays_status

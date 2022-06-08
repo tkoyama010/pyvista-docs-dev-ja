@@ -1,6 +1,0 @@
-number\_of\_cells
-=================
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: RectilinearGrid.number_of_cells

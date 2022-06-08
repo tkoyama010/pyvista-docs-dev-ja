@@ -1,6 +1,0 @@
-﻿MultipleLines
-=============
-
-.. currentmodule:: pyvista
-
-.. autofunction:: MultipleLines

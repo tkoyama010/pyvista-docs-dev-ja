@@ -1,6 +1,0 @@
-download\_human
-===============
-
-.. currentmodule:: pyvista.examples.downloads
-
-.. autofunction:: download_human

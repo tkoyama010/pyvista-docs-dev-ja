@@ -1,6 +1,0 @@
-remove\_cells
-=============
-
-.. currentmodule:: pyvista
-
-.. automethod:: ExplicitStructuredGrid.remove_cells

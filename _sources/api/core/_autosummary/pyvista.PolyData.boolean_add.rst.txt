@@ -1,6 +1,0 @@
-boolean\_add
-============
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyData.boolean_add

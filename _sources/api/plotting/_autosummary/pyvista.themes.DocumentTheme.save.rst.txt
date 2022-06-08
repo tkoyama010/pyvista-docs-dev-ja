@@ -1,6 +1,0 @@
-save
-====
-
-.. currentmodule:: pyvista.themes
-
-.. automethod:: DocumentTheme.save

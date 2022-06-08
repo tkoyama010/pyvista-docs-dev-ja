@@ -1,6 +1,0 @@
-enable\_point\_array
-====================
-
-.. currentmodule:: pyvista
-
-.. automethod:: OpenFOAMReader.enable_point_array

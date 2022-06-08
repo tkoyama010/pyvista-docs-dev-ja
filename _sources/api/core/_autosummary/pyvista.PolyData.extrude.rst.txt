@@ -1,6 +1,0 @@
-extrude
-=======
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyData.extrude

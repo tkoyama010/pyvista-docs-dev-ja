@@ -1,6 +1,0 @@
-transparent\_background
-=======================
-
-.. currentmodule:: pyvista.themes
-
-.. autoproperty:: DarkTheme.transparent_background

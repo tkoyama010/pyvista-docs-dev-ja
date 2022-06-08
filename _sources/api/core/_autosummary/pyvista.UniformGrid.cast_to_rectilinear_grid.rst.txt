@@ -1,6 +1,0 @@
-cast\_to\_rectilinear\_grid
-===========================
-
-.. currentmodule:: pyvista
-
-.. automethod:: UniformGrid.cast_to_rectilinear_grid

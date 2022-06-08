@@ -1,6 +1,0 @@
-load\_globe
-===========
-
-.. currentmodule:: pyvista.examples.examples
-
-.. autofunction:: load_globe

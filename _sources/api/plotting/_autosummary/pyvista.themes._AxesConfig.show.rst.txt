@@ -1,6 +1,0 @@
-show
-====
-
-.. currentmodule:: pyvista.themes
-
-.. autoproperty:: _AxesConfig.show

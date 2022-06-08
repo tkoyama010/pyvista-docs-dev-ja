@@ -1,6 +1,0 @@
-font
-====
-
-.. currentmodule:: pyvista.themes
-
-.. autoproperty:: DarkTheme.font

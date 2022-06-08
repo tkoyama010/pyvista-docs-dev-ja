@@ -1,6 +1,0 @@
-cell\_n\_points
-===============
-
-.. currentmodule:: pyvista
-
-.. automethod:: PointSet.cell_n_points

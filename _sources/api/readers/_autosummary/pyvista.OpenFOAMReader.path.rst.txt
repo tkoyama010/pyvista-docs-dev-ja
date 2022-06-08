@@ -1,6 +1,0 @@
-path
-====
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: OpenFOAMReader.path

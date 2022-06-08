@@ -1,6 +1,0 @@
-obbTree
-=======
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: PolyData.obbTree

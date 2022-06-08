@@ -1,6 +1,0 @@
-textures
-========
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: UnstructuredGrid.textures

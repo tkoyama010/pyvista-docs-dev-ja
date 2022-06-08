@@ -1,6 +1,0 @@
-visible
-=======
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: ChartPie.visible

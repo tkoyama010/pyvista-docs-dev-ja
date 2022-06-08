@@ -1,6 +1,0 @@
-disable\_picking
-================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Plotter.disable_picking

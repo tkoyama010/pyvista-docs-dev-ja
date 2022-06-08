@@ -1,6 +1,0 @@
-loc
-===
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: Chart2D.loc

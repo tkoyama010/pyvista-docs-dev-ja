@@ -1,6 +1,0 @@
-number\_of\_points
-==================
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: RectilinearGrid.number_of_points

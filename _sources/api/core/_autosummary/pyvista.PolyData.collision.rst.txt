@@ -1,6 +1,0 @@
-collision
-=========
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyData.collision

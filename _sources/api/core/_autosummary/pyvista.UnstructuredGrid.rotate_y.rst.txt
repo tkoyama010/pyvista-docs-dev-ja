@@ -1,6 +1,0 @@
-rotate\_y
-=========
-
-.. currentmodule:: pyvista
-
-.. automethod:: UnstructuredGrid.rotate_y

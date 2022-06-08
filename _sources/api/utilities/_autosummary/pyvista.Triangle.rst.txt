@@ -1,6 +1,0 @@
-﻿Triangle
-========
-
-.. currentmodule:: pyvista
-
-.. autofunction:: Triangle

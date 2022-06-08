@@ -1,6 +1,0 @@
-extract\_subset
-===============
-
-.. currentmodule:: pyvista
-
-.. automethod:: StructuredGrid.extract_subset

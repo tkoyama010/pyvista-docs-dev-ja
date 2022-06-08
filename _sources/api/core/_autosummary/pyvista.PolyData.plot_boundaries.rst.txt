@@ -1,6 +1,0 @@
-plot\_boundaries
-================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyData.plot_boundaries

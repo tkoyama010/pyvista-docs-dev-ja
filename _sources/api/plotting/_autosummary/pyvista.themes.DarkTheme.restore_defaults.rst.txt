@@ -1,6 +1,0 @@
-restore\_defaults
-=================
-
-.. currentmodule:: pyvista.themes
-
-.. automethod:: DarkTheme.restore_defaults

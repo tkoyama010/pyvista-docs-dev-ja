@@ -1,6 +1,0 @@
-﻿Superquadric
-============
-
-.. currentmodule:: pyvista
-
-.. autofunction:: Superquadric

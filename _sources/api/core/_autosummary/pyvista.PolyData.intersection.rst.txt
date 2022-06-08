@@ -1,6 +1,0 @@
-intersection
-============
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyData.intersection

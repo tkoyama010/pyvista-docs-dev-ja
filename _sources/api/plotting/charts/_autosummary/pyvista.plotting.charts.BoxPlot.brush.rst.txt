@@ -1,6 +1,0 @@
-brush
-=====
-
-.. currentmodule:: pyvista.plotting.charts
-
-.. autoproperty:: BoxPlot.brush

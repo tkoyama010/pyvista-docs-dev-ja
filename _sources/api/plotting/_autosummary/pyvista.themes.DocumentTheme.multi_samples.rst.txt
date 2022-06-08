@@ -1,6 +1,0 @@
-multi\_samples
-==============
-
-.. currentmodule:: pyvista.themes
-
-.. autoproperty:: DocumentTheme.multi_samples

@@ -1,6 +1,0 @@
-strip
-=====
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyData.strip

@@ -1,6 +1,0 @@
-set\_active\_tensors
-====================
-
-.. currentmodule:: pyvista
-
-.. automethod:: RectilinearGrid.set_active_tensors

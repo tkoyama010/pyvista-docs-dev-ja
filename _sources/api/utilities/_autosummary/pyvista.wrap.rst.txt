@@ -1,6 +1,0 @@
-﻿wrap
-====
-
-.. currentmodule:: pyvista
-
-.. autofunction:: wrap

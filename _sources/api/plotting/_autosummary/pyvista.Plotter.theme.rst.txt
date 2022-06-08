@@ -1,6 +1,0 @@
-theme
-=====
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: Plotter.theme

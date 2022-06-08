@@ -1,6 +1,0 @@
-transparent\_background
-=======================
-
-.. currentmodule:: pyvista.themes
-
-.. autoproperty:: ParaViewTheme.transparent_background

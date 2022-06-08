@@ -1,6 +1,0 @@
-flip\_normal
-============
-
-.. currentmodule:: pyvista
-
-.. automethod:: UnstructuredGrid.flip_normal

@@ -1,6 +1,0 @@
-cmap
-====
-
-.. currentmodule:: pyvista.themes
-
-.. autoproperty:: ParaViewTheme.cmap

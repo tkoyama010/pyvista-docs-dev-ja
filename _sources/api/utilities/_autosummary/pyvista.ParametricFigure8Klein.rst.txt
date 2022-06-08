@@ -1,6 +1,0 @@
-﻿ParametricFigure8Klein
-======================
-
-.. currentmodule:: pyvista
-
-.. autofunction:: ParametricFigure8Klein

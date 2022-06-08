@@ -1,6 +1,0 @@
-n\_points
-=========
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: PolyData.n_points

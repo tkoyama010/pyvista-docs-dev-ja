@@ -1,6 +1,0 @@
-download\_shark
-===============
-
-.. currentmodule:: pyvista.examples.downloads
-
-.. autofunction:: download_shark

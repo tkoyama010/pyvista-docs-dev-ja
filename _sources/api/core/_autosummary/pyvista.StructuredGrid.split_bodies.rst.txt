@@ -1,6 +1,0 @@
-split\_bodies
-=============
-
-.. currentmodule:: pyvista
-
-.. automethod:: StructuredGrid.split_bodies

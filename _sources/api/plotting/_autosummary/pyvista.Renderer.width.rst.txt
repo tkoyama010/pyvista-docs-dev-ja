@@ -1,6 +1,0 @@
-width
-=====
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: Renderer.width

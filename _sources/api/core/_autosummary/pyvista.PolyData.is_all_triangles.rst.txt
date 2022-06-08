@@ -1,6 +1,0 @@
-is\_all\_triangles
-==================
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: PolyData.is_all_triangles

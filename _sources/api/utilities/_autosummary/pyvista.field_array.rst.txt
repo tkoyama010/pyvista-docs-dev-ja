@@ -1,6 +1,0 @@
-﻿field\_array
-============
-
-.. currentmodule:: pyvista
-
-.. autofunction:: field_array

@@ -1,6 +1,0 @@
-return\_cpos
-============
-
-.. currentmodule:: pyvista.themes
-
-.. autoproperty:: DefaultTheme.return_cpos

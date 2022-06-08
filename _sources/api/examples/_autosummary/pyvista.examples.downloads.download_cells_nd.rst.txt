@@ -1,6 +1,0 @@
-download\_cells\_nd
-===================
-
-.. currentmodule:: pyvista.examples.downloads
-
-.. autofunction:: download_cells_nd

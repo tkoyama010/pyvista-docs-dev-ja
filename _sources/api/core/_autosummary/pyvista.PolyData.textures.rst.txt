@@ -1,6 +1,0 @@
-textures
-========
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: PolyData.textures

@@ -1,6 +1,0 @@
-legend
-======
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: Renderer.legend

@@ -1,6 +1,0 @@
-number\_point\_arrays
-=====================
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: XMLPolyDataReader.number_point_arrays

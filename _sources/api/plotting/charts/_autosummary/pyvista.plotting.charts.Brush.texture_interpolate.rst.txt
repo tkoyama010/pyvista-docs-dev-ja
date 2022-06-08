@@ -1,6 +1,0 @@
-texture\_interpolate
-====================
-
-.. currentmodule:: pyvista.plotting.charts
-
-.. autoproperty:: Brush.texture_interpolate

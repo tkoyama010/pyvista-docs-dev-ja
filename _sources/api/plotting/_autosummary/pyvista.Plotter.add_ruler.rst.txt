@@ -1,6 +1,0 @@
-add\_ruler
-==========
-
-.. currentmodule:: pyvista
-
-.. automethod:: Plotter.add_ruler

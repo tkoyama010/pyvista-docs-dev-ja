@@ -1,6 +1,0 @@
-warp\_by\_scalar
-================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PointSet.warp_by_scalar

@@ -1,6 +1,0 @@
-number\_base\_arrays
-====================
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: CGNSReader.number_base_arrays

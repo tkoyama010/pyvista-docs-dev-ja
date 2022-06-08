@@ -1,6 +1,0 @@
-flip\_z
-=======
-
-.. currentmodule:: pyvista
-
-.. automethod:: RectilinearGrid.flip_z

@@ -1,6 +1,0 @@
-merge
-=====
-
-.. currentmodule:: pyvista
-
-.. automethod:: PointSet.merge

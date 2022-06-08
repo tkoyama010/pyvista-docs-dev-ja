@@ -1,6 +1,0 @@
-point\_array\_names
-===================
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: XMLPRectilinearGridReader.point_array_names

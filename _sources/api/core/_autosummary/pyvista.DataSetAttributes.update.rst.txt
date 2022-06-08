@@ -1,6 +1,0 @@
-update
-======
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSetAttributes.update

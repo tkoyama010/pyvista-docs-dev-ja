@@ -1,6 +1,0 @@
-add\_light
-==========
-
-.. currentmodule:: pyvista
-
-.. automethod:: Plotter.add_light

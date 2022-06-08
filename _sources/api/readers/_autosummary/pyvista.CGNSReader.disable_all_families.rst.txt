@@ -1,6 +1,0 @@
-disable\_all\_families
-======================
-
-.. currentmodule:: pyvista
-
-.. automethod:: CGNSReader.disable_all_families

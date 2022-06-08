@@ -1,6 +1,0 @@
-arrows
-======
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: UnstructuredGrid.arrows

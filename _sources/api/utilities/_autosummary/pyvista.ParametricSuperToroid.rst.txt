@@ -1,6 +1,0 @@
-﻿ParametricSuperToroid
-=====================
-
-.. currentmodule:: pyvista
-
-.. autofunction:: ParametricSuperToroid

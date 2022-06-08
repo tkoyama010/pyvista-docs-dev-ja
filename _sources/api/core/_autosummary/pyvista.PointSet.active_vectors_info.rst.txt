@@ -1,6 +1,0 @@
-active\_vectors\_info
-=====================
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: PointSet.active_vectors_info

@@ -1,6 +1,0 @@
-﻿is\_inside\_bounds
-==================
-
-.. currentmodule:: pyvista.utilities
-
-.. autofunction:: is_inside_bounds

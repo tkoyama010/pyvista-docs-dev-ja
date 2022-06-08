@@ -1,6 +1,0 @@
-download\_letter\_a
-===================
-
-.. currentmodule:: pyvista.examples.downloads
-
-.. autofunction:: download_letter_a

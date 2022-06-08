@@ -1,6 +1,0 @@
-legend\_visible
-===============
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: ChartMPL.legend_visible

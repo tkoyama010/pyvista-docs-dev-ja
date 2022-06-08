@@ -1,6 +1,0 @@
-distance
-========
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: Camera.distance

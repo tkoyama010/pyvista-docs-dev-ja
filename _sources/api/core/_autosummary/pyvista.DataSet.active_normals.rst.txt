@@ -1,6 +1,0 @@
-active\_normals
-===============
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: DataSet.active_normals

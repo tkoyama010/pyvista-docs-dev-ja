@@ -1,6 +1,0 @@
-shallow\_copy
-=============
-
-.. currentmodule:: pyvista
-
-.. automethod:: StructuredGrid.shallow_copy

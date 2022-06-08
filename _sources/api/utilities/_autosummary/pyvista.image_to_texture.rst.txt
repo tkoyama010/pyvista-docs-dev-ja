@@ -1,6 +1,0 @@
-﻿image\_to\_texture
-==================
-
-.. currentmodule:: pyvista
-
-.. autofunction:: image_to_texture

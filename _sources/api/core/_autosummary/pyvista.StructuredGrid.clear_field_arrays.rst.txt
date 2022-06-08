@@ -1,6 +1,0 @@
-clear\_field\_arrays
-====================
-
-.. currentmodule:: pyvista
-
-.. automethod:: StructuredGrid.clear_field_arrays

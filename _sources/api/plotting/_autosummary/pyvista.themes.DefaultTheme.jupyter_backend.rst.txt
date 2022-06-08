@@ -1,6 +1,0 @@
-jupyter\_backend
-================
-
-.. currentmodule:: pyvista.themes
-
-.. autoproperty:: DefaultTheme.jupyter_backend

@@ -1,6 +1,0 @@
-﻿ParametricEnneper
-=================
-
-.. currentmodule:: pyvista
-
-.. autofunction:: ParametricEnneper

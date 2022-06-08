@@ -1,6 +1,0 @@
-multi\_rendering\_splitting\_position
-=====================================
-
-.. currentmodule:: pyvista.themes
-
-.. autoproperty:: ParaViewTheme.multi_rendering_splitting_position

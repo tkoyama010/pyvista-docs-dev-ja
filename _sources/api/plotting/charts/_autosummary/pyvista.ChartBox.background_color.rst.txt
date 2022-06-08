@@ -1,6 +1,0 @@
-background\_color
-=================
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: ChartBox.background_color

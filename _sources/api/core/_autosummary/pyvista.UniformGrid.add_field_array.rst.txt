@@ -1,6 +1,0 @@
-add\_field\_array
-=================
-
-.. currentmodule:: pyvista
-
-.. automethod:: UniformGrid.add_field_array

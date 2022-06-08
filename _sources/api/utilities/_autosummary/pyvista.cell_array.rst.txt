@@ -1,6 +1,0 @@
-﻿cell\_array
-===========
-
-.. currentmodule:: pyvista
-
-.. autofunction:: cell_array

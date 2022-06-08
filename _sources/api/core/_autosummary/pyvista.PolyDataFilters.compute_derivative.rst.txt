@@ -1,6 +1,0 @@
-compute\_derivative
-===================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.compute_derivative

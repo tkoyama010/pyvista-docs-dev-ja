@@ -1,6 +1,0 @@
-﻿axis\_rotation
-==============
-
-.. currentmodule:: pyvista.utilities
-
-.. autofunction:: axis_rotation

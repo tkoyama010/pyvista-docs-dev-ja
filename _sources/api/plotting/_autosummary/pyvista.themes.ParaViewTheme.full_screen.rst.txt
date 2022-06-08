@@ -1,6 +1,0 @@
-full\_screen
-============
-
-.. currentmodule:: pyvista.themes
-
-.. autoproperty:: ParaViewTheme.full_screen

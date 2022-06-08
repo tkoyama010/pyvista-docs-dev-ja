@@ -1,6 +1,0 @@
-pop
-===
-
-.. currentmodule:: pyvista
-
-.. automethod:: MultiBlock.pop

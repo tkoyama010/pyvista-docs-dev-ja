@@ -1,6 +1,0 @@
-line
-====
-
-.. currentmodule:: pyvista
-
-.. automethod:: Chart2D.line

@@ -1,6 +1,0 @@
-extract\_cells
-==============
-
-.. currentmodule:: pyvista
-
-.. automethod:: StructuredGrid.extract_cells
