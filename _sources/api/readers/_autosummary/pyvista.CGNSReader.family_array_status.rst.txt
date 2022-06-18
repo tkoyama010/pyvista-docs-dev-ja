@@ -1,6 +1,0 @@
-family\_array\_status
-=====================
-
-.. currentmodule:: pyvista
-
-.. automethod:: CGNSReader.family_array_status

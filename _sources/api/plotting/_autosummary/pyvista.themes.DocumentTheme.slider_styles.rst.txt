@@ -1,6 +1,0 @@
-slider\_styles
-==============
-
-.. currentmodule:: pyvista.themes
-
-.. autoproperty:: DocumentTheme.slider_styles

@@ -1,6 +1,0 @@
-remove\_legend
-==============
-
-.. currentmodule:: pyvista
-
-.. automethod:: Renderer.remove_legend

@@ -1,6 +1,0 @@
-show
-====
-
-.. currentmodule:: pyvista
-
-.. automethod:: Chart2D.show

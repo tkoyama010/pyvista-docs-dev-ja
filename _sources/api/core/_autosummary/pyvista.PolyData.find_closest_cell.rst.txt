@@ -1,6 +1,0 @@
-find\_closest\_cell
-===================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyData.find_closest_cell

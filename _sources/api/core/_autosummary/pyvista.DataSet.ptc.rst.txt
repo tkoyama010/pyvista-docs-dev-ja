@@ -1,6 +1,0 @@
-ptc
-===
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSet.ptc

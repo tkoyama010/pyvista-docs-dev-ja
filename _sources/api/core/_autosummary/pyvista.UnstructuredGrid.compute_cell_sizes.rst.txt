@@ -1,6 +1,0 @@
-compute\_cell\_sizes
-====================
-
-.. currentmodule:: pyvista
-
-.. automethod:: UnstructuredGrid.compute_cell_sizes

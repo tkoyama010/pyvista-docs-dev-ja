@@ -1,6 +1,0 @@
-multi\_ray\_trace
-=================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyData.multi_ray_trace

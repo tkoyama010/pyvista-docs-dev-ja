@@ -1,6 +1,0 @@
-pickable\_actors
-================
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: Plotter.pickable_actors

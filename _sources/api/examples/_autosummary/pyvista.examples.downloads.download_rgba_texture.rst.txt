@@ -1,6 +1,0 @@
-download\_rgba\_texture
-=======================
-
-.. currentmodule:: pyvista.examples.downloads
-
-.. autofunction:: download_rgba_texture

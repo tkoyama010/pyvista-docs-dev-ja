@@ -1,6 +1,0 @@
-background\_color
-=================
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: Chart2D.background_color

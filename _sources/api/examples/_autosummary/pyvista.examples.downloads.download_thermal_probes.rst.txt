@@ -1,6 +1,0 @@
-download\_thermal\_probes
-=========================
-
-.. currentmodule:: pyvista.examples.downloads
-
-.. autofunction:: download_thermal_probes

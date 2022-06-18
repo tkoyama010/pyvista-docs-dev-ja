@@ -1,6 +1,0 @@
-cell\_array\_names
-==================
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: XMLPUnstructuredGridReader.cell_array_names

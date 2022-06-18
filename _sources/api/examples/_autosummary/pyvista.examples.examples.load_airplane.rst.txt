@@ -1,6 +1,0 @@
-load\_airplane
-==============
-
-.. currentmodule:: pyvista.examples.examples
-
-.. autofunction:: load_airplane

@@ -1,6 +1,0 @@
-enable\_lightkit
-================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Plotter.enable_lightkit

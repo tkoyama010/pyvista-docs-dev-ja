@@ -1,6 +1,0 @@
-active\_vectors\_info
-=====================
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: PolyData.active_vectors_info

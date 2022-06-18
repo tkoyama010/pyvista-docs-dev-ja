@@ -1,6 +1,0 @@
-clipping\_range
-===============
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: Camera.clipping_range

@@ -1,6 +1,0 @@
-spacing
-=======
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: UniformGrid.spacing

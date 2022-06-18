@@ -1,6 +1,0 @@
-to\_dict
-========
-
-.. currentmodule:: pyvista.themes
-
-.. automethod:: DocumentTheme.to_dict

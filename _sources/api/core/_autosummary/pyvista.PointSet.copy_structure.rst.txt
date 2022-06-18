@@ -1,6 +1,0 @@
-copy\_structure
-===============
-
-.. currentmodule:: pyvista
-
-.. automethod:: PointSet.copy_structure

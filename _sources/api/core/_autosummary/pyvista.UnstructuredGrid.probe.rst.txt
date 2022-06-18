@@ -1,6 +1,0 @@
-probe
-=====
-
-.. currentmodule:: pyvista
-
-.. automethod:: UnstructuredGrid.probe

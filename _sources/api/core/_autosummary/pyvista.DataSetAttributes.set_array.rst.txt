@@ -1,6 +1,0 @@
-set\_array
-==========
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSetAttributes.set_array

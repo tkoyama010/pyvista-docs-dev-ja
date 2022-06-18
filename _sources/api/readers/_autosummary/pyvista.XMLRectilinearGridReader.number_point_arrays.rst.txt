@@ -1,6 +1,0 @@
-number\_point\_arrays
-=====================
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: XMLRectilinearGridReader.number_point_arrays

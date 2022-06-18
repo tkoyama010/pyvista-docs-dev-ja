@@ -1,6 +1,0 @@
-copy
-====
-
-.. currentmodule:: pyvista
-
-.. automethod:: MultiBlock.copy

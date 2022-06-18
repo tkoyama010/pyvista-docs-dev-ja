@@ -1,6 +1,0 @@
-boolean\_difference
-===================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.boolean_difference

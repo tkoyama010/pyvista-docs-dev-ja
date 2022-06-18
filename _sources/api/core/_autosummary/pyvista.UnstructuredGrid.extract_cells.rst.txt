@@ -1,6 +1,0 @@
-extract\_cells
-==============
-
-.. currentmodule:: pyvista
-
-.. automethod:: UnstructuredGrid.extract_cells

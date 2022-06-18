@@ -1,6 +1,0 @@
-cell\_bounds
-============
-
-.. currentmodule:: pyvista
-
-.. automethod:: RectilinearGrid.cell_bounds

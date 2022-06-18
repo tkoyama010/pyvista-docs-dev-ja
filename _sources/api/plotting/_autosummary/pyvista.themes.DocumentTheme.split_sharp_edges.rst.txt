@@ -1,6 +1,0 @@
-split\_sharp\_edges
-===================
-
-.. currentmodule:: pyvista.themes
-
-.. autoproperty:: DocumentTheme.split_sharp_edges

@@ -1,6 +1,0 @@
-to\_pythreejs
-=============
-
-.. currentmodule:: pyvista
-
-.. automethod:: Plotter.to_pythreejs

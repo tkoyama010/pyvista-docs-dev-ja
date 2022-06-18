@@ -1,6 +1,0 @@
-remove\_actor
-=============
-
-.. currentmodule:: pyvista
-
-.. automethod:: Renderer.remove_actor

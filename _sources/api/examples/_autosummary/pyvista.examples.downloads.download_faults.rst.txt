@@ -1,6 +1,0 @@
-download\_faults
-================
-
-.. currentmodule:: pyvista.examples.downloads
-
-.. autofunction:: download_faults

@@ -1,6 +1,0 @@
-﻿compare\_images
-===============
-
-.. currentmodule:: pyvista
-
-.. autofunction:: compare_images

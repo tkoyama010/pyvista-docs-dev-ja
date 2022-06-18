@@ -1,6 +1,0 @@
-﻿PlatonicSolid
-=============
-
-.. currentmodule:: pyvista
-
-.. autofunction:: PlatonicSolid

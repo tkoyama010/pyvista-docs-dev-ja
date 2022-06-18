@@ -1,6 +1,0 @@
-visible
-=======
-
-.. currentmodule:: pyvista.plotting.charts
-
-.. autoproperty:: StackPlot.visible

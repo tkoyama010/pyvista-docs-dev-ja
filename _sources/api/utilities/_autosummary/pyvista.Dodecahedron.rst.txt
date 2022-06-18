@@ -1,6 +1,0 @@
-﻿Dodecahedron
-============
-
-.. currentmodule:: pyvista
-
-.. autofunction:: Dodecahedron

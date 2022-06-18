@@ -1,6 +1,0 @@
-patch\_array\_status
-====================
-
-.. currentmodule:: pyvista
-
-.. automethod:: OpenFOAMReader.patch_array_status

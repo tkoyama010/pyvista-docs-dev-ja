@@ -1,6 +1,0 @@
-﻿ParametricCatalanMinimal
-========================
-
-.. currentmodule:: pyvista
-
-.. autofunction:: ParametricCatalanMinimal

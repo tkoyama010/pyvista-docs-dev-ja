@@ -1,6 +1,0 @@
-axes
-====
-
-.. currentmodule:: pyvista.themes
-
-.. autoproperty:: DarkTheme.axes

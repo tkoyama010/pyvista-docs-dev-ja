@@ -1,6 +1,0 @@
-streamlines\_evenly\_spaced\_2D
-===============================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyDataFilters.streamlines_evenly_spaced_2D

@@ -1,6 +1,0 @@
-disable\_point\_array
-=====================
-
-.. currentmodule:: pyvista
-
-.. automethod:: XMLRectilinearGridReader.disable_point_array

@@ -1,6 +1,0 @@
-add\_field\_data
-================
-
-.. currentmodule:: pyvista
-
-.. automethod:: UniformGrid.add_field_data

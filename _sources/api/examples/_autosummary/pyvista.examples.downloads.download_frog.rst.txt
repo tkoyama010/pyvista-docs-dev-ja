@@ -1,6 +1,0 @@
-download\_frog
-==============
-
-.. currentmodule:: pyvista.examples.downloads
-
-.. autofunction:: download_frog

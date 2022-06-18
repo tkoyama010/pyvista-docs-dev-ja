@@ -1,6 +1,0 @@
-visible\_bounds
-===============
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: ExplicitStructuredGrid.visible_bounds

@@ -1,6 +1,0 @@
-point\_array\_status
-====================
-
-.. currentmodule:: pyvista
-
-.. automethod:: XMLMultiBlockDataReader.point_array_status

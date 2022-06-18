@@ -1,6 +1,0 @@
-contour
-=======
-
-.. currentmodule:: pyvista
-
-.. automethod:: PointSet.contour

@@ -1,6 +1,0 @@
-translate
-=========
-
-.. currentmodule:: pyvista
-
-.. automethod:: UnstructuredGrid.translate

@@ -1,6 +1,0 @@
-clear\_cell\_data
-=================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PointSet.clear_cell_data

@@ -1,6 +1,0 @@
-set\_active\_vectors
-====================
-
-.. currentmodule:: pyvista
-
-.. automethod:: UnstructuredGrid.set_active_vectors

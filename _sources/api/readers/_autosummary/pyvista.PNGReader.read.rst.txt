@@ -1,6 +1,0 @@
-read
-====
-
-.. currentmodule:: pyvista
-
-.. automethod:: PNGReader.read

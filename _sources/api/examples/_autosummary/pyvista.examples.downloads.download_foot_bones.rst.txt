@@ -1,6 +1,0 @@
-download\_foot\_bones
-=====================
-
-.. currentmodule:: pyvista.examples.downloads
-
-.. autofunction:: download_foot_bones

@@ -1,6 +1,0 @@
-clear\_textures
-===============
-
-.. currentmodule:: pyvista
-
-.. automethod:: UniformGrid.clear_textures

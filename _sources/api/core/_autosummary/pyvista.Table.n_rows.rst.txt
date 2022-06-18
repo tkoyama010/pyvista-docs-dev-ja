@@ -1,6 +1,0 @@
-n\_rows
-=======
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: Table.n_rows

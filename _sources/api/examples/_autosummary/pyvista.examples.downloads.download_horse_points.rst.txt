@@ -1,6 +1,0 @@
-download\_horse\_points
-=======================
-
-.. currentmodule:: pyvista.examples.downloads
-
-.. autofunction:: download_horse_points

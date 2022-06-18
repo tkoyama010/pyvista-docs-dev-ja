@@ -1,6 +1,0 @@
-﻿Icosahedron
-===========
-
-.. currentmodule:: pyvista
-
-.. autofunction:: Icosahedron

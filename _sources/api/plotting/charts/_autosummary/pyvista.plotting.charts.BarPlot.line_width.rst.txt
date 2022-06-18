@@ -1,6 +1,0 @@
-line\_width
-===========
-
-.. currentmodule:: pyvista.plotting.charts
-
-.. autoproperty:: BarPlot.line_width

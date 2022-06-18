@@ -1,6 +1,0 @@
-active\_scalars
-===============
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: PointSet.active_scalars

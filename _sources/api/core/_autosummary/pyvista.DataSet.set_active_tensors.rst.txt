@@ -1,6 +1,0 @@
-set\_active\_tensors
-====================
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSet.set_active_tensors

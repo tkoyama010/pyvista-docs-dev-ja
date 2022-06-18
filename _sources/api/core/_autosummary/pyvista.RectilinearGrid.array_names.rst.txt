@@ -1,6 +1,0 @@
-array\_names
-============
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: RectilinearGrid.array_names

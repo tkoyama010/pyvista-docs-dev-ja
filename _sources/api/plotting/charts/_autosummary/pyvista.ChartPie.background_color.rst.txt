@@ -1,6 +1,0 @@
-background\_color
-=================
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: ChartPie.background_color

@@ -1,6 +1,0 @@
-auto\_close
-===========
-
-.. currentmodule:: pyvista.themes
-
-.. autoproperty:: DefaultTheme.auto_close

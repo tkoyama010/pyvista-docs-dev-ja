@@ -1,6 +1,0 @@
-warp\_by\_vector
-================
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSetFilters.warp_by_vector

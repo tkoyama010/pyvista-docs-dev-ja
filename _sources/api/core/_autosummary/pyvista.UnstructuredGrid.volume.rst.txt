@@ -1,6 +1,0 @@
-volume
-======
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: UnstructuredGrid.volume

@@ -1,6 +1,0 @@
-cell\_data
-==========
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: PointSet.cell_data

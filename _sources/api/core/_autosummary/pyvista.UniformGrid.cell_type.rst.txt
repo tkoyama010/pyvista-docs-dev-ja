@@ -1,6 +1,0 @@
-cell\_type
-==========
-
-.. currentmodule:: pyvista
-
-.. automethod:: UniformGrid.cell_type

@@ -1,6 +1,0 @@
-download\_motor
-===============
-
-.. currentmodule:: pyvista.examples.downloads
-
-.. autofunction:: download_motor

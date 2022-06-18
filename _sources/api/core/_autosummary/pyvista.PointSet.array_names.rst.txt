@@ -1,6 +1,0 @@
-array\_names
-============
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: PointSet.array_names

@@ -1,6 +1,0 @@
-cell\_n\_points
-===============
-
-.. currentmodule:: pyvista
-
-.. automethod:: UniformGrid.cell_n_points

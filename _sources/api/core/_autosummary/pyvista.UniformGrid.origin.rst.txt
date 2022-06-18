@@ -1,6 +1,0 @@
-origin
-======
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: UniformGrid.origin

@@ -1,6 +1,0 @@
-﻿ParametricConicSpiral
-=====================
-
-.. currentmodule:: pyvista
-
-.. autofunction:: ParametricConicSpiral

@@ -1,6 +1,0 @@
-size
-====
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: ChartMPL.size

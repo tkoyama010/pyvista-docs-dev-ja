@@ -1,6 +1,0 @@
-remove\_cells
-=============
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyData.remove_cells

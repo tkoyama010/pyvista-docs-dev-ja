@@ -1,6 +1,0 @@
-texture\_repeat
-===============
-
-.. currentmodule:: pyvista.plotting.charts
-
-.. autoproperty:: Brush.texture_repeat

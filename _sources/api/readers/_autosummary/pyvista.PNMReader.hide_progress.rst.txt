@@ -1,6 +1,0 @@
-hide\_progress
-==============
-
-.. currentmodule:: pyvista
-
-.. automethod:: PNMReader.hide_progress

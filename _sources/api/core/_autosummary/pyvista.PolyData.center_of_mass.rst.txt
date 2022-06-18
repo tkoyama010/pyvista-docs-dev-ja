@@ -1,6 +1,0 @@
-center\_of\_mass
-================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyData.center_of_mass

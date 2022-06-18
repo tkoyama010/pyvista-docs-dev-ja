@@ -1,6 +1,0 @@
-add\_title
-==========
-
-.. currentmodule:: pyvista
-
-.. automethod:: Plotter.add_title

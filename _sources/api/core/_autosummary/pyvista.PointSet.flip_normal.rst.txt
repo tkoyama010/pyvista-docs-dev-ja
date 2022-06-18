@@ -1,6 +1,0 @@
-flip\_normal
-============
-
-.. currentmodule:: pyvista
-
-.. automethod:: PointSet.flip_normal

@@ -1,6 +1,0 @@
-load\_explicit\_structured
-==========================
-
-.. currentmodule:: pyvista.examples.examples
-
-.. autofunction:: load_explicit_structured

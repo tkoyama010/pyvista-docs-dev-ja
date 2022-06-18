@@ -1,6 +1,0 @@
-number\_cell\_arrays
-====================
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: EnSightReader.number_cell_arrays

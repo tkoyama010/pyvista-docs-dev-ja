@@ -1,6 +1,0 @@
-get
-===
-
-.. currentmodule:: pyvista
-
-.. automethod:: MultiBlock.get

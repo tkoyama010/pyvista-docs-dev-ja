@@ -1,6 +1,0 @@
-center\_of\_mass
-================
-
-.. currentmodule:: pyvista
-
-.. automethod:: StructuredGrid.center_of_mass

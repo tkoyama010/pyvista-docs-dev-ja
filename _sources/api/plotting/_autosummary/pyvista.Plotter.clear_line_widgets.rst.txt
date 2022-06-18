@@ -1,6 +1,0 @@
-clear\_line\_widgets
-====================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Plotter.clear_line_widgets

@@ -1,6 +1,0 @@
-n\_arrays
-=========
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: StructuredGrid.n_arrays

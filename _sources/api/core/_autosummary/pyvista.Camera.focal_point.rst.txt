@@ -1,6 +1,0 @@
-focal\_point
-============
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: Camera.focal_point

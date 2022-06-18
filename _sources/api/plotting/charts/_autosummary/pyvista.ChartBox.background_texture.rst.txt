@@ -1,6 +1,0 @@
-background\_texture
-===================
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: ChartBox.background_texture

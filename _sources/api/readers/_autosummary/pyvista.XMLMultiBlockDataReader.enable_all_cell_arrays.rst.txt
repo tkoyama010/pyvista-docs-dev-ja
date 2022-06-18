@@ -1,6 +1,0 @@
-enable\_all\_cell\_arrays
-=========================
-
-.. currentmodule:: pyvista
-
-.. automethod:: XMLMultiBlockDataReader.enable_all_cell_arrays

@@ -1,6 +1,0 @@
-download\_dolfin
-================
-
-.. currentmodule:: pyvista.examples.downloads
-
-.. autofunction:: download_dolfin

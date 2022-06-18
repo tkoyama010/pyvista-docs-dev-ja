@@ -1,6 +1,0 @@
-title
-=====
-
-.. currentmodule:: pyvista.themes
-
-.. autoproperty:: DocumentTheme.title

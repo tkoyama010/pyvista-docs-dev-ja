@@ -1,6 +1,0 @@
-ribbon
-======
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyData.ribbon

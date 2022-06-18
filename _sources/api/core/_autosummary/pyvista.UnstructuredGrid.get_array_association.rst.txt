@@ -1,6 +1,0 @@
-get\_array\_association
-=======================
-
-.. currentmodule:: pyvista
-
-.. automethod:: UnstructuredGrid.get_array_association
