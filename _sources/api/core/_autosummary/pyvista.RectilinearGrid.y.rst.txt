@@ -1,6 +1,0 @@
-y
-=
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: RectilinearGrid.y

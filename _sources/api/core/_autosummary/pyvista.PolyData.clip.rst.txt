@@ -1,6 +1,0 @@
-clip
-====
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyData.clip

@@ -1,6 +1,0 @@
-pick\_mouse\_position
-=====================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Plotter.pick_mouse_position

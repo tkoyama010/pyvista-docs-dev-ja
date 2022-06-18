@@ -1,6 +1,0 @@
-view\_zy
-========
-
-.. currentmodule:: pyvista
-
-.. automethod:: Renderer.view_zy

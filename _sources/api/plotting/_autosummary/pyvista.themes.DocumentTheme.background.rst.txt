@@ -1,6 +1,0 @@
-background
-==========
-
-.. currentmodule:: pyvista.themes
-
-.. autoproperty:: DocumentTheme.background

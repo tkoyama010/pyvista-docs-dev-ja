@@ -1,6 +1,0 @@
-load\_hexbeam
-=============
-
-.. currentmodule:: pyvista.examples.examples
-
-.. autofunction:: load_hexbeam

@@ -1,6 +1,0 @@
-remove\_bounding\_box
-=====================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Renderer.remove_bounding_box

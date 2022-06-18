@@ -1,6 +1,0 @@
-notebook
-========
-
-.. currentmodule:: pyvista.themes
-
-.. autoproperty:: DefaultTheme.notebook

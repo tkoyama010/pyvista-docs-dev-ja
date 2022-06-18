@@ -1,6 +1,0 @@
-track\_click\_position
-======================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Plotter.track_click_position

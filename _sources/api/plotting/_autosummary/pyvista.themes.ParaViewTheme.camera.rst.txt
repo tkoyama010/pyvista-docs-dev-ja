@@ -1,6 +1,0 @@
-camera
-======
-
-.. currentmodule:: pyvista.themes
-
-.. autoproperty:: ParaViewTheme.camera

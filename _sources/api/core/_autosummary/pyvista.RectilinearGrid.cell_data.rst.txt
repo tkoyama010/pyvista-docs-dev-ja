@@ -1,6 +1,0 @@
-cell\_data
-==========
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: RectilinearGrid.cell_data

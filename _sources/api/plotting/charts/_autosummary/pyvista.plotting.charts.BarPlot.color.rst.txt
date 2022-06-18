@@ -1,6 +1,0 @@
-color
-=====
-
-.. currentmodule:: pyvista.plotting.charts
-
-.. autoproperty:: BarPlot.color

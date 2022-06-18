@@ -1,6 +1,0 @@
-sample\_over\_circular\_arc
-===========================
-
-.. currentmodule:: pyvista
-
-.. automethod:: RectilinearGrid.sample_over_circular_arc

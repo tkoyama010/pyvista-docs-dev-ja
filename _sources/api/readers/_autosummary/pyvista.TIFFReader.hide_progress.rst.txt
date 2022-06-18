@@ -1,6 +1,0 @@
-hide\_progress
-==============
-
-.. currentmodule:: pyvista
-
-.. automethod:: TIFFReader.hide_progress

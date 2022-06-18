@@ -1,6 +1,0 @@
-remove\_chart
-=============
-
-.. currentmodule:: pyvista
-
-.. automethod:: Plotter.remove_chart

@@ -1,6 +1,0 @@
-cell\_arrays
-============
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: UnstructuredGrid.cell_arrays

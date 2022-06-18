@@ -1,6 +1,0 @@
-set\_focus
-==========
-
-.. currentmodule:: pyvista
-
-.. automethod:: Renderer.set_focus

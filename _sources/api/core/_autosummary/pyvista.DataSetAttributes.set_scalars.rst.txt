@@ -1,6 +1,0 @@
-set\_scalars
-============
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSetAttributes.set_scalars

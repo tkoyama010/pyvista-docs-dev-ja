@@ -1,6 +1,0 @@
-cell\_points
-============
-
-.. currentmodule:: pyvista
-
-.. automethod:: StructuredGrid.cell_points

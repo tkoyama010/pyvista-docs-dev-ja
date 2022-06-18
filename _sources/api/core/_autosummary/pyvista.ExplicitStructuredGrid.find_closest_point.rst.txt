@@ -1,6 +1,0 @@
-find\_closest\_point
-====================
-
-.. currentmodule:: pyvista
-
-.. automethod:: ExplicitStructuredGrid.find_closest_point

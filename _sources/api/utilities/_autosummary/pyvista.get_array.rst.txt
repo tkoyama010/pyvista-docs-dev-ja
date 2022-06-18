@@ -1,6 +1,0 @@
-﻿get\_array
-==========
-
-.. currentmodule:: pyvista
-
-.. autofunction:: get_array

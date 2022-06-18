@@ -1,6 +1,0 @@
-﻿Polygon
-=======
-
-.. currentmodule:: pyvista
-
-.. autofunction:: Polygon

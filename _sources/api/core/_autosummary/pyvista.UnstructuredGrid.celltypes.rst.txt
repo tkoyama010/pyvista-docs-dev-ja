@@ -1,6 +1,0 @@
-celltypes
-=========
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: UnstructuredGrid.celltypes

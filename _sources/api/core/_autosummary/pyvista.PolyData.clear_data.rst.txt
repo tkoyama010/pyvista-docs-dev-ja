@@ -1,6 +1,0 @@
-clear\_data
-===========
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyData.clear_data

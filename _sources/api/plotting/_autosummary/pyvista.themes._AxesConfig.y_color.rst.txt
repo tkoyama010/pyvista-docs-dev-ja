@@ -1,6 +1,0 @@
-y\_color
-========
-
-.. currentmodule:: pyvista.themes
-
-.. autoproperty:: _AxesConfig.y_color

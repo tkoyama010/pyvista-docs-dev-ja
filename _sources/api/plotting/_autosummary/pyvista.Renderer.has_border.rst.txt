@@ -1,6 +1,0 @@
-has\_border
-===========
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: Renderer.has_border

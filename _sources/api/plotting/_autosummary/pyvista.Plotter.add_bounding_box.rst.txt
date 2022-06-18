@@ -1,6 +1,0 @@
-add\_bounding\_box
-==================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Plotter.add_bounding_box

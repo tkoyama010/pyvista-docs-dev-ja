@@ -1,6 +1,0 @@
-get\_array
-==========
-
-.. currentmodule:: pyvista
-
-.. automethod:: UniformGrid.get_array

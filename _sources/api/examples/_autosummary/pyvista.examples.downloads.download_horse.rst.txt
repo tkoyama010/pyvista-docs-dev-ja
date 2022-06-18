@@ -1,6 +1,0 @@
-download\_horse
-===============
-
-.. currentmodule:: pyvista.examples.downloads
-
-.. autofunction:: download_horse

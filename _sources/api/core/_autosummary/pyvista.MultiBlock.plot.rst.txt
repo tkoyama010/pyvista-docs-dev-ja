@@ -1,6 +1,0 @@
-plot
-====
-
-.. currentmodule:: pyvista
-
-.. automethod:: MultiBlock.plot

@@ -1,6 +1,0 @@
-cell\_type
-==========
-
-.. currentmodule:: pyvista
-
-.. automethod:: ExplicitStructuredGrid.cell_type

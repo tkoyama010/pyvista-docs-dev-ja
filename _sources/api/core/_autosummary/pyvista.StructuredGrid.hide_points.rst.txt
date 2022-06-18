@@ -1,6 +1,0 @@
-hide\_points
-============
-
-.. currentmodule:: pyvista
-
-.. automethod:: StructuredGrid.hide_points

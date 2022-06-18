@@ -1,6 +1,0 @@
-floor\_color
-============
-
-.. currentmodule:: pyvista.themes
-
-.. autoproperty:: DefaultTheme.floor_color

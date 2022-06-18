@@ -1,6 +1,0 @@
-restore\_defaults
-=================
-
-.. currentmodule:: pyvista.themes
-
-.. automethod:: DefaultTheme.restore_defaults

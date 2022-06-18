@@ -1,6 +1,0 @@
-copy\_attributes
-================
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataObject.copy_attributes

@@ -1,6 +1,0 @@
-position
-========
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: Camera.position

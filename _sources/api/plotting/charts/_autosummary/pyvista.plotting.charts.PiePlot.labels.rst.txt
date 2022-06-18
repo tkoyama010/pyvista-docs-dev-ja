@@ -1,6 +1,0 @@
-labels
-======
-
-.. currentmodule:: pyvista.plotting.charts
-
-.. autoproperty:: PiePlot.labels

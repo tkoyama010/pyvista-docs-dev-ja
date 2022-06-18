@@ -1,6 +1,0 @@
-load\_rectilinear
-=================
-
-.. currentmodule:: pyvista.examples.examples
-
-.. autofunction:: load_rectilinear

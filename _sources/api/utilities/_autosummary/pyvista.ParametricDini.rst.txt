@@ -1,6 +1,0 @@
-﻿ParametricDini
-==============
-
-.. currentmodule:: pyvista
-
-.. autofunction:: ParametricDini

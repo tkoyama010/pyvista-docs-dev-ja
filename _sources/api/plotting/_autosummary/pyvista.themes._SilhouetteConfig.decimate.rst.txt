@@ -1,6 +1,0 @@
-decimate
-========
-
-.. currentmodule:: pyvista.themes
-
-.. autoproperty:: _SilhouetteConfig.decimate

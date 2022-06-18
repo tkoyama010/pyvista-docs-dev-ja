@@ -1,6 +1,0 @@
-﻿vtk\_points
-===========
-
-.. currentmodule:: pyvista
-
-.. autofunction:: vtk_points

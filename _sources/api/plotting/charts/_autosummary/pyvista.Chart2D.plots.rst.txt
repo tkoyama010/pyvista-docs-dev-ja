@@ -1,6 +1,0 @@
-plots
-=====
-
-.. currentmodule:: pyvista
-
-.. automethod:: Chart2D.plots

@@ -1,6 +1,0 @@
-clear\_textures
-===============
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyData.clear_textures

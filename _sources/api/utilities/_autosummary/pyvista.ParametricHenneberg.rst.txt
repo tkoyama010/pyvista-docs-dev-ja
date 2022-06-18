@@ -1,6 +1,0 @@
-﻿ParametricHenneberg
-===================
-
-.. currentmodule:: pyvista
-
-.. autofunction:: ParametricHenneberg

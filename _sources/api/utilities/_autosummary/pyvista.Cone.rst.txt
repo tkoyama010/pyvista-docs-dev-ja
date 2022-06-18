@@ -1,6 +1,0 @@
-﻿Cone
-====
-
-.. currentmodule:: pyvista
-
-.. autofunction:: Cone

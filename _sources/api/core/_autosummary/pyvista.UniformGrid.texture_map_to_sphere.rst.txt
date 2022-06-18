@@ -1,6 +1,0 @@
-texture\_map\_to\_sphere
-========================
-
-.. currentmodule:: pyvista
-
-.. automethod:: UniformGrid.texture_map_to_sphere

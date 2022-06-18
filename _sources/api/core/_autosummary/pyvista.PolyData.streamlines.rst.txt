@@ -1,6 +1,0 @@
-streamlines
-===========
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyData.streamlines

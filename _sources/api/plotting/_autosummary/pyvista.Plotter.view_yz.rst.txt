@@ -1,6 +1,0 @@
-view\_yz
-========
-
-.. currentmodule:: pyvista
-
-.. automethod:: Plotter.view_yz

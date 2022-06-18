@@ -1,6 +1,0 @@
-clip\_box
-=========
-
-.. currentmodule:: pyvista
-
-.. automethod:: StructuredGrid.clip_box

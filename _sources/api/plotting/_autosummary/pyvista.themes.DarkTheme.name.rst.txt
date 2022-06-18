@@ -1,6 +1,0 @@
-name
-====
-
-.. currentmodule:: pyvista.themes
-
-.. autoproperty:: DarkTheme.name

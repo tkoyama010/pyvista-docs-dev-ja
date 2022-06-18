@@ -1,6 +1,0 @@
-slider\_length
-==============
-
-.. currentmodule:: pyvista.themes
-
-.. autoproperty:: _SliderStyleConfig.slider_length

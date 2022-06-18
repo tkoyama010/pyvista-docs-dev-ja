@@ -1,6 +1,0 @@
-compute\_normals
-================
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyData.compute_normals

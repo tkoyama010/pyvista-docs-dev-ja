@@ -1,6 +1,0 @@
-delete\_downloads
-=================
-
-.. currentmodule:: pyvista.examples.downloads
-
-.. autofunction:: delete_downloads

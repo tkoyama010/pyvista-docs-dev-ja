@@ -1,6 +1,0 @@
-flip\_normal
-============
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyData.flip_normal

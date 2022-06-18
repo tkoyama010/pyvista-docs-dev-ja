@@ -1,6 +1,0 @@
-diffuse\_color
-==============
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: Light.diffuse_color

@@ -1,6 +1,0 @@
-load\_nut
-=========
-
-.. currentmodule:: pyvista.examples.examples
-
-.. autofunction:: load_nut

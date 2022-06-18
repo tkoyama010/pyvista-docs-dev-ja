@@ -1,6 +1,0 @@
-from\_dict
-==========
-
-.. currentmodule:: pyvista.themes
-
-.. automethod:: _DepthPeelingConfig.from_dict

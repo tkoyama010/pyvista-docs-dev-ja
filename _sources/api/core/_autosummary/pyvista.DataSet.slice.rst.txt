@@ -1,6 +1,0 @@
-slice
-=====
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSet.slice

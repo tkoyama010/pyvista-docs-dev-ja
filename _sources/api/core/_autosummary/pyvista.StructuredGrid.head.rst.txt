@@ -1,6 +1,0 @@
-head
-====
-
-.. currentmodule:: pyvista
-
-.. automethod:: StructuredGrid.head

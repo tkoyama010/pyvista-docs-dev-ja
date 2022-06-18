@@ -1,6 +1,0 @@
-add\_background\_image
-======================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Plotter.add_background_image

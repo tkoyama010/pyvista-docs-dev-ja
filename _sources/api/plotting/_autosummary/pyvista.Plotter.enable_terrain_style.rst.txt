@@ -1,6 +1,0 @@
-enable\_terrain\_style
-======================
-
-.. currentmodule:: pyvista
-
-.. automethod:: Plotter.enable_terrain_style

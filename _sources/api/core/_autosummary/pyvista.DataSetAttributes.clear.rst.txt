@@ -1,6 +1,0 @@
-clear
-=====
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSetAttributes.clear

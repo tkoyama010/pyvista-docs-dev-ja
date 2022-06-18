@@ -1,6 +1,0 @@
-window\_size
-============
-
-.. currentmodule:: pyvista.themes
-
-.. autoproperty:: DefaultTheme.window_size

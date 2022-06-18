@@ -1,6 +1,0 @@
-disable\_point\_array
-=====================
-
-.. currentmodule:: pyvista
-
-.. automethod:: XMLMultiBlockDataReader.disable_point_array

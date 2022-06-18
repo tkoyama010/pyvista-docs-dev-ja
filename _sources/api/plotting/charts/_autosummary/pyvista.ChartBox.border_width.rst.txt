@@ -1,6 +1,0 @@
-border\_width
-=============
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: ChartBox.border_width

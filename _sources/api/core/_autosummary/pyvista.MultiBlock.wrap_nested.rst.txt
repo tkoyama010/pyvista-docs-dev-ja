@@ -1,6 +1,0 @@
-wrap\_nested
-============
-
-.. currentmodule:: pyvista
-
-.. automethod:: MultiBlock.wrap_nested

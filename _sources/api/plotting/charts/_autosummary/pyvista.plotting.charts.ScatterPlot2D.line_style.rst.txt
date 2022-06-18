@@ -1,6 +1,0 @@
-line\_style
-===========
-
-.. currentmodule:: pyvista.plotting.charts
-
-.. autoproperty:: ScatterPlot2D.line_style

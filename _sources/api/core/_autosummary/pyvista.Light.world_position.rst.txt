@@ -1,6 +1,0 @@
-world\_position
-===============
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: Light.world_position

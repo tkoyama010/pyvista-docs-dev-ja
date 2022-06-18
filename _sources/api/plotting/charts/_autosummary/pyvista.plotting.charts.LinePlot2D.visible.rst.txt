@@ -1,6 +1,0 @@
-visible
-=======
-
-.. currentmodule:: pyvista.plotting.charts
-
-.. autoproperty:: LinePlot2D.visible

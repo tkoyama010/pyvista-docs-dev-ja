@@ -1,6 +1,0 @@
-boolean\_cut
-============
-
-.. currentmodule:: pyvista
-
-.. automethod:: PolyData.boolean_cut

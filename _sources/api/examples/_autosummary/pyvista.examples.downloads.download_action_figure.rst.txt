@@ -1,6 +1,0 @@
-download\_action\_figure
-========================
-
-.. currentmodule:: pyvista.examples.downloads
-
-.. autofunction:: download_action_figure

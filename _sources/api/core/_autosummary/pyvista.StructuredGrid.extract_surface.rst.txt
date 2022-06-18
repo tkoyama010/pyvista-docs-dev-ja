@@ -1,6 +1,0 @@
-extract\_surface
-================
-
-.. currentmodule:: pyvista
-
-.. automethod:: StructuredGrid.extract_surface

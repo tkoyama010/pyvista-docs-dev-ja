@@ -1,6 +1,0 @@
-mouse\_position
-===============
-
-.. currentmodule:: pyvista
-
-.. autoattribute:: Plotter.mouse_position

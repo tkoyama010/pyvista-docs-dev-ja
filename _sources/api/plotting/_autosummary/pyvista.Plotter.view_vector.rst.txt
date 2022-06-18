@@ -1,6 +1,0 @@
-view\_vector
-============
-
-.. currentmodule:: pyvista
-
-.. automethod:: Plotter.view_vector

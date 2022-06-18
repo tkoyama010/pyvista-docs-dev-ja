@@ -1,6 +1,0 @@
-hide\_axes
-==========
-
-.. currentmodule:: pyvista
-
-.. automethod:: Plotter.hide_axes

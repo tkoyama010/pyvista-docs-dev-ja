@@ -1,6 +1,0 @@
-﻿Pyramid
-=======
-
-.. currentmodule:: pyvista
-
-.. autofunction:: Pyramid

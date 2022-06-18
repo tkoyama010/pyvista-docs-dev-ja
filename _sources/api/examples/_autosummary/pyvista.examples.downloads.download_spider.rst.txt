@@ -1,6 +1,0 @@
-download\_spider
-================
-
-.. currentmodule:: pyvista.examples.downloads
-
-.. autofunction:: download_spider

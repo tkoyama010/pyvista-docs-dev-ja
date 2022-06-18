@@ -1,6 +1,0 @@
-number\_patch\_arrays
-=====================
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: OpenFOAMReader.number_patch_arrays

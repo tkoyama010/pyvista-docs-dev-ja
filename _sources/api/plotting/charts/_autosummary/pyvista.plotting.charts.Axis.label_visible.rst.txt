@@ -1,6 +1,0 @@
-label\_visible
-==============
-
-.. currentmodule:: pyvista.plotting.charts
-
-.. autoproperty:: Axis.label_visible

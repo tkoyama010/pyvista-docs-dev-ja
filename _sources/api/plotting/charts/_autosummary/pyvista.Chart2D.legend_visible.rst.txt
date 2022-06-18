@@ -1,6 +1,0 @@
-legend\_visible
-===============
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: Chart2D.legend_visible

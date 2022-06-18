@@ -1,6 +1,0 @@
-tick\_labels
-============
-
-.. currentmodule:: pyvista.plotting.charts
-
-.. autoproperty:: Axis.tick_labels

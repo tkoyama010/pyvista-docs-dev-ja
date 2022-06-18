@@ -1,6 +1,0 @@
-set\_vectors
-============
-
-.. currentmodule:: pyvista
-
-.. automethod:: DataSetAttributes.set_vectors

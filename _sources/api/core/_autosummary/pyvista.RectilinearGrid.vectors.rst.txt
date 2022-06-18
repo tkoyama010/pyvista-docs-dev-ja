@@ -1,6 +1,0 @@
-vectors
-=======
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: RectilinearGrid.vectors

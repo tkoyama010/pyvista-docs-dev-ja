@@ -1,6 +1,0 @@
-﻿ParametricCrossCap
-==================
-
-.. currentmodule:: pyvista
-
-.. autofunction:: ParametricCrossCap

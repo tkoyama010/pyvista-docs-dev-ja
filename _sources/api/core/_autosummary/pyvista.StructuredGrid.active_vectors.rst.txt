@@ -1,6 +1,0 @@
-active\_vectors
-===============
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: StructuredGrid.active_vectors

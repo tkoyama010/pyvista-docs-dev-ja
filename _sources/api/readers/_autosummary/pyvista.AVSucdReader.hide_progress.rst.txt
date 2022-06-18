@@ -1,6 +1,0 @@
-hide\_progress
-==============
-
-.. currentmodule:: pyvista
-
-.. automethod:: AVSucdReader.hide_progress

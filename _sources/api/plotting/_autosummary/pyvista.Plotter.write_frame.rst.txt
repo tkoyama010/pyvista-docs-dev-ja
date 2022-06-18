@@ -1,6 +1,0 @@
-write\_frame
-============
-
-.. currentmodule:: pyvista
-
-.. automethod:: Plotter.write_frame

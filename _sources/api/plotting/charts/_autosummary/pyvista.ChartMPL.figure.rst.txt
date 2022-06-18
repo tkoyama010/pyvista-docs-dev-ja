@@ -1,6 +1,0 @@
-figure
-======
-
-.. currentmodule:: pyvista
-
-.. autoproperty:: ChartMPL.figure

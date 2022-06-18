@@ -1,6 +1,0 @@
-add\_floor
-==========
-
-.. currentmodule:: pyvista
-
-.. automethod:: Renderer.add_floor
